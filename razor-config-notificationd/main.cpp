@@ -25,39 +25,22 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#include <razorqt/razorapplication.h>
 
+#include <qtxdg/xdgicon.h>
+#include <razorqt/razorsettings.h>
+#include <razorqt/razorconfigdialog.h>
+#include "mainwindow.h"
+//#include "razortranslate.h"
 
-
-#include "ui_mainwindow.h"
-
-class QCategorizedSortFilterProxyModel;
-
-namespace RazorConfig {
-
-    class ConfigPaneModel;
-
-/*! \brief Main config window.
-Just read desktop files with Settings category from /usr/share/applications
-and list them in view. Then it can start those standalone apps.
-*/
-class MainWindow : public QMainWindow, public Ui::MainWindow
+int main (int argc, char **argv)
 {
-    Q_OBJECT
+    RazorApplication app(argc, argv);
+//    TRANSLATE_APP;
 
-public:
-    MainWindow();
+    MainWindow w ;
+    w.show();
 
-private:
-    QCategorizedSortFilterProxyModel *proxyModel;
-    ConfigPaneModel *model;
+    return app.exec();
+}
 
-private slots:
-    void activateItem(const QModelIndex &index);
-};
-
-}; // namespace
-
-
-#endif
