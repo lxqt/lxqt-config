@@ -32,10 +32,10 @@
 #include <QtConcurrentRun>
 #include <QDateTime>
 
-#include "qtxdg/xdgmime.h"
-#include "qtxdg/xdgdesktopfile.h"
-#include "qtxdg/xdgdirs.h"
-#include "razorqt/razorsettings.h"
+#include <qtxdg/xdgmime.h>
+#include <qtxdg/xdgdesktopfile.h>
+#include <qtxdg/xdgdirs.h>
+#include <lxqt/lxqtsettings.h>
 
 
 #include "mimetypeviewer.h"
@@ -77,7 +77,7 @@ MimetypeViewer::MimetypeViewer( QWidget *parent) :
 
     QString defaultsListPath(XdgDirs::dataHome(true) + "/applications/defaults.list");
     mDefaultsList = new QSettings(defaultsListPath, XdgDesktopFileCache::desktopFileSettingsFormat(), this);
-    mSettingsCache = new RazorSettingsCache(mDefaultsList);
+    mSettingsCache = new LxQt::SettingsCache(mDefaultsList);
     mSettingsCache->loadFromSettings();
 }
 

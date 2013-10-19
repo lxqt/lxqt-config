@@ -1,4 +1,4 @@
-project(razor-config-mouse)
+project(lxqt-config-mouse)
 find_package(X11 REQUIRED)
 include_directories(${X11_INCLUDE_DIR})
 
@@ -11,7 +11,7 @@ include_directories (
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
     )
 
-set ( razor-config-mouse_HDRS
+set ( lxqt-config-mouse_HDRS
 #    cfgfile.h
     thememodel.h
     previewwidget.h
@@ -27,7 +27,7 @@ set ( razor-config-mouse_HDRS
     warninglabel.h
 	)
 
-set ( razor-config-mouse_SRCS
+set ( lxqt-config-mouse_SRCS
     crtheme.cpp
     selectwnd.cpp
     xcr/xcrimg.cpp
@@ -43,36 +43,36 @@ set ( razor-config-mouse_SRCS
     warninglabel.cpp
 	)
 
-set(razor-config-mouse_UIS
+set(lxqt-config-mouse_UIS
      ui/selectwnd.ui
      ui/warninglabel.ui
 )
 
 find_package(ZLIB REQUIRED)
-QT4_WRAP_UI(razor-config-mouse_CXX   ${razor-config-mouse_UIS})
-QT4_WRAP_CPP(razor-config-mouse_MOCS ${razor-config-mouse_HDRS})
+QT4_WRAP_UI(lxqt-config-mouse_CXX   ${lxqt-config-mouse_UIS})
+QT4_WRAP_CPP(lxqt-config-mouse_MOCS ${lxqt-config-mouse_HDRS})
 # Translations **********************************
 include(RazorTranslate)
 razor_translate_ts(QM_FILES
     SOURCES
-        ${razor-config-mouse_HDRS}
-        ${razor-config-mouse_SRCS}
-        ${razor-config-mouse_UIS}
+        ${lxqt-config-mouse_HDRS}
+        ${lxqt-config-mouse_SRCS}
+        ${lxqt-config-mouse_UIS}
     INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/razor/razor-config
+        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
 )
 
-razor_translate_desktop(DESKTOP_FILES
+lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-        razor-config-mouse.desktop.in
+        lxqt-config-mouse.desktop.in
 )
 #************************************************
 
-add_executable ( razor-config-mouse ${razor-config-mouse_SRCS} ${razor-config-mouse_CXX} ${razor-config-mouse_MOCS} ${DESKTOP_FILES} ${QM_FILES})
-add_dependencies( razor-config-mouse razorqt qtxdg)
-target_link_libraries ( razor-config-mouse  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY}
-                                                 ${X11_X11_LIB} ${X11_Xcursor_LIB} razorqt qtxdg ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
+add_executable ( lxqt-config-mouse ${lxqt-config-mouse_SRCS} ${lxqt-config-mouse_CXX} ${lxqt-config-mouse_MOCS} ${DESKTOP_FILES} ${QM_FILES})
+add_dependencies( lxqt-config-mouse lxqt qtxdg)
+target_link_libraries ( lxqt-config-mouse  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY}
+                                                 ${X11_X11_LIB} ${X11_Xcursor_LIB} lxqt qtxdg ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
 # not needed probably ${X11_Xfixes_LIB})
 
-INSTALL(TARGETS razor-config-mouse RUNTIME DESTINATION bin)
+INSTALL(TARGETS lxqt-config-mouse RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

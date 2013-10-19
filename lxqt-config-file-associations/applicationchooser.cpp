@@ -29,8 +29,8 @@
 #include <QString>
 #include <QDebug>
 
-#include "libraries/qtxdg/xdgdesktopfile.h"
-#include "libraries/qtxdg/xdgmime.h"
+#include <qtxdg/xdgdesktopfile.h>
+#include <qtxdg/xdgmime.h>
 #include "applicationchooser.h"
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)

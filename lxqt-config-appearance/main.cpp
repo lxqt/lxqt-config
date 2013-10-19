@@ -25,22 +25,22 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <razorqt/razorapplication.h>
+#include <lxqt/lxqtapplication.h>
 
 #include <qtxdg/xdgicon.h>
-#include <razorqt/razorsettings.h>
-#include <razorqt/razorconfigdialog.h>
+#include <lxqt/lxqtsettings.h>
+#include <lxqt/lxqtconfigdialog.h>
 #include "iconthemeconfig.h"
 #include "razortranslate.h"
-#include "razorthemeconfig.h"
+#include "lxqtthemeconfig.h"
 
 int main (int argc, char **argv)
 {
-    RazorApplication app(argc, argv);
+    LxQt::Application app(argc, argv);
     TRANSLATE_APP;
 
-    RazorSettings* settings = new RazorSettings("razor");
-    RazorConfigDialog* dialog = new RazorConfigDialog(QObject::tr("Razor Appearance Configuration"), settings);
+    LxQt::Settings* settings = new LxQt::Settings("razor");
+    LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("Razor Appearance Configuration"), settings);
 
     IconThemeConfig* iconPage = new IconThemeConfig(settings);
     dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");

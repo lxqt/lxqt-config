@@ -25,12 +25,12 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include "razorthemeconfig.h"
-#include "ui_razorthemeconfig.h"
+#include "lxqtthemeconfig.h"
+#include "ui_lxqtthemeconfig.h"
 #include <QtGui/QTreeWidget>
 #include <QtCore/QDebug>
 
-RazorThemeConfig::RazorThemeConfig(RazorSettings *settings, QWidget *parent) :
+RazorThemeConfig::RazorThemeConfig(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::RazorThemeConfig),
     mSettings(settings)
@@ -41,8 +41,8 @@ RazorThemeConfig::RazorThemeConfig(RazorSettings *settings, QWidget *parent) :
             this, SLOT(razorThemeSelected(QTreeWidgetItem*,int)));
 
 
-    QList<RazorTheme> themes = RazorTheme::allThemes();
-    foreach(RazorTheme theme, themes)
+    QList<LxQt::RazorTheme> themes = LxQt::RazorTheme::allThemes();
+    foreach(LxQt::RazorTheme theme, themes)
     {
         QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(theme.name()));
         if (!theme.previewImage().isEmpty())

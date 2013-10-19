@@ -11,7 +11,7 @@
 #include <QAbstractItemModel>
 #include <QSortFilterProxyModel>
 
-#include "libraries/qtxdg/xdgmime.h"
+#include <qtxdg/xdgmime.h>
 
 // Used for MimetypeItemModel::data to return a QVariant wrapping an XdgMimeInfo*
 #define MimeInfoRole 32

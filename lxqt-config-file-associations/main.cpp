@@ -23,7 +23,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <razorqt/razorapplication.h>
+#include <lxqt/lxqtapplication.h>
 #include <QDebug>
 #include <QString>
 #include <QStringList>
@@ -32,15 +32,15 @@
 #include <QSettings>
 #include <QVariant>
 
-#include "razorqt/razorsettings.h"
+#include <lxqt/lxqtsettings.h>
 #include "razortranslate.h"
-#include "qtxdg/xdgdesktopfile.h"
+#include <qtxdg/xdgdesktopfile.h>
 #include "mimetypeviewer.h"
-#include "libraries/qtxdg/xdgdirs.h"
+#include <qtxdg/xdgdirs.h>
 
 int main (int argc, char **argv)
 {
-    RazorApplication app(argc, argv);
+    LxQt::Application app(argc, argv);
     TRANSLATE_APP;
     
     MimetypeViewer mimetypeViewer;

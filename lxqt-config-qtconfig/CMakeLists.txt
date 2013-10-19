@@ -1,4 +1,4 @@
-project(razor-config-qtconfig)
+project(lxqt-config-qtconfig)
 
 # Translations **********************************
 include(RazorTranslate)

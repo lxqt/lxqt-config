@@ -4,9 +4,9 @@
  * Razor - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
- * Copyright: 2010-2011 Razor team
+ * Copyright: 2012 Razor team
  * Authors:
- *   Petr Vanek <petr@scribus.info>
+ *   Alexander Sokoloff <sokoloff.a@gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -24,33 +24,36 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
- 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
 
-#include "ui_iconthemeconfig.h"
-#include "iconthemeinfo.h"
+#ifndef RAZORTHEMECONFIG_H
+#define RAZORTHEMECONFIG_H
 
-class RazorSettings;
+#include <QtGui/QWidget>
+#include <lxqt/lxqtsettings.h>
 
+class QTreeWidgetItem;
 
-class IconThemeConfig : public QWidget, public Ui::IconThemeConfig
+namespace Ui {
+    class RazorThemeConfig;
+}
+
+class RazorThemeConfig : public QWidget
 {
     Q_OBJECT
-    
-public:
-    IconThemeConfig(RazorSettings *settings);
-    ~IconThemeConfig();
 
-private:
-    RazorSettings *m_settings;
-    void initIconsThemes();
+public:
+    explicit RazorThemeConfig(LxQt::Settings *settings, QWidget *parent = 0);
+    ~RazorThemeConfig();
 
 public slots:
     void initControls();
 
 private slots:
-    void iconThemeSelected(QTreeWidgetItem *item, int column);
+    void razorThemeSelected(QTreeWidgetItem* item, int column);
+
+private:
+    Ui::RazorThemeConfig *ui;
+    LxQt::Settings *mSettings;
 };
 
-#endif
+#endif // RAZORTHEMECONFIG_H

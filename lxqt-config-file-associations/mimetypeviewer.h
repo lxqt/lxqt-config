@@ -23,37 +23,49 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef _APPLICATIONCHOOSER_H
-#define	_APPLICATIONCHOOSER_H
+#ifndef _MIMETYPEVIEWER_H
+#define	_MIMETYPEVIEWER_H
 
-#include "ui_applicationchooser.h"
-#include "libraries/qtxdg/xdgdesktopfile.h"
+#include <QDialog>
+#include <QModelIndex>
 
-class XdgMimeInfo;
+#include "ui_mimetypeviewer.h"
+#include "busyindicator.h"
+#include "mimetypeitemmodel.h"
+
 class QSettings;
+class XdgMimeInfo;
+class MimetypeFilterItemModel;
 
-class ApplicationChooser : public QDialog
-{
+namespace LxQt {
+class SettingsCache;
+}
+
+class MimetypeViewer : public QDialog {
     Q_OBJECT
 public:
-    ApplicationChooser(XdgMimeInfo* mimeInfo, bool showUseAlwaysCheckBox = false);
-    virtual ~ApplicationChooser();
-    XdgDesktopFile* DefaultApplication() const { return m_CurrentDefaultApplication; }
+    MimetypeViewer(QWidget *parent = 0);
+    virtual ~MimetypeViewer();
 
-    virtual int exec();
+protected:
+    void resizeEvent(QResizeEvent* event);
 
 private slots:
-    void selectionChanged();
+    void initializeMimetypeTreeView();
+    void currentMimetypeChanged();
+    void autoExpandOnSearch();
+    void chooseApplication();
+    void dialogButtonBoxClicked(QAbstractButton *button);
 
 private:
-    void fillApplicationListWidget();
-
-    void addApplicationsToApplicationListWidget(QTreeWidgetItem* parent, 
-                                                QList<XdgDesktopFile*> applications, 
-                                                QSet<XdgDesktopFile*> & alreadyAdded);
-    XdgMimeInfo* m_MimeInfo;
-    Ui::ApplicationChooser widget;
-    XdgDesktopFile* m_CurrentDefaultApplication;
+    void addSearchIcon();
+    Ui::mimetypeviewer widget;
+    MimetypeFilterItemModel m_MimetypeFilterItemModel;
+    XdgMimeInfo* m_CurrentMime;
+    QSettings* mDefaultsList;
+    LxQt::SettingsCache *mSettingsCache;
+    QFutureWatcher<void> *mFutureWatcher;
+    BusyIndicator* mBusyIndicator;
 };
 
-#endif	/* _APPLICATIONCHOOSER_H */
+#endif	/* _MIMETYPEVIEWER_H */

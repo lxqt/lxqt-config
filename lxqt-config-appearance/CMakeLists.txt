@@ -1,44 +1,41 @@
-project(razor-config-file-associations)
+project(lxqt-config-appearance)
 
 include_directories (
     ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}
     ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR}
     ${QT_QTDBUS_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR}
-    ${CMAKE_SOURCE_DIR}/libraries/
+    ${LXQT_INCLUDE_DIRS}
+    ${QTXDG_INCLUDE_DIRS}
     )
 
 set(H_FILES
-    mimetypeviewer.h
-    applicationchooser.h
-    mimetypeitemmodel.h
-    busyindicator.h
-)
+    iconthemeinfo.h
+   )
 
 set(MOC_FILES
-    mimetypeviewer.h
-    applicationchooser.h
-    busyindicator.h
+    iconthemeconfig.h
+    lxqtthemeconfig.h
 )
 
 set(CPP_FILES
-    mimetypeviewer.cpp
-    applicationchooser.cpp
-    mimetypeitemmodel.cpp
-    busyindicator.cpp
     main.cpp
-)
+    iconthemeconfig.cpp
+    iconthemeinfo.cpp
+    lxqtthemeconfig.cpp
+   )
 
 set(UI_FILES
-    mimetypeviewer.ui
-    applicationchooser.ui
+    iconthemeconfig.ui
+    lxqtthemeconfig.ui
 )
 
 set(QRC_FILES
+
 )
 
 set(LIBRARIES
-    razorqt
-    qtxdg
+    ${QTXDG_LIBRARIES}
+    ${LXQT_LIBRARIES}
 )
 
 
@@ -50,10 +47,10 @@ razor_translate_ts(QM_FILES
         ${CPP_FILES} 
         ${UI_FILES}
     INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/razor/razor-config
+        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
 )
 
-razor_translate_desktop(DESKTOP_FILES
+lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
         ${PROJECT_NAME}.desktop.in
 ) 
@@ -66,7 +63,7 @@ qt4_add_resources(QRC_SOURCES ${QRC_FILES})
 
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
-add_dependencies(${PROJECT_NAME} razorqt qtxdg)
+add_dependencies(${PROJECT_NAME} lxqtqt qtxdg)
 target_link_libraries(${PROJECT_NAME}  ${LIBRARIES} ${QT_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

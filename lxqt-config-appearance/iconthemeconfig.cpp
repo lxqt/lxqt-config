@@ -29,13 +29,13 @@
 
 #include <qtxdg/xdgdesktopfile.h>
 #include <qtxdg/xdgicon.h>
-#include <razorqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 #include <QtCore/QStringList>
 #include <QtGui/QIcon>
 #include <QtCore/QDebug>
 
 
-IconThemeConfig::IconThemeConfig(RazorSettings* settings):
+IconThemeConfig::IconThemeConfig(LxQt::Settings* settings):
     m_settings(settings)
 {
     setupUi(this);
@@ -45,7 +45,7 @@ IconThemeConfig::IconThemeConfig(RazorSettings* settings):
     connect(iconThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(iconThemeSelected(QTreeWidgetItem*,int)));
 
-    connect(RazorSettings::globalSettings(), SIGNAL(settingsChanged()),
+    connect(LxQt::Settings::globalSettings(), SIGNAL(settingsChanged()),
             this, SLOT(update()));
 }
 
@@ -96,7 +96,7 @@ void IconThemeConfig::initIconsThemes()
 
 void IconThemeConfig::initControls()
 {
-    QString currentTheme = RazorSettings::globalSettings()->value("icon_theme").toString();
+    QString currentTheme = LxQt::Settings::globalSettings()->value("icon_theme").toString();
     XdgIcon::setThemeName(currentTheme);
     QTreeWidgetItemIterator it(iconThemeList);
     while (*it) {

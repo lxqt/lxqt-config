@@ -23,46 +23,37 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef _MIMETYPEVIEWER_H
-#define	_MIMETYPEVIEWER_H
+#ifndef _APPLICATIONCHOOSER_H
+#define	_APPLICATIONCHOOSER_H
 
-#include <QDialog>
-#include <QModelIndex>
+#include "ui_applicationchooser.h"
+#include <qtxdg/xdgdesktopfile.h>
 
-#include "ui_mimetypeviewer.h"
-#include "busyindicator.h"
-#include "mimetypeitemmodel.h"
-
-class QSettings;
 class XdgMimeInfo;
-class RazorSettingsCache;
-class MimetypeFilterItemModel;
+class QSettings;
 
-class MimetypeViewer : public QDialog {
+class ApplicationChooser : public QDialog
+{
     Q_OBJECT
 public:
-    MimetypeViewer(QWidget *parent = 0);
-    virtual ~MimetypeViewer();
+    ApplicationChooser(XdgMimeInfo* mimeInfo, bool showUseAlwaysCheckBox = false);
+    virtual ~ApplicationChooser();
+    XdgDesktopFile* DefaultApplication() const { return m_CurrentDefaultApplication; }
 
-protected:
-    void resizeEvent(QResizeEvent* event);
+    virtual int exec();
 
 private slots:
-    void initializeMimetypeTreeView();
-    void currentMimetypeChanged();
-    void autoExpandOnSearch();
-    void chooseApplication();
-    void dialogButtonBoxClicked(QAbstractButton *button);
+    void selectionChanged();
 
 private:
-    void addSearchIcon();
-    Ui::mimetypeviewer widget;
-    MimetypeFilterItemModel m_MimetypeFilterItemModel;
-    XdgMimeInfo* m_CurrentMime;
-    QSettings* mDefaultsList;
-    RazorSettingsCache *mSettingsCache;
-    QFutureWatcher<void> *mFutureWatcher;
-    BusyIndicator* mBusyIndicator;
+    void fillApplicationListWidget();
+
+    void addApplicationsToApplicationListWidget(QTreeWidgetItem* parent, 
+                                                QList<XdgDesktopFile*> applications, 
+                                                QSet<XdgDesktopFile*> & alreadyAdded);
+    XdgMimeInfo* m_MimeInfo;
+    Ui::ApplicationChooser widget;
+    XdgDesktopFile* m_CurrentDefaultApplication;
 };
 
-#endif	/* _MIMETYPEVIEWER_H */
+#endif	/* _APPLICATIONCHOOSER_H */

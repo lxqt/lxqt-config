@@ -27,7 +27,7 @@
 #include "xcrxcur.h"
 #include "xcrtheme.h"
 
-#include <razorqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 #include <qtxdg/xdgicon.h>
 
 #define HOME_ICON_DIR QDir::homePath() + "/.icons"
@@ -148,7 +148,7 @@ void SelectWnd::on_btSet_clicked()
     fixXDefaults(theme->name());
 
     // RAZOR: Razor settings - session requires restart!
-    RazorSettings razor("session");
+    LxQt::Settings razor("session");
     razor.beginGroup("environment");
     razor.setValue("XCURSOR_THEME", theme->name());
     razor.endGroup();

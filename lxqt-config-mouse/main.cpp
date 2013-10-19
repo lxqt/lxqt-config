@@ -11,11 +11,11 @@
 #include <QtCore/QDebug>
 
 #include <qtxdg/xdgicon.h>
-#include <razorqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 #include "main.h"
 #include "razortranslate.h"
 
-#include <razorqt/razorapplication.h>
+#include <lxqt/lxqtapplication.h>
 #include <QtCore/QFile>
 #include <QtGui/QImage>
 #include <QtCore/QString>
@@ -30,7 +30,7 @@ int main (int argc, char *argv[])
     //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("koi8-r"));
     //QTextCodec::setCodecForLocale(QTextCodec::codecForName("koi8-r"));
 
-    RazorApplication app(argc, argv);
+    LxQt::Application app(argc, argv);
     TRANSLATE_APP;
 
     //qDebug() << findDefaultTheme() << getCurrentTheme();
