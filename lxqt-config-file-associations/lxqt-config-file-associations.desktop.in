@@ -1,8 +1,8 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=Razor;
+OnlyShowIn=LXDE;Razor;
 Type=Application
-Exec=razor-config-file-associations
+Exec=lxqt-config-file-associations
 Terminal=false
 Categories=Settings;DesktopSettings;Qt;Razor;
 Icon=preferences-desktop-filetype-association

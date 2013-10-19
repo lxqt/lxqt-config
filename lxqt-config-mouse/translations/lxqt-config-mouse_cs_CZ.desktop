@@ -1,8 +1,8 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=Razor;
+OnlyShowIn=LXDE;Razor;
 Type=Application
-Exec=razor-config-mouse
+Exec=lxqt-config-mouse
 Terminal=false
 Categories=Settings;DesktopSettings;Qt;Razor;
 Icon=preferences-desktop-mouse

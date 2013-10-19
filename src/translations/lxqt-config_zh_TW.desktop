@@ -1,7 +1,7 @@
 [Desktop Entry]
-OnlyShowIn=Razor;
+OnlyShowIn=LXDE;Razor;
 Type=Application
-Exec=razor-config
+Exec=lxqt-config
 Terminal=false
 Categories=Settings;DesktopSettings;Qt;Razor;
 Icon=preferences-system
