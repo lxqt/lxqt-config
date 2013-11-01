@@ -39,7 +39,7 @@ int main (int argc, char **argv)
     LxQt::Application app(argc, argv);
     TRANSLATE_APP;
 
-    LxQt::Settings* settings = new LxQt::Settings("razor");
+    LxQt::Settings* settings = new LxQt::Settings("lxqt");
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("Razor Appearance Configuration"), settings);
 
     IconThemeConfig* iconPage = new IconThemeConfig(settings);
