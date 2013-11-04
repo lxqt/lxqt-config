@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
+        <source>LxQt Mouse Theme Configuration</source>
         <translation>Nastavení motivu myši</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Vyberte motiv ukazovátka, jejž chcete používat (přejeďte myší nad náhledem kvůli vyzkoušení ukazovátka). &lt;b&gt;Sezení Razor je potřeba po této změně spustit znovu&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Vyberte motiv ukazovátka, jejž chcete používat (přejeďte myší nad náhledem kvůli vyzkoušení ukazovátka). &lt;b&gt;Sezení LxQt je potřeba po této změně spustit znovu&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

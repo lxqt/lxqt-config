@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
+        <source>LxQt Mouse Theme Configuration</source>
         <translation>Конфигурация Темы Мыши</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Выберите тему курсора, которую хотите использовать (наведите на область просмотра для теста). &lt;b&gt; Сессию Razor необходимо перезагрузить после этого изменения &lt;/ b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Выберите тему курсора, которую хотите использовать (наведите на область просмотра для теста). &lt;b&gt; Сессию LxQt необходимо перезагрузить после этого изменения &lt;/ b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

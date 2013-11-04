@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
-        <translation>Διαμόρφωση θέματος ποντικιού Razor</translation>
+        <source>LxQt Mouse Theme Configuration</source>
+        <translation>Διαμόρφωση θέματος ποντικιού LxQt</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Επιλέξτε το θέμα δείκτη που θέλετε να χρησιμοποιήσετε (κινηθείτε επάνω για προεπισκόπηση). &lt;b&gt;Χρειάζεται επανεκκίνηση της συνεδρίας Razor μετά την αλλαγή&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Επιλέξτε το θέμα δείκτη που θέλετε να χρησιμοποιήσετε (κινηθείτε επάνω για προεπισκόπηση). &lt;b&gt;Χρειάζεται επανεκκίνηση της συνεδρίας LxQt μετά την αλλαγή&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

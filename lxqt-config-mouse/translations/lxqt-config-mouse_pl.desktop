@@ -1,20 +1,20 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=LXDE;Razor;
+OnlyShowIn=LXDE;LxQt;
 Type=Application
 Exec=lxqt-config-mouse
 Terminal=false
-Categories=Settings;DesktopSettings;Qt;Razor;
+Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-desktop-mouse
-Name=Razor Mouse Configurator
+Name=LxQt Mouse Configurator
 Comment=Configure X11 mouse
-GenericName=Razor Mouse Configurator
+GenericName=LxQt Mouse Configurator
 
 #TRANSLATIONS_DIR=translations
 
 
 # Translations
-Comment[pl]=Konfiguracja myszy w Razor-Qt
-GenericName[pl]=Ustawuenua myszy Razor-Qt
-Name[pl]=Ustawienia myszy Razor-Qt
+Comment[pl]=Konfiguracja myszy w LxQt-Qt
+GenericName[pl]=Ustawuenua myszy LxQt-Qt
+Name[pl]=Ustawienia myszy LxQt-Qt
 Icon[pl]=ustawienia-pulpit-mysz

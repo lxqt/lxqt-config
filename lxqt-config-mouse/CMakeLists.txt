@@ -52,8 +52,8 @@ find_package(ZLIB REQUIRED)
 QT4_WRAP_UI(lxqt-config-mouse_CXX   ${lxqt-config-mouse_UIS})
 QT4_WRAP_CPP(lxqt-config-mouse_MOCS ${lxqt-config-mouse_HDRS})
 # Translations **********************************
-include(RazorTranslate)
-razor_translate_ts(QM_FILES
+include(LxQtTranslate)
+lxqt_translate_ts(QM_FILES
     SOURCES
         ${lxqt-config-mouse_HDRS}
         ${lxqt-config-mouse_SRCS}

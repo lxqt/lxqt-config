@@ -3,7 +3,7 @@
     <name>IconThemeConfig</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -16,7 +16,7 @@
     <name>QObject</name>
     <message>
         <location filename="../main.cpp" line="44"/>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation type="unfinished"/>
     </message>
     <message>

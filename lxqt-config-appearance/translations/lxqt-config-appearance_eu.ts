@@ -2,8 +2,8 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>Razor Appearance Configuration</source>
-        <translation>Razor itxuraren konfigurazioa</translation>
+        <source>LxQt Appearance Configuration</source>
+        <translation>LxQt itxuraren konfigurazioa</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -13,23 +13,23 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Razor Appearance Configuration</source>
-        <translation>Razor itxuraren konfigurazioa</translation>
+        <source>LxQt Appearance Configuration</source>
+        <translation>LxQt itxuraren konfigurazioa</translation>
     </message>
     <message>
         <source>Icons Theme</source>
         <translation>Ikonoen gaia</translation>
     </message>
     <message>
-        <source>Razor Theme</source>
-        <translation>Razor gaia</translation>
+        <source>LxQt Theme</source>
+        <translation>LxQt gaia</translation>
     </message>
 </context>
 <context>
-    <name>RazorThemeConfig</name>
+    <name>LxQtThemeConfig</name>
     <message>
-        <source>Razor Theme</source>
-        <translation>Razor gaia</translation>
+        <source>LxQt Theme</source>
+        <translation>LxQt gaia</translation>
     </message>
 </context>
 </TS>

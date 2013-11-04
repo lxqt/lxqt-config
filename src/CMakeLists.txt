@@ -28,8 +28,8 @@ set( lxqt-config_UIS
 QT4_WRAP_CPP(MOCS ${lxqt-config_MOCS})
 QT4_WRAP_UI(UIS ${lxqt-config_UIS})
 # Translations **********************************
-include(RazorTranslate)
-razor_translate_ts(QM_FILES
+include(LxQtTranslate)
+lxqt_translate_ts(QM_FILES
     SOURCES
         ${lxqt-config_HDRS}
         ${lxqt-config_SRCS}

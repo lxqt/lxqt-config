@@ -1,19 +1,19 @@
 [Desktop Entry]
-OnlyShowIn=LXDE;Razor;
+OnlyShowIn=LXDE;LxQt;
 Type=Application
 Exec=lxqt-config
 Terminal=false
-Categories=Settings;DesktopSettings;Qt;Razor;
+Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-system
-Name=Razor Configuration Center
-Comment=Configure Razor-Qt modules
-GenericName=Razor Configuration
+Name=LxQt Configuration Center
+Comment=Configure LxQt-Qt modules
+GenericName=LxQt Configuration
 
 #TRANSLATIONS_DIR=translations
 
 
 # Translations
-Comment[da]=Indstil Razor-Qt moduler
-GenericName[da]=Razor Indstillingscenter
-Name[da]=Razor Indstillingscenter
+Comment[da]=Indstil LxQt-Qt moduler
+GenericName[da]=LxQt Indstillingscenter
+Name[da]=LxQt Indstillingscenter
 Icon[da]=preferences-system

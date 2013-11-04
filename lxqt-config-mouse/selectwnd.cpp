@@ -147,11 +147,11 @@ void SelectWnd::on_btSet_clicked()
     applyTheme(*theme);
     fixXDefaults(theme->name());
 
-    // RAZOR: Razor settings - session requires restart!
-    LxQt::Settings razor("session");
-    razor.beginGroup("environment");
-    razor.setValue("XCURSOR_THEME", theme->name());
-    razor.endGroup();
+    // LXQT: LxQt settings - session requires restart!
+    LxQt::Settings lxqt("session");
+    lxqt.beginGroup("environment");
+    lxqt.setValue("XCURSOR_THEME", theme->name());
+    lxqt.endGroup();
 }
 
 void SelectWnd::on_btRemove_clicked()

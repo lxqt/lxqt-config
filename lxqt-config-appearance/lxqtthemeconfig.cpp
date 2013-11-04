@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -30,19 +30,19 @@
 #include <QtGui/QTreeWidget>
 #include <QtCore/QDebug>
 
-RazorThemeConfig::RazorThemeConfig(LxQt::Settings *settings, QWidget *parent) :
+LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::RazorThemeConfig),
+    ui(new Ui::LxQtThemeConfig),
     mSettings(settings)
 {
     ui->setupUi(this);
 
-    connect(ui->razorThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
-            this, SLOT(razorThemeSelected(QTreeWidgetItem*,int)));
+    connect(ui->lxqtThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
+            this, SLOT(lxqtThemeSelected(QTreeWidgetItem*,int)));
 
 
-    QList<LxQt::RazorTheme> themes = LxQt::RazorTheme::allThemes();
-    foreach(LxQt::RazorTheme theme, themes)
+    QList<LxQt::LxQtTheme> themes = LxQt::LxQtTheme::allThemes();
+    foreach(LxQt::LxQtTheme theme, themes)
     {
         QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(theme.name()));
         if (!theme.previewImage().isEmpty())
@@ -51,28 +51,28 @@ RazorThemeConfig::RazorThemeConfig(LxQt::Settings *settings, QWidget *parent) :
         }
         item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
         item->setData(0, Qt::UserRole, theme.name());
-        ui->razorThemeList->addTopLevelItem(item);
+        ui->lxqtThemeList->addTopLevelItem(item);
     }
 
     initControls();
 }
 
 
-RazorThemeConfig::~RazorThemeConfig()
+LxQtThemeConfig::~LxQtThemeConfig()
 {
     delete ui;
 }
 
 
-void RazorThemeConfig::initControls()
+void LxQtThemeConfig::initControls()
 {
     QString currentTheme = mSettings->value("theme").toString();
 
-    QTreeWidgetItemIterator it(ui->razorThemeList);
+    QTreeWidgetItemIterator it(ui->lxqtThemeList);
     while (*it) {
         if ((*it)->data(0, Qt::UserRole).toString() == currentTheme)
         {
-            ui->razorThemeList->setCurrentItem((*it));
+            ui->lxqtThemeList->setCurrentItem((*it));
             break;
         }
         ++it;
@@ -82,7 +82,7 @@ void RazorThemeConfig::initControls()
 }
 
 
-void RazorThemeConfig::razorThemeSelected(QTreeWidgetItem* item, int column)
+void LxQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
 {
     Q_UNUSED(column);
     if (!item)

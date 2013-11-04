@@ -1,20 +1,20 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=LXDE;Razor;
+OnlyShowIn=LXDE;LxQt;
 Type=Application
 Exec=lxqt-config-appearance
 Terminal=false
-Categories=Settings;DesktopSettings;Qt;Razor;
+Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-desktop-theme
-Name=Razor Appearance Configuration
-Comment=Configure appearance of Razor desktop
-GenericName=Razor Appearance Configuration
+Name=LxQt Appearance Configuration
+Comment=Configure appearance of LxQt desktop
+GenericName=LxQt Appearance Configuration
 
 #TRANSLATIONS_DIR=translations
 
 
 # Translations
 Icon[de_DE]=Einstellungen-Desktop-Thema
-Comment[de_DE]=Razor-Desktop Erscheinungsbild konfigurieren
-GenericName[de_DE]=Razor Erscheinungsbild Konfiguration
-Name[de_DE]=Razor Erscheinungsbild Konfiguration
+Comment[de_DE]=LxQt-Desktop Erscheinungsbild konfigurieren
+GenericName[de_DE]=LxQt Erscheinungsbild Konfiguration
+Name[de_DE]=LxQt Erscheinungsbild Konfiguration

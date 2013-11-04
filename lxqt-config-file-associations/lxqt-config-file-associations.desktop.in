@@ -1,13 +1,13 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=LXDE;Razor;
+OnlyShowIn=LXDE;LxQt;
 Type=Application
 Exec=lxqt-config-file-associations
 Terminal=false
-Categories=Settings;DesktopSettings;Qt;Razor;
+Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-desktop-filetype-association
-Name=Razor file association configuration
+Name=LxQt file association configuration
 Comment=Configure file associations
-GenericName=Razor file association configuration
+GenericName=LxQt file association configuration
 
 #TRANSLATIONS_DIR=translations

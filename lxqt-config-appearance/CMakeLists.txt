@@ -40,8 +40,8 @@ set(LIBRARIES
 
 
 # Translations **********************************
-include(RazorTranslate)
-razor_translate_ts(QM_FILES 
+include(LxQtTranslate)
+lxqt_translate_ts(QM_FILES 
     SOURCES
         ${H_FILES}
         ${CPP_FILES} 

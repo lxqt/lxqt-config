@@ -1,4 +1,4 @@
-#  funtion razor_translate_ts(qm_files 
+#  funtion lxqt_translate_ts(qm_files 
 #                           SOURCES sources ... 
 #                           [TRANSLATION_DIR] translation_directory
 #                           [INSTALLATION_DIR] qm_install_directory
@@ -63,7 +63,7 @@ if(NOT TARGET UpdateTxFile)
 endif()
 
 
-function(razor_translate_ts _qmFiles)
+function(lxqt_translate_ts _qmFiles)
     set(_translationDir "translations")
     set(_installDir "${CMAKE_INSTALL_PREFIX}/share/lxqt/${PROJECT_NAME}")
     
@@ -140,7 +140,7 @@ function(razor_translate_ts _qmFiles)
     
     file(WRITE ${_txFile}
         "[ -f ${_tsSrcFile} ] || exit 0\n"
-        "echo '[razor-qt.${_tsSrcFileNameWE}]'\n"
+        "echo '[lxqt-qt.${_tsSrcFileNameWE}]'\n"
         "echo 'type = QT'\n"
         "echo 'source_lang = en'\n"
         "echo 'source_file = ${_tx_tsSrcFile}'\n"
@@ -149,12 +149,12 @@ function(razor_translate_ts _qmFiles)
     )
 
     # translate.h file *************************************
-    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/razortranslate.h
-        "#ifndef RAZOR_TRANSLATE_H\n"
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/lxqttranslate.h
+        "#ifndef LXQT_TRANSLATE_H\n"
         "#include <QtCore/QLocale>\n"
         "#include <QtCore/QTranslator>\n"
         "#include <QtCore/QLibraryInfo>\n"
-        "class RazorTranslator {\n"
+        "class LxQtTranslator {\n"
         "public:\n"
         "  static void translate()\n"
         "  {\n"
@@ -170,8 +170,8 @@ function(razor_translate_ts _qmFiles)
         "  }\n"
         "};\n"
 
-        "#define TRANSLATE_APP  RazorTranslator::translate();\n"
-        "#endif // RAZOR_TRANSLATE_H\n"
+        "#define TRANSLATE_APP  LxQtTranslator::translate();\n"
+        "#endif // LXQT_TRANSLATE_H\n"
     )
 
     # QM files **********************************************    
@@ -180,14 +180,14 @@ function(razor_translate_ts _qmFiles)
     install(FILES ${_qmFilesLocal} DESTINATION ${_installDir})
     
     set(${_qmFiles} ${_qmFilesLocal} PARENT_SCOPE)
-endfunction(razor_translate_ts)
+endfunction(lxqt_translate_ts)
 
 
 #**********************************************************
 # DESKTOP files
 #**********************************************************
 
-function(razor_translate_desktop _RESULT)
+function(lxqt_translate_desktop _RESULT)
     set(_translationDir "translations")
     
     # Parse arguments ***************************************
@@ -260,7 +260,7 @@ function(razor_translate_desktop _RESULT)
     
         file(WRITE ${_txFile}
             "[ -f ${_inFile} ] || exit 0\n"
-            "echo '[razor-qt.${_fileName}_${_fileType}]'\n"
+            "echo '[lxqt-qt.${_fileName}_${_fileType}]'\n"
             "echo 'type = DESKTOP'\n"
             "echo 'source_lang = en'\n"
             "echo 'source_file = ${_tx_inFile}'\n"
@@ -271,5 +271,5 @@ function(razor_translate_desktop _RESULT)
     endforeach()
 
     set(${_RESULT} ${__result} PARENT_SCOPE)    
-endfunction(razor_translate_desktop)
+endfunction(lxqt_translate_desktop)
 

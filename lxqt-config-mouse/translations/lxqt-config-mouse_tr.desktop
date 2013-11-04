@@ -1,20 +1,20 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=LXDE;Razor;
+OnlyShowIn=LXDE;LxQt;
 Type=Application
 Exec=lxqt-config-mouse
 Terminal=false
-Categories=Settings;DesktopSettings;Qt;Razor;
+Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-desktop-mouse
-Name=Razor Mouse Configurator
+Name=LxQt Mouse Configurator
 Comment=Configure X11 mouse
-GenericName=Razor Mouse Configurator
+GenericName=LxQt Mouse Configurator
 
 #TRANSLATIONS_DIR=translations
 
 
 # Translations
 Comment[tr]=X11 faresini yapılandır
-GenericName[tr]=Razor Fare Yapılandırıcı
-Name[tr]=Razor Fare Yapılandırıcı
+GenericName[tr]=LxQt Fare Yapılandırıcı
+Name[tr]=LxQt Fare Yapılandırıcı
 Icon[tr]=preferences-desktop-mouse

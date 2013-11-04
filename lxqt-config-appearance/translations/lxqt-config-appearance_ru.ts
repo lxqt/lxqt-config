@@ -2,7 +2,7 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation>Меню программ</translation>
     </message>
     <message>
@@ -13,7 +13,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation>Меню программ</translation>
     </message>
     <message>
@@ -21,14 +21,14 @@
         <translation>Иконки темы</translation>
     </message>
     <message>
-        <source>Razor Theme</source>
+        <source>LxQt Theme</source>
         <translation>Разop темы</translation>
     </message>
 </context>
 <context>
-    <name>RazorThemeConfig</name>
+    <name>LxQtThemeConfig</name>
     <message>
-        <source>Razor Theme</source>
+        <source>LxQt Theme</source>
         <translation>Разop темы</translation>
     </message>
 </context>

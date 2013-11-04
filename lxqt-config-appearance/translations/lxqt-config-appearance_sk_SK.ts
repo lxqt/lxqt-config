@@ -4,8 +4,8 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <source>Razor Appearance Configuration</source>
-        <translation>Nastavenie vzhľadu prostredia Razor</translation>
+        <source>LxQt Appearance Configuration</source>
+        <translation>Nastavenie vzhľadu prostredia LxQt</translation>
     </message>
     <message>
         <source>Icons Theme</source>

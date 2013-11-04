@@ -13,7 +13,7 @@
 #include <qtxdg/xdgicon.h>
 #include <lxqt/lxqtsettings.h>
 #include "main.h"
-#include "razortranslate.h"
+#include "lxqttranslate.h"
 
 #include <lxqt/lxqtapplication.h>
 #include <QtCore/QFile>

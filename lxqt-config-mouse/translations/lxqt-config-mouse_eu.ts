@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
-        <translation>Razor saguaren gaiaren konfigurazioa</translation>
+        <source>LxQt Mouse Theme Configuration</source>
+        <translation>LxQt saguaren gaiaren konfigurazioa</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Hautatu erabili nahi duzun kurtsore-gaia (nabarmendu aurrebista kurtsorea probatzeko). &lt;b&gt;Razor saioa berrabiarazi behar da aldaketa honen ondoren&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Hautatu erabili nahi duzun kurtsore-gaia (nabarmendu aurrebista kurtsorea probatzeko). &lt;b&gt;LxQt saioa berrabiarazi behar da aldaketa honen ondoren&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

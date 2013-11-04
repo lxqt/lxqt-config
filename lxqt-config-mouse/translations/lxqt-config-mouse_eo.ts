@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
-        <translation>Agordoj de etosoj de muso de Razor</translation>
+        <source>LxQt Mouse Theme Configuration</source>
+        <translation>Agordoj de etosoj de muso de LxQt</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Elektu la etoson de kursoro, kiun vi volas uzi (ŝveba antaŭrigardo por testi kursoron). &lt;b&gt;Seanco de Razor postulas restartigon post ol ĉi tiu ŝanĝo&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Elektu la etoson de kursoro, kiun vi volas uzi (ŝveba antaŭrigardo por testi kursoron). &lt;b&gt;Seanco de LxQt postulas restartigon post ol ĉi tiu ŝanĝo&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

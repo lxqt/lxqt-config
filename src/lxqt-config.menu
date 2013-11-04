@@ -1,7 +1,7 @@
 <!DOCTYPE Menu PUBLIC '-//freedesktop//DTD Menu 1.0//EN' 'http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd'>
 <Menu>
     <Name>Settings</Name>
-    <Directory>razor-menu-applications.directory</Directory>
+    <Directory>lxqt-menu-applications.directory</Directory>
     <!-- Read standard .directory and .desktop file locations -->
     <DefaultAppDirs/>
     <DefaultDirectoryDirs/>
@@ -13,17 +13,17 @@
 
 
     <Menu>
-        <Name>Razor settings</Name>
-        <Directory>razor-settings-razor.directory</Directory>
+        <Name>LxQt settings</Name>
+        <Directory>lxqt-settings-lxqt.directory</Directory>
         <Include>
             <And>
                 <Category>Settings</Category>
                 <Or>
-                    <Category>X-RAZOR</Category>
-                    <Category>Razor</Category>
+                    <Category>X-LXQT</Category>
+                    <Category>LxQt</Category>
                 </Or>
                 <Not>
-                    <Filename>razor-config.desktop</Filename>
+                    <Filename>lxqt-config.desktop</Filename>
                 </Not>
             </And>
         </Include>
@@ -31,7 +31,7 @@
 
     <Menu>
         <Name>System settings</Name>
-        <Directory>razor-settings-system.directory</Directory>
+        <Directory>lxqt-settings-system.directory</Directory>
         <Include>
             <And>
                 <Category>Settings</Category>
@@ -42,14 +42,14 @@
 
     <Menu>
         <Name>Other settings</Name>
-        <Directory>razor-settings-other.directory</Directory>
+        <Directory>lxqt-settings-other.directory</Directory>
         <Include>
             <And>
                 <Category>Settings</Category>
                 <Not>
                     <Or>
-                        <Category>X-RAZOR</Category>
-                        <Category>Razor</Category>
+                        <Category>X-LXQT</Category>
+                        <Category>LxQt</Category>
                         <Category>System</Category>
                     </Or>
                 </Not>
@@ -58,7 +58,7 @@
      </Menu>
 
     <Layout>
-        <Menuname>Razor settings</Menuname>
+        <Menuname>LxQt settings</Menuname>
         <Menuname>System settings</Menuname>
         <Merge type="menus"/>
     </Layout>

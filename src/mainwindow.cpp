@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2010-2011 Razor team
@@ -43,7 +43,7 @@
 #include "qcategorydrawer.h"
 #include "qcategorizedsortfilterproxymodel.h"
 
-namespace RazorConfig {
+namespace LxQtConfig {
 
 struct ConfigPaneData: public QSharedData
 {
@@ -80,7 +80,7 @@ public:
     {
         QString menuFile = XdgMenu::getMenuFileName("config.menu");
         XdgMenu xdgMenu;
-        xdgMenu.setEnvironments(QStringList() << "X-RAZOR" << "Razor");
+        xdgMenu.setEnvironments(QStringList() << "X-LXQT" << "LxQt");
         bool res = xdgMenu.read(menuFile);
         if (!res)
         {
@@ -193,7 +193,7 @@ private:
 };
 
 
-RazorConfig::MainWindow::MainWindow() : QMainWindow()
+LxQtConfig::MainWindow::MainWindow() : QMainWindow()
 {
     setupUi(this);
 
@@ -212,7 +212,7 @@ RazorConfig::MainWindow::MainWindow() : QMainWindow()
     QTimer::singleShot(1, this, SLOT(load()));
 }
 
-void RazorConfig::MainWindow::load()
+void LxQtConfig::MainWindow::load()
 {
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
@@ -226,7 +226,7 @@ void RazorConfig::MainWindow::load()
     QApplication::restoreOverrideCursor();
 }
 
-void RazorConfig::MainWindow::activateItem(const QModelIndex &index)
+void LxQtConfig::MainWindow::activateItem(const QModelIndex &index)
 {
     if (!index.isValid())
         return;

@@ -5,8 +5,8 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <source>Razor Appearance Configuration</source>
-        <translation>Razor megjelenésbeállító</translation>
+        <source>LxQt Appearance Configuration</source>
+        <translation>LxQt megjelenésbeállító</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>

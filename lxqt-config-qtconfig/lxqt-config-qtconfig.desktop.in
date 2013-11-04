@@ -1,10 +1,10 @@
 [Desktop Entry]
-OnlyShowIn=Razor;
+OnlyShowIn=LxQt;
 Type=Application
 Exec=qtconfig
 TryExec=qtconfig
 Terminal=false
-Categories=Settings;DesktopSettings;Qt;Razor;
+Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-system
 Name=Qt Configuration
 Comment=Configure Qt

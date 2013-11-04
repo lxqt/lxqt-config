@@ -2,7 +2,7 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation>Alkalmazásmenü</translation>
     </message>
     <message>
@@ -13,7 +13,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation>Alkalmazásmenü</translation>
     </message>
     <message>
@@ -21,15 +21,15 @@
         <translation>Ikontéma</translation>
     </message>
     <message>
-        <source>Razor Theme</source>
-        <translation>Razor téma</translation>
+        <source>LxQt Theme</source>
+        <translation>LxQt téma</translation>
     </message>
 </context>
 <context>
-    <name>RazorThemeConfig</name>
+    <name>LxQtThemeConfig</name>
     <message>
-        <source>Razor Theme</source>
-        <translation>Razor téma</translation>
+        <source>LxQt Theme</source>
+        <translation>LxQt téma</translation>
     </message>
 </context>
 </TS>

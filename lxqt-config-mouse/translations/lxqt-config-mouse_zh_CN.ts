@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
-        <translation>Razor 鼠标主题配置</translation>
+        <source>LxQt Mouse Theme Configuration</source>
+        <translation>LxQt 鼠标主题配置</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>选择要使用的游标主题(鼠标放到项目上可以预览)。&lt;b&gt;修改后需要重启Razor 会话。&lt;/b&gt;：</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>选择要使用的游标主题(鼠标放到项目上可以预览)。&lt;b&gt;修改后需要重启LxQt 会话。&lt;/b&gt;：</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

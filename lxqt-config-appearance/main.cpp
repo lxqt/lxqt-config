@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2010-2011 Razor team
@@ -31,7 +31,7 @@
 #include <lxqt/lxqtsettings.h>
 #include <lxqt/lxqtconfigdialog.h>
 #include "iconthemeconfig.h"
-#include "razortranslate.h"
+#include "lxqttranslate.h"
 #include "lxqtthemeconfig.h"
 
 int main (int argc, char **argv)
@@ -40,14 +40,14 @@ int main (int argc, char **argv)
     TRANSLATE_APP;
 
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
-    LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("Razor Appearance Configuration"), settings);
+    LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LxQt Appearance Configuration"), settings);
 
     IconThemeConfig* iconPage = new IconThemeConfig(settings);
     dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), iconPage, SLOT(initControls()));
 
-    RazorThemeConfig* themePage = new RazorThemeConfig(settings);
-    dialog->addPage(themePage, QObject::tr("Razor Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
+    LxQtThemeConfig* themePage = new LxQtThemeConfig(settings);
+    dialog->addPage(themePage, QObject::tr("LxQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), themePage, SLOT(initControls()));
 
     dialog->show();

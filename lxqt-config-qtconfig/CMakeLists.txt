@@ -1,8 +1,8 @@
 project(lxqt-config-qtconfig)
 
 # Translations **********************************
-include(RazorTranslate)
-razor_translate_desktop(DESKTOP_FILES
+include(LxQtTranslate)
+lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
         ${PROJECT_NAME}.desktop.in
 )

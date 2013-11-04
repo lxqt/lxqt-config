@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
-        <translation>Razorin hiiriteeman asetukset</translation>
+        <source>LxQt Mouse Theme Configuration</source>
+        <translation>LxQtin hiiriteeman asetukset</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Valitse haluamasi osoitinteema (käytä esikatselua testataksesi osoitinteemaa). &lt;b&gt;Razor-istunto tulee käynnistää uudelleen tämän muutoksen jälkeen&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Valitse haluamasi osoitinteema (käytä esikatselua testataksesi osoitinteemaa). &lt;b&gt;LxQt-istunto tulee käynnistää uudelleen tämän muutoksen jälkeen&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

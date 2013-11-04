@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RazorThemeConfig</class>
- <widget class="QWidget" name="RazorThemeConfig">
+ <class>LxQtThemeConfig</class>
+ <widget class="QWidget" name="LxQtThemeConfig">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -20,12 +20,12 @@
       </font>
      </property>
      <property name="text">
-      <string>Razor Theme</string>
+      <string>LxQt Theme</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QTreeWidget" name="razorThemeList">
+    <widget class="QTreeWidget" name="lxqtThemeList">
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>

@@ -2,8 +2,8 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>Razor Appearance Configuration</source>
-        <translation>Razor自訂外觀</translation>
+        <source>LxQt Appearance Configuration</source>
+        <translation>LxQt自訂外觀</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -13,23 +13,23 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Razor Appearance Configuration</source>
-        <translation>Razor自訂外觀</translation>
+        <source>LxQt Appearance Configuration</source>
+        <translation>LxQt自訂外觀</translation>
     </message>
     <message>
         <source>Icons Theme</source>
         <translation>圖示主題</translation>
     </message>
     <message>
-        <source>Razor Theme</source>
-        <translation>Razor主題</translation>
+        <source>LxQt Theme</source>
+        <translation>LxQt主題</translation>
     </message>
 </context>
 <context>
-    <name>RazorThemeConfig</name>
+    <name>LxQtThemeConfig</name>
     <message>
-        <source>Razor Theme</source>
-        <translation>Razor主題</translation>
+        <source>LxQt Theme</source>
+        <translation>LxQt主題</translation>
     </message>
 </context>
 </TS>

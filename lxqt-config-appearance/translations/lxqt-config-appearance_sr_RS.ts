@@ -4,7 +4,7 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <source>Razor Appearance Configuration</source>
+        <source>LxQt Appearance Configuration</source>
         <translation>Подешавање изгледа Рејзора</translation>
     </message>
     <message>

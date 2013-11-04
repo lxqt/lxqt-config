@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2013 Christian Surlykke
@@ -33,7 +33,7 @@
 #include <QVariant>
 
 #include <lxqt/lxqtsettings.h>
-#include "razortranslate.h"
+#include "lxqttranslate.h"
 #include <qtxdg/xdgdesktopfile.h>
 #include "mimetypeviewer.h"
 #include <qtxdg/xdgdirs.h>

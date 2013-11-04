@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -25,8 +25,8 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef RAZORTHEMECONFIG_H
-#define RAZORTHEMECONFIG_H
+#ifndef LXQTTHEMECONFIG_H
+#define LXQTTHEMECONFIG_H
 
 #include <QtGui/QWidget>
 #include <lxqt/lxqtsettings.h>
@@ -34,26 +34,26 @@
 class QTreeWidgetItem;
 
 namespace Ui {
-    class RazorThemeConfig;
+    class LxQtThemeConfig;
 }
 
-class RazorThemeConfig : public QWidget
+class LxQtThemeConfig : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit RazorThemeConfig(LxQt::Settings *settings, QWidget *parent = 0);
-    ~RazorThemeConfig();
+    explicit LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent = 0);
+    ~LxQtThemeConfig();
 
 public slots:
     void initControls();
 
 private slots:
-    void razorThemeSelected(QTreeWidgetItem* item, int column);
+    void lxqtThemeSelected(QTreeWidgetItem* item, int column);
 
 private:
-    Ui::RazorThemeConfig *ui;
+    Ui::LxQtThemeConfig *ui;
     LxQt::Settings *mSettings;
 };
 
-#endif // RAZORTHEMECONFIG_H
+#endif // LXQTTHEMECONFIG_H

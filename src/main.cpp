@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2010-2011 Razor team
@@ -26,7 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <lxqt/lxqtapplication.h>
-#include "razortranslate.h"
+#include "lxqttranslate.h"
 #include "mainwindow.h"
 
 
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
     LxQt::Application app(argc, argv);
     TRANSLATE_APP;
     
-    RazorConfig::MainWindow w;
+    LxQtConfig::MainWindow w;
     w.show();
 
     return app.exec();

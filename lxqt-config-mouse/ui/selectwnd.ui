@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Razor Mouse Theme Configuration</string>
+   <string>LxQt Mouse Theme Configuration</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="5">
     <widget class="QLabel" name="infoLabel">
      <property name="text">
-      <string>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</string>
+      <string>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

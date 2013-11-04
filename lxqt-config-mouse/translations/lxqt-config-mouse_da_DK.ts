@@ -2,13 +2,13 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>Razor Mouse Theme Configuration</source>
-        <translation>Razor Musemarkør Tema Indstillinger</translation>
+        <source>LxQt Mouse Theme Configuration</source>
+        <translation>LxQt Musemarkør Tema Indstillinger</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;Razor session needs restart after this change&lt;/b&gt;:</source>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Vælg det markør tema, du vil bruge (forhåndsvisning for at teste markør).
-&lt;b&gt; Razor session skal genstartes efter denne ændring &lt;/ b&gt;:</translation>
+&lt;b&gt; LxQt session skal genstartes efter denne ændring &lt;/ b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>
