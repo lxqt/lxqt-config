@@ -63,7 +63,6 @@ qt4_add_resources(QRC_SOURCES ${QRC_FILES})
 
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
-add_dependencies(${PROJECT_NAME} lxqtqt qtxdg)
 target_link_libraries(${PROJECT_NAME}  ${LIBRARIES} ${QT_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

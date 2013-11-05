@@ -14,7 +14,7 @@ GenericName=LxQt Mouse Configurator
 
 
 # Translations
-Comment[ru]=Настройки мыши для LxQt-Qt
+Comment[ru]=Настройки мыши для LXDE-Qt
 GenericName[ru]=Настройки мыши
 Name[ru]=Настройки мыши
 Icon[ru]=предпочтений-рабочий стол-мыш

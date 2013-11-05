@@ -3,7 +3,7 @@
     <name>SelectWnd</name>
     <message>
         <source>LxQt Mouse Theme Configuration</source>
-        <translation>Configuracion de tema de raton de LxQt-QT</translation>
+        <translation>Configuracion de tema de raton de LXDE-Qt</translation>
     </message>
     <message>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>

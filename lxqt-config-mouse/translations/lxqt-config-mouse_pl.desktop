@@ -14,7 +14,7 @@ GenericName=LxQt Mouse Configurator
 
 
 # Translations
-Comment[pl]=Konfiguracja myszy w LxQt-Qt
-GenericName[pl]=Ustawuenua myszy LxQt-Qt
-Name[pl]=Ustawienia myszy LxQt-Qt
+Comment[pl]=Konfiguracja myszy w LXDE-Qt
+GenericName[pl]=Ustawuenua myszy LXDE-Qt
+Name[pl]=Ustawienia myszy LXDE-Qt
 Icon[pl]=ustawienia-pulpit-mysz

@@ -6,14 +6,14 @@ Terminal=false
 Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-system
 Name=LxQt Configuration Center
-Comment=Configure LxQt-Qt modules
+Comment=Configure LXDE-Qt modules
 GenericName=LxQt Configuration
 
 #TRANSLATIONS_DIR=translations
 
 
 # Translations
-Comment[ru_RU]=Настроить модули LxQt-Qt
+Comment[ru_RU]=Настроить модули LXDE-Qt
 GenericName[ru_RU]=Настройка LxQt
 Name[ru_RU]=Центр настроек LxQt
 Icon[ru_RU]=Системные настройки

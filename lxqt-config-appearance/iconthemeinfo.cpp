@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXDE-Qt - a lightweight, Qt based, desktop toolset
- * https://sourceforge.net/projects/lxqt-qt/
+ * https://sourceforge.net/projects/lxde-qt/
  *
  * Copyright: 2010-2011 Razor team
  * Authors:
