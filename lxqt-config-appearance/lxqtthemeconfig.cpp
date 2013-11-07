@@ -29,6 +29,7 @@
 #include "ui_lxqtthemeconfig.h"
 #include <QtGui/QTreeWidget>
 #include <QtCore/QDebug>
+#include <QProcess>
 
 LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
@@ -87,5 +88,20 @@ void LxQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
     Q_UNUSED(column);
     if (!item)
         return;
-    mSettings->setValue("theme", item->data(0, Qt::UserRole));
+
+    QVariant themeName = item->data(0, Qt::UserRole);
+    mSettings->setValue("theme", themeName);
+    
+    LxQt::LxQtTheme theme(themeName.toString());
+    if(theme.isValid()) {
+		QString wallpaper = theme.desktopBackground();
+		if(!wallpaper.isEmpty()) {
+			// call pcmanfm-qt to update wallpaper
+			QProcess process;
+			QStringList args;
+			args << "--set-wallpaper" << wallpaper;
+			process.start("pcmanfm-qt", args, QIODevice::NotOpen);
+			process.waitForFinished();
+		}
+	}
 }
