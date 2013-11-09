@@ -34,7 +34,10 @@ int main(int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
     TRANSLATE_APP;
-    
+
+    // ensure that we use lxqt-config.menu file.
+    qputenv("XDG_MENU_PREFIX", "lxqt-");
+
     LxQtConfig::MainWindow w;
     w.show();
 

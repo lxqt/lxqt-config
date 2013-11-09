@@ -50,6 +50,7 @@
                     <Or>
                         <Category>X-LXQT</Category>
                         <Category>LxQt</Category>
+                        <Category>LXDE</Category>
                         <Category>System</Category>
                     </Or>
                 </Not>
