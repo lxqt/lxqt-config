@@ -33,6 +33,7 @@
 #include "iconthemeconfig.h"
 #include "lxqttranslate.h"
 #include "lxqtthemeconfig.h"
+#include "styleconfig.h"
 
 int main (int argc, char **argv)
 {
@@ -41,6 +42,11 @@ int main (int argc, char **argv)
 
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LxQt Appearance Configuration"), settings);
+
+    QSettings qtSettings(QLatin1String("Trolltech"));
+    StyleConfig* stylePage = new StyleConfig(&qtSettings);
+    dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
+    QObject::connect(dialog, SIGNAL(reset()), stylePage, SLOT(initControls()));
 
     IconThemeConfig* iconPage = new IconThemeConfig(settings);
     dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");
