@@ -29,6 +29,7 @@
 #define STYLECONFIG_H
 
 #include <QWidget>
+#include <lxqt/LxQtSettings>
 
 class QTreeWidgetItem;
 class QSettings;
@@ -42,7 +43,7 @@ class StyleConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit StyleConfig(QSettings *settings, QWidget *parent = 0);
+    explicit StyleConfig(LxQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
     ~StyleConfig();
 
 public slots:
@@ -50,10 +51,13 @@ public slots:
 
 private slots:
     void styleSelected(QTreeWidgetItem* item, int column);
+    void toolButtonStyleSelected(int index);
+    void singleClickActivateToggled(bool toggled);
 
 private:
     Ui::StyleConfig *ui;
-    QSettings *mSettings;
+    QSettings *mQtSettings;
+    LxQt::Settings *mSettings;
 };
 
 #endif // STYLECONFIG_H

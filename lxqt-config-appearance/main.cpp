@@ -44,7 +44,7 @@ int main (int argc, char **argv)
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LxQt Appearance Configuration"), settings);
 
     QSettings qtSettings(QLatin1String("Trolltech"));
-    StyleConfig* stylePage = new StyleConfig(&qtSettings);
+    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), stylePage, SLOT(initControls()));
 

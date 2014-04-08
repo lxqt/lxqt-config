@@ -30,16 +30,22 @@
 #include <QTreeWidget>
 #include <QDebug>
 #include <QStyleFactory>
+#include <QToolBar>
 #include <QSettings>
+#include <QMetaObject>
+#include <QMetaProperty>
+#include <QMetaEnum>
+#include <QToolBar>
 
 #ifdef Q_WS_X11
 extern void qt_x11_apply_settings_in_all_apps();
 #endif
 
-StyleConfig::StyleConfig(QSettings* settings, QWidget* parent) :
+StyleConfig::StyleConfig(LxQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),
-    mSettings(settings)
+    mSettings(settings),
+    mQtSettings(qtSettings)
 {
     ui->setupUi(this);
 
@@ -51,7 +57,11 @@ StyleConfig::StyleConfig(QSettings* settings, QWidget* parent) :
         QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(name));
         ui->styleList->addTopLevelItem(item);
     }
+
     initControls();
+
+    connect(ui->toolButtonStyle, SIGNAL(currentIndexChanged(int)), SLOT(toolButtonStyleSelected(int)));
+    connect(ui->singleClickActivate, SIGNAL(toggled(bool)), SLOT(singleClickActivateToggled(bool)));
 }
 
 
@@ -63,10 +73,10 @@ StyleConfig::~StyleConfig()
 
 void StyleConfig::initControls()
 {
-    mSettings->beginGroup(QLatin1String("Qt"));
-    QString currentTheme = mSettings->value("style").toString();
-    qDebug() << currentTheme;
-    mSettings->endGroup();
+    // read Qt style settings from Qt Trolltech.conf config
+    mQtSettings->beginGroup(QLatin1String("Qt"));
+    QString currentTheme = mQtSettings->value("style").toString();
+    mQtSettings->endGroup();
 
     QTreeWidgetItemIterator it(ui->styleList);
     while (*it) {
@@ -77,6 +87,19 @@ void StyleConfig::initControls()
         }
         ++it;
     }
+
+    // read other widget related settings form LxQt settings.
+    QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
+    // convert toolbar style name to value
+    QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
+    int val = me.keyToValue(tb_style.constData());
+    if(val == -1)
+      val = Qt::ToolButtonTextBesideIcon;
+    ui->toolButtonStyle->setCurrentIndex(val);
+
+    // activate item views with single click
+    ui->singleClickActivate->setChecked( mSettings->value("single_click_activate", false).toBool());
+    
     update();
 }
 
@@ -87,12 +110,33 @@ void StyleConfig::styleSelected(QTreeWidgetItem* item, int column)
     if (!item)
         return;
     QVariant themeName = item->data(0, Qt::DisplayRole);
-    mSettings->beginGroup(QLatin1String("Qt"));
-    mSettings->setValue("style", themeName);
-    mSettings->endGroup();
-    mSettings->sync();
+    mQtSettings->beginGroup(QLatin1String("Qt"));
+    mQtSettings->setValue("style", themeName);
+    mQtSettings->endGroup();
+    mQtSettings->sync();
 
 #ifdef Q_WS_X11
     qt_x11_apply_settings_in_all_apps();
 #endif
 }
+
+void StyleConfig::toolButtonStyleSelected(int index)
+{
+    // convert style value to string
+    QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
+    if(index == -1)
+        index = Qt::ToolButtonTextBesideIcon;
+    const char* str = me.valueToKey(index);
+    if(str)
+    {
+        mSettings->setValue("tool_button_style", str);
+	mSettings->sync();
+    }
+}
+
+void StyleConfig::singleClickActivateToggled(bool toggled)
+{
+    mSettings->setValue("single_click_activate", toggled);
+    mSettings->sync();
+}
+

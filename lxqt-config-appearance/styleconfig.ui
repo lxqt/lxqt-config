@@ -6,25 +6,48 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>468</width>
+    <height>334</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Widget Style</string>
+      <string>Toolbar button style:</string>
      </property>
     </widget>
    </item>
-   <item>
+   <item row="3" column="1">
+    <widget class="QComboBox" name="toolButtonStyle">
+     <item>
+      <property name="text">
+       <string>Only display the icon</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Only display the text</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>The text appears beside the icon</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>The text appears under the icon</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Default</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
     <widget class="QTreeWidget" name="styleList">
      <property name="alternatingRowColors">
       <bool>true</bool>
@@ -49,6 +72,26 @@
        <string notr="true">1</string>
       </property>
      </column>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Widget Style</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="singleClickActivate">
+     <property name="text">
+      <string>Activate item on single click</string>
+     </property>
     </widget>
    </item>
   </layout>
