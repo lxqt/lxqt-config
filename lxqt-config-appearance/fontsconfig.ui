@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>457</width>
-    <height>386</height>
+    <width>414</width>
+    <height>353</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -87,7 +87,7 @@
    <item>
     <widget class="QGroupBox" name="xftSettings">
      <property name="title">
-      <string>Changes to the following settings will take effect on next login</string>
+      <string>The following settings will only affect newly started applications</string>
      </property>
      <layout class="QFormLayout" name="formLayout_2">
       <item row="0" column="0" colspan="2">

@@ -31,6 +31,12 @@
 #include <QDebug>
 #include <QSettings>
 #include <QFont>
+#include <QFile>
+#include <QDir>
+#include <QDesktopServices>
+#include <QTextStream>
+#include <QStringBuilder>
+#include <QDomDocument>
 
 #ifdef Q_WS_X11
 extern void qt_x11_apply_settings_in_all_apps();
@@ -59,9 +65,9 @@ FontsConfig::FontsConfig(LxQt::Settings* settings, QSettings* qtSettings, QWidge
 
     initControls();
 
-    connect(ui->fontName, SIGNAL(currentFontChanged(QFont)), SLOT(fontChanged()));
-    connect(ui->fontStyle, SIGNAL(currentIndexChanged(int)), SLOT(fontChanged()));
-    connect(ui->fontSize, SIGNAL(valueChanged(int)), SLOT(fontChanged()));
+    connect(ui->fontName, SIGNAL(currentFontChanged(QFont)), SLOT(updateQtFont()));
+    connect(ui->fontStyle, SIGNAL(currentIndexChanged(int)), SLOT(updateQtFont()));
+    connect(ui->fontSize, SIGNAL(valueChanged(int)), SLOT(updateQtFont()));
 
     connect(ui->antialias, SIGNAL(toggled(bool)), SLOT(antialiasToggled(bool)));
     connect(ui->subpixel, SIGNAL(currentIndexChanged(int)), SLOT(subpixelChanged(int)));
@@ -127,34 +133,42 @@ void FontsConfig::initControls()
     ui->dpi->setValue(dpi);
 
     update();
+
+    if(!hasOurFontConfig())
+        updateFontConfig();
 }
 
 void FontsConfig::antialiasToggled(bool toggled)
 {
     mSessionSettings.setValue("antialias", toggled);
+    updateFontConfig();
 }
 
 void FontsConfig::dpiChanged(int value)
 {
     mSessionSettings.setValue("dpi", value);
+    updateFontConfig();
 }
 
 void FontsConfig::hintingToggled(bool toggled)
 {
     mSessionSettings.setValue("hinting", toggled);
+    updateFontConfig();
 }
 
 void FontsConfig::subpixelChanged(int index)
 {
     mSessionSettings.setValue("subpixel", subpixelNames[index]);
+    updateFontConfig();
 }
 
 void FontsConfig::hintStyleChanged(int index)
 {
     mSessionSettings.setValue("hint_style", hintStyleNames[index]);
+    updateFontConfig();
 }
 
-void FontsConfig::fontChanged()
+void FontsConfig::updateQtFont()
 {
     // FIXME: the change does not apply to some currently running Qt programs.
     // FIXME: does not work with KDE apps
@@ -192,3 +206,105 @@ void FontsConfig::fontChanged()
 
     update();
 }
+
+QString FontsConfig::configDir() const
+{
+    QString path = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
+    if(path.isEmpty())
+        path = QDesktopServices::storageLocation(QDesktopServices::HomeLocation) % "/.config";
+    path += "/fontconfig";
+    return path;
+}
+
+bool FontsConfig::hasOurFontConfig() const
+{
+    bool ret = false;
+    QString path = configDir() % "/fonts.conf";
+    QFile file(path);
+    if(file.open(QIODevice::ReadOnly))
+    {
+        // if the file already exsits, check if it's created by us
+        QByteArray buffer = file.readAll();
+        ret = buffer.contains("lxqt-config-appearance");
+        file.close();
+    }
+    return ret;
+}
+
+
+// update fontconfig related settings
+void FontsConfig::updateFontConfig()
+{
+    bool antialias = ui->antialias->isChecked();
+    bool hinting = ui->hinting->isChecked();
+    int subpixel = ui->subpixel->currentIndex();
+    int hintStyle = ui->hintStyle->currentIndex();
+    int dpi = ui->dpi->value();
+
+    QString path = configDir();
+    QDir().mkdir(path);
+    path += "/fonts.conf";
+    QFile file(path);
+
+    // backup the old config file if it's not written by us
+    if(!hasOurFontConfig() && file.exists())
+	file.copy(path + ".bak");
+
+    // References: https://wiki.archlinux.org/index.php/Font_Configuration
+    if(file.open(QIODevice::WriteOnly))
+    {
+	QTextStream s(&file);
+	s <<
+	"<?xml version=\"1.0\"?>\n"
+	"<!DOCTYPE fontconfig SYSTEM \"fonts.dtd\">\n"
+	"<!-- created by lxqt-config-appearance **DO NOT EDIT** -->\n"
+	"<fontconfig>\n"
+	"  <match target=\"font\">\n"
+	"    <edit name=\"antialias\" mode=\"assign\">\n"
+	"      <bool>" << (antialias ? "true" : "false") << "</bool>\n"
+	"    </edit>\n"
+	"    <edit name=\"rgba\" mode=\"assign\">\n"
+	"      <const>" << subpixelNames[subpixel] << "</const>\n"
+	"    </edit>\n"
+	"    <edit name=\"lcdfilter\" mode=\"assign\">\n"
+	"      <const>lcddefault</const>\n"
+	"    </edit>\n"
+	"    <edit name=\"hinting\" mode=\"assign\">\n"
+	"      <bool>" << (hinting ? "true" : "false") << "</bool>\n"
+	"    </edit>\n"
+	"    <edit name=\"hintstyle\" mode=\"assign\">\n"
+	"      <const>hint" << hintStyleNames[hintStyle] << "</const>\n"
+	"    </edit>\n"
+	"  </match>\n"
+	"  <match target=\"pattern\">\n"
+	"    <edit name=\"dpi\" mode=\"assign\">\n"
+	"      <double>" << dpi << "</double>\n"
+	"    </edit>\n"
+	"  </match>\n"
+	"</fontconfig>";
+	s.flush();
+	file.close();
+    }
+}
+
+/*
+void FontsConfig::loadFontConfig()
+{
+    QString path = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
+    if(path.isEmpty())
+        path = QDesktopServices::storageLocation(QDesktopServices::HomeLocation) % "/.config";
+    path += "/fontconfig/fonts.conf";
+    QFile file(path);
+    if(file.open(QIODevice::ReadOnly))
+    {
+        QByteArray buffer = file.readAll();
+	file.close();
+	// check if this file is created by us
+        // if the file already exsits, check if it's created by us
+        if(!buffer.contains("lxqt-config-appearance"))
+	{
+	    
+	}
+    }
+}
+*/

@@ -51,16 +51,18 @@ public Q_SLOTS:
     void initControls();
 
 private Q_SLOTS:
-  void fontChanged();
-  //void fontChanged(const QFont & font);
-  //void fontStyleChanged(int index);
-  //void fontSizeChanged(int value);
+    void updateQtFont();
+    void antialiasToggled(bool toggled);
+    void hintingToggled(bool toggled);
+    void subpixelChanged(int index);
+    void hintStyleChanged(int index);
+    void dpiChanged(int value);
 
-  void antialiasToggled(bool toggled);
-  void hintingToggled(bool toggled);
-  void subpixelChanged(int index);
-  void hintStyleChanged(int index);
-  void dpiChanged(int value);
+private:
+    void updateFontConfig();
+    // void loadFontConfig();
+    QString configDir() const;
+    bool hasOurFontConfig() const;
 
 private:
     Ui::FontsConfig *ui;
