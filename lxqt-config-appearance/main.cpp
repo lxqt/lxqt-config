@@ -34,6 +34,7 @@
 #include "lxqttranslate.h"
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
+#include "fontsconfig.h"
 
 int main (int argc, char **argv)
 {
@@ -55,6 +56,10 @@ int main (int argc, char **argv)
     LxQtThemeConfig* themePage = new LxQtThemeConfig(settings);
     dialog->addPage(themePage, QObject::tr("LxQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), themePage, SLOT(initControls()));
+    
+    FontsConfig* fontsPage = new FontsConfig(settings, &qtSettings);
+    dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << "preferences-desktop-font" << "preferences-desktop");
+    QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
 
     dialog->show();
 

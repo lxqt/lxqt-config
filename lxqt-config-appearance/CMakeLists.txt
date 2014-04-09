@@ -15,6 +15,7 @@ set(H_FILES
 set(MOC_FILES
     iconthemeconfig.h
     lxqtthemeconfig.h
+    fontsconfig.h
     styleconfig.h
 )
 
@@ -23,12 +24,14 @@ set(CPP_FILES
     iconthemeconfig.cpp
     iconthemeinfo.cpp
     lxqtthemeconfig.cpp
+    fontsconfig.cpp
     styleconfig.cpp
    )
 
 set(UI_FILES
     iconthemeconfig.ui
     lxqtthemeconfig.ui
+    fontsconfig.ui
     styleconfig.ui
 )
 
