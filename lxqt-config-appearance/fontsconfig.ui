@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>414</width>
-    <height>353</height>
+    <width>448</width>
+    <height>386</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -87,7 +87,7 @@
    <item>
     <widget class="QGroupBox" name="xftSettings">
      <property name="title">
-      <string>The following settings will only affect newly started applications</string>
+      <string>The following settings only affect newly started applications</string>
      </property>
      <layout class="QFormLayout" name="formLayout_2">
       <item row="0" column="0" colspan="2">
@@ -146,7 +146,14 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QSpinBox" name="dpi"/>
+       <widget class="QSpinBox" name="dpi">
+        <property name="minimum">
+         <number>-1</number>
+        </property>
+        <property name="maximum">
+         <number>1048576</number>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_4">

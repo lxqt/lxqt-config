@@ -31,6 +31,7 @@
 #include <QWidget>
 #include <QFont>
 #include <lxqt/LxQtSettings>
+#include "fontconfigfile.h"
 
 class QTreeWidgetItem;
 class QSettings;
@@ -59,16 +60,10 @@ private Q_SLOTS:
     void dpiChanged(int value);
 
 private:
-    void updateFontConfig();
-    // void loadFontConfig();
-    QString configDir() const;
-    bool hasOurFontConfig() const;
-
-private:
     Ui::FontsConfig *ui;
     QSettings *mQtSettings;
     LxQt::Settings *mSettings;
-    LxQt::Settings mSessionSettings;
+    FontConfigFile mFontConfigFile;
 };
 
 #endif // FONTSCONFIG_H
