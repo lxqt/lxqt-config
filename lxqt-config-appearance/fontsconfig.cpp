@@ -113,7 +113,7 @@ void FontsConfig::initControls()
     bool hinting = mSessionSettings.value("hinting", true).toBool();
     ui->hinting->setChecked(hinting);
 
-    QByteArray hintStyleStr = mSessionSettings.value("hinting_style", "none").toByteArray();
+    QByteArray hintStyleStr = mSessionSettings.value("hint_style", "none").toByteArray();
     int hintStyle;
     for(hintStyle = 0; hintStyle < 4; ++hintStyle)
     {
@@ -151,7 +151,7 @@ void FontsConfig::subpixelChanged(int index)
 
 void FontsConfig::hintStyleChanged(int index)
 {
-    mSessionSettings.setValue("hinting_style", hintStyleNames[index]);
+    mSessionSettings.setValue("hint_style", hintStyleNames[index]);
 }
 
 void FontsConfig::fontChanged()
