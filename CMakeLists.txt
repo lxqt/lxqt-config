@@ -5,6 +5,9 @@ project(lxqt-config)
 # additional cmake files
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+# Set default installation paths
+set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
+
 find_package(Qt4 REQUIRED)
 include(${QT_USE_FILE})
 
@@ -19,5 +22,6 @@ add_subdirectory(lxqt-config-mouse)
 add_subdirectory(lxqt-config-appearance)
 add_subdirectory(lxqt-config-qtconfig)
 add_subdirectory(lxqt-config-file-associations)
+add_subdirectory(lxqt-config-input)
 
 

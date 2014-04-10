@@ -7,16 +7,19 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
-#include <QtCore/QDebug>
+
+// 2014-04-10 modified by Hong Jen Yee (PCMan) for integration with lxqt-config-input
+
+#include <QDebug>
 
 #include "selectwnd.h"
 
-#include <QtGui/QKeyEvent>
-#include <QtGui/QMessageBox>
-#include <QtCore/QTimer>
-#include <QtGui/QWidget>
-#include <QtGui/QPushButton>
-#include <QtGui/QToolTip>
+#include <QKeyEvent>
+#include <QMessageBox>
+#include <QTimer>
+#include <QWidget>
+#include <QPushButton>
+#include <QToolTip>
 
 #include "cfgfile.h"
 #include "crtheme.h"
@@ -32,10 +35,9 @@
 
 #define HOME_ICON_DIR QDir::homePath() + "/.icons"
 
-SelectWnd::SelectWnd(QWidget *parent) : QWidget(parent)
+SelectWnd::SelectWnd(LxQt::Settings* settings, QWidget *parent) : QWidget(parent), mSettings(settings)
 {
     setupUi(this);
-    closeButton->setIcon(XdgIcon::fromTheme("dialog-close"));
 
     warningLabel->hide();
 
@@ -52,14 +54,14 @@ SelectWnd::SelectWnd(QWidget *parent) : QWidget(parent)
             SLOT(currentChanged(const QModelIndex &, const QModelIndex &)));
     // display/hide warning label
     connect(mModel, SIGNAL(modelReset()),
-    		this, SLOT(handleWarning()));
+                    this, SLOT(handleWarning()));
     connect(mModel, SIGNAL(rowsInserted(const QModelIndex&, int, int)),
-    		this, SLOT(handleWarning()));
+                    this, SLOT(handleWarning()));
     connect(mModel, SIGNAL(rowsRemoved(const QModelIndex&, int, int)),
-    		this, SLOT(handleWarning()));
+                    this, SLOT(handleWarning()));
 
     connect(warningLabel, SIGNAL(showDirInfo()),
-    		this, SLOT(showDirInfo()));
+                    this, SLOT(showDirInfo()));
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there
@@ -83,6 +85,14 @@ void SelectWnd::setCurrent()
     lbThemes->selectionModel()->clear();
 
     QString ct = getCurrentTheme();
+    if(ct.isEmpty())
+    {
+        // if we fail to get the default icon theme name, read from lxqt config
+        mSettings->beginGroup("environment");
+        ct = mSettings->value("XCURSOR_THEME").toString();
+        mSettings->endGroup();
+    }
+
     mAppliedIndex = mModel->defaultIndex();
 
     if (!ct.isEmpty()) mAppliedIndex = mModel->findIndex(ct);
@@ -106,10 +116,12 @@ bool SelectWnd::iconsIsWritable() const
     return ((icons.exists() && icons.isDir() && icons.isWritable()) || (!icons.exists() && home.isWritable()));
 }
 
+/*
 void SelectWnd::keyPressEvent(QKeyEvent *e)
 {
   if (e->key() == Qt::Key_Escape) close();
 }
+*/
 
 void SelectWnd::selectRow(int row) const
 {
@@ -130,6 +142,10 @@ void SelectWnd::currentChanged(const QModelIndex &current, const QModelIndex &pr
         if (theme) preview->setTheme(*theme); else preview->clearTheme();
         btRemove->setEnabled(theme->isWritable());
         //qDebug() << theme->path() << theme->name();
+        
+        // 2014-04-10 added by pcman for lxqt-config-input
+        // directly apply the current settings
+        applyCurrent();
     }else preview->clearTheme();
    //emit changed(mAppliedIndex != current);
 }
@@ -139,7 +155,7 @@ void SelectWnd::on_btInstall_clicked()
     qDebug() << "'install' clicked";
 }
 
-void SelectWnd::on_btSet_clicked()
+void SelectWnd::applyCurrent()
 {
     //qDebug() << "'set' clicked";
     const XCursorThemeData *theme = mModel->theme(lbThemes->currentIndex());
@@ -148,10 +164,9 @@ void SelectWnd::on_btSet_clicked()
     fixXDefaults(theme->name());
 
     // LXQT: LxQt settings - session requires restart!
-    LxQt::Settings lxqt("session");
-    lxqt.beginGroup("environment");
-    lxqt.setValue("XCURSOR_THEME", theme->name());
-    lxqt.endGroup();
+    mSettings->beginGroup("environment");
+    mSettings->setValue("XCURSOR_THEME", theme->name());
+    mSettings->endGroup();
 }
 
 void SelectWnd::on_btRemove_clicked()
@@ -174,13 +189,13 @@ void SelectWnd::on_btRemove_clicked()
 
 void SelectWnd::handleWarning()
 {
-	bool empty = mModel->rowCount();
-	warningLabel->setVisible(!empty);
-	preview->setVisible(empty);
-	infoLabel->setVisible(empty);
+        bool empty = mModel->rowCount();
+        warningLabel->setVisible(!empty);
+        preview->setVisible(empty);
+        infoLabel->setVisible(empty);
 }
 
 void SelectWnd::showDirInfo()
 {
-	QToolTip::showText(mapToGlobal(warningLabel->buttonPos()), mModel->searchPaths().join("\n"));
+        QToolTip::showText(mapToGlobal(warningLabel->buttonPos()), mModel->searchPaths().join("\n"));
 }

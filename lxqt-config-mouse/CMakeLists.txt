@@ -1,5 +1,6 @@
 project(lxqt-config-mouse)
 find_package(X11 REQUIRED)
+
 include_directories(${X11_INCLUDE_DIR})
 
 include_directories (
@@ -35,7 +36,7 @@ set ( lxqt-config-mouse_SRCS
     xcr/xcrthemefx.cpp
     xcr/xcrtheme.cpp
     xcr/xcrthemexp.cpp
-    main.cpp
+    # main.cpp
     cfgfile.cpp
     previewwidget.cpp
     itemdelegate.cpp
@@ -68,11 +69,11 @@ lxqt_translate_desktop(DESKTOP_FILES
 )
 #************************************************
 
-add_executable ( lxqt-config-mouse ${lxqt-config-mouse_SRCS} ${lxqt-config-mouse_CXX} ${lxqt-config-mouse_MOCS} ${DESKTOP_FILES} ${QM_FILES})
+add_library ( lxqt-config-mouse SHARED ${lxqt-config-mouse_SRCS} ${lxqt-config-mouse_CXX} ${lxqt-config-mouse_MOCS} ${DESKTOP_FILES} ${QM_FILES})
 add_dependencies( lxqt-config-mouse lxqt qtxdg)
 target_link_libraries ( lxqt-config-mouse  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY}
                                                  ${X11_X11_LIB} ${X11_Xcursor_LIB} lxqt qtxdg ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
 # not needed probably ${X11_Xfixes_LIB})
 
-INSTALL(TARGETS lxqt-config-mouse RUNTIME DESTINATION bin)
+INSTALL(TARGETS lxqt-config-mouse DESTINATION ${LIB_INSTALL_DIR})
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

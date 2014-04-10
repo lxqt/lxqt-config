@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Keyboard and Mouse
+Icon=input-keyboard
+Exec=lxqt-config-input
+Comment=Configure keyboard, mouse, and other input devices
+StartupNotify=true
+Terminal=false
+Categories=Qt;Settings;HardwareSettings;X-LXDE-Settings;DesktopSettings;LxQt;
+NotShowIn=GNOME;KDE;XFCE;

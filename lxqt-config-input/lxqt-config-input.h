@@ -1,0 +1,6 @@
+#ifndef LXQT_CONFIG_INPUT_H
+#define LXQT_CONFIG_INPUT_H
+
+
+
+#endif // LXQT_CONFIG_INPUT_H
