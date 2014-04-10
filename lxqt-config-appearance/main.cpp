@@ -45,22 +45,23 @@ int main (int argc, char **argv)
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LxQt Appearance Configuration"), settings);
 
     QSettings qtSettings(QLatin1String("Trolltech"));
-    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings);
+    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), stylePage, SLOT(initControls()));
 
-    IconThemeConfig* iconPage = new IconThemeConfig(settings);
+    IconThemeConfig* iconPage = new IconThemeConfig(settings, dialog);
     dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), iconPage, SLOT(initControls()));
 
-    LxQtThemeConfig* themePage = new LxQtThemeConfig(settings);
+    LxQtThemeConfig* themePage = new LxQtThemeConfig(settings, dialog);
     dialog->addPage(themePage, QObject::tr("LxQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), themePage, SLOT(initControls()));
     
-    FontsConfig* fontsPage = new FontsConfig(settings, &qtSettings);
+    FontsConfig* fontsPage = new FontsConfig(settings, &qtSettings, dialog);
     dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << "preferences-desktop-font" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
 
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 
     return app.exec();

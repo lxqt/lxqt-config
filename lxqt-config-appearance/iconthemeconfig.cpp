@@ -35,7 +35,8 @@
 #include <QtCore/QDebug>
 
 
-IconThemeConfig::IconThemeConfig(LxQt::Settings* settings):
+IconThemeConfig::IconThemeConfig(LxQt::Settings* settings, QWidget* parent):
+    QWidget(parent),
     m_settings(settings)
 {
     setupUi(this);

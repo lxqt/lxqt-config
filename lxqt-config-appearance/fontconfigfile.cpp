@@ -52,6 +52,7 @@ FontConfigFile::~FontConfigFile()
     if(mSaveTimer) // has pending save request
     {
         delete mSaveTimer;
+	mSaveTimer = NULL;
         save();
     }
 }
