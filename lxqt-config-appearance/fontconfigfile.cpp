@@ -26,14 +26,17 @@
 #include <QDesktopServices>
 #include <QStringBuilder>
 #include <QDomDocument>
+#include <QTimer>
 #include <QDebug>
 
-FontConfigFile::FontConfigFile():
+FontConfigFile::FontConfigFile(QObject* parent):
+    QObject(parent),
     mAntialias(true),
     mHinting(true),
-    mSubpixel("none"),
-    mHintStyle("hintnone"),
-    mDpi(96)
+    mSubpixel("rgb"),
+    mHintStyle("hintslight"),
+    mDpi(96),
+    mSaveTimer(NULL)
 {
     mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
     if(mDirPath.isEmpty())
@@ -46,36 +49,41 @@ FontConfigFile::FontConfigFile():
 
 FontConfigFile::~FontConfigFile()
 {
+    if(mSaveTimer) // has pending save request
+    {
+        delete mSaveTimer;
+        save();
+    }
 }
 
 void FontConfigFile::setAntialias(bool value)
 {
     mAntialias = value;
-    save();
+    queueSave();
 }
 
 void FontConfigFile::setSubpixel(QByteArray value)
 {
     mSubpixel = value;
-    save();
+    queueSave();
 }
 
 void FontConfigFile::setHinting(bool value)
 {
     mHinting = value;
-    save();
+    queueSave();
 }
 
 void FontConfigFile::setHintStyle(QByteArray value)
 {
     mHintStyle = value;
-    save();
+    queueSave();
 }
 
 void FontConfigFile::setDpi(int value)
 {
     mDpi = value;
-    save();
+    queueSave();
 }
 
 void FontConfigFile::load()
@@ -106,7 +114,6 @@ void FontConfigFile::load()
                 {
                     QString value = editElem.firstChildElement("const").text();
                     mSubpixel = value.toLatin1();
-                    qDebug() << mSubpixel;
                 }
                 else if(name == "hinting")
                 {
@@ -133,13 +140,19 @@ void FontConfigFile::load()
                 backup.write(buffer);
                 backup.close();
             }
-            save(); // overwrite with our file
+            queueSave(); // overwrite with our file
         }
     }
 }
 
 void FontConfigFile::save()
 {
+    if(mSaveTimer)
+    {
+        mSaveTimer->deleteLater();
+        mSaveTimer = NULL;
+    }
+
     QFile file(mFilePath);
     QDir().mkdir(mDirPath);
     // References: https://wiki.archlinux.org/index.php/Font_Configuration
@@ -178,3 +191,17 @@ void FontConfigFile::save()
         file.close();
     }
 }
+
+void FontConfigFile::queueSave()
+{
+    if(mSaveTimer)
+        mSaveTimer->start(1500);
+    else
+    {
+        mSaveTimer = new QTimer();
+        mSaveTimer->setSingleShot(true);
+        connect(mSaveTimer, SIGNAL(timeout()), this, SLOT(save()));
+        mSaveTimer->start(1500);
+    }
+}
+

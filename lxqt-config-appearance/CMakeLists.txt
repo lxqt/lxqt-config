@@ -17,6 +17,7 @@ set(MOC_FILES
     lxqtthemeconfig.h
     fontsconfig.h
     styleconfig.h
+    fontconfigfile.h
 )
 
 set(CPP_FILES

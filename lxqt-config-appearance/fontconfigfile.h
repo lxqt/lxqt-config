@@ -23,12 +23,16 @@
 
 #include <QString>
 #include <QByteArray>
+#include <QObject>
 
-class FontConfigFile
+class QTimer;
+
+class FontConfigFile: public QObject
 {
+    Q_OBJECT
 public:
-    FontConfigFile();
-    ~FontConfigFile();
+    explicit FontConfigFile(QObject* parent = 0);
+    virtual ~FontConfigFile();
 
     bool antialias() const {
         return mAntialias;
@@ -55,9 +59,12 @@ public:
     }
     void setDpi(int value);
 
+private Q_SLOTS:
+    void save();
+
 private:
     void load();
-    void save();
+    void queueSave();
     
 private:
     bool mAntialias;
@@ -67,6 +74,7 @@ private:
     int mDpi;
     QString mDirPath;
     QString mFilePath;
+    QTimer* mSaveTimer;
 };
 
 #endif // FONTCONFIGFILE_H

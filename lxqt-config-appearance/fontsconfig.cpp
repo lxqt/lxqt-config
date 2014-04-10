@@ -64,6 +64,7 @@ FontsConfig::FontsConfig(LxQt::Settings* settings, QSettings* qtSettings, QWidge
     connect(ui->subpixel, SIGNAL(currentIndexChanged(int)), SLOT(subpixelChanged(int)));
     connect(ui->hinting, SIGNAL(toggled(bool)), SLOT(hintingToggled(bool)));
     connect(ui->hintStyle, SIGNAL(currentIndexChanged(int)), SLOT(hintStyleChanged(int)));
+    connect(ui->dpi, SIGNAL(valueChanged(int)), SLOT(dpiChanged(int)));
 }
 
 
