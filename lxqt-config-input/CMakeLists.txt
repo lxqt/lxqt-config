@@ -43,6 +43,11 @@ lxqt_translate_ts(QM_FILES
         ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
 )
 
+lxqt_translate_desktop(DESKTOP_FILES
+    SOURCES
+        ${PROJECT_NAME}.desktop.in
+)
+
 #************************************************
 
 add_definitions(

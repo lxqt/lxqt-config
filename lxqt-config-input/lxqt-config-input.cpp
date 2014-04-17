@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
   if(configName.isEmpty())
     configName = "session";
   LxQt::Settings settings(configName);
-  LxQt::ConfigDialog dlg(QObject::tr("Input Device Configurations"), &settings);
+  LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
 
   MouseConfig* mouseConfig = new MouseConfig(&settings, &dlg);
   dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");

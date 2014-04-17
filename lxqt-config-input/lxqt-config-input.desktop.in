@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Keyboard and Mouse
+Name=Keyboard and Mouse Settings
 Icon=input-keyboard
 Exec=lxqt-config-input
 Comment=Configure keyboard, mouse, and other input devices
