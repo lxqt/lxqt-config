@@ -9,8 +9,8 @@ include_directories(
   ${X11_INCLUDE_DIR}
   ${LXQT_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/lxqt-config-mouse
-  ${CMAKE_BINARY_DIR}/lxqt-config-mouse
+  ${CMAKE_SOURCE_DIR}/lxqt-config-cursor
+  ${CMAKE_BINARY_DIR}/lxqt-config-cursor
 )
 
 set(lxqt-config-input_HDRS
@@ -43,10 +43,6 @@ lxqt_translate_ts(QM_FILES
         ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
 )
 
-lxqt_translate_desktop(DESKTOP_FILES
-    SOURCES
-        lxqt-config-input.desktop.in
-)
 #************************************************
 
 add_definitions(

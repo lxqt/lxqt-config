@@ -18,7 +18,7 @@ find_package(QTXDG REQUIRED)
 include(${QTXDG_USE_FILE})
 
 add_subdirectory(src)
-add_subdirectory(lxqt-config-mouse)
+add_subdirectory(lxqt-config-cursor)
 add_subdirectory(lxqt-config-appearance)
 add_subdirectory(lxqt-config-qtconfig)
 add_subdirectory(lxqt-config-file-associations)

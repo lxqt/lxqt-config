@@ -7,8 +7,8 @@ include_directories (
     ${LXQT_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
 
-    ${CMAKE_SOURCE_DIR}/lxqt-config-mouse
-    ${CMAKE_BINARY_DIR}/lxqt-config-mouse
+    ${CMAKE_SOURCE_DIR}/lxqt-config-cursor
+    ${CMAKE_BINARY_DIR}/lxqt-config-cursor
     )
 
 set(H_FILES

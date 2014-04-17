@@ -22,7 +22,7 @@
 #include <lxqt/LxQtSettings>
 #include "mouseconfig.h"
 #include "keyboardconfig.h"
-#include "../lxqt-config-mouse/selectwnd.h"
+#include "../lxqt-config-cursor/selectwnd.h"
 
 int main(int argc, char** argv) {
   LxQt::Application app(argc, argv);

@@ -36,7 +36,7 @@
 #include "styleconfig.h"
 #include "fontsconfig.h"
 
-#include "../lxqt-config-mouse/selectwnd.h"
+#include "../lxqt-config-cursor/selectwnd.h"
 
 int main (int argc, char **argv)
 {
@@ -64,7 +64,7 @@ int main (int argc, char **argv)
     QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
     
     SelectWnd* cursorPage = new SelectWnd(settings, dialog);
-    dialog->addPage(cursorPage, QObject::tr("Mouse Cursor"), QStringList() << "input-mouse" << "preferences-desktop");
+    dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << "input-mouse" << "preferences-desktop");
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();

@@ -1,4 +1,4 @@
-project(lxqt-config-mouse)
+project(lxqt-config-cursor)
 find_package(X11 REQUIRED)
 
 include_directories(${X11_INCLUDE_DIR})
@@ -12,7 +12,7 @@ include_directories (
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
     )
 
-set ( lxqt-config-mouse_HDRS
+set ( lxqt-config-cursor_HDRS
 #    cfgfile.h
     thememodel.h
     previewwidget.h
@@ -28,7 +28,7 @@ set ( lxqt-config-mouse_HDRS
     warninglabel.h
 	)
 
-set ( lxqt-config-mouse_SRCS
+set ( lxqt-config-cursor_SRCS
     crtheme.cpp
     selectwnd.cpp
     xcr/xcrimg.cpp
@@ -44,36 +44,32 @@ set ( lxqt-config-mouse_SRCS
     warninglabel.cpp
 	)
 
-set(lxqt-config-mouse_UIS
+set(lxqt-config-cursor_UIS
      ui/selectwnd.ui
      ui/warninglabel.ui
 )
 
 find_package(ZLIB REQUIRED)
-QT4_WRAP_UI(lxqt-config-mouse_CXX   ${lxqt-config-mouse_UIS})
-QT4_WRAP_CPP(lxqt-config-mouse_MOCS ${lxqt-config-mouse_HDRS})
+QT4_WRAP_UI(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
+QT4_WRAP_CPP(lxqt-config-cursor_MOCS ${lxqt-config-cursor_HDRS})
 # Translations **********************************
 include(LxQtTranslate)
 lxqt_translate_ts(QM_FILES
     SOURCES
-        ${lxqt-config-mouse_HDRS}
-        ${lxqt-config-mouse_SRCS}
-        ${lxqt-config-mouse_UIS}
+        ${lxqt-config-cursor_HDRS}
+        ${lxqt-config-cursor_SRCS}
+        ${lxqt-config-cursor_UIS}
     INSTALLATION_DIR
         ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
 )
 
-lxqt_translate_desktop(DESKTOP_FILES
-    SOURCES
-        lxqt-config-mouse.desktop.in
-)
 #************************************************
 
-add_library ( lxqt-config-mouse SHARED ${lxqt-config-mouse_SRCS} ${lxqt-config-mouse_CXX} ${lxqt-config-mouse_MOCS} ${DESKTOP_FILES} ${QM_FILES})
-add_dependencies( lxqt-config-mouse lxqt qtxdg)
-target_link_libraries ( lxqt-config-mouse  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY}
+add_library ( lxqt-config-cursor SHARED ${lxqt-config-cursor_SRCS} ${lxqt-config-cursor_CXX} ${lxqt-config-cursor_MOCS} ${DESKTOP_FILES} ${QM_FILES})
+add_dependencies( lxqt-config-cursor lxqt qtxdg)
+target_link_libraries ( lxqt-config-cursor  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY}
                                                  ${X11_X11_LIB} ${X11_Xcursor_LIB} lxqt qtxdg ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
 # not needed probably ${X11_Xfixes_LIB})
 
-INSTALL(TARGETS lxqt-config-mouse DESTINATION ${LIB_INSTALL_DIR})
+INSTALL(TARGETS lxqt-config-cursor DESTINATION ${LIB_INSTALL_DIR})
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
