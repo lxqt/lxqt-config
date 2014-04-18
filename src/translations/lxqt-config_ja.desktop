@@ -1,5 +1,5 @@
 [Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
+OnlyShowIn=LXDE;LxQt;Razor;
 Type=Application
 Exec=lxqt-config
 Terminal=false
@@ -16,4 +16,3 @@ GenericName=LxQt Configuration
 Comment[ja]=LXDE-Qtモジュールを設定
 GenericName[ja]=LxQtの設定
 Name[ja]=LxQtコンフィギュレーションセンター
-Icon[ja]=システム初期設定
