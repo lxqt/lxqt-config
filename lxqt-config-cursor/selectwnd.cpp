@@ -88,7 +88,7 @@ void SelectWnd::setCurrent()
     if(ct.isEmpty())
     {
         // if we fail to get the default icon theme name, read from lxqt config
-        mSettings->beginGroup("environment");
+        mSettings->beginGroup("Environment");
         ct = mSettings->value("XCURSOR_THEME").toString();
         mSettings->endGroup();
     }
@@ -164,7 +164,7 @@ void SelectWnd::applyCurrent()
     fixXDefaults(theme->name());
 
     // LXQT: LxQt settings - session requires restart!
-    mSettings->beginGroup("environment");
+    mSettings->beginGroup("Environment");
     mSettings->setValue("XCURSOR_THEME", theme->name());
     mSettings->endGroup();
 }

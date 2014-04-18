@@ -1,6 +1,6 @@
 [Desktop Entry]
 X-SuSE-translate=true
-OnlyShowIn=LXDE;LxQt;
+OnlyShowIn=LXDE;LxQt;Razor;
 Type=Application
 Exec=lxqt-config-appearance
 Terminal=false
@@ -14,7 +14,6 @@ GenericName=LxQt Appearance Configuration
 
 
 # Translations
-Icon[nl]=voorkeuren-bureaublad-thema
 Comment[nl]=Configureer het uiterlijk van het LxQt bureaublad
 GenericName[nl]=LxQt Uiterlijk Configuratie
 Name[nl]=LxQt Uiterlijk Configuratie

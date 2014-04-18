@@ -1,5 +1,5 @@
 [Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
+OnlyShowIn=LXDE;LxQt;Razor;
 Type=Application
 Exec=lxqt-config
 Terminal=false
@@ -16,4 +16,3 @@ GenericName=LxQt Configuration
 Comment[hu]=A LXDE-Qt modulok beállítása
 GenericName[hu]=LxQt beállítóközpont
 Name[hu]=LxQt beállítóközpont
-Icon[hu]=preferences-system

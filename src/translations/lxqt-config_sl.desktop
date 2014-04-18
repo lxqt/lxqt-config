@@ -1,5 +1,5 @@
 [Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
+OnlyShowIn=LXDE;LxQt;Razor;
 Type=Application
 Exec=lxqt-config
 Terminal=false
@@ -16,4 +16,3 @@ GenericName=LxQt Configuration
 Comment[sl]=Nastavitveni moduli za LxQt
 GenericName[sl]=Nastavitve
 Name[sl]=Nastavitveno središče za LxQt
-Icon[sl]=preferences-system

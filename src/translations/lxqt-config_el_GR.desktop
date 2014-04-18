@@ -1,5 +1,5 @@
 [Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
+OnlyShowIn=LXDE;LxQt;Razor;
 Type=Application
 Exec=lxqt-config
 Terminal=false
@@ -16,4 +16,3 @@ GenericName=LxQt Configuration
 Comment[el_GR]=Διαμόρφωση αρθρωμάτων LXDE-Qt
 GenericName[el_GR]=Διαμόρφωση LxQt
 Name[el_GR]=Κέντρο διαμόρφωσης LxQt
-Icon[el_GR]=preferences-system
