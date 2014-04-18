@@ -56,7 +56,7 @@ add_definitions(
 
 add_executable(lxqt-config-input ${lxqt-config-input_SRCS} ${lxqt-config-input_UI_H} ${lxqt-config-input_MOCS} ${DESKTOP_FILES} ${QM_FILES})
 add_dependencies(lxqt-config-input lxqt)
-target_link_libraries( lxqt-config-input  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${X11_LIBRARIES} ${LXQT_LIBRARIES} lxqt-config-mouse)
+target_link_libraries( lxqt-config-input  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${X11_LIBRARIES} ${LXQT_LIBRARIES} lxqt-config-cursor)
 
 INSTALL(TARGETS lxqt-config-input RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
