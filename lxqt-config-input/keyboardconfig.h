@@ -26,12 +26,13 @@
 namespace LxQt {
   class Settings;
 }
+class QSettings;
 
 class KeyboardConfig : public QWidget {
   Q_OBJECT
 
 public:
-  KeyboardConfig(LxQt::Settings* _settings, QWidget* parent = 0);
+  KeyboardConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent = 0);
   virtual ~KeyboardConfig();
 
   void accept();
@@ -47,10 +48,12 @@ private:
 private Q_SLOTS:
   void onKeyboardSliderChanged(int value);
   void onKeyboardBeepToggled(bool checked);
+  void onCorsorFlashTimeChanged(int value);
 
 private:
   Ui::KeyboardConfig ui;
   LxQt::Settings* settings;
+  QSettings* qtSettings;
   int delay;
   int oldDelay;
   int interval;

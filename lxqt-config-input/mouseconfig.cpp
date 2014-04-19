@@ -32,9 +32,14 @@
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 
-MouseConfig::MouseConfig(LxQt::Settings* _settings, QWidget* parent):
+#ifdef Q_WS_X11
+extern void qt_x11_apply_settings_in_all_apps();
+#endif
+
+MouseConfig::MouseConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
   QWidget(parent),
   settings(_settings),
+  qtSettings(_qtSettings),
   accel(20),
   oldAccel(20),
   threshold(10),
@@ -53,6 +58,9 @@ MouseConfig::MouseConfig(LxQt::Settings* _settings, QWidget* parent):
   // set_range_stops(ui.mouseThreshold, 10);
   connect(ui.mouseThreshold, SIGNAL(valueChanged(int)), SLOT(onMouseThresholdChanged(int)));
   connect(ui.mouseLeftHanded, SIGNAL(toggled(bool)), SLOT(onMouseLeftHandedToggled(bool)));
+  
+  connect(ui.doubleClickInterval, SIGNAL(valueChanged(int)), SLOT(onDoubleClickIntervalChanged(int)));
+  connect(ui.wheelScrollLines, SIGNAL(valueChanged(int)), SLOT(onWheelScrollLinesChanged(int)));
 }
 
 MouseConfig::~MouseConfig() {
@@ -62,6 +70,14 @@ void MouseConfig::initControls() {
   ui.mouseAccel->setValue(accel);
   ui.mouseThreshold->setValue(110 - threshold);
   ui.mouseLeftHanded->setChecked(leftHanded);
+  
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  int value = qtSettings->value(QLatin1String("doubleClickInterval"), 400).toInt();
+  ui.doubleClickInterval->setValue(value);
+
+  value = qtSettings->value(QLatin1String("wheelScrollLines"), 3).toInt();
+  ui.wheelScrollLines->setValue(value);
+  qtSettings->endGroup();
 }
 
 
@@ -113,6 +129,28 @@ void MouseConfig::setLeftHandedMouse() {
 void MouseConfig::onMouseLeftHandedToggled(bool checked) {
   leftHanded = checked;
   setLeftHandedMouse();
+}
+
+void MouseConfig::onDoubleClickIntervalChanged(int value)
+{
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  qtSettings->setValue(QLatin1String("doubleClickInterval"), value);
+  qtSettings->endGroup();
+  qtSettings->sync();
+#ifdef Q_WS_X11
+  qt_x11_apply_settings_in_all_apps();
+#endif
+}
+
+void MouseConfig::onWheelScrollLinesChanged(int value)
+{
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  qtSettings->setValue(QLatin1String("wheelScrollLines"), value);
+  qtSettings->endGroup();
+  qtSettings->sync();
+#ifdef Q_WS_X11
+  qt_x11_apply_settings_in_all_apps();
+#endif
 }
 
 void MouseConfig::loadSettings() {

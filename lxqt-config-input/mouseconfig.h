@@ -26,12 +26,13 @@
 namespace LxQt {
   class Settings;
 }
+class QSettings;
 
 class MouseConfig : public QWidget {
   Q_OBJECT
 
 public:
-  MouseConfig(LxQt::Settings* _settings, QWidget* parent = 0);
+  MouseConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent);
   virtual ~MouseConfig();
 
   void accept();
@@ -47,10 +48,13 @@ private Q_SLOTS:
   void onMouseAccelChanged(int value);
   void onMouseThresholdChanged(int value);
   void onMouseLeftHandedToggled(bool checked);
+  void onDoubleClickIntervalChanged(int value);
+  void onWheelScrollLinesChanged(int value);
 
 private:
   Ui::MouseConfig ui;
   LxQt::Settings* settings;
+  QSettings* qtSettings;
   int accel;
   int oldAccel;
   int threshold;

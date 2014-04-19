@@ -32,9 +32,14 @@
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 
-KeyboardConfig::KeyboardConfig(LxQt::Settings* _settings, QWidget* parent):
+#ifdef Q_WS_X11
+extern void qt_x11_apply_settings_in_all_apps();
+#endif
+
+KeyboardConfig::KeyboardConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
   QWidget(parent),
   settings(_settings),
+  qtSettings(_qtSettings),
   delay(500),
   oldDelay(500),
   interval(30),
@@ -53,6 +58,7 @@ KeyboardConfig::KeyboardConfig(LxQt::Settings* _settings, QWidget* parent):
   // set_range_stops(ui.keyboardInterval, 10);
   connect(ui.keyboardInterval, SIGNAL(valueChanged(int)), SLOT(onKeyboardSliderChanged(int)));
   connect(ui.keyboardBeep, SIGNAL(toggled(bool)), SLOT(onKeyboardBeepToggled(bool)));
+  connect(ui.cursorFlashTime, SIGNAL(valueChanged(int)), SLOT(onCorsorFlashTimeChanged(int)));
 }
 
 KeyboardConfig::~KeyboardConfig() {
@@ -63,6 +69,11 @@ void KeyboardConfig::initControls() {
   ui.keyboardDelay->setValue(delay);
   ui.keyboardInterval->setValue(interval);
   ui.keyboardBeep->setChecked(beep);
+
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  int value = qtSettings->value(QLatin1String("cursorFlashTime"), 1000).toInt();
+  ui.cursorFlashTime->setValue(value);
+  qtSettings->endGroup();
 }
 
 void KeyboardConfig::onKeyboardSliderChanged(int value) {
@@ -87,6 +98,18 @@ void KeyboardConfig::onKeyboardBeepToggled(bool checked) {
 
   accept();
 }
+
+void KeyboardConfig::onCorsorFlashTimeChanged(int value)
+{
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  qtSettings->setValue(QLatin1String("cursorFlashTime"), value);
+  qtSettings->endGroup();
+  qtSettings->sync();
+#ifdef Q_WS_X11
+  qt_x11_apply_settings_in_all_apps();
+#endif
+}
+
 
 void KeyboardConfig::loadSettings() {
   settings->beginGroup("Keyboard");

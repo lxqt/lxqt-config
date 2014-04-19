@@ -34,15 +34,16 @@ int main(int argc, char** argv) {
   LxQt::Settings settings(configName);
   LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
 
-  MouseConfig* mouseConfig = new MouseConfig(&settings, &dlg);
+  QSettings qtSettings(QLatin1String("Trolltech"));
+  MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
   dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");
   QObject::connect(&dlg, SIGNAL(reset()), mouseConfig, SLOT(reset()));
 
   SelectWnd* cursorConfig = new SelectWnd(&settings, &dlg);
   cursorConfig->setCurrent();
-  dlg.addPage(cursorConfig, QObject::tr("Mouse Cursor"), "preferences-desktop-theme");
+  dlg.addPage(cursorConfig, QObject::tr("Cursor"), "preferences-desktop-theme");
   
-  KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &dlg);
+  KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
   dlg.addPage(keyboardConfig, QObject::tr("Keyboard"), "input-keyboard");
   QObject::connect(&dlg, SIGNAL(reset()), keyboardConfig, SLOT(reset()));
  
