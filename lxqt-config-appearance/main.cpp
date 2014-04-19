@@ -64,6 +64,7 @@ int main (int argc, char **argv)
     QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
     
     SelectWnd* cursorPage = new SelectWnd(settings, dialog);
+    cursorPage->setCurrent();
     dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << "input-mouse" << "preferences-desktop");
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);

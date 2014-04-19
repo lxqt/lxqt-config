@@ -32,6 +32,8 @@
 
 #include <lxqt/lxqtsettings.h>
 #include <qtxdg/xdgicon.h>
+#include <QTextStream>
+#include <QProcess>
 
 #define HOME_ICON_DIR QDir::homePath() + "/.icons"
 
@@ -85,14 +87,6 @@ void SelectWnd::setCurrent()
     lbThemes->selectionModel()->clear();
 
     QString ct = getCurrentTheme();
-    if(ct.isEmpty())
-    {
-        // if we fail to get the default icon theme name, read from lxqt config
-        mSettings->beginGroup("environment");
-        ct = mSettings->value("XCURSOR_THEME").toString();
-        mSettings->endGroup();
-    }
-
     mAppliedIndex = mModel->defaultIndex();
 
     if (!ct.isEmpty()) mAppliedIndex = mModel->findIndex(ct);
@@ -163,10 +157,37 @@ void SelectWnd::applyCurrent()
     applyTheme(*theme);
     fixXDefaults(theme->name());
 
-    // LXQT: LxQt settings - session requires restart!
-    mSettings->beginGroup("environment");
-    mSettings->setValue("XCURSOR_THEME", theme->name());
+    // call xrdb to merge the new settings in ~/.Xdefaults
+    // FIXME: need to check if we're running in X?
+    QProcess xrdb;
+    xrdb.start("xrdb -merge " + QDir::home().path() + "/.Xdefaults");
+    xrdb.waitForFinished();
+
+    // old razor-qt and lxqt versions use $XCURSOR_THEME environment variable
+    // for this, but it's less flexible and more problematic. Let's deprecate its use.
+    mSettings->beginGroup("Environment");
+    mSettings->remove("XCURSOR_THEME"); // ensure that we're not using XCURSOR_THEME
     mSettings->endGroup();
+
+    // The XCURSOR_THEME environment varialbe does not work sometimes.
+    // Besides, XDefaults values are not used by Qt.
+    // So, let's write the new theme name to ~/.icons/default/index.theme.
+    // This is the most reliable way.
+    // QSettings will encode the group name "Icon Theme" to "Icon%20Theme" and there is no way to turn it off.
+    // So let's not use it here. :-(
+    QString dirPath = HOME_ICON_DIR + "/default";
+    QDir().mkpath(dirPath); // ensure the existence of the ~/.icons/default dir
+    QFile indexTheme(dirPath + "/index.theme");
+    if(indexTheme.open(QIODevice::WriteOnly|QIODevice::Truncate))
+    {
+        QTextStream(&indexTheme) <<
+        "# Written by lxqt-config-appearance\n" <<
+        "[Icon Theme]\n" <<
+        "Name=Default\n" <<
+        "Comment=Default cursor theme\n" <<
+        "Inherits=" << theme->name() << "\n";
+        indexTheme.close();
+    }
 }
 
 void SelectWnd::on_btRemove_clicked()

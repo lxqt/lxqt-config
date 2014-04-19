@@ -54,7 +54,6 @@ QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
     return res;
 }
 
-#define XD_CODEC  "koi8-r"
 void fixXDefaults(const QString &themeName)
 {
     QStringList lst;
@@ -64,12 +63,14 @@ void fixXDefaults(const QString &themeName)
         {
             QTextStream stream;
             stream.setDevice(&fl);
-            stream.setCodec(XD_CODEC);
             while (1)
             {
                 QString s = stream.readLine();
-                if (s.isNull()) break;
-                if (!s.startsWith("Xcursor*theme:")) lst << s;
+                if (s.isNull())
+                    break;
+                // if the line does not contain Xcursor?theme, save it to a list
+                if (!(s.startsWith(QLatin1String("Xcursor")) && s.midRef(8).startsWith(QLatin1String("theme"))))
+                    lst << s;
             }
             fl.close();
         }
@@ -87,12 +88,11 @@ void fixXDefaults(const QString &themeName)
         {
             QTextStream stream;
             stream.setDevice(&fl);
-            stream.setCodec(XD_CODEC);
             foreach (const QString &s, lst)
             {
                 stream << s << "\n";
             }
-            stream << "\nXcursor*theme: " << themeName << "\n";
+            stream << "\nXcursor.theme: " << themeName << "\n";
             fl.close();
         }
     }
@@ -106,12 +106,11 @@ const QString findDefaultTheme()
     {
         QTextStream stream;
         stream.setDevice(&fl);
-        stream.setCodec(XD_CODEC);
         while (1)
         {
             QString s = stream.readLine();
             if (s.isNull()) break;
-            if (!s.startsWith("Xcursor*theme:")) continue;
+            if (!s.startsWith("Xcursor.theme:")) continue;
             s.remove(0, 14);
             s = s.trimmed();
             if (s.isEmpty()) s = "default";
