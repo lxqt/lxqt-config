@@ -54,8 +54,10 @@ private:
   Ui::KeyboardLayoutConfig ui;
   QString keyboardModel_;
   QString switchKey_;
+  QStringList currentOptions_;
   QList<QPair<QString, QString> > currentLayouts_;
   QMap<QString, KeyboardLayoutInfo> knownLayouts_;
+  LxQt::Settings* settings;
 };
 
 #endif // KEYBOARDLAYOUTCONFIG_H

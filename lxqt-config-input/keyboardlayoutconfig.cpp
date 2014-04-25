@@ -24,9 +24,11 @@
 #include <QHash>
 #include <QDebug>
 #include "selectkeyboardlayoutdialog.h"
-#include <lxqt/LxQtAutostartEntry>
+#include <lxqt/LxQtSettings>
 
-KeyboardLayoutConfig::KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent) {
+KeyboardLayoutConfig::KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent):
+  QWidget(parent),
+  settings(_settings) {
   ui.setupUi(this);
 
   loadLists();
@@ -77,7 +79,9 @@ void KeyboardLayoutConfig::loadSettings() {
         QList<QByteArray> options = line.mid(9).trimmed().split(',');
         Q_FOREACH(QByteArray option, options) {
           if(option.startsWith("grp:"))
-            switchKey_ = option;
+            switchKey_ = QString::fromLatin1(option);
+          else
+            currentOptions_ << QString::fromLatin1(option);
         }
       }
     }
@@ -204,19 +208,26 @@ void KeyboardLayoutConfig::reset() {
 
 void KeyboardLayoutConfig::accept() {
   // call setxkbmap to apply the changes
-  QString command = "setxkbmap";
+  QProcess setxkbmap;
+  // clear existing options
+  setxkbmap.start("setxkbmap -option");
+  setxkbmap.waitForFinished();
+  setxkbmap.close();
 
+  QString command = "setxkbmap";
   // set keyboard model
+  QString model;
   int cur_model = ui.keyboardModel->currentIndex();
   if(cur_model >= 0) {
+    model = ui.keyboardModel->itemData(cur_model, Qt::UserRole).toString();
     command += " -model ";
-    command += ui.keyboardModel->itemData(cur_model, Qt::UserRole).toString();
+    command += model;
   }
   
   // set keyboard layout
   int n = ui.layouts->topLevelItemCount();
+  QString layouts, variants;
   if(n > 0) {
-    QString layouts, variants;
     for(int row = 0; row < n; ++row) {
       QTreeWidgetItem* item = ui.layouts->topLevelItem(row);
       layouts += item->data(0, Qt::UserRole).toString();
@@ -231,22 +242,36 @@ void KeyboardLayoutConfig::accept() {
     command += " -variant ";
     command += variants;
   }
+
+  Q_FOREACH(QString option, currentOptions_) {
+    command += " -option ";
+    command += option;
+  }
+
+  QString switchKey;
+  int cur_switch_key = ui.switchKey->currentIndex();
+  if(cur_switch_key > 0) { // index 0 is "None"
+    switchKey = ui.switchKey->itemData(cur_switch_key, Qt::UserRole).toString();
+    command += " -option ";
+    command += switchKey;
+  }
+
   qDebug() << command;
 
   // execute the command line
-  QProcess setxkbmap;
   setxkbmap.start(command);
   setxkbmap.waitForFinished();
 
-  // save to a desktop entry file.
-  XdgDesktopFile file(XdgDesktopFile::ApplicationType, "lxqt-setxkbmap.desktop");
-  file.setValue("Name", "Set Keyboard Layout");
-  file.setValue("TryExec", "setxkbmap");
-  file.setValue("OnlyShowIn", "Razor");
-  file.setValue("Exec", command);
-  LxQt::AutostartEntry ent;
-  ent.setFile(file);
-  ent.commit();
+  // save to lxqt-session config file.
+  settings->beginGroup("Keyboard");
+  settings->setValue("layout", layouts);
+  settings->setValue("variant", variants);
+  settings->setValue("model", model);
+  if(switchKey.isEmpty() && currentOptions_ .isEmpty())
+    settings->remove("options");
+  else
+    settings->setValue("options", switchKey.isEmpty() ? currentOptions_ : (currentOptions_ << switchKey));
+  settings->endGroup();
 }
 
 void KeyboardLayoutConfig::onAddLayout() {
