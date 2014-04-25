@@ -16,17 +16,21 @@ include_directories(
 set(lxqt-config-input_HDRS
   keyboardconfig.h
   mouseconfig.h
+  mouseconfig.h
+  keyboardlayoutconfig.h
 )
 
 set(lxqt-config-input_SRCS
   lxqt-config-input.cpp
   keyboardconfig.cpp
   mouseconfig.cpp
+  keyboardlayoutconfig.cpp
 )
 
 set(lxqt-config-input_UIS
   mouseconfig.ui
   keyboardconfig.ui
+  keyboardlayoutconfig.ui
 )
 
 qt4_wrap_ui(lxqt-config-input_UI_H ${lxqt-config-input_UIS})

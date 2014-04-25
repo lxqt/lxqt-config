@@ -23,6 +23,7 @@
 #include "mouseconfig.h"
 #include "keyboardconfig.h"
 #include "../lxqt-config-cursor/selectwnd.h"
+#include "keyboardlayoutconfig.h"
 
 int main(int argc, char** argv) {
   LxQt::Application app(argc, argv);
@@ -46,7 +47,11 @@ int main(int argc, char** argv) {
   KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
   dlg.addPage(keyboardConfig, QObject::tr("Keyboard"), "input-keyboard");
   QObject::connect(&dlg, SIGNAL(reset()), keyboardConfig, SLOT(reset()));
- 
+
+  KeyboardLayoutConfig* keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
+  dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
+  QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
+
   dlg.exec();
   return 0;
 }
