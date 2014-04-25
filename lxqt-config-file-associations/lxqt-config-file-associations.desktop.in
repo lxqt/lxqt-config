@@ -1,13 +1,11 @@
 [Desktop Entry]
-X-SuSE-translate=true
-OnlyShowIn=LXDE;LxQt;
 Type=Application
+Name=File Associations
+GenericName=File Association Settings
+Comment=Configure applications associated with known file types
 Exec=lxqt-config-file-associations
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-desktop-filetype-association
-Name=LxQt file association configuration
-Comment=Configure file associations
-GenericName=LxQt file association configuration
+Categories=Settings;DesktopSettings;Qt;LXQt;
+OnlyShowIn=LXDE;LXQt;
 
 #TRANSLATIONS_DIR=translations

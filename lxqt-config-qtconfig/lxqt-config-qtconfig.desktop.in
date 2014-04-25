@@ -1,13 +1,12 @@
 [Desktop Entry]
-OnlyShowIn=LxQt;
 Type=Application
+Name=Qt Configuration
+GenericName=Qt Configuration
+Comment=Configure Qt
 Exec=qtconfig
 TryExec=qtconfig
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-system
-Name=Qt Configuration
-Comment=Configure Qt
-GenericName=Qt configuration
+Categories=Settings;DesktopSettings;Qt;LXQt;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
