@@ -1,13 +1,11 @@
 [Desktop Entry]
-X-SuSE-translate=true
-OnlyShowIn=LXDE;LxQt;
 Type=Application
+Name=Appearance
+GenericName=Appearance settings
+Comment=Appearance settings for LXQt
 Exec=lxqt-config-appearance
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-desktop-theme
-Name=LxQt Appearance Configuration
-Comment=Configure appearance of LxQt desktop
-GenericName=LxQt Appearance Configuration
+Categories=Settings;DesktopSettings;Qt;LXQt;
+OnlyShowIn=LXDE;LXQt;
 
 #TRANSLATIONS_DIR=translations

@@ -1,12 +1,11 @@
 [Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
 Type=Application
+Name=LXQt System Settings
+GenericName=System Settings
+Comment=Configure your system
 Exec=lxqt-config
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
 Icon=preferences-system
-Name=LxQt Configuration Center
-Comment=Configure LXDE-Qt modules
-GenericName=LxQt Configuration
+Categories=Settings;DesktopSettings;Qt;LXQt;
+OnlyShowIn=LXDE;LXQt;
 
 #TRANSLATIONS_DIR=translations
