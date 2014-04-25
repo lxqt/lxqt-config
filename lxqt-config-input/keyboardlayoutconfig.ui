@@ -118,19 +118,21 @@
    </item>
    <item row="3" column="0">
     <widget class="QLabel" name="label_3">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
      <property name="text">
       <string>Keys to change layout:</string>
      </property>
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QComboBox" name="changeKey">
-     <property name="enabled">
-      <bool>false</bool>
+    <widget class="QComboBox" name="switchKey">
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
      </property>
+     <item>
+      <property name="text">
+       <string>None</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

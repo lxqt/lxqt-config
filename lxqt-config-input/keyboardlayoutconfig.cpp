@@ -38,6 +38,7 @@ KeyboardLayoutConfig::KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* p
   connect(ui.moveUp, SIGNAL(clicked(bool)), SLOT(onMoveUp()));
   connect(ui.moveDown, SIGNAL(clicked(bool)), SLOT(onMoveDown()));
   connect(ui.keyboardModel, SIGNAL(currentIndexChanged(int)), SLOT(accept()));
+  connect(ui.switchKey, SIGNAL(currentIndexChanged(int)), SLOT(accept()));
 }
 
 KeyboardLayoutConfig::~KeyboardLayoutConfig() {
@@ -52,7 +53,7 @@ void KeyboardLayoutConfig::loadSettings() {
     while(!setxkbmap.atEnd()) {
       QByteArray line = setxkbmap.readLine();
       if(line.startsWith("model:")) {
-        model_ = QString::fromLatin1(line.mid(6).trimmed());
+        keyboardModel_ = QString::fromLatin1(line.mid(6).trimmed());
       }
       else if(line.startsWith("layout:")) {
         QList<QByteArray> items = line.mid(7).trimmed().split(',');
@@ -70,6 +71,13 @@ void KeyboardLayoutConfig::loadSettings() {
             lang = QString::fromLatin1(item);
           // add the current lang/variant parit to the list
           currentLayouts_.append(QPair<QString, QString>(lang, variant));
+        }
+      }
+      else if(line.startsWith("options:")) {
+        QList<QByteArray> options = line.mid(9).trimmed().split(',');
+        Q_FOREACH(QByteArray option, options) {
+          if(option.startsWith("grp:"))
+            switchKey_ = option;
         }
       }
     }
@@ -136,6 +144,9 @@ void KeyboardLayoutConfig::loadLists() {
             break;
           }
           case OptionSection:
+            if(line.startsWith("grp:")) { // key used to switch to another layout
+              ui.switchKey->addItem(description, name);
+            }
             break;
         }
       }
@@ -153,12 +164,22 @@ void KeyboardLayoutConfig::initControls() {
   }
   
   int n = ui.keyboardModel->count();
-  for(int row = 0; row < n; ++row) {
-    if(ui.keyboardModel->itemData(row, Qt::UserRole).toString() == model_) {
+  int row;
+  for(row = 0; row < n; ++row) {
+    if(ui.keyboardModel->itemData(row, Qt::UserRole).toString() == keyboardModel_) {
       ui.keyboardModel->setCurrentIndex(row);
       break;
     }
   }
+
+  n = ui.switchKey->count();
+  for(row = 0; row < n; ++row) {
+    if(ui.switchKey->itemData(row, Qt::UserRole).toString() == switchKey_) {
+      ui.switchKey->setCurrentIndex(row);
+      break;
+    }
+  }
+  
 }
 
 void KeyboardLayoutConfig::addLayout(QString name, QString variant) {
