@@ -18,6 +18,7 @@ set(lxqt-config-input_HDRS
   mouseconfig.h
   mouseconfig.h
   keyboardlayoutconfig.h
+  selectkeyboardlayoutdialog.h
 )
 
 set(lxqt-config-input_SRCS
@@ -25,12 +26,14 @@ set(lxqt-config-input_SRCS
   keyboardconfig.cpp
   mouseconfig.cpp
   keyboardlayoutconfig.cpp
+  selectkeyboardlayoutdialog.cpp
 )
 
 set(lxqt-config-input_UIS
   mouseconfig.ui
   keyboardconfig.ui
   keyboardlayoutconfig.ui
+  selectkeyboardlayoutdialog.ui
 )
 
 qt4_wrap_ui(lxqt-config-input_UI_H ${lxqt-config-input_UIS})

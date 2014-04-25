@@ -24,12 +24,24 @@
    <item row="1" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
      <item>
-      <widget class="QTreeWidget" name="treeWidget">
+      <widget class="QTreeWidget" name="layouts">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>1</horstretch>
          <verstretch>1</verstretch>
         </sizepolicy>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::InternalMove</enum>
+       </property>
+       <property name="rootIsDecorated">
+        <bool>false</bool>
+       </property>
+       <property name="itemsExpandable">
+        <bool>false</bool>
        </property>
        <column>
         <property name="text">
@@ -41,38 +53,33 @@
          <string>Variant</string>
         </property>
        </column>
-       <column>
-        <property name="text">
-         <string>Decscription</string>
-        </property>
-       </column>
       </widget>
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,1">
        <item>
-        <widget class="QPushButton" name="addButton">
+        <widget class="QPushButton" name="addLayout">
          <property name="text">
           <string>&amp;Add</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="removeLayout">
          <property name="text">
           <string>&amp;Remove</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="moveUp">
          <property name="text">
           <string>up</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="moveDown">
          <property name="text">
           <string>down</string>
          </property>
@@ -103,17 +110,28 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QComboBox" name="comboBox"/>
+    <widget class="QComboBox" name="keyboardModel">
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+     </property>
+    </widget>
    </item>
    <item row="3" column="0">
     <widget class="QLabel" name="label_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="text">
       <string>Keys to change layout:</string>
      </property>
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QComboBox" name="comboBox_2"/>
+    <widget class="QComboBox" name="changeKey">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

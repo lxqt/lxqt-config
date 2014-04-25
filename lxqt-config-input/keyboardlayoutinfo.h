@@ -18,43 +18,35 @@
  *
  */
 
-#ifndef KEYBOARDLAYOUTCONFIG_H
-#define KEYBOARDLAYOUTCONFIG_H
+#ifndef _KEYBOARD_LAYOUT_INFO_H_
+#define _KEYBOARD_LAYOUT_INFO_H_
 
-#include <QWidget>
-#include "keyboardlayoutinfo.h"
-#include <QMap>
-#include "ui_keyboardlayoutconfig.h"
+#include <QString>
+#include <QList>
 
-namespace LxQt {
-  class Settings;
-}
-
-class KeyboardLayoutConfig : public QWidget {
-  Q_OBJECT
-public:
-  KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent = 0);
-  virtual ~KeyboardLayoutConfig();
-
-public Q_SLOTS:
-  void accept();
-  void reset();
-  void onAddLayout();
-  void onRemoveLayout();
-  void onMoveUp();
-  void onMoveDown();
-
-private:
-  void loadSettings();
-  void loadLists();
-  void initControls();
-  void addLayout(QString name, QString variant);
-
-private:
-  Ui::KeyboardLayoutConfig ui;
-  QString model_;
-  QList<QPair<QString, QString> > currentLayouts_;
-  QMap<QString, KeyboardLayoutInfo> knownLayouts_;
+struct LayoutVariantInfo {
+  QString name;
+  QString description;
+  LayoutVariantInfo(QString _name, QString desc): name(_name), description(desc) {
+  }
 };
 
-#endif // KEYBOARDLAYOUTCONFIG_H
+struct KeyboardLayoutInfo {
+  QString description;
+  QList<LayoutVariantInfo> variants;
+
+  KeyboardLayoutInfo(QString desc = QString()): description(desc) {
+  }
+
+  const LayoutVariantInfo* findVariant(QString name) const {
+    if(!name.isEmpty()) {
+      Q_FOREACH(const LayoutVariantInfo& vinfo, variants) {
+        if(vinfo.name == name)
+          return &vinfo;
+      }
+    }
+    return NULL;
+  }
+};
+
+#endif

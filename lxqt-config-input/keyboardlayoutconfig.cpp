@@ -19,22 +19,28 @@
  */
 
 #include "keyboardlayoutconfig.h"
-#include "ui_keyboardlayoutconfig.h"
 #include <QProcess>
 #include <QFile>
+#include <QHash>
 #include <QDebug>
+#include "selectkeyboardlayoutdialog.h"
+#include <lxqt/LxQtAutostartEntry>
 
 KeyboardLayoutConfig::KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent) {
-  ui = new Ui::KeyboardLayoutConfig;
-  ui->setupUi(this);
+  ui.setupUi(this);
 
   loadLists();
   loadSettings();
   initControls();
+
+  connect(ui.addLayout, SIGNAL(clicked(bool)), SLOT(onAddLayout()));
+  connect(ui.removeLayout, SIGNAL(clicked(bool)), SLOT(onRemoveLayout()));
+  connect(ui.moveUp, SIGNAL(clicked(bool)), SLOT(onMoveUp()));
+  connect(ui.moveDown, SIGNAL(clicked(bool)), SLOT(onMoveDown()));
+  connect(ui.keyboardModel, SIGNAL(currentIndexChanged(int)), SLOT(accept()));
 }
 
 KeyboardLayoutConfig::~KeyboardLayoutConfig() {
-  delete ui;
 }
 
 void KeyboardLayoutConfig::loadSettings() {
@@ -52,7 +58,7 @@ void KeyboardLayoutConfig::loadSettings() {
         QList<QByteArray> items = line.mid(7).trimmed().split(',');
         Q_FOREACH(QByteArray item, items) {
           QString lang;
-	  QString variant;
+          QString variant;
           int p = item.indexOf('(');
           if(p >= 0) { // has variant
             int p2 = item.lastIndexOf(')');
@@ -62,7 +68,8 @@ void KeyboardLayoutConfig::loadSettings() {
           }
           else
             lang = QString::fromLatin1(item);
-          // layouts_.append(layoutItem);
+          // add the current lang/variant parit to the list
+          currentLayouts_.append(QPair<QString, QString>(lang, variant));
         }
       }
     }
@@ -99,22 +106,38 @@ void KeyboardLayoutConfig::loadLists() {
       else {
         if(line.isEmpty()) {
           section = NoSection;
-	  continue;
-	}
-	switch(section) {
-	  case ModelSection: {
-	    KeyboardModel model;
-	    model.name = QString::fromLatin1(line);
-	    knownModels_.append(model);
-	    break;
-	  }
-	  case LayoutSection:
-	    break;
-	  case VariantSection:
-	    break;
-	  case OptionSection:
-	    break;
-	}
+          continue;
+        }
+        int sep = line.indexOf(' ');
+        QString name = QString::fromLatin1(line, sep);
+        while(line[sep] == ' ') // skip spaces
+          ++sep;
+        QString description = QString::fromUtf8(line.constData() + sep);
+
+        switch(section) {
+          case ModelSection: {
+            ui.keyboardModel->addItem(description, name);
+            break;
+          }
+          case LayoutSection:
+            knownLayouts_[name] = KeyboardLayoutInfo(description);
+            break;
+          case VariantSection: {
+            // the descriptions of variants are prefixed by their language ids
+            sep = description.indexOf(": ");
+            if(sep >= 0) {
+              QString lang = description.left(sep);
+              QMap<QString, KeyboardLayoutInfo>::iterator it = knownLayouts_.find(lang);
+              if(it != knownLayouts_.end()) {
+                KeyboardLayoutInfo& info = *it;
+                info.variants.append(LayoutVariantInfo(name, description.mid(sep + 2)));
+              }
+            }
+            break;
+          }
+          case OptionSection:
+            break;
+        }
       }
     }
     file.close();
@@ -122,13 +145,130 @@ void KeyboardLayoutConfig::loadLists() {
 }
 
 void KeyboardLayoutConfig::initControls() {
+  QList<QPair<QString, QString> >::iterator it;
+  for(it = currentLayouts_.begin(); it != currentLayouts_.end(); ++it) {
+    QString name = it->first;
+    QString variant = it->second;
+    addLayout(name, variant);
+  }
+  
+  int n = ui.keyboardModel->count();
+  for(int row = 0; row < n; ++row) {
+    if(ui.keyboardModel->itemData(row, Qt::UserRole).toString() == model_) {
+      ui.keyboardModel->setCurrentIndex(row);
+      break;
+    }
+  }
+}
 
+void KeyboardLayoutConfig::addLayout(QString name, QString variant) {
+  qDebug() << "add" << name << variant;
+  const KeyboardLayoutInfo& info = knownLayouts_.value(name);
+  QTreeWidgetItem* item = new QTreeWidgetItem();
+  item->setData(0, Qt::DisplayRole, info.description);
+  item->setData(0, Qt::UserRole, name);
+  const LayoutVariantInfo* vinfo = info.findVariant(variant);
+  if(vinfo) {
+    item->setData(1, Qt::DisplayRole, vinfo->description);
+    item->setData(1, Qt::UserRole, variant);
+  }
+  ui.layouts->addTopLevelItem(item);
 }
 
 void KeyboardLayoutConfig::reset() {
-
+  ui.layouts->clear();
+  initControls();
+  accept();
 }
 
 void KeyboardLayoutConfig::accept() {
+  // call setxkbmap to apply the changes
+  QString command = "setxkbmap";
 
+  // set keyboard model
+  int cur_model = ui.keyboardModel->currentIndex();
+  if(cur_model >= 0) {
+    command += " -model ";
+    command += ui.keyboardModel->itemData(cur_model, Qt::UserRole).toString();
+  }
+  
+  // set keyboard layout
+  int n = ui.layouts->topLevelItemCount();
+  if(n > 0) {
+    QString layouts, variants;
+    for(int row = 0; row < n; ++row) {
+      QTreeWidgetItem* item = ui.layouts->topLevelItem(row);
+      layouts += item->data(0, Qt::UserRole).toString();
+      variants += item->data(1, Qt::UserRole).toString();
+      if(row < n - 1) { // not the last row
+        layouts += ',';
+        variants += ',';
+      }
+    }
+    command += " -layout ";
+    command += layouts;
+    command += " -variant ";
+    command += variants;
+  }
+  qDebug() << command;
+
+  // execute the command line
+  QProcess setxkbmap;
+  setxkbmap.start(command);
+  setxkbmap.waitForFinished();
+
+  // save to a desktop entry file.
+  XdgDesktopFile file(XdgDesktopFile::ApplicationType, "lxqt-setxkbmap.desktop");
+  file.setValue("Name", "Set Keyboard Layout");
+  file.setValue("TryExec", "setxkbmap");
+  file.setValue("OnlyShowIn", "Razor");
+  file.setValue("Exec", command);
+  LxQt::AutostartEntry ent;
+  ent.setFile(file);
+  ent.commit();
 }
+
+void KeyboardLayoutConfig::onAddLayout() {
+  SelectKeyboardLayoutDialog dlg(knownLayouts_, this);
+  if(dlg.exec() == QDialog::Accepted) {
+    addLayout(dlg.selectedLayout(), dlg.selectedVariant());
+    accept();
+  }
+}
+
+void KeyboardLayoutConfig::onRemoveLayout() {
+  if(ui.layouts->topLevelItemCount() > 1) {
+    QTreeWidgetItem* item = ui.layouts->currentItem();
+    if(item) {
+      delete item;
+      accept();
+    }
+  }
+}
+
+void KeyboardLayoutConfig::onMoveDown() {
+  QTreeWidgetItem* item = ui.layouts->currentItem();
+  if(!item)
+    return;
+  int pos = ui.layouts->indexOfTopLevelItem(item);
+  if(pos < ui.layouts->topLevelItemCount() - 1) { // not the last item
+    ui.layouts->takeTopLevelItem(pos);
+    ui.layouts->insertTopLevelItem(pos + 1, item);
+    ui.layouts->setCurrentItem(item);
+    accept();
+  }
+}
+
+void KeyboardLayoutConfig::onMoveUp() {
+  QTreeWidgetItem* item = ui.layouts->currentItem();
+  if(!item)
+    return;
+  int pos = ui.layouts->indexOfTopLevelItem(item);
+  if(pos > 0) { // not the first item
+    ui.layouts->takeTopLevelItem(pos);
+    ui.layouts->insertTopLevelItem(pos - 1, item);
+    ui.layouts->setCurrentItem(item);
+    accept();
+  }
+}
+

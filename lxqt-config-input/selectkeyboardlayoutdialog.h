@@ -18,43 +18,28 @@
  *
  */
 
-#ifndef KEYBOARDLAYOUTCONFIG_H
-#define KEYBOARDLAYOUTCONFIG_H
+#ifndef SELECTKEYBOARDLAYOUTDIALOG_H
+#define SELECTKEYBOARDLAYOUTDIALOG_H
 
-#include <QWidget>
+#include <QDialog>
+#include "ui_selectkeyboardlayoutdialog.h"
 #include "keyboardlayoutinfo.h"
-#include <QMap>
-#include "ui_keyboardlayoutconfig.h"
 
-namespace LxQt {
-  class Settings;
-}
-
-class KeyboardLayoutConfig : public QWidget {
+class SelectKeyboardLayoutDialog : public QDialog {
   Q_OBJECT
 public:
-  KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent = 0);
-  virtual ~KeyboardLayoutConfig();
+  SelectKeyboardLayoutDialog(QMap< QString, KeyboardLayoutInfo >& knownLayouts, QWidget* parent = 0);
+  virtual ~SelectKeyboardLayoutDialog();
 
-public Q_SLOTS:
-  void accept();
-  void reset();
-  void onAddLayout();
-  void onRemoveLayout();
-  void onMoveUp();
-  void onMoveDown();
+  QString selectedLayout();
+  QString selectedVariant();
+  
+private Q_SLOTS:
+  void onLayoutChanged();
 
 private:
-  void loadSettings();
-  void loadLists();
-  void initControls();
-  void addLayout(QString name, QString variant);
-
-private:
-  Ui::KeyboardLayoutConfig ui;
-  QString model_;
-  QList<QPair<QString, QString> > currentLayouts_;
-  QMap<QString, KeyboardLayoutInfo> knownLayouts_;
+  Ui::SelectKeyboardLayoutDialog ui;
+  QMap<QString, KeyboardLayoutInfo>& knownLayouts_;
 };
 
-#endif // KEYBOARDLAYOUTCONFIG_H
+#endif // SELECTKEYBOARDLAYOUTDIALOG_H
