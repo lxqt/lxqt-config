@@ -1,17 +1,3 @@
-[Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
-Type=Application
-Exec=lxqt-config
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
-Icon=preferences-system
-Name=LxQt Configuration Center
-Comment=Configure LXDE-Qt modules
-GenericName=LxQt Configuration
-
-#TRANSLATIONS_DIR=translations
-
-
 # Translations
 Comment[sr@latin]=Podesite Rejzorove module
 GenericName[sr@latin]=Podešavanje Rejzora

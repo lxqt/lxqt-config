@@ -1,19 +1,4 @@
-[Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
-Type=Application
-Exec=lxqt-config
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
-Icon=preferences-system
-Name=LxQt Configuration Center
-Comment=Configure LXDE-Qt modules
-GenericName=LxQt Configuration
-
-#TRANSLATIONS_DIR=translations
-
-
 # Translations
 Comment[zh_CN]=配置 LXDE-Qt 模块
 GenericName[zh_CN]=LxQt 配置
 Name[zh_CN]=LxQt 配置中心
-Icon[zh_CN]=系统首选项

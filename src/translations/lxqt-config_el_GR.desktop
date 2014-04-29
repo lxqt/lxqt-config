@@ -1,19 +1,4 @@
-[Desktop Entry]
-OnlyShowIn=LXDE;LxQt;
-Type=Application
-Exec=lxqt-config
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
-Icon=preferences-system
-Name=LxQt Configuration Center
-Comment=Configure LXDE-Qt modules
-GenericName=LxQt Configuration
-
-#TRANSLATIONS_DIR=translations
-
-
 # Translations
 Comment[el_GR]=Διαμόρφωση αρθρωμάτων LXDE-Qt
 GenericName[el_GR]=Διαμόρφωση LxQt
 Name[el_GR]=Κέντρο διαμόρφωσης LxQt
-Icon[el_GR]=preferences-system
