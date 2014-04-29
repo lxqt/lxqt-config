@@ -1,20 +1,4 @@
-[Desktop Entry]
-X-SuSE-translate=true
-OnlyShowIn=LXDE;LxQt;
-Type=Application
-Exec=lxqt-config-appearance
-Terminal=false
-Categories=Settings;DesktopSettings;Qt;LxQt;
-Icon=preferences-desktop-theme
-Name=LxQt Appearance Configuration
-Comment=Configure appearance of LxQt desktop
-GenericName=LxQt Appearance Configuration
-
-#TRANSLATIONS_DIR=translations
-
-
 # Translations
-Icon[eo]=preferences-desktop-theme
 Comment[eo]=Agordi aperon de LxQt-labortablo 
 GenericName[eo]=Agordoj de apero de LxQt 
 Name[eo]=Agordoj de apero de LxQt 
