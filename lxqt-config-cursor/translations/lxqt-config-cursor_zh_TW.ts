@@ -2,13 +2,13 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>LxQt Mouse Theme Configuration</source>
-        <translation>LxQt滑鼠游標主題設定</translation>
+        <source>LXQt Mouse Theme Configuration</source>
+        <translation>LXQt滑鼠游標主題設定</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>選擇您喜歡的游標主題 (檢視來回移動來測試游標) 。
-&lt;b&gt;套用改變需要重新啟動LxQt會話&lt;/b&gt;:</translation>
+&lt;b&gt;套用改變需要重新啟動LXQt會話&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

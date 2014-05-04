@@ -2,13 +2,13 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>LxQt Mouse Theme Configuration</source>
-        <translation>LxQt Musemarkør Tema Indstillinger</translation>
+        <source>LXQt Mouse Theme Configuration</source>
+        <translation>LXQt Musemarkør Tema Indstillinger</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Vælg det markør tema, du vil bruge (forhåndsvisning for at teste markør).
-&lt;b&gt; LxQt session skal genstartes efter denne ændring &lt;/ b&gt;:</translation>
+&lt;b&gt; LXQt session skal genstartes efter denne ændring &lt;/ b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

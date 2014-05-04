@@ -2,7 +2,7 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
+        <source>LXQt Appearance Configuration</source>
         <translation>تهيئة مظهر ريزر</translation>
     </message>
     <message>
@@ -13,7 +13,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
+        <source>LXQt Appearance Configuration</source>
         <translation>تهيئة مظهر ريزر</translation>
     </message>
     <message>
@@ -21,14 +21,14 @@
         <translation>نماذج اﻷيقونات</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
+        <source>LXQt Theme</source>
         <translation>واجهة ريزر المخصَّصة</translation>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
+        <source>LXQt Theme</source>
         <translation>واجهة ريزر المخصَّصة</translation>
     </message>
 </context>

@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>LxQt Mouse Theme Configuration</source>
-        <translation>Configurare temă maus LxQt</translation>
+        <source>LXQt Mouse Theme Configuration</source>
+        <translation>Configurare temă maus LXQt</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Selectați tema de cursor pe care doriți să o utilizați (treceți peste cu mausul pentru a testa cursorul)&lt;/b&gt;Sesiunea LxQt necesită o repornire după această modificare&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Selectați tema de cursor pe care doriți să o utilizați (treceți peste cu mausul pentru a testa cursorul)&lt;/b&gt;Sesiunea LXQt necesită o repornire după această modificare&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

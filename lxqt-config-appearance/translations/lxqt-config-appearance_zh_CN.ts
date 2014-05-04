@@ -2,8 +2,8 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>LxQt 外观配置</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>LXQt 外观配置</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -13,23 +13,23 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>LxQt 外观配置</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>LXQt 外观配置</translation>
     </message>
     <message>
         <source>Icons Theme</source>
         <translation>图标主题</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
-        <translation>LxQt 主题</translation>
+        <source>LXQt Theme</source>
+        <translation>LXQt 主题</translation>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
-        <translation>LxQt 主题</translation>
+        <source>LXQt Theme</source>
+        <translation>LXQt 主题</translation>
     </message>
 </context>
 </TS>

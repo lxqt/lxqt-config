@@ -13,14 +13,14 @@
 
 
     <Menu>
-        <Name>LxQt settings</Name>
+        <Name>LXQt settings</Name>
         <Directory>lxqt-settings-lxqt.directory</Directory>
         <Include>
             <And>
                 <Category>Settings</Category>
                 <Or>
                     <Category>X-LXQT</Category>
-                    <Category>LxQt</Category>
+                    <Category>LXQt</Category>
                 </Or>
                 <Not>
                     <Filename>lxqt-config.desktop</Filename>
@@ -49,7 +49,7 @@
                 <Not>
                     <Or>
                         <Category>X-LXQT</Category>
-                        <Category>LxQt</Category>
+                        <Category>LXQt</Category>
                         <Category>LXDE</Category>
                         <Category>System</Category>
                     </Or>
@@ -59,7 +59,7 @@
      </Menu>
 
     <Layout>
-        <Menuname>LxQt settings</Menuname>
+        <Menuname>LXQt settings</Menuname>
         <Menuname>System settings</Menuname>
         <Merge type="menus"/>
     </Layout>

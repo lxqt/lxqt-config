@@ -2,11 +2,11 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>LxQt Mouse Theme Configuration</source>
+        <source>LXQt Mouse Theme Configuration</source>
         <translation>اعداد شكل فأرة سطح ريزر</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>اختر سكل المؤشِّر الذي تريد استخدامه (مرر المؤشِّر متخطيَّاً لمعاينته).
 &lt;b&gt;يجب إعادة تشغيل جلسة سطح ريزر بعد هذا التَّغيير&lt;/b&gt;</translation>
     </message>

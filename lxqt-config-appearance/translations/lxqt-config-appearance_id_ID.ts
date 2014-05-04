@@ -2,8 +2,8 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Konfigurasi Penampilan LxQt</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Konfigurasi Penampilan LXQt</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -13,22 +13,22 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Konfigurasi Penampilan LxQt</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Konfigurasi Penampilan LXQt</translation>
     </message>
     <message>
         <source>Icons Theme</source>
         <translation>Tema Ikon</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
+        <source>LXQt Theme</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
+        <source>LXQt Theme</source>
         <translation type="unfinished"/>
     </message>
 </context>

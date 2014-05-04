@@ -41,7 +41,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>LxQt could not find any cursor theme. The default X11 cursor theme will be used instead. LxQt looked in the following directories:</string>
+        <string>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

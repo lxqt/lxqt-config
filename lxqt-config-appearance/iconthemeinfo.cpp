@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * https://sourceforge.net/projects/lxde-qt/
  *
  * Copyright: 2010-2011 Razor team
@@ -68,10 +68,10 @@ void IconThemeInfo::loadDirsInfo(QSettings &file, const QString &path)
         file.beginGroup(i);
         if (file.value("Size", 0).toInt() == PRIVIEW_ICON_SIZE &&
             file.value("Context").toString() == "Actions"
-           )   
+           )
         {
             mActionsDir = path + QDir::separator() + i;
-            file.endGroup();              
+            file.endGroup();
             return;
         }
         file.endGroup();
