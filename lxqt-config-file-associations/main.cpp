@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2013 Christian Surlykke
@@ -42,7 +42,7 @@ int main (int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
     TRANSLATE_APP;
-    
+
     MimetypeViewer mimetypeViewer;
     mimetypeViewer.show();
 

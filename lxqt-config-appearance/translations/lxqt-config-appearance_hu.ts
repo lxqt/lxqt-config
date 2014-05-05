@@ -2,7 +2,7 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
+        <source>LXQt Appearance Configuration</source>
         <translation>Alkalmazásmenü</translation>
     </message>
     <message>
@@ -13,7 +13,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
+        <source>LXQt Appearance Configuration</source>
         <translation>Alkalmazásmenü</translation>
     </message>
     <message>
@@ -21,15 +21,15 @@
         <translation>Ikontéma</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
-        <translation>LxQt téma</translation>
+        <source>LXQt Theme</source>
+        <translation>LXQt téma</translation>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
-        <translation>LxQt téma</translation>
+        <source>LXQt Theme</source>
+        <translation>LXQt téma</translation>
     </message>
 </context>
 </TS>

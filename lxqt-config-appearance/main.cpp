@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2010-2011 Razor team
@@ -44,7 +44,7 @@ int main (int argc, char **argv)
     TRANSLATE_APP;
 
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
-    LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LxQt Appearance Configuration"), settings);
+    LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
 
     QSettings qtSettings(QLatin1String("Trolltech"));
     StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
@@ -56,13 +56,13 @@ int main (int argc, char **argv)
     QObject::connect(dialog, SIGNAL(reset()), iconPage, SLOT(initControls()));
 
     LxQtThemeConfig* themePage = new LxQtThemeConfig(settings, dialog);
-    dialog->addPage(themePage, QObject::tr("LxQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
+    dialog->addPage(themePage, QObject::tr("LXQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), themePage, SLOT(initControls()));
-    
+
     FontsConfig* fontsPage = new FontsConfig(settings, &qtSettings, dialog);
     dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << "preferences-desktop-font" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
-    
+
     SelectWnd* cursorPage = new SelectWnd(settings, dialog);
     cursorPage->setCurrent();
     dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << "input-mouse" << "preferences-desktop");

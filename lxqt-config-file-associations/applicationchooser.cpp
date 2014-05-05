@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2013 Christian Surlykke
@@ -53,7 +53,7 @@ ApplicationChooser::~ApplicationChooser()
 int ApplicationChooser::exec()
 {
     show();
-    fillApplicationListWidget(); 
+    fillApplicationListWidget();
 
     return QDialog::exec();
 }
@@ -61,55 +61,55 @@ int ApplicationChooser::exec()
 
 
 bool lessThan(XdgDesktopFile* a, XdgDesktopFile* b)
-{   
+{
     return a && b && a->name().toLower() < b->name().toLower();
 }
 
 void ApplicationChooser::fillApplicationListWidget()
 {
     widget.applicationTreeWidget->clear();
-    if (m_MimeInfo) 
+    if (m_MimeInfo)
     {
-        QSet<XdgDesktopFile*> addedApps; 
+        QSet<XdgDesktopFile*> addedApps;
         QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = XdgDesktopFileCache::getApps(m_MimeInfo->mimeType());
         QList<XdgDesktopFile*> otherApplications;
-  
+
         for(XdgMimeInfo* mimeInfo = m_MimeInfo;; mimeInfo = XdgMimeInfoCache::xdgMimeInfo(mimeInfo->subClassOf()))
         {
             QString heading;
-            heading = mimeInfo ? 
+            heading = mimeInfo ?
                 tr("Applications that handle %1").arg(mimeInfo->comment()) :
                 tr("Other applications");
-            
+
             QList<XdgDesktopFile*> applications;
-            applications = mimeInfo ? 
+            applications = mimeInfo ?
                 XdgDesktopFileCache::getApps(mimeInfo->mimeType()) :
                 XdgDesktopFileCache::getAllFiles();
-       
-            qSort(applications.begin(), applications.end(), lessThan); 
-        
+
+            qSort(applications.begin(), applications.end(), lessThan);
+
             QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
             headingItem->setExpanded(true);
             headingItem->setFlags(Qt::ItemIsEnabled);
             headingItem->setText(0, heading);
-            headingItem->setSizeHint(0, QSize(0, 25)); 
+            headingItem->setSizeHint(0, QSize(0, 25));
 
             addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
 
             if (! mimeInfo)
                 break;
         }
-        
+
     }
     connect(widget.applicationTreeWidget, SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT(selectionChanged()));
     widget.applicationTreeWidget->setFocus();
 }
 
-void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem* parent, 
-                                                                QList<XdgDesktopFile*> applications, 
+void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
+                                                                QList<XdgDesktopFile*> applications,
                                                                 QSet<XdgDesktopFile*>& alreadyAdded)
 {
-        if (applications.isEmpty()) 
+        if (applications.isEmpty())
         {
             QTreeWidgetItem* noAppsFoundItem = new QTreeWidgetItem(parent);
             noAppsFoundItem->setText(0, tr("No applications found"));
@@ -118,28 +118,28 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
             font.setStyle(QFont::StyleItalic);
             noAppsFoundItem->setFont(0, font);
         }
-        else 
+        else
         {
             // Insert applications in the listwidget, skipping already added applications
-            foreach (XdgDesktopFile* desktopFile, applications) 
+            foreach (XdgDesktopFile* desktopFile, applications)
             {
-                if (alreadyAdded.contains(desktopFile)) 
+                if (alreadyAdded.contains(desktopFile))
                     continue;
-                
+
                 // Only applications
-                if (desktopFile->type() != XdgDesktopFile::ApplicationType)  
+                if (desktopFile->type() != XdgDesktopFile::ApplicationType)
                     continue;
-                
+
                 QTreeWidgetItem *item = new QTreeWidgetItem(parent);
                 item->setIcon(0, desktopFile->icon());
                 item->setText(0, desktopFile->name());
                 item->setData(0, 32, QVariant::fromValue<XdgDesktopFile*>(desktopFile));
-                
+
                 if (desktopFile == m_CurrentDefaultApplication)
                 {
                     widget.applicationTreeWidget->setCurrentItem(item);
                 }
-                
+
                 alreadyAdded.insert(desktopFile);
                 QCoreApplication::processEvents();
             }

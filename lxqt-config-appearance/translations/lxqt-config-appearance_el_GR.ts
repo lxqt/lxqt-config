@@ -2,8 +2,8 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Διαμόρφωση εμφάνισης LxQt</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Διαμόρφωση εμφάνισης LXQt</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -13,23 +13,23 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Διαμόρφωση εμφάνισης LxQt</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Διαμόρφωση εμφάνισης LXQt</translation>
     </message>
     <message>
         <source>Icons Theme</source>
         <translation>Θέμα εικονιδίων</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
-        <translation>Θέμα LxQt</translation>
+        <source>LXQt Theme</source>
+        <translation>Θέμα LXQt</translation>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
-        <translation>Θέμα LxQt</translation>
+        <source>LXQt Theme</source>
+        <translation>Θέμα LXQt</translation>
     </message>
 </context>
 </TS>

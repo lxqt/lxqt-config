@@ -2,7 +2,7 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
+        <source>LXQt Appearance Configuration</source>
         <translation>Nastavení vzhledu</translation>
     </message>
     <message>
@@ -13,7 +13,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
+        <source>LXQt Appearance Configuration</source>
         <translation>Nastavení vzhledu</translation>
     </message>
     <message>
@@ -21,15 +21,15 @@
         <translation>Téma ikon</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
-        <translation>Motiv LxQt</translation>
+        <source>LXQt Theme</source>
+        <translation>Motiv LXQt</translation>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
-        <translation>Motiv LxQt</translation>
+        <source>LXQt Theme</source>
+        <translation>Motiv LXQt</translation>
     </message>
 </context>
 </TS>

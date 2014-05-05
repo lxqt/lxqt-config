@@ -2,12 +2,12 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <source>LxQt Mouse Theme Configuration</source>
-        <translation>Διαμόρφωση θέματος ποντικιού LxQt</translation>
+        <source>LXQt Mouse Theme Configuration</source>
+        <translation>Διαμόρφωση θέματος ποντικιού LXQt</translation>
     </message>
     <message>
-        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LxQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Επιλέξτε το θέμα δείκτη που θέλετε να χρησιμοποιήσετε (κινηθείτε επάνω για προεπισκόπηση). &lt;b&gt;Χρειάζεται επανεκκίνηση της συνεδρίας LxQt μετά την αλλαγή&lt;/b&gt;:</translation>
+        <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
+        <translation>Επιλέξτε το θέμα δείκτη που θέλετε να χρησιμοποιήσετε (κινηθείτε επάνω για προεπισκόπηση). &lt;b&gt;Χρειάζεται επανεκκίνηση της συνεδρίας LXQt μετά την αλλαγή&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>

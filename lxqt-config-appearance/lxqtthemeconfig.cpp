@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -91,7 +91,7 @@ void LxQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
 
     QVariant themeName = item->data(0, Qt::UserRole);
     mSettings->setValue("theme", themeName);
-    
+
     LxQt::LxQtTheme theme(themeName.toString());
     if(theme.isValid()) {
 		QString wallpaper = theme.desktopBackground();

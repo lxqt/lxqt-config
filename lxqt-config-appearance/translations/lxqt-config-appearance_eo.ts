@@ -2,8 +2,8 @@
 <context>
     <name>IconThemeConfig</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Agordoj de apero de LxQto</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Agordoj de apero de LXQto</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -13,23 +13,23 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Agordoj de apero de LxQto</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Agordoj de apero de LXQto</translation>
     </message>
     <message>
         <source>Icons Theme</source>
         <translation>Etoso de piktogramoj</translation>
     </message>
     <message>
-        <source>LxQt Theme</source>
-        <translation>Etoso de LxQt</translation>
+        <source>LXQt Theme</source>
+        <translation>Etoso de LXQt</translation>
     </message>
 </context>
 <context>
-    <name>LxQtThemeConfig</name>
+    <name>LXQtThemeConfig</name>
     <message>
-        <source>LxQt Theme</source>
-        <translation>Etoso de LxQt</translation>
+        <source>LXQt Theme</source>
+        <translation>Etoso de LXQt</translation>
     </message>
 </context>
 </TS>

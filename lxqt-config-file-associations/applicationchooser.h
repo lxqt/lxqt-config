@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2013 Christian Surlykke
@@ -48,8 +48,8 @@ private slots:
 private:
     void fillApplicationListWidget();
 
-    void addApplicationsToApplicationListWidget(QTreeWidgetItem* parent, 
-                                                QList<XdgDesktopFile*> applications, 
+    void addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
+                                                QList<XdgDesktopFile*> applications,
                                                 QSet<XdgDesktopFile*> & alreadyAdded);
     XdgMimeInfo* m_MimeInfo;
     Ui::ApplicationChooser widget;

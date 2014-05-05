@@ -4,8 +4,8 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <source>LxQt Appearance Configuration</source>
-        <translation>Nastavenie vzhľadu prostredia LxQt</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>Nastavenie vzhľadu prostredia LXQt</translation>
     </message>
     <message>
         <source>Icons Theme</source>

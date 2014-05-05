@@ -5,8 +5,8 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <source>LxQt Appearance Configuration</source>
-        <translation>LxQt megjelenésbeállító</translation>
+        <source>LXQt Appearance Configuration</source>
+        <translation>LXQt megjelenésbeállító</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>

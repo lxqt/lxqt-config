@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * LXQt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2010-2011 Razor team
@@ -80,7 +80,7 @@ public:
     {
         QString menuFile = XdgMenu::getMenuFileName("config.menu");
         XdgMenu xdgMenu;
-        xdgMenu.setEnvironments(QStringList() << "X-LXQT" << "LxQt" << "LXDE");
+        xdgMenu.setEnvironments(QStringList() << "X-LXQT" << "LXQt" << "LXDE");
         bool res = xdgMenu.read(menuFile);
         if (!res)
         {

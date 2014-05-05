@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>LxQtThemeConfig</class>
- <widget class="QWidget" name="LxQtThemeConfig">
+ <widget class="QWidget" name="LXQtThemeConfig">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -20,7 +20,7 @@
       </font>
      </property>
      <property name="text">
-      <string>LxQt Theme</string>
+      <string>LXQt Theme</string>
      </property>
     </widget>
    </item>
