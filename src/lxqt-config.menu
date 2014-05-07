@@ -17,9 +17,8 @@
         <Directory>lxqt-settings-lxqt.directory</Directory>
         <Include>
             <And>
-                <Category>Settings</Category>
+                <Category>DesktopSettings</Category>
                 <Or>
-                    <Category>X-LXQT</Category>
                     <Category>LXQt</Category>
                 </Or>
                 <Not>
@@ -48,7 +47,6 @@
                 <Category>Settings</Category>
                 <Not>
                     <Or>
-                        <Category>X-LXQT</Category>
                         <Category>LXQt</Category>
                         <Category>LXDE</Category>
                         <Category>System</Category>
