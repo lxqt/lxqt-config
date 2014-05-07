@@ -8,3 +8,6 @@ Copyright:
 
 License: GPL-2 and LGPL-2.1+
 The full text of the licenses can be found in the 'COPYING' file.
+
+The lxqt-config-cursor component is based on the "qt-xcurtheme" project
+and is licensed under GPL 2.
