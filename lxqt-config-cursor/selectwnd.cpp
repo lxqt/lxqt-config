@@ -133,8 +133,11 @@ void SelectWnd::currentChanged(const QModelIndex &current, const QModelIndex &pr
     if (current.isValid())
     {
         const XCursorThemeData *theme = mModel->theme(current);
-        if (theme) preview->setTheme(*theme); else preview->clearTheme();
-        btRemove->setEnabled(theme->isWritable());
+        if (theme)
+        {
+            preview->setTheme(*theme);
+            btRemove->setEnabled(theme->isWritable());
+        }else preview->clearTheme();
         //qDebug() << theme->path() << theme->name();
         
         // 2014-04-10 added by pcman for lxqt-config-input
