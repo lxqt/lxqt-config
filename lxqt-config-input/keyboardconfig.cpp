@@ -20,7 +20,6 @@
 #include "keyboardconfig.h"
 #include <string.h>
 #include <math.h>
-#include <alloca.h>
 #include <stdlib.h>
 #include <lxqt/LxQtSettings>
 #include <QDir>

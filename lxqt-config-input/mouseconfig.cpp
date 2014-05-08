@@ -20,7 +20,6 @@
 #include "mouseconfig.h"
 #include <string.h>
 #include <math.h>
-#include <alloca.h>
 #include <stdlib.h>
 #include <lxqt/LxQtSettings>
 #include <QDir>
@@ -103,11 +102,11 @@ void MouseConfig::setLeftHandedMouse() {
   int n_buttons, i;
   int idx_1 = 0, idx_3 = 1;
 
-  buttons = (unsigned char*)alloca(DEFAULT_PTR_MAP_SIZE);
+  buttons = (unsigned char*)malloc(DEFAULT_PTR_MAP_SIZE);
   n_buttons = XGetPointerMapping(QX11Info::display(), buttons, DEFAULT_PTR_MAP_SIZE);
 
   if(n_buttons > DEFAULT_PTR_MAP_SIZE) {
-    buttons = (unsigned char*)alloca(n_buttons);
+    buttons = (unsigned char*)realloc(buttons, n_buttons);
     n_buttons = XGetPointerMapping(QX11Info::display(), buttons, n_buttons);
   }
 
@@ -124,6 +123,7 @@ void MouseConfig::setLeftHandedMouse() {
     buttons[idx_3] = 1;
     XSetPointerMapping(QX11Info::display(), buttons, n_buttons);
   }
+  free(buttons);
 }
 
 void MouseConfig::onMouseLeftHandedToggled(bool checked) {
