@@ -152,6 +152,7 @@ void KeyboardLayoutConfig::loadLists() {
               ui.switchKey->addItem(description, name);
             }
             break;
+          default:;
         }
       }
     }
