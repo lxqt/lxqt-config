@@ -16,10 +16,10 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <lxqt/lxqtapplication.h>
+#include <LXQt/Application>
 #include "lxqttranslate.h"
-#include <lxqt/LxQtConfigDialog>
-#include <lxqt/LxQtSettings>
+#include <LXQt/ConfigDialog>
+#include <LXQt/Settings>
 #include "mouseconfig.h"
 #include "keyboardconfig.h"
 #include "../lxqt-config-cursor/selectwnd.h"

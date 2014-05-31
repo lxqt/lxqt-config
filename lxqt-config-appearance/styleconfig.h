@@ -29,7 +29,7 @@
 #define STYLECONFIG_H
 
 #include <QWidget>
-#include <lxqt/LxQtSettings>
+#include <LXQt/Settings>
 
 class QTreeWidgetItem;
 class QSettings;

@@ -21,7 +21,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-#include <lxqt/LxQtSettings>
+#include <LXQt/Settings>
 #include <QDir>
 #include <QFile>
 #include <QStringBuilder>

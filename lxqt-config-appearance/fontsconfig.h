@@ -30,7 +30,7 @@
 
 #include <QWidget>
 #include <QFont>
-#include <lxqt/LxQtSettings>
+#include <LXQt/Settings>
 #include "fontconfigfile.h"
 
 class QTreeWidgetItem;
