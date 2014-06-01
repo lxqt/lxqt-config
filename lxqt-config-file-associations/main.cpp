@@ -23,7 +23,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <lxqt/lxqtapplication.h>
+#include <LXQt/Application>
 #include <QDebug>
 #include <QString>
 #include <QStringList>
@@ -32,7 +32,7 @@
 #include <QSettings>
 #include <QVariant>
 
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 #include "lxqttranslate.h"
 #include <qtxdg/xdgdesktopfile.h>
 #include "mimetypeviewer.h"

@@ -25,7 +25,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <lxqt/lxqtapplication.h>
+#include <LXQt/Application>
 #include "lxqttranslate.h"
 #include "mainwindow.h"
 

@@ -29,7 +29,7 @@
 
 #include <qtxdg/xdgdesktopfile.h>
 #include <qtxdg/xdgicon.h>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 #include <QtCore/QStringList>
 #include <QtGui/QIcon>
 #include <QtCore/QDebug>

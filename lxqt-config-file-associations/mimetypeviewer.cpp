@@ -35,7 +35,7 @@
 #include <qtxdg/xdgmime.h>
 #include <qtxdg/xdgdesktopfile.h>
 #include <qtxdg/xdgdirs.h>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 
 
 #include "mimetypeviewer.h"

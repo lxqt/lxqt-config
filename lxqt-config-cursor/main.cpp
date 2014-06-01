@@ -11,11 +11,11 @@
 #include <QtCore/QDebug>
 
 #include <qtxdg/xdgicon.h>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 #include "main.h"
 #include "lxqttranslate.h"
 
-#include <lxqt/lxqtapplication.h>
+#include <LXQt/Application>
 #include <QtCore/QFile>
 #include <QtGui/QImage>
 #include <QtCore/QString>

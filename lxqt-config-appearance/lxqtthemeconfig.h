@@ -29,7 +29,7 @@
 #define LXQTTHEMECONFIG_H
 
 #include <QtGui/QWidget>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 
 class QTreeWidgetItem;
 

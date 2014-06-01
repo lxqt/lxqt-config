@@ -25,11 +25,11 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <lxqt/lxqtapplication.h>
+#include <LXQt/Application>
 
 #include <qtxdg/xdgicon.h>
-#include <lxqt/lxqtsettings.h>
-#include <lxqt/lxqtconfigdialog.h>
+#include <LXQt/Settings>
+#include <LXQt/ConfigDialog>
 #include "iconthemeconfig.h"
 #include "lxqttranslate.h"
 #include "lxqtthemeconfig.h"

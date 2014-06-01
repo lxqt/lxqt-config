@@ -30,7 +30,7 @@
 #include "xcrxcur.h"
 #include "xcrtheme.h"
 
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 #include <qtxdg/xdgicon.h>
 #include <QTextStream>
 #include <QProcess>
