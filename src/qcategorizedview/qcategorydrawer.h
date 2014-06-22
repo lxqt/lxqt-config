@@ -24,8 +24,8 @@
 
 //#include <kdeui_export.h>
 
-#include <QtCore/QObject>
-#include <QtGui/QMouseEvent>
+#include <QObject>
+#include <QMouseEvent>
 
 #define KDEUI_EXPORT
 #define KDE_DEPRECATED

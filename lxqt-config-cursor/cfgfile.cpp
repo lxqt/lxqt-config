@@ -9,10 +9,10 @@
  */
 #include "cfgfile.h"
 
-#include <QtCore/QDir>
-#include <QtCore/QFile>
-#include <QtCore/QStringList>
-#include <QtCore/QTextStream>
+#include <QDir>
+#include <QFile>
+#include <QStringList>
+#include <QTextStream>
 
 QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
 {

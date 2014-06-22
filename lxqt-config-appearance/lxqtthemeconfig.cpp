@@ -27,8 +27,8 @@
 
 #include "lxqtthemeconfig.h"
 #include "ui_lxqtthemeconfig.h"
-#include <QtGui/QTreeWidget>
-#include <QtCore/QDebug>
+#include <QTreeWidget>
+#include <QDebug>
 #include <QProcess>
 
 LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :

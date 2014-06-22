@@ -28,10 +28,10 @@
 #ifndef ICONTHEMEINFO_H
 #define ICONTHEMEINFO_H
 
-#include <QtCore/QObject>
-#include <QtGui/QIcon>
-#include <QtCore/QDir>
-#include <QtCore/QSettings>
+#include <QObject>
+#include <QIcon>
+#include <QDir>
+#include <QSettings>
 
 class IconThemeInfo
 {

@@ -32,9 +32,9 @@
 #include <QtConcurrentRun>
 #include <QDateTime>
 
-#include <qtxdg/xdgmime.h>
-#include <qtxdg/xdgdesktopfile.h>
-#include <qtxdg/xdgdirs.h>
+#include <XdgMime>
+#include <XdgDesktopFile>
+#include <XdgDirs>
 #include <LXQt/Settings>
 
 

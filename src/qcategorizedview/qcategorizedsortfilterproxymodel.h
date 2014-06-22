@@ -23,7 +23,7 @@
 #ifndef KCATEGORIZEDSORTFILTERPROXYMODEL_H
 #define KCATEGORIZEDSORTFILTERPROXYMODEL_H
 
-#include <QtGui/QSortFilterProxyModel>
+#include <QSortFilterProxyModel>
 
 #define KDEUI_EXPORT
 

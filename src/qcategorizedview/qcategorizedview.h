@@ -22,7 +22,7 @@
 #ifndef KCATEGORIZEDVIEW_H
 #define KCATEGORIZEDVIEW_H
 
-#include <QtGui/QListView>
+#include <QListView>
 
 //#include <kdeui_export.h>
 

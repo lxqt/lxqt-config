@@ -8,7 +8,7 @@
 #include <QDebug>
 
 #include "mimetypeitemmodel.h"
-#include "qtxdg/xdgmime.h"
+#include <XdgMime>
 
 /*
  * Implementation note:

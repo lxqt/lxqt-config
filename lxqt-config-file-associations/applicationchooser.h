@@ -27,7 +27,7 @@
 #define	_APPLICATIONCHOOSER_H
 
 #include "ui_applicationchooser.h"
-#include <qtxdg/xdgdesktopfile.h>
+#include <XdgDesktopFile>
 
 class XdgMimeInfo;
 class QSettings;

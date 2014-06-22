@@ -26,7 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include "iconthemeinfo.h"
-#include <QtCore/QDebug>
+#include <QDebug>
 
 
 #define PRIVIEW_ICON_SIZE 22

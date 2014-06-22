@@ -31,7 +31,7 @@
 #include "xcrtheme.h"
 
 #include <LXQt/Settings>
-#include <qtxdg/xdgicon.h>
+#include <XdgIcon>
 #include <QTextStream>
 #include <QProcess>
 

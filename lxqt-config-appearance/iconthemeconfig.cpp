@@ -27,12 +27,12 @@
 
 #include "iconthemeconfig.h"
 
-#include <qtxdg/xdgdesktopfile.h>
-#include <qtxdg/xdgicon.h>
+#include <XdgDesktopFile>
+#include <XdgIcon>
 #include <LXQt/Settings>
-#include <QtCore/QStringList>
-#include <QtGui/QIcon>
-#include <QtCore/QDebug>
+#include <QStringList>
+#include <QIcon>
+#include <QDebug>
 
 
 IconThemeConfig::IconThemeConfig(LxQt::Settings* settings, QWidget* parent):

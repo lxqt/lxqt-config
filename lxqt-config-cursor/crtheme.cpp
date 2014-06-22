@@ -19,12 +19,12 @@
 /*
  * additional code: Ketmar // Vampire Avalon (psyc://ketmar.no-ip.org/~Ketmar)
  */
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include "crtheme.h"
 
-#include <QtGui/QStyle>
-#include <QtGui/QX11Info>
+#include <QStyle>
+#include <QX11Info>
 
 #include "cfgfile.h"
 

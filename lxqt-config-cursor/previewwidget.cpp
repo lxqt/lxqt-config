@@ -18,10 +18,10 @@
 /*
  * additional code: Ketmar // Vampire Avalon (psyc://ketmar.no-ip.org/~Ketmar)
  */
-#include <QtCore/QDebug>
+#include <QDebug>
 
-#include <QtGui/QPainter>
-#include <QtGui/QMouseEvent>
+#include <QPainter>
+#include <QMouseEvent>
 
 #include "previewwidget.h"
 

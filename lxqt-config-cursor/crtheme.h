@@ -22,14 +22,14 @@
 #ifndef CRTHEME_H
 #define CRTHEME_H
 
-#include <QtGui/QApplication>
-#include <QtGui/QCursor>
-#include <QtCore/QDir>
-#include <QtCore/QFile>
-#include <QtGui/QIcon>
-#include <QtGui/QImage>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
+#include <QApplication>
+#include <QCursor>
+#include <QDir>
+#include <QFile>
+#include <QIcon>
+#include <QImage>
+#include <QString>
+#include <QStringList>
 
 ///////////////////////////////////////////////////////////////////////////////
 // X11 is SHIT!

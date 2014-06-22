@@ -27,7 +27,7 @@
 
 #include <LXQt/Application>
 
-#include <qtxdg/xdgicon.h>
+#include <XdgIcon>
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include "iconthemeconfig.h"

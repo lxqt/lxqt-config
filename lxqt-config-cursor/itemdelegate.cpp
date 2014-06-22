@@ -22,9 +22,9 @@
 #include "itemdelegate.h"
 #include "crtheme.h"
 
-#include <QtGui/QApplication>
-#include <QtCore/QModelIndex>
-#include <QtGui/QPainter>
+#include <QApplication>
+#include <QModelIndex>
+#include <QPainter>
 
 
 namespace {

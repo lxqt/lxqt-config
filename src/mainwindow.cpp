@@ -25,19 +25,19 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <QtCore/QDirIterator>
-#include <QtGui/QLineEdit>
+#include <QDirIterator>
+#include <QLineEdit>
 #include <QTimer>
 
 #include "mainwindow.h"
 #include <QtDebug>
-#include <QtGui/QMessageBox>
-#include <QtGui/QStyledItemDelegate>
+#include <QMessageBox>
+#include <QStyledItemDelegate>
 
-#include <qtxdg/xdgdesktopfile.h>
-#include <qtxdg/xdgicon.h>
-#include <qtxdg/xdgmenu.h>
-#include <qtxdg/xmlhelper.h>
+#include <XdgDesktopFile>
+#include <XdgIcon>
+#include <XdgMenu>
+#include <XmlHelper>
 
 #include "qcategorizedview.h"
 #include "qcategorydrawer.h"

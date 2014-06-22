@@ -34,9 +34,9 @@
 
 #include <LXQt/Settings>
 #include "lxqttranslate.h"
-#include <qtxdg/xdgdesktopfile.h>
+#include <XdgDesktopFile>
 #include "mimetypeviewer.h"
-#include <qtxdg/xdgdirs.h>
+#include <XdgDirs>
 
 int main (int argc, char **argv)
 {

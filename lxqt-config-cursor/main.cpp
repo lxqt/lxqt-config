@@ -8,20 +8,20 @@
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
 //#include <QtCore>
-#include <QtCore/QDebug>
+#include <QDebug>
 
-#include <qtxdg/xdgicon.h>
+#include <XdgIcon>
 #include <LXQt/Settings>
 #include "main.h"
 #include "lxqttranslate.h"
 
 #include <LXQt/Application>
-#include <QtCore/QFile>
-#include <QtGui/QImage>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
-#include <QtCore/QTextCodec>
-#include <QtCore/QTextStream>
+#include <QFile>
+#include <QImage>
+#include <QString>
+#include <QStringList>
+#include <QTextCodec>
+#include <QTextStream>
 
 
 ///////////////////////////////////////////////////////////////////////////////

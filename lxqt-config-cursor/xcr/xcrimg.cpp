@@ -8,7 +8,6 @@
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
 #include <QDebug>
-//#include <QtCore>
 
 #include "xcrimg.h"
 
