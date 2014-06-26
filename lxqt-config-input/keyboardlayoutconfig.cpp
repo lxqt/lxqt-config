@@ -52,28 +52,17 @@ void KeyboardLayoutConfig::loadSettings() {
   setxkbmap.start(QLatin1String("setxkbmap -query -verbose 5"));
   setxkbmap.waitForFinished();
   if(setxkbmap.exitStatus() == QProcess::NormalExit) {
+    QList<QByteArray> layouts, variants;
     while(!setxkbmap.atEnd()) {
       QByteArray line = setxkbmap.readLine();
       if(line.startsWith("model:")) {
         keyboardModel_ = QString::fromLatin1(line.mid(6).trimmed());
       }
       else if(line.startsWith("layout:")) {
-        QList<QByteArray> items = line.mid(7).trimmed().split(',');
-        Q_FOREACH(QByteArray item, items) {
-          QString lang;
-          QString variant;
-          int p = item.indexOf('(');
-          if(p >= 0) { // has variant
-            int p2 = item.lastIndexOf(')');
-            if(p2 >= 0)
-              variant = QString::fromLatin1(item.mid(p + 1, (p2 - p - 1)));
-            lang = QString::fromLatin1(item.left(p));
-          }
-          else
-            lang = QString::fromLatin1(item);
-          // add the current lang/variant parit to the list
-          currentLayouts_.append(QPair<QString, QString>(lang, variant));
-        }
+        layouts = line.mid(7).trimmed().split(',');
+      }
+      else if(line.startsWith("variant:")) {
+        variants = line.mid(8).trimmed().split(',');
       }
       else if(line.startsWith("options:")) {
         QList<QByteArray> options = line.mid(9).trimmed().split(',');
@@ -85,6 +74,12 @@ void KeyboardLayoutConfig::loadSettings() {
         }
       }
     }
+
+    const int size = layouts.size(), variantsSize = variants.size();
+    for(int i = 0; i < size; ++i) {
+      currentLayouts_.append(QPair<QString, QString>(layouts.at(i), variantsSize > 0 ? variants.at(i) : QString()));
+    }
+
     setxkbmap.close();
   }
 }
@@ -167,7 +162,7 @@ void KeyboardLayoutConfig::initControls() {
     QString variant = it->second;
     addLayout(name, variant);
   }
-  
+
   int n = ui.keyboardModel->count();
   int row;
   for(row = 0; row < n; ++row) {
@@ -184,7 +179,7 @@ void KeyboardLayoutConfig::initControls() {
       break;
     }
   }
-  
+
 }
 
 void KeyboardLayoutConfig::addLayout(QString name, QString variant) {
@@ -224,7 +219,7 @@ void KeyboardLayoutConfig::accept() {
     command += " -model ";
     command += model;
   }
-  
+
   // set keyboard layout
   int n = ui.layouts->topLevelItemCount();
   QString layouts, variants;
@@ -240,13 +235,18 @@ void KeyboardLayoutConfig::accept() {
     }
     command += " -layout ";
     command += layouts;
-    command += " -variant ";
-    command += variants;
+
+    if (variants.indexOf(',') > -1) {
+      command += " -variant ";
+      command += variants;
+    }
   }
 
   Q_FOREACH(QString option, currentOptions_) {
-    command += " -option ";
-    command += option;
+    if (!option.startsWith("grp:")) {
+      command += " -option ";
+      command += option;
+    }
   }
 
   QString switchKey;
