@@ -1,8 +1,12 @@
-cmake_minimum_required(VERSION 2.6)
+project(qcategorizedview)
 
-include(FindPkgConfig)
-find_package(Qt4 REQUIRED)
-find_package(X11 REQUIRED)
+if(USE_QT5)
+  set(QTX_INCLUDE_DIRS  "")
+  set(QTX_LIBRARIES Qt5::Widgets)
+else()
+  set(QTX_INCLUDE_DIRS  ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} ${QT_HEADERS_DIR})
+  set(QTX_LIBRARIES ${QT_QTGUI_LIBRARIES} ${QT_QTCORE_LIBRARIES})
+endif()
 
 set(SOURCES
   qcategorizedview.cpp
@@ -10,17 +14,10 @@ set(SOURCES
   qcategorizedsortfilterproxymodel.cpp
 )
 
-qt4_automoc(${SOURCES})
-    
-include_directories(.
-  ${QT_QTGUI_INCLUDE_DIR}
-  ${QT_QTCORE_INCLUDE_DIR}
-  ${QT_HEADERS_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}
+include_directories(
+  ${QTX_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-add_library(qcategorizedview STATIC ${SOURCES})
-target_link_libraries(qcategorizedview ${QT_QTGUI_LIBRARIES} ${QT_QTCORE_LIBRARIES})
-
-#install(TARGETS qcategorizedview DESTINATION lib)
+add_library(qcategorizedview STATIC ${SOURCES} ${MOC_SOURCES})
+target_link_libraries(qcategorizedview ${QTX_LIBRARIES})

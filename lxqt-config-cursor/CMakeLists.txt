@@ -1,12 +1,17 @@
 project(lxqt-config-cursor)
 find_package(X11 REQUIRED)
 
-include_directories(${X11_INCLUDE_DIR})
+if(USE_QT5)
+  set(QTX_INCLUDE_DIRS  "")
+  set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras Qt5::DBus Qt5::Xml)
+else()
+  set(QTX_INCLUDE_DIRS  ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} ${QT_QTDBUS_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR})
+  set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
+endif()
 
 include_directories (
 	${CMAKE_CURRENT_BINARY_DIR}
-	${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR}
-    ${QT_QTDBUS_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR}
+	${QTX_INCLUDE_DIRS}
     ${X11_INCLUDE_DIR} 
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
@@ -50,8 +55,14 @@ set(lxqt-config-cursor_UIS
 )
 
 find_package(ZLIB REQUIRED)
-QT4_WRAP_UI(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
-QT4_WRAP_CPP(lxqt-config-cursor_MOCS ${lxqt-config-cursor_HDRS})
+
+if(USE_QT5)
+    qt5_wrap_ui(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
+else()
+    qt4_wrap_ui(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
+    # qt4_wrap_cpp(lxqt-config-cursor_MOCS ${lxqt-config-cursor_HDRS})
+endif()
+
 # Translations **********************************
 include(LxQtTranslate)
 lxqt_translate_ts(QM_FILES
@@ -66,10 +77,8 @@ lxqt_translate_ts(QM_FILES
 #************************************************
 
 add_library ( lxqt-config-cursor SHARED ${lxqt-config-cursor_SRCS} ${lxqt-config-cursor_CXX} ${lxqt-config-cursor_MOCS} ${DESKTOP_FILES} ${QM_FILES})
-add_dependencies( lxqt-config-cursor lxqt qtxdg)
-target_link_libraries ( lxqt-config-cursor  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY}
-                                                 ${X11_X11_LIB} ${X11_Xcursor_LIB} lxqt qtxdg ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
+target_link_libraries ( lxqt-config-cursor  ${QTX_LIBRARIES} ${X11_X11_LIB} ${X11_Xcursor_LIB} ${LXQT_LIBRARIES} ${QTXDG_LIBRARIES} ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
 # not needed probably ${X11_Xfixes_LIB})
 
-INSTALL(TARGETS lxqt-config-cursor DESTINATION ${LIB_INSTALL_DIR})
+install(TARGETS lxqt-config-cursor DESTINATION ${LIB_INSTALL_DIR})
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

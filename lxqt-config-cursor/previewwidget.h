@@ -21,7 +21,7 @@
 #ifndef PREVIEWWIDGET_H
 #define PREVIEWWIDGET_H
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 class XCursorThemeData;
 class PreviewCursor;
