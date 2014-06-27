@@ -28,6 +28,9 @@
 #include <QDomDocument>
 #include <QTimer>
 #include <QDebug>
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#include <QStandardPaths>
+#endif
 
 FontConfigFile::FontConfigFile(QObject* parent):
     QObject(parent),
@@ -39,8 +42,13 @@ FontConfigFile::FontConfigFile(QObject* parent):
     mSaveTimer(NULL)
 {
     mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+#else
+    QString homeDir = QDesktopServices::storageLocation(QDesktopServices::HomeLocation);
+#endif
     if(mDirPath.isEmpty())
-        mDirPath = QDesktopServices::storageLocation(QDesktopServices::HomeLocation) % "/.config";
+        mDirPath = homeDir % "/.config";
     mDirPath += "/fontconfig";
     mFilePath = mDirPath += "/fonts.conf";
 

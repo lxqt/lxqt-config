@@ -183,11 +183,16 @@ QCursor XCursorThemeData::loadCursor(const QString &name, int size) const
     if (!images) images = xcLoadImages(findAlternative(name), size);
     // Fall back to a legacy cursor
     //if (!images) return LegacyTheme::loadCursor(name);
-    if (!images) return false;
+    if (!images) return QCursor();
     // Create the cursor
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    QCursor cursor;
+    // FIXME: creating a cursor from a native handle is no longer supported.
+#else
     Cursor handle = XcursorImagesLoadCursor(QX11Info::display(), images);
     QCursor cursor = QCursor(Qt::HANDLE(handle)); // QCursor takes ownership of the handle
     XcursorImagesDestroy(images);
+#endif
     //setCursorName(cursor, name);
     return cursor;
 }
@@ -265,7 +270,11 @@ bool applyTheme(const XCursorThemeData &theme)
     foreach (const QString &name, names)
     {
         QCursor cursor = theme.loadCursor(name);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+        // FIXME: getting the native handle of cursor is no longer supported.
+#else
         XFixesChangeCursorByName(QX11Info::display(), cursor.handle(), QFile::encodeName(name));
+#endif
     }
     return true;
 }

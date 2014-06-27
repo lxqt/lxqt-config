@@ -66,7 +66,11 @@ class PreviewCursor
     ~PreviewCursor () {}
 
     const QPixmap &pixmap () const { return mPixmap; }
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    // FIXME: this is not supported by Qt5.
+#else
     Cursor handle () const { return mCursor.handle(); }
+#endif
     int width () const { return mPixmap.width(); }
     int height () const { return mPixmap.height(); }
     inline QRect rect () const;

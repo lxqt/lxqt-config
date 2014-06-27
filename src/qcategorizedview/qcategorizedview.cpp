@@ -1532,4 +1532,4 @@ void QCategorizedView::slotLayoutChanged()
 
 //END: Public part
 
-#include "qcategorizedview.moc"
+#include "moc_qcategorizedview.cpp"

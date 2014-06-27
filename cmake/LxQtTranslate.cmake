@@ -18,8 +18,12 @@
 #     A full path to the directory n which will be installed .qm files.
 #     By default is "${CMAKE_INSTALL_PREFIX}/share/lxqt/${PROJECT_NAME}" 
 
+if(USE_QT5)
+	get_target_property(QT_LRELEASE_EXECUTABLE ${Qt5_LRELEASE_EXECUTABLE} LOCATION)
+	get_target_property(QT_LUPDATE_EXECUTABLE ${Qt5_LUPDATE_EXECUTABLE} LOCATION)
+endif()
 
-MACRO(QT4_ADD_TRANSLATION_FIXED _qm_files)
+MACRO(QTX_ADD_TRANSLATION_FIXED _qm_files)
   FOREACH (_current_FILE ${ARGN})
     GET_FILENAME_COMPONENT(_abs_FILE ${_current_FILE} ABSOLUTE)
     GET_FILENAME_COMPONENT(qm ${_abs_FILE} NAME)
@@ -40,7 +44,7 @@ MACRO(QT4_ADD_TRANSLATION_FIXED _qm_files)
     )
     SET(${_qm_files} ${${_qm_files}} ${qm})
   ENDFOREACH (_current_FILE)
-ENDMACRO(QT4_ADD_TRANSLATION_FIXED)
+ENDMACRO(QTX_ADD_TRANSLATION_FIXED)
 
 if(NOT TARGET UpdateTsFiles)
   add_custom_target(UpdateTsFiles DEPENDS)
@@ -151,9 +155,9 @@ function(lxqt_translate_ts _qmFiles)
     # translate.h file *************************************
     file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/lxqttranslate.h
         "#ifndef LXQT_TRANSLATE_H\n"
-        "#include <QLocale>\n"
-        "#include <QTranslator>\n"
-        "#include <QLibraryInfo>\n"
+        "#include <QtCore/QLocale>\n"
+        "#include <QtCore/QTranslator>\n"
+        "#include <QtCore/QLibraryInfo>\n"
         "class LxQtTranslator {\n"
         "public:\n"
         "  static void translate()\n"
@@ -176,7 +180,7 @@ function(lxqt_translate_ts _qmFiles)
 
     # QM files **********************************************    
     file(GLOB _tsFiles ${_translationDir}/${_tsSrcFileNameWE}_*.ts)    
-    QT4_ADD_TRANSLATION_FIXED(_qmFilesLocal ${_tsFiles})
+    QTX_ADD_TRANSLATION_FIXED(_qmFilesLocal ${_tsFiles})
     install(FILES ${_qmFilesLocal} DESTINATION ${_installDir})
     
     set(${_qmFiles} ${_qmFilesLocal} PARENT_SCOPE)

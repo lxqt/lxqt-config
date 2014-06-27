@@ -22,7 +22,7 @@
 #ifndef ITEMDELEGATE_H
 #define ITEMDELEGATE_H
 
-#include <QtGui/QAbstractItemDelegate>
+#include <QAbstractItemDelegate>
 
 class QPainter;
 

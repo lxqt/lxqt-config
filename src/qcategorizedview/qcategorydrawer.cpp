@@ -282,4 +282,4 @@ void QCategoryDrawerV3::mouseLeft(const QModelIndex&, const QRect&)
 {
 }
 
-#include "qcategorydrawer.moc"
+#include "moc_qcategorydrawer.cpp"
