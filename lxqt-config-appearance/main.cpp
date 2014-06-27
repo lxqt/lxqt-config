@@ -46,7 +46,11 @@ int main (int argc, char **argv)
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
 
-    QSettings qtSettings(QLatin1String("Trolltech"));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
+#else
+    QSettings qtSettings(QLatin1String("Trolltech")); // Qt 4.x only (Qt 5 deprecated Trolltech.conf)
+#endif
     StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), stylePage, SLOT(initControls()));
