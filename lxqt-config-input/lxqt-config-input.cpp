@@ -35,7 +35,11 @@ int main(int argc, char** argv) {
   LxQt::Settings settings(configName);
   LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
 
-  QSettings qtSettings(QLatin1String("Trolltech"));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+  LxQt::Settings qtSettings("lxqt"); // use lxqt config file for Qt settings in Qt5.
+#else
+  QSettings qtSettings(QLatin1String("Trolltech")); // Qt 4.x only (Qt 5 deprecated Trolltech.conf)
+#endif
   MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
   dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");
   QObject::connect(&dlg, SIGNAL(reset()), mouseConfig, SLOT(reset()));
