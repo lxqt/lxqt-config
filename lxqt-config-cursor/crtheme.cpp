@@ -175,7 +175,7 @@ XcursorImages *XCursorThemeData::xcLoadImages(const QString &image, int size) co
     return XcursorLibraryLoadImages(cursorName, themeName, size);
 }
 
-QCursor XCursorThemeData::loadCursor(const QString &name, int size) const
+unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) const
 {
     if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
     // Load the cursor images
@@ -183,19 +183,28 @@ QCursor XCursorThemeData::loadCursor(const QString &name, int size) const
     if (!images) images = xcLoadImages(findAlternative(name), size);
     // Fall back to a legacy cursor
     //if (!images) return LegacyTheme::loadCursor(name);
-    if (!images) return QCursor();
+    if (!images) return 0;
     // Create the cursor
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    QCursor cursor;
-    // FIXME: creating a cursor from a native handle is no longer supported.
-#else
-    Cursor handle = XcursorImagesLoadCursor(QX11Info::display(), images);
-    QCursor cursor = QCursor(Qt::HANDLE(handle)); // QCursor takes ownership of the handle
+    unsigned long handle = (unsigned long)XcursorImagesLoadCursor(QX11Info::display(), images);
     XcursorImagesDestroy(images);
-#endif
     //setCursorName(cursor, name);
-    return cursor;
+    return handle;
 }
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
+// This is current Qt4 and X11 only
+QCursor XCursorThemeData::loadCursor(const QString &name, int size) const
+{
+    QCursor cursor;
+	// in Qt 4, we can wrap a Cursor handle easily with QCursor.
+    // da*n! creating a cursor from a native handle is no longer supported since Qt5.
+    // we need to extract the image bits directly and create QCursor based on it
+    // without using X cursor handle.
+	Cursor handle = loadCursorHandle(name, size);
+    cursor = QCursor(Qt::HANDLE(handle)); // QCursor takes ownership of the handle
+	return cursor;
+}
+#endif // Qt5
 
 QImage XCursorThemeData::loadImage(const QString &name, int size) const
 {
@@ -269,12 +278,9 @@ bool applyTheme(const XCursorThemeData &theme)
     //QX11Info x11Info;
     foreach (const QString &name, names)
     {
-        QCursor cursor = theme.loadCursor(name);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-        // FIXME: getting the native handle of cursor is no longer supported.
-#else
-        XFixesChangeCursorByName(QX11Info::display(), cursor.handle(), QFile::encodeName(name));
-#endif
+        Cursor cursor = (Cursor)theme.loadCursorHandle(name);
+        XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name));
+        // FIXME: do we need to free the cursor?
     }
     return true;
 }

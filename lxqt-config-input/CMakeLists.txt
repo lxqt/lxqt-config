@@ -74,7 +74,6 @@ add_definitions(
 )
 
 add_executable(lxqt-config-input ${lxqt-config-input_SRCS} ${lxqt-config-input_UI_H} ${lxqt-config-input_MOCS} ${DESKTOP_FILES} ${QM_FILES})
-add_dependencies(lxqt-config-input lxqt)
 target_link_libraries( lxqt-config-input  ${QTX_LIBRARIES} ${X11_LIBRARIES} ${LXQT_LIBRARIES} lxqt-config-cursor)
 
 INSTALL(TARGETS lxqt-config-input RUNTIME DESTINATION bin)
