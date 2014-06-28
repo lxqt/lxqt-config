@@ -36,7 +36,7 @@
 #include "styleconfig.h"
 #include "fontsconfig.h"
 
-#include "../lxqt-config-cursor/selectwnd.h"
+#include "../liblxqt-config-cursor/selectwnd.h"
 
 int main (int argc, char **argv)
 {

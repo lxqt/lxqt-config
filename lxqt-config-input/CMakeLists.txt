@@ -17,8 +17,8 @@ include_directories(
   ${X11_INCLUDE_DIR}
   ${LXQT_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/lxqt-config-cursor
-  ${CMAKE_BINARY_DIR}/lxqt-config-cursor
+  ${CMAKE_SOURCE_DIR}/liblxqt-config-cursor
+  ${CMAKE_BINARY_DIR}/liblxqt-config-cursor
 )
 
 set(lxqt-config-input_HDRS

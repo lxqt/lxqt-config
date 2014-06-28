@@ -13,8 +13,8 @@ include_directories (
     ${QTX_INCLUDE_DIRS}
     ${LXQT_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
-    ${CMAKE_SOURCE_DIR}/lxqt-config-cursor
-    ${CMAKE_BINARY_DIR}/lxqt-config-cursor
+    ${CMAKE_SOURCE_DIR}/liblxqt-config-cursor
+    ${CMAKE_BINARY_DIR}/liblxqt-config-cursor
     )
 
 set(H_FILES
