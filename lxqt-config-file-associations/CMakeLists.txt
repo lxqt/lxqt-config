@@ -78,7 +78,6 @@ else()
 endif()
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
-add_dependencies(${PROJECT_NAME} lxqt qtxdg)
 target_link_libraries(${PROJECT_NAME}  ${LIBRARIES} ${QTX_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

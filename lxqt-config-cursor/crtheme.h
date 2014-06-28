@@ -31,6 +31,11 @@
 #include <QString>
 #include <QStringList>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#include <xcb/xcb.h>
+#include <xcb/xproto.h>
+#endif
+
 ///////////////////////////////////////////////////////////////////////////////
 // X11 is SHIT!
 struct _XcursorImage;
@@ -75,7 +80,10 @@ public:
     /// Loads the cursor @p name, with the nominal size @p size.
     /// If the theme doesn't have the cursor @p name, it should return
     /// the default cursor from the active theme instead.
+    unsigned long loadCursorHandle(const QString &name, int size=-1) const;
+#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
     QCursor loadCursor(const QString &name, int size=-1) const;
+#endif
 
     /// Loads the cursor image @p name, with the nominal size @p size.
     /// The image should be autocropped to the smallest possible size.

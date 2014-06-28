@@ -23,6 +23,11 @@
 
 #include <QWidget>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#include <xcb/xcb.h>
+#include <xcb/xproto.h>
+#endif
+
 class XCursorThemeData;
 class PreviewCursor;
 
@@ -38,6 +43,10 @@ public:
     void clearTheme ();
 
     QSize sizeHint () const;
+    
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+	void setCursorHandle(xcb_cursor_t cursorHandle);
+#endif
 
 protected:
     void paintEvent (QPaintEvent *e);
