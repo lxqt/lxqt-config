@@ -45,6 +45,7 @@
     <Menu>
         <Name>Other settings</Name>
         <Directory>lxqt-settings-other.directory</Directory>
+        <OnlyUnallocated />
         <Include>
             <And>
                 <Category>Settings</Category>
