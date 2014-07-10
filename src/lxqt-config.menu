@@ -26,6 +26,7 @@
                 </Or>
                 <Not>
                     <Filename>lxqt-config.desktop</Filename>
+                    <Category>System</Category>
                 </Not>
             </And>
         </Include>
