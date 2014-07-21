@@ -85,6 +85,7 @@ void MouseConfig::onMouseAccelChanged(int value) {
   accel = value;
   XChangePointerControl(QX11Info::display(), True, False,
                         accel, 10, 0);
+  accept();
 }
 
 void MouseConfig::onMouseThresholdChanged(int value) {
@@ -93,6 +94,7 @@ void MouseConfig::onMouseThresholdChanged(int value) {
   threshold = 110 - value;
   XChangePointerControl(QX11Info::display(), False, True,
                         0, 10, threshold);
+  accept();
 }
 
 /* This function is taken from Gnome's control-center 2.6.0.3 (gnome-settings-mouse.c) and was modified*/
@@ -129,6 +131,7 @@ void MouseConfig::setLeftHandedMouse() {
 void MouseConfig::onMouseLeftHandedToggled(bool checked) {
   leftHanded = checked;
   setLeftHandedMouse();
+  accept();
 }
 
 void MouseConfig::onDoubleClickIntervalChanged(int value)
