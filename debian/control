@@ -1,0 +1,25 @@
+Source: lxrandr-qt
+Section: x11
+Priority: optional
+Maintainer: Julien Lavergne <gilir@ubuntu.com>
+Build-Depends: debhelper (>= 9~)
+ , cmake
+ , libqt4-dev
+ , libglib2.0-dev
+Standards-Version: 3.9.3
+
+Package: lxrandr-qt
+Architecture: any
+Depends: ${shlibs:Depends}, 
+         ${misc:Depends},
+Description: Xrandr frontend in Qt for LXDE
+ lxrandr-qt is a simple frontend for Xrandr in Qt for LXDE.
+
+Package: lxrandr-qt-dbg
+Architecture: any
+Section: debug
+Depends: lxrandr-qt (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Description: Debug package for lxrandr-qt
+ This package containes debug symbols.
