@@ -1,4 +1,4 @@
-#include "lxrandr-qt.h"
+#include "main.h"
 #include <QApplication>
 
 #include "monitorsettingsdialog.h"

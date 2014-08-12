@@ -1,24 +1,25 @@
-project(lxrandr-qt)
+project(lxqt-config-monitor)
 
 cmake_minimum_required(VERSION 2.8.6)
 
 
 set(H_FILES
-	lxrandr-qt.h  monitorsettingsdialog.h
+	main.h  monitorsettingsdialog.h monitor.h xrandr.h
 )
 
 set(MOC_FILES
-	lxrandr-qt.h  monitorsettingsdialog.h
+	main.h  monitorsettingsdialog.h monitor.h
 )
 
 set(CPP_FILES
-  lxrandr-qt.cpp
+  main.cpp
   monitorsettingsdialog.cpp
+  xrandr.cpp
 )
 
 
 set(UI_FILES
-  lxrandr.ui
+  mainwindow.ui
   monitor.ui
 )
 
@@ -105,7 +106,7 @@ install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES ${CONFIG_FILES} DESTINATION ${APP_SHARE_DIR})
 install(FILES ${DESKTOP_FILES} DESTINATION share/applications)
 install(FILES ${ICON_FILES} DESTINATION share/icons)
-install(FILES ${TRANSLATIONS_FILES} DESTINATION share/${PROJECT_NAME}/translations-qm)
+install(FILES ${TRANSLATIONS_FILES} DESTINATION ${APP_SHARE_DIR}/translations-qm)
 
 # building tarball with CPack -------------------------------------------------
 include (InstallRequiredSystemLibraries)

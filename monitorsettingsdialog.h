@@ -22,7 +22,7 @@
 #define MONITORSETTINGSDIALOG_H
 
 #include <QDialog>
-#include "ui_lxrandr.h"
+#include "ui_mainwindow.h"
 
 struct Monitor;
 
