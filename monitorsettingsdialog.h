@@ -23,21 +23,19 @@
 
 #include <QDialog>
 #include "ui_mainwindow.h"
-
-struct Monitor;
+#include "monitor.h"
 
 class MonitorSettingsDialog: public QDialog {
 Q_OBJECT
 
 public:
-  MonitorSettingsDialog();
+  MonitorSettingsDialog(Backend *backend);
   virtual ~MonitorSettingsDialog();
   virtual void accept();
 
 private:
   QString humanReadableName(Monitor* monitor);
-  bool getXRandRInfo();
-  void setXRandRInfo();
+  void setMonitorsConfig();
   void chooseMaxResolution(Monitor* monitor);
   void setupUi();
 
@@ -48,6 +46,7 @@ private Q_SLOTS:
   void onUseBoth();
   void onExternalOnly();
   void onLaptopOnly();
+  void onExtended();
   
   void onDialogButtonClicked(QAbstractButton* button);
 
@@ -56,6 +55,7 @@ private:
   QPushButton* aboutButton;
   QList<Monitor*> monitors;
   Monitor* LVDS;
+  Backend *backend;
 };
 
 #endif // MONITORSETTINGSDIALOG_H

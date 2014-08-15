@@ -8,13 +8,14 @@ set(H_FILES
 )
 
 set(MOC_FILES
-	main.h  monitorsettingsdialog.h monitor.h
+	main.h  monitorsettingsdialog.h monitor.h xrandr.h
 )
 
 set(CPP_FILES
   main.cpp
   monitorsettingsdialog.cpp
   xrandr.cpp
+  monitor.cpp
 )
 
 

@@ -35,9 +35,11 @@
 #include "xrandr.h"
 
 
-MonitorSettingsDialog::MonitorSettingsDialog():
+MonitorSettingsDialog::MonitorSettingsDialog(Backend *backend):
   QDialog(NULL, 0),
   LVDS(NULL) {
+  this->backend = backend;
+  backend->setParent(this);
   setupUi();
 }
 
@@ -59,68 +61,37 @@ QString MonitorSettingsDialog::humanReadableName(Monitor* monitor) {
   return monitor->name;
 }
 
-bool MonitorSettingsDialog::getXRandRInfo() {
-  monitors = readXRandRInfo();
-  foreach(Monitor *monitor, monitors) {
-    if(! LVDS && ( monitor->name.startsWith("LVDS") || monitor->name.startsWith("PANEL") )  ) {
-        LVDS = monitor;
-        break;
-    }
-  }
-  return true;  
-}
 
 void MonitorSettingsDialog::onResolutionChanged(int index) {
   QComboBox* combo = static_cast<QComboBox*>(sender());
-  Monitor* monitor = qvariant_cast<Monitor*>(combo->property("monitor"));
+  QHash<QString, QStringList> modeLines = qvariant_cast<QHash<QString, QStringList> >(combo->property("modeLines"));
+  QComboBox *rateCombo = qvariant_cast<QComboBox*>(combo->property("rateCombo"));
   QString mode = combo->currentText();
-  monitor->rateCombo->clear();
-  monitor->rateCombo->addItem(tr("Auto"));
-  if(monitor->modeLines.contains(mode)) {
-	  QStringList mode_lines = monitor->modeLines[mode];	  
+  rateCombo->clear();
+  rateCombo->addItem(tr("Auto"));
+  if(modeLines.contains(mode)) {
+	  QStringList mode_lines = modeLines[mode];	  
 	  foreach(QString rate, mode_lines) {
-	      monitor->rateCombo->addItem(rate);
+	      rateCombo->addItem(rate);
 	  }
-	  monitor->rateCombo->setCurrentIndex(0);
+	  rateCombo->setCurrentIndex(0);
   }
 }
 
-void MonitorSettingsDialog::setXRandRInfo() {
-  
-  QByteArray cmd = "xrandr";
-
+void MonitorSettingsDialog::setMonitorsConfig() {
+  QList<MonitorSettings*> settings;
   foreach(Monitor *monitor, monitors) {
-    cmd += " --output ";
-    cmd.append(monitor->name);
-    cmd.append(' ');
-
-    // if the monitor is turned on
-    if(monitor->enable->isChecked()) {
-      QString sel_res = monitor->resolutionCombo->currentText();
-      QString sel_rate = monitor->rateCombo->currentText();
-
-      if(sel_res == tr("Auto"))   // auto resolution
-        cmd.append("--auto");
-      else {
-        cmd.append("--mode ");
-        cmd.append(sel_res);
-
-        if(sel_rate != tr("Auto") ) { // not auto refresh rate
-          cmd.append(" --rate ");
-          cmd.append(sel_rate);
-        }
-      }
-    }
-    else    // turn off
-      cmd.append("--off");
+    MonitorSettings *s = new MonitorSettings();
+    settings.append(s);
+    s->name = monitor->name;
+    s->enabledOk = monitor->enable->isChecked();
+    s->currentMode = monitor->resolutionCombo->currentText();
+    s->currentRate = monitor->rateCombo->currentText();
   }
-  
-  
-  qDebug() << "cmd:" << cmd;
-  ;
-  QProcess process;
-  process.start(cmd);
-  process.waitForFinished();
+  backend->setMonitorsSettings(settings);
+  foreach(MonitorSettings *s, settings) {
+    delete s;
+  }
 }
 
 void MonitorSettingsDialog::chooseMaxResolution(Monitor* monitor) {
@@ -132,6 +103,7 @@ void MonitorSettingsDialog::chooseMaxResolution(Monitor* monitor) {
 void MonitorSettingsDialog::onUseBoth() {
   if(monitors.length() ==0)
     return;
+  ui.unify->setChecked(true);
   Monitor *monitor = monitors[0];
   bool ok;
   QString mode;
@@ -175,32 +147,56 @@ void MonitorSettingsDialog::onLaptopOnly() {
   accept();
 }
 
+void MonitorSettingsDialog::onExtended() {
+  foreach(Monitor *monitor, monitors) {
+    chooseMaxResolution(monitor);
+    monitor->enable->setChecked(true);
+  }
+  ui.unify->setChecked(false);
+  accept();
+}
+
 void MonitorSettingsDialog::setupUi() {
   ui.setupUi(this);
   connect(ui.useBoth, SIGNAL(clicked(bool)), SLOT(onUseBoth()));
   connect(ui.externalOnly, SIGNAL(clicked(bool)), SLOT(onExternalOnly()));
   connect(ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
+  connect(ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
 
   connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
   aboutButton = new QPushButton(ui.buttonBox);
   aboutButton->setText(tr("About"));
   ui.buttonBox->addButton(aboutButton, QDialogButtonBox::HelpRole);
 
-  getXRandRInfo();
+  //getXRandRInfo();
+
+  QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
 
   // If this is a laptop and there is an external monitor, offer quick options
-  if(LVDS && monitors.length() == 2)
+  if(LVDS && monitorsInfo.length() == 2)
     ui.tabWidget->setCurrentIndex(0);
   else {
     ui.tabWidget->removeTab(0);
   }
+  
+  if(monitorsInfo.length() == 1)
+    ui.unify->setEnabled(false);
+
 
   int i = 0;
-  foreach(Monitor *monitor, monitors) {
+  foreach(MonitorInfo *monitorInfo, monitorsInfo) {
+    Monitor *monitor = new Monitor();
+    monitor->setParent(this);
+    monitors.append(monitor);
+    monitor->name = monitorInfo->name;
+    monitor->modes = monitorInfo->modes;
+     if(! LVDS && ( monitor->name.startsWith("LVDS") || monitor->name.startsWith("PANEL") )  ) {
+        LVDS = monitor;
+    }
     QGroupBox* box = new QGroupBox(this);
     QString title = QString("Monitor %1: %2 (%3)")
         .arg(i + 1)
-        .arg(monitor->name)
+        .arg(monitorInfo->name)
         .arg(humanReadableName(monitor));
     qDebug() << "Monitor" << title;
     box->setTitle(title);
@@ -211,14 +207,15 @@ void MonitorSettingsDialog::setupUi() {
 
     monitor->enable = mui.enabled;
     monitor->resolutionCombo = mui.resolution;
-    monitor->resolutionCombo->setProperty("monitor", qVariantFromValue<Monitor*>(monitor));
+    mui.resolution->setProperty("modeLines", qVariantFromValue<QHash<QString, QStringList>   >(monitorInfo->modeLines));
+    mui.resolution->setProperty("rateCombo", qVariantFromValue<QComboBox*>(mui.rate));
     monitor->rateCombo = mui.rate;
 
     // turn off screen is not allowed since there should be at least one monitor available.
-    if(monitors.length() == 1)
+    if(monitorsInfo.length() == 1)
       monitor->enable->setEnabled(false);
 
-    if(monitor->currentMode >= 0)
+    if(monitorInfo->enabledOk)
       monitor->enable->setChecked(true);
 
     connect(monitor->resolutionCombo, SIGNAL(currentIndexChanged(int)), SLOT(onResolutionChanged(int)));
@@ -227,20 +224,21 @@ void MonitorSettingsDialog::setupUi() {
     foreach(QString _mode_line, monitor->modes) {
       monitor->resolutionCombo->addItem(_mode_line);
     }
-    monitor->resolutionCombo->setCurrentIndex(monitor->currentMode + 1);
-    monitor->rateCombo->setCurrentIndex(monitor->currentRate + 1);
+    monitor->resolutionCombo->setCurrentIndex( monitor->resolutionCombo->findText(monitorInfo->currentMode) );
+    monitor->rateCombo->setCurrentIndex( monitor->rateCombo->findText(monitorInfo->currentRate) );
+    delete monitorInfo;
     ++i;
   }
 }
 
 void MonitorSettingsDialog::accept() {
-  setXRandRInfo();
+  setMonitorsConfig();
   QDialog::accept();
 }
 
 void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
   if(ui.buttonBox->buttonRole(button) == QDialogButtonBox::ApplyRole)
-    setXRandRInfo();
+    setMonitorsConfig();
   else if(button == aboutButton) {
     // about dialog
     QMessageBox::about(this, tr("About"), tr("LXQt-config-monitor\n\nMonitor configuration tool for LXQt."));

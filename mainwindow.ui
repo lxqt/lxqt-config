@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>396</width>
-    <height>258</height>
+    <width>429</width>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,6 +28,13 @@
         <widget class="QPushButton" name="useBoth">
          <property name="text">
           <string>Show the same screen on both laptop LCD and external monitor</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="extended">
+         <property name="text">
+          <string>Extended view</string>
          </property>
         </widget>
        </item>
@@ -82,8 +89,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>366</width>
-            <height>158</height>
+            <width>387</width>
+            <height>160</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="monitorLayout">
@@ -102,6 +109,16 @@
            </item>
           </layout>
          </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="unify">
+         <property name="text">
+          <string>Unify</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
       </layout>

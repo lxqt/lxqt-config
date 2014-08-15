@@ -2,11 +2,12 @@
 #include <QProcess>
 #include <QDebug>
 #include <QRegExp>
+#include <QObject>
 
-QList<Monitor*> readXRandRInfo()
+QList<MonitorInfo*> XRandRBackend::getMonitorsInfo()
 {
   // execute xrandr command and read its output
-  QList<Monitor*> monitors;
+  QList<MonitorInfo*> monitors;
   QProcess process;
   // set locale to "C" guarantee English output of xrandr
   process.processEnvironment().insert("LC_ALL", "c");
@@ -30,9 +31,10 @@ QList<Monitor*> readXRandRInfo()
       QString input = regex.cap(0);
       // New monitor found
       qDebug() << input;
-      Monitor *monitor = new Monitor();
-      monitor->currentMode = monitor->currentRate = -1;
-      monitor->preferredMode = monitor->preferredRate = -1;
+      MonitorInfo *monitor = new MonitorInfo();
+      monitor->currentMode = monitor->currentRate = "";
+      monitor->preferredMode = monitor->preferredRate = "";
+      monitor->enabledOk = false;
       int imode = -1;
       monitors.append(monitor);
       // Get monitor name
@@ -64,16 +66,57 @@ QList<Monitor*> readXRandRInfo()
             qDebug() << "Rate:" << rate;
           }
           if(rate.contains("*")) { // current mode
-            monitor->currentMode = imode;
-            monitor->currentRate = irate;
+            monitor->currentMode = monitor->modes[imode];
+            monitor->currentRate = monitor->modeLines[mode][irate];
+            monitor->enabledOk = true;
           }
           if(rate.contains("+")) { // preferred mode
-            monitor->preferredMode = imode;
-            monitor->preferredRate = irate;
+            monitor->preferredMode = monitor->modes[imode];
+            monitor->preferredRate = monitor->modeLines[mode][irate];
           }
         }
       }
     }  
   }  
   return monitors;  
+}
+
+
+bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) {
+  
+  QByteArray cmd = "xrandr";
+
+  foreach(MonitorSettings *monitor, monitors) {
+    cmd += " --output ";
+    cmd.append(monitor->name);
+    cmd.append(' ');
+
+    // if the monitor is turned on
+    if(monitor->enabledOk) {
+      QString sel_res = monitor->currentMode;
+      QString sel_rate = monitor->currentRate;
+
+      if(sel_res == QObject::tr("Auto"))   // auto resolution
+        cmd.append("--auto");
+      else {
+        cmd.append("--mode ");
+        cmd.append(sel_res);
+
+        if(sel_rate != QObject::tr("Auto") ) { // not auto refresh rate
+          cmd.append(" --rate ");
+          cmd.append(sel_rate);
+        }
+      }
+    }
+    else    // turn off
+      cmd.append("--off");
+  }
+  
+  
+  qDebug() << "cmd:" << cmd;
+  ;
+  QProcess process;
+  process.start(cmd);
+  process.waitForFinished();
+  return process.exitCode() == 0;
 }
