@@ -24,6 +24,10 @@ set(UI_FILES
   monitor.ui
 )
 
+set(DESKTOP_FILES
+         ${PROJECT_NAME}.desktop
+)
+
 ######################################
 
 

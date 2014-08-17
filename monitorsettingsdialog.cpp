@@ -1,5 +1,5 @@
 /*
-    <one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
     Copyright (C) 2013  <copyright holder> <email>
 
     This program is free software; you can redistribute it and/or modify
@@ -61,6 +61,15 @@ QString MonitorSettingsDialog::humanReadableName(Monitor* monitor) {
   return monitor->name;
 }
 
+void MonitorSettingsDialog::onUnifyChanged(int index) {
+  foreach(Monitor *monitor, monitors) {
+    monitor->positionCombo->setEnabled( ! ui.unify->isChecked());
+    monitor->relativeToOutputCombo->setEnabled( ! ui.unify->isChecked());
+    monitor->positionLabel->setEnabled( ! ui.unify->isChecked());
+  }
+  ui.primaryCombo->setEnabled( ! ui.unify->isChecked());
+  ui.primaryLabel->setEnabled( ! ui.unify->isChecked());
+}
 
 void MonitorSettingsDialog::onResolutionChanged(int index) {
   QComboBox* combo = static_cast<QComboBox*>(sender());
@@ -87,6 +96,15 @@ void MonitorSettingsDialog::setMonitorsConfig() {
     s->enabledOk = monitor->enable->isChecked();
     s->currentMode = monitor->resolutionCombo->currentText();
     s->currentRate = monitor->rateCombo->currentText();
+    s->position = (MonitorSettings::Position)monitor->positionCombo->currentData().toInt();
+    s->positionRelativeToOutput = monitor->relativeToOutputCombo->currentText();
+    if(ui.primaryCombo->currentText()==monitor->name)
+      s->primaryOk = true;
+  }
+  if(ui.unify->isChecked()) {
+    foreach(MonitorSettings *s, settings) {
+      s->position = MonitorSettings::None;
+    }
   }
   backend->setMonitorsSettings(settings);
   foreach(MonitorSettings *s, settings) {
@@ -148,11 +166,19 @@ void MonitorSettingsDialog::onLaptopOnly() {
 }
 
 void MonitorSettingsDialog::onExtended() {
+  ui.unify->setChecked(false);
+  int i = 0;
   foreach(Monitor *monitor, monitors) {
     chooseMaxResolution(monitor);
     monitor->enable->setChecked(true);
+    if(i==0) {
+      monitor->positionCombo->setCurrentIndex(0);
+    } else {
+      monitor->positionCombo->setCurrentIndex(1);
+      monitor->relativeToOutputCombo->setCurrentIndex(i);
+    }
+    i++;
   }
-  ui.unify->setChecked(false);
   accept();
 }
 
@@ -162,27 +188,24 @@ void MonitorSettingsDialog::setupUi() {
   connect(ui.externalOnly, SIGNAL(clicked(bool)), SLOT(onExternalOnly()));
   connect(ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
   connect(ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
+  connect(ui.unify, SIGNAL(stateChanged(int)), SLOT(onUnifyChanged(int)));
 
   connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
   aboutButton = new QPushButton(ui.buttonBox);
   aboutButton->setText(tr("About"));
   ui.buttonBox->addButton(aboutButton, QDialogButtonBox::HelpRole);
 
-  //getXRandRInfo();
-
+  // Get monitors information
   QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
 
-  // If this is a laptop and there is an external monitor, offer quick options
-  if(LVDS && monitorsInfo.length() == 2)
-    ui.tabWidget->setCurrentIndex(0);
-  else {
-    ui.tabWidget->removeTab(0);
-  }
-  
   if(monitorsInfo.length() == 1)
     ui.unify->setEnabled(false);
 
-
+  QStringList outputs;
+  outputs.append("");
+  foreach(MonitorInfo *monitorInfo, monitorsInfo) {
+    outputs.append(monitorInfo->name);
+  }
   int i = 0;
   foreach(MonitorInfo *monitorInfo, monitorsInfo) {
     Monitor *monitor = new Monitor();
@@ -210,6 +233,22 @@ void MonitorSettingsDialog::setupUi() {
     mui.resolution->setProperty("modeLines", qVariantFromValue<QHash<QString, QStringList>   >(monitorInfo->modeLines));
     mui.resolution->setProperty("rateCombo", qVariantFromValue<QComboBox*>(mui.rate));
     monitor->rateCombo = mui.rate;
+    monitor->positionCombo = mui.positionCombo;
+    monitor->relativeToOutputCombo = mui.relativeToOutputCombo;
+    monitor->positionLabel = mui.positionLabel;
+    mui.positionCombo->addItem(tr(""), qVariantFromValue<int>(MonitorSettings::None));
+    mui.positionCombo->addItem(tr("Left of"), qVariantFromValue<int>(MonitorSettings::Left));
+    mui.positionCombo->addItem(tr("Right of"), qVariantFromValue<int>(MonitorSettings::Right));
+    mui.positionCombo->addItem(tr("Above of"), qVariantFromValue<int>(MonitorSettings::Above));
+    mui.positionCombo->addItem(tr("Below of"), qVariantFromValue<int>(MonitorSettings::Bellow));
+    QStringList _outputs = outputs;
+    _outputs.removeOne(monitor->name);
+    mui.relativeToOutputCombo->addItems(_outputs);
+    if(monitorsInfo.length() == 1) {
+      mui.positionCombo->setEnabled(false);
+      mui.relativeToOutputCombo->setEnabled(false);
+      mui.positionLabel->setEnabled(false);
+    }
 
     // turn off screen is not allowed since there should be at least one monitor available.
     if(monitorsInfo.length() == 1)
@@ -229,6 +268,25 @@ void MonitorSettingsDialog::setupUi() {
     delete monitorInfo;
     ++i;
   }
+  
+  // If this is a laptop and there is an external monitor, offer quick options
+  if(monitors.length() == 2) {
+    ui.tabWidget->setCurrentIndex(0);
+    // If there is only two monitors,offer quick options
+    if(! LVDS) {
+      ui.useBoth->setText(tr("Show the same screen on both"));
+      ui.externalOnly->setText(tr("Turn off first monitor and use second monitor only"));
+      ui.laptopOnly->setText(tr("Turn off second monitor and use first monitor only"));
+      LVDS = monitors[0];
+    }
+  } else {
+    ui.tabWidget->removeTab(0);
+  }
+  // Add outputs to primary ComboBox
+  foreach(QString output, outputs) {
+    ui.primaryCombo->addItem(output);
+  }
+  onUnifyChanged(1);
 }
 
 void MonitorSettingsDialog::accept() {

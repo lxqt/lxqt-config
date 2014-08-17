@@ -1,3 +1,21 @@
+/*
+    Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
 #include "xrandr.h"
 #include <QProcess>
 #include <QDebug>
@@ -12,6 +30,7 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo()
   // set locale to "C" guarantee English output of xrandr
   process.processEnvironment().insert("LC_ALL", "c");
   process.start("xrandr");
+  // process.start("cat testing.txt");
   process.waitForFinished(-1);
   if(process.exitCode() != 0)
     return monitors;
@@ -25,7 +44,7 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo()
 
   //Get output of xrandr for each monitor
   int index = 0;
-  while( index = regex.indexIn(output.constData(), index)>=0 ) {
+  while( (index = regex.indexIn(output.constData(), index))>=0 ) {
     index += regex.matchedLength();
     if(regex.matchedLength()>0) {
       QString input = regex.cap(0);
@@ -84,6 +103,14 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo()
 
 bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) {
   
+  QMap<MonitorSettings::Position,QString> positions;
+  
+  positions[MonitorSettings::Left] = "--left-of";
+  positions[MonitorSettings::Right] = "--right-of";
+  positions[MonitorSettings::Above] = "--above";
+  positions[MonitorSettings::Bellow] = "--bellow";
+  
+  
   QByteArray cmd = "xrandr";
 
   foreach(MonitorSettings *monitor, monitors) {
@@ -106,6 +133,14 @@ bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) 
           cmd.append(" --rate ");
           cmd.append(sel_rate);
         }
+        if(monitor->position!=MonitorSettings::None) {
+          cmd.append(" ");
+          cmd.append(positions[monitor->position]);
+          cmd.append(" ");
+          cmd.append(monitor->positionRelativeToOutput);
+        }
+        if(monitor->primaryOk)
+          cmd.append(" --primary");
       }
     }
     else    // turn off
@@ -114,7 +149,7 @@ bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) 
   
   
   qDebug() << "cmd:" << cmd;
-  ;
+  // return true;
   QProcess process;
   process.start(cmd);
   process.waitForFinished();

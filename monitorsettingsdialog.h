@@ -1,5 +1,5 @@
 /*
-    <one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
     Copyright (C) 2013  <copyright holder> <email>
 
     This program is free software; you can redistribute it and/or modify
@@ -41,7 +41,8 @@ private:
 
 private Q_SLOTS:
   void onResolutionChanged(int index);
-  
+  void onUnifyChanged(int index);
+    
   // quick options
   void onUseBoth();
   void onExternalOnly();
