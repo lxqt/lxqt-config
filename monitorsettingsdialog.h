@@ -24,6 +24,8 @@
 #include <QDialog>
 #include "ui_mainwindow.h"
 #include "monitor.h"
+#include <QProgressDialog>
+#include <QTimer>
 
 class MonitorSettingsDialog: public QDialog {
 Q_OBJECT
@@ -42,6 +44,10 @@ private:
 private Q_SLOTS:
   void onResolutionChanged(int index);
   void onUnifyChanged(int index);
+  
+  // Timeout dialog signals
+  void onCancelSettings();
+  void onTimeout();
     
   // quick options
   void onUseBoth();
@@ -57,6 +63,11 @@ private:
   QList<Monitor*> monitors;
   Monitor* LVDS;
   Backend *backend;
+  // TimeoutDialog data
+  QProgressDialog *timeoutDialog;
+  QTimer *timer;
+  QList<MonitorInfo*> timeoutSettings;
+  void deleteTimeoutData();
 };
 
 #endif // MONITORSETTINGSDIALOG_H

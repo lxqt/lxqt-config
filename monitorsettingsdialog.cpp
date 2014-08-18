@@ -38,6 +38,8 @@
 MonitorSettingsDialog::MonitorSettingsDialog(Backend *backend):
   QDialog(NULL, 0),
   LVDS(NULL) {
+  timeoutDialog = NULL;
+  timer = NULL;
   this->backend = backend;
   backend->setParent(this);
   setupUi();
@@ -87,7 +89,52 @@ void MonitorSettingsDialog::onResolutionChanged(int index) {
   }
 }
 
+
+void MonitorSettingsDialog::deleteTimeoutData() {
+  if(timer!=NULL) {
+    timer->stop();
+    delete timer;
+    timer = NULL;
+  }   
+  if(timeoutDialog!=NULL) {
+   delete timeoutDialog;
+   timeoutDialog = NULL;
+  }
+  foreach(MonitorInfo *monitorInfo, timeoutSettings) {
+    delete monitorInfo;
+  }
+  timeoutSettings.clear();
+}
+
+void MonitorSettingsDialog::onCancelSettings() {
+  deleteTimeoutData();
+}
+
+void MonitorSettingsDialog::onTimeout() {
+  int time = timeoutDialog->value()+1;
+  if(time>=10) { // If time is finished, settings are restored.
+    timer->stop();
+    QList<MonitorSettings*> settings;
+    foreach(MonitorInfo *monitorInfo, timeoutSettings) {
+      settings.append((MonitorSettings*)monitorInfo);
+    }
+    backend->setMonitorsSettings(settings);
+    deleteTimeoutData();
+  }
+  else
+    timeoutDialog->setValue(time);
+}
+
 void MonitorSettingsDialog::setMonitorsConfig() {
+  deleteTimeoutData();
+  timeoutSettings = backend->getMonitorsInfo();
+  // Show timeout dialog
+  timeoutDialog = new QProgressDialog(tr("OK?"), tr("Yes"), 0, 10);
+  connect(timeoutDialog, SIGNAL(canceled()), this, SLOT(onCancelSettings()));
+  timer = new QTimer(this);
+  connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
+  timer->start(1000);
+  // Build list of monitor and their settings
   QList<MonitorSettings*> settings;
   foreach(Monitor *monitor, monitors) {
     MonitorSettings *s = new MonitorSettings();
