@@ -24,9 +24,10 @@
 #include <QLabel>
 #include <QComboBox>
 #include <QProcess>
-
 #include <QGroupBox>
 #include <QMessageBox>
+#include <QFile>
+#include <QDir>
 #include "ui_monitor.h"
 
 #include <QDebug>
@@ -125,15 +126,7 @@ void MonitorSettingsDialog::onTimeout() {
     timeoutDialog->setValue(time);
 }
 
-void MonitorSettingsDialog::setMonitorsConfig() {
-  deleteTimeoutData();
-  timeoutSettings = backend->getMonitorsInfo();
-  // Show timeout dialog
-  timeoutDialog = new QProgressDialog(tr("OK?"), tr("Yes"), 0, 10);
-  connect(timeoutDialog, SIGNAL(canceled()), this, SLOT(onCancelSettings()));
-  timer = new QTimer(this);
-  connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
-  timer->start(1000);
+QList<MonitorSettings*> MonitorSettingsDialog::getMonitorsSettings() {
   // Build list of monitor and their settings
   QList<MonitorSettings*> settings;
   foreach(Monitor *monitor, monitors) {
@@ -153,6 +146,20 @@ void MonitorSettingsDialog::setMonitorsConfig() {
       s->position = MonitorSettings::None;
     }
   }
+  return settings;
+}
+
+void MonitorSettingsDialog::setMonitorsConfig() {
+  deleteTimeoutData();
+  timeoutSettings = backend->getMonitorsInfo();
+  // Show timeout dialog
+  timeoutDialog = new QProgressDialog(tr("OK?"), tr("Yes"), 0, 10);
+  connect(timeoutDialog, SIGNAL(canceled()), this, SLOT(onCancelSettings()));
+  timer = new QTimer(this);
+  connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
+  timer->start(1000);
+  // Build list of monitor and their settings
+  QList<MonitorSettings*> settings = getMonitorsSettings();
   backend->setMonitorsSettings(settings);
   foreach(MonitorSettings *s, settings) {
     delete s;
@@ -341,10 +348,32 @@ void MonitorSettingsDialog::accept() {
   QDialog::accept();
 }
 
+
 void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
-  if(ui.buttonBox->buttonRole(button) == QDialogButtonBox::ApplyRole)
+  if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
     setMonitorsConfig();
-  else if(button == aboutButton) {
+   } else if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Save) {
+     // Save config and exit
+     QList<MonitorSettings*> settings = getMonitorsSettings();
+     QString cmd = backend->getCommand(settings);
+     foreach(MonitorSettings *s, settings) {
+       delete s;
+     }
+     QString desktop = QString("[Desktop Entry]\n"
+       "Type=Application\n"
+       "Name=LXQt-config-monitor autostart\n"
+       "Comment=Autostart monitor settings for LXQt-config-monitor\n"
+       "Exec=%1\n"
+       "OnlyShowIn=LXQt\n").arg(cmd);
+     QFile file(QDir::homePath() + "/.config/autostart/lxqt-config-monitor-autostart.desktop");
+     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        return;
+     QTextStream out(&file);
+     out << desktop;
+     out.flush();
+     file.close();
+     QDialog::accept();
+   } else if(button == aboutButton) {
     // about dialog
     QMessageBox::about(this, tr("About"), tr("LXQt-config-monitor\n\nMonitor configuration tool for LXQt."));
   }

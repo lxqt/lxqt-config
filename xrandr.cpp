@@ -101,8 +101,20 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo()
 }
 
 
+
+
 bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) {
-  
+  QString cmd = getCommand(monitors);
+  QProcess process;
+  process.start(cmd);
+  process.waitForFinished();
+  return process.exitCode() == 0;
+}
+
+
+
+
+QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {  
   QMap<MonitorSettings::Position,QString> positions;
   
   positions[MonitorSettings::Left] = "--left-of";
@@ -149,9 +161,5 @@ bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) 
   
   
   qDebug() << "cmd:" << cmd;
-  // return true;
-  QProcess process;
-  process.start(cmd);
-  process.waitForFinished();
-  return process.exitCode() == 0;
+  return cmd;
 }

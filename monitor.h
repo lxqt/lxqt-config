@@ -78,6 +78,7 @@ class Backend: public QObject {
 public:
   virtual QList<MonitorInfo*> getMonitorsInfo() = 0;
   virtual bool setMonitorsSettings(const QList<MonitorSettings*> monitors) = 0;
+  virtual QString getCommand(const QList<MonitorSettings*> monitors) = 0;
 };
 
 #endif // _MONITOR_H_

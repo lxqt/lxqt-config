@@ -158,7 +158,7 @@
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::Apply|QDialogButtonBox::Close|QDialogButtonBox::Save</set>
      </property>
     </widget>
    </item>
@@ -179,22 +179,6 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>257</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>MonitorSettingsDialog</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>210</x>
-     <y>242</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>315</x>
-     <y>-14</y>
     </hint>
    </hints>
   </connection>

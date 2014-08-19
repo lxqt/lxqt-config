@@ -30,6 +30,7 @@ public:
   QList<MonitorInfo*> getMonitorsInfo();
   // Set changes in xrandr
   bool setMonitorsSettings(const QList<MonitorSettings*> monitors);
+  QString getCommand(const QList<MonitorSettings*> monitors);
 };
 
 #endif

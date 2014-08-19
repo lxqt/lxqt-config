@@ -40,6 +40,9 @@ private:
   void setMonitorsConfig();
   void chooseMaxResolution(Monitor* monitor);
   void setupUi();
+  void deleteTimeoutData(); // Used to delete data from TimeoutDialog
+  QList<MonitorSettings*> getMonitorsSettings();
+
 
 private Q_SLOTS:
   void onResolutionChanged(int index);
@@ -67,7 +70,6 @@ private:
   QProgressDialog *timeoutDialog;
   QTimer *timer;
   QList<MonitorInfo*> timeoutSettings;
-  void deleteTimeoutData();
 };
 
 #endif // MONITORSETTINGSDIALOG_H
