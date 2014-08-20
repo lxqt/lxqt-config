@@ -32,6 +32,7 @@
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 #include <QX11Info>
+#include <QWindow>
 #endif
 
 namespace {
@@ -136,7 +137,8 @@ PreviewWidget::~PreviewWidget()
 // So we have to do it ourselves. I really hate Qt 5!
 void PreviewWidget::setCursorHandle(xcb_cursor_t cursorHandle)
 {
-    xcb_change_window_attributes(QX11Info::connection(), winId(), XCB_CW_CURSOR, &cursorHandle);
+    WId wid = nativeParentWidget()->windowHandle()->winId();
+    xcb_change_window_attributes(QX11Info::connection(), wid, XCB_CW_CURSOR, &cursorHandle);
     xcb_flush(QX11Info::connection());
 }
 
@@ -213,6 +215,13 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
             if (c != mCurrent)
             {
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+                // NOTE: we have to set the Qt cursor value to something other than Qt::ArrowCursor
+                // Otherwise, though we set the xcursor handle to the underlying window, Qt still
+                // thinks that the current cursor is Qt::ArrowCursor and will not restore the cursor
+                // later when we call setCursor(Qt::ArrowCursor). So, we set it to BlankCursor to
+                // cheat Qt so it knows that the current cursor is not Qt::ArrowCursor.
+                // This is a dirty hack, but without this, Qt cannot restore Qt::ArrowCursor later.
+                setCursor(Qt::BlankCursor);
                 setCursorHandle(*c);
 #else
                 setCursor(*c);
