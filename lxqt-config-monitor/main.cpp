@@ -18,13 +18,15 @@
 
 
 #include "main.h"
-#include <QApplication>
-
+#include <LXQt/Application>
+#include "lxqttranslate.h"
 #include "monitorsettingsdialog.h"
 #include "xrandr.h"
 
 int main(int argc, char** argv) {
-    QApplication app(argc, argv);
+    LxQt::Application app(argc, argv);
+    TRANSLATE_APP;
+
     XRandRBackend *xrandr = new XRandRBackend();
     MonitorSettingsDialog dlg(xrandr);
     dlg.setWindowIcon(QIcon(QIcon::fromTheme("display")));

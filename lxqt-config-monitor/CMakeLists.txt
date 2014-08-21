@@ -11,7 +11,6 @@ include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
     ${QTX_INCLUDE_DIRS}
     ${LXQT_INCLUDE_DIRS}
-    ${QTXDG_INCLUDE_DIRS}
     )
 
 set(H_FILES
@@ -55,7 +54,7 @@ lxqt_translate_desktop(DESKTOP_FILES
 #************************************************
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
-target_link_libraries(${PROJECT_NAME} ${QTX_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${QTX_LIBRARIES} ${LXQT_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
