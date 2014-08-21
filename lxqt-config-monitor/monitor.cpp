@@ -26,6 +26,7 @@ Monitor::Monitor(QObject *parent) : QObject(parent) {
 MonitorSettings::MonitorSettings(QObject *parent): QObject(parent) {
   position = None;
   primaryOk = false;
+  enabledOk = false;
 }
 
 MonitorInfo::MonitorInfo(QObject *parent): MonitorSettings(parent) {
