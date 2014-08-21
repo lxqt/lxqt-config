@@ -4,8 +4,8 @@ Name=Monitor settings
 GenericName=Monitor settings
 Comment=Configure monitors
 Exec=lxqt-config-monitor
-Icon=display
-Categories=Qt;Settings;HardwareSettings;DesktopSettings;LXQt;
-OnlyShowIn=LXDE;LXQt;
+Icon=preferences-desktop-display
+Categories=Settings;DesktopSettings;Qt;LXQt;;HardwareSettings;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

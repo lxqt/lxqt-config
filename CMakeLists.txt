@@ -40,6 +40,7 @@ add_subdirectory(liblxqt-config-cursor)
 add_subdirectory(lxqt-config-input)
 add_subdirectory(lxqt-config-file-associations)
 add_subdirectory(lxqt-config-appearance)
+add_subdirectory(lxqt-config-monitor)
 
 if(NOT USE_QT5) # qtconfig only supports Qt4
     add_subdirectory(lxqt-config-qtconfig)
