@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>429</width>
+    <width>483</width>
     <height>310</height>
    </rect>
   </property>
@@ -89,8 +89,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>387</width>
-            <height>154</height>
+            <width>439</width>
+            <height>143</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="monitorLayout">
@@ -116,10 +116,7 @@
          <item>
           <widget class="QCheckBox" name="unify">
            <property name="text">
-            <string>Unify</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
+            <string>Unify all monitors</string>
            </property>
           </widget>
          </item>
@@ -139,12 +136,18 @@
          <item>
           <widget class="QLabel" name="primaryLabel">
            <property name="text">
-            <string>Primary:</string>
+            <string>Primary monitor:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="primaryCombo"/>
+          <widget class="QComboBox" name="primaryCombo">
+           <item>
+            <property name="text">
+             <string>None</string>
+            </property>
+           </item>
+          </widget>
          </item>
         </layout>
        </item>
@@ -173,12 +176,44 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>320</x>
-     <y>253</y>
+     <x>329</x>
+     <y>300</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
      <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>unify</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>primaryLabel</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>233</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>292</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>unify</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>primaryCombo</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>246</y>
     </hint>
    </hints>
   </connection>

@@ -20,36 +20,16 @@
 #ifndef _MONITOR_H_
 #define _MONITOR_H_
 
-#include <QComboBox>
-#include <QCheckBox>
 #include <QStringList>
 #include <QHash>
 #include <QList>
-#include <QLabel>
-
-// Monitor info
-class Monitor : public QObject {
-Q_OBJECT
-
-public:
-  Monitor(QObject *parent = 0);
-  QString name;
-  QStringList modes; // Suported modes in order
-
-  QCheckBox* enable;
-  QComboBox* resolutionCombo;
-  QComboBox* rateCombo;
-  QComboBox* positionCombo;
-  QComboBox* relativeToOutputCombo;
-  QLabel* positionLabel;
-};
-
+#include <QRect>
 
 //Settings to pass to backend
 class MonitorSettings: public QObject {
-	Q_OBJECT
+  Q_OBJECT
 public:
-  MonitorSettings(QObject *parent = 0);
+  MonitorSettings(QObject* parent = 0);
   QString name;
   QString currentMode;
   QString currentRate;
@@ -57,12 +37,12 @@ public:
   QString brightness; // not used yet
   int xPos; // not used yet
   int yPos; // not used yet
-  bool enabledOk; 
-  enum Position {None, Left, Right, Above, Bellow};  
+  bool enabledOk;
+  enum Position {None = 0, Left, Right, Above, Bellow};
   Position position;
   QString positionRelativeToOutput;
   bool primaryOk;
-  
+
   QSize currentSize();
   QRect geometry();
 };
@@ -70,23 +50,26 @@ public:
 
 // Monitor information from backend
 class MonitorInfo: public MonitorSettings {
-	Q_OBJECT
+  Q_OBJECT
 public:
-  MonitorInfo(QObject *parent = 0);
+  MonitorInfo(QObject* parent = 0);
   QStringList modes; // Modes of this monitor in order
   QHash<QString, QStringList> modeLines; // Rates suported by each mode
   QString preferredMode;
   QString preferredRate;
   QByteArray edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
+  
+  QString humanReadableName();
 };
 
 
-class Backend: public QObject {
-	Q_OBJECT
+class MonitorSettingsBackend: public QObject {
+  Q_OBJECT
 public:
   virtual QList<MonitorInfo*> getMonitorsInfo() = 0;
   virtual bool setMonitorsSettings(const QList<MonitorSettings*> monitors) = 0;
   virtual QString getCommand(const QList<MonitorSettings*> monitors) = 0;
+  virtual bool isUnified(const QList<MonitorInfo*> monitors);
 };
 
 #endif // _MONITOR_H_

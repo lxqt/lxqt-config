@@ -14,7 +14,7 @@ include_directories (
     )
 
 set(H_FILES
-	main.h  monitorsettingsdialog.h monitor.h xrandr.h
+	main.h  monitorsettingsdialog.h monitor.h monitorwidget.h xrandr.h
 )
 
 set(CPP_FILES
@@ -22,6 +22,7 @@ set(CPP_FILES
     monitorsettingsdialog.cpp
     xrandr.cpp
     monitor.cpp
+    monitorwidget.cpp
 )
 
 set(UI_FILES

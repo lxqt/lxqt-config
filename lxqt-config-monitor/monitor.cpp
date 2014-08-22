@@ -18,18 +18,35 @@
 
 #include "monitor.h"
 
-Monitor::Monitor(QObject *parent) : QObject(parent) {
-  enable = NULL;
-  resolutionCombo = rateCombo = NULL;
+bool MonitorSettingsBackend::isUnified(const QList< MonitorInfo* > monitors) {
+  Q_FOREACH(MonitorInfo * monitor, monitors) {
+    if(monitor->position != MonitorSettings::None)
+      return false;
+  }
+  return true;
 }
 
-MonitorSettings::MonitorSettings(QObject *parent): QObject(parent) {
+MonitorSettings::MonitorSettings(QObject* parent): QObject(parent) {
   position = None;
   primaryOk = false;
   enabledOk = false;
 }
 
-MonitorInfo::MonitorInfo(QObject *parent): MonitorSettings(parent) {
+MonitorInfo::MonitorInfo(QObject* parent): MonitorSettings(parent) {
+}
+
+QString MonitorInfo::humanReadableName() {
+  if(name == "LVDS")
+    return tr("Laptop LCD Monitor");
+  else if(name.startsWith("VGA") || name.startsWith("Analog"))
+    return /* FIXME LVDS ? tr("External VGA Monitor") : */ tr("VGA Monitor");
+  else if(name.startsWith("DVI") || name.startsWith("TMDS") || name.startsWith("Digital") || name.startsWith("LVDS"))
+    return /* FIXME LVDS ? tr("External DVI Monitor") : */ tr("DVI Monitor");
+  else if(name.startsWith("TV") || name.startsWith("S-Video"))
+    return tr("TV");
+  else if(name == "default")
+    return tr("Default Monitor");
+  return name;
 }
 
 QSize MonitorSettings::currentSize() {

@@ -24,21 +24,22 @@
 #include <QDialog>
 #include "ui_mainwindow.h"
 #include "monitor.h"
+#include "monitorwidget.h"
 #include <QProgressDialog>
 #include <QTimer>
 
 class MonitorSettingsDialog: public QDialog {
-Q_OBJECT
+  Q_OBJECT
 
 public:
-  MonitorSettingsDialog(Backend *backend);
+  MonitorSettingsDialog(MonitorSettingsBackend* backend);
   virtual ~MonitorSettingsDialog();
   virtual void accept();
 
 private:
-  QString humanReadableName(Monitor* monitor);
+  QString humanReadableName(MonitorWidget* monitor);
   void setMonitorsConfig();
-  void chooseMaxResolution(Monitor* monitor);
+  void chooseMaxResolution(MonitorWidget* monitor);
   void setupUi();
   void deleteTimeoutData(); // Used to delete data from TimeoutDialog
   QList<MonitorSettings*> getMonitorsSettings();
@@ -46,29 +47,27 @@ private:
 
 private Q_SLOTS:
   void onResolutionChanged(int index);
-  void onUnifyChanged(int index);
-  
+
   // Timeout dialog signals
   void onCancelSettings();
   void onTimeout();
-    
+
   // quick options
   void onUseBoth();
   void onExternalOnly();
   void onLaptopOnly();
   void onExtended();
-  
+
   void onDialogButtonClicked(QAbstractButton* button);
 
 private:
   Ui::MonitorSettingsDialog ui;
-  QPushButton* aboutButton;
-  QList<Monitor*> monitors;
-  Monitor* LVDS;
-  Backend *backend;
+  QList<MonitorWidget*> monitors;
+  MonitorWidget* LVDS;
+  MonitorSettingsBackend* backend;
   // TimeoutDialog data
-  QProgressDialog *timeoutDialog;
-  QTimer *timer;
+  QProgressDialog* timeoutDialog;
+  QTimer* timer;
   QList<MonitorInfo*> timeoutSettings;
 };
 

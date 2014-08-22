@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
+    Copyright (C) 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,25 +17,34 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef _XRANDR_H_
-#define _XRANDR_H_
 
-#include "monitor.h"
+#ifndef _MONITORWIDGET_H_
+#define _MONITORWIDGET_H_
+
+#include <QGroupBox>
+#include <QStringList>
+#include <QHash>
 #include <QList>
+#include "ui_monitor.h"
 
+class MonitorInfo;
+class MonitorSettings;
 
-class XRandRBackend: public MonitorSettingsBackend {
+// Monitor info
+class MonitorWidget : public QGroupBox {
   Q_OBJECT
-public:
-  // Execute xrandr command and read its output
-  QList<MonitorInfo*> getMonitorsInfo();
-  // Set changes in xrandr
-  bool setMonitorsSettings(const QList<MonitorSettings*> monitors);
-  QString getCommand(const QList<MonitorSettings*> monitors);
 
-private:
-  void resolvePositions(QList<MonitorInfo*>& monitors);
-  MonitorInfo* findAdjacentMonitor(QList< MonitorInfo* >& monitors, MonitorInfo* monitor, MonitorSettings::Position& pos);
+public:
+  MonitorWidget(MonitorInfo* monitor, const QList< MonitorInfo* > monitorsInfo, QWidget* parent = 0);
+  MonitorSettings* getSettings();
+  void chooseMaxResolution();
+  void enableMonitor(bool enable);
+
+  MonitorInfo* monitorInfo;
+
+  Ui::MonitorWidget ui;
+public Q_SLOTS:
+  void disablePositionOption(bool disabled);
 };
 
-#endif
+#endif // _MONITORWIDGET_H_
