@@ -237,7 +237,7 @@ void MonitorSettingsDialog::setupUi() {
     if(! LVDS && (monitor->monitorInfo->name.startsWith("LVDS") || monitor->monitorInfo->name.startsWith("PANEL"))) {
       LVDS = monitor;
     }
-    ui.monitorLayout->insertWidget(ui.monitorLayout->count() - 1, monitor);
+    ui.monitorLayout->addWidget(monitor);
     ui.monitorLayout->setStretchFactor(monitor, 0);
     ++i;
   }

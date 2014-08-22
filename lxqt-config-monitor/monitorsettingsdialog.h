@@ -37,9 +37,7 @@ public:
   virtual void accept();
 
 private:
-  QString humanReadableName(MonitorWidget* monitor);
   void setMonitorsConfig();
-  void chooseMaxResolution(MonitorWidget* monitor);
   void setupUi();
   void deleteTimeoutData(); // Used to delete data from TimeoutDialog
   QList<MonitorSettings*> getMonitorsSettings();

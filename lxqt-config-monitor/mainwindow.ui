@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Monitor Settings</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="preferences-desktop-display"/>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
