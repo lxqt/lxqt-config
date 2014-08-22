@@ -31,6 +31,10 @@ public:
   // Set changes in xrandr
   bool setMonitorsSettings(const QList<MonitorSettings*> monitors);
   QString getCommand(const QList<MonitorSettings*> monitors);
+
+private:
+  void resolvePositions(QList<MonitorInfo*>& monitors);
+  MonitorInfo* findAdjacentMonitor(QList< MonitorInfo* >& monitors, MonitorInfo* monitor, MonitorSettings::Position& pos);
 };
 
 #endif

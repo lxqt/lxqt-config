@@ -62,6 +62,9 @@ public:
   Position position;
   QString positionRelativeToOutput;
   bool primaryOk;
+  
+  QSize currentSize();
+  QRect geometry();
 };
 
 

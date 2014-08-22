@@ -163,6 +163,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo()
   if(monitor) // this should not happen unless a parsing error happens
     delete monitor;
 
+  resolvePositions(monitors);
+
   return monitors;
 }
 
@@ -309,4 +311,52 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
   
   qDebug() << "cmd:" << cmd;
   return cmd;
+}
+
+// resolve the position relationship among the montors
+void XRandRBackend::resolvePositions(QList< MonitorInfo* >& monitors) {
+  Q_FOREACH(MonitorInfo* monitor, monitors) {
+    MonitorSettings::Position pos;
+    MonitorInfo* neighbor = findAdjacentMonitor(monitors, monitor, pos);
+    if(neighbor) {
+      monitor->position = pos;
+      monitor->positionRelativeToOutput = neighbor->name;
+    }
+  }
+}
+
+MonitorInfo* XRandRBackend::findAdjacentMonitor( QList< MonitorInfo* >& monitors, MonitorInfo* monitor, MonitorSettings::Position& pos) {
+  MonitorInfo* neighbor = NULL;
+  QRect monitorRect = monitor->geometry();
+  pos = MonitorSettings::None;
+  Q_FOREACH(MonitorInfo* mon, monitors) {
+    if(mon == monitor)
+      continue;
+    QRect neighborRect = mon->geometry();
+    if(monitorRect.top() == neighborRect.top()) {
+      if((monitorRect.right() + 1) == neighborRect.left()) { // monitor is at left of neighbor
+        pos = MonitorSettings::Left;
+        neighbor = mon;
+        break;
+      }
+      else if(monitorRect.left() == (neighborRect.right() + 1)) { // monitor is at right of neighbor
+        pos = MonitorSettings::Right;
+        neighbor = mon;
+        break;
+      }
+    }
+    if(monitorRect.left() == neighborRect.left()) {
+      if((monitorRect.bottom() + 1) == neighborRect.top()) { // monitor is above neighbor
+        pos = MonitorSettings::Above;
+        neighbor = mon;
+        break;
+      }
+      else if(monitorRect.top() == (neighborRect.bottom() + 1)) { // monitor is below neighbor
+        pos = MonitorSettings::Bellow;
+        neighbor = mon;
+        break;
+      }
+    }
+  }
+  return neighbor;
 }

@@ -31,3 +31,19 @@ MonitorSettings::MonitorSettings(QObject *parent): QObject(parent) {
 
 MonitorInfo::MonitorInfo(QObject *parent): MonitorSettings(parent) {
 }
+
+QSize MonitorSettings::currentSize() {
+  int width = 0;
+  int height = 0;
+  int x = currentMode.indexOf('x');
+  if(x > 0) {
+    width = currentMode.left(x).toInt();
+    height = currentMode.mid(x + 1).toInt();
+  }
+  return QSize(width, height);
+}
+
+
+QRect MonitorSettings::geometry() {
+  return QRect(QPoint(xPos, yPos), currentSize());
+}
