@@ -33,8 +33,8 @@ public:
   QString name;
   QString currentMode;
   QString currentRate;
-  QString gamma; // not used yet
-  QString brightness; // not used yet
+  QString gamma;
+  QString brightness;
   int xPos; // not used yet
   int yPos; // not used yet
   bool enabledOk;

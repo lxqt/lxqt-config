@@ -63,6 +63,15 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   ui.rateCombo->setCurrentIndex(ui.rateCombo->findText(monitor->currentRate));
   
   ui.brightnessSlider->setValue(monitorInfo->brightness.toFloat()*100);
+  
+  // Set gamma values
+  ui.redSpinBox->setSingleStep(0.01);
+  ui.greenSpinBox->setSingleStep(0.01);
+  ui.blueSpinBox->setSingleStep(0.01);
+  QStringList gammaValues = monitor->gamma.split(":");
+  ui.redSpinBox->setValue(gammaValues[0].toFloat());
+  ui.greenSpinBox->setValue(gammaValues[1].toFloat());
+  ui.blueSpinBox->setValue(gammaValues[2].toFloat());
 }
 
 void MonitorWidget::disablePositionOption(bool disable) {
@@ -81,6 +90,7 @@ MonitorSettings* MonitorWidget::getSettings() {
   s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
   s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
   s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
+  s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
   return s;
 }
 

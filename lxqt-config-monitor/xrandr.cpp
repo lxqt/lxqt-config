@@ -331,6 +331,8 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
           cmd.append(" --primary");
         cmd.append(" --brightness ");
         cmd.append(monitor->brightness);
+        cmd.append(" --gamma ");
+        cmd.append(monitor->gamma);
       }
     }
     else    // turn off
