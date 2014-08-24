@@ -25,7 +25,7 @@
 #include <QStringList>
 #include <QHash>
 #include <QList>
-#include "ui_monitor.h"
+#include "ui_monitorwidget.h"
 
 class MonitorInfo;
 class MonitorSettings;

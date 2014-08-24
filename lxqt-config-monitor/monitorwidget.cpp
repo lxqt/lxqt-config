@@ -61,6 +61,8 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   }
   ui.resolutionCombo->setCurrentIndex(ui.resolutionCombo->findText(monitor->currentMode));
   ui.rateCombo->setCurrentIndex(ui.rateCombo->findText(monitor->currentRate));
+  
+  ui.brightnessSlider->setValue(monitorInfo->brightness.toFloat()*100);
 }
 
 void MonitorWidget::disablePositionOption(bool disable) {
@@ -78,6 +80,7 @@ MonitorSettings* MonitorWidget::getSettings() {
   s->currentRate = ui.rateCombo->currentText();
   s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
   s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
+  s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
   return s;
 }
 

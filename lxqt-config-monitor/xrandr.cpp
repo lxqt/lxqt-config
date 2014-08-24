@@ -25,9 +25,23 @@
 #include <QDir>
 #include <QVector>
 
-int indentLevel(QByteArray line) {
+static QByteArray indentString(QByteArray line) {
+  QByteArray s;
+  int length = line.size();
+  char ch;
+  for(int indent=0; indent < length; indent++ ) {
+    ch = line[indent];
+    if( ch == ' ' || ch == '\t' )
+      s.append(ch);
+    else
+      break;
+  }
+  return s;
+}
+
+static int indentLevel(QByteArray line) {
   int indent = 0;
-  while(indent < line.size() && line[indent] == ' ' || line[indent] == '\t')
+  while(indent < line.size() && ( line[indent] == ' ' || line[indent] == '\t' ) )
     ++indent;
   return indent;
 }
@@ -123,16 +137,28 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
         if(regKeyValue.exactMatch(line)) { // format: <key>: <value>
           QString key = regKeyValue.cap(1);
           QString value = regKeyValue.cap(2);
-          // qDebug() << key << "=" << value;
+          QByteArray lineStringStart = indentString(line);
+          int propertyIndentLevel = indentLevel(line);
+          ++it;
+          while( it != lines.end() ) {
+            QByteArray& line = *it;
+            int actualIndentLevel = indentLevel(line);
+            if( actualIndentLevel>propertyIndentLevel && line.startsWith(lineStringStart) ) {
+              value += "\n" + line.trimmed();
+              ++it;
+            } else
+              break;
+          }
+          qDebug() << key << "=" << value;
           if(key == "Gamma") {
             monitor->gamma = value;
-            ++it;
           }
           else if(key == "Brightness") {
             monitor->brightness = value;
-            ++it;
           }
           else if(key == "EDID") {
+            monitor->edid = QByteArray::fromHex(value.toLocal8Bit());
+            /*
             int indent = indentLevel(line);
             ++it;
             // start reading EDID data
@@ -151,8 +177,10 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
                 break;
               }
             }
+            */
           }
-        }
+          continue;
+        } // End format: <key>: <value>
         else { // this line is not key:value
         }
       }
@@ -301,6 +329,8 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
         }
         if(monitor->primaryOk)
           cmd.append(" --primary");
+        cmd.append(" --brightness ");
+        cmd.append(monitor->brightness);
       }
     }
     else    // turn off

@@ -27,7 +27,7 @@ set(CPP_FILES
 
 set(UI_FILES
     mainwindow.ui
-    monitor.ui
+    monitorwidget.ui
 )
 
 if(USE_QT5)
