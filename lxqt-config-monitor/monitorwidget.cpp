@@ -19,6 +19,7 @@
 
 #include "monitorwidget.h"
 #include "monitor.h"
+#include <QDebug>
 
 MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> monitorsInfo, QWidget* parent):
   QGroupBox(parent) {
@@ -55,12 +56,19 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   // FIXME: this is dirty
   connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), parent, SLOT(onResolutionChanged(int)));
   ui.resolutionCombo->addItem(tr("Auto"));
-
   Q_FOREACH(QString _mode_line, monitor->modes) {
     ui.resolutionCombo->addItem(_mode_line);
   }
-  ui.resolutionCombo->setCurrentIndex(ui.resolutionCombo->findText(monitor->currentMode));
-  ui.rateCombo->setCurrentIndex(ui.rateCombo->findText(monitor->currentRate));
+  
+ 
+  if(!monitor->currentMode.isEmpty())
+    ui.resolutionCombo->setCurrentIndex(ui.resolutionCombo->findText(monitor->currentMode));
+  else
+    ui.resolutionCombo->setCurrentIndex(0);
+  if(!monitor->currentRate.isEmpty())
+    ui.rateCombo->setCurrentIndex(ui.rateCombo->findText(monitor->currentRate));
+  else
+     ui.rateCombo->setCurrentIndex(0);
   
   ui.brightnessSlider->setValue(monitorInfo->brightness.toFloat()*100);
   
@@ -68,10 +76,12 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   ui.redSpinBox->setSingleStep(0.01);
   ui.greenSpinBox->setSingleStep(0.01);
   ui.blueSpinBox->setSingleStep(0.01);
-  QStringList gammaValues = monitor->gamma.split(":");
-  ui.redSpinBox->setValue(gammaValues[0].toFloat());
-  ui.greenSpinBox->setValue(gammaValues[1].toFloat());
-  ui.blueSpinBox->setValue(gammaValues[2].toFloat());
+  if(!monitor->gamma.isEmpty()) {
+    QStringList gammaValues = monitor->gamma.split(":");
+    ui.redSpinBox->setValue(gammaValues[0].toFloat());
+    ui.greenSpinBox->setValue(gammaValues[1].toFloat());
+    ui.blueSpinBox->setValue(gammaValues[2].toFloat());
+  }
 }
 
 void MonitorWidget::disablePositionOption(bool disable) {

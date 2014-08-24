@@ -66,7 +66,6 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
 
   bool hasError = false;
   MonitorInfo* monitor = NULL;
-  QByteArray edid;
   QList<QByteArray>::iterator it = lines.begin();
   bool readingModes = false;
   // currently, we only support one X screen, that is screen 0
@@ -113,8 +112,9 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
         if(!mode.isEmpty() && !rate.isEmpty()) {
           if(!monitor->modes.contains(mode))
             monitor->modes.append(mode);
-          QStringList& modeLine = monitor->modeLines[mode];
-          modeLine.append(rate);
+          if(!monitor->modeLines.contains(mode))
+            monitor->modeLines[mode] = QStringList();
+          monitor->modeLines[mode].append(rate);
           if(isPreferred) {
             monitor->preferredMode = mode;
             monitor->preferredRate = rate;
@@ -157,27 +157,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
             monitor->brightness = value;
           }
           else if(key == "EDID") {
-            monitor->edid = QByteArray::fromHex(value.toLocal8Bit());
-            /*
-            int indent = indentLevel(line);
-            ++it;
-            // start reading EDID data
-            while(it != lines.end()) {
-              line = *it;
-              int edidIndent = indentLevel(line);
-              if(edidIndent > indent) {
-                edid += line.trimmed();
-                ++it;
-              }
-              else { // end of EDID
-                monitor->edid = QByteArray::fromHex(edid);
-                qDebug() << "EDID:" << edid;
-                edid.clear();
-                --it;
-                break;
-              }
-            }
-            */
+            monitor->edid = QByteArray::fromHex(value.trimmed().toLocal8Bit()) ;
+            qDebug() << "EDID:" << monitor->edid ;
           }
           continue;
         } // End format: <key>: <value>
@@ -185,98 +166,21 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
         }
       }
     }
-    ++it;
+    if( it != lines.end() ) ++it;
   }
 
   if(monitor) // this should not happen unless a parsing error happens
     delete monitor;
 
+   qDebug() << "Parse end";
+
   resolvePositions(monitors);
 
+  qDebug() << "resolvePositions";
+  
   return monitors;
 }
 
-#if 0 // old lxqt-config-randr code using xrandr --query
-
-QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
-  // execute xrandr command and read its output
-  QList<MonitorInfo*> monitors;
-  QProcess process;
-  // set locale to "C" guarantee English output of xrandr
-  process.processEnvironment().insert("LC_ALL", "c");
-  process.start("xrandr");
-  // process.start("cat testing.txt");
-  process.waitForFinished(-1);
-  if(process.exitCode() != 0)
-    return monitors;
-
-  QByteArray output = process.readAllStandardOutput();
-
-  QRegExp regex("((?:[a-zA-Z]+[-0-9]*) +connected [^\n]+\n(?:(?: +[0-9]+x[0-9]+[^\n]+\n)+))");
-  QRegExp re_name("([a-zA-Z]+[-0-9]*) +connected .*\n");
-  QRegExp re_rate("[0-9\\.]+");
-
-
-  //Get output of xrandr for each monitor
-  int index = 0;
-  while((index = regex.indexIn(output.constData(), index)) >= 0) {
-    index += regex.matchedLength();
-    if(regex.matchedLength() > 0) {
-      QString input = regex.cap(0);
-      // New monitor found
-      qDebug() << input;
-      MonitorInfo* monitor = new MonitorInfo();
-      monitor->currentMode = monitor->currentRate = "";
-      monitor->preferredMode = monitor->preferredRate = "";
-      monitor->enabledOk = false;
-      int imode = -1;
-      monitors.append(monitor);
-      // Get monitor name
-      if(re_name.indexIn(input) >= 0)
-        monitor->name = re_name.cap(1);
-      qDebug() << "Name:" << monitor->name;
-      // Get monitor modes
-      QStringList lines = input.split("\n");
-      for(int i = 1; i < lines.length(); i++) {
-        qDebug() << "Mode:" << lines[i];
-        if(lines[i].trimmed() == "")
-          continue;
-        QStringList rates = lines[i].trimmed().split(" ");
-        QString mode = rates[0]; // 1st rate is mode name
-        qDebug() << "Mode found:" << mode;
-        QStringList aux_rates;
-        monitor->modeLines[mode] = aux_rates;
-        monitor->modes.append(mode);
-        imode++;
-        int irate = -1;
-        // Get rates for this mode
-        for(int j = 1; j < rates.length(); j++) {
-          QString rate = rates[j];
-          if(rate.contains(re_rate)) {
-            irate++;
-            QString _rate = rate;
-            _rate.replace("*", "").replace("+", "");
-            monitor->modeLines[mode].append(_rate);
-            qDebug() << "Rate:" << rate;
-          }
-          if(rate.contains("*")) { // current mode
-            monitor->currentMode = monitor->modes[imode];
-            monitor->currentRate = monitor->modeLines[mode][irate];
-            monitor->currentMode = regMonitorLine.cap(3);
-            monitor->enabledOk = true;
-          }
-          if(rate.contains("+")) { // preferred mode
-            monitor->preferredMode = monitor->modes[imode];
-            monitor->preferredRate = monitor->modeLines[mode][irate];
-          }
-        }
-      }
-    }
-  }
-  return monitors;
-}
-
-#endif
 
 
 bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) {
@@ -296,7 +200,7 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
   positions[MonitorSettings::Left] = "--left-of";
   positions[MonitorSettings::Right] = "--right-of";
   positions[MonitorSettings::Above] = "--above";
-  positions[MonitorSettings::Bellow] = "--bellow";
+  positions[MonitorSettings::Bellow] = "--below";
 
 
   QByteArray cmd = "xrandr";

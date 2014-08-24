@@ -222,14 +222,15 @@ void MonitorSettingsDialog::setupUi() {
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
     ui.primaryCombo->addItem(monitorInfo->name);
     if(monitorInfo->primaryOk)
-      ui.primaryCombo->setCurrentIndex(i + 1); // the first item is "None"
+      ui.primaryCombo->setCurrentIndex(ui.primaryCombo->findText(monitorInfo->name));
 
+    qDebug() << "Monitor" << monitorInfo->name;
     MonitorWidget* monitor = new MonitorWidget(monitorInfo, monitorsInfo, this);
     QString title = QString("Monitor %1: %2 (%3)")
                     .arg(i + 1)
                     .arg(monitor->monitorInfo->name)
                     .arg(monitor->monitorInfo->humanReadableName());
-    // qDebug() << "Monitor" << title;
+    qDebug() << "Monitor" << title;
     monitor->setTitle(title);
 
     connect(ui.unify, SIGNAL(toggled(bool)), monitor, SLOT(disablePositionOption(bool)));

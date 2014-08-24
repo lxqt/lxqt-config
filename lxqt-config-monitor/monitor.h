@@ -57,7 +57,7 @@ public:
   QHash<QString, QStringList> modeLines; // Rates suported by each mode
   QString preferredMode;
   QString preferredRate;
-  QByteArray edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
+  QString edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
   
   QString humanReadableName();
 };
