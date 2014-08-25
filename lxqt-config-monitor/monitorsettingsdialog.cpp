@@ -226,10 +226,11 @@ void MonitorSettingsDialog::setupUi() {
 
     qDebug() << "Monitor" << monitorInfo->name;
     MonitorWidget* monitor = new MonitorWidget(monitorInfo, monitorsInfo, this);
-    QString title = QString("Monitor %1: %2 (%3)")
+    QString title = QString("Monitor %1: %2 (%3) %4")
                     .arg(i + 1)
                     .arg(monitor->monitorInfo->name)
-                    .arg(monitor->monitorInfo->humanReadableName());
+                    .arg(monitor->monitorInfo->humanReadableName())
+                    .arg(monitor->monitorInfo->vendor);
     qDebug() << "Monitor" << title;
     monitor->setTitle(title);
 

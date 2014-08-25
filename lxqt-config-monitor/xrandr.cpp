@@ -157,8 +157,17 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
             monitor->brightness = value;
           }
           else if(key == "EDID") {
-            monitor->edid = QByteArray::fromHex(value.trimmed().toLocal8Bit()) ;
-            qDebug() << "EDID:" << monitor->edid ;
+            monitor->edid = value ;
+            // Get vendor
+            QString hex = value.replace("\n","").replace(" ","").toLower();
+            int vendorPosStart = hex.indexOf("fc00");
+            if(vendorPosStart>0) {
+            int vendorPosEnd = hex.indexOf("00", vendorPosStart+4);
+              QString vendorHex = hex.mid(vendorPosStart+4, vendorPosEnd-vendorPosStart-4);
+              QByteArray vendor = QByteArray::fromHex(vendorHex.toLocal8Bit()).trimmed();
+              // qDebug() << "Vendor:" << vendorHex << "VendorHex" << vendor ;
+              monitor->vendor = vendor;
+            }
           }
           continue;
         } // End format: <key>: <value>
@@ -172,11 +181,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   if(monitor) // this should not happen unless a parsing error happens
     delete monitor;
 
-   qDebug() << "Parse end";
-
   resolvePositions(monitors);
 
-  qDebug() << "resolvePositions";
   
   return monitors;
 }

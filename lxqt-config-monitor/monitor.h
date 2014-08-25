@@ -58,6 +58,7 @@ public:
   QString preferredMode;
   QString preferredRate;
   QString edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
+  QString vendor;
   
   QString humanReadableName();
 };
