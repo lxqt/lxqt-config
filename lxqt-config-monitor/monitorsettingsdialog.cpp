@@ -162,7 +162,7 @@ void MonitorSettingsDialog::onUseBoth() {
     monitor2->enableMonitor(true);
     qDebug() << "Mode selected index" << index << "Mode" << monitor->ui.resolutionCombo->currentText();
   }
-  accept();
+  setMonitorsConfig();
 }
 
 // external monitor only
@@ -171,7 +171,7 @@ void MonitorSettingsDialog::onExternalOnly() {
     monitor->chooseMaxResolution();
     monitor->enableMonitor(monitor != LVDS);
   }
-  accept();
+  setMonitorsConfig();
 }
 
 // laptop panel - LVDS only
@@ -180,7 +180,7 @@ void MonitorSettingsDialog::onLaptopOnly() {
     monitor->chooseMaxResolution();
     monitor->enableMonitor(monitor == LVDS);
   }
-  accept();
+  setMonitorsConfig();
 }
 
 void MonitorSettingsDialog::onExtended() {
@@ -198,7 +198,7 @@ void MonitorSettingsDialog::onExtended() {
     }
     i++;
   }
-  accept();
+  setMonitorsConfig();
 }
 
 void MonitorSettingsDialog::setupUi() {

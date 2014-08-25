@@ -70,7 +70,12 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   else
      ui.rateCombo->setCurrentIndex(0);
   
-  ui.brightnessSlider->setValue(monitorInfo->brightness.toFloat()*100);
+  int brightness;
+  if( !monitorInfo->brightness.isEmpty() )
+    brightness = monitorInfo->brightness.toFloat()*100;
+  else
+    brightness = 100;
+  ui.brightnessSlider->setValue(brightness);
   
   // Set gamma values
   ui.redSpinBox->setSingleStep(0.01);
