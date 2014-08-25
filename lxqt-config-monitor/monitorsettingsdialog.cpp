@@ -122,7 +122,8 @@ void MonitorSettingsDialog::setMonitorsConfig() {
   deleteTimeoutData();
   timeoutSettings = backend->getMonitorsInfo();
   // Show timeout dialog
-  timeoutDialog = new QProgressDialog(tr("OK?"), tr("Yes"), 0, 10);
+  timeoutDialog = new QProgressDialog(tr("OK?"), tr("Yes"), 0, 10, this);
+  timeoutDialog->setWindowModality(Qt::WindowModal);
   connect(timeoutDialog, SIGNAL(canceled()), this, SLOT(onCancelSettings()));
   timer = new QTimer(this);
   connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
