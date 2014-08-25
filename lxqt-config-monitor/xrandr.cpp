@@ -226,24 +226,23 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
       else {
         cmd.append("--mode ");
         cmd.append(sel_res);
-
         if(sel_rate != QObject::tr("Auto")) {  // not auto refresh rate
           cmd.append(" --rate ");
           cmd.append(sel_rate);
         }
-        if(monitor->position != MonitorSettings::None) {
-          cmd.append(" ");
-          cmd.append(positions[monitor->position]);
-          cmd.append(" ");
-          cmd.append(monitor->positionRelativeToOutput);
-        }
-        if(monitor->primaryOk)
-          cmd.append(" --primary");
-        cmd.append(" --brightness ");
-        cmd.append(monitor->brightness);
-        cmd.append(" --gamma ");
-        cmd.append(monitor->gamma);
       }
+      if(monitor->position != MonitorSettings::None) {
+        cmd.append(" ");
+        cmd.append(positions[monitor->position]);
+        cmd.append(" ");
+        cmd.append(monitor->positionRelativeToOutput);
+      }
+      if(monitor->primaryOk)
+        cmd.append(" --primary");
+      cmd.append(" --brightness ");
+      cmd.append(monitor->brightness);
+      cmd.append(" --gamma ");
+      cmd.append(monitor->gamma);
     }
     else    // turn off
       cmd.append("--off");
@@ -271,7 +270,7 @@ MonitorInfo* XRandRBackend::findAdjacentMonitor(QList< MonitorInfo* >& monitors,
   QRect monitorRect = monitor->geometry();
   pos = MonitorSettings::None;
   Q_FOREACH(MonitorInfo * mon, monitors) {
-    if(mon == monitor)
+    if(mon == monitor || mon->positionRelativeToOutput == monitor->name)
       continue;
     QRect neighborRect = mon->geometry();
     if(monitorRect.top() == neighborRect.top()) {

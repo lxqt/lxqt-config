@@ -213,11 +213,7 @@ void MonitorSettingsDialog::setupUi() {
   // Get monitors information
   QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
 
-  // are the monitors unified?
-  if(monitorsInfo.length() > 1)
-    ui.unify->setChecked(backend->isUnified(monitorsInfo));
-  else // disable the option if we only have one monitor
-    ui.unify->setEnabled(false);
+  
 
   int i = 0;
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
@@ -244,6 +240,12 @@ void MonitorSettingsDialog::setupUi() {
     ui.monitorLayout->setStretchFactor(monitor, 0);
     ++i;
   }
+  
+  // are the monitors unified?
+  if(monitorsInfo.length() > 1)
+    ui.unify->setChecked(backend->isUnified(monitorsInfo));
+  else // disable the option if we only have one monitor
+    ui.unify->setEnabled(false);
 
   // If this is a laptop and there is an external monitor, offer quick options
   if(monitors.length() == 2) {
