@@ -102,8 +102,12 @@ MonitorSettings* MonitorWidget::getSettings() {
   s->enabledOk = ui.enabled->isChecked();
   s->currentMode = ui.resolutionCombo->currentText();
   s->currentRate = ui.rateCombo->currentText();
-  s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
-  s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
+  if( ui.relativeToOutputCombo->currentIndex()==0 ) // If no relative monitor is selected, then position is disabled.
+    s->position = MonitorSettings::None;
+  else {
+    s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
+    s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
+  }
   s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
   s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
   return s;
