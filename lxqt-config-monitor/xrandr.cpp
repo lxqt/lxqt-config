@@ -236,7 +236,8 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
         cmd.append(positions[monitor->position]);
         cmd.append(" ");
         cmd.append(monitor->positionRelativeToOutput);
-      }
+      } else
+          cmd.append(" --pos 0x0");
       if(monitor->primaryOk)
         cmd.append(" --primary");
       cmd.append(" --brightness ");
