@@ -164,8 +164,15 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
             if(vendorPosStart>0) {
             int vendorPosEnd = hex.indexOf("00", vendorPosStart+4);
               QString vendorHex = hex.mid(vendorPosStart+4, vendorPosEnd-vendorPosStart-4);
-              QByteArray vendor = QByteArray::fromHex(vendorHex.toLocal8Bit()).trimmed();
-              // qDebug() << "Vendor:" << vendorHex << "VendorHex" << vendor ;
+              QByteArray vendor;
+              //vendor  = QByteArray::fromHex(vendorHex.toLocal8Bit()).trimmed();
+              //qDebug() << "VendorHex:" << vendorHex << "Vendor" << vendor ;
+              // QByteArray::fromHex sometimes fails. This a trick
+              vendor="";
+              for(int i=1; i<vendorHex.length();i+=2) {
+                vendor+=QByteArray::fromHex(QString("%1%2").arg(vendorHex.at(i-1)).arg(vendorHex.at(i)).toLocal8Bit());
+              }
+              qDebug() << "VendorHex:" << vendorHex << "Vendor" << vendor ;
               monitor->vendor = vendor;
             }
           }
