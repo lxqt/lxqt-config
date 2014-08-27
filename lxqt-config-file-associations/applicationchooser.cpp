@@ -28,20 +28,21 @@
 #include <QSettings>
 #include <QString>
 #include <QDebug>
+#include <QMimeDatabase>
 
 #include <XdgDesktopFile>
-#include <XdgMime>
 #include "applicationchooser.h"
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)
 
-ApplicationChooser::ApplicationChooser(XdgMimeInfo* mimeInfo, bool showUseAlwaysCheckBox) :
-    m_MimeInfo(mimeInfo)
+ApplicationChooser::ApplicationChooser(const XdgMimeType& mimeInfo, bool showUseAlwaysCheckBox)
 {
-    m_CurrentDefaultApplication = XdgDesktopFileCache::getDefaultApp(m_MimeInfo->mimeType());
+    m_MimeInfo = mimeInfo;
+    m_CurrentDefaultApplication = XdgDesktopFileCache::getDefaultApp(m_MimeInfo.name());
     widget.setupUi(this);
-    widget.mimetypeIconLabel->setPixmap(m_MimeInfo->icon().pixmap(widget.mimetypeIconLabel->size()));
-    widget.mimetypeLabel->setText(m_MimeInfo->comment());
+
+    widget.mimetypeIconLabel->setPixmap(m_MimeInfo.icon().pixmap(widget.mimetypeIconLabel->size()));
+    widget.mimetypeLabel->setText(m_MimeInfo.comment());
     widget.alwaysUseCheckBox->setVisible(showUseAlwaysCheckBox);
     widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 }
@@ -68,38 +69,36 @@ bool lessThan(XdgDesktopFile* a, XdgDesktopFile* b)
 void ApplicationChooser::fillApplicationListWidget()
 {
     widget.applicationTreeWidget->clear();
-    if (m_MimeInfo)
-    {
-        QSet<XdgDesktopFile*> addedApps;
-        QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = XdgDesktopFileCache::getApps(m_MimeInfo->mimeType());
-        QList<XdgDesktopFile*> otherApplications;
 
-        for(XdgMimeInfo* mimeInfo = m_MimeInfo;; mimeInfo = XdgMimeInfoCache::xdgMimeInfo(mimeInfo->subClassOf()))
-        {
-            QString heading;
-            heading = mimeInfo ?
-                tr("Applications that handle %1").arg(mimeInfo->comment()) :
-                tr("Other applications");
+    QSet<XdgDesktopFile*> addedApps;
+    QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = XdgDesktopFileCache::getApps(m_MimeInfo.name());
+    QList<XdgDesktopFile*> otherApplications;
 
-            QList<XdgDesktopFile*> applications;
-            applications = mimeInfo ?
-                XdgDesktopFileCache::getApps(mimeInfo->mimeType()) :
-                XdgDesktopFileCache::getAllFiles();
+    QStringList mimetypes;
+    mimetypes << m_MimeInfo.name() << m_MimeInfo.allAncestors();
 
-            qSort(applications.begin(), applications.end(), lessThan);
+    QMimeDatabase db;
+    foreach(const QString& mts, mimetypes) {
+        QMimeType mt = db.mimeTypeForName(mts);
+        QString heading;
+        heading = mt.name() == QLatin1String("application/octet-stream") ?
+            tr("Other applications") :
+            tr("Applications that handle %1").arg(mt.comment());
 
-            QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
-            headingItem->setExpanded(true);
-            headingItem->setFlags(Qt::ItemIsEnabled);
-            headingItem->setText(0, heading);
-            headingItem->setSizeHint(0, QSize(0, 25));
+        QList<XdgDesktopFile*> applications;
+        applications = mt.name() == QLatin1String("application/octet-stream") ?
+            XdgDesktopFileCache::getAllFiles() :
+            XdgDesktopFileCache::getApps(mt.name());
 
-            addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
+        qSort(applications.begin(), applications.end(), lessThan);
 
-            if (! mimeInfo)
-                break;
-        }
+        QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
+        headingItem->setExpanded(true);
+        headingItem->setFlags(Qt::ItemIsEnabled);
+        headingItem->setText(0, heading);
+        headingItem->setSizeHint(0, QSize(0, 25));
 
+        addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
     }
     connect(widget.applicationTreeWidget, SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT(selectionChanged()));
     widget.applicationTreeWidget->setFocus();

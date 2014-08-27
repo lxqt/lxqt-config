@@ -5,6 +5,7 @@
  * http://razor-qt.org
  *
  * Copyright: 2013 Christian Surlykke
+ *            2014 Luís Pereira <luis.artur.pereira.gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -28,49 +29,81 @@
 #include <QIcon>
 #include <QPixmap>
 #include <QListWidget>
-#include <QSortFilterProxyModel>
-#include <QtConcurrentRun>
+#include <QMimeDatabase>
+#include <QMimeType>
 #include <QDateTime>
+#include <QFileInfo>
 
-#include <XdgMime>
+#include <XdgIcon>
 #include <XdgDesktopFile>
 #include <XdgDirs>
 #include <LXQt/Settings>
 
 
 #include "mimetypeviewer.h"
-#include "applicationchooser.h"
-#include "mimetypeitemmodel.h"
-#include "busyindicator.h"
+#include "ui_mimetypeviewer.h"
 
-void initializeMimeInfoCache()
+#include "applicationchooser.h"
+
+
+enum ItemTypeEntries {
+    GroupType = 1001,
+    EntrieType = 1002
+};
+
+static bool mimeTypeLessThan(const QMimeType& m1, const QMimeType& m2)
 {
-    XdgMimeInfoCache::mediatypes();
+    return m1.name() < m2.name();
 }
 
-MimetypeViewer::MimetypeViewer( QWidget *parent) :
-        m_MimetypeFilterItemModel(this),
-        m_CurrentMime(0),
-        mFutureWatcher(0),
-        mBusyIndicator(0)
+void MimetypeViewer::loadAllMimeTypes()
+{
+    mediaTypes.clear();
+    mGroupItems.clear();
+    mItemList.clear();
+    QStringList selectedMimeTypes;
 
- {
+    QMimeDatabase db;
+    QList<QMimeType> mimetypes = db.allMimeTypes();
+
+    qSort(mimetypes.begin(), mimetypes.end(), mimeTypeLessThan);
+    foreach (const QMimeType &mt, mimetypes) {
+        const QString mimetype = mt.name();
+        const int i = mimetype.indexOf(QLatin1Char('/'));
+        const QString mediaType = mimetype.left(i);
+        const QString subType = mimetype.mid(i + 1);
+
+        MimeTypeData* data = new MimeTypeData(mt);
+
+        if (!mediaTypes.contains(mediaType)) { // A new type of media
+            mediaTypes.append(mediaType);
+            QTreeWidgetItem *item = new QTreeWidgetItem(widget.mimetypeTreeWidget, GroupType);
+            item->setText(0, mediaType);
+            widget.mimetypeTreeWidget->insertTopLevelItem(0, item);
+            mGroupItems.insert(mediaType, item);
+        }
+        QTreeWidgetItem *item = new QTreeWidgetItem(mGroupItems.value(mediaType), EntrieType);
+        QVariant v;
+        v.setValue(*data);
+        item->setData(0, Qt::UserRole, v);
+        item->setText(0, subType);
+        mItemList.append(item);
+    }
+
+    widget.mimetypeTreeWidget->resizeColumnToContents(1);
+    widget.mimetypeTreeWidget->show();
+}
+
+
+MimetypeViewer::MimetypeViewer(QWidget *parent)
+    : QDialog(parent)
+{
     widget.setupUi(this);
     addSearchIcon();
     widget.searchTermLineEdit->setEnabled(false);
 
-    // initialize XdgMimeInfoCache asynchronously while putting a busyindicator on the mimeTypeTreeview
-    mBusyIndicator = new BusyIndicator(widget.mimetypeTreeView);
-    mFutureWatcher = new QFutureWatcher<void>(this);
-    connect(mFutureWatcher, SIGNAL(finished()), this, SLOT(initializeMimetypeTreeView()));
-    mFutureWatcher->setFuture(QtConcurrent::run(initializeMimeInfoCache));
-
     connect(widget.searchTermLineEdit, SIGNAL(textChanged(const QString&)),
-            &m_MimetypeFilterItemModel, SLOT(setFilterFixedString(const QString&)));
-
-    connect(widget.searchTermLineEdit, SIGNAL(textChanged(const QString&)),
-            this, SLOT(autoExpandOnSearch()));
-
+            this, SLOT(filter(const QString&)));
 
     connect(widget.chooseApplicationsButton, SIGNAL(clicked()), this, SLOT(chooseApplication()));
     connect(widget.dialogButtonBox, SIGNAL(clicked(QAbstractButton*)), this, SLOT(dialogButtonBoxClicked(QAbstractButton*)));
@@ -79,9 +112,15 @@ MimetypeViewer::MimetypeViewer( QWidget *parent) :
     mDefaultsList = new QSettings(defaultsListPath, XdgDesktopFileCache::desktopFileSettingsFormat(), this);
     mSettingsCache = new LxQt::SettingsCache(mDefaultsList);
     mSettingsCache->loadFromSettings();
+    initializeMimetypeTreeView();
+    loadAllMimeTypes();
+
+    connect(widget.mimetypeTreeWidget, SIGNAL(itemSelectionChanged()),
+            this, SLOT(currentMimetypeChanged()));
 }
 
-MimetypeViewer::~MimetypeViewer() {
+MimetypeViewer::~MimetypeViewer()
+{
 }
 
 void MimetypeViewer::addSearchIcon()
@@ -106,24 +145,10 @@ void MimetypeViewer::addSearchIcon()
 
 void MimetypeViewer::initializeMimetypeTreeView()
 {
-    m_MimetypeFilterItemModel.setSourceModel(new MimetypeItemModel(&m_MimetypeFilterItemModel));
-
-    widget.mimetypeTreeView->setModel(&m_MimetypeFilterItemModel);
     currentMimetypeChanged();
-    widget.mimetypeTreeView->setFocus();
+    widget.mimetypeTreeWidget->setColumnCount(2);
+    widget.mimetypeTreeWidget->setFocus();
     widget.searchTermLineEdit->setEnabled(true);
-
-    connect(widget.mimetypeTreeView->selectionModel(), SIGNAL(currentChanged(const QModelIndex&, const QModelIndex&)),
-            this, SLOT(currentMimetypeChanged()));
-
-    delete mBusyIndicator;
-    mBusyIndicator = 0;
-}
-
-void MimetypeViewer::resizeEvent(QResizeEvent* event)
-{
-    if (mBusyIndicator)
-        mBusyIndicator->resize(widget.mimetypeTreeView->size());
 }
 
 void MimetypeViewer::currentMimetypeChanged()
@@ -139,39 +164,35 @@ void MimetypeViewer::currentMimetypeChanged()
     widget.applicationLabel->clear();
     widget.applicationsGroupBox->setEnabled(false);
 
-    m_CurrentMime = 0;
+    QTreeWidgetItem *sel = widget.mimetypeTreeWidget->currentItem();
 
-    QModelIndex index = widget.mimetypeTreeView->selectionModel()->currentIndex();
-
-    if (!index.isValid())
-    {
+    if (!sel || sel->type() == GroupType) {
         return;
     }
 
-    QVariant variant = index.data(MimeInfoRole);
+    MimeTypeData mimeData = sel->data(0, Qt::UserRole).value<MimeTypeData>();
 
-    m_CurrentMime =  variant.value<XdgMimeInfo*>();
-
-    if (!m_CurrentMime)
-    {
+    QMimeDatabase db;
+    XdgMimeType mt = db.mimeTypeForName(mimeData.name());
+    if (mt.name().isEmpty())
         return;
-    }
 
-    widget.descriptionLabel->setText(m_CurrentMime->comment());
+    m_CurrentMime = mt;
 
-    QIcon icon = m_CurrentMime->icon();
+    widget.descriptionLabel->setText(mimeData.comment());
+
+    QIcon icon = m_CurrentMime.icon();
     if (! icon.isNull())
     {
         widget.iconLabel->setPixmap(icon.pixmap(widget.iconLabel->size()));
         widget.iconLabel->show();
     }
+
     widget.mimetypeGroupBox->setEnabled(true);
-
-
-    widget.patternsLabel->setText(m_CurrentMime->patterns().join("  "));
+    widget.patternsLabel->setText(mimeData.patterns());
     widget.patternsGroupBox->setEnabled(true);
 
-    XdgDesktopFile* defaultApp = XdgDesktopFileCache::getDefaultApp(m_CurrentMime->mimeType());
+    XdgDesktopFile* defaultApp = XdgDesktopFileCache::getDefaultApp(m_CurrentMime.name());
     if (defaultApp && defaultApp->isValid())
     {
         QString nonLocalizedName = defaultApp->value("Name").toString();
@@ -187,18 +208,34 @@ void MimetypeViewer::currentMimetypeChanged()
         widget.applicationLabel->setText(tr("None"));
         widget.chooseApplicationsButton->setText(tr("&Choose..."));
     }
+
     widget.applicationsGroupBox->setEnabled(true);
 
 }
 
-void MimetypeViewer::autoExpandOnSearch()
+void MimetypeViewer::filter(const QString& pattern)
 {
-    for (int i = 0; i < m_MimetypeFilterItemModel.rowCount(); i++)
-    {
-        QModelIndex mediatypeIndex = m_MimetypeFilterItemModel.index(i, 0);
-        if (m_MimetypeFilterItemModel.rowCount(mediatypeIndex) < 8)
-        {
-            widget.mimetypeTreeView->setExpanded(mediatypeIndex, true);
+    QMimeDatabase db;
+    MimeTypeData mimeData;
+    const int count = widget.mimetypeTreeWidget->topLevelItemCount();
+
+    for (int i = 0; i < widget.mimetypeTreeWidget->topLevelItemCount(); ++i) {
+        widget.mimetypeTreeWidget->topLevelItem(i)->setHidden(true);
+    }
+
+    foreach(QTreeWidgetItem* it, mItemList) {
+        mimeData = it->data(0, Qt::UserRole).value<MimeTypeData>();
+        if (pattern.isEmpty() || mimeData.matches(pattern)) {
+            const int i = mimeData.name().indexOf(QLatin1Char('/'));
+            const QString mediaType = mimeData.name().left(i);
+            QTreeWidgetItem* groupItem = mGroupItems.value(mediaType);
+            Q_ASSERT(groupItem);
+            if (groupItem) {
+                groupItem->setHidden(false);
+                it->setHidden(false);
+            }
+        } else {
+            it->setHidden(true);
         }
     }
 }
@@ -206,19 +243,16 @@ void MimetypeViewer::autoExpandOnSearch()
 
 void MimetypeViewer::chooseApplication()
 {
-    if (m_CurrentMime)
+    ApplicationChooser applicationChooser(m_CurrentMime);
+    if (applicationChooser.exec() == QDialog::Accepted && applicationChooser.DefaultApplication())
     {
-        ApplicationChooser applicationChooser(m_CurrentMime);
-        if (applicationChooser.exec() && applicationChooser.DefaultApplication())
-        {
-            QString fileNameNoPath = QFileInfo(applicationChooser.DefaultApplication()->fileName()).fileName();
-            mDefaultsList->beginGroup("Default Applications");
-            mDefaultsList->setValue(m_CurrentMime->mimeType(), fileNameNoPath);
-            mDefaultsList->endGroup();
-            currentMimetypeChanged();
-        }
-        widget.mimetypeTreeView->setFocus();
+        QString fileNameNoPath = QFileInfo(applicationChooser.DefaultApplication()->fileName()).fileName();
+        mDefaultsList->beginGroup("Default Applications");
+        mDefaultsList->setValue(m_CurrentMime.name(), fileNameNoPath);
+        mDefaultsList->endGroup();
+        currentMimetypeChanged();
     }
+    widget.mimetypeTreeWidget->setFocus();
 }
 
 void MimetypeViewer::dialogButtonBoxClicked(QAbstractButton* button)
