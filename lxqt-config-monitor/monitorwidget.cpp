@@ -53,8 +53,7 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   if(monitor->enabledOk)
     ui.enabled->setChecked(true);
 
-  // FIXME: this is dirty
-  connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), parent, SLOT(onResolutionChanged(int)));
+  connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
   ui.resolutionCombo->addItem(tr("Auto"));
   Q_FOREACH(QString _mode_line, monitor->modes) {
     ui.resolutionCombo->addItem(_mode_line);
@@ -88,6 +87,23 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     ui.blueSpinBox->setValue(gammaValues[2].toFloat());
   }
 }
+
+void MonitorWidget::onResolutionChanged(int index) {
+  QComboBox* combo = static_cast<QComboBox*>(sender());
+  QHash<QString, QStringList> modeLines = qvariant_cast<QHash<QString, QStringList> >(combo->property("modeLines"));
+  QComboBox* rateCombo = qvariant_cast<QComboBox*>(combo->property("rateCombo"));
+  QString mode = combo->currentText();
+  rateCombo->clear();
+  rateCombo->addItem(tr("Auto"));
+  if(modeLines.contains(mode)) {
+    QStringList mode_lines = modeLines[mode];
+    Q_FOREACH(QString rate, mode_lines) {
+      rateCombo->addItem(rate);
+    }
+    rateCombo->setCurrentIndex(0);
+  }
+}
+
 
 void MonitorWidget::disablePositionOption(bool disable) {
   bool enable = !disable;

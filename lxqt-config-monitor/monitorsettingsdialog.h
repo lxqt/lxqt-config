@@ -44,8 +44,6 @@ private:
 
 
 private Q_SLOTS:
-  void onResolutionChanged(int index);
-
   // Timeout dialog signals
   void onCancelSettings();
   void onTimeout();

@@ -18,6 +18,8 @@
 
 #include "monitor.h"
 
+bool MonitorInfo::LVDS_Ok = false;
+
 bool MonitorSettingsBackend::isUnified(const QList< MonitorInfo* > monitors) {
   Q_FOREACH(MonitorInfo * monitor, monitors) {
     if(monitor->position != MonitorSettings::None)
@@ -36,12 +38,12 @@ MonitorInfo::MonitorInfo(QObject* parent): MonitorSettings(parent) {
 }
 
 QString MonitorInfo::humanReadableName() {
-  if(name == "LVDS")
+  if(name.startsWith("LVDS"))
     return tr("Laptop LCD Monitor");
   else if(name.startsWith("VGA") || name.startsWith("Analog"))
-    return /* FIXME LVDS ? tr("External VGA Monitor") : */ tr("VGA Monitor");
+    return LVDS_Ok ? tr("External VGA Monitor") :  tr("VGA Monitor");
   else if(name.startsWith("DVI") || name.startsWith("TMDS") || name.startsWith("Digital") || name.startsWith("LVDS"))
-    return /* FIXME LVDS ? tr("External DVI Monitor") : */ tr("DVI Monitor");
+    return LVDS_Ok ? tr("External DVI Monitor") : tr("DVI Monitor");
   else if(name.startsWith("TV") || name.startsWith("S-Video"))
     return tr("TV");
   else if(name == "default")

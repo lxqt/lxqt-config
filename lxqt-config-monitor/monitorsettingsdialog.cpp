@@ -49,22 +49,6 @@ MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend):
 MonitorSettingsDialog::~MonitorSettingsDialog() {
 }
 
-void MonitorSettingsDialog::onResolutionChanged(int index) {
-  QComboBox* combo = static_cast<QComboBox*>(sender());
-  QHash<QString, QStringList> modeLines = qvariant_cast<QHash<QString, QStringList> >(combo->property("modeLines"));
-  QComboBox* rateCombo = qvariant_cast<QComboBox*>(combo->property("rateCombo"));
-  QString mode = combo->currentText();
-  rateCombo->clear();
-  rateCombo->addItem(tr("Auto"));
-  if(modeLines.contains(mode)) {
-    QStringList mode_lines = modeLines[mode];
-    Q_FOREACH(QString rate, mode_lines) {
-      rateCombo->addItem(rate);
-    }
-    rateCombo->setCurrentIndex(0);
-  }
-}
-
 
 void MonitorSettingsDialog::deleteTimeoutData() {
   if(timer != NULL) {
@@ -213,7 +197,13 @@ void MonitorSettingsDialog::setupUi() {
   // Get monitors information
   QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
 
-  
+  // Search if LVSD monitor is connected
+  Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
+    if(! LVDS && (monitorInfo->name.startsWith("LVDS") || monitorInfo->name.startsWith("PANEL"))) {
+      MonitorInfo::LVDS_Ok = true;
+      break;
+    }
+  }
 
   int i = 0;
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
@@ -233,7 +223,7 @@ void MonitorSettingsDialog::setupUi() {
 
     connect(ui.unify, SIGNAL(toggled(bool)), monitor, SLOT(disablePositionOption(bool)));
     monitors.append(monitor);
-    if(! LVDS && (monitor->monitorInfo->name.startsWith("LVDS") || monitor->monitorInfo->name.startsWith("PANEL"))) {
+    if(! LVDS && (monitorInfo->name.startsWith("LVDS") || monitorInfo->name.startsWith("PANEL"))) {
       LVDS = monitor;
     }
     ui.monitorLayout->addWidget(monitor);

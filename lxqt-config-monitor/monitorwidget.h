@@ -45,6 +45,9 @@ public:
   Ui::MonitorWidget ui;
 public Q_SLOTS:
   void disablePositionOption(bool disabled);
+
+private slots:
+  void onResolutionChanged(int);
 };
 
 #endif // _MONITORWIDGET_H_
