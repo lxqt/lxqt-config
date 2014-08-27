@@ -28,8 +28,6 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   monitor->setParent(this); // take the ownership
 
   ui.setupUi(this);
-  ui.resolutionCombo->setProperty("modeLines", qVariantFromValue<QHash<QString, QStringList> >(monitor->modeLines));
-  ui.resolutionCombo->setProperty("rateCombo", qVariantFromValue<QComboBox*>(ui.rateCombo));
 
   ui.relativeToOutputCombo->addItem(tr("Default"));
   Q_FOREACH(MonitorInfo * other, monitorsInfo) {
@@ -89,9 +87,9 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
 }
 
 void MonitorWidget::onResolutionChanged(int index) {
-  QComboBox* combo = static_cast<QComboBox*>(sender());
-  QHash<QString, QStringList> modeLines = qvariant_cast<QHash<QString, QStringList> >(combo->property("modeLines"));
-  QComboBox* rateCombo = qvariant_cast<QComboBox*>(combo->property("rateCombo"));
+  QComboBox* combo =ui.resolutionCombo;
+  QHash<QString, QStringList> modeLines = monitorInfo->modeLines;
+  QComboBox* rateCombo = ui.rateCombo;
   QString mode = combo->currentText();
   rateCombo->clear();
   rateCombo->addItem(tr("Auto"));
