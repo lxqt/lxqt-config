@@ -28,15 +28,16 @@
 
 #include "ui_applicationchooser.h"
 #include <XdgDesktopFile>
+#include <XdgMimeType>
 
-class XdgMimeInfo;
 class QSettings;
 
 class ApplicationChooser : public QDialog
 {
     Q_OBJECT
 public:
-    ApplicationChooser(XdgMimeInfo* mimeInfo, bool showUseAlwaysCheckBox = false);
+    ApplicationChooser(const XdgMimeType& mimeInfo, bool showUseAlwaysCheckBox = false);
+
     virtual ~ApplicationChooser();
     XdgDesktopFile* DefaultApplication() const { return m_CurrentDefaultApplication; }
 
@@ -51,7 +52,7 @@ private:
     void addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
                                                 QList<XdgDesktopFile*> applications,
                                                 QSet<XdgDesktopFile*> & alreadyAdded);
-    XdgMimeInfo* m_MimeInfo;
+    XdgMimeType m_MimeInfo;
     Ui::ApplicationChooser widget;
     XdgDesktopFile* m_CurrentDefaultApplication;
 };

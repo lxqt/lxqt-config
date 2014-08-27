@@ -5,6 +5,7 @@
  * http://razor-qt.org
  *
  * Copyright: 2013 Christian Surlykke
+ *            2014 Luís Pereira <luis.artur.pereira.gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -27,15 +28,14 @@
 #define	_MIMETYPEVIEWER_H
 
 #include <QDialog>
-#include <QModelIndex>
+#include <QStringList>
 
+#include <XdgMimeType>
+
+#include "mimetypedata.h"
 #include "ui_mimetypeviewer.h"
-#include "busyindicator.h"
-#include "mimetypeitemmodel.h"
 
 class QSettings;
-class XdgMimeInfo;
-class MimetypeFilterItemModel;
 
 namespace LxQt {
 class SettingsCache;
@@ -47,25 +47,23 @@ public:
     MimetypeViewer(QWidget *parent = 0);
     virtual ~MimetypeViewer();
 
-protected:
-    void resizeEvent(QResizeEvent* event);
-
 private slots:
     void initializeMimetypeTreeView();
     void currentMimetypeChanged();
-    void autoExpandOnSearch();
+    void filter(const QString&);
     void chooseApplication();
     void dialogButtonBoxClicked(QAbstractButton *button);
 
 private:
     void addSearchIcon();
-    Ui::mimetypeviewer widget;
-    MimetypeFilterItemModel m_MimetypeFilterItemModel;
-    XdgMimeInfo* m_CurrentMime;
+    void loadAllMimeTypes();
+    XdgMimeType m_CurrentMime;
     QSettings* mDefaultsList;
     LxQt::SettingsCache *mSettingsCache;
-    QFutureWatcher<void> *mFutureWatcher;
-    BusyIndicator* mBusyIndicator;
+    Ui::mimetypeviewer widget;
+    QStringList mediaTypes;
+    QList <QTreeWidgetItem*> mItemList;
+    QMap<QString, QTreeWidgetItem *> mGroupItems;
 };
 
 #endif	/* _MIMETYPEVIEWER_H */

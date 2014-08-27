@@ -10,29 +10,24 @@ endif()
 
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${QTX_INCLUDE_DIRS}
-    ${LXQT_INCLUDE_DIRS}
-    ${QTXDG_INCLUDE_DIRS}
-    )
+)
 
 set(H_FILES
+    mimetypedata.h
     mimetypeviewer.h
     applicationchooser.h
-    mimetypeitemmodel.h
-    busyindicator.h
 )
 
 set(MOC_FILES
+    mimetypedata.h
     mimetypeviewer.h
     applicationchooser.h
-    busyindicator.h
 )
 
 set(CPP_FILES
+    mimetypedata.cpp
     mimetypeviewer.cpp
     applicationchooser.cpp
-    mimetypeitemmodel.cpp
-    busyindicator.cpp
     main.cpp
 )
 
@@ -44,11 +39,11 @@ set(UI_FILES
 set(QRC_FILES
 )
 
+
 set(LIBRARIES
     ${QTXDG_LIBRARIES}
     ${LXQT_LIBRARIES}
 )
-
 
 # Translations **********************************
 include(LxQtTranslate)
