@@ -28,10 +28,12 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QDir>
-
+#include <QTimer>
+#include <QProgressBar>
 #include <QDebug>
 
 #include "monitorwidget.h"
+#include "timeoutdialog.h"
 #include "xrandr.h"
 
 
@@ -51,15 +53,7 @@ MonitorSettingsDialog::~MonitorSettingsDialog() {
 
 
 void MonitorSettingsDialog::deleteTimeoutData() {
-  if(timer != NULL) {
-    timer->stop();
-    delete timer;
-    timer = NULL;
-  }
-  if(timeoutDialog != NULL) {
-    delete timeoutDialog;
-    timeoutDialog = NULL;
-  }
+  timeoutDialog = NULL;
   Q_FOREACH(MonitorInfo * monitorInfo, timeoutSettings) {
     delete monitorInfo;
   }
@@ -67,22 +61,13 @@ void MonitorSettingsDialog::deleteTimeoutData() {
 }
 
 void MonitorSettingsDialog::onCancelSettings() {
-  deleteTimeoutData();
-}
-
-void MonitorSettingsDialog::onTimeout() {
-  int time = timeoutDialog->value() + 1;
-  if(time >= 10) { // If time is finished, settings are restored.
-    timer->stop();
-    QList<MonitorSettings*> settings;
-    Q_FOREACH(MonitorInfo * monitorInfo, timeoutSettings) {
-      settings.append((MonitorSettings*)monitorInfo);
-    }
-    backend->setMonitorsSettings(settings);
-    deleteTimeoutData();
+  // restore the old settings
+  QList<MonitorSettings*> settings;
+  Q_FOREACH(MonitorInfo * monitorInfo, timeoutSettings) {
+    settings.append((MonitorSettings*)monitorInfo);
   }
-  else
-    timeoutDialog->setValue(time);
+  backend->setMonitorsSettings(settings);
+  deleteTimeoutData();
 }
 
 QList<MonitorSettings*> MonitorSettingsDialog::getMonitorsSettings() {
@@ -106,18 +91,16 @@ void MonitorSettingsDialog::setMonitorsConfig() {
   deleteTimeoutData();
   timeoutSettings = backend->getMonitorsInfo();
   // Show timeout dialog
-  timeoutDialog = new QProgressDialog(tr("Are the current settings OK for you?"), tr("Yes"), 0, 10, this);
-  timeoutDialog->setWindowModality(Qt::WindowModal);
-  connect(timeoutDialog, SIGNAL(canceled()), this, SLOT(onCancelSettings()));
-  timer = new QTimer(this);
-  connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
-  timer->start(1000);
+  timeoutDialog = new TimeoutDialog(this);
+  connect(timeoutDialog, SIGNAL(rejected()), this, SLOT(onCancelSettings()));
+  connect(timeoutDialog, SIGNAL(finished(int)), timeoutDialog, SLOT(deleteLater()));
   // Build list of monitor and their settings
   QList<MonitorSettings*> settings = getMonitorsSettings();
   backend->setMonitorsSettings(settings);
   Q_FOREACH(MonitorSettings * s, settings) {
     delete s;
   }
+  timeoutDialog->show();
 }
 
 // turn on both laptop LCD and the external monitor

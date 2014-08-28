@@ -23,11 +23,13 @@ set(CPP_FILES
     xrandr.cpp
     monitor.cpp
     monitorwidget.cpp
+    timeoutdialog.cpp
 )
 
 set(UI_FILES
     mainwindow.ui
     monitorwidget.ui
+    timeoutdialog.ui
 )
 
 if(USE_QT5)

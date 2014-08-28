@@ -25,8 +25,9 @@
 #include "ui_mainwindow.h"
 #include "monitor.h"
 #include "monitorwidget.h"
-#include <QProgressDialog>
-#include <QTimer>
+
+class TimeoutDialog;
+class QTimer;
 
 class MonitorSettingsDialog: public QDialog {
   Q_OBJECT
@@ -39,14 +40,13 @@ public:
 private:
   void setMonitorsConfig();
   void setupUi();
-  void deleteTimeoutData(); // Used to delete data from TimeoutDialog
   QList<MonitorSettings*> getMonitorsSettings();
 
+  void deleteTimeoutData(); // Used to delete data from TimeoutDialog
 
 private Q_SLOTS:
   // Timeout dialog signals
   void onCancelSettings();
-  void onTimeout();
 
   // quick options
   void onUseBoth();
@@ -62,7 +62,7 @@ private:
   MonitorWidget* LVDS;
   MonitorSettingsBackend* backend;
   // TimeoutDialog data
-  QProgressDialog* timeoutDialog;
+  TimeoutDialog* timeoutDialog;
   QTimer* timer;
   QList<MonitorInfo*> timeoutSettings;
 };
