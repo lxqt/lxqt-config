@@ -46,7 +46,7 @@ public:
 public Q_SLOTS:
   void disablePositionOption(bool disabled);
 
-private slots:
+private Q_SLOTS:
   void onResolutionChanged(int);
 };
 
