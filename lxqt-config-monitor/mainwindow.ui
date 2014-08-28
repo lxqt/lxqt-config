@@ -6,15 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>483</width>
-    <height>310</height>
+    <width>549</width>
+    <height>392</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Monitor Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="preferences-desktop-display"/>
+   <iconset theme="preferences-desktop-display">
+    <normaloff/>
+   </iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -76,43 +78,31 @@
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>The following monitors are detected:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QScrollArea" name="scrollArea">
-         <property name="widgetResizable">
-          <bool>true</bool>
-         </property>
-         <widget class="QWidget" name="scrollAreaWidgetContents">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>439</width>
-            <height>143</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="monitorLayout">
-           <item>
-            <spacer name="verticalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>147</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1">
+         <item>
+          <widget class="QListWidget" name="monitorList">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
@@ -179,8 +169,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>329</x>
-     <y>300</y>
+     <x>338</x>
+     <y>439</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
@@ -195,12 +185,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>103</x>
-     <y>233</y>
+     <x>115</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>292</x>
-     <y>229</y>
+     <x>413</x>
+     <y>388</y>
     </hint>
    </hints>
   </connection>
@@ -211,12 +201,28 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>48</x>
-     <y>236</y>
+     <x>60</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>435</x>
-     <y>246</y>
+     <x>491</x>
+     <y>388</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>monitorList</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>186</y>
     </hint>
    </hints>
   </connection>

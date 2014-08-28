@@ -226,11 +226,15 @@ void MonitorSettingsDialog::setupUi() {
     if(! LVDS && (monitorInfo->name.startsWith("LVDS") || monitorInfo->name.startsWith("PANEL"))) {
       LVDS = monitor;
     }
-    ui.monitorLayout->addWidget(monitor);
-    ui.monitorLayout->setStretchFactor(monitor, 0);
+    ui.stackedWidget->addWidget(monitor);
+    monitor->show();
+    ui.monitorList->addItem(monitor->monitorInfo->name);
     ++i;
   }
-  
+  ui.monitorList->setCurrentRow(0);
+  // set the max width of the list widget to the maximal width of its rows + the width of a vertical scrollbar.
+  ui.monitorList->setMaximumWidth(ui.monitorList->sizeHintForColumn(0) + style()->pixelMetric(QStyle::PM_ScrollBarExtent) + 40);
+
   // are the monitors unified?
   if(monitorsInfo.length() > 1)
     ui.unify->setChecked(backend->isUnified(monitorsInfo));
@@ -247,6 +251,7 @@ void MonitorSettingsDialog::setupUi() {
   }
   else {
     ui.tabWidget->removeTab(0);
+    ui.tabWidget->tabBar()->hide();
   }
 
   adjustSize();
