@@ -206,8 +206,8 @@ LxQtConfig::MainWindow::MainWindow() : QMainWindow()
     view->setUniformItemSizes(true);
     view->setCategoryDrawer(new QCategoryDrawerV3(view));
 
-    connect(view, SIGNAL(activated(const QModelIndex&)),
-            this, SLOT(activateItem(const QModelIndex&)));
+    connect(view, SIGNAL(activated(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
+    view->setFocus();
 
     QTimer::singleShot(1, this, SLOT(load()));
 }
@@ -230,6 +230,7 @@ void LxQtConfig::MainWindow::activateItem(const QModelIndex &index)
 {
     if (!index.isValid())
         return;
+
     QModelIndex orig = proxyModel->mapToSource(index);
     model->activateItem(orig);
 }
