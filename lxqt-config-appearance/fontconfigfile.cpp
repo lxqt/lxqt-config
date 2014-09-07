@@ -50,7 +50,7 @@ FontConfigFile::FontConfigFile(QObject* parent):
     if(mDirPath.isEmpty())
         mDirPath = homeDir % "/.config";
     mDirPath += "/fontconfig";
-    mFilePath = mDirPath += "/fonts.conf";
+    mFilePath = mDirPath + "/fonts.conf";
 
     load();
 }
