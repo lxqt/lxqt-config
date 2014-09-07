@@ -65,6 +65,7 @@ FontsConfig::FontsConfig(LxQt::Settings* settings, QSettings* qtSettings, QWidge
     connect(ui->hinting, SIGNAL(toggled(bool)), SLOT(hintingToggled(bool)));
     connect(ui->hintStyle, SIGNAL(currentIndexChanged(int)), SLOT(hintStyleChanged(int)));
     connect(ui->dpi, SIGNAL(valueChanged(int)), SLOT(dpiChanged(int)));
+    connect(ui->autohint, SIGNAL(toggled(bool)), SLOT(autohintToggled(bool)));
 }
 
 
@@ -95,6 +96,7 @@ void FontsConfig::initControls()
 
     // load fontconfig config
     ui->antialias->setChecked(mFontConfigFile.antialias());
+    ui->autohint->setChecked(mFontConfigFile.autohint());
 
     QByteArray subpixelStr = mFontConfigFile.subpixel();
     int subpixel;
@@ -147,6 +149,11 @@ void FontsConfig::subpixelChanged(int index)
 void FontsConfig::hintStyleChanged(int index)
 {
     mFontConfigFile.setHintStyle(hintStyleNames[index]);
+}
+
+void FontsConfig::autohintToggled(bool toggled)
+{
+    mFontConfigFile.setAutohint(toggled);
 }
 
 void FontsConfig::updateQtFont()

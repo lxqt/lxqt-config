@@ -59,6 +59,11 @@ public:
     }
     void setDpi(int value);
 
+    bool autohint() const {
+        return mAutohint;
+    }
+    void setAutohint(bool value);
+
 private Q_SLOTS:
     void save();
 
@@ -72,6 +77,7 @@ private:
     QByteArray mSubpixel;
     QByteArray mHintStyle;
     int mDpi;
+    bool mAutohint;
     QString mDirPath;
     QString mFilePath;
     QTimer* mSaveTimer;

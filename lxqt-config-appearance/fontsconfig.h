@@ -58,6 +58,7 @@ private Q_SLOTS:
     void subpixelChanged(int index);
     void hintStyleChanged(int index);
     void dpiChanged(int value);
+    void autohintToggled(bool toggled);
 
 private:
     Ui::FontsConfig *ui;

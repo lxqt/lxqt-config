@@ -37,6 +37,7 @@ FontConfigFile::FontConfigFile(QObject* parent):
     mSubpixel("rgb"),
     mHintStyle("hintslight"),
     mDpi(96),
+    mAutohint(false),
     mSaveTimer(NULL)
 {
     mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
@@ -89,6 +90,12 @@ void FontConfigFile::setDpi(int value)
     queueSave();
 }
 
+void FontConfigFile::setAutohint(bool value)
+{
+    mAutohint = value;
+    queueSave();
+}
+
 void FontConfigFile::load()
 {
     QFile file(mFilePath);
@@ -133,6 +140,11 @@ void FontConfigFile::load()
                     QString value = editElem.firstChildElement("double").text();
                     mDpi = value.toInt();
                 }
+                else if(name == "autohint")
+                {
+                    QString value = editElem.firstChildElement("bool").text();
+                    mAutohint = value[0] == 't' ? true : false;
+                }
             }
         }
         else // the config file is created by others => make a backup and write our config
@@ -171,17 +183,30 @@ void FontConfigFile::save()
         "    <edit name=\"antialias\" mode=\"assign\">\n"
         "      <bool>" << (mAntialias ? "true" : "false") << "</bool>\n"
         "    </edit>\n"
+        "  </match>\n"
+        "  <match target=\"font\">\n"
         "    <edit name=\"rgba\" mode=\"assign\">\n"
         "      <const>" << mSubpixel << "</const>\n"
         "    </edit>\n"
+        "  </match>\n"
+        "  <match target=\"font\">\n"
         "    <edit name=\"lcdfilter\" mode=\"assign\">\n"
         "      <const>lcddefault</const>\n"
         "    </edit>\n"
+        "  </match>\n"
+        "  <match target=\"font\">\n"
         "    <edit name=\"hinting\" mode=\"assign\">\n"
         "      <bool>" << (mHinting ? "true" : "false") << "</bool>\n"
         "    </edit>\n"
+        "  </match>\n"
+        "  <match target=\"font\">\n"
         "    <edit name=\"hintstyle\" mode=\"assign\">\n"
         "      <const>" << mHintStyle << "</const>\n"
+        "    </edit>\n"
+        "  </match>\n"
+        "  <match target=\"font\">\n"
+        "    <edit name=\"autohint\" mode=\"assign\">\n"
+        "      <bool>" << (mAutohint ? "true" : "false") << "</bool>\n"
         "    </edit>\n"
         "  </match>\n"
         "  <match target=\"pattern\">\n"
