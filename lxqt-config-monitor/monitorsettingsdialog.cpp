@@ -115,7 +115,7 @@ void MonitorSettingsDialog::onUseBoth() {
     mode = monitor->monitorInfo->modes[i];
     ok = true;
     Q_FOREACH(MonitorWidget * monitor2, monitors) {
-      ok &= monitor2->monitorInfo->modes.contains(mode);
+      ok = ok && monitor2->monitorInfo->modes.contains(mode);
     }
     if(ok)
       break;
@@ -233,7 +233,10 @@ void MonitorSettingsDialog::setupUi() {
   }
   else {
     ui.tabWidget->removeTab(0);
-    ui.tabWidget->tabBar()->hide();
+    //tabBar is protected so we cannot call hide directly
+    //ui.tabWidget->tabBar()->hide();
+    QTabBar *tabBar = qFindChild<QTabBar *>(ui.tabWidget);
+    tabBar->hide();
   }
 
   adjustSize();
