@@ -233,10 +233,14 @@ void MonitorSettingsDialog::setupUi() {
   }
   else {
     ui.tabWidget->removeTab(0);
+#if QT_VERSION >= 0x050000
+    ui.tabWidget->tabBar()->hide();
+#else
     //tabBar is protected so we cannot call hide directly
     //ui.tabWidget->tabBar()->hide();
     QTabBar *tabBar = qFindChild<QTabBar *>(ui.tabWidget);
     tabBar->hide();
+#endif
   }
 
   adjustSize();
