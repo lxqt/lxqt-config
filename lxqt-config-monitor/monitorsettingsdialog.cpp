@@ -31,6 +31,8 @@
 #include <QTimer>
 #include <QProgressBar>
 #include <QDebug>
+#include <QGraphicsTextItem>
+#include <QGraphicsRectItem>
 
 #include "monitorwidget.h"
 #include "timeoutdialog.h"
@@ -233,11 +235,25 @@ void MonitorSettingsDialog::setupUi() {
   }
   else {
     ui.tabWidget->removeTab(0);
-    //tabBar is protected so we cannot call hide directly
-    //ui.tabWidget->tabBar()->hide();
-    QTabBar *tabBar = qFindChild<QTabBar *>(ui.tabWidget);
-    tabBar->hide();
   }
+  
+  // Sets position tab
+  int monitorsWidth = 0.0;
+  int monitorsHeight = 0.0;
+  QGraphicsScene *scene = new QGraphicsScene();
+  Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
+    QGraphicsTextItem *textItem = scene->addText(monitorInfo->name);
+    textItem->setPos(0,0);
+    QGraphicsRectItem *rectItem = scene->addRect(0,0,800,480);
+    rectItem->setAcceptedMouseButtons(Qt::LeftButton);
+    rectItem->setFlags(QGraphicsItem::ItemIsMovable);
+    textItem->setParentItem(rectItem);
+    qreal fontWidth = QFontMetrics(textItem->font()).width(monitorInfo->name+"  "); 
+    textItem->setScale((qreal)rectItem->rect().width()/fontWidth);
+    monitorsWidth+=rectItem->rect().width();
+  }
+  ui.positionGraphicsView->scale(1.0/8.0,1.0/8.0);
+  ui.positionGraphicsView->setScene(scene);
 
   adjustSize();
 }
