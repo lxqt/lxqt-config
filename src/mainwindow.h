@@ -56,6 +56,7 @@ private:
 
 private:
     void builGroup(const QDomElement& xml);
+    bool event(QEvent *event);
 
 private slots:
     void load();

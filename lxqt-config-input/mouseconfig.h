@@ -50,6 +50,7 @@ private Q_SLOTS:
   void onMouseLeftHandedToggled(bool checked);
   void onDoubleClickIntervalChanged(int value);
   void onWheelScrollLinesChanged(int value);
+  void onSingleClickChanged(bool checked);
 
 private:
   Ui::MouseConfig ui;
@@ -61,6 +62,8 @@ private:
   int oldThreshold;
   bool leftHanded;
   bool oldLeftHanded;
+  bool singleClick;
+  bool oldSingleClick;
 };
 
 #endif // MOUSECONFIG_H

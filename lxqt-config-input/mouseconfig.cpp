@@ -25,6 +25,7 @@
 #include <QDir>
 #include <QFile>
 #include <QStringBuilder>
+#include <QDebug>
 
 // FIXME: how to support XCB or Wayland?
 #include <QX11Info>
@@ -44,7 +45,9 @@ MouseConfig::MouseConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWid
   threshold(10),
   oldThreshold(10),
   leftHanded(false),
-  oldLeftHanded(false) {
+  oldLeftHanded(false),
+  singleClick(false),
+  oldSingleClick(false) {
 
   ui.setupUi(this);
 
@@ -57,9 +60,10 @@ MouseConfig::MouseConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWid
   // set_range_stops(ui.mouseThreshold, 10);
   connect(ui.mouseThreshold, SIGNAL(valueChanged(int)), SLOT(onMouseThresholdChanged(int)));
   connect(ui.mouseLeftHanded, SIGNAL(toggled(bool)), SLOT(onMouseLeftHandedToggled(bool)));
-  
+
   connect(ui.doubleClickInterval, SIGNAL(valueChanged(int)), SLOT(onDoubleClickIntervalChanged(int)));
   connect(ui.wheelScrollLines, SIGNAL(valueChanged(int)), SLOT(onWheelScrollLinesChanged(int)));
+  connect(ui.singleClick, SIGNAL(toggled(bool)), SLOT(onSingleClickChanged(bool)));
 }
 
 MouseConfig::~MouseConfig() {
@@ -69,7 +73,9 @@ void MouseConfig::initControls() {
   ui.mouseAccel->setValue(accel);
   ui.mouseThreshold->setValue(110 - threshold);
   ui.mouseLeftHanded->setChecked(leftHanded);
-  
+
+  ui.singleClick->setChecked(qtSettings->value(QLatin1String("single_click_activate"), false).toBool());
+
   qtSettings->beginGroup(QLatin1String("Qt"));
   int value = qtSettings->value(QLatin1String("doubleClickInterval"), 400).toInt();
   ui.doubleClickInterval->setValue(value);
@@ -156,7 +162,18 @@ void MouseConfig::onWheelScrollLinesChanged(int value)
 #endif
 }
 
+void MouseConfig::onSingleClickChanged(bool checked)
+{
+    qtSettings->setValue(QLatin1String("single_click_activate"), checked);
+    qtSettings->sync();
+#ifdef Q_WS_X11
+  qt_x11_apply_settings_in_all_apps();
+#endif
+}
+
 void MouseConfig::loadSettings() {
+  oldSingleClick = singleClick = qtSettings->value("single_click_activate", false).toBool();
+
   settings->beginGroup("Mouse");
   oldAccel = accel = settings->value("acc_factor", 20).toInt();
   oldThreshold = threshold = settings->value("acc_threshold", 10).toInt();
@@ -165,6 +182,8 @@ void MouseConfig::loadSettings() {
 }
 
 void MouseConfig::accept() {
+  qtSettings->setValue("single_click_activate", singleClick);
+
   settings->beginGroup("Mouse");
   settings->setValue("acc_factor", accel);
   settings->setValue("acc_threshold", threshold);
@@ -178,6 +197,7 @@ void MouseConfig::reset() {
   accel = oldAccel;
   threshold = oldThreshold;
   leftHanded = oldLeftHanded;
+  singleClick = oldSingleClick;
   XChangePointerControl(QX11Info::display(), True, True,
                         accel, 10, threshold);
   setLeftHandedMouse();

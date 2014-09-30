@@ -154,10 +154,17 @@
    <item row="5" column="1">
     <widget class="QSpinBox" name="wheelScrollLines"/>
    </item>
-   <item row="6" column="0" colspan="2">
+   <item row="7" column="0" colspan="2">
     <widget class="QCheckBox" name="mouseLeftHanded">
      <property name="text">
       <string>Left handed (Swap left and right mouse buttons)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QCheckBox" name="singleClick">
+     <property name="text">
+      <string>Single click to activate items</string>
      </property>
     </widget>
    </item>
