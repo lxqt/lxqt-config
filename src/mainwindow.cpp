@@ -206,10 +206,38 @@ LxQtConfig::MainWindow::MainWindow() : QMainWindow()
     view->setUniformItemSizes(true);
     view->setCategoryDrawer(new QCategoryDrawerV3(view));
 
-    connect(view, SIGNAL(activated(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
+    // Qt bug: signal activated should respect the hint, but it doesn't
+    if (style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick))
+        connect(view, SIGNAL(clicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
+    else
+        connect(view, SIGNAL(doubleClicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
     view->setFocus();
 
     QTimer::singleShot(1, this, SLOT(load()));
+}
+
+bool LxQtConfig::MainWindow::event(QEvent* event)
+{
+    // LXQt's Qt5 plugin sends a ThemeChange event
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+    if (event->type() == QEvent::ThemeChange)
+    {
+        // Qt bug: signal activated should respect the hint, but it doesn't
+        if (style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick))
+        {
+            view->disconnect(this);
+            connect(view, SIGNAL(clicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
+        }
+        else
+        {
+            view->disconnect(this);
+            connect(view, SIGNAL(doubleClicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
+        }
+    }
+    return QMainWindow::event(event);
+#else
+    return QMainWindow::event(event);
+#endif
 }
 
 void LxQtConfig::MainWindow::load()
