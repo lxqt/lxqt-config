@@ -22,6 +22,8 @@ include_directories (
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
     )
 
+add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
+
 set ( lxqt-config-cursor_HDRS
 #    cfgfile.h
     thememodel.h
@@ -52,6 +54,7 @@ set ( lxqt-config-cursor_SRCS
     itemdelegate.cpp
     thememodel.cpp
     warninglabel.cpp
+    translationloader.cpp
 	)
 
 set(lxqt-config-cursor_UIS
@@ -76,7 +79,7 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config-cursor_SRCS}
         ${lxqt-config-cursor_UIS}
     INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
+        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
 
 #************************************************

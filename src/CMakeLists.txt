@@ -17,6 +17,7 @@ include_directories (
         ${QTXDG_INCLUDE_DIRS}
         ${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview
         )
+add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
 
 set ( lxqt-config_HDRS
 	)
@@ -48,6 +49,8 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config_HDRS}
         ${lxqt-config_SRCS}
         ${lxqt-config_UIS}
+    INSTALLATION_DIR
+        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
 
 lxqt_translate_desktop(DESKTOP_FILES

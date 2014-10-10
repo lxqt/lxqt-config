@@ -12,6 +12,8 @@ endif()
 # set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
 
+add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
+
 include_directories(
   ${QTX_INCLUDE_DIRS}
   ${X11_INCLUDE_DIR}
@@ -59,7 +61,7 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config-input_SRCS}
         ${lxqt-config-input_UIS}
     INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
+        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
 
 lxqt_translate_desktop(DESKTOP_FILES

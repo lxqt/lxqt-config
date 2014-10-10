@@ -17,7 +17,7 @@
 */
 
 #include <LXQt/Application>
-#include "lxqttranslate.h"
+#include <LXQt/Translator>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
 #include "mouseconfig.h"
@@ -27,7 +27,7 @@
 
 int main(int argc, char** argv) {
   LxQt::Application app(argc, argv);
-  TRANSLATE_APP;
+  LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
 
   QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
   if(configName.isEmpty())

@@ -19,13 +19,13 @@
 
 #include "main.h"
 #include <LXQt/Application>
-#include "lxqttranslate.h"
+#include <LXQt/Translator>
 #include "monitorsettingsdialog.h"
 #include "xrandr.h"
 
 int main(int argc, char** argv) {
     LxQt::Application app(argc, argv);
-    TRANSLATE_APP;
+    LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
 
     XRandRBackend *xrandr = new XRandRBackend();
     MonitorSettingsDialog dlg(xrandr);

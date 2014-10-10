@@ -12,6 +12,8 @@ include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
+
 set(H_FILES
     mimetypedata.h
     mimetypeviewer.h
@@ -53,7 +55,7 @@ lxqt_translate_ts(QM_FILES
         ${CPP_FILES} 
         ${UI_FILES}
     INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
+        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
 
 lxqt_translate_desktop(DESKTOP_FILES

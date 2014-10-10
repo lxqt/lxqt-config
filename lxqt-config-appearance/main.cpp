@@ -26,12 +26,12 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/Application>
+#include <LXQt/Translator>
 
 #include <XdgIcon>
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include "iconthemeconfig.h"
-#include "lxqttranslate.h"
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
 #include "fontsconfig.h"
@@ -41,7 +41,10 @@
 int main (int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
-    TRANSLATE_APP;
+    LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
+#if (QT_VERSION < QT_VERSION_CHECK(5, 1, 0))
+    LxQt::Translator::translateLibrary(QLatin1String("lxqt-config-cursor"));
+#endif
 
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);

@@ -7,6 +7,8 @@ else()
   set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
 endif()
 
+add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
+
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
     ${QTX_INCLUDE_DIRS}
@@ -46,7 +48,7 @@ lxqt_translate_ts(QM_FILES
         ${CPP_FILES}
         ${UI_FILES}
     INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
+        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
