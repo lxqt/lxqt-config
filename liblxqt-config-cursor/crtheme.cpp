@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published 
+ * License version 2 or at your option version 3 as published
  * by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -190,21 +190,6 @@ unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) 
     //setCursorName(cursor, name);
     return handle;
 }
-
-#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
-// This is current Qt4 and X11 only
-QCursor XCursorThemeData::loadCursor(const QString &name, int size) const
-{
-    QCursor cursor;
-	// in Qt 4, we can wrap a Cursor handle easily with QCursor.
-    // da*n! creating a cursor from a native handle is no longer supported since Qt5.
-    // we need to extract the image bits directly and create QCursor based on it
-    // without using X cursor handle.
-	Cursor handle = loadCursorHandle(name, size);
-    cursor = QCursor(Qt::HANDLE(handle)); // QCursor takes ownership of the handle
-	return cursor;
-}
-#endif // Qt5
 
 QImage XCursorThemeData::loadImage(const QString &name, int size) const
 {

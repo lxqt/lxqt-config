@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published 
+ * License version 2 or at your option version 3 as published
  * by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -31,10 +31,8 @@
 #include <QString>
 #include <QStringList>
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 #include <xcb/xcb.h>
 #include <xcb/xproto.h>
-#endif
 
 ///////////////////////////////////////////////////////////////////////////////
 // X11 is SHIT!
@@ -81,9 +79,6 @@ public:
     /// If the theme doesn't have the cursor @p name, it should return
     /// the default cursor from the active theme instead.
     unsigned long loadCursorHandle(const QString &name, int size=-1) const;
-#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
-    QCursor loadCursor(const QString &name, int size=-1) const;
-#endif
 
     /// Loads the cursor image @p name, with the nominal size @p size.
     /// The image should be autocropped to the smallest possible size.

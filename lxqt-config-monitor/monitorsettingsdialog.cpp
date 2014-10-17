@@ -1,6 +1,5 @@
 /*
     Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
-    Copyright (C) 2013  <copyright holder> <email>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -233,14 +232,7 @@ void MonitorSettingsDialog::setupUi() {
   }
   else {
     ui.tabWidget->removeTab(0);
-#if QT_VERSION >= 0x050000
     ui.tabWidget->tabBar()->hide();
-#else
-    //tabBar is protected so we cannot call hide directly
-    //ui.tabWidget->tabBar()->hide();
-    QTabBar *tabBar = qFindChild<QTabBar *>(ui.tabWidget);
-    tabBar->hide();
-#endif
   }
 
   adjustSize();

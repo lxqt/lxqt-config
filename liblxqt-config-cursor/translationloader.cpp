@@ -23,7 +23,6 @@
 
 #include <QtGlobal>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <LXQt/Translator>
 #include <QCoreApplication>
 
@@ -33,6 +32,5 @@ static void loadTranslation()
 }
 
 Q_COREAPP_STARTUP_FUNCTION(loadTranslation)
-#endif
 
 #endif // TRANSLATION_LOADER_H

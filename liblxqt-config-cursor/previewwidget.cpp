@@ -30,10 +30,8 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 #include <QX11Info>
 #include <QWindow>
-#endif
 
 namespace {
     // Preview cursors
@@ -76,20 +74,12 @@ class PreviewCursor
     void setPosition (const QPoint &p) { mPos = p; }
     void setPosition (int x, int y) { mPos = QPoint(x, y); }
     QPoint position () const { return mPos; }
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     operator const xcb_cursor_t& () const { return mCursorHandle; }
-#else
-    operator const QCursor& () const { return mCursor; }
-#endif
     operator const QPixmap& () const { return pixmap(); }
 
     private:
     QPixmap mPixmap;
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     xcb_cursor_t mCursorHandle;
-#else
-    QCursor mCursor;
-#endif
     QPoint mPos;
 };
 
@@ -105,11 +95,7 @@ PreviewCursor::PreviewCursor(const XCursorThemeData &theme, const QString &name)
     image = image.scaled(maxSize, maxSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     mPixmap = QPixmap::fromImage(image);
     // load the cursor
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-	mCursorHandle = theme.loadCursorHandle(name, previewSize);
-#else
-    mCursor = theme.loadCursor(name, previewSize);
-#endif
+    mCursorHandle = theme.loadCursorHandle(name, previewSize);
 }
 
 QRect PreviewCursor::rect() const
@@ -131,7 +117,6 @@ PreviewWidget::~PreviewWidget()
     mList.clear();
 }
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
 
 // Since Qt5, wrapping a Cursor handle with QCursor is no longer supported.
 // So we have to do it ourselves. I really hate Qt 5!
@@ -141,8 +126,6 @@ void PreviewWidget::setCursorHandle(xcb_cursor_t cursorHandle)
     xcb_change_window_attributes(QX11Info::connection(), wid, XCB_CW_CURSOR, &cursorHandle);
     xcb_flush(QX11Info::connection());
 }
-
-#endif
 
 
 QSize PreviewWidget::sizeHint() const
@@ -214,7 +197,6 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
         {
             if (c != mCurrent)
             {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
                 // NOTE: we have to set the Qt cursor value to something other than Qt::ArrowCursor
                 // Otherwise, though we set the xcursor handle to the underlying window, Qt still
                 // thinks that the current cursor is Qt::ArrowCursor and will not restore the cursor
@@ -223,9 +205,6 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
                 // This is a dirty hack, but without this, Qt cannot restore Qt::ArrowCursor later.
                 setCursor(Qt::BlankCursor);
                 setCursorHandle(*c);
-#else
-                setCursor(*c);
-#endif
                 mCurrent = c;
             }
             return;

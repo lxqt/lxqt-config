@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://razor-qt.org
+ * http://lxqt.org
  *
  * Copyright: 2010-2011 Razor team
  * Authors:
@@ -219,7 +219,6 @@ LxQtConfig::MainWindow::MainWindow() : QMainWindow()
 bool LxQtConfig::MainWindow::event(QEvent* event)
 {
     // LXQt's Qt5 plugin sends a ThemeChange event
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
     if (event->type() == QEvent::ThemeChange)
     {
         // Qt bug: signal activated should respect the hint, but it doesn't
@@ -235,9 +234,6 @@ bool LxQtConfig::MainWindow::event(QEvent* event)
         }
     }
     return QMainWindow::event(event);
-#else
-    return QMainWindow::event(event);
-#endif
 }
 
 void LxQtConfig::MainWindow::load()

@@ -26,36 +26,32 @@
 #include "keyboardlayoutconfig.h"
 
 int main(int argc, char** argv) {
-  LxQt::Application app(argc, argv);
-  LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
+    LxQt::Application app(argc, argv);
+    LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
 
-  QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
-  if(configName.isEmpty())
-    configName = "session";
-  LxQt::Settings settings(configName);
-  LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
+    QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
+    if(configName.isEmpty())
+      configName = "session";
+    LxQt::Settings settings(configName);
+    LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-  LxQt::Settings qtSettings("lxqt"); // use lxqt config file for Qt settings in Qt5.
-#else
-  QSettings qtSettings(QLatin1String("Trolltech")); // Qt 4.x only (Qt 5 deprecated Trolltech.conf)
-#endif
-  MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
-  dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");
-  QObject::connect(&dlg, SIGNAL(reset()), mouseConfig, SLOT(reset()));
+    LxQt::Settings qtSettings("lxqt");
+    MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
+    dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");
+    QObject::connect(&dlg, SIGNAL(reset()), mouseConfig, SLOT(reset()));
 
-  SelectWnd* cursorConfig = new SelectWnd(&settings, &dlg);
-  cursorConfig->setCurrent();
-  dlg.addPage(cursorConfig, QObject::tr("Cursor"), "preferences-desktop-theme");
-  
-  KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
-  dlg.addPage(keyboardConfig, QObject::tr("Keyboard"), "input-keyboard");
-  QObject::connect(&dlg, SIGNAL(reset()), keyboardConfig, SLOT(reset()));
+    SelectWnd* cursorConfig = new SelectWnd(&settings, &dlg);
+    cursorConfig->setCurrent();
+    dlg.addPage(cursorConfig, QObject::tr("Cursor"), "preferences-desktop-theme");
 
-  KeyboardLayoutConfig* keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
-  dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
-  QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
+    KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
+    dlg.addPage(keyboardConfig, QObject::tr("Keyboard"), "input-keyboard");
+    QObject::connect(&dlg, SIGNAL(reset()), keyboardConfig, SLOT(reset()));
 
-  dlg.exec();
-  return 0;
+    KeyboardLayoutConfig* keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
+    dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
+    QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
+
+    dlg.exec();
+    return 0;
 }
