@@ -233,6 +233,13 @@ bool LxQtConfig::MainWindow::event(QEvent* event)
             connect(view, SIGNAL(doubleClicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
         }
     }
+    else if (event->type() == QEvent::KeyRelease)
+    {
+        int key = static_cast<QKeyEvent*>(event)->key();
+        if (key == Qt::Key_Enter || key == Qt::Key_Return)
+            activateItem(view->selectionModel()->currentIndex());
+    }
+
     return QMainWindow::event(event);
 }
 
