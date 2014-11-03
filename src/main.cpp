@@ -26,14 +26,12 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/Application>
-#include <LXQt/Translator>
 #include "mainwindow.h"
 
 
 int main(int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
-    LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
 
     // ensure that we use lxqt-config.menu file.
     qputenv("XDG_MENU_PREFIX", "lxqt-");

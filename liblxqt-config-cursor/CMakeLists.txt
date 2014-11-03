@@ -16,8 +16,6 @@ include_directories (
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
 )
 
-add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
-
 set(lxqt-config-cursor_HDRS
     thememodel.h
     previewwidget.h
@@ -39,7 +37,6 @@ set(lxqt-config-cursor_SRCS
     itemdelegate.cpp
     thememodel.cpp
     warninglabel.cpp
-    translationloader.cpp
 )
 
 set(lxqt-config-cursor_UIS
@@ -52,17 +49,20 @@ find_package(ZLIB REQUIRED)
 qt5_wrap_ui(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
 
 # Translations **********************************
-include(LxQtTranslate)
 lxqt_translate_ts(QM_FILES SOURCES
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     ${lxqt-config-cursor_HDRS}
     ${lxqt-config-cursor_SRCS}
     ${lxqt-config-cursor_UIS}
-    INSTALLATION_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
+
+lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
 
 #************************************************
 
-add_library(lxqt-config-cursor SHARED ${lxqt-config-cursor_SRCS} ${lxqt-config-cursor_CXX} ${lxqt-config-cursor_MOCS} ${DESKTOP_FILES} ${QM_FILES})
+add_library(lxqt-config-cursor SHARED
+    ${lxqt-config-cursor_SRCS} ${lxqt-config-cursor_CXX} ${lxqt-config-cursor_MOCS} ${DESKTOP_FILES} ${QM_FILES} ${lxqt-config-cursor_QM_LOADER})
 target_link_libraries(lxqt-config-cursor ${QTX_LIBRARIES} ${X11_X11_LIB} ${X11_Xcursor_LIB} ${LXQT_LIBRARIES} ${QTXDG_LIBRARIES} ${ZLIB_LIBRARY} ${X11_Xfixes_LIB})
 # not needed probably ${X11_Xfixes_LIB})
 

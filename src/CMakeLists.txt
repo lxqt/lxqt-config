@@ -11,7 +11,6 @@ include_directories (
     ${QTXDG_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
 )
-add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
 
 set(lxqt-config_HDRS "")
 
@@ -31,18 +30,20 @@ set(lxqt-config_UIS
 qt5_wrap_ui(UIS ${lxqt-config_UIS})
 
 # Translations **********************************
-include(LxQtTranslate)
 lxqt_translate_ts(QM_FILES SOURCES
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     ${lxqt-config_HDRS}
     ${lxqt-config_SRCS}
     ${lxqt-config_UIS}
-    INSTALLATION_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
+lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config.desktop.in)
+
 #************************************************
 
-add_executable(lxqt-config ${lxqt-config_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${QM_FILES})
+add_executable(lxqt-config ${lxqt-config_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${QM_FILES} ${QM_LOADER})
 target_link_libraries(lxqt-config
     ${QTX_LIBRARIES}
     ${QTXDG_LIBRARIES}

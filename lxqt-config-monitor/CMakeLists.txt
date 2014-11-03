@@ -2,7 +2,6 @@ project(lxqt-config-monitor)
 set(QTX_INCLUDE_DIRS "")
 set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
 
-add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
 
 include_directories (
     "${CMAKE_CURRENT_BINARY_DIR}"
@@ -36,19 +35,20 @@ set(UI_FILES
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
 # Translations **********************************
-include(LxQtTranslate)
 lxqt_translate_ts(QM_FILES SOURCES
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     ${H_FILES}
     ${CPP_FILES}
     ${UI_FILES}
-    INSTALLATION_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
+lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 #************************************************
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
+add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES} ${QM_LOADER})
 target_link_libraries(${PROJECT_NAME} ${QTX_LIBRARIES} ${LXQT_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

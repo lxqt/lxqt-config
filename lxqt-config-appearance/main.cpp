@@ -26,7 +26,6 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/Application>
-#include <LXQt/Translator>
 
 #include <XdgIcon>
 #include <LXQt/Settings>
@@ -41,7 +40,6 @@
 int main (int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
-    LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
 
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);

@@ -7,7 +7,6 @@ include_directories(
     "${CMAKE_CURRENT_BINARY_DIR}"
 )
 
-add_definitions(-DPROJECT_NAME=\"${PROJECT_NAME}\")
 
 set(H_FILES
     mimetypedata.h
@@ -41,14 +40,15 @@ set(LIBRARIES
 )
 
 # Translations **********************************
-include(LxQtTranslate)
 lxqt_translate_ts(QM_FILES SOURCES
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     ${H_FILES}
     ${CPP_FILES}
     ${UI_FILES}
-    INSTALLATION_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
+lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 #************************************************
@@ -56,7 +56,7 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 qt5_add_resources(QRC_SOURCES ${QRC_FILES})
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
+add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${QM_LOADER} ${MOC_SOURCES} ${DESKTOP_FILES})
 target_link_libraries(${PROJECT_NAME}  ${LIBRARIES} ${QTX_LIBRARIES})
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

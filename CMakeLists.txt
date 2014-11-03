@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 2.8.11)
 
 project(lxqt-config)
 
-# additional cmake files
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 # Set default installation paths
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
@@ -23,6 +22,8 @@ find_package(qt5xdg REQUIRED)
 
 include(${LXQT_USE_FILE})
 include(${QTXDG_USE_FILE})
+
+include(LXQtTranslate)
 
 add_subdirectory(src)
 add_subdirectory(liblxqt-config-cursor)

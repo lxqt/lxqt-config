@@ -24,7 +24,6 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/Application>
-#include <LXQt/Translator>
 
 #include <QDebug>
 #include <QString>
@@ -35,7 +34,6 @@
 #include <QVariant>
 
 #include <LXQt/Settings>
-#include "lxqttranslate.h"
 #include <XdgDesktopFile>
 #include "mimetypeviewer.h"
 #include <XdgDirs>
@@ -43,7 +41,6 @@
 int main (int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
-    LxQt::Translator::translateApplication(QLatin1String(PROJECT_NAME));
 
     MimetypeViewer mimetypeViewer;
     mimetypeViewer.show();
