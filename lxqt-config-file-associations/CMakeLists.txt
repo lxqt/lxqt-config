@@ -1,8 +1,5 @@
 project(lxqt-config-file-associations)
 
-set(QTX_INCLUDE_DIRS  "")
-set(QTX_LIBRARIES Qt5::Widgets Qt5::Xml Qt5::Xml Qt5::DBus Qt5::Concurrent)
-
 include_directories(
     "${CMAKE_CURRENT_BINARY_DIR}"
 )
@@ -57,7 +54,13 @@ qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 qt5_add_resources(QRC_SOURCES ${QRC_FILES})
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${QM_LOADER} ${MOC_SOURCES} ${DESKTOP_FILES})
-target_link_libraries(${PROJECT_NAME}  ${LIBRARIES} ${QTX_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}
+    Qt5::Xml
+    Qt5::DBus
+    Qt5::Widgets
+    Qt5::Concurrent
+    ${LIBRARIES}
+)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

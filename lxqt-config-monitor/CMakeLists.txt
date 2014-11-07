@@ -1,11 +1,7 @@
 project(lxqt-config-monitor)
-set(QTX_INCLUDE_DIRS "")
-set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
-
 
 include_directories (
     "${CMAKE_CURRENT_BINARY_DIR}"
-    ${QTX_INCLUDE_DIRS}
     ${LXQT_INCLUDE_DIRS}
 )
 
@@ -49,7 +45,11 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 #************************************************
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES} ${QM_LOADER})
-target_link_libraries(${PROJECT_NAME} ${QTX_LIBRARIES} ${LXQT_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}
+    Qt5::Widgets
+    Qt5::X11Extras
+    ${LXQT_LIBRARIES}
+)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")

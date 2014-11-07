@@ -1,14 +1,10 @@
 project(lxqt-config-input)
 find_package(X11 REQUIRED)
 
-set(QTX_INCLUDE_DIRS  "")
-set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
-
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
 
 
 include_directories(
-    ${QTX_INCLUDE_DIRS}
     ${X11_INCLUDE_DIR}
     ${LXQT_INCLUDE_DIRS}
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -60,7 +56,13 @@ add_definitions(
 )
 
 add_executable(lxqt-config-input ${lxqt-config-input_SRCS} ${lxqt-config-input_UI_H} ${lxqt-config-input_MOCS} ${DESKTOP_FILES} ${QM_FILES} ${QM_LOADER})
-target_link_libraries(lxqt-config-input ${QTX_LIBRARIES} ${X11_LIBRARIES} ${LXQT_LIBRARIES} lxqt-config-cursor)
+target_link_libraries(lxqt-config-input
+    Qt5::Widgets
+    Qt5::X11Extras
+    ${X11_LIBRARIES}
+    ${LXQT_LIBRARIES}
+    lxqt-config-cursor
+)
 
 install(TARGETS lxqt-config-input RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")

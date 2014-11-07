@@ -1,12 +1,8 @@
 project(lxqt-config)
 add_subdirectory(qcategorizedview)
 
-set(QTX_INCLUDE_DIRS  "")
-set(QTX_LIBRARIES Qt5::Widgets Qt5::Xml)
-
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${QTX_INCLUDE_DIRS}
     ${LXQT_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
@@ -45,7 +41,8 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config.desktop.in)
 
 add_executable(lxqt-config ${lxqt-config_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${QM_FILES} ${QM_LOADER})
 target_link_libraries(lxqt-config
-    ${QTX_LIBRARIES}
+    Qt5::Widgets
+    Qt5::Xml
     ${QTXDG_LIBRARIES}
     ${LXQT_LIBRARIES}
 )
