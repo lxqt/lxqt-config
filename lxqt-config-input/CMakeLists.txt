@@ -38,12 +38,15 @@ set(lxqt-config-input_UIS
 qt5_wrap_ui(lxqt-config-input_UI_H ${lxqt-config-input_UIS})
 
 # Translations **********************************
-lxqt_translate_ts(QM_FILES SOURCES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
-    ${lxqt-config-input_HDRS}
-    ${lxqt-config-input_SRCS}
-    ${lxqt-config-input_UIS}
-    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+lxqt_translate_ts(QM_FILES
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
+    SOURCES
+        ${lxqt-config-input_HDRS}
+        ${lxqt-config-input_SRCS}
+        ${lxqt-config-input_UIS}
+    INSTALL_DIR
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
@@ -55,7 +58,15 @@ add_definitions(
   -DPACKAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lxqt-config-input"
 )
 
-add_executable(lxqt-config-input ${lxqt-config-input_SRCS} ${lxqt-config-input_UI_H} ${lxqt-config-input_MOCS} ${DESKTOP_FILES} ${QM_FILES} ${QM_LOADER})
+add_executable(lxqt-config-input
+    ${lxqt-config-input_SRCS}
+    ${lxqt-config-input_UI_H}
+    ${lxqt-config-input_MOCS}
+    ${DESKTOP_FILES}
+    ${QM_FILES}
+    ${QM_LOADER}
+)
+
 target_link_libraries(lxqt-config-input
     Qt5::Widgets
     Qt5::X11Extras

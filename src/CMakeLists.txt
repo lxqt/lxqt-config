@@ -26,12 +26,15 @@ set(lxqt-config_UIS
 qt5_wrap_ui(UIS ${lxqt-config_UIS})
 
 # Translations **********************************
-lxqt_translate_ts(QM_FILES SOURCES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
-    ${lxqt-config_HDRS}
-    ${lxqt-config_SRCS}
-    ${lxqt-config_UIS}
-    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+lxqt_translate_ts(QM_FILES
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
+    SOURCES
+        ${lxqt-config_HDRS}
+        ${lxqt-config_SRCS}
+        ${lxqt-config_UIS}
+    INSTALL_DIR
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
@@ -39,7 +42,15 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config.desktop.in)
 
 #************************************************
 
-add_executable(lxqt-config ${lxqt-config_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${QM_FILES} ${QM_LOADER})
+add_executable(lxqt-config
+    ${lxqt-config_SRCS}
+    ${UIS}
+    ${MOCS}
+    ${DESKTOP_FILES}
+    ${QM_FILES}
+    ${QM_LOADER}
+)
+
 target_link_libraries(lxqt-config
     Qt5::Widgets
     Qt5::Xml

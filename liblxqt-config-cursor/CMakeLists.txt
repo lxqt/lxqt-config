@@ -2,6 +2,7 @@ project(lxqt-config-cursor)
 find_package(X11 REQUIRED)
 
 find_package(PkgConfig REQUIRED)
+
 pkg_check_modules(XCB REQUIRED xcb)
 include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})
@@ -46,20 +47,31 @@ find_package(ZLIB REQUIRED)
 qt5_wrap_ui(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
 
 # Translations **********************************
-lxqt_translate_ts(QM_FILES SOURCES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
-    ${lxqt-config-cursor_HDRS}
-    ${lxqt-config-cursor_SRCS}
-    ${lxqt-config-cursor_UIS}
-    INSTALL_DIR "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+lxqt_translate_ts(QM_FILES
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
+    SOURCES
+        ${lxqt-config-cursor_HDRS}
+        ${lxqt-config-cursor_SRCS}
+        ${lxqt-config-cursor_UIS}
+    INSTALL_DIR
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
 
 #************************************************
 
-add_library(lxqt-config-cursor SHARED
-    ${lxqt-config-cursor_SRCS} ${lxqt-config-cursor_CXX} ${lxqt-config-cursor_MOCS} ${DESKTOP_FILES} ${QM_FILES} ${lxqt-config-cursor_QM_LOADER})
+add_library(lxqt-config-cursor
+    SHARED
+        ${lxqt-config-cursor_SRCS}
+        ${lxqt-config-cursor_CXX}
+        ${lxqt-config-cursor_MOCS}
+        ${DESKTOP_FILES}
+        ${QM_FILES}
+        ${lxqt-config-cursor_QM_LOADER}
+)
+
 target_link_libraries(lxqt-config-cursor
     Qt5::X11Extras
     Qt5::DBus
