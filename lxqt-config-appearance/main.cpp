@@ -66,6 +66,7 @@ int main (int argc, char **argv)
     dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << "input-mouse" << "preferences-desktop");
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setWindowIcon(QIcon::fromTheme("preferences-desktop-theme"));
     dialog->show();
 
     return app.exec();

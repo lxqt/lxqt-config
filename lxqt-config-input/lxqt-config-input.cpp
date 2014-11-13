@@ -50,6 +50,8 @@ int main(int argc, char** argv) {
     dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
     QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
 
+    dlg.setWindowIcon(QIcon::fromTheme("input-keyboard"));
+
     dlg.exec();
     return 0;
 }

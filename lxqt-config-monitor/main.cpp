@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 
     XRandRBackend *xrandr = new XRandRBackend();
     MonitorSettingsDialog dlg(xrandr);
-    dlg.setWindowIcon(QIcon(QIcon::fromTheme("display")));
+    dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
     dlg.show();
 
     return app.exec();

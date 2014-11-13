@@ -43,6 +43,7 @@ int main (int argc, char **argv)
     LxQt::Application app(argc, argv);
 
     MimetypeViewer mimetypeViewer;
+    mimetypeViewer.setWindowIcon(QIcon::fromTheme("preferences-desktop-filetype-association"));
     mimetypeViewer.show();
 
     return app.exec();
