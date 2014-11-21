@@ -25,18 +25,19 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/Application>
+#include <LXQt/SingleApplication>
 #include "mainwindow.h"
 
 
 int main(int argc, char **argv)
 {
-    LxQt::Application app(argc, argv);
+    LxQt::SingleApplication app(argc, argv);
 
     // ensure that we use lxqt-config.menu file.
     qputenv("XDG_MENU_PREFIX", "lxqt-");
 
     LxQtConfig::MainWindow w;
+    app.setActivationWindow(&w);
     w.show();
 
     return app.exec();

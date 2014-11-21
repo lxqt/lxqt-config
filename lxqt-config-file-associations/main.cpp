@@ -23,7 +23,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/Application>
+#include <LXQt/SingleApplication>
 
 #include <QDebug>
 #include <QString>
@@ -40,9 +40,10 @@
 
 int main (int argc, char **argv)
 {
-    LxQt::Application app(argc, argv);
+    LxQt::SingleApplication app(argc, argv);
 
     MimetypeViewer mimetypeViewer;
+    app.setActivationWindow(&mimetypeViewer);
     mimetypeViewer.setWindowIcon(QIcon::fromTheme("preferences-desktop-filetype-association"));
     mimetypeViewer.show();
 

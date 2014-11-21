@@ -16,7 +16,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <LXQt/Application>
+#include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
 #include "mouseconfig.h"
@@ -25,13 +25,14 @@
 #include "keyboardlayoutconfig.h"
 
 int main(int argc, char** argv) {
-    LxQt::Application app(argc, argv);
+    LxQt::SingleApplication app(argc, argv);
 
     QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
     if(configName.isEmpty())
       configName = "session";
     LxQt::Settings settings(configName);
     LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
+    app.setActivationWindow(&dlg);
 
     LxQt::Settings qtSettings("lxqt");
     MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);

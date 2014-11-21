@@ -52,6 +52,7 @@ add_executable(lxqt-config
 )
 
 target_link_libraries(lxqt-config
+    KF5::WindowSystem
     Qt5::Widgets
     Qt5::Xml
     ${QTXDG_LIBRARIES}

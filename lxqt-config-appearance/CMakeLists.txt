@@ -76,6 +76,7 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
+    KF5::WindowSystem
     Qt5::Widgets
     Qt5::X11Extras
     Qt5::Xml
