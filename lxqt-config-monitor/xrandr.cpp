@@ -54,6 +54,7 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   // set locale to "C" guarantee English output of xrandr
   process.processEnvironment().insert("LC_ALL", "c");
   process.start("xrandr --verbose");
+  //process.start("cat pruebas.txt");
   process.waitForFinished(-1);
   if(process.exitCode() != 0)
     return monitors;
@@ -198,6 +199,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
 
 bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) {
   QString cmd = getCommand(monitors);
+  qDebug() << cmd;
+  return true;
   QProcess process;
   process.start(cmd);
   process.waitForFinished();
@@ -244,7 +247,7 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
         cmd.append(" ");
         cmd.append(monitor->positionRelativeToOutput);
       } else
-          cmd.append(" --pos 0x0");
+          cmd.append(QString(" --pos %1x%2").arg(monitor->xPos).arg(monitor->yPos));
       if(monitor->primaryOk)
         cmd.append(" --primary");
       cmd.append(" --brightness ");

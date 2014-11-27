@@ -47,6 +47,10 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     // turn off screen is not allowed since there should be at least one monitor available.
     ui.enabled->setEnabled(false);
   }
+  
+  ui.xPosSpinBox->setValue(monitor->xPos);
+  ui.yPosSpinBox->setValue(monitor->yPos);
+  connect(monitor, SIGNAL(positionChanged(int,int)), this, SLOT(monitorPositionChanged(int,int)));
 
   if(monitor->enabledOk)
     ui.enabled->setChecked(true);
@@ -122,6 +126,8 @@ MonitorSettings* MonitorWidget::getSettings() {
     s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
     s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
   }
+  s->xPos=ui.xPosSpinBox->value();
+  s->yPos=ui.yPosSpinBox->value();
   s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
   s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
   return s;
@@ -134,4 +140,10 @@ void MonitorWidget::chooseMaxResolution() {
 
 void MonitorWidget::enableMonitor(bool enable) {
   ui.enabled->setChecked(enable);
+}
+
+void MonitorWidget::monitorPositionChanged(int x, int y) {
+  ui.xPosSpinBox->setValue(x);
+  ui.yPosSpinBox->setValue(y);
+  qDebug() << "[MonitorWidget::monitorPositionChanged] Position changed " << x << "," << y;
 }

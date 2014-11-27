@@ -31,13 +31,11 @@
 #include <QTimer>
 #include <QProgressBar>
 #include <QDebug>
-#include <QGraphicsTextItem>
-#include <QGraphicsRectItem>
 
 #include "monitorwidget.h"
 #include "timeoutdialog.h"
 #include "xrandr.h"
-
+#include "monitorpicture.h"
 
 MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend):
   QDialog(NULL, 0),
@@ -191,6 +189,11 @@ void MonitorSettingsDialog::setupUi() {
   }
 
   int i = 0;
+  int monitorsWidth = 100.0;
+  int monitorsHeight = 100.0;
+  QGraphicsScene *scene = new QGraphicsScene();
+  scene->addLine(-10000,0,10000,0, QPen(Qt::blue, 20));
+  scene->addLine(0,-10000,0,10000, QPen(Qt::blue, 20));
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
     ui.primaryCombo->addItem(monitorInfo->name);
     if(monitorInfo->primaryOk)
@@ -214,6 +217,16 @@ void MonitorSettingsDialog::setupUi() {
     ui.stackedWidget->addWidget(monitor);
     ui.monitorList->addItem(monitor->monitorInfo->name);
     ++i;
+    
+    // Sets position tab
+    MonitorPicture *monitorPicture = new MonitorPicture(NULL, monitorInfo);	
+    scene->addItem(monitorPicture);
+    monitorsWidth+=monitorPicture->rect().width();
+    monitorsHeight+=monitorPicture->rect().height();
+    MonitorPictureQObject *monitorPictureQObject = new MonitorPictureQObject(monitorPicture, this);
+    connect(monitor->ui.xPosSpinBox, SIGNAL(valueChanged(int)), monitorPictureQObject, SLOT(setXMonitorPosition(int)));
+    connect(monitor->ui.yPosSpinBox, SIGNAL(valueChanged(int)), monitorPictureQObject, SLOT(setYMonitorPosition(int)));
+    connect(monitor->ui.resolutionCombo, SIGNAL(currentIndexChanged(const QString &)), monitorPictureQObject, SLOT(setSize(const QString)));
   }
   ui.monitorList->setCurrentRow(0);
   // set the max width of the list widget to the maximal width of its rows + the width of a vertical scrollbar.
@@ -237,22 +250,9 @@ void MonitorSettingsDialog::setupUi() {
     ui.tabWidget->removeTab(0);
   }
   
-  // Sets position tab
-  int monitorsWidth = 0.0;
-  int monitorsHeight = 0.0;
-  QGraphicsScene *scene = new QGraphicsScene();
-  Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
-    QGraphicsTextItem *textItem = scene->addText(monitorInfo->name);
-    textItem->setPos(0,0);
-    QGraphicsRectItem *rectItem = scene->addRect(0,0,800,480);
-    rectItem->setAcceptedMouseButtons(Qt::LeftButton);
-    rectItem->setFlags(QGraphicsItem::ItemIsMovable);
-    textItem->setParentItem(rectItem);
-    qreal fontWidth = QFontMetrics(textItem->font()).width(monitorInfo->name+"  "); 
-    textItem->setScale((qreal)rectItem->rect().width()/fontWidth);
-    monitorsWidth+=rectItem->rect().width();
-  }
-  ui.positionGraphicsView->scale(1.0/8.0,1.0/8.0);
+
+  qDebug() << "monitorsWidth: " << monitorsWidth << "monitorsHeight: " << monitorsHeight;
+  ui.positionGraphicsView->scale(200.0/(float)monitorsWidth,200.0/(float)monitorsHeight);
   ui.positionGraphicsView->setScene(scene);
 
   adjustSize();

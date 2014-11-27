@@ -35,8 +35,8 @@ public:
   QString currentRate;
   QString gamma;
   QString brightness;
-  int xPos; // not used yet
-  int yPos; // not used yet
+  int xPos;
+  int yPos;
   bool enabledOk;
   enum Position {None = 0, Left, Right, Above, Bellow};
   Position position;
@@ -45,6 +45,10 @@ public:
 
   QSize currentSize();
   QRect geometry();
+  void setPos(int x, int y); // It is used by MonitorPicture to update position. It emits positionChanged.
+
+signals:
+  void positionChanged(int x, int y);
 };
 
 
@@ -73,5 +77,8 @@ public:
   virtual QString getCommand(const QList<MonitorSettings*> monitors) = 0;
   virtual bool isUnified(const QList<MonitorInfo*> monitors);
 };
+
+/**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
+QSize sizeFromString(QString str);
 
 #endif // _MONITOR_H_
