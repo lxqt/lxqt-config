@@ -22,7 +22,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="quickOptionsTab">
       <attribute name="title">
@@ -114,6 +114,13 @@
           </widget>
          </item>
          <item>
+          <widget class="QPushButton" name="positionPushButton">
+           <property name="text">
+            <string>Monitor Position</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -143,16 +150,6 @@
           </widget>
          </item>
         </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab">
-      <attribute name="title">
-       <string>Position</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QGraphicsView" name="positionGraphicsView"/>
        </item>
       </layout>
      </widget>

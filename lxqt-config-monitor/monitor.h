@@ -38,9 +38,8 @@ public:
   int xPos;
   int yPos;
   bool enabledOk;
-  enum Position {None = 0, Left, Right, Above, Bellow};
+  enum Position {None = 0, Manual};
   Position position;
-  QString positionRelativeToOutput;
   bool primaryOk;
 
   QSize currentSize();

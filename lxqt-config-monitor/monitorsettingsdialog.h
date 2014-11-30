@@ -55,6 +55,8 @@ private Q_SLOTS:
   void onExtended();
 
   void onDialogButtonClicked(QAbstractButton* button);
+  void onPositionButtonClicked();
+  void disablePositionOption(bool disable);
 
 private:
   Ui::MonitorSettingsDialog ui;

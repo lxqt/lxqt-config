@@ -29,20 +29,8 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
 
   ui.setupUi(this);
 
-  ui.relativeToOutputCombo->addItem(tr("Default"));
-  Q_FOREACH(MonitorInfo * other, monitorsInfo) {
-    if(other != monitor) {
-      ui.relativeToOutputCombo->addItem(other->name);
-      if(monitor->positionRelativeToOutput == other->name)
-        ui.relativeToOutputCombo->setCurrentIndex(ui.relativeToOutputCombo->count() - 1);
-    }
-  }
-  ui.positionCombo->setCurrentIndex(monitor->position);
-
   if(monitorsInfo.length() == 1) {
-    ui.positionCombo->setEnabled(false);
-    ui.relativeToOutputCombo->setEnabled(false);
-    ui.positionLabel->setEnabled(false);
+    disablePositionOption(true);
 
     // turn off screen is not allowed since there should be at least one monitor available.
     ui.enabled->setEnabled(false);
@@ -109,8 +97,10 @@ void MonitorWidget::onResolutionChanged(int index) {
 
 void MonitorWidget::disablePositionOption(bool disable) {
   bool enable = !disable;
-  ui.positionCombo->setEnabled(enable);
-  ui.relativeToOutputCombo->setEnabled(enable);
+  ui.xPosSpinBox->setEnabled(enable);
+  ui.yPosSpinBox->setEnabled(enable);
+  ui.xPosLabel->setEnabled(enable);
+  ui.yPosLabel->setEnabled(enable);
   ui.positionLabel->setEnabled(enable);
 }
 
@@ -120,11 +110,10 @@ MonitorSettings* MonitorWidget::getSettings() {
   s->enabledOk = ui.enabled->isChecked();
   s->currentMode = ui.resolutionCombo->currentText();
   s->currentRate = ui.rateCombo->currentText();
-  if( ui.relativeToOutputCombo->currentIndex()==0 ) // If no relative monitor is selected, then position is disabled.
+  if( ! ui.xPosSpinBox->isEnabled() ) { // If no unify monitor is selected, then position is disabled.
     s->position = MonitorSettings::None;
-  else {
-    s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
-    s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
+  } else {
+    s->position = MonitorSettings::Manual;
   }
   s->xPos=ui.xPosSpinBox->value();
   s->yPos=ui.yPosSpinBox->value();

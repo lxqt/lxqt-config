@@ -70,47 +70,18 @@
    </item>
    <item row="3" column="1">
     <layout class="QFormLayout" name="formLayout_2">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
      <item row="0" column="0">
-      <widget class="QComboBox" name="positionCombo">
-       <item>
-        <property name="text">
-         <string>Default</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Left of</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Right of</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Above of</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Below of</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="relativeToOutputCombo"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="yPosLabel">
+      <widget class="QLabel" name="xPosLabel">
        <property name="text">
-        <string>y:</string>
+        <string>x:</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QSpinBox" name="yPosSpinBox">
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="xPosSpinBox">
        <property name="minimum">
         <number>-10000000</number>
        </property>
@@ -120,14 +91,14 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="xPosLabel">
+      <widget class="QLabel" name="yPosLabel">
        <property name="text">
-        <string>x:</string>
+        <string>y:</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QSpinBox" name="xPosSpinBox">
+      <widget class="QSpinBox" name="yPosSpinBox">
        <property name="minimum">
         <number>-10000000</number>
        </property>

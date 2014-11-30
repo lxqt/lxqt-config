@@ -20,40 +20,43 @@
 #ifndef _MONITORPICTURE_H_
 #define _MONITORPICTURE_H_
 
+#include <QGraphicsView>
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
+#include <QDialog>
 #include "monitor.h"
+#include "ui_monitorpicture.h"
+#include "monitorwidget.h"
+
+class MonitorPicture;
+
+class MonitorPictureDialog: public QDialog {
+  Q_OBJECT
+public:
+  MonitorPictureDialog(QWidget * parent = 0, Qt::WindowFlags f = 0);
+  void setScene(QList<MonitorWidget*> monitors);
+  void updateMonitorWidgets(QString primaryMonitor);
+private:
+  Ui::MonitorPictureDialog ui;
+  QList<MonitorPicture*> pictures;
+};
+
 
 class MonitorPicture: public QGraphicsRectItem {
 
 public:
-  MonitorPicture(QGraphicsItem * parent, MonitorInfo *monitorInfo);
+  MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWidget);
   void setMonitorPosition(int x, int y);
   void adjustNameSize();
+  
+  MonitorWidget *monitorWidget;
     
 private:
   QGraphicsTextItem *textItem;
-  MonitorInfo *monitorInfo;
 
 protected:
   QVariant itemChange(GraphicsItemChange change, const QVariant & value);
 };
 
-
-/**MonitorPicture is not a QObject child. MonitorPictureQOboject is used to provide SLOTs to MonitorPicture.*/
-class MonitorPictureQObject: public QObject {
-Q_OBJECT
-public:
-  MonitorPictureQObject(MonitorPicture *monitorPicture, QObject *parent=0);
-
-public Q_SLOTS:
-  void setXMonitorPosition(int x);
-  void setYMonitorPosition(int y);
-  void setSize(QSize size);
-  void setSize(const QString rate);
-
-private:
-  MonitorPicture *monitorPicture;
-};
 
 #endif // _MONITORPICTURE_H_

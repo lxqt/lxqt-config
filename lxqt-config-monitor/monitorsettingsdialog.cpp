@@ -153,18 +153,15 @@ void MonitorSettingsDialog::onLaptopOnly() {
 
 void MonitorSettingsDialog::onExtended() {
   ui.unify->setChecked(false);
-  int i = 0;
+  int virtualWidth = 0;
   Q_FOREACH(MonitorWidget * monitor, monitors) {
     monitor->chooseMaxResolution();
     monitor->enableMonitor(true);
-    if(i == 0) {
-      monitor->ui.positionCombo->setCurrentIndex(0);
-    }
-    else {
-      monitor->ui.positionCombo->setCurrentIndex(1);
-      monitor->ui.relativeToOutputCombo->setCurrentIndex(i);
-    }
-    i++;
+    monitor->disablePositionOption(false);
+    QSize size = sizeFromString(monitor->ui.resolutionCombo->currentText());
+    monitor->ui.xPosSpinBox->setValue(virtualWidth);
+    monitor->ui.yPosSpinBox->setValue(0);
+    virtualWidth+=size.width();
   }
   setMonitorsConfig();
 }
@@ -176,6 +173,7 @@ void MonitorSettingsDialog::setupUi() {
   connect(ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
   connect(ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
   connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
+  connect(ui.positionPushButton, SIGNAL(clicked()), SLOT(onPositionButtonClicked()));
 
   // Get monitors information
   QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
@@ -189,11 +187,7 @@ void MonitorSettingsDialog::setupUi() {
   }
 
   int i = 0;
-  int monitorsWidth = 100.0;
-  int monitorsHeight = 100.0;
-  QGraphicsScene *scene = new QGraphicsScene();
-  scene->addLine(-10000,0,10000,0, QPen(Qt::blue, 20));
-  scene->addLine(0,-10000,0,10000, QPen(Qt::blue, 20));
+  connect(ui.unify, SIGNAL(toggled(bool)), this, SLOT(disablePositionOption(bool)));
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
     ui.primaryCombo->addItem(monitorInfo->name);
     if(monitorInfo->primaryOk)
@@ -217,16 +211,6 @@ void MonitorSettingsDialog::setupUi() {
     ui.stackedWidget->addWidget(monitor);
     ui.monitorList->addItem(monitor->monitorInfo->name);
     ++i;
-    
-    // Sets position tab
-    MonitorPicture *monitorPicture = new MonitorPicture(NULL, monitorInfo);	
-    scene->addItem(monitorPicture);
-    monitorsWidth+=monitorPicture->rect().width();
-    monitorsHeight+=monitorPicture->rect().height();
-    MonitorPictureQObject *monitorPictureQObject = new MonitorPictureQObject(monitorPicture, this);
-    connect(monitor->ui.xPosSpinBox, SIGNAL(valueChanged(int)), monitorPictureQObject, SLOT(setXMonitorPosition(int)));
-    connect(monitor->ui.yPosSpinBox, SIGNAL(valueChanged(int)), monitorPictureQObject, SLOT(setYMonitorPosition(int)));
-    connect(monitor->ui.resolutionCombo, SIGNAL(currentIndexChanged(const QString &)), monitorPictureQObject, SLOT(setSize(const QString)));
   }
   ui.monitorList->setCurrentRow(0);
   // set the max width of the list widget to the maximal width of its rows + the width of a vertical scrollbar.
@@ -235,8 +219,10 @@ void MonitorSettingsDialog::setupUi() {
   // are the monitors unified?
   if(monitorsInfo.length() > 1)
     ui.unify->setChecked(backend->isUnified(monitorsInfo));
-  else // disable the option if we only have one monitor
+  else {// disable the option if we only have one monitor
     ui.unify->setEnabled(false);
+    ui.positionPushButton->setEnabled(false);
+  }
 
   // If this is a laptop and there is an external monitor, offer quick options
   if(monitors.length() == 2) {
@@ -249,11 +235,6 @@ void MonitorSettingsDialog::setupUi() {
   else {
     ui.tabWidget->removeTab(0);
   }
-  
-
-  qDebug() << "monitorsWidth: " << monitorsWidth << "monitorsHeight: " << monitorsHeight;
-  ui.positionGraphicsView->scale(200.0/(float)monitorsWidth,200.0/(float)monitorsHeight);
-  ui.positionGraphicsView->setScene(scene);
 
   adjustSize();
 }
@@ -263,6 +244,17 @@ void MonitorSettingsDialog::accept() {
   QDialog::accept();
 }
 
+void MonitorSettingsDialog::disablePositionOption(bool disable) {
+  ui.positionPushButton->setEnabled(!disable);
+}
+
+void MonitorSettingsDialog::onPositionButtonClicked() {
+  MonitorPictureDialog *dialog = new MonitorPictureDialog(this);
+  dialog->setScene(monitors);
+  dialog->exec();
+  dialog->updateMonitorWidgets(ui.primaryCombo->currentText());
+  delete dialog;
+}
 
 void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
   if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
