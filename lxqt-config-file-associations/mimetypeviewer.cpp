@@ -108,8 +108,8 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     connect(widget.chooseApplicationsButton, SIGNAL(clicked()), this, SLOT(chooseApplication()));
     connect(widget.dialogButtonBox, SIGNAL(clicked(QAbstractButton*)), this, SLOT(dialogButtonBoxClicked(QAbstractButton*)));
 
-    QString defaultsListPath(XdgDirs::dataHome(true) + "/applications/defaults.list");
-    mDefaultsList = new QSettings(defaultsListPath, XdgDesktopFileCache::desktopFileSettingsFormat(), this);
+    QString mimeappsListPath(XdgDirs::dataHome(true) + "/applications/mimeapps.list");
+    mDefaultsList = new QSettings(mimeappsListPath, XdgDesktopFileCache::desktopFileSettingsFormat(), this);
     mSettingsCache = new LxQt::SettingsCache(mDefaultsList);
     mSettingsCache->loadFromSettings();
     initializeMimetypeTreeView();
