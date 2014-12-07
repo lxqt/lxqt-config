@@ -1,20 +1,17 @@
 project(lxqt-config-monitor)
-if(USE_QT5)
-  set(QTX_INCLUDE_DIRS  "")
-  set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
-else()
-  set(QTX_INCLUDE_DIRS  ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR})
-  set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
-endif()
 
 include_directories (
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${QTX_INCLUDE_DIRS}
+    "${CMAKE_CURRENT_BINARY_DIR}"
     ${LXQT_INCLUDE_DIRS}
-    )
+)
 
 set(H_FILES
-	main.h  monitorsettingsdialog.h monitor.h monitorwidget.h xrandr.h timeoutdialog.h monitorpicture.h
+    main.h
+    monitorsettingsdialog.h
+    monitor.h
+    monitorwidget.h
+    xrandr.h
+    monitorpicture.h
 )
 
 set(CPP_FILES
@@ -31,34 +28,45 @@ set(UI_FILES
     mainwindow.ui
     monitorwidget.ui
     timeoutdialog.ui
+    monitorpicture.ui
 )
 
-if(USE_QT5)
-    qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-else()
-    qt4_wrap_ui(UI_HEADERS ${UI_FILES})
-endif()
+qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
 # Translations **********************************
-include(LxQtTranslate)
-lxqt_translate_ts(QM_FILES 
+lxqt_translate_ts(QM_FILES
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
     SOURCES
         ${H_FILES}
         ${CPP_FILES}
         ${UI_FILES}
-    INSTALLATION_DIR
-        ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-config
+    INSTALL_DIR
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
-lxqt_translate_desktop(DESKTOP_FILES
-    SOURCES
-        ${PROJECT_NAME}.desktop.in
-) 
+lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
+lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 #************************************************
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
-target_link_libraries(${PROJECT_NAME} ${QTX_LIBRARIES} ${LXQT_LIBRARIES})
+add_executable(${PROJECT_NAME}
+    ${CPP_FILES}
+    ${UI_FILES}
+    ${RESOURCES}
+    ${QRC_SOURCES}
+    ${QM_FILES}
+    ${MOC_SOURCES}
+    ${DESKTOP_FILES}
+    ${QM_LOADER}
+)
+
+target_link_libraries(${PROJECT_NAME}
+    KF5::WindowSystem
+    Qt5::Widgets
+    Qt5::X11Extras
+    ${LXQT_LIBRARIES}
+)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")

@@ -273,14 +273,23 @@ void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
                               "Comment=Autostart monitor settings for LXQt-config-monitor\n"
                               "Exec=%1\n"
                               "OnlyShowIn=LXQt\n").arg(cmd);
+    // Check if ~/.config/autostart/ exists
+    bool ok = true;
+    QFileInfo fileInfo(QDir::homePath() + "/.config/autostart/");
+    if( ! fileInfo.exists() )
+      ok = QDir::root().mkpath(QDir::homePath() + "/.config/autostart/");
     QFile file(QDir::homePath() + "/.config/autostart/lxqt-config-monitor-autostart.desktop");
-    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    if(ok)
+            ok = file.open(QIODevice::WriteOnly | QIODevice::Text); 
+    if(!ok) {
+      QMessageBox::critical(this, tr("Error"), tr("Config can not be saved"));
       return;
+    }
     QTextStream out(&file);
     out << desktop;
     out.flush();
     file.close();
-    QDialog::accept();
+    //QDialog::accept();
   }
 }
 
