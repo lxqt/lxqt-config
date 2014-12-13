@@ -45,7 +45,6 @@ public:
   Ui::MonitorWidget ui;
 public Q_SLOTS:
   void disablePositionOption(bool disabled);
-  void monitorPositionChanged(int x, int y);
 
 private Q_SLOTS:
   void onResolutionChanged(int);

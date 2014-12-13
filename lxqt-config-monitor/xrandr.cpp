@@ -177,6 +177,20 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
               monitor->vendor = vendor;
             }
           }
+          else if(key == "Backlight") {
+            QRegExp rx("(\\d+)");
+            QStringList list;
+            int pos = 0;
+            while ((pos = rx.indexIn(value, pos)) != -1) {
+              list << rx.cap(1);
+              pos += rx.matchedLength();
+            }
+            if(list.length()==3) {
+              monitor->backlight=list[0];
+              monitor->backlightMin=list[1];
+              monitor->backlightMax=list[2];
+            }
+          }
           continue;
         } // End format: <key>: <value>
         else { // this line is not key:value
@@ -241,6 +255,10 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
       cmd.append(monitor->brightness);
       cmd.append(" --gamma ");
       cmd.append(monitor->gamma);
+      if( !monitor->backlight.isEmpty() ) {
+        cmd.append(" --set Backlight ");
+        cmd.append(monitor->backlight);
+      }
     }
     else    // turn off
       cmd.append("--off");

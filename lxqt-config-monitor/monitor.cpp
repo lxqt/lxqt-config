@@ -72,12 +72,3 @@ QRect MonitorSettings::geometry() {
   return QRect(QPoint(xPos, yPos), currentSize());
 }
 
-
-void MonitorSettings::setPos(int x, int y) {
-  if(xPos!=x || yPos!=y) {
-    xPos = x;
-    yPos = y;
-    emit positionChanged(x,y);
-    qDebug() << "[MonitorSettings::setPos] Position changed " << x << "," << y;
-  }
-}

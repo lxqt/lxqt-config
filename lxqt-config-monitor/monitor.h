@@ -35,6 +35,9 @@ public:
   QString currentRate;
   QString gamma;
   QString brightness;
+  QString backlight;
+  QString backlightMin;
+  QString backlightMax;
   int xPos;
   int yPos;
   bool enabledOk;
@@ -44,10 +47,6 @@ public:
 
   QSize currentSize();
   QRect geometry();
-  void setPos(int x, int y); // It is used by MonitorPicture to update position. It emits positionChanged.
-
-signals:
-  void positionChanged(int x, int y);
 };
 
 
