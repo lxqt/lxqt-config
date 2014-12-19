@@ -17,7 +17,7 @@ find_package(Qt5Xml REQUIRED QUIET)
 find_package(Qt5Concurrent REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
-find_package(lxqt-qt5 REQUIRED QUIET)
+find_package(lxqt REQUIRED QUIET)
 find_package(qt5xdg REQUIRED)
 find_package(KF5WindowSystem REQUIRED QUIET)
 
