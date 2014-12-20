@@ -129,9 +129,11 @@ MonitorSettings* MonitorWidget::getSettings() {
   s->yPos=ui.yPosSpinBox->value();
   s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
   s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
-  s->backlight = QString("%1").arg(ui.backlightSlider->value());
-  s->backlightMax = QString("%1").arg(ui.backlightSlider->maximum());
-  s->backlightMin = QString("%1").arg(ui.backlightSlider->minimum());
+  if(ui.backlightSlider->isEnabled()) {
+    s->backlight = QString("%1").arg(ui.backlightSlider->value());
+    s->backlightMax = QString("%1").arg(ui.backlightSlider->maximum());
+    s->backlightMin = QString("%1").arg(ui.backlightSlider->minimum());
+  }
   return s;
 }
 
