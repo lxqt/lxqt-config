@@ -144,7 +144,7 @@
           <widget class="QComboBox" name="primaryCombo">
            <item>
             <property name="text">
-             <string>None</string>
+             <string/>
             </property>
            </item>
           </widget>

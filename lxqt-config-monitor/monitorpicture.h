@@ -36,6 +36,8 @@ public:
   MonitorPictureDialog(QWidget * parent = 0, Qt::WindowFlags f = 0);
   void setScene(QList<MonitorWidget*> monitors);
   void updateMonitorWidgets(QString primaryMonitor);
+  void moveMonitorPictureToNearest(MonitorPicture* monitorPicture);
+  void updateScene();
 private:
   Ui::MonitorPictureDialog ui;
   QList<MonitorPicture*> pictures;
@@ -45,17 +47,19 @@ private:
 class MonitorPicture: public QGraphicsRectItem {
 
 public:
-  MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWidget);
+  MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWidget, MonitorPictureDialog *monitorPictureDialog);
   void setMonitorPosition(int x, int y);
   void adjustNameSize();
-  
+ 
   MonitorWidget *monitorWidget;
-    
+  int originX, originY;
 private:
   QGraphicsTextItem *textItem;
+  MonitorPictureDialog *monitorPictureDialog;
 
 protected:
   QVariant itemChange(GraphicsItemChange change, const QVariant & value);
+  void mouseReleaseEvent(QGraphicsSceneMouseEvent * event);
 };
 
 
