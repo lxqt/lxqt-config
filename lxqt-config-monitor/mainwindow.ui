@@ -114,6 +114,13 @@
           </widget>
          </item>
          <item>
+          <widget class="QPushButton" name="positionPushButton">
+           <property name="text">
+            <string>Monitor Position</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -137,7 +144,7 @@
           <widget class="QComboBox" name="primaryCombo">
            <item>
             <property name="text">
-             <string>None</string>
+             <string/>
             </property>
            </item>
           </widget>

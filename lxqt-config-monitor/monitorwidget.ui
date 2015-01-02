@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>345</width>
-    <height>214</height>
+    <height>286</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,38 +69,43 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QComboBox" name="positionCombo">
-       <item>
-        <property name="text">
-         <string>Default</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Left of</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Right of</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Above of</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Below of</string>
-        </property>
-       </item>
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="xPosLabel">
+       <property name="text">
+        <string>x:</string>
+       </property>
       </widget>
      </item>
-     <item>
-      <widget class="QComboBox" name="relativeToOutputCombo"/>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="xPosSpinBox">
+       <property name="minimum">
+        <number>-10000000</number>
+       </property>
+       <property name="maximum">
+        <number>10000000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="yPosLabel">
+       <property name="text">
+        <string>y:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="yPosSpinBox">
+       <property name="minimum">
+        <number>-10000000</number>
+       </property>
+       <property name="maximum">
+        <number>10000000</number>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -181,6 +186,20 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="backlightLabel">
+     <property name="text">
+      <string>Backlight:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QSlider" name="backlightSlider">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -54,6 +54,7 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   // set locale to "C" guarantee English output of xrandr
   process.processEnvironment().insert("LC_ALL", "c");
   process.start("xrandr --verbose");
+  //process.start("cat pruebas.txt");
   process.waitForFinished(-1);
   if(process.exitCode() != 0)
     return monitors;
@@ -176,6 +177,20 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
               monitor->vendor = vendor;
             }
           }
+          else if(key == "Backlight") {
+            QRegExp rx("(\\d+)");
+            QStringList list;
+            int pos = 0;
+            while ((pos = rx.indexIn(value, pos)) != -1) {
+              list << rx.cap(1);
+              pos += rx.matchedLength();
+            }
+            if(list.length()==3) {
+              monitor->backlight=list[0];
+              monitor->backlightMin=list[1];
+              monitor->backlightMax=list[2];
+            }
+          }
           continue;
         } // End format: <key>: <value>
         else { // this line is not key:value
@@ -188,9 +203,6 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   if(monitor) // this should not happen unless a parsing error happens
     delete monitor;
 
-  resolvePositions(monitors);
-
-  
   return monitors;
 }
 
@@ -198,6 +210,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
 
 bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) {
   QString cmd = getCommand(monitors);
+  qDebug() << cmd;
+  // return true;
   QProcess process;
   process.start(cmd);
   process.waitForFinished();
@@ -208,13 +222,6 @@ bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) 
 
 
 QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
-  QMap<MonitorSettings::Position, QString> positions;
-
-  positions[MonitorSettings::Left] = "--left-of";
-  positions[MonitorSettings::Right] = "--right-of";
-  positions[MonitorSettings::Above] = "--above";
-  positions[MonitorSettings::Bellow] = "--below";
-
 
   QByteArray cmd = "xrandr";
 
@@ -238,19 +245,20 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
           cmd.append(sel_rate);
         }
       }
-      if(monitor->position != MonitorSettings::None) {
-        cmd.append(" ");
-        cmd.append(positions[monitor->position]);
-        cmd.append(" ");
-        cmd.append(monitor->positionRelativeToOutput);
-      } else
-          cmd.append(" --pos 0x0");
+      if(monitor->position == MonitorSettings::Manual) { // Manual position
+        cmd.append(QString(" --pos %1x%2").arg(monitor->xPos).arg(monitor->yPos));
+      } else // Unify output
+        cmd.append(QString(" --pos 0x0"));
       if(monitor->primaryOk)
         cmd.append(" --primary");
       cmd.append(" --brightness ");
       cmd.append(monitor->brightness);
       cmd.append(" --gamma ");
       cmd.append(monitor->gamma);
+      if( !monitor->backlight.isEmpty() ) {
+        cmd.append(" --set Backlight ");
+        cmd.append(monitor->backlight);
+      }
     }
     else    // turn off
       cmd.append("--off");
@@ -261,50 +269,3 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
   return cmd;
 }
 
-// resolve the position relationship among the montors
-void XRandRBackend::resolvePositions(QList< MonitorInfo* >& monitors) {
-  Q_FOREACH(MonitorInfo * monitor, monitors) {
-    MonitorSettings::Position pos;
-    MonitorInfo* neighbor = findAdjacentMonitor(monitors, monitor, pos);
-    if(neighbor) {
-      monitor->position = pos;
-      monitor->positionRelativeToOutput = neighbor->name;
-    }
-  }
-}
-
-MonitorInfo* XRandRBackend::findAdjacentMonitor(QList< MonitorInfo* >& monitors, MonitorInfo* monitor, MonitorSettings::Position& pos) {
-  MonitorInfo* neighbor = NULL;
-  QRect monitorRect = monitor->geometry();
-  pos = MonitorSettings::None;
-  Q_FOREACH(MonitorInfo * mon, monitors) {
-    if(mon == monitor || mon->positionRelativeToOutput == monitor->name)
-      continue;
-    QRect neighborRect = mon->geometry();
-    if(monitorRect.top() == neighborRect.top()) {
-      if((monitorRect.right() + 1) == neighborRect.left()) { // monitor is at left of neighbor
-        pos = MonitorSettings::Left;
-        neighbor = mon;
-        break;
-      }
-      else if(monitorRect.left() == (neighborRect.right() + 1)) { // monitor is at right of neighbor
-        pos = MonitorSettings::Right;
-        neighbor = mon;
-        break;
-      }
-    }
-    if(monitorRect.left() == neighborRect.left()) {
-      if((monitorRect.bottom() + 1) == neighborRect.top()) { // monitor is above neighbor
-        pos = MonitorSettings::Above;
-        neighbor = mon;
-        break;
-      }
-      else if(monitorRect.top() == (neighborRect.bottom() + 1)) { // monitor is below neighbor
-        pos = MonitorSettings::Bellow;
-        neighbor = mon;
-        break;
-      }
-    }
-  }
-  return neighbor;
-}

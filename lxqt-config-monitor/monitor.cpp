@@ -17,8 +17,20 @@
 */
 
 #include "monitor.h"
+#include <QDebug>
 
 bool MonitorInfo::LVDS_Ok = false;
+
+QSize sizeFromString(QString str) {
+  int width = 0;
+  int height = 0;
+  int x = str.indexOf('x');
+  if(x > 0) {
+    width = str.left(x).toInt();
+    height = str.mid(x + 1).toInt();
+  }
+  return QSize(width, height);
+}
 
 bool MonitorSettingsBackend::isUnified(const QList< MonitorInfo* > monitors) {
   Q_FOREACH(MonitorInfo * monitor, monitors) {
@@ -52,17 +64,11 @@ QString MonitorInfo::humanReadableName() {
 }
 
 QSize MonitorSettings::currentSize() {
-  int width = 0;
-  int height = 0;
-  int x = currentMode.indexOf('x');
-  if(x > 0) {
-    width = currentMode.left(x).toInt();
-    height = currentMode.mid(x + 1).toInt();
-  }
-  return QSize(width, height);
+  return sizeFromString(currentMode);
 }
 
 
 QRect MonitorSettings::geometry() {
   return QRect(QPoint(xPos, yPos), currentSize());
 }
+

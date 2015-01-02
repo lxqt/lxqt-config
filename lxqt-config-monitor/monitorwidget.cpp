@@ -29,24 +29,15 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
 
   ui.setupUi(this);
 
-  ui.relativeToOutputCombo->addItem(tr("Default"));
-  Q_FOREACH(MonitorInfo * other, monitorsInfo) {
-    if(other != monitor) {
-      ui.relativeToOutputCombo->addItem(other->name);
-      if(monitor->positionRelativeToOutput == other->name)
-        ui.relativeToOutputCombo->setCurrentIndex(ui.relativeToOutputCombo->count() - 1);
-    }
-  }
-  ui.positionCombo->setCurrentIndex(monitor->position);
-
   if(monitorsInfo.length() == 1) {
-    ui.positionCombo->setEnabled(false);
-    ui.relativeToOutputCombo->setEnabled(false);
-    ui.positionLabel->setEnabled(false);
+    disablePositionOption(true);
 
     // turn off screen is not allowed since there should be at least one monitor available.
     ui.enabled->setEnabled(false);
   }
+  
+  ui.xPosSpinBox->setValue(monitor->xPos);
+  ui.yPosSpinBox->setValue(monitor->yPos);
 
   if(monitor->enabledOk)
     ui.enabled->setChecked(true);
@@ -84,6 +75,17 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     ui.greenSpinBox->setValue(gammaValues[1].toFloat());
     ui.blueSpinBox->setValue(gammaValues[2].toFloat());
   }
+  
+  //Set backlight values
+  if( !monitor->backlight.isEmpty() ) {
+    ui.backlightSlider->setMinimum(monitor->backlightMin.toInt());
+    ui.backlightSlider->setMaximum(monitor->backlightMax.toInt());
+    ui.backlightSlider->setSingleStep(1);
+    ui.backlightSlider->setValue(monitor->backlight.toInt());
+  } else {
+    ui.backlightSlider->setEnabled(false);
+    ui.backlightLabel->setEnabled(false);
+  }
 }
 
 void MonitorWidget::onResolutionChanged(int index) {
@@ -105,8 +107,10 @@ void MonitorWidget::onResolutionChanged(int index) {
 
 void MonitorWidget::disablePositionOption(bool disable) {
   bool enable = !disable;
-  ui.positionCombo->setEnabled(enable);
-  ui.relativeToOutputCombo->setEnabled(enable);
+  ui.xPosSpinBox->setEnabled(enable);
+  ui.yPosSpinBox->setEnabled(enable);
+  ui.xPosLabel->setEnabled(enable);
+  ui.yPosLabel->setEnabled(enable);
   ui.positionLabel->setEnabled(enable);
 }
 
@@ -116,14 +120,20 @@ MonitorSettings* MonitorWidget::getSettings() {
   s->enabledOk = ui.enabled->isChecked();
   s->currentMode = ui.resolutionCombo->currentText();
   s->currentRate = ui.rateCombo->currentText();
-  if( ui.relativeToOutputCombo->currentIndex()==0 ) // If no relative monitor is selected, then position is disabled.
+  if( ! ui.xPosSpinBox->isEnabled() ) { // If no unify monitor is selected, then position is disabled.
     s->position = MonitorSettings::None;
-  else {
-    s->position = (MonitorSettings::Position)ui.positionCombo->currentIndex();
-    s->positionRelativeToOutput = ui.relativeToOutputCombo->currentText();
+  } else {
+    s->position = MonitorSettings::Manual;
   }
+  s->xPos=ui.xPosSpinBox->value();
+  s->yPos=ui.yPosSpinBox->value();
   s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
   s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
+  if(ui.backlightSlider->isEnabled()) {
+    s->backlight = QString("%1").arg(ui.backlightSlider->value());
+    s->backlightMax = QString("%1").arg(ui.backlightSlider->maximum());
+    s->backlightMin = QString("%1").arg(ui.backlightSlider->minimum());
+  }
   return s;
 }
 

@@ -11,6 +11,7 @@ set(H_FILES
     monitor.h
     monitorwidget.h
     xrandr.h
+    monitorpicture.h
 )
 
 set(CPP_FILES
@@ -20,12 +21,14 @@ set(CPP_FILES
     monitor.cpp
     monitorwidget.cpp
     timeoutdialog.cpp
+    monitorpicture.cpp
 )
 
 set(UI_FILES
     mainwindow.ui
     monitorwidget.ui
     timeoutdialog.ui
+    monitorpicture.ui
 )
 
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})

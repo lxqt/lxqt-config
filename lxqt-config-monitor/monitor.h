@@ -35,12 +35,14 @@ public:
   QString currentRate;
   QString gamma;
   QString brightness;
-  int xPos; // not used yet
-  int yPos; // not used yet
+  QString backlight;
+  QString backlightMin;
+  QString backlightMax;
+  int xPos;
+  int yPos;
   bool enabledOk;
-  enum Position {None = 0, Left, Right, Above, Bellow};
+  enum Position {None = 0, Manual};
   Position position;
-  QString positionRelativeToOutput;
   bool primaryOk;
 
   QSize currentSize();
@@ -73,5 +75,8 @@ public:
   virtual QString getCommand(const QList<MonitorSettings*> monitors) = 0;
   virtual bool isUnified(const QList<MonitorInfo*> monitors);
 };
+
+/**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
+QSize sizeFromString(QString str);
 
 #endif // _MONITOR_H_

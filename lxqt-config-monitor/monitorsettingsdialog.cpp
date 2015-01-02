@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
+    Copyright (C) 2013  <copyright holder> <email>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,7 +27,6 @@
 #include <QGroupBox>
 #include <QMessageBox>
 #include <QFile>
-#include <QFileInfo>
 #include <QDir>
 #include <QTimer>
 #include <QProgressBar>
@@ -35,7 +35,7 @@
 #include "monitorwidget.h"
 #include "timeoutdialog.h"
 #include "xrandr.h"
-
+#include "monitorpicture.h"
 
 MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend):
   QDialog(NULL, 0),
@@ -153,18 +153,15 @@ void MonitorSettingsDialog::onLaptopOnly() {
 
 void MonitorSettingsDialog::onExtended() {
   ui.unify->setChecked(false);
-  int i = 0;
+  int virtualWidth = 0;
   Q_FOREACH(MonitorWidget * monitor, monitors) {
     monitor->chooseMaxResolution();
     monitor->enableMonitor(true);
-    if(i == 0) {
-      monitor->ui.positionCombo->setCurrentIndex(0);
-    }
-    else {
-      monitor->ui.positionCombo->setCurrentIndex(1);
-      monitor->ui.relativeToOutputCombo->setCurrentIndex(i);
-    }
-    i++;
+    monitor->disablePositionOption(false);
+    QSize size = sizeFromString(monitor->ui.resolutionCombo->currentText());
+    monitor->ui.xPosSpinBox->setValue(virtualWidth);
+    monitor->ui.yPosSpinBox->setValue(0);
+    virtualWidth+=size.width();
   }
   setMonitorsConfig();
 }
@@ -176,6 +173,7 @@ void MonitorSettingsDialog::setupUi() {
   connect(ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
   connect(ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
   connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
+  connect(ui.positionPushButton, SIGNAL(clicked()), SLOT(onPositionButtonClicked()));
 
   // Get monitors information
   QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
@@ -189,6 +187,7 @@ void MonitorSettingsDialog::setupUi() {
   }
 
   int i = 0;
+  connect(ui.unify, SIGNAL(toggled(bool)), this, SLOT(disablePositionOption(bool)));
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
     ui.primaryCombo->addItem(monitorInfo->name);
     if(monitorInfo->primaryOk)
@@ -220,8 +219,10 @@ void MonitorSettingsDialog::setupUi() {
   // are the monitors unified?
   if(monitorsInfo.length() > 1)
     ui.unify->setChecked(backend->isUnified(monitorsInfo));
-  else // disable the option if we only have one monitor
+  else {// disable the option if we only have one monitor
     ui.unify->setEnabled(false);
+    ui.positionPushButton->setEnabled(false);
+  }
 
   // If this is a laptop and there is an external monitor, offer quick options
   if(monitors.length() == 2) {
@@ -233,7 +234,6 @@ void MonitorSettingsDialog::setupUi() {
   }
   else {
     ui.tabWidget->removeTab(0);
-    ui.tabWidget->tabBar()->hide();
   }
 
   adjustSize();
@@ -244,6 +244,17 @@ void MonitorSettingsDialog::accept() {
   QDialog::accept();
 }
 
+void MonitorSettingsDialog::disablePositionOption(bool disable) {
+  ui.positionPushButton->setEnabled(!disable);
+}
+
+void MonitorSettingsDialog::onPositionButtonClicked() {
+  MonitorPictureDialog *dialog = new MonitorPictureDialog(this);
+  dialog->setScene(monitors);
+  dialog->exec();
+  dialog->updateMonitorWidgets(ui.primaryCombo->currentText());
+  delete dialog;
+}
 
 void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
   if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
