@@ -262,6 +262,14 @@ void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
   }
   else if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Save) {
     // Save config and exit
+    QMessageBox msgBox;
+    msgBox.setText(tr("Do you want to save changes?"));
+    msgBox.setInformativeText(tr("Please, check your config before to save."));
+    msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
+    msgBox.setDefaultButton(QMessageBox::Cancel);
+    int ret = msgBox.exec();
+    if( ret == QMessageBox::Cancel )
+      return;
     QList<MonitorSettings*> settings = getMonitorsSettings();
     QString cmd = backend->getCommand(settings);
     Q_FOREACH(MonitorSettings * s, settings) {
