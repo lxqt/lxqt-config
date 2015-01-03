@@ -104,7 +104,8 @@ void MonitorPicture::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 
 
 //////////////////////////////////////////////////////////////////////////////////
-// Move picture to nearest picture procedure
+// Move picture to nearest picture procedure.
+// Read magnetic_attraction.html for more info about the algorithm used. 
 //////////////////////////////////////////////////////////////////////////////////
 
 struct Parameters {
