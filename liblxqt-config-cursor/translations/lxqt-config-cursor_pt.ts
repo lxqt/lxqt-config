@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="pt">
 <context>
     <name>SelectWnd</name>
     <message>
@@ -7,8 +9,7 @@
     </message>
     <message>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Escolha o tema de cursor a utilizar (passe com o rato para visualizar).
-Tem que reiniciar a sessão após a alteração:</translation>
+        <translation>Escolha o tema de cursor a utilizar (passe com o rato para testar). &lt;b&gt;Tem que reiniciar o LXQt a sessão após a alteração&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>&amp;Install New Theme...</source>
