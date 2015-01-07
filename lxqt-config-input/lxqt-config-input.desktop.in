@@ -9,3 +9,7 @@ Categories=Qt;Settings;HardwareSettings;DesktopSettings;LXQt;
 OnlyShowIn=LXDE;LXQt;
 
 #TRANSLATIONS_DIR=translations
+Name[pt]=Teclado e rato
+GenericName[pt]=Definições de introdução
+Comment[pt]=Configuração do rato, teclado e outros dispositivos de introdução
+

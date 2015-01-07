@@ -9,3 +9,6 @@ Categories=Settings;DesktopSettings;Qt;LXQt;;HardwareSettings;
 OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
+Name[pt]=Definições do monitor
+GenericName[pt]=Definições do monitor
+Comment[pt]=Configuração de monitores
