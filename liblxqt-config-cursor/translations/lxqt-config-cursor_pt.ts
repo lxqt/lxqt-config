@@ -11,8 +11,7 @@
     <message>
         <location filename="../ui/selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Escolha o tema de cursor a utilizar (passe com o rato para visualizar).
-Tem que reiniciar a sessão após a alteração:</translation>
+        <translation>Escolha o tema de cursor a utilizar (passe com o rato para testar). &lt;b&gt;Tem que reiniciar o LXQt a sessão após a alteração&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../ui/selectwnd.ui" line="81"/>
@@ -48,17 +47,17 @@ Tem que reiniciar a sessão após a alteração:</translation>
     <message>
         <location filename="../ui/warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulário</translation>
     </message>
     <message>
         <location filename="../ui/warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>O LxQt não encontrou quaisquer temas de cursor. Será utilizado o tema de cursor X11. O LxQt procurou nestes diretórios:</translation>
     </message>
     <message>
         <location filename="../ui/warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar...</translation>
     </message>
 </context>
 <context>
