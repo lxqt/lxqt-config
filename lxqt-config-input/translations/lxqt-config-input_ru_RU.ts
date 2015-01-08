@@ -207,27 +207,27 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="36"/>
+        <location filename="../lxqt-config-input.cpp" line="34"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Настройки клавиатуры и мыши</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="40"/>
+        <location filename="../lxqt-config-input.cpp" line="39"/>
         <source>Mouse</source>
         <translation>Мышь</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="45"/>
+        <location filename="../lxqt-config-input.cpp" line="44"/>
         <source>Cursor</source>
         <translation>Курсор</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="48"/>
+        <location filename="../lxqt-config-input.cpp" line="47"/>
         <source>Keyboard</source>
         <translation>Клавиатура</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="52"/>
+        <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard Layout</source>
         <translation>Раскладка клавиатура</translation>
     </message>

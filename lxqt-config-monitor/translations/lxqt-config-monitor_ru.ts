@@ -4,39 +4,52 @@
 <context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="42"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>Laptop LCD Monitor</source>
         <translation>ЖК-монитор лэптопа</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="44"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>External VGA Monitor</source>
         <translation>Внешний VGA-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="44"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>VGA Monitor</source>
         <translation>VGA-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="46"/>
+        <location filename="../monitor.cpp" line="58"/>
         <source>External DVI Monitor</source>
         <translation>Внешний DVI-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="46"/>
+        <location filename="../monitor.cpp" line="58"/>
         <source>DVI Monitor</source>
         <translation>DVI-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="48"/>
+        <location filename="../monitor.cpp" line="60"/>
         <source>TV</source>
         <translation>ТВ</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="50"/>
+        <location filename="../monitor.cpp" line="62"/>
         <source>Default Monitor</source>
         <translation>Монитор по умолчанию</translation>
+    </message>
+</context>
+<context>
+    <name>MonitorPictureDialog</name>
+    <message>
+        <location filename="../monitorpicture.ui" line="14"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorpicture.ui" line="27"/>
+        <source>Magnetic attraction</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -82,14 +95,38 @@
         <translation>Объединить все мониторы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="132"/>
+        <location filename="../mainwindow.ui" line="119"/>
+        <source>Monitor Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="139"/>
         <source>Primary monitor:</source>
         <translation>Первичный монитор:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="140"/>
         <source>None</source>
-        <translation>Нет</translation>
+        <translation type="vanished">Нет</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="266"/>
+        <source>Do you want to save changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="267"/>
+        <source>Please, check your config before to save.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <source>Config can not be saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -120,50 +157,59 @@
         <translation>Позиция:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="77"/>
-        <location filename="../monitorwidget.cpp" line="32"/>
+        <location filename="../monitorwidget.ui" line="79"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="96"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="193"/>
+        <source>Backlight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Default</source>
-        <translation>По умолчанию</translation>
+        <translation type="vanished">По умолчанию</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="82"/>
         <source>Left of</source>
-        <translation>Левее</translation>
+        <translation type="vanished">Левее</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="87"/>
         <source>Right of</source>
-        <translation>Правее</translation>
+        <translation type="vanished">Правее</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="92"/>
         <source>Above of</source>
-        <translation>Выше</translation>
+        <translation type="vanished">Выше</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="97"/>
         <source>Below of</source>
-        <translation>Ниже</translation>
+        <translation type="vanished">Ниже</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="110"/>
+        <location filename="../monitorwidget.ui" line="115"/>
         <source>Brightness:</source>
         <translation>Яркость:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="130"/>
+        <location filename="../monitorwidget.ui" line="135"/>
         <source>Gamma:</source>
         <translation>Гамма:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="149"/>
-        <location filename="../monitorwidget.ui" line="166"/>
+        <location filename="../monitorwidget.ui" line="154"/>
+        <location filename="../monitorwidget.ui" line="171"/>
         <source>:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="55"/>
-        <location filename="../monitorwidget.cpp" line="95"/>
+        <location filename="../monitorwidget.cpp" line="46"/>
+        <location filename="../monitorwidget.cpp" line="97"/>
         <source>Auto</source>
         <translation>Авто</translation>
     </message>
@@ -171,8 +217,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="231"/>
-        <location filename="../xrandr.cpp" line="236"/>
+        <location filename="../xrandr.cpp" line="238"/>
+        <location filename="../xrandr.cpp" line="243"/>
         <source>Auto</source>
         <translation>Авто</translation>
     </message>
