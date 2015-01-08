@@ -1,9 +1,11 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>IconThemeConfig</name>
     <message>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Konfigurations Center</translation>
+        <translation>LXQt Konfigurationscenter</translation>
     </message>
     <message>
         <source>Icons Theme</source>
@@ -22,14 +24,14 @@
     </message>
     <message>
         <source>LXQt Theme</source>
-        <translation type="unfinished"/>
+        <translation>LXQt-Thema</translation>
     </message>
 </context>
 <context>
     <name>LXQtThemeConfig</name>
     <message>
         <source>LXQt Theme</source>
-        <translation type="unfinished"/>
+        <translation>LXQt-Thema</translation>
     </message>
 </context>
 </TS>
