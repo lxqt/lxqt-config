@@ -6,123 +6,123 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>フォント</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>ユーザーインターフェースのデフォルトのフォント</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>フォント名:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>スタイル:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>ポイントサイズ:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>ノーマル</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>太字</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="74"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="79"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>太字・斜体</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="90"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>以下の設定は、これから新たに実行されたアプリケーションに適用されます</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="96"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>アンチエイリアスされたフォントを用いる</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="103"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>フォントのヒンティング形式:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="114"/>
         <location filename="../fontsconfig.ui" line="179"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>なし</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="119"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>軽微</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="124"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>中間</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="129"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>完全</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="137"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>フォントのヒンティング</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="144"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>解像度 (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="151"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>自動ヒンティング</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="168"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>サブピクセルアンチエイリアス:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="184"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="189"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="194"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="199"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -139,18 +139,11 @@
     </message>
 </context>
 <context>
-    <name>LXQtThemeConfig</name>
-    <message>
-        <source>LXQt Theme</source>
-        <translation type="vanished">LXQtテーマ</translation>
-    </message>
-</context>
-<context>
     <name>LxQtThemeConfig</name>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished">LXQtテーマ</translation>
+        <translation>LXQtテーマ</translation>
     </message>
 </context>
 <context>
@@ -163,7 +156,7 @@
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェットのスタイル</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
@@ -178,12 +171,12 @@
     <message>
         <location filename="../main.cpp" line="63"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>フォント</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>カーソル</translation>
     </message>
 </context>
 <context>
@@ -191,42 +184,42 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェットのスタイル</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>ツールバーボタンのスタイル:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコンのみを表示</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストのみを表示</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコンの横にテキスト</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコンの下にテキスト</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルト</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>シングルクリックでアイテムを有効にする</translation>
     </message>
 </context>
 </TS>
