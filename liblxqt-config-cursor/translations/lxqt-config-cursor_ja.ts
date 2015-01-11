@@ -16,25 +16,17 @@
     <message>
         <location filename="../ui/selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;新しいテーマのインストール...</translation>
-    </message>
-    <message>
-        <source>&amp;Set Theme</source>
-        <translation type="vanished">&amp;テーマの設定</translation>
+        <translation>新しいテーマのインストール...(&amp;I)</translation>
     </message>
     <message>
         <location filename="../ui/selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>テーマの削除</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation type="vanished">閉じる(&amp;C)</translation>
+        <translation>テーマの削除(&amp;R)</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="208"/>
         <source>XCurTheme error</source>
-        <translation>XCurテーマ・エラー</translation>
+        <translation>XCurTheme エラー</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="209"/>
@@ -47,17 +39,17 @@
     <message>
         <location filename="../ui/warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>フォーム</translation>
     </message>
     <message>
         <location filename="../ui/warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>カーソルテーマを見つけられませんでした。代わりに、デフォルトのX11カーソルテーマが使われます。LXQtは以下のディレクトリーを検索しました:</translation>
     </message>
     <message>
         <location filename="../ui/warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>表示</translation>
     </message>
 </context>
 <context>
