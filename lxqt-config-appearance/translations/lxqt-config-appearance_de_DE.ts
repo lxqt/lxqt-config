@@ -9,14 +9,14 @@
     </message>
     <message>
         <source>Icons Theme</source>
-        <translation>Symbolethema</translation>
+        <translation>Symbolthema</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Konfigurations Center</translation>
+        <translation>LXQt Konfigurationscenter</translation>
     </message>
     <message>
         <source>Icons Theme</source>
