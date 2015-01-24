@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.0" language="de">
 <context>
     <name>KeyboardConfig</name>
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
@@ -64,7 +64,7 @@
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation></translation>
+        <translation>0</translation>
     </message>
 </context>
 <context>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
@@ -176,7 +176,7 @@
         <location filename="../mouseconfig.ui" line="116"/>
         <location filename="../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="44"/>
         <source>Cursor</source>
-        <translation></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="47"/>
