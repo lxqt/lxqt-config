@@ -6,123 +6,124 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Caratteri</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Carattere generale</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Carattere:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normale</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Grassetto</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="74"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Corsivo</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="79"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Grassetto corsivo</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="90"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Le impostazioni riguardano solo le applicazioni avviate nuovamente</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="96"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizza anti-aliasing per i caratteri</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="103"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile di hinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="114"/>
         <location filename="../fontsconfig.ui" line="179"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="119"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Leggero</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="124"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Medio</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="129"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Forte</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="137"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinting caratteri</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="144"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Resoluzione (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="151"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinting automatico</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="168"/>
         <source>Subpixel antialiasing:</source>
+        <translatorcomment>no idea how to translate that</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="184"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="189"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="194"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="199"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -135,7 +136,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Temi delle icone</translation>
     </message>
 </context>
 <context>
@@ -143,7 +144,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema di LXQt</translation>
     </message>
 </context>
 <context>
@@ -156,27 +157,27 @@
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile degli elementi</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema delle icone</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema di LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="63"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Caratteri</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursore</translation>
     </message>
 </context>
 <context>
@@ -184,32 +185,32 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile degli elementi</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile della barra delle applicazioni:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra solo icone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra solo testo</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo accanto le icone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo sotto le icone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -219,7 +220,7 @@
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva elementi con clic singolo</translation>
     </message>
 </context>
 </TS>
