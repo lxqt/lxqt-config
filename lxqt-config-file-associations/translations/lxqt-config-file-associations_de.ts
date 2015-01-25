@@ -16,7 +16,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
         <source>1</source>
-        <translation></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation></translation>
+        <translation>Textfeld</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
         <source>*.txt *.xml</source>
-        <translation></translation>
+        <translation>*.txt *.xml</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="191"/>
         <source>Icon</source>
-        <translation></translation>
+        <translation>Symbol</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="198"/>

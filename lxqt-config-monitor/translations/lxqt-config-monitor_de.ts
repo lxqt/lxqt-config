@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.0" language="de">
 <context>
     <name>MonitorInfo</name>
     <message>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
@@ -145,22 +145,22 @@
     <message>
         <location filename="../monitorwidget.ui" line="58"/>
         <source>Hz</source>
-        <translation></translation>
+        <translation>Hz</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="67"/>
         <source>Position:</source>
-        <translation></translation>
+        <translation>Position:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="79"/>
         <source>x:</source>
-        <translation></translation>
+        <translation>x:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="96"/>
         <source>y:</source>
-        <translation></translation>
+        <translation>y:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="115"/>
@@ -170,13 +170,13 @@
     <message>
         <location filename="../monitorwidget.ui" line="135"/>
         <source>Gamma:</source>
-        <translation></translation>
+        <translation>Gamma:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="154"/>
         <location filename="../monitorwidget.ui" line="171"/>
         <source>:</source>
-        <translation></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="193"/>
@@ -187,7 +187,7 @@
         <location filename="../monitorwidget.cpp" line="46"/>
         <location filename="../monitorwidget.cpp" line="97"/>
         <source>Auto</source>
-        <translation type="unfinished">Automatisch</translation>
+        <translation>Automatisch</translation>
     </message>
 </context>
 <context>

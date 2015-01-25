@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.0" language="de">
 <context>
     <name>FontsConfig</name>
     <message>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Konfigurations Center</translation>
+        <translation>LXQt Erscheinungsbild-Konfiguration</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
