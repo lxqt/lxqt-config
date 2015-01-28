@@ -45,7 +45,9 @@ LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :
     QList<LxQt::LxQtTheme> themes = LxQt::LxQtTheme::allThemes();
     foreach(LxQt::LxQtTheme theme, themes)
     {
-        QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(theme.name()));
+        QString themeName = theme.name();
+        themeName[0] = themeName[0].toTitleCase();
+        QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(themeName));
         if (!theme.previewImage().isEmpty())
         {
             item->setIcon(0, QIcon(theme.previewImage()));
