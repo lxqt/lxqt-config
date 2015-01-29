@@ -264,7 +264,7 @@ void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
     // Save config and exit
     QMessageBox msgBox;
     msgBox.setText(tr("Do you want to save changes?"));
-    msgBox.setInformativeText(tr("Please, check your config before to save."));
+    msgBox.setInformativeText(tr("Please, check the settings before saving."));
     msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
     msgBox.setDefaultButton(QMessageBox::Cancel);
     int ret = msgBox.exec();
