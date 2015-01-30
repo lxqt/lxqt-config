@@ -77,6 +77,9 @@ void ApplicationChooser::fillApplicationListWidget()
     QStringList mimetypes;
     mimetypes << m_MimeInfo.name() << m_MimeInfo.allAncestors();
 
+    // Adding all apps takes some time. Make the user aware by setting the
+    // cursor to Wait.
+    QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
     QMimeDatabase db;
     foreach(const QString& mts, mimetypes) {
         QMimeType mt = db.mimeTypeForName(mts);
@@ -102,6 +105,11 @@ void ApplicationChooser::fillApplicationListWidget()
     }
     connect(widget.applicationTreeWidget, SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT(selectionChanged()));
     widget.applicationTreeWidget->setFocus();
+
+    QApplication::restoreOverrideCursor();
+    if (!applicationsThatHandleThisMimetype.isEmpty()) {
+        widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+    }
 }
 
 void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
