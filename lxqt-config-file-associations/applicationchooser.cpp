@@ -29,6 +29,7 @@
 #include <QString>
 #include <QDebug>
 #include <QMimeDatabase>
+#include <QTimer>
 
 #include <XdgDesktopFile>
 #include "applicationchooser.h"
@@ -64,6 +65,29 @@ int ApplicationChooser::exec()
 bool lessThan(XdgDesktopFile* a, XdgDesktopFile* b)
 {
     return a && b && a->name().toLower() < b->name().toLower();
+}
+
+void ApplicationChooser::updateAllIcons() {
+    // loading all icons is very time-consuming...
+    QCoreApplication::processEvents();
+    QTreeWidget* tree = widget.applicationTreeWidget;
+    int updated = 0;
+    int top_n = tree->topLevelItemCount();
+    for(int top_i = 0; top_i < top_n; ++top_i) {
+        QTreeWidgetItem* parent = tree->topLevelItem(top_i);
+        int n = parent->childCount();
+        for(int i = 0; i < n; ++i) {
+            QTreeWidgetItem* item = parent->child(i);
+            XdgDesktopFile* desktopFile = item->data(0, 32).value<XdgDesktopFile*>();
+            if(Q_LIKELY(desktopFile != NULL && !desktopFile->icon().isNull())) {
+                item->setIcon(0, desktopFile->icon());
+                ++updated;
+                if(updated % 8 == 0) // update the UI in batch is more efficient
+                    QCoreApplication::processEvents();
+            }
+        }
+    }
+    QCoreApplication::processEvents();
 }
 
 void ApplicationChooser::fillApplicationListWidget()
@@ -102,12 +126,17 @@ void ApplicationChooser::fillApplicationListWidget()
     }
     connect(widget.applicationTreeWidget, SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT(selectionChanged()));
     widget.applicationTreeWidget->setFocus();
+
+    // delay icon update for faster loading
+    QTimer::singleShot(0, this, SLOT(updateAllIcons()));
 }
 
 void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
                                                                 QList<XdgDesktopFile*> applications,
                                                                 QSet<XdgDesktopFile*>& alreadyAdded)
 {
+    QIcon placeHolderIcon = QIcon::fromTheme("application-x-executable");
+
         if (applications.isEmpty())
         {
             QTreeWidgetItem* noAppsFoundItem = new QTreeWidgetItem(parent);
@@ -130,7 +159,7 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
                     continue;
 
                 QTreeWidgetItem *item = new QTreeWidgetItem(parent);
-                item->setIcon(0, desktopFile->icon());
+                item->setIcon(0, placeHolderIcon);
                 item->setText(0, desktopFile->name());
                 item->setData(0, 32, QVariant::fromValue<XdgDesktopFile*>(desktopFile));
 
@@ -140,7 +169,6 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
                 }
 
                 alreadyAdded.insert(desktopFile);
-                QCoreApplication::processEvents();
             }
         }
 }
