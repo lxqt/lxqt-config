@@ -45,6 +45,7 @@ public:
 
 private slots:
     void selectionChanged();
+    void updateAllIcons();
 
 private:
     void fillApplicationListWidget();
