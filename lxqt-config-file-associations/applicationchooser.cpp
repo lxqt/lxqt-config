@@ -88,6 +88,7 @@ void ApplicationChooser::updateAllIcons() {
         }
     }
     QCoreApplication::processEvents();
+    QApplication::restoreOverrideCursor();
 }
 
 void ApplicationChooser::fillApplicationListWidget()
@@ -130,7 +131,6 @@ void ApplicationChooser::fillApplicationListWidget()
     connect(widget.applicationTreeWidget, SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT(selectionChanged()));
     widget.applicationTreeWidget->setFocus();
 
-    QApplication::restoreOverrideCursor();
     if (!applicationsThatHandleThisMimetype.isEmpty()) {
         widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
     }
