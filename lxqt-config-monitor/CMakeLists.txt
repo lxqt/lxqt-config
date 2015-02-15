@@ -1,13 +1,19 @@
 project(lxqt-config-monitor)
 
-find_package(Qt5Svg REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+include_directories (
+    "${CMAKE_CURRENT_BINARY_DIR}"
+    ${LXQT_INCLUDE_DIRS}
+)
+
+find_package(KF5Screen REQUIRED)
 
 set(H_FILES
     main.h
     monitorsettingsdialog.h
     monitor.h
     monitorwidget.h
-    xrandr.h
     monitorpicture.h
     quickoptions.h
     savesettings.h
@@ -16,7 +22,6 @@ set(H_FILES
 set(CPP_FILES
     main.cpp
     monitorsettingsdialog.cpp
-    xrandr.cpp
     monitor.cpp
     monitorwidget.cpp
     timeoutdialog.cpp
@@ -74,22 +79,10 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
     Qt5::Widgets
     Qt5::X11Extras
-    Qt5::Svg
-    lxqt
+    KF5::Screen
+    ${LXQT_LIBRARIES}
 )
 
-install(TARGETS
-    ${PROJECT_NAME}
-    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
-    COMPONENT Runtime
-)
-install(FILES
-    ${DESKTOP_FILES}
-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
-    COMPONENT Runtime
-)
-install(FILES
-    ${ICON_FILES}
-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/lxqt/icons"
-    COMPONENT Runtime
-)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
+install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
+install(FILES ${ICON_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lxqt/icons/")

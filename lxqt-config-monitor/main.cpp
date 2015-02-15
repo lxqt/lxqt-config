@@ -16,19 +16,15 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
 #include "main.h"
 #include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
 #include <QDebug>
 #include "monitorsettingsdialog.h"
-#include "quickoptions.h"
-#include "xrandr.h"
-#include "savesettings.h"
 
 int main(int argc, char** argv) {
-	LXQt::SingleApplication app(argc, argv);
+	LxQt::SingleApplication app(argc, argv);
 
 	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
 	if(configName.isEmpty())
@@ -57,19 +53,20 @@ int main(int argc, char** argv) {
 
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
 
-	SaveSettings *saveSettings = new SaveSettings(&settings);
-	saveSettings->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
-	// monitorSettingsDialog->connect(saveSettings->ui.saveSettings, SIGNAL(clicked(bool)), SLOT(saveSettingsSettings()));
-	monitorSettingsDialog->connect(saveSettings->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
-	saveSettings->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
+	ApplyDialog *apply = new ApplyDialog(&settings);
+	apply->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
+	// monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
+	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
+	apply->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
 
-	dlg.addPage(saveSettings, QObject::tr("Save settings"), "system-run");
+	dlg.addPage(apply, QObject::tr("Save settings"), "system-run");
 
 	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
 
-	if(QDialog::Accepted == dlg.exec() ) {
-		main(argc, argv);
-	}
+    MonitorSettingsDialog dlg;
+    app.setActivationWindow(&dlg);
+    dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
+    dlg.show();
 
-	return 0;
+    return app.exec();
 }

@@ -20,105 +20,96 @@
 #include "monitorwidget.h"
 #include "monitor.h"
 #include <QDebug>
-
-MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> monitorsInfo, QWidget* parent):
-  QGroupBox(parent) {
-  ui.enabled = NULL;
-  monitorInfo = monitor;
-  monitor->setParent(this); // take the ownership
-
-  ui.setupUi(this);
-
-  if(monitorsInfo.length() == 1) {
-    disablePositionOption(true);
-
-    // turn off screen is not allowed since there should be at least one monitor available.
-    ui.enabled->setEnabled(false);
-  }
-
-  ui.xPosSpinBox->setValue(monitor->xPos);
-  ui.yPosSpinBox->setValue(monitor->yPos);
-
-  if(monitor->enabledOk)
-    ui.enabled->setChecked(true);
-
-  connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
-  ui.resolutionCombo->addItem(tr("Auto"));
-  Q_FOREACH(QString _mode_line, monitor->modes) {
-    QVariant monitorModeInfo = QVariant::fromValue(monitor->monitorModes[_mode_line]);
-    ui.resolutionCombo->addItem(_mode_line, monitorModeInfo);
-  }
+#include <QDialogButtonBox>
+#include <KScreen/EDID>
 
 
-  if(!monitor->currentMode.isEmpty())
-    ui.resolutionCombo->setCurrentIndex(ui.resolutionCombo->findText(monitor->currentMode));
-  else
-    ui.resolutionCombo->setCurrentIndex(0);
-  if(!monitor->currentRate.isEmpty())
-    ui.rateCombo->setCurrentIndex(ui.rateCombo->findText(monitor->currentRate));
-  else
-     ui.rateCombo->setCurrentIndex(0);
+QString modeToString(KScreen::ModePtr mode) {
+    // mode->name() can be anything, not just widthxheight. eg if added with cvt.
+    return QString("%1x%2").arg(mode->size().width()).arg(mode->size().height());
+}
 
-  // Set gamma values
-  ui.redSpinBox->setSingleStep(0.01);
-  ui.greenSpinBox->setSingleStep(0.01);
-  ui.blueSpinBox->setSingleStep(0.01);
-  if(!monitor->gamma.isEmpty()) {
-    QStringList gammaValues = monitor->gamma.split(":");
-    ui.redSpinBox->setValue(gammaValues[0].toFloat());
-    ui.greenSpinBox->setValue(gammaValues[1].toFloat());
-    ui.blueSpinBox->setValue(gammaValues[2].toFloat());
-  }
+MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent):
+    QGroupBox(parent)
+{
+    this->output = output;
+
+    ui.setupUi(this);
+
+    ui.xPosSpinBox->setValue(output->pos().x());
+    ui.yPosSpinBox->setValue(output->pos().y());
+
+    ui.enabledCheckbox->setChecked(output->isEnabled());
+    ui.isPrimaryCheckbox->setChecked(output->isPrimary());
+
+    // Add the preferred mode at the top of the list
+    KScreen::ModePtr preferredMode = output->preferredMode();
+    if (preferredMode) {
+        ui.resolutionCombo->addItem(modeToString(preferredMode), preferredMode->id());
+        // Make it bold, for good measure
+        QFont font = ui.resolutionCombo->font();
+        font.setBold(true);
+        ui.resolutionCombo->setItemData(0, font, Qt::FontRole);
+    }
+
+    // Add each mode to the list
+    Q_FOREACH(const KScreen::ModePtr &mode, output->modes()) {
+        // TODO better check for duplicates
+        if (mode == preferredMode) continue;
+        ui.resolutionCombo->addItem(modeToString(mode), mode->id());
+    }
+    connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
+
+    if (output->currentMode()) {
+        // Set the current mode in dropdown
+        int idx = ui.resolutionCombo->findData(output->currentMode()->id());
+        ui.resolutionCombo->setCurrentIndex(idx);
+    }
+    updateRefreshRates();
+
+    /* XXX setting gamma not possible yet
+    KScreen::Edid* edid = output->edid();
+    if (edid && edid->isValid()) {}*/
+
+    if (config->connectedOutputs().count() == 1) {
+        setOnlyMonitor(true);
+    } else {
+        Q_FOREACH(KScreen::OutputPtr clone, config->connectedOutputs()) {
+            // We can't clone ourselves, or an output that already clones another
+            if (clone == output || clone->clones().count()) continue;
+            ui.clonesCombo->addItem(clone->name(), clone->id());
+        }
+    }
 }
 
 void MonitorWidget::onResolutionChanged(int index) {
-  QComboBox* combo =ui.resolutionCombo;
-  QComboBox* rateCombo = ui.rateCombo;
-  QString mode = combo->currentText();
-  rateCombo->clear();
-  rateCombo->addItem(tr("Auto"));
-  if( monitorInfo->monitorModes.contains(mode)) {
-    QStringList mode_lines = combo->currentData().value<MonitorMode*>()->modeLines;
-    //QStringList mode_lines = monitorInfo->monitorModes[mode]->modeLines;
-    Q_FOREACH(QString rate, mode_lines) {
-      rateCombo->addItem(rate);
+    qDebug() << "Set id to" << ui.resolutionCombo->currentData();
+
+    updateRefreshRates();
+    // TODO enable Apply button
+}
+
+
+void MonitorWidget::updateRefreshRates() {
+    ui.rateCombo->clear();
+    KScreen::ModePtr selectedMode = output->currentMode(); // XXX That's wrong
+    Q_FOREACH(const KScreen::ModePtr &mode, output->modes()) {
+        if (selectedMode && mode->size() == selectedMode->size()) {
+            ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
+        }
     }
-    rateCombo->setCurrentIndex(0);
-  }
 }
 
 
-void MonitorWidget::disablePositionOption(bool disable) {
-  bool enable = !disable;
-  ui.xPosSpinBox->setEnabled(enable);
-  ui.yPosSpinBox->setEnabled(enable);
-  ui.xPosLabel->setEnabled(enable);
-  ui.yPosLabel->setEnabled(enable);
-  ui.positionLabel->setEnabled(enable);
-}
-
-MonitorSettings* MonitorWidget::getSettings() {
-  MonitorSettings* s = new MonitorSettings();
-  s->name = monitorInfo->name;
-  s->enabledOk = ui.enabled->isChecked();
-  s->currentMode = ui.resolutionCombo->currentText();
-  s->currentRate = ui.rateCombo->currentText();
-  if( ! ui.xPosSpinBox->isEnabled() ) { // If no unify monitor is selected, then position is disabled.
-    s->position = MonitorSettings::None;
-  } else {
-    s->position = MonitorSettings::Manual;
-  }
-  s->xPos=ui.xPosSpinBox->value();
-  s->yPos=ui.yPosSpinBox->value();
-  s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
-  return s;
-}
-
-void MonitorWidget::chooseMaxResolution() {
-  if(ui.resolutionCombo->count() > 1)
-    ui.resolutionCombo->setCurrentIndex(1);
-}
-
-void MonitorWidget::enableMonitor(bool enable) {
-  ui.enabled->setChecked(enable);
+void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor) {
+    qDebug() << "set only monitor" << isOnlyMonitor;
+    ui.xPosSpinBox->setVisible(!isOnlyMonitor);
+    ui.yPosSpinBox->setVisible(!isOnlyMonitor);
+    ui.xPosLabel->setVisible(!isOnlyMonitor);
+    ui.yPosLabel->setVisible(!isOnlyMonitor);
+    ui.extendsRadio->setVisible(!isOnlyMonitor);
+    ui.clonesRadio->setVisible(!isOnlyMonitor);
+    ui.clonesCombo->setVisible(!isOnlyMonitor);
+    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
+    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
 }

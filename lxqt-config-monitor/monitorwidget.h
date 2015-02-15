@@ -25,29 +25,28 @@
 #include <QStringList>
 #include <QHash>
 #include <QList>
+#include <KScreen/Output>
+
 #include "ui_monitorwidget.h"
 
-class MonitorInfo;
-class MonitorSettings;
 
 // Monitor info
 class MonitorWidget : public QGroupBox {
   Q_OBJECT
 
 public:
-  MonitorWidget(MonitorInfo* monitor, const QList< MonitorInfo* > monitorsInfo, QWidget* parent = 0);
-  MonitorSettings* getSettings();
-  void chooseMaxResolution();
-  void enableMonitor(bool enable);
+    MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent = 0);
 
-  MonitorInfo* monitorInfo;
+    void updateRefreshRates();
 
-  Ui::MonitorWidget ui;
+    KScreen::OutputPtr output;
+
+    Ui::MonitorWidget ui;
 public Q_SLOTS:
-  void disablePositionOption(bool disabled);
+    void setOnlyMonitor(bool isOnlyMonitor);
 
 private Q_SLOTS:
-  void onResolutionChanged(int);
+    void onResolutionChanged(int);
 };
 
 #endif // _MONITORWIDGET_H_
