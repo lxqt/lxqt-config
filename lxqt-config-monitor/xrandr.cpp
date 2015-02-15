@@ -176,9 +176,6 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
           if(key == "Gamma") {
             monitor->gamma = value;
           }
-          else if(key == "Brightness") {
-            monitor->brightness = value;
-          }
           else if(key == "EDID") {
             monitor->edid = value ;
             // Get vendor
@@ -197,20 +194,6 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
               }
               qDebug() << "VendorHex:" << vendorHex << "Vendor" << vendor ;
               monitor->vendor = vendor;
-            }
-          }
-          else if(key == "Backlight") {
-            QRegExp rx("(\\d+)");
-            QStringList list;
-            int pos = 0;
-            while ((pos = rx.indexIn(value, pos)) != -1) {
-              list << rx.cap(1);
-              pos += rx.matchedLength();
-            }
-            if(list.length()==3) {
-              monitor->backlight=list[0];
-              monitor->backlightMin=list[1];
-              monitor->backlightMax=list[2];
             }
           }
           continue;
@@ -246,11 +229,11 @@ bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) 
 QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
 
   QByteArray cmd = "xrandr";
-  
+
   int fb_width = 0, fb_height = 0;
-  
+
   QList<MonitorInfo*> monitorInfos = getMonitorsInfo();
-  
+
   foreach(MonitorSettings * monitor, monitors) {
     foreach(MonitorInfo * info, monitorInfos) {
 	    if(monitor->name == info->name) {
@@ -272,7 +255,7 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
 	    }
 	 }
   }
-  
+
   cmd.append(QString(" --fb %1x%2").arg(fb_width).arg(fb_height));
 
   foreach(MonitorSettings * monitor, monitors) {
@@ -302,14 +285,8 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
         cmd.append(QString(" --pos 0x0"));
       if(monitor->primaryOk)
         cmd.append(" --primary");
-      cmd.append(" --brightness ");
-      cmd.append(monitor->brightness);
       cmd.append(" --gamma ");
       cmd.append(monitor->gamma);
-      if( !monitor->backlight.isEmpty() ) {
-        cmd.append(" --set Backlight ");
-        cmd.append(monitor->backlight);
-      }
     }
     else    // turn off
       cmd.append("--off");

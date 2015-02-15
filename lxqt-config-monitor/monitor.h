@@ -34,10 +34,6 @@ public:
   QString currentMode;
   QString currentRate;
   QString gamma;
-  QString brightness;
-  QString backlight;
-  QString backlightMin;
-  QString backlightMax;
   int xPos;
   int yPos;
   bool enabledOk;
@@ -68,7 +64,7 @@ public:
   QString preferredRate;
   QString edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
   QString vendor;
-  
+
   static bool LVDS_Ok; // Is true if LVDS (Laptop monitor) is connected.
   QString humanReadableName();
 };
@@ -87,6 +83,5 @@ public:
 
 /**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
 QSize sizeFromString(QString str);
-
 
 #endif // _MONITOR_H_
