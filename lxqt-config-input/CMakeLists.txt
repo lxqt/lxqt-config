@@ -68,7 +68,6 @@ add_executable(lxqt-config-input
 )
 
 target_link_libraries(lxqt-config-input
-    KF5::WindowSystem
     Qt5::Widgets
     Qt5::X11Extras
     ${X11_LIBRARIES}
