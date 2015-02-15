@@ -35,10 +35,6 @@ public:
   QString currentMode;
   QString currentRate;
   QString gamma;
-  QString brightness;
-  QString backlight;
-  QString backlightMin;
-  QString backlightMax;
   int xPos;
   int yPos;
   bool enabledOk;
@@ -88,6 +84,5 @@ public:
 
 /**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
 QSize sizeFromString(QString str);
-
 
 #endif // _MONITOR_H_

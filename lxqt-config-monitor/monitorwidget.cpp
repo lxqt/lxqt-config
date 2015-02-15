@@ -59,13 +59,6 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   else
      ui.rateCombo->setCurrentIndex(0);
 
-  int brightness;
-  if( !monitorInfo->brightness.isEmpty() )
-    brightness = monitorInfo->brightness.toFloat()*100;
-  else
-    brightness = 100;
-  ui.brightnessSlider->setValue(brightness);
-
   // Set gamma values
   ui.redSpinBox->setSingleStep(0.01);
   ui.greenSpinBox->setSingleStep(0.01);
@@ -75,17 +68,6 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     ui.redSpinBox->setValue(gammaValues[0].toFloat());
     ui.greenSpinBox->setValue(gammaValues[1].toFloat());
     ui.blueSpinBox->setValue(gammaValues[2].toFloat());
-  }
-
-  //Set backlight values
-  if( !monitor->backlight.isEmpty() ) {
-    ui.backlightSlider->setMinimum(monitor->backlightMin.toInt());
-    ui.backlightSlider->setMaximum(monitor->backlightMax.toInt());
-    ui.backlightSlider->setSingleStep(1);
-    ui.backlightSlider->setValue(monitor->backlight.toInt());
-  } else {
-    ui.backlightSlider->setEnabled(false);
-    ui.backlightLabel->setEnabled(false);
   }
 }
 
@@ -128,13 +110,7 @@ MonitorSettings* MonitorWidget::getSettings() {
   }
   s->xPos=ui.xPosSpinBox->value();
   s->yPos=ui.yPosSpinBox->value();
-  s->brightness = QString("%1").arg((float)(ui.brightnessSlider->value())/100.0);
   s->gamma = QString("%1:%2:%3").arg(ui.redSpinBox->value()).arg(ui.greenSpinBox->value()).arg(ui.blueSpinBox->value());
-  if(ui.backlightSlider->isEnabled()) {
-    s->backlight = QString("%1").arg(ui.backlightSlider->value());
-    s->backlightMax = QString("%1").arg(ui.backlightSlider->maximum());
-    s->backlightMin = QString("%1").arg(ui.backlightSlider->minimum());
-  }
   return s;
 }
 
