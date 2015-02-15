@@ -16,20 +16,16 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
 #include "main.h"
 #include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
 #include <QDebug>
 #include "monitorsettingsdialog.h"
-#include "quickoptions.h"
-#include "xrandr.h"
-#include "applydialog.h"
 
 int main(int argc, char** argv) {
 	LxQt::SingleApplication app(argc, argv);
-	
+
 	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
 	if(configName.isEmpty())
 		configName = "MonitorSettings";
@@ -38,7 +34,7 @@ int main(int argc, char** argv) {
 	dlg.setButtons(QDialogButtonBox::QDialogButtonBox::Apply|QDialogButtonBox::Close);
 	app.setActivationWindow(&dlg);
 	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
-	
+
 	XRandRBackend *xrandr = new XRandRBackend();
 	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr, &settings);
 	monitorSettingsDialog->connect(&dlg, SIGNAL(clicked(QDialogButtonBox::StandardButton)), SLOT(processClickedFromDialog(QDialogButtonBox::StandardButton)));
@@ -54,22 +50,23 @@ int main(int argc, char** argv) {
 			dlg.addPage(quickOptions, QObject::tr("Quick Options"), "format-justify-left");
 		}
 	 }
-	
+
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
-	
+
 	ApplyDialog *apply = new ApplyDialog(&settings);
 	apply->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
 	// monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
 	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
 	apply->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
-	
+
 	dlg.addPage(apply, QObject::tr("Save settings"), "system-run");
-	
+
 	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
 
-	if(QDialog::Accepted == dlg.exec() ) {
-		main(argc, argv);
-	}
-	
-	return 0;
+    MonitorSettingsDialog dlg;
+    app.setActivationWindow(&dlg);
+    dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
+    dlg.show();
+
+    return app.exec();
 }

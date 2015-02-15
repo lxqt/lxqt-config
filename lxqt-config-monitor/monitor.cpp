@@ -21,12 +21,15 @@
 
 bool MonitorInfo::LVDS_Ok = false;
 
-bool MonitorSettingsBackend::isUnified(const QList< MonitorInfo* > monitors) {
-  Q_FOREACH(MonitorInfo * monitor, monitors) {
-    if(monitor->position != MonitorSettings::None)
-      return false;
+QSize sizeFromString(QString str) {
+  int width = 0;
+  int height = 0;
+  int x = str.indexOf('x');
+  if(x > 0) {
+    width = str.left(x).toInt();
+    height = str.mid(x + 1).toInt();
   }
-  return true;
+  return QSize(width, height);
 }
 
 MonitorSettings::MonitorSettings(QObject* parent): QObject(parent) {

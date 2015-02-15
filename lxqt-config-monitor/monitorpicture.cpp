@@ -36,7 +36,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor) {
   int x0, y0;
   x0 = y0 =0;
   Q_FOREACH(MonitorPicture * picture, pictures) {
-    if( picture->monitorWidget->monitorInfo->name == primaryMonitor || primaryMonitor=="") {
+    if( picture->monitorWidget->output->name() == primaryMonitor || primaryMonitor=="") {
       x0 = picture->monitorWidget->ui.xPosSpinBox->value() + picture->pos().x();
       y0 = picture->monitorWidget->ui.yPosSpinBox->value() + picture->pos().y();
       break;
@@ -69,31 +69,18 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWid
   setRect(x, y, currentSizeWidth, currentSizeHeight);
   originX = x;
   originY = y;
-  
-  
-  QSvgRenderer *renderer = new QSvgRenderer(QLatin1String(ICON_PATH "monitor.svg"));
-  svgItem = new QGraphicsSvgItem();
-  svgItem->setSharedRenderer(renderer);
-  svgItem->setX(x);
-  svgItem->setY(y);
-  svgItem->setOpacity(0.7);
-  svgItem->setParentItem(this);
-  
-  
-  textItem = new QGraphicsTextItem(monitorWidget->monitorInfo->name, this);
-  textItem->setDefaultTextColor(Qt::white);
+  setPen(QPen(Qt::black, 20));
+  textItem = new QGraphicsTextItem(monitorWidget->output->name(), this);
   textItem->setX(x);
   textItem->setY(y);
   textItem->setParentItem(this);
-  setPen(QPen(Qt::black, 20));
-  
+
   adjustNameSize();
 }
 
 
 void MonitorPicture::adjustNameSize() {
-  prepareGeometryChange();
-  qreal fontWidth = QFontMetrics(textItem->font()).width(monitorWidget->monitorInfo->name+"  "); 
+  qreal fontWidth = QFontMetrics(textItem->font()).width(monitorWidget->output->name() + "  ");
   textItem->setScale((qreal)this->rect().width()/fontWidth);
   QTransform transform;
   qreal width = qAbs(this->rect().width()/svgItem->boundingRect().width());
@@ -130,7 +117,7 @@ void MonitorPicture::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 
 //////////////////////////////////////////////////////////////////////////////////
 // Move picture to nearest picture procedure.
-// Read magnetic_attraction.html for more info about the algorithm used. 
+// Read magnetic_attraction.html for more info about the algorithm used.
 //////////////////////////////////////////////////////////////////////////////////
 
 struct Parameters {
@@ -223,14 +210,14 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
   if(params.t1>=0.0 && params.t1<=1.0 && params.t2>=0.0 && params.t2<=1.0) {
     if(t2<0) {t2 = params.t1; P2 = params.cutPoint;}
   }
-  
+
   if(t1>t2) { //Monitor outside
     result.vector = P1-P2;
     result.ok = false;
   } else {
     result.ok = true;
   }
-  
+
   return result;
 }
 

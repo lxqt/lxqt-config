@@ -24,6 +24,8 @@
 #include <QHash>
 #include <QList>
 #include <QRect>
+#include <KScreen/Config>
+
 
 //Settings to pass to backend
 class MonitorSettings: public QObject {
@@ -55,8 +57,10 @@ public:
 
 // Monitor information from backend
 class MonitorInfo: public MonitorSettings {
-  Q_OBJECT
+    Q_OBJECT
 public:
+    KScreen::ConfigPtr mConfig;
+
   MonitorInfo(QObject* parent = 0);
   QStringList modes; // Modes of this monitor in order
   QHash <QString, MonitorMode*> monitorModes; // Rates suported by each mode
@@ -68,18 +72,6 @@ public:
   static bool LVDS_Ok; // Is true if LVDS (Laptop monitor) is connected.
   QString humanReadableName();
 };
-
-
-class MonitorSettingsBackend: public QObject {
-  Q_OBJECT
-public:
-  virtual QList<MonitorInfo*> getMonitorsInfo() = 0;
-  virtual bool setMonitorsSettings(const QList<MonitorSettings*> monitors) = 0;
-  virtual QString getCommand(const QList<MonitorSettings*> monitors) = 0;
-  virtual bool isUnified(const QList<MonitorInfo*> monitors);
-};
-
-
 
 /**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
 QSize sizeFromString(QString str);
