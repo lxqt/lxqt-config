@@ -36,11 +36,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     ui.setupUi(this);
 
-    ui.xPosSpinBox->setValue(output->pos().x());
-    ui.yPosSpinBox->setValue(output->pos().y());
-
     ui.enabledCheckbox->setChecked(output->isEnabled());
-    ui.isPrimaryCheckbox->setChecked(output->isPrimary());
 
     // Add the preferred mode at the top of the list
     KScreen::ModePtr preferredMode = output->preferredMode();
@@ -73,14 +69,81 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     if (config->connectedOutputs().count() == 1) {
         setOnlyMonitor(true);
+        // There isn't always a primary output. Gross.
+        output->setPrimary(true);
     } else {
         Q_FOREACH(KScreen::OutputPtr clone, config->connectedOutputs()) {
             // We can't clone ourselves, or an output that already clones another
             if (clone == output || clone->clones().count()) continue;
-            ui.clonesCombo->addItem(clone->name(), clone->id());
+            ui.otherScreensCombo->addItem(clone->name(), clone->id());
         }
     }
+
+    // Behavior chooser
+    connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
+    if (output->isPrimary()) {
+        ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
+    } else if (!output->clone()) {
+        // Is this right?
+        ui.behaviorCombo->setCurrentIndex(CloneDisplay);
+        int idx = ui.resolutionCombo->findData(output->clone()->id());
+        ui.otherScreensCombo->setCurrentIndex(idx);
+    } else {
+        ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
+        ui.xPosSpinBox->setValue(output->pos().x());
+        ui.yPosSpinBox->setValue(output->pos().y());
+    }
+
+    connect(ui.positioningCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onPositioningChanged(int)));
 }
+
+
+void MonitorWidget::onBehaviorChanged(int idx) {
+    // Behavior should match the index of the selected element
+    ui.positioningCombo->setVisible(idx == ExtendDisplay);
+    ui.otherScreensCombo->setVisible(idx == ExtendDisplay | idx == CloneDisplay);
+    ui.xPosSpinBox->setVisible(idx == ExtendDisplay);
+    ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
+    ui.otherScreensCombo->setEnabled(true);
+}
+
+
+void MonitorWidget::onPositioningChanged(int idx) {
+    // Update the x/y spinboxes with the correct values
+    KScreen::OutputPtr other = output; // TODO: Get the correct output here
+
+    if (!other->currentMode()) {
+        // TODO: Figure out what to do here
+        return;
+    }
+    QSize otherSize = other->currentMode()->size();
+    QSize thisSize = output->currentMode()->size();
+
+    int x = other->pos().x();
+    int y = other->pos().y();
+
+    switch (idx) {
+    case RightOf:
+        x += otherSize.width();
+        break;
+    case LeftOf:
+        x += thisSize.width();
+        break;
+    case Above:
+        y += otherSize.height();
+        break;
+    case Below:
+        y += thisSize.height();
+        break;
+    case Manually:
+    default:
+        break;
+    }
+    ui.xPosSpinBox->setValue(x);
+    ui.yPosSpinBox->setValue(y);
+    ui.otherScreensCombo->setEnabled(idx != Manually);
+}
+
 
 void MonitorWidget::onResolutionChanged(int index) {
     qDebug() << "Set id to" << ui.resolutionCombo->currentData();
@@ -102,14 +165,10 @@ void MonitorWidget::updateRefreshRates() {
 
 
 void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor) {
-    qDebug() << "set only monitor" << isOnlyMonitor;
+    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
+    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
+    ui.behaviorCombo->setEnabled(!isOnlyMonitor);
     ui.xPosSpinBox->setVisible(!isOnlyMonitor);
     ui.yPosSpinBox->setVisible(!isOnlyMonitor);
-    ui.xPosLabel->setVisible(!isOnlyMonitor);
-    ui.yPosLabel->setVisible(!isOnlyMonitor);
-    ui.extendsRadio->setVisible(!isOnlyMonitor);
-    ui.clonesRadio->setVisible(!isOnlyMonitor);
-    ui.clonesCombo->setVisible(!isOnlyMonitor);
-    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
-    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
+    ui.otherScreensCombo->setVisible(!isOnlyMonitor);
 }

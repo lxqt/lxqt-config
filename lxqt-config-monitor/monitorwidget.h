@@ -30,6 +30,17 @@
 #include "ui_monitorwidget.h"
 
 
+#define PrimaryDisplay 0
+#define ExtendDisplay 1
+#define CloneDisplay 2
+
+#define RightOf 0
+#define LeftOf 1
+#define Above 2
+#define Below 3
+#define Manually 4
+
+
 // Monitor info
 class MonitorWidget : public QGroupBox {
   Q_OBJECT
@@ -42,10 +53,13 @@ public:
     KScreen::OutputPtr output;
 
     Ui::MonitorWidget ui;
+
 public Q_SLOTS:
     void setOnlyMonitor(bool isOnlyMonitor);
 
 private Q_SLOTS:
+    void onBehaviorChanged(int);
+    void onPositioningChanged(int);
     void onResolutionChanged(int);
 };
 
