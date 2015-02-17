@@ -63,9 +63,19 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     }
     updateRefreshRates();
 
-    /* XXX setting gamma not possible yet
+    // Update EDID information
+    // KScreen doesn't make much public but that's ok...
     KScreen::Edid* edid = output->edid();
-    if (edid && edid->isValid()) {}*/
+    if (edid && edid->isValid()) {
+        ui.outputInfoLabel->setText(
+            tr("Name: %1\n").arg(edid->name()) +
+            tr("Vendor: %1\n").arg(edid->vendor()) +
+            tr("Serial: %1\n").arg(edid->serial()) +
+            tr("Display size: %1cm x %2cm\n").arg(edid->width()).arg(edid->height()) +
+            tr("Serial number: %1\n").arg(edid->serial()) +
+            tr("EISA device ID: %1\n").arg(edid->eisaId())
+        );
+    }
 
     if (config->connectedOutputs().count() == 1) {
         setOnlyMonitor(true);
