@@ -21,7 +21,7 @@
      </property>
      <widget class="QWidget" name="tabSettings">
       <attribute name="title">
-       <string>Screen setup</string>
+       <string>Setup</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout">
        <item row="8" column="0" colspan="2">
@@ -166,78 +166,94 @@
      </widget>
      <widget class="QWidget" name="tabAdvanced">
       <attribute name="title">
-       <string>Advanced settings</string>
+       <string>Advanced</string>
       </attribute>
-      <widget class="QComboBox" name="orientationCombo">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="3" column="0" colspan="2">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="rateLabel">
+           <property name="text">
+            <string>Refresh rate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="orientationLabel">
+           <property name="text">
+            <string>Rotation:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="orientationCombo">
+           <item>
+            <property name="text">
+             <string>None</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Left</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Inverted</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Right</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="rateCombo">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Info</string>
+      </attribute>
+      <widget class="QLabel" name="outputInfoLabel">
        <property name="geometry">
         <rect>
-         <x>110</x>
-         <y>30</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <item>
-        <property name="text">
-         <string>None</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Left</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Inverted</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Right</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QLabel" name="orientationLabel">
-       <property name="geometry">
-        <rect>
-         <x>28</x>
-         <y>30</y>
-         <width>76</width>
-         <height>31</height>
+         <x>10</x>
+         <y>10</y>
+         <width>264</width>
+         <height>181</height>
         </rect>
        </property>
        <property name="text">
-        <string>Rotation:</string>
+        <string>Display information</string>
        </property>
-      </widget>
-      <widget class="QComboBox" name="rateCombo">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>80</y>
-         <width>111</width>
-         <height>32</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-      </widget>
-      <widget class="QLabel" name="rateLabel">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>80</y>
-         <width>91</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Refresh rate:</string>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
