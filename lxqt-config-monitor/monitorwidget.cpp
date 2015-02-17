@@ -94,7 +94,7 @@ void MonitorWidget::updateRefreshRates() {
     ui.rateCombo->clear();
     KScreen::ModePtr selectedMode = output->currentMode(); // XXX That's wrong
     Q_FOREACH(const KScreen::ModePtr &mode, output->modes()) {
-        if (mode->size() == selectedMode->size()) {
+        if (selectedMode && mode->size() == selectedMode->size()) {
             ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
         }
     }
