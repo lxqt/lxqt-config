@@ -119,6 +119,11 @@
           <widget class="QComboBox" name="positioningCombo">
            <item>
             <property name="text">
+             <string>Positioning</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
              <string>Right of...</string>
             </property>
            </item>
@@ -145,7 +150,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="otherScreensCombo"/>
+          <widget class="QComboBox" name="otherScreensCombo">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>

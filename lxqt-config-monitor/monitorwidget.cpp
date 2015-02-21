@@ -29,10 +29,28 @@ QString modeToString(KScreen::ModePtr mode) {
     return QString("%1x%2").arg(mode->size().width()).arg(mode->size().height());
 }
 
+
+KScreen::OutputPtr getOutputById(int id, KScreen::OutputList outputs) {
+    Q_FOREACH(const KScreen::OutputPtr output, outputs) {
+        if (output->id() == id) return output;
+    }
+    return KScreen::OutputPtr(NULL);
+}
+
+
+KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes) {
+    Q_FOREACH(const KScreen::ModePtr mode, modes) {
+        if (mode->id() == id) return mode;
+    }
+    return KScreen::ModePtr(NULL);
+}
+
+
 MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent):
     QGroupBox(parent)
 {
     this->output = output;
+    this->config = config;
 
     ui.setupUi(this);
 
@@ -82,15 +100,14 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         // There isn't always a primary output. Gross.
         output->setPrimary(true);
     } else {
-        Q_FOREACH(KScreen::OutputPtr clone, config->connectedOutputs()) {
+        Q_FOREACH(KScreen::OutputPtr other, config->connectedOutputs()) {
             // We can't clone ourselves, or an output that already clones another
-            if (clone == output || clone->clones().count()) continue;
-            ui.otherScreensCombo->addItem(clone->name(), clone->id());
+            if (other == output) continue;
+            ui.otherScreensCombo->addItem(other->name(), other->id());
         }
     }
 
     // Behavior chooser
-    connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
     if (output->isPrimary()) {
         ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
     } else if (!output->clone()) {
@@ -104,7 +121,13 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         ui.yPosSpinBox->setValue(output->pos().y());
     }
 
+    connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
     connect(ui.positioningCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onPositioningChanged(int)));
+    connect(ui.xPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
+    connect(ui.yPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
+
+    // Force update behavior visibility
+    onBehaviorChanged(ui.behaviorCombo->currentIndex());
 }
 
 
@@ -115,12 +138,17 @@ void MonitorWidget::onBehaviorChanged(int idx) {
     ui.xPosSpinBox->setVisible(idx == ExtendDisplay);
     ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
     ui.otherScreensCombo->setEnabled(true);
+
+    output->setPrimary(idx == PrimaryDisplay);
 }
 
 
 void MonitorWidget::onPositioningChanged(int idx) {
     // Update the x/y spinboxes with the correct values
-    KScreen::OutputPtr other = output; // TODO: Get the correct output here
+    KScreen::OutputPtr other = getOutputById(
+        ui.otherScreensCombo->currentData().toInt(),
+        config->outputs()
+    );
 
     if (!other->currentMode()) {
         // TODO: Figure out what to do here
@@ -151,15 +179,19 @@ void MonitorWidget::onPositioningChanged(int idx) {
     }
     ui.xPosSpinBox->setValue(x);
     ui.yPosSpinBox->setValue(y);
-    ui.otherScreensCombo->setEnabled(idx != Manually);
+    // Disable the other screens combo box if we don't need it
+    ui.otherScreensCombo->setEnabled(idx && idx != Manually);
+}
+
+
+void MonitorWidget::onPositionChanged(int value) {
+    output->setPos(QPoint(ui.xPosSpinBox->value(), ui.yPosSpinBox->value()));
 }
 
 
 void MonitorWidget::onResolutionChanged(int index) {
-    qDebug() << "Set id to" << ui.resolutionCombo->currentData();
-
     updateRefreshRates();
-    // TODO enable Apply button
+    output->setCurrentModeId(ui.resolutionCombo->currentData().toString());
 }
 
 
