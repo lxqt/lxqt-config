@@ -25,6 +25,7 @@
 #include <QStringList>
 #include <QHash>
 #include <QList>
+#include <KScreen/Config>
 #include <KScreen/Output>
 
 #include "ui_monitorwidget.h"
@@ -34,11 +35,11 @@
 #define ExtendDisplay 1
 #define CloneDisplay 2
 
-#define RightOf 0
-#define LeftOf 1
-#define Above 2
-#define Below 3
-#define Manually 4
+#define RightOf 1
+#define LeftOf 2
+#define Above 3
+#define Below 4
+#define Manually 5
 
 
 // Monitor info
@@ -51,6 +52,7 @@ public:
     void updateRefreshRates();
 
     KScreen::OutputPtr output;
+    KScreen::ConfigPtr config;
 
     Ui::MonitorWidget ui;
 
@@ -60,6 +62,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void onBehaviorChanged(int);
     void onPositioningChanged(int);
+    void onPositionChanged(int);
     void onResolutionChanged(int);
 };
 
