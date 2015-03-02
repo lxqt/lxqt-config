@@ -103,7 +103,8 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         Q_FOREACH(KScreen::OutputPtr other, config->connectedOutputs()) {
             // We can't clone ourselves, or an output that already clones another
             if (other == output) continue;
-            ui.otherScreensCombo->addItem(other->name(), other->id());
+            ui.clonesCombo->addItem(other->name(), other->id());
+            ui.relativeScreensCombo->addItem(other->name(), other->id());
         }
     }
 
@@ -114,7 +115,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         // Is this right?
         ui.behaviorCombo->setCurrentIndex(CloneDisplay);
         int idx = ui.resolutionCombo->findData(output->clone()->id());
-        ui.otherScreensCombo->setCurrentIndex(idx);
+        ui.clonesCombo->setCurrentIndex(idx);
     } else {
         ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
         ui.xPosSpinBox->setValue(output->pos().x());
@@ -134,10 +135,11 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 void MonitorWidget::onBehaviorChanged(int idx) {
     // Behavior should match the index of the selected element
     ui.positioningCombo->setVisible(idx == ExtendDisplay);
-    ui.otherScreensCombo->setVisible(idx == ExtendDisplay | idx == CloneDisplay);
+    ui.clonesCombo->setVisible(idx == CloneDisplay);
+    ui.relativeScreensCombo->setVisible(idx == ExtendDisplay);
     ui.xPosSpinBox->setVisible(idx == ExtendDisplay);
     ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
-    ui.otherScreensCombo->setEnabled(true);
+    ui.relativeScreensCombo->setEnabled(true);
 
     output->setPrimary(idx == PrimaryDisplay);
 }
@@ -146,7 +148,7 @@ void MonitorWidget::onBehaviorChanged(int idx) {
 void MonitorWidget::onPositioningChanged(int idx) {
     // Update the x/y spinboxes with the correct values
     KScreen::OutputPtr other = getOutputById(
-        ui.otherScreensCombo->currentData().toInt(),
+        ui.relativeScreensCombo->currentData().toInt(),
         config->outputs()
     );
 
@@ -180,7 +182,7 @@ void MonitorWidget::onPositioningChanged(int idx) {
     ui.xPosSpinBox->setValue(x);
     ui.yPosSpinBox->setValue(y);
     // Disable the other screens combo box if we don't need it
-    ui.otherScreensCombo->setEnabled(idx && idx != Manually);
+    ui.relativeScreensCombo->setEnabled(idx && idx != Manually);
 }
 
 
@@ -212,5 +214,6 @@ void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor) {
     ui.behaviorCombo->setEnabled(!isOnlyMonitor);
     ui.xPosSpinBox->setVisible(!isOnlyMonitor);
     ui.yPosSpinBox->setVisible(!isOnlyMonitor);
-    ui.otherScreensCombo->setVisible(!isOnlyMonitor);
+    ui.relativeScreensCombo->setVisible(!isOnlyMonitor);
+    ui.clonesCombo->setVisible(!isOnlyMonitor);
 }
