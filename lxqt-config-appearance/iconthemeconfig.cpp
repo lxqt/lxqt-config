@@ -31,9 +31,13 @@
 #include <XdgIcon>
 #include <LXQt/Settings>
 #include <QStringList>
+#include <QStringBuilder>
 #include <QIcon>
 #include <QDebug>
 
+#include <private/qtxdg/qiconloader_p.h>
+
+using namespace QtXdg;
 
 IconThemeConfig::IconThemeConfig(LxQt::Settings* settings, QWidget* parent):
     QWidget(parent),
@@ -55,7 +59,16 @@ void IconThemeConfig::initIconsThemes()
 {
     QStringList processed;
     QStringList baseDirs = QIcon::themeSearchPaths();
+    static const QStringList iconNames = QStringList()
+                    << QStringLiteral("document-open")
+                    << QStringLiteral("document-new")
+                    << QStringLiteral("edit-undo")
+                    << QStringLiteral("media-playback-start");
 
+    const int iconNamesN = iconNames.size();
+    iconThemeList->setColumnCount(iconNamesN + 2);
+
+    QList<QTreeWidgetItem *> items;
     foreach (QString baseDirName, baseDirs)
     {
         QDir baseDir(baseDirName);
@@ -72,22 +85,38 @@ void IconThemeConfig::initIconsThemes()
                 IconThemeInfo theme(QDir(dir.canonicalFilePath()));
                 if (theme.isValid() && (!theme.isHidden()))
                 {
-                    QTreeWidgetItem *item = new QTreeWidgetItem(iconThemeList);
+                    QTreeWidgetItem *item = new QTreeWidgetItem((QTreeWidget*)0);
                     item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
                     item->setData(0, Qt::UserRole, theme.name());
 
-                    item->setIcon(0, theme.icon("document-open"));
-                    item->setIcon(1, theme.icon("document-new"));
-                    item->setIcon(2, theme.icon("edit-undo"));
-                    item->setIcon(3, theme.icon("media-playback-start"));
+                    const QVector<QIcon> icons = theme.icons(iconNames);
 
-                    item->setText(4, theme.comment().isEmpty() ? theme.text() : theme.text() + " (" + theme.comment() + ")");
+                    const int K = icons.size();
+                    for (int i = 0; i < K; ++i)
+                    {
+                        item->setIcon(i, icons.at(i));
+                    }
+
+                    QString themeDescription;
+                    if (theme.comment().isEmpty())
+                    {
+                        themeDescription = theme.text();
+                    }
+                    else
+                    {
+                        themeDescription = theme.text() % QStringLiteral(" (") % theme.comment() % QStringLiteral(")");
+                    }
+
+                    item->setText(iconNamesN + 1, themeDescription);
+
+                    items.append(item);
                 }
             }
         }
     }
+    QIconLoader::instance()->updateSystemTheme();
 
-    iconThemeList->setColumnCount(5);
+    iconThemeList->insertTopLevelItems(0, items);
     for (int i=0; i<iconThemeList->header()->count()-1; ++i)
     {
         iconThemeList->resizeColumnToContents(i);
@@ -129,5 +158,3 @@ void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
         m_settings->sync();
     }
 }
-
-

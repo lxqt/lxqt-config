@@ -29,9 +29,11 @@
 #define ICONTHEMEINFO_H
 
 #include <QObject>
+
 #include <QIcon>
 #include <QDir>
 #include <QSettings>
+#include <QVector>
 
 class IconThemeInfo
 {
@@ -45,19 +47,18 @@ public:
 
     bool isValid() const { return mValid; }
     bool isHidden() const { return mHidden; }
-    QIcon icon(const QString &iconName) const;
+    QVector<QIcon> icons(const QStringList &iconNames) const;
+
 private:
     QString mFileName;
     QString mName;
     QString mText;
     QString mComment;
-    QString mActionsDir;
 
     bool mValid;
     bool mHidden;
 
     void load(const QString &fileName);
-    void loadDirsInfo(QSettings &file, const QString &path);
 };
 
 

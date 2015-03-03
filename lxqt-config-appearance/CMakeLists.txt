@@ -1,6 +1,8 @@
 project(lxqt-config-appearance)
 
 include_directories(
+    ${QTXDG_PRIVATE_INCLUDE_DIRS}
+    ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     "${CMAKE_CURRENT_BINARY_DIR}"
     ${LXQT_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
