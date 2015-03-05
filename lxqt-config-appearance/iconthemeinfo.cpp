@@ -100,8 +100,8 @@ IconThemeInfo::IconThemeInfo(const QDir &dir):
     mHidden(false)
 {
     mName = dir.dirName();
-    if (dir.exists("index.theme"))
-        load(dir.absoluteFilePath("index.theme"));
+    if (dir.exists(QStringLiteral("index.theme")))
+        load(dir.absoluteFilePath(QStringLiteral("index.theme")));
 }
 
 
@@ -113,12 +113,12 @@ void IconThemeInfo::load(const QString &fileName)
     if (file.status() != QSettings::NoError)
         return;
 
-    if (file.value("Icon Theme/Directories").toStringList().join("").isEmpty())
+    if (file.value(QStringLiteral("Icon Theme/Directories")).toStringList().join(QLatin1Char(' ')).isEmpty())
         return;
 
-    mHidden = file.value("Icon Theme/Hidden", false).toBool();
-    mText = file.value("Icon Theme/Name").toString();
-    mComment = file.value("Icon Theme/Comment").toString();
+    mHidden = file.value(QStringLiteral("Icon Theme/Hidden"), false).toBool();
+    mText = file.value(QStringLiteral("Icon Theme/Name")).toString();
+    mComment = file.value(QStringLiteral("Icon Theme/Comment")).toString();
 
     mValid = true;
 }
