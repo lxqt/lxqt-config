@@ -6,123 +6,123 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślna czcionka dla interfejsu użytkownika</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Styl:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normalna</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogrubiona</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="74"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursywa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="79"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogrubiona kursywa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="90"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Poniższe ustawienia dotyczą tylko nowo otwartych aplikacji</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="96"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Wygładzanie czcionek (antyaliasing)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="103"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Styl hintingu:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="114"/>
         <location filename="../fontsconfig.ui" line="179"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="119"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Delikatny</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="124"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Średni</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="129"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Pełny</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="137"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinting czcionek</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="144"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozdzielczość (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="151"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Autohinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="168"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Antyaliasing subpikselowy:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="184"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="189"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="194"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="199"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished">Motyw LXQt</translation>
+        <translation>Motyw LXQt</translation>
     </message>
 </context>
 <context>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
@@ -178,12 +178,12 @@
     <message>
         <location filename="../main.cpp" line="63"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursor</translation>
     </message>
 </context>
 <context>
@@ -191,42 +191,42 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Styl widżetów</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Styl paska narzędziowego:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Tylko ikony</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tylko tekst</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst obok ikon</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst poniżej ikon</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyśłny</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywacja pojedyńczym kliknięciem</translation>
     </message>
 </context>
 </TS>
