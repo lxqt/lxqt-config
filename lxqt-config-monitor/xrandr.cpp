@@ -90,7 +90,9 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
       if(regModeLine.exactMatch(line)) { // this is a mode line
         // sample: 1280x1024 (0x55) 108.000MHz +HSync +VSync *current +preferred
         readingModes = true;
-        QString mode = regModeLine.cap(1);
+        // Mode name
+        // QString mode = regModeLine.cap(1);
+        QString mode = line.mid(0,line.lastIndexOf('(')).trimmed();
         QString rate;
         bool isCurrent = line.contains("current");
         bool isPreferred = line.contains("preferred");
