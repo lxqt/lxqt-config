@@ -52,16 +52,6 @@ QString MonitorInfo::humanReadableName() {
   return name;
 }
 
-/*
-QSize MonitorSettings::currentSize() {
-  return sizeFromString(currentMode);
-}
-
-
-QRect MonitorSettings::geometry() {
-  return QRect(QPoint(xPos, yPos), currentSize());
-}
-*/
 
 MonitorMode::MonitorMode(QString modeName, QObject *parent):QObject(parent) {
   mode = modeName;
