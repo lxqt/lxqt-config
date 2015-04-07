@@ -21,17 +21,6 @@
 
 bool MonitorInfo::LVDS_Ok = false;
 
-QSize sizeFromString(QString str) {
-  int width = 0;
-  int height = 0;
-  int x = str.indexOf('x');
-  if(x > 0) {
-    width = str.left(x).toInt();
-    height = str.mid(x + 1).toInt();
-  }
-  return QSize(width, height);
-}
-
 bool MonitorSettingsBackend::isUnified(const QList< MonitorInfo* > monitors) {
   Q_FOREACH(MonitorInfo * monitor, monitors) {
     if(monitor->position != MonitorSettings::None)
@@ -63,6 +52,7 @@ QString MonitorInfo::humanReadableName() {
   return name;
 }
 
+/*
 QSize MonitorSettings::currentSize() {
   return sizeFromString(currentMode);
 }
@@ -71,7 +61,7 @@ QSize MonitorSettings::currentSize() {
 QRect MonitorSettings::geometry() {
   return QRect(QPoint(xPos, yPos), currentSize());
 }
-
+*/
 
 MonitorMode::MonitorMode(QString modeName, QObject *parent):QObject(parent) {
   mode = modeName;

@@ -44,9 +44,6 @@ public:
   enum Position {None = 0, Manual};
   Position position;
   bool primaryOk;
-
-  QSize currentSize();
-  QRect geometry();
 };
 
 // Monitor mode and suported rates
@@ -86,7 +83,5 @@ public:
   virtual bool isUnified(const QList<MonitorInfo*> monitors);
 };
 
-/**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
-//QSize sizeFromString(QString str);
 
 #endif // _MONITOR_H_
