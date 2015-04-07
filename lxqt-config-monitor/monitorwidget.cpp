@@ -90,13 +90,12 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
 
 void MonitorWidget::onResolutionChanged(int index) {
   QComboBox* combo =ui.resolutionCombo;
-  QHash<QString, QStringList> modeLines = monitorInfo->modeLines;
   QComboBox* rateCombo = ui.rateCombo;
   QString mode = combo->currentText();
   rateCombo->clear();
   rateCombo->addItem(tr("Auto"));
-  if(modeLines.contains(mode)) {
-    QStringList mode_lines = modeLines[mode];
+  if( monitorInfo->monitorModes.contains(mode)) {
+    QStringList mode_lines = monitorInfo->monitorModes[mode]->modeLines;
     Q_FOREACH(QString rate, mode_lines) {
       rateCombo->addItem(rate);
     }

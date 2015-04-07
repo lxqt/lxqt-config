@@ -72,3 +72,9 @@ QRect MonitorSettings::geometry() {
   return QRect(QPoint(xPos, yPos), currentSize());
 }
 
+
+MonitorMode::MonitorMode(QString modeName, QObject *parent):QObject(parent) {
+  mode = modeName;
+  width = -1;
+  height = -1;
+}

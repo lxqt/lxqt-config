@@ -49,6 +49,16 @@ public:
   QRect geometry();
 };
 
+// Monitor mode and suported rates
+class MonitorMode: public QObject {
+  Q_OBJECT
+public:
+  MonitorMode(QString modeName, QObject *parent = 0);
+  QString mode;
+  QStringList modeLines;
+  int width;
+  int height;
+};
 
 // Monitor information from backend
 class MonitorInfo: public MonitorSettings {
@@ -56,7 +66,7 @@ class MonitorInfo: public MonitorSettings {
 public:
   MonitorInfo(QObject* parent = 0);
   QStringList modes; // Modes of this monitor in order
-  QHash<QString, QStringList> modeLines; // Rates suported by each mode
+  QHash <QString, MonitorMode*> monitorModes; // Rates suported by each mode
   QString preferredMode;
   QString preferredRate;
   QString edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
@@ -77,6 +87,6 @@ public:
 };
 
 /**Gets size from string rate. String rate format is "widthxheight". Example: 800x600*/
-QSize sizeFromString(QString str);
+//QSize sizeFromString(QString str);
 
 #endif // _MONITOR_H_

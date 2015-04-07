@@ -158,10 +158,11 @@ void MonitorSettingsDialog::onExtended() {
     monitor->chooseMaxResolution();
     monitor->enableMonitor(true);
     monitor->disablePositionOption(false);
-    QSize size = sizeFromString(monitor->ui.resolutionCombo->currentText());
+    QString modeName = monitor->ui.resolutionCombo->currentText();
+    int modeWidth = monitor->monitorInfo->monitorModes[modeName]->width;
     monitor->ui.xPosSpinBox->setValue(virtualWidth);
     monitor->ui.yPosSpinBox->setValue(0);
-    virtualWidth+=size.width();
+    virtualWidth+=modeWidth;
   }
   setMonitorsConfig();
 }

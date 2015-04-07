@@ -54,12 +54,14 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWid
 {
   this->monitorWidget = monitorWidget;
   this->monitorPictureDialog = monitorPictureDialog;
-  QSize currentSize = sizeFromString(monitorWidget->ui.resolutionCombo->currentText());
+  QString modeName = monitorWidget->ui.resolutionCombo->currentText();
+  int  currentSizeWidth = monitorWidget->monitorInfo->monitorModes[modeName]->width;
+  int  currentSizeHeight = monitorWidget->monitorInfo->monitorModes[modeName]->height;
   int x = monitorWidget->ui.xPosSpinBox->value();
   int y = monitorWidget->ui.yPosSpinBox->value();
   setAcceptedMouseButtons(Qt::LeftButton);
   setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemSendsGeometryChanges);
-  setRect(x, y, currentSize.width(), currentSize.height());
+  setRect(x, y, currentSizeWidth, currentSizeHeight);
   originX = x;
   originY = y;
   setPen(QPen(Qt::black, 20));

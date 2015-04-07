@@ -46,6 +46,13 @@ static int indentLevel(QByteArray line) {
   return indent;
 }
 
+static int countLeadingWhiteSpaces(QByteArray line) {
+  int indent = 0;
+  while(indent < line.size() && ( line[indent] == ' ') )
+    ++indent;
+  return indent;
+}
+
 // new parsing code using xrandr --verbose
 QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   QList<MonitorInfo*> monitors;
@@ -64,6 +71,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   QRegExp regModeLine("\\s+(\\d+x\\d+).*");
   QRegExp regRateLine("\\s+([vh]):.* clock\\s+([\\d.]+).?Hz.*");
   QRegExp regKeyValue("\\s*(\\w[\\w ]*)\\s*:\\s*(\\S.*)?");
+  QRegExp regWidthLine("\\s+h:\\s+width\\s+([\\d.]+).*");
+  QRegExp regHeightLine("\\s+v:\\s+height\\s+([\\d.]+).*");
 
   bool hasError = false;
   MonitorInfo* monitor = NULL;
@@ -87,18 +96,26 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
       }
     }
     else { // reading properties of this monitor
-      if(regModeLine.exactMatch(line)) { // this is a mode line
+      if( regModeLine.exactMatch(line) || countLeadingWhiteSpaces(line)==2 ) { // this is a mode line
         // sample: 1280x1024 (0x55) 108.000MHz +HSync +VSync *current +preferred
         readingModes = true;
         // Mode name
         // QString mode = regModeLine.cap(1);
         QString mode = line.mid(0,line.lastIndexOf('(')).trimmed();
         QString rate;
+        int width = -1;
+        int height = -1;
         bool isCurrent = line.contains("current");
         bool isPreferred = line.contains("preferred");
         ++it;
         while(it != lines.end()) {
           line = *it;
+          if(regWidthLine.exactMatch(line)) {
+            width = regWidthLine.cap(1).toInt();
+          }
+          if(regHeightLine.exactMatch(line)) {
+            height = regHeightLine.cap(1).toInt();
+          }
           if(regRateLine.exactMatch(line)) {
             // sample:
             //        h: width  1280 start 1328 end 1440 total 1688 skew    0 clock  63.98KHz
@@ -113,11 +130,13 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
           }
         }
         if(!mode.isEmpty() && !rate.isEmpty()) {
-          if(!monitor->modes.contains(mode))
+          if(!monitor->modes.contains(mode)) {
             monitor->modes.append(mode);
-          if(!monitor->modeLines.contains(mode))
-            monitor->modeLines[mode] = QStringList();
-          monitor->modeLines[mode].append(rate);
+            monitor->monitorModes[mode] = new MonitorMode(mode, this);
+          }
+          monitor->monitorModes[mode]->modeLines.append(rate);
+          monitor->monitorModes[mode]->width = width;
+          monitor->monitorModes[mode]->height = height;
           if(isPreferred) {
             monitor->preferredMode = mode;
             monitor->preferredRate = rate;
@@ -240,8 +259,9 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
       if(sel_res == QObject::tr("Auto"))   // auto resolution
         cmd.append("--auto");
       else {
-        cmd.append("--mode ");
+        cmd.append("--mode \"");
         cmd.append(sel_res);
+        cmd.append('"');
         if(sel_rate != QObject::tr("Auto")) {  // not auto refresh rate
           cmd.append(" --rate ");
           cmd.append(sel_rate);
