@@ -5,6 +5,7 @@
 #include <QPen>
 #include <QDebug>
 #include <QVector2D>
+#include "configure.h"
 
 
 MonitorPictureDialog::MonitorPictureDialog(QWidget * parent, Qt::WindowFlags f): QDialog(parent,f) {
@@ -50,6 +51,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor) {
 }
 
 
+
 MonitorPicture::MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWidget, MonitorPictureDialog *monitorPictureDialog):QGraphicsRectItem(parent)
 {
   this->monitorWidget = monitorWidget;
@@ -64,19 +66,37 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWid
   setRect(x, y, currentSizeWidth, currentSizeHeight);
   originX = x;
   originY = y;
-  setPen(QPen(Qt::black, 20));
+  
+  
+  QSvgRenderer *renderer = new QSvgRenderer(QLatin1String(ICON_PATH "monitor.svg"));
+  svgItem = new QGraphicsSvgItem();
+  svgItem->setSharedRenderer(renderer);
+  svgItem->setX(x);
+  svgItem->setY(y);
+  svgItem->setOpacity(0.7);
+  svgItem->setParentItem(this);
+  
+  
   textItem = new QGraphicsTextItem(monitorWidget->monitorInfo->name, this);
+  textItem->setDefaultTextColor(Qt::white);
   textItem->setX(x);
   textItem->setY(y);
   textItem->setParentItem(this);
+  setPen(QPen(Qt::black, 20));
   
   adjustNameSize();
 }
 
 
 void MonitorPicture::adjustNameSize() {
+  prepareGeometryChange();
   qreal fontWidth = QFontMetrics(textItem->font()).width(monitorWidget->monitorInfo->name+"  "); 
   textItem->setScale((qreal)this->rect().width()/fontWidth);
+  QTransform transform;
+  qreal width = qAbs(this->rect().width()/svgItem->boundingRect().width());
+  qreal height = qAbs(this->rect().height()/svgItem->boundingRect().height());
+  transform.scale(width, height);
+  svgItem->setTransform(transform);
 }
 
 

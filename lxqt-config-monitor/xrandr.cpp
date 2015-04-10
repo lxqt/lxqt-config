@@ -150,6 +150,7 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
       else { // this is not a mode line, read other properties
         if(readingModes) {
           // mode lines ended, so the whole monitor info is read
+          qDebug() << "Reading modes end";
           monitors.append(monitor);
           monitor = NULL;
           readingModes = false;

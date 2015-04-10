@@ -5,6 +5,8 @@ include_directories (
     ${LXQT_INCLUDE_DIRS}
 )
 
+find_package(Qt5Svg REQUIRED)
+
 set(H_FILES
     main.h
     monitorsettingsdialog.h
@@ -30,6 +32,13 @@ set(UI_FILES
     timeoutdialog.ui
     monitorpicture.ui
 )
+
+set(ICON_FILES
+    monitor.svg
+)
+
+# Config file
+configure_file ( configure.in configure.h )
 
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
@@ -64,8 +73,10 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
     Qt5::Widgets
     Qt5::X11Extras
+    Qt5::Svg
     ${LXQT_LIBRARIES}
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
+install(FILES ${ICON_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lxqt/icons/")
