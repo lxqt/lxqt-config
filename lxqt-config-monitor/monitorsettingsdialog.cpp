@@ -169,10 +169,6 @@ void MonitorSettingsDialog::onExtended() {
 
 void MonitorSettingsDialog::setupUi() {
   ui.setupUi(this);
-  connect(ui.useBoth, SIGNAL(clicked(bool)), SLOT(onUseBoth()));
-  connect(ui.externalOnly, SIGNAL(clicked(bool)), SLOT(onExternalOnly()));
-  connect(ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
-  connect(ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
   connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
   connect(ui.positionPushButton, SIGNAL(clicked()), SLOT(onPositionButtonClicked()));
 
@@ -227,14 +223,10 @@ void MonitorSettingsDialog::setupUi() {
 
   // If this is a laptop and there is an external monitor, offer quick options
   if(monitors.length() == 2) {
-    ui.tabWidget->setCurrentIndex(0);
     // If there is only two monitors,offer quick options
     if(! LVDS) {
       LVDS = monitors[0];
     }
-  }
-  else {
-    ui.tabWidget->removeTab(0);
   }
 
   adjustSize();

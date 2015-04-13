@@ -37,6 +37,13 @@ public:
   virtual ~MonitorSettingsDialog();
   virtual void accept();
 
+public Q_SLOTS:
+  // quick options
+  void onUseBoth();
+  void onExternalOnly();
+  void onLaptopOnly();
+  void onExtended();
+
 private:
   void setMonitorsConfig();
   void setupUi();
@@ -47,12 +54,6 @@ private:
 private Q_SLOTS:
   // Timeout dialog signals
   void onCancelSettings();
-
-  // quick options
-  void onUseBoth();
-  void onExternalOnly();
-  void onLaptopOnly();
-  void onExtended();
 
   void onDialogButtonClicked(QAbstractButton* button);
   void onPositionButtonClicked();

@@ -19,17 +19,42 @@
 
 #include "main.h"
 #include <LXQt/SingleApplication>
+#include <LXQt/ConfigDialog>
+#include <LXQt/Settings>
 #include "monitorsettingsdialog.h"
+#include "quickoptions.h"
 #include "xrandr.h"
 
 int main(int argc, char** argv) {
-    LxQt::SingleApplication app(argc, argv);
+	LxQt::SingleApplication app(argc, argv);
+	
+	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
+	if(configName.isEmpty())
+		configName = "session";
+	LxQt::Settings settings(configName);
+	LxQt::ConfigDialog dlg(QObject::tr("Monitor Settings"), &settings);
+	app.setActivationWindow(&dlg);
+	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
+	
+	XRandRBackend *xrandr = new XRandRBackend();
+	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr);
+	
+	{
+		QList<MonitorInfo*> monitorsInfo = xrandr->getMonitorsInfo();
+		// If this is a laptop and there is an external monitor, offer quick options
+		if(monitorsInfo.length() == 2) {
+			QuickOptions *quickOptions = new QuickOptions();
+			monitorSettingsDialog->connect(quickOptions->ui.useBoth, SIGNAL(clicked(bool)), SLOT(onUseBoth()));
+			monitorSettingsDialog->connect(quickOptions->ui.externalOnly, SIGNAL(clicked(bool)), SLOT(onExternalOnly()));
+			monitorSettingsDialog->connect(quickOptions->ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
+			monitorSettingsDialog->connect(quickOptions->ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
+			dlg.addPage(quickOptions, QObject::tr("Quick Options"), "format-justify-left");
+		}
+	 }
+	
+	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
 
-    XRandRBackend *xrandr = new XRandRBackend();
-    MonitorSettingsDialog dlg(xrandr);
-    app.setActivationWindow(&dlg);
-    dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
-    dlg.show();
-
-    return app.exec();
-}
+	dlg.exec();
+	
+	return 0;
+	}

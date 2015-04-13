@@ -56,9 +56,12 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWid
 {
   this->monitorWidget = monitorWidget;
   this->monitorPictureDialog = monitorPictureDialog;
-  QString modeName = monitorWidget->ui.resolutionCombo->currentText();
-  int  currentSizeWidth = monitorWidget->monitorInfo->monitorModes[modeName]->width;
-  int  currentSizeHeight = monitorWidget->monitorInfo->monitorModes[modeName]->height;
+  //QString modeName = monitorWidget->ui.resolutionCombo->currentText();
+  //int  currentSizeWidth = monitorWidget->monitorInfo->monitorModes[modeName]->width;
+  //int  currentSizeHeight = monitorWidget->monitorInfo->monitorModes[modeName]->height;
+  MonitorMode *monitorModeInfo = monitorWidget->ui.resolutionCombo->currentData().value<MonitorMode*>();
+  int  currentSizeWidth = monitorModeInfo->width;
+  int  currentSizeHeight = monitorModeInfo->height;
   int x = monitorWidget->ui.xPosSpinBox->value();
   int y = monitorWidget->ui.yPosSpinBox->value();
   setAcceptedMouseButtons(Qt::LeftButton);

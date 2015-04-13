@@ -45,7 +45,8 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
   connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
   ui.resolutionCombo->addItem(tr("Auto"));
   Q_FOREACH(QString _mode_line, monitor->modes) {
-    ui.resolutionCombo->addItem(_mode_line);
+    QVariant monitorModeInfo = QVariant::fromValue(monitor->monitorModes[_mode_line]);
+    ui.resolutionCombo->addItem(_mode_line, monitorModeInfo);
   }
   
  
@@ -95,7 +96,8 @@ void MonitorWidget::onResolutionChanged(int index) {
   rateCombo->clear();
   rateCombo->addItem(tr("Auto"));
   if( monitorInfo->monitorModes.contains(mode)) {
-    QStringList mode_lines = monitorInfo->monitorModes[mode]->modeLines;
+    QStringList mode_lines = combo->currentData().value<MonitorMode*>()->modeLines;
+    //QStringList mode_lines = monitorInfo->monitorModes[mode]->modeLines;
     Q_FOREACH(QString rate, mode_lines) {
       rateCombo->addItem(rate);
     }
