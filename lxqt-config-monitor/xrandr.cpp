@@ -60,8 +60,8 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
   QProcess process;
   // set locale to "C" guarantee English output of xrandr
   process.processEnvironment().insert("LC_ALL", "c");
-  //process.start("xrandr --verbose");
-  process.start("cat pruebas.txt");
+  process.start("xrandr --verbose");
+  //process.start("cat pruebas.txt");
   process.waitForFinished(-1);
   if(process.exitCode() != 0)
     return monitors;
