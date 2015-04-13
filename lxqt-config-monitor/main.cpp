@@ -21,6 +21,7 @@
 #include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
+#include <QDebug>
 #include "monitorsettingsdialog.h"
 #include "quickoptions.h"
 #include "xrandr.h"
@@ -61,8 +62,12 @@ int main(int argc, char** argv) {
 	
 	
 	dlg.addPage(apply, QObject::tr("Apply"), "system-run");
+	
+	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
 
-	dlg.exec();
+	if(QDialog::Accepted == dlg.exec() ) {
+		main(argc, argv);
+	}
 	
 	return 0;
-	}
+}
