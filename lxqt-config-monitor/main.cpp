@@ -24,6 +24,7 @@
 #include "monitorsettingsdialog.h"
 #include "quickoptions.h"
 #include "xrandr.h"
+#include "applydialog.h"
 
 int main(int argc, char** argv) {
 	LxQt::SingleApplication app(argc, argv);
@@ -53,6 +54,13 @@ int main(int argc, char** argv) {
 	 }
 	
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
+	
+	ApplyDialog *apply = new ApplyDialog();
+	monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
+	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
+	
+	
+	dlg.addPage(apply, QObject::tr("Apply"), "system-run");
 
 	dlg.exec();
 	

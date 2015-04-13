@@ -169,7 +169,6 @@ void MonitorSettingsDialog::onExtended() {
 
 void MonitorSettingsDialog::setupUi() {
   ui.setupUi(this);
-  connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
   connect(ui.positionPushButton, SIGNAL(clicked()), SLOT(onPositionButtonClicked()));
 
   // Get monitors information
@@ -249,11 +248,11 @@ void MonitorSettingsDialog::onPositionButtonClicked() {
   delete dialog;
 }
 
-void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
-  if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
+void MonitorSettingsDialog::applySettings() {
     setMonitorsConfig();
-  }
-  else if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Save) {
+}
+
+void MonitorSettingsDialog::saveSettings() {
     // Save config and exit
     QMessageBox msgBox;
     msgBox.setText(tr("Do you want to save changes?"));
@@ -290,7 +289,4 @@ void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
     out << desktop;
     out.flush();
     file.close();
-    //QDialog::accept();
-  }
 }
-

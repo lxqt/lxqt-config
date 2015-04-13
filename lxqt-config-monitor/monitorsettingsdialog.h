@@ -43,6 +43,9 @@ public Q_SLOTS:
   void onExternalOnly();
   void onLaptopOnly();
   void onExtended();
+  // applying and saving settings
+  void applySettings();
+  void saveSettings();
 
 private:
   void setMonitorsConfig();
@@ -55,7 +58,6 @@ private Q_SLOTS:
   // Timeout dialog signals
   void onCancelSettings();
 
-  void onDialogButtonClicked(QAbstractButton* button);
   void onPositionButtonClicked();
   void disablePositionOption(bool disable);
 

@@ -99,36 +99,10 @@
      </layout>
     </widget>
    </item>
-   <item>
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Apply|QDialogButtonBox::Save</set>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>MonitorSettingsDialog</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>338</x>
-     <y>439</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>257</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>monitorList</sender>
    <signal>currentRowChanged(int)</signal>
