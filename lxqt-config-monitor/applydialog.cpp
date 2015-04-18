@@ -16,12 +16,18 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
+#include <QJsonArray>
+#include <QJsonObject>
 #include "applydialog.h"
 #include "configure.h"
+#include <QDebug>
+#include <QJsonDocument>
 
 
-ApplyDialog::ApplyDialog(QWidget* parent):
+ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
   QDialog(parent) {
+  
+  this->applicationSettings = applicationSettings;
 
   ui.setupUi(this);
   
@@ -33,5 +39,17 @@ ApplyDialog::ApplyDialog(QWidget* parent):
   ui.apply->setIconSize(size);
   ui.save->setIconSize(size);
   
-  
+  loadSettings();
+}
+
+void ApplyDialog::loadSettings() {
+  //ui.allConfigs->
+  applicationSettings->beginGroup("configMonitor");
+  QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+  foreach (const QJsonValue & v, savedConfigs) {
+    QJsonObject o = v.toObject();
+    QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.allConfigs);
+    item->setData(Qt::UserRole, QVariant(o));
+  }
+  applicationSettings->endGroup();
 }

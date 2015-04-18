@@ -30,18 +30,23 @@
 #include <QDir>
 #include <QTimer>
 #include <QProgressBar>
+#include <QInputDialog>
 #include <QDebug>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 #include "monitorwidget.h"
 #include "timeoutdialog.h"
 #include "xrandr.h"
 #include "monitorpicture.h"
 
-MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend):
+MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend, LxQt::Settings *applicationSettings):
   QDialog(NULL, 0),
   LVDS(NULL) {
   timeoutDialog = NULL;
   timer = NULL;
+  this->applicationSettings = applicationSettings;
   this->backend = backend;
   backend->setParent(this);
   setupUi();
@@ -169,6 +174,10 @@ void MonitorSettingsDialog::onExtended() {
 
 void MonitorSettingsDialog::setupUi() {
   ui.setupUi(this);
+  ui.apply->setIcon(QIcon::fromTheme("system-run"));
+  QSize size(128,64);
+  ui.apply->setIconSize(size);
+  connect(ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
   connect(ui.positionPushButton, SIGNAL(clicked()), SLOT(onPositionButtonClicked()));
 
   // Get monitors information
@@ -262,6 +271,12 @@ void MonitorSettingsDialog::saveSettings() {
     int ret = msgBox.exec();
     if( ret == QMessageBox::Cancel )
       return;
+    bool ok;
+    QString configName = QInputDialog::getText(this, tr("Name"),
+                                         tr("Name:"), QLineEdit::Normal,
+                                         tr("Actual"), &ok);
+    if (!ok || configName.isEmpty())
+        return;
     QList<MonitorSettings*> settings = getMonitorsSettings();
     QString cmd = backend->getCommand(settings);
     Q_FOREACH(MonitorSettings * s, settings) {
@@ -274,7 +289,7 @@ void MonitorSettingsDialog::saveSettings() {
                               "Exec=%1\n"
                               "OnlyShowIn=LXQt\n").arg(cmd);
     // Check if ~/.config/autostart/ exists
-    bool ok = true;
+    ok = true;
     QFileInfo fileInfo(QDir::homePath() + "/.config/autostart/");
     if( ! fileInfo.exists() )
       ok = QDir::root().mkpath(QDir::homePath() + "/.config/autostart/");
@@ -289,4 +304,21 @@ void MonitorSettingsDialog::saveSettings() {
     out << desktop;
     out.flush();
     file.close();
+    
+    // Save config in applicationSettings
+    QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
+    QString hardware;
+    Q_FOREACH(MonitorInfo * s, monitorsInfo) {
+      hardware+=s->edid;
+      delete s;
+    }
+    applicationSettings->beginGroup("configMonitor");
+    QJsonArray  savedConfigs = applicationSettings->value("saved").toJsonArray();
+    QJsonObject monitorConfig;
+    monitorConfig["eids"] = hardware;
+    monitorConfig["command"] = cmd;
+    monitorConfig["name"] = configName;
+    savedConfigs.append(monitorConfig);
+    applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
+    applicationSettings->endGroup();
 }

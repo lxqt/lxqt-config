@@ -22,6 +22,7 @@
 #define MONITORSETTINGSDIALOG_H
 
 #include <QDialog>
+#include <LXQt/Settings>
 #include "ui_mainwindow.h"
 #include "monitor.h"
 #include "monitorwidget.h"
@@ -33,7 +34,7 @@ class MonitorSettingsDialog: public QDialog {
   Q_OBJECT
 
 public:
-  MonitorSettingsDialog(MonitorSettingsBackend* backend);
+  MonitorSettingsDialog(MonitorSettingsBackend* backend, LxQt::Settings *applicationSettings);
   virtual ~MonitorSettingsDialog();
   virtual void accept();
 
@@ -70,6 +71,7 @@ private:
   TimeoutDialog* timeoutDialog;
   QTimer* timer;
   QList<MonitorInfo*> timeoutSettings;
+  LxQt::Settings *applicationSettings;
 };
 
 #endif // MONITORSETTINGSDIALOG_H

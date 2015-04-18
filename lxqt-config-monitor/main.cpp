@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
 	
 	XRandRBackend *xrandr = new XRandRBackend();
-	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr);
+	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr, &settings);
 	
 	{
 		QList<MonitorInfo*> monitorsInfo = xrandr->getMonitorsInfo();
@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
 	
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
 	
-	ApplyDialog *apply = new ApplyDialog();
+	ApplyDialog *apply = new ApplyDialog(&settings);
 	monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
 	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
 	

@@ -21,15 +21,22 @@
 #define _APPLYDIALOG_H_
 
 #include "ui_applydialog.h"
+#include <LXQt/Settings>
 
 // Monitor info
 class ApplyDialog : public QDialog {
   Q_OBJECT
 
 public:
-  ApplyDialog(QWidget* parent = 0);
+  ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent = 0);
 
   Ui::ApplyDialog ui;
+
+public slots:
+  void loadSettings();
+
+private:
+  LxQt::Settings*applicationSettings;
 
 };
 
