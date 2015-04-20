@@ -86,12 +86,12 @@
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
-        <source>&amp;Add</source>
+        <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
-        <source>&amp;Remove</source>
+        <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
