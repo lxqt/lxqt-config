@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
 	
 	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
 	if(configName.isEmpty())
-		configName = "session";
+		configName = "MonitorSettings";
 	LxQt::Settings settings(configName);
 	LxQt::ConfigDialog dlg(QObject::tr("Monitor Settings"), &settings);
 	app.setActivationWindow(&dlg);
@@ -57,9 +57,10 @@ int main(int argc, char** argv) {
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
 	
 	ApplyDialog *apply = new ApplyDialog(&settings);
+	apply->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
 	monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
 	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
-	
+	apply->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
 	
 	dlg.addPage(apply, QObject::tr("Apply"), "system-run");
 	

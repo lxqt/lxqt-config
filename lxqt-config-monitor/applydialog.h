@@ -33,10 +33,16 @@ public:
   Ui::ApplyDialog ui;
 
 public slots:
+  /*! Load settings to QListWidgets. 
+      eids is hardware code to detect hardware compatible settings.
+   */
   void loadSettings();
+  
+  void setHardwareIdentifier(QString hardwareIdentifier);
 
 private:
   LxQt::Settings*applicationSettings;
+  QString hardwareIdentifier;
 
 };
 

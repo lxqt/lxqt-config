@@ -37,6 +37,7 @@ public:
   MonitorSettingsDialog(MonitorSettingsBackend* backend, LxQt::Settings *applicationSettings);
   virtual ~MonitorSettingsDialog();
   virtual void accept();
+  QString getHardwareIdentifier();
 
 public Q_SLOTS:
   // quick options
@@ -47,6 +48,9 @@ public Q_SLOTS:
   // applying and saving settings
   void applySettings();
   void saveSettings();
+
+signals:
+  void settingsSaved();
 
 private:
   void setMonitorsConfig();
@@ -72,6 +76,7 @@ private:
   QTimer* timer;
   QList<MonitorInfo*> timeoutSettings;
   LxQt::Settings *applicationSettings;
+  QString hardwareIdentifier;
 };
 
 #endif // MONITORSETTINGSDIALOG_H

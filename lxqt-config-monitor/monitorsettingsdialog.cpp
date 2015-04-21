@@ -184,7 +184,9 @@ void MonitorSettingsDialog::setupUi() {
   QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
 
   // Search if LVSD monitor is connected
+  hardwareIdentifier = "";
   Q_FOREACH(MonitorInfo * monitorInfo, monitorsInfo) {
+    hardwareIdentifier+=monitorInfo->edid;
     if(! LVDS && (monitorInfo->name.startsWith("LVDS") || monitorInfo->name.startsWith("PANEL"))) {
       MonitorInfo::LVDS_Ok = true;
       break;
@@ -306,19 +308,19 @@ void MonitorSettingsDialog::saveSettings() {
     file.close();
     
     // Save config in applicationSettings
-    QList<MonitorInfo*> monitorsInfo = backend->getMonitorsInfo();
-    QString hardware;
-    Q_FOREACH(MonitorInfo * s, monitorsInfo) {
-      hardware+=s->edid;
-      delete s;
-    }
     applicationSettings->beginGroup("configMonitor");
-    QJsonArray  savedConfigs = applicationSettings->value("saved").toJsonArray();
+    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
     QJsonObject monitorConfig;
-    monitorConfig["eids"] = hardware;
+    monitorConfig["hardwareIdentifier"] = hardwareIdentifier;
     monitorConfig["command"] = cmd;
     monitorConfig["name"] = configName;
     savedConfigs.append(monitorConfig);
     applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
     applicationSettings->endGroup();
+    emit(settingsSaved());
+}
+
+QString MonitorSettingsDialog::getHardwareIdentifier()
+{
+  return hardwareIdentifier;
 }

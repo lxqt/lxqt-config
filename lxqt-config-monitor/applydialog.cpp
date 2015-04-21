@@ -42,14 +42,24 @@ ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
   loadSettings();
 }
 
+void ApplyDialog::setHardwareIdentifier(QString hardwareIdentifier) {
+	this->hardwareIdentifier = hardwareIdentifier;
+	loadSettings();
+}
+
 void ApplyDialog::loadSettings() {
-  //ui.allConfigs->
+  ui.allConfigs->clear();
+  ui.hardwareCompatibleConfigs->clear();
   applicationSettings->beginGroup("configMonitor");
   QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
   foreach (const QJsonValue & v, savedConfigs) {
     QJsonObject o = v.toObject();
     QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.allConfigs);
     item->setData(Qt::UserRole, QVariant(o));
+    if(o["hardwareIdentifier"].toString() == hardwareIdentifier) {
+      QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.hardwareCompatibleConfigs);
+      item->setData(Qt::UserRole, QVariant(o));
+    }
   }
   applicationSettings->endGroup();
 }
