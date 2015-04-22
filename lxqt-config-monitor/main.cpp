@@ -58,11 +58,11 @@ int main(int argc, char** argv) {
 	
 	ApplyDialog *apply = new ApplyDialog(&settings);
 	apply->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
-	monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
+	// monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
 	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
 	apply->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
 	
-	dlg.addPage(apply, QObject::tr("Apply"), "system-run");
+	dlg.addPage(apply, QObject::tr("Save settings"), "system-run");
 	
 	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
 

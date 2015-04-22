@@ -22,6 +22,7 @@
 #include "configure.h"
 #include <QDebug>
 #include <QJsonDocument>
+#include <QProcess>
 
 
 ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
@@ -31,13 +32,15 @@ ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
 
   ui.setupUi(this);
   
-  ui.apply->setIcon(QIcon::fromTheme("system-run"));
+  // ui.apply->setIcon(QIcon::fromTheme("system-run"));
   ui.save->setIcon(QIcon::fromTheme("document-save"));
 
   
   QSize size(128,64);
-  ui.apply->setIconSize(size);
+  // ui.apply->setIconSize(size);
   ui.save->setIconSize(size);
+  
+  connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
   
   loadSettings();
 }
@@ -45,6 +48,12 @@ ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
 void ApplyDialog::setHardwareIdentifier(QString hardwareIdentifier) {
 	this->hardwareIdentifier = hardwareIdentifier;
 	loadSettings();
+}
+
+void ApplyDialog::setSavedSettings(QListWidgetItem * item) {
+  QJsonObject o = item->data(Qt::UserRole).toJsonObject();
+  QString cmd = o["command"].toString();
+  QProcess::execute(cmd);
 }
 
 void ApplyDialog::loadSettings() {

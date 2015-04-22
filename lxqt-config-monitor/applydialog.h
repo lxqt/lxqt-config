@@ -39,6 +39,8 @@ public slots:
   void loadSettings();
   
   void setHardwareIdentifier(QString hardwareIdentifier);
+  
+  void setSavedSettings(QListWidgetItem * item);
 
 private:
   LxQt::Settings*applicationSettings;

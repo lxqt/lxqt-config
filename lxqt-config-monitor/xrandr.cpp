@@ -254,8 +254,17 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
   foreach(MonitorSettings * monitor, monitors) {
     foreach(MonitorInfo * info, monitorInfos) {
 	    if(monitor->name == info->name) {
-	    	int width = info->monitorModes[monitor->currentMode]->width + monitor->xPos;
-	    	int height = info->monitorModes[monitor->currentMode]->height + monitor->yPos;
+	    	int width = info->monitorModes[monitor->currentMode]->width;
+	    	int height = info->monitorModes[monitor->currentMode]->height;
+	    	int xPos = 0;
+	    	int yPos = 0;
+	    	if(monitor->position == MonitorSettings::Manual) {
+	    	  xPos = monitor->xPos;
+	    	  yPos = monitor->yPos;
+	    	}
+	    	width+=xPos;
+	    	height+=yPos;
+	    	qDebug() << "[XRandRBackend::getCommand]: " << width << "x" << height << "+" << monitor->xPos << "x" << monitor->yPos;
 	    	if(width>fb_width)
 	    		fb_width = width;
 	    	if(height>fb_height)
