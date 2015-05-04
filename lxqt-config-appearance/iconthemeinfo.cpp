@@ -131,14 +131,14 @@ QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
     const QString currentThemeName = QIconLoader::instance()->themeName();
     QIconLoader::instance()->setThemeName(mName);
     foreach (const QString &i, iconNames) {
-        QThemeIconEntries entries = QIconLoader::instance()->loadIcon(i);
-        if (!entries.isEmpty()) {
-            const int numEntries = entries.size();
+        QThemeIconInfo info = QIconLoader::instance()->loadIcon(i);
+        if (!info.entries.isEmpty()) {
+            const int numEntries = info.entries.size();
 
             // Search for exact matches first
             bool found = false;
             for (int i = 0; i < numEntries; ++i) {
-                QIconLoaderEngineEntry *entry = entries.at(i);
+                QIconLoaderEngineEntry *entry = info.entries.at(i);
                     icons.append(QIcon(entry->filename));
                     found = true;
                     break;
@@ -148,7 +148,7 @@ QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
                 int minimalSize = INT_MAX;
                 QIconLoaderEngineEntry *closestMatch = 0;
                 for (int i = 0; i < numEntries; ++i) {
-                    QIconLoaderEngineEntry *entry = entries.at(i);
+                    QIconLoaderEngineEntry *entry = info.entries.at(i);
                     int distance = directorySizeDistance(entry->dir, PREVIEW_ICON_SIZE);
                     if (distance < minimalSize) {
                         minimalSize  = distance;
