@@ -154,6 +154,11 @@ void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
     if (!theme.isEmpty())
     {
         XdgIcon::setThemeName(theme);
+
+        // An hack to ensure that this widget also re loads it's own icons
+        // from the selected icon theme.
+        QIconLoader::instance()->setThemeName(QString());
+
         m_settings->setValue("icon_theme",  theme);
         m_settings->sync();
     }
