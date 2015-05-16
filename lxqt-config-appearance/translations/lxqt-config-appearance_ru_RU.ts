@@ -97,7 +97,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="151"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Автохинтинг</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="168"/>
