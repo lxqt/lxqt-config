@@ -174,10 +174,6 @@ void MonitorSettingsDialog::onExtended() {
 
 void MonitorSettingsDialog::setupUi() {
   ui.setupUi(this);
-  ui.apply->setIcon(QIcon::fromTheme("system-run"));
-  QSize size(128,64);
-  ui.apply->setIconSize(size);
-  connect(ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
   connect(ui.positionPushButton, SIGNAL(clicked()), SLOT(onPositionButtonClicked()));
 
   // Get monitors information
@@ -318,6 +314,15 @@ void MonitorSettingsDialog::saveSettings() {
     applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
     applicationSettings->endGroup();
     emit(settingsSaved());
+}
+
+#include <QDialogButtonBox>
+
+void MonitorSettingsDialog::processClickedFromDialog(QDialogButtonBox::StandardButton button)
+{
+    qDebug() << "[MonitorSettingsDialog::processClickedFromDialog]";
+    if(button == QDialogButtonBox::Apply)
+	setMonitorsConfig();
 }
 
 QString MonitorSettingsDialog::getHardwareIdentifier()

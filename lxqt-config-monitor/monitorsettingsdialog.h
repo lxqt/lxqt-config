@@ -22,6 +22,7 @@
 #define MONITORSETTINGSDIALOG_H
 
 #include <QDialog>
+#include <QDialogButtonBox>
 #include <LXQt/Settings>
 #include "ui_mainwindow.h"
 #include "monitor.h"
@@ -48,6 +49,9 @@ public Q_SLOTS:
   // applying and saving settings
   void applySettings();
   void saveSettings();
+
+  // Apply settings from ConfigDialog
+  void processClickedFromDialog(QDialogButtonBox::StandardButton button);
 
 signals:
   void settingsSaved();

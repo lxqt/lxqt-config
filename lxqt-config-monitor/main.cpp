@@ -35,12 +35,13 @@ int main(int argc, char** argv) {
 		configName = "MonitorSettings";
 	LxQt::Settings settings(configName);
 	LxQt::ConfigDialog dlg(QObject::tr("Monitor Settings"), &settings);
+	dlg.setButtons(QDialogButtonBox::QDialogButtonBox::Apply|QDialogButtonBox::Close);
 	app.setActivationWindow(&dlg);
 	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
 	
 	XRandRBackend *xrandr = new XRandRBackend();
 	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr, &settings);
-	
+	monitorSettingsDialog->connect(&dlg, SIGNAL(clicked(QDialogButtonBox::StandardButton)), SLOT(processClickedFromDialog(QDialogButtonBox::StandardButton)));
 	{
 		QList<MonitorInfo*> monitorsInfo = xrandr->getMonitorsInfo();
 		// If this is a laptop and there is an external monitor, offer quick options
