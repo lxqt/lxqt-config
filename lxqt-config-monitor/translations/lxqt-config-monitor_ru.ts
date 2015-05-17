@@ -2,39 +2,67 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru" sourcelanguage="en">
 <context>
+    <name>ApplyDialog</name>
+    <message>
+        <location filename="../applydialog.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation>Настройки монитора</translation>
+    </message>
+    <message>
+        <location filename="../applydialog.ui" line="33"/>
+        <source>Save</source>
+        <translation>Сохранить</translation>
+    </message>
+    <message>
+        <location filename="../applydialog.ui" line="43"/>
+        <source>Saved settings</source>
+        <translation>Сохранённые настройки</translation>
+    </message>
+    <message>
+        <location filename="../applydialog.ui" line="49"/>
+        <source>All:</source>
+        <translation>Все:</translation>
+    </message>
+    <message>
+        <location filename="../applydialog.ui" line="56"/>
+        <source>Hardware compatible:</source>
+        <translation>Аппаратно-совместимые:</translation>
+    </message>
+</context>
+<context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
+        <location filename="../monitor.cpp" line="43"/>
         <source>Laptop LCD Monitor</source>
         <translation>ЖК-монитор лэптопа</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
+        <location filename="../monitor.cpp" line="45"/>
         <source>External VGA Monitor</source>
         <translation>Внешний VGA-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
+        <location filename="../monitor.cpp" line="45"/>
         <source>VGA Monitor</source>
         <translation>VGA-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
+        <location filename="../monitor.cpp" line="47"/>
         <source>External DVI Monitor</source>
         <translation>Внешний DVI-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
+        <location filename="../monitor.cpp" line="47"/>
         <source>DVI Monitor</source>
         <translation>DVI-монитор</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="60"/>
+        <location filename="../monitor.cpp" line="49"/>
         <source>TV</source>
         <translation>ТВ</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="62"/>
+        <location filename="../monitor.cpp" line="51"/>
         <source>Default Monitor</source>
         <translation>Монитор по умолчанию</translation>
     </message>
@@ -49,7 +77,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Magnetic attraction</source>
-        <translation type="unfinished"></translation>
+        <translation>Магнитное притяжение</translation>
     </message>
 </context>
 <context>
@@ -60,73 +88,59 @@
         <translation>Настройки монитора</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="29"/>
-        <source>Quick Options</source>
-        <translation>Быстрые настройки</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="35"/>
-        <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation>Отображать одинаковый экран на внешнем мониторе и ЖК-мониторе лэптопа</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="42"/>
-        <source>Extended view</source>
-        <translation>Расширенный вид</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="49"/>
-        <source>Turn off laptop LCD and use external monitor only</source>
-        <translation>Выключить ЖК-монитор лэптопа и использовать только внешний монитор</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="56"/>
-        <source>Turn off external monitor and use laptop LCD only</source>
-        <translation>Выключить внешний монитор и использовать только ЖК-монитор лэптопа</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="77"/>
-        <source>Settings</source>
-        <translation>Настройки</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="112"/>
+        <location filename="../mainwindow.ui" line="57"/>
         <source>Unify all monitors</source>
         <translation>Объединить все мониторы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="119"/>
+        <location filename="../mainwindow.ui" line="64"/>
         <source>Monitor Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Положение монитора</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="139"/>
+        <location filename="../mainwindow.ui" line="84"/>
         <source>Primary monitor:</source>
         <translation>Первичный монитор:</translation>
     </message>
     <message>
-        <source>None</source>
-        <translation type="vanished">Нет</translation>
+        <location filename="../mainwindow.ui" line="111"/>
+        <source>Apply</source>
+        <translation>Применить</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="266"/>
+        <location filename="../monitorsettingsdialog.cpp" line="269"/>
         <source>Do you want to save changes?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы хотите сохранить изменения?</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="267"/>
-        <source>Please, check your config before to save.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../monitorsettingsdialog.cpp" line="270"/>
+        <source>Please, check the settings before saving.</source>
+        <translation>Проверьте, пожалуйста, настройки перед сохранением.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <location filename="../monitorsettingsdialog.cpp" line="277"/>
+        <source>Name</source>
+        <translation>Название</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="278"/>
+        <source>Name:</source>
+        <translation>Название:</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="279"/>
+        <source>Actual</source>
+        <translation>Текущие</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="302"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <location filename="../monitorsettingsdialog.cpp" line="302"/>
         <source>Config can not be saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось сохранить конфигурацию</translation>
     </message>
 </context>
 <context>
@@ -154,42 +168,22 @@
     <message>
         <location filename="../monitorwidget.ui" line="67"/>
         <source>Position:</source>
-        <translation>Позиция:</translation>
+        <translation>Положение:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="79"/>
         <source>x:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="96"/>
         <source>y:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="193"/>
         <source>Backlight:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Default</source>
-        <translation type="vanished">По умолчанию</translation>
-    </message>
-    <message>
-        <source>Left of</source>
-        <translation type="vanished">Левее</translation>
-    </message>
-    <message>
-        <source>Right of</source>
-        <translation type="vanished">Правее</translation>
-    </message>
-    <message>
-        <source>Above of</source>
-        <translation type="vanished">Выше</translation>
-    </message>
-    <message>
-        <source>Below of</source>
-        <translation type="vanished">Ниже</translation>
+        <translation>Подсветка:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="115"/>
@@ -217,10 +211,58 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="238"/>
-        <location filename="../xrandr.cpp" line="243"/>
+        <location filename="../xrandr.cpp" line="288"/>
+        <location filename="../xrandr.cpp" line="294"/>
         <source>Auto</source>
         <translation>Авто</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="37"/>
+        <source>Monitor Settings</source>
+        <translation>Настройки монитора</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="53"/>
+        <source>Quick Options</source>
+        <translation>Быстрые настройки</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="57"/>
+        <source>Settings</source>
+        <translation>Настройки</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="65"/>
+        <source>Save settings</source>
+        <translation>Сохранить настройки</translation>
+    </message>
+</context>
+<context>
+    <name>QuickOptions</name>
+    <message>
+        <location filename="../quickoptions.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation>Настройки монитора</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="33"/>
+        <source>Show the same screen on both laptop LCD and external monitor</source>
+        <translation>Отображать одинаковый экран на внешнем мониторе и ЖК-мониторе лэптопа</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="49"/>
+        <source>Extended view</source>
+        <translation>Расширенный вид</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="65"/>
+        <source>Turn off laptop LCD and use external monitor only</source>
+        <translation>Выключить ЖК-монитор лэптопа и использовать только внешний монитор</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="81"/>
+        <source>Turn off external monitor and use laptop LCD only</source>
+        <translation>Выключить внешний монитор и использовать только ЖК-монитор лэптопа</translation>
     </message>
 </context>
 <context>
