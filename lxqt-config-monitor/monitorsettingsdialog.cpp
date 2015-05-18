@@ -40,6 +40,7 @@ MonitorSettingsDialog::MonitorSettingsDialog():
 {
     timeoutDialog = NULL;
     timer = NULL;
+    setConfig = NULL;
     setupUi();
 }
 
@@ -83,8 +84,21 @@ void MonitorSettingsDialog::onCancelSettings() {
  */
 
 void MonitorSettingsDialog::setMonitorsConfig() {
-    if (!mConfig) return;
-    KScreen::SetConfigOperation(*mConfig);
+    qDebug() << "[MonitorSettingsDialog::setMonitorsConfig]: Changing config";
+    if (!mConfig) { 
+    	qDebug() << "[MonitorSettingsDialog::setMonitorsConfig]: No config";
+	return;
+    }
+    if(KScreen::Config::canBeApplied(mConfig)) {
+    	// Segment fault is emited if setConfig is deleted.
+    	// if(setConfig != NULL)
+	//	delete setConfig;
+	if(KScreen::Config::canBeApplied(mConfig)) {
+		// KDE KScreen builds a new object, too.
+    		setConfig = new KScreen::SetConfigOperation(mConfig, this);
+	}
+    }
+    //KScreen::SetConfigOperation(*mConfig);
 }
 
 

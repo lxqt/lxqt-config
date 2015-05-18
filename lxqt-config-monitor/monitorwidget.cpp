@@ -22,7 +22,7 @@
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <KScreen/EDID>
-
+#include <KScreen/SetConfigOperation>
 
 QString modeToString(KScreen::ModePtr mode) {
     // mode->name() can be anything, not just widthxheight. eg if added with cvt.
@@ -194,6 +194,8 @@ void MonitorWidget::onPositionChanged(int value) {
 void MonitorWidget::onResolutionChanged(int index) {
     updateRefreshRates();
     output->setCurrentModeId(ui.resolutionCombo->currentData().toString());
+    // if(KScreen::Config::canBeApplied(config))
+    // 	KScreen::SetConfigOperation *setConfig = new KScreen::SetConfigOperation(config);
 }
 
 

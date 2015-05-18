@@ -22,6 +22,7 @@
 
 #include <QDialog>
 #include <KScreen/GetConfigOperation>
+#include <KScreen/SetConfigOperation>
 #include "ui_mainwindow.h"
 #include "monitor.h"
 
@@ -74,6 +75,7 @@ private:
   // TimeoutDialog data
   TimeoutDialog* timeoutDialog;
   QTimer* timer;
+  KScreen::SetConfigOperation *setConfig;
 };
 
 #endif // MONITORSETTINGSDIALOG_H
