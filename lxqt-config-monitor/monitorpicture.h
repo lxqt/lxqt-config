@@ -23,8 +23,6 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
 #include <QDialog>
-#include <QGraphicsSvgItem>
-#include <QSvgRenderer>
 #include "monitor.h"
 #include "ui_monitorpicture.h"
 #include "monitorwidget.h"
