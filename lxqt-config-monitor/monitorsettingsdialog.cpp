@@ -18,122 +18,86 @@
 */
 
 #include "monitorsettingsdialog.h"
-#include <QFrame>
-#include <QLabel>
-#include <QComboBox>
-#include <QMessageBox>
-#include <QTimer>
-#include <QPushButton>
-#include <QProgressBar>
-#include <QInputDialog>
-#include <QDebug>
-#include <KScreen/Output>
-#include <KScreen/SetConfigOperation>
 
 #include "monitorwidget.h"
 #include "timeoutdialog.h"
-#include "monitorpicture.h"
 
+#include <KScreen/Output>
 
-MonitorSettingsDialog::MonitorSettingsDialog():
-    QDialog(NULL, 0)
+MonitorSettingsDialog::MonitorSettingsDialog() :
+    QDialog(nullptr, 0)
 {
-    timeoutDialog = NULL;
-    timer = NULL;
-    setConfig = NULL;
-    setupUi();
+    ui.setupUi(this);
+
+    KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
+    connect(operation, &KScreen::GetConfigOperation::finished, [&] (KScreen::ConfigOperation *op) {
+        KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
+        if (configOp)
+        {
+            mOldConfig = configOp->config();
+            loadConfiguration(configOp->config());
+        }
+    });
+
+    connect(ui.buttonBox, &QDialogButtonBox::clicked, [&] (QAbstractButton *button) {
+        if (ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply)
+            applyConfiguration();
+    });
 }
 
-
-MonitorSettingsDialog::~MonitorSettingsDialog() {
+MonitorSettingsDialog::~MonitorSettingsDialog()
+{
 }
 
+void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
+{
+    if (mConfig == config)
+        return;
 
-void MonitorSettingsDialog::configReceived(KScreen::ConfigOperation *op) {
-    mConfig = qobject_cast<KScreen::GetConfigOperation*>(op)->config();
+    mConfig = config;
 
     KScreen::OutputList outputs = mConfig->outputs();
-    Q_FOREACH(const KScreen::OutputPtr &output, outputs) {
-        if (output->isConnected()) {
-            MonitorWidget* monitor = new MonitorWidget(output, mConfig, this);
+    for (const KScreen::OutputPtr &output : outputs)
+    {
+        if (output->isConnected())
+        {
+            MonitorWidget *monitor = new MonitorWidget(output, mConfig, this);
             ui.monitorList->addItem(output->name());
             ui.stackedWidget->addWidget(monitor);
         }
     }
 
-    ui.monitorList->setMaximumWidth(ui.monitorList->sizeHintForColumn(0) + style()->pixelMetric(QStyle::PM_ScrollBarExtent) + 40);
     ui.monitorList->setCurrentRow(0);
     adjustSize();
-    //TODO: ui.buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
-}
-
-
-void MonitorSettingsDialog::deleteTimeoutData() {
-    // TODO Wipe old settings
-}
-
-/**
- * User wants to revert new settings
- */
-void MonitorSettingsDialog::onCancelSettings() {
-
 }
 
 /**
  * Apply the settings
  */
+void MonitorSettingsDialog::applyConfiguration()
+{
+    if (mConfig && KScreen::Config::canBeApplied(mConfig))
+    {
+        KScreen::SetConfigOperation(mConfig).exec();
 
-void MonitorSettingsDialog::setMonitorsConfig() {
-    qDebug() << "[MonitorSettingsDialog::setMonitorsConfig]: Changing config";
-    if (!mConfig) { 
-    	qDebug() << "[MonitorSettingsDialog::setMonitorsConfig]: No config";
-	return;
+        TimeoutDialog mTimeoutDialog;
+        if (mTimeoutDialog.exec() == QDialog::Rejected)
+            // TODO: why isn't this working? why??
+            QTimer::singleShot(5000, [&] {
+                KScreen::SetConfigOperation(mOldConfig).exec();
+            });
+        else
+            mOldConfig = mConfig;
     }
-    if(KScreen::Config::canBeApplied(mConfig)) {
-    	// Segment fault is emited if setConfig is deleted.
-    	// if(setConfig != NULL)
-	//	delete setConfig;
-	if(KScreen::Config::canBeApplied(mConfig)) {
-		// KDE KScreen builds a new object, too.
-    		setConfig = new KScreen::SetConfigOperation(mConfig, this);
-	}
-    }
-    //KScreen::SetConfigOperation(*mConfig);
 }
 
-
-void MonitorSettingsDialog::setupUi() {
-    ui.setupUi(this);
-
-    KScreen::GetConfigOperation *op = new KScreen::GetConfigOperation();
-    connect(op, &KScreen::GetConfigOperation::finished, [&](KScreen::ConfigOperation *op) {
-                configReceived(op);
-    });
-
-    connect(ui.buttonBox, SIGNAL(clicked(QAbstractButton*)), SLOT(onDialogButtonClicked(QAbstractButton*)));
-}
-
-void MonitorSettingsDialog::accept() {
-    setMonitorsConfig();
+void MonitorSettingsDialog::accept()
+{
+    applyConfiguration();
     QDialog::accept();
 }
 
-void MonitorSettingsDialog::onDialogButtonClicked(QAbstractButton* button) {
-    if(ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
-        setMonitorsConfig();
-    }
-}
-
-#include <QDialogButtonBox>
-
-void MonitorSettingsDialog::processClickedFromDialog(QDialogButtonBox::StandardButton button)
+void MonitorSettingsDialog::reject()
 {
-    qDebug() << "[MonitorSettingsDialog::processClickedFromDialog]";
-    if(button == QDialogButtonBox::Apply)
-	setMonitorsConfig();
-}
-
-QString MonitorSettingsDialog::getHardwareIdentifier()
-{
-  return hardwareIdentifier;
+    QDialog::reject();
 }

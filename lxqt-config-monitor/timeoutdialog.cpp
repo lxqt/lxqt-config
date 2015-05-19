@@ -18,37 +18,48 @@
  *
  */
 
+#define TIMER_DURATION 10
+
 #include "timeoutdialog.h"
-#include <QTimer>
 
-TimeoutDialog::TimeoutDialog(QWidget* parent, Qt::WindowFlags f) {
-  ui.setupUi(this);
+TimeoutDialog::TimeoutDialog(QWidget* parent, Qt::WindowFlags f) :
+    QDialog(parent, f)
+{
+    ui.setupUi(this);
 
-  QIcon icon = style()->standardIcon(QStyle::SP_MessageBoxQuestion);
-  int size = style()->pixelMetric(QStyle::PM_MessageBoxIconSize);
-  ui.icon->setPixmap(icon.pixmap(QSize(size, size)));
+    QIcon icon = style()->standardIcon(QStyle::SP_MessageBoxQuestion);
+    int size = style()->pixelMetric(QStyle::PM_MessageBoxIconSize);
+    ui.icon->setPixmap(icon.pixmap(QSize(size, size)));
 
-  timer = new QTimer(this);
-  connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
-  adjustSize();
+    connect(&timer, &QTimer::timeout, this, &TimeoutDialog::onTimeout);
+    adjustSize();
 }
 
-TimeoutDialog::~TimeoutDialog() {
+TimeoutDialog::~TimeoutDialog()
+{
 }
 
-void TimeoutDialog::showEvent(QShowEvent* e) {
-  timer->start(1000);
-  QDialog::showEvent(e);
+void TimeoutDialog::showEvent(QShowEvent* e)
+{
+    timer.start(1000);
+    QDialog::showEvent(e);
 }
 
-void TimeoutDialog::onTimeout() {
-  int time = ui.progressBar->value() + 1;
-  if(time >= 10) { // If time is finished, settings are restored.
-    timer->stop();
-    reject();
-  }
-  else {
-    ui.progressBar->setValue(time);
-    ui.progressBar->setFormat(tr("%1 second(s) remaining").arg(10 - time));
-  }
+void TimeoutDialog::onTimeout()
+{
+    int maximum = ui.progressBar->maximum();
+    int time = ui.progressBar->value() + maximum / TIMER_DURATION;
+
+    // if time is finished, settings are restored.
+    if (time >= maximum)
+    {
+        timer.stop();
+        reject();
+    }
+    else
+    {
+        int remaining = maximum / TIMER_DURATION - TIMER_DURATION * time / maximum;
+        ui.remainingTime->setText(tr("%1 second(s) remaining").arg(remaining));
+        ui.progressBar->setValue(time);
+    }
 }

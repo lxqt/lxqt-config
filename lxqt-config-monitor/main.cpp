@@ -16,52 +16,15 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include "main.h"
 #include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
 #include <QDebug>
 #include "monitorsettingsdialog.h"
 
-int main(int argc, char** argv) {
-	LxQt::SingleApplication app(argc, argv);
-
-	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
-	if(configName.isEmpty())
-		configName = "MonitorSettings";
-	LxQt::Settings settings(configName);
-	LxQt::ConfigDialog dlg(QObject::tr("Monitor Settings"), &settings);
-	dlg.setButtons(QDialogButtonBox::QDialogButtonBox::Apply|QDialogButtonBox::Close);
-	app.setActivationWindow(&dlg);
-	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
-
-	XRandRBackend *xrandr = new XRandRBackend();
-	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr, &settings);
-	monitorSettingsDialog->connect(&dlg, SIGNAL(clicked(QDialogButtonBox::StandardButton)), SLOT(processClickedFromDialog(QDialogButtonBox::StandardButton)));
-	{
-		QList<MonitorInfo*> monitorsInfo = xrandr->getMonitorsInfo();
-		// If this is a laptop and there is an external monitor, offer quick options
-		if(monitorsInfo.length() == 2) {
-			QuickOptions *quickOptions = new QuickOptions();
-			monitorSettingsDialog->connect(quickOptions->ui.useBoth, SIGNAL(clicked(bool)), SLOT(onUseBoth()));
-			monitorSettingsDialog->connect(quickOptions->ui.externalOnly, SIGNAL(clicked(bool)), SLOT(onExternalOnly()));
-			monitorSettingsDialog->connect(quickOptions->ui.laptopOnly, SIGNAL(clicked(bool)), SLOT(onLaptopOnly()));
-			monitorSettingsDialog->connect(quickOptions->ui.extended, SIGNAL(clicked(bool)), SLOT(onExtended()));
-			dlg.addPage(quickOptions, QObject::tr("Quick Options"), "format-justify-left");
-		}
-	 }
-
-	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
-
-	ApplyDialog *apply = new ApplyDialog(&settings);
-	apply->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
-	// monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
-	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
-	apply->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
-
-	dlg.addPage(apply, QObject::tr("Save settings"), "system-run");
-
-	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
+int main(int argc, char** argv)
+{
+    LxQt::SingleApplication app(argc, argv);
 
     MonitorSettingsDialog dlg;
     app.setActivationWindow(&dlg);

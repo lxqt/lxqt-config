@@ -17,9 +17,10 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
 #ifndef _MONITORWIDGET_H_
 #define _MONITORWIDGET_H_
+
+#include "ui_monitorwidget.h"
 
 #include <QGroupBox>
 #include <QStringList>
@@ -27,9 +28,6 @@
 #include <QList>
 #include <KScreen/Config>
 #include <KScreen/Output>
-
-#include "ui_monitorwidget.h"
-
 
 #define PrimaryDisplay 0
 #define ExtendDisplay 1
@@ -41,20 +39,21 @@
 #define Below 4
 #define Manually 5
 
-
-// Monitor info
-class MonitorWidget : public QGroupBox {
+class MonitorWidget : public QGroupBox
+{
   Q_OBJECT
+
+  friend class MonitorPicture;
+  friend class MonitorPictureDialog;
 
 public:
     MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent = 0);
+    ~MonitorWidget();
 
     void updateRefreshRates();
 
     KScreen::OutputPtr output;
     KScreen::ConfigPtr config;
-
-    Ui::MonitorWidget ui;
 
 public Q_SLOTS:
     void setOnlyMonitor(bool isOnlyMonitor);
@@ -64,6 +63,9 @@ private Q_SLOTS:
     void onPositioningChanged(int);
     void onPositionChanged(int);
     void onResolutionChanged(int);
+
+private:
+    Ui::MonitorWidget ui;
 };
 
 #endif // _MONITORWIDGET_H_

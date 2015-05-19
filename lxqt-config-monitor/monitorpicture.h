@@ -16,7 +16,6 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
 #ifndef _MONITORPICTURE_H_
 #define _MONITORPICTURE_H_
 
@@ -32,38 +31,41 @@
 
 class MonitorPicture;
 
-class MonitorPictureDialog: public QDialog {
-  Q_OBJECT
+class MonitorPictureDialog : public QDialog
+{
+    Q_OBJECT
+
 public:
-  MonitorPictureDialog(QWidget * parent = 0, Qt::WindowFlags f = 0);
-  void setScene(QList<MonitorWidget*> monitors);
-  void updateMonitorWidgets(QString primaryMonitor);
-  void moveMonitorPictureToNearest(MonitorPicture* monitorPicture);
-  void updateScene();
+    MonitorPictureDialog(QWidget * parent = 0, Qt::WindowFlags f = 0);
+    void setScene(QList<MonitorWidget*> monitors);
+    void updateMonitorWidgets(QString primaryMonitor);
+    void moveMonitorPictureToNearest(MonitorPicture* monitorPicture);
+    void updateScene();
+
 private:
-  Ui::MonitorPictureDialog ui;
-  QList<MonitorPicture*> pictures;
+    Ui::MonitorPictureDialog ui;
+    QList<MonitorPicture*> pictures;
 };
 
-
-class MonitorPicture: public QGraphicsRectItem {
-
+class MonitorPicture : public QGraphicsRectItem
+{
 public:
-  MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWidget, MonitorPictureDialog *monitorPictureDialog);
-  void setMonitorPosition(int x, int y);
-  void adjustNameSize();
- 
-  MonitorWidget *monitorWidget;
-  int originX, originY;
+    MonitorPicture(QGraphicsItem *parent,
+                   MonitorWidget *monitorWidget,
+                   MonitorPictureDialog *monitorPictureDialog);
+    void setMonitorPosition(int x, int y);
+    void adjustNameSize();
+
+    MonitorWidget *monitorWidget;
+    int originX, originY;
+
 private:
-  QGraphicsTextItem *textItem;
-  QGraphicsSvgItem *svgItem;
-  MonitorPictureDialog *monitorPictureDialog;
+    QGraphicsTextItem *textItem;
+    MonitorPictureDialog *monitorPictureDialog;
 
 protected:
-  QVariant itemChange(GraphicsItemChange change, const QVariant & value);
-  void mouseReleaseEvent(QGraphicsSceneMouseEvent * event);
+    QVariant itemChange(GraphicsItemChange change, const QVariant & value);
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent * event);
 };
-
 
 #endif // _MONITORPICTURE_H_
