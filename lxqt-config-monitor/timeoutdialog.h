@@ -21,26 +21,27 @@
 #ifndef TIMEOUTDIALOG_H
 #define TIMEOUTDIALOG_H
 
-#include <QDialog>
 #include "ui_timeoutdialog.h"
+#include <QDialog>
+#include <QTimer>
 
-class QTimer;
+class TimeoutDialog : public QDialog
+{
+    Q_OBJECT
 
-class TimeoutDialog : public QDialog {
-  Q_OBJECT
 public:
-  TimeoutDialog(QWidget* parent = 0, Qt::WindowFlags f = 0);
-  virtual ~TimeoutDialog();
+    TimeoutDialog(QWidget* parent = 0, Qt::WindowFlags f = 0);
+    virtual ~TimeoutDialog();
 
 protected:
-  virtual void showEvent(QShowEvent* e);
+    virtual void showEvent(QShowEvent* e);
 
 private Q_SLOTS:
-  void onTimeout();
+    void onTimeout();
 
 private:
-  Ui::TimeoutDialog ui;
-  QTimer* timer;
+    Ui::TimeoutDialog ui;
+    QTimer timer;
 };
 
 #endif // TIMEOUTDIALOG_H

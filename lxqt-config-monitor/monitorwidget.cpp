@@ -19,34 +19,38 @@
 
 #include "monitorwidget.h"
 #include "monitor.h"
-#include <QDebug>
+
+#include <QComboBox>
+#include <QStringBuilder>
 #include <QDialogButtonBox>
 #include <KScreen/EDID>
 
 
-QString modeToString(KScreen::ModePtr mode) {
+QString modeToString(KScreen::ModePtr mode)
+{
     // mode->name() can be anything, not just widthxheight. eg if added with cvt.
     return QString("%1x%2").arg(mode->size().width()).arg(mode->size().height());
 }
 
+KScreen::OutputPtr getOutputById(int id, KScreen::OutputList outputs)
+{
+    for (const KScreen::OutputPtr &output : outputs)
+        if (output->id() == id)
+            return output;
 
-KScreen::OutputPtr getOutputById(int id, KScreen::OutputList outputs) {
-    Q_FOREACH(const KScreen::OutputPtr output, outputs) {
-        if (output->id() == id) return output;
-    }
-    return KScreen::OutputPtr(NULL);
+    return KScreen::OutputPtr(nullptr);
 }
 
+KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes)
+{
+    for (const KScreen::ModePtr &mode : modes)
+        if (mode->id() == id)
+            return mode;
 
-KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes) {
-    Q_FOREACH(const KScreen::ModePtr mode, modes) {
-        if (mode->id() == id) return mode;
-    }
     return KScreen::ModePtr(NULL);
 }
 
-
-MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent):
+MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent) :
     QGroupBox(parent)
 {
     this->output = output;
@@ -58,7 +62,8 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     // Add the preferred mode at the top of the list
     KScreen::ModePtr preferredMode = output->preferredMode();
-    if (preferredMode) {
+    if (preferredMode)
+    {
         ui.resolutionCombo->addItem(modeToString(preferredMode), preferredMode->id());
         // Make it bold, for good measure
         QFont font = ui.resolutionCombo->font();
@@ -67,56 +72,73 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     }
 
     // Add each mode to the list
-    Q_FOREACH(const KScreen::ModePtr &mode, output->modes()) {
-        // TODO better check for duplicates
-        if (mode == preferredMode) continue;
+    for (const KScreen::ModePtr &mode : output->modes())
+    {
+        // HACK: what is the better way?
+        if (modeToString(mode) == modeToString(preferredMode))
+            continue;
+
         ui.resolutionCombo->addItem(modeToString(mode), mode->id());
     }
     connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
 
-    if (output->currentMode()) {
+    if (output->currentMode())
+    {
         // Set the current mode in dropdown
         int idx = ui.resolutionCombo->findData(output->currentMode()->id());
-        ui.resolutionCombo->setCurrentIndex(idx);
+        if (idx < 0)
+            idx = ui.resolutionCombo->findData(output->preferredMode()->id());
+        if (idx >= 0)
+            ui.resolutionCombo->setCurrentIndex(idx);
     }
     updateRefreshRates();
 
     // Update EDID information
     // KScreen doesn't make much public but that's ok...
     KScreen::Edid* edid = output->edid();
-    if (edid && edid->isValid()) {
+    if (edid && edid->isValid())
+    {
         ui.outputInfoLabel->setText(
-            tr("Name: %1\n").arg(edid->name()) +
-            tr("Vendor: %1\n").arg(edid->vendor()) +
-            tr("Serial: %1\n").arg(edid->serial()) +
-            tr("Display size: %1cm x %2cm\n").arg(edid->width()).arg(edid->height()) +
-            tr("Serial number: %1\n").arg(edid->serial()) +
+            tr("Name: %1\n").arg(edid->name()) %
+            tr("Vendor: %1\n").arg(edid->vendor()) %
+            tr("Serial: %1\n").arg(edid->serial()) %
+            tr("Display size: %1cm x %2cm\n").arg(edid->width()).arg(edid->height()) %
+            tr("Serial number: %1\n").arg(edid->serial()) %
             tr("EISA device ID: %1\n").arg(edid->eisaId())
         );
     }
 
-    if (config->connectedOutputs().count() == 1) {
+    if (config->connectedOutputs().count() == 1)
+    {
         setOnlyMonitor(true);
         // There isn't always a primary output. Gross.
         output->setPrimary(true);
-    } else {
-        Q_FOREACH(KScreen::OutputPtr other, config->connectedOutputs()) {
+    }
+    else
+    {
+        for (const KScreen::OutputPtr &other : config->connectedOutputs())
+        {
             // We can't clone ourselves, or an output that already clones another
-            if (other == output) continue;
+            if (other == output)
+                continue;
+
             ui.clonesCombo->addItem(other->name(), other->id());
             ui.relativeScreensCombo->addItem(other->name(), other->id());
         }
     }
 
     // Behavior chooser
-    if (output->isPrimary()) {
+    if (output->isPrimary())
         ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
-    } else if (!output->clone()) {
+    else if (!output->clone())
+    {
         // Is this right?
         ui.behaviorCombo->setCurrentIndex(CloneDisplay);
         int idx = ui.resolutionCombo->findData(output->clone()->id());
         ui.clonesCombo->setCurrentIndex(idx);
-    } else {
+    }
+    else
+    {
         ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
         ui.xPosSpinBox->setValue(output->pos().x());
         ui.yPosSpinBox->setValue(output->pos().y());
@@ -131,8 +153,12 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     onBehaviorChanged(ui.behaviorCombo->currentIndex());
 }
 
+MonitorWidget::~MonitorWidget()
+{
+}
 
-void MonitorWidget::onBehaviorChanged(int idx) {
+void MonitorWidget::onBehaviorChanged(int idx)
+{
     // Behavior should match the index of the selected element
     ui.positioningCombo->setVisible(idx == ExtendDisplay);
     ui.clonesCombo->setVisible(idx == CloneDisplay);
@@ -144,18 +170,16 @@ void MonitorWidget::onBehaviorChanged(int idx) {
     output->setPrimary(idx == PrimaryDisplay);
 }
 
-
-void MonitorWidget::onPositioningChanged(int idx) {
+void MonitorWidget::onPositioningChanged(int idx)
+{
     // Update the x/y spinboxes with the correct values
-    KScreen::OutputPtr other = getOutputById(
-        ui.relativeScreensCombo->currentData().toInt(),
-        config->outputs()
-    );
+    KScreen::OutputPtr other = getOutputById(ui.relativeScreensCombo->currentData().toInt(),
+                                             config->outputs());
 
-    if (!other->currentMode()) {
-        // TODO: Figure out what to do here
+    // TODO: Figure out what to do here
+    if (!other->currentMode())
         return;
-    }
+
     QSize otherSize = other->currentMode()->size();
     QSize thisSize = output->currentMode()->size();
 
@@ -179,36 +203,36 @@ void MonitorWidget::onPositioningChanged(int idx) {
     default:
         break;
     }
+
     ui.xPosSpinBox->setValue(x);
     ui.yPosSpinBox->setValue(y);
     // Disable the other screens combo box if we don't need it
     ui.relativeScreensCombo->setEnabled(idx && idx != Manually);
 }
 
-
-void MonitorWidget::onPositionChanged(int value) {
+void MonitorWidget::onPositionChanged(int value)
+{
     output->setPos(QPoint(ui.xPosSpinBox->value(), ui.yPosSpinBox->value()));
 }
 
-
-void MonitorWidget::onResolutionChanged(int index) {
+void MonitorWidget::onResolutionChanged(int index)
+{
     updateRefreshRates();
     output->setCurrentModeId(ui.resolutionCombo->currentData().toString());
 }
 
-
-void MonitorWidget::updateRefreshRates() {
+void MonitorWidget::updateRefreshRates()
+{
     ui.rateCombo->clear();
-    KScreen::ModePtr selectedMode = output->currentMode(); // XXX That's wrong
-    Q_FOREACH(const KScreen::ModePtr &mode, output->modes()) {
-        if (selectedMode && mode->size() == selectedMode->size()) {
+    // FIXME: That's wrong
+    KScreen::ModePtr selectedMode = output->currentMode();
+    for (const KScreen::ModePtr &mode : output->modes())
+        if (selectedMode && mode->size() == selectedMode->size())
             ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
-        }
-    }
 }
 
-
-void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor) {
+void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor)
+{
     ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
     ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
     ui.behaviorCombo->setEnabled(!isOnlyMonitor);

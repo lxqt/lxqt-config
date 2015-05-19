@@ -10,7 +10,6 @@ include_directories (
 find_package(KF5Screen REQUIRED)
 
 set(H_FILES
-    main.h
     monitorsettingsdialog.h
     monitor.h
     monitorwidget.h
@@ -31,7 +30,7 @@ set(CPP_FILES
 )
 
 set(UI_FILES
-    mainwindow.ui
+    monitorsettingsdialog.ui
     monitorwidget.ui
     timeoutdialog.ui
     monitorpicture.ui

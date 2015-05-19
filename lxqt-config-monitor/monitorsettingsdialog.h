@@ -20,60 +20,38 @@
 #ifndef MONITORSETTINGSDIALOG_H
 #define MONITORSETTINGSDIALOG_H
 
+#include "ui_monitorsettingsdialog.h"
+#include "timeoutdialog.h"
+
 #include <QDialog>
+#include <QTimer>
 #include <KScreen/GetConfigOperation>
-#include "ui_mainwindow.h"
-#include "monitor.h"
+#include <KScreen/SetConfigOperation>
 
-
-class TimeoutDialog;
-class QTimer;
-
-class MonitorSettingsDialog: public QDialog {
-  Q_OBJECT
+class MonitorSettingsDialog : public QDialog
+{
+    Q_OBJECT
 
 public:
-  MonitorSettingsDialog();
-  virtual ~MonitorSettingsDialog();
-  virtual void accept();
-  QString getHardwareIdentifier();
+    MonitorSettingsDialog();
+    virtual ~MonitorSettingsDialog();
 
-public Q_SLOTS:
-  // quick options
-  void onUseBoth();
-  void onExternalOnly();
-  void onLaptopOnly();
-  void onExtended();
-  // applying and saving settings
-  void applySettings();
-  void saveSettings();
-
-  // Apply settings from ConfigDialog
-  void processClickedFromDialog(QDialogButtonBox::StandardButton button);
-
-signals:
-  void settingsSaved();
+    virtual void accept();
+    virtual void reject();
 
 private:
-  void setMonitorsConfig();
-  void setupUi();
-
-  void deleteTimeoutData(); // Used to delete data from TimeoutDialog
+    void applyConfiguration();
+    void cancelConfiguration();
 
 private Q_SLOTS:
-    void configReceived(KScreen::ConfigOperation *op);
-
-  // Timeout dialog signals
-  void onCancelSettings();
-
-  void onDialogButtonClicked(QAbstractButton* button);
+    void loadConfiguration(KScreen::ConfigPtr config);
 
 private:
-  Ui::MonitorSettingsDialog ui;
-  KScreen::ConfigPtr mConfig;
-  // TimeoutDialog data
-  TimeoutDialog* timeoutDialog;
-  QTimer* timer;
+    Ui::MonitorSettingsDialog ui;
+
+    // Configutarions
+    KScreen::ConfigPtr mOldConfig;
+    KScreen::ConfigPtr mConfig;
 };
 
 #endif // MONITORSETTINGSDIALOG_H
