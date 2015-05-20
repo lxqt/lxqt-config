@@ -30,12 +30,13 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
     ui.setupUi(this);
 
     KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
-    connect(operation, &KScreen::GetConfigOperation::finished, [&] (KScreen::ConfigOperation *op) {
+    connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
         if (configOp)
         {
-            mOldConfig = configOp->config();
+            mOldConfig = configOp->config()->clone();
             loadConfiguration(configOp->config());
+            operation->deleteLater();
         }
     });
 
@@ -82,12 +83,9 @@ void MonitorSettingsDialog::applyConfiguration()
 
         TimeoutDialog mTimeoutDialog;
         if (mTimeoutDialog.exec() == QDialog::Rejected)
-            // TODO: why isn't this working? why??
-            QTimer::singleShot(5000, [&] {
-                KScreen::SetConfigOperation(mOldConfig).exec();
-            });
+            KScreen::SetConfigOperation(mOldConfig).exec();
         else
-            mOldConfig = mConfig;
+            mOldConfig = mConfig->clone();
     }
 }
 
