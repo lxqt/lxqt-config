@@ -1,128 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.0" language="hu_HU">
 <context>
     <name>FontsConfig</name>
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Betűtípus</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Felhasználói felület alapértelmezett betűtípusa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Betűnév:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stílus:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pontméret:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normál</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Kövér</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="74"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Dőlt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="79"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Dőlt kövér</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="90"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezek a stílusok csak új indítású alkalmazásoknál láthatók</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="96"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Simított betűk</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="103"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Betű mankó stílus:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="114"/>
         <location filename="../fontsconfig.ui" line="179"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="119"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Enyhe</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="124"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Közepes</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="129"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Teljes</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="137"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Betű mankó</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="144"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Felbontás (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="151"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Mankó</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="168"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Alképpont simítás:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="184"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="189"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="194"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="199"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -130,12 +130,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished">LXQt megjelenésbeállító</translation>
+        <translation>LXQt megjelenésbeállító</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished">Ikontémák</translation>
+        <translation>Ikontémák</translation>
     </message>
 </context>
 <context>
@@ -143,18 +143,18 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt téma</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>LXQt Appearance Configuration</source>
-        <translation type="vanished">LXQt megjelenésbeállító</translation>
+        <translation>LXQt megjelenésbeállító</translation>
     </message>
     <message>
         <source>Icons Theme</source>
-        <translation type="vanished">Ikontémák</translation>
+        <translation>Ikontémák</translation>
     </message>
 </context>
 <context>
@@ -162,32 +162,32 @@
     <message>
         <location filename="../main.cpp" line="45"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished">LXQt megjelenésbeállító</translation>
+        <translation>LXQt megjelenésbeállító</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Bigyótéma</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Icons Theme</source>
-        <translation type="unfinished">Ikontémák</translation>
+        <translation>Ikontémák</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQT téma</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="63"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Betű</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurzor</translation>
     </message>
 </context>
 <context>
@@ -195,42 +195,42 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Bigyótéma</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eszközsáv stílus:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Csak ikon</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Csak szöveg</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Szöveg az ikon mellett</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Szöveg az ikon alatt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Alapértelmezett</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Egykattintásos mód</translation>
     </message>
 </context>
 </TS>

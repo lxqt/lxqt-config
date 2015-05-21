@@ -43,7 +43,7 @@
     <message>
         <location filename="../ui/warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation>Űrlap</translation>
+        <translation>Ürlap</translation>
     </message>
     <message>
         <location filename="../ui/warninglabel.ui" line="44"/>
