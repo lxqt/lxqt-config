@@ -16,7 +16,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Tastiera&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Tastiera&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
@@ -87,12 +87,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation>Aggiungi</translation>
+        <translation>&amp;Aggiungi</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation>Rimuovi</translation>
+        <translation>&amp;Rimuovi</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Nota:&lt;/b&gt; Se viene usato un metodo di input come IBus, uim, fcitx o gcin questi settaggi potrebbero non avere effetto.</translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; Se viene usato un metodo di input come IBus, uim, fcitx o gcin questi settaggi potrebbero non avere effetto.</translation>
     </message>
 </context>
 <context>
