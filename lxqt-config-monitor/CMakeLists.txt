@@ -14,8 +14,6 @@ set(H_FILES
     monitor.h
     monitorwidget.h
     monitorpicture.h
-    quickoptions.h
-    applydialog.h
 )
 
 set(CPP_FILES
@@ -25,8 +23,6 @@ set(CPP_FILES
     monitorwidget.cpp
     timeoutdialog.cpp
     monitorpicture.cpp
-    quickoptions.cpp
-    applydialog.cpp
 )
 
 set(UI_FILES
@@ -34,8 +30,6 @@ set(UI_FILES
     monitorwidget.ui
     timeoutdialog.ui
     monitorpicture.ui
-    quickoptions.ui
-    applydialog.ui
 )
 
 set(ICON_FILES
@@ -45,9 +39,6 @@ set(ICON_FILES
 	icons/unified.svg
 	icons/monitor1offmonitor2on.svg
 )
-
-# Config file
-configure_file ( configure.in configure.h )
 
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 

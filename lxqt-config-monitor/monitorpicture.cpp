@@ -23,7 +23,6 @@
 #include <QPen>
 #include <QDebug>
 #include <QVector2D>
-#include "configure.h"
 
 MonitorPictureDialog::MonitorPictureDialog(QWidget * parent, Qt::WindowFlags f) :
     QDialog(parent,f)
