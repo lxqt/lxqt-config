@@ -1,4 +1,4 @@
 lxqt-config-monitor
 ===================
 
-This tool lets you change monitor settings. It is based on lxrandr-qt.
+This tool lets you change monitor settings. It was based on lxrandr-qt but now uses libkscreen.
