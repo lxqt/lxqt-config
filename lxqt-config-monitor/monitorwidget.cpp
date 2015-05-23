@@ -50,6 +50,14 @@ KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes)
     return KScreen::ModePtr(NULL);
 }
 
+static bool sizeLessThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr &modeB)
+{
+    QSize sizeA = modeA->size();
+    QSize sizeB = modeB-> size();
+    return sizeA.width() * sizeA.height() > sizeB.width() * sizeB.height();
+}
+
+
 MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent) :
     QGroupBox(parent)
 {
@@ -60,25 +68,22 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     ui.enabledCheckbox->setChecked(output->isEnabled());
 
-    // Add the preferred mode at the top of the list
-    KScreen::ModePtr preferredMode = output->preferredMode();
-    if (preferredMode)
-    {
-        ui.resolutionCombo->addItem(modeToString(preferredMode), preferredMode->id());
-        // Make it bold, for good measure
-        QFont font = ui.resolutionCombo->font();
-        font.setBold(true);
-        ui.resolutionCombo->setItemData(0, font, Qt::FontRole);
-    }
+
+    // Sort modes by size
+    QList <KScreen::ModePtr> modeList = output->modes().values();
+    qSort(modeList.begin(), modeList.end(), sizeLessThan);
 
     // Add each mode to the list
-    for (const KScreen::ModePtr &mode : output->modes())
+    foreach (const KScreen::ModePtr &mode, modeList)
     {
-        // HACK: what is the better way?
-        if (modeToString(mode) == modeToString(preferredMode))
-            continue;
-
-        ui.resolutionCombo->addItem(modeToString(mode), mode->id());
+	ui.resolutionCombo->addItem(modeToString(mode), mode->id());
+	if(output->preferredModes().contains(mode->id()))
+	{
+	     // Make bold preferredModes
+	     QFont font = ui.resolutionCombo->font();
+             font.setBold(true);
+             ui.resolutionCombo->setItemData(ui.resolutionCombo->count()-1, font, Qt::FontRole);
+	}
     }
     connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
 
