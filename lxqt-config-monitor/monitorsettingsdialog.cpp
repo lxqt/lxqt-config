@@ -56,8 +56,6 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         return;
 
     mConfig = config;
-        KScreen::ScreenPtr screen = mConfig->screen();
-        qDebug() << "Current size: " << screen->currentSize();
 
     KScreen::OutputList outputs = mConfig->outputs();
     for (const KScreen::OutputPtr &output : outputs)
@@ -81,10 +79,6 @@ void MonitorSettingsDialog::applyConfiguration()
 {
     if (mConfig && KScreen::Config::canBeApplied(mConfig))
     {
-        KScreen::ScreenPtr screen = mConfig->screen();
-        qDebug() << "Current size: " << screen->currentSize();
-	screen->setCurrentSize(QSize(800,800));
-
         KScreen::SetConfigOperation(mConfig).exec();
 
         TimeoutDialog mTimeoutDialog;
