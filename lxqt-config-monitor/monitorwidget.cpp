@@ -50,6 +50,14 @@ KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes)
     return KScreen::ModePtr(NULL);
 }
 
+static bool sizeLessThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr &modeB)
+{
+    QSize sizeA = modeA->size();
+    QSize sizeB = modeB-> size();
+    return sizeA.width() * sizeA.height() > sizeB.width() * sizeB.height();
+}
+
+
 MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent) :
     QGroupBox(parent)
 {
@@ -63,21 +71,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     // Sort modes by size
     QList <KScreen::ModePtr> modeList = output->modes().values();
-    for(int i=0; i<modeList.count(); i++)
-    {
-        QSize size = modeList[i]->size();
-	int iSize = size.width() * size.height();
-        for(int j=i; j<modeList.count(); j++)
-	{
-	    size = modeList[j]->size();
-	    int jSize = size.width() * size.height();
-	    if(jSize>iSize)
-	    {
-	        modeList.swap(i,j);
-		iSize = jSize;
-	    }
-	}
-    }
+    qSort(modeList.begin(), modeList.end(), sizeLessThan);
 
     // Add each mode to the list
     foreach (const KScreen::ModePtr &mode, modeList)
