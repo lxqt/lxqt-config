@@ -63,6 +63,7 @@ private Q_SLOTS:
     void onPositioningChanged(int);
     void onPositionChanged(int);
     void onResolutionChanged(int);
+    void onRateChanged(int);
 
 private:
     Ui::MonitorWidget ui;

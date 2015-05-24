@@ -50,7 +50,7 @@ KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes)
     return KScreen::ModePtr(NULL);
 }
 
-static bool sizeLessThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr &modeB)
+static bool sizeBiggerThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr &modeB)
 {
     QSize sizeA = modeA->size();
     QSize sizeB = modeB-> size();
@@ -68,10 +68,27 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     ui.enabledCheckbox->setChecked(output->isEnabled());
 
+    QList <KScreen::ModePtr> modeList = output->modes().values();
+
+    // Remove duplicate sizes
+    QMap<QString, KScreen::ModePtr> noDuplicateModes;
+    foreach(const KScreen::ModePtr &mode, modeList)
+    {
+        if( noDuplicateModes.keys().contains(modeToString(mode)) )
+	{
+	    KScreen::ModePtr actual = noDuplicateModes[modeToString(mode)];
+	    bool isActualPreferred = output->preferredModes().contains(actual->id());
+	    bool isModePreferred = output->preferredModes().contains(mode->id());
+	    if( ( mode->refreshRate() > actual->refreshRate() && !isActualPreferred ) || isModePreferred )
+	        noDuplicateModes[modeToString(mode)] = mode;
+	}
+	else
+	    noDuplicateModes[modeToString(mode)] = mode;
+    }
 
     // Sort modes by size
-    QList <KScreen::ModePtr> modeList = output->modes().values();
-    qSort(modeList.begin(), modeList.end(), sizeLessThan);
+    modeList = noDuplicateModes.values();
+    qSort(modeList.begin(), modeList.end(), sizeBiggerThan);
 
     // Add each mode to the list
     foreach (const KScreen::ModePtr &mode, modeList)
@@ -87,16 +104,27 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     }
     connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
 
+    // Select actual mode in list
     if (output->currentMode())
     {
         // Set the current mode in dropdown
         int idx = ui.resolutionCombo->findData(output->currentMode()->id());
         if (idx < 0)
-            idx = ui.resolutionCombo->findData(output->preferredMode()->id());
+	{
+	    // Select mode with same size
+	    foreach (const KScreen::ModePtr &mode, modeList)
+	    {
+	        if( mode->size() == output->currentMode()->size() )
+                    idx = ui.resolutionCombo->findData(output->currentMode()->id());
+	    }
+	}
+	if(idx < 0)
+	    idx = ui.resolutionCombo->findData(output->preferredMode()->id());
         if (idx >= 0)
             ui.resolutionCombo->setCurrentIndex(idx);
     }
     updateRefreshRates();
+
 
     // Update EDID information
     // KScreen doesn't make much public but that's ok...
@@ -222,18 +250,28 @@ void MonitorWidget::onPositionChanged(int value)
 
 void MonitorWidget::onResolutionChanged(int index)
 {
-    updateRefreshRates();
     output->setCurrentModeId(ui.resolutionCombo->currentData().toString());
+    updateRefreshRates();
+}
+
+void MonitorWidget::onRateChanged(int index)
+{
+    output->setCurrentModeId(ui.rateCombo->currentData().toString());
 }
 
 void MonitorWidget::updateRefreshRates()
 {
+    disconnect(ui.rateCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onRateChanged(int)));
     ui.rateCombo->clear();
     // FIXME: That's wrong
     KScreen::ModePtr selectedMode = output->currentMode();
     for (const KScreen::ModePtr &mode : output->modes())
         if (selectedMode && mode->size() == selectedMode->size())
             ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
+    int idx = ui.rateCombo->findData(output->currentMode()->id());
+    if(idx >= 0)
+        ui.rateCombo->setCurrentIndex(idx);
+    connect(ui.rateCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onRateChanged(int)));
 }
 
 void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor)
