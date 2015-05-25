@@ -76,15 +76,10 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     {
         if( noDuplicateModes.keys().contains(modeToString(mode)) )
 	{
-	    if( 
-	        (
-	            ( mode->refreshRate() > noDuplicateModes[modeToString(mode)]->refreshRate() ) 
-	            &&
-                    ! output->preferredModes().contains(noDuplicateModes[modeToString(mode)]->id())
-	        )
-	        || 
-	        output->preferredModes().contains(mode->id()) 
-              )
+	    KScreen::ModePtr actual = noDuplicateModes[modeToString(mode)];
+	    bool isActualPreferred = output->preferredModes().contains(actual->id());
+	    bool isModePreferred = output->preferredModes().contains(mode->id());
+	    if( ( mode->refreshRate() > actual->refreshRate() && !isActualPreferred ) || isModePreferred )
 	        noDuplicateModes[modeToString(mode)] = mode;
 	}
 	else
