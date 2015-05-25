@@ -24,7 +24,29 @@
 #include <QDebug>
 #include <QVector2D>
 
-MonitorPictureDialog::MonitorPictureDialog(QWidget * parent, Qt::WindowFlags f) :
+MonitorPictureProxy::MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture):QObject(parent)
+{
+    this->monitorPicture = monitorPicture;
+}
+
+void MonitorPictureProxy::updateSize()
+{
+    KScreen::OutputPtr output = monitorPicture->monitorWidget->output;
+    QSize size = output->currentMode()->size();
+    if( output->rotation() == KScreen::Output::Left || output->rotation() == KScreen::Output::Right )
+        size.transpose();
+    monitorPicture->updateSize(size);
+}
+
+void MonitorPictureProxy::updatePosition()
+{
+    KScreen::OutputPtr output = monitorPicture->monitorWidget->output;
+    QPoint pos = output->pos();
+    //qDebug() << "MonitorPictureProxy:updatePosition]" << pos;
+    monitorPicture->setMonitorPosition(pos.x(), pos.y());
+}
+
+MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent, Qt::WindowFlags f) :
     QDialog(parent,f)
 {
     ui.setupUi(this);
@@ -42,6 +64,11 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
         scene->addItem(monitorPicture);
         monitorsWidth += monitorPicture->rect().width();
         monitorsHeight += monitorPicture->rect().height();
+
+        MonitorPictureProxy *proxy = new MonitorPictureProxy(this, monitorPicture);
+        proxy->connect(monitor->output.data(), SIGNAL(rotationChanged()), SLOT(updateSize()));
+        proxy->connect(monitor->output.data(), SIGNAL(currentModeIdChanged()), SLOT(updateSize()));
+        proxy->connect(monitor->output.data(), SIGNAL(posChanged()), SLOT(updatePosition()));
     }
     ui.graphicsView->scale(200.0 / (float) monitorsWidth, 200.0 / (float) monitorsHeight);
     ui.graphicsView->setScene(scene);
@@ -85,6 +112,8 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
     this->monitorWidget = monitorWidget;
     this->monitorPictureDialog = monitorPictureDialog;
     QSize currentSize = sizeFromString(monitorWidget->ui.resolutionCombo->currentText());
+    if( monitorWidget->output->rotation() == KScreen::Output::Left || monitorWidget->output->rotation() == KScreen::Output::Right )
+        currentSize.transpose();
     int x = monitorWidget->ui.xPosSpinBox->value();
     int y = monitorWidget->ui.yPosSpinBox->value();
     setAcceptedMouseButtons(Qt::LeftButton);
@@ -105,6 +134,19 @@ void MonitorPicture::adjustNameSize()
 {
     qreal fontWidth = QFontMetrics(textItem->font()).width(monitorWidget->output->name() + QStringLiteral("  "));
     textItem->setScale((qreal) this->rect().width() / fontWidth);
+    QTransform transform;
+    qreal width = qAbs(this->rect().width()/svgItem->boundingRect().width());
+    qreal height = qAbs(this->rect().height()/svgItem->boundingRect().height());
+    transform.scale(width, height);
+    svgItem->setTransform(transform);
+}
+
+void MonitorPicture::updateSize(QSize currentSize)
+{
+    QRectF r = rect();
+    r.setSize(currentSize);
+    setRect(r);
+    adjustNameSize();
 }
 
 QVariant MonitorPicture::itemChange(GraphicsItemChange change, const QVariant & value)

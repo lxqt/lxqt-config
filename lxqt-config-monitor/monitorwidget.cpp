@@ -26,6 +26,7 @@
 #include <KScreen/EDID>
 
 
+
 QString modeToString(KScreen::ModePtr mode)
 {
     // mode->name() can be anything, not just widthxheight. eg if added with cvt.
@@ -177,10 +178,33 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         ui.yPosSpinBox->setValue(output->pos().y());
     }
 
+    // Insert orientations
+    ui.orientationCombo->addItem(tr("None"), KScreen::Output::None);
+    ui.orientationCombo->addItem(tr("Left"), KScreen::Output::Left);
+    ui.orientationCombo->addItem(tr("Right"), KScreen::Output::Right);
+    ui.orientationCombo->addItem(tr("Inverted"), KScreen::Output::Inverted);
+    switch(output->rotation())
+    {
+        case KScreen::Output::None:
+            ui.orientationCombo->setCurrentIndex(0);
+	    break;
+	case KScreen::Output::Left:
+	    ui.orientationCombo->setCurrentIndex(1);
+	    break;
+	case KScreen::Output::Right:
+            ui.orientationCombo->setCurrentIndex(2);
+	    break;
+	case KScreen::Output::Inverted:
+	    ui.orientationCombo->setCurrentIndex(3);
+	    break;
+    }
+
+
     connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
     connect(ui.positioningCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onPositioningChanged(int)));
     connect(ui.xPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
     connect(ui.yPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
+    connect(ui.orientationCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onOrientationChanged(int)));
 
     // Force update behavior visibility
     onBehaviorChanged(ui.behaviorCombo->currentIndex());
@@ -188,6 +212,12 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
 MonitorWidget::~MonitorWidget()
 {
+}
+
+void MonitorWidget::onOrientationChanged(int idx)
+{
+    //qDebug() << "Rotation: " << ui.orientationCombo->currentData().toInt(0);
+    output->setRotation((KScreen::Output::Rotation)ui.orientationCombo->currentData().toInt(0));
 }
 
 void MonitorWidget::onBehaviorChanged(int idx)
