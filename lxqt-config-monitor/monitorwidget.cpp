@@ -53,7 +53,7 @@ KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes)
 static bool sizeBiggerThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr &modeB)
 {
     QSize sizeA = modeA->size();
-    QSize sizeB = modeB-> size();
+    QSize sizeB = modeB->size();
     return sizeA.width() * sizeA.height() > sizeB.width() * sizeB.height();
 }
 
@@ -75,15 +75,15 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     foreach(const KScreen::ModePtr &mode, modeList)
     {
         if( noDuplicateModes.keys().contains(modeToString(mode)) )
-	{
-	    KScreen::ModePtr actual = noDuplicateModes[modeToString(mode)];
-	    bool isActualPreferred = output->preferredModes().contains(actual->id());
-	    bool isModePreferred = output->preferredModes().contains(mode->id());
-	    if( ( mode->refreshRate() > actual->refreshRate() && !isActualPreferred ) || isModePreferred )
-	        noDuplicateModes[modeToString(mode)] = mode;
-	}
-	else
-	    noDuplicateModes[modeToString(mode)] = mode;
+        {
+            KScreen::ModePtr actual = noDuplicateModes[modeToString(mode)];
+            bool isActualPreferred = output->preferredModes().contains(actual->id());
+            bool isModePreferred = output->preferredModes().contains(mode->id());
+            if( ( mode->refreshRate() > actual->refreshRate() && !isActualPreferred ) || isModePreferred )
+                noDuplicateModes[modeToString(mode)] = mode;
+        }
+        else
+            noDuplicateModes[modeToString(mode)] = mode;
     }
 
     // Sort modes by size
@@ -93,14 +93,14 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     // Add each mode to the list
     foreach (const KScreen::ModePtr &mode, modeList)
     {
-	ui.resolutionCombo->addItem(modeToString(mode), mode->id());
-	if(output->preferredModes().contains(mode->id()))
-	{
-	     // Make bold preferredModes
-	     QFont font = ui.resolutionCombo->font();
+        ui.resolutionCombo->addItem(modeToString(mode), mode->id());
+        if(output->preferredModes().contains(mode->id()))
+        {
+             // Make bold preferredModes
+             QFont font = ui.resolutionCombo->font();
              font.setBold(true);
              ui.resolutionCombo->setItemData(ui.resolutionCombo->count()-1, font, Qt::FontRole);
-	}
+        }
     }
     connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
 
@@ -110,16 +110,16 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         // Set the current mode in dropdown
         int idx = ui.resolutionCombo->findData(output->currentMode()->id());
         if (idx < 0)
-	{
-	    // Select mode with same size
-	    foreach (const KScreen::ModePtr &mode, modeList)
-	    {
-	        if( mode->size() == output->currentMode()->size() )
+        {
+            // Select mode with same size
+            foreach (const KScreen::ModePtr &mode, modeList)
+            {
+                if( mode->size() == output->currentMode()->size() )
                     idx = ui.resolutionCombo->findData(output->currentMode()->id());
-	    }
-	}
-	if(idx < 0)
-	    idx = ui.resolutionCombo->findData(output->preferredMode()->id());
+            }
+        }
+        if(idx < 0)
+            idx = ui.resolutionCombo->findData(output->preferredMode()->id());
         if (idx >= 0)
             ui.resolutionCombo->setCurrentIndex(idx);
     }
