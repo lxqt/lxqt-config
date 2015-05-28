@@ -183,6 +183,21 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     ui.orientationCombo->addItem(tr("Left"), KScreen::Output::Left);
     ui.orientationCombo->addItem(tr("Right"), KScreen::Output::Right);
     ui.orientationCombo->addItem(tr("Inverted"), KScreen::Output::Inverted);
+    switch(output->rotation())
+    {
+        case KScreen::Output::None:
+            ui.orientationCombo->setCurrentIndex(0);
+	    break;
+	case KScreen::Output::Left:
+	    ui.orientationCombo->setCurrentIndex(1);
+	    break;
+	case KScreen::Output::Right:
+            ui.orientationCombo->setCurrentIndex(2);
+	    break;
+	case KScreen::Output::Inverted:
+	    ui.orientationCombo->setCurrentIndex(3);
+	    break;
+    }
 
 
     connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
