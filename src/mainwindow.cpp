@@ -91,11 +91,11 @@ public:
         DomElementIterator it(xdgMenu.xml().documentElement() , "Menu");
         while(it.hasNext())
         {
-            this->builGroup(it.next());
+            this->buildGroup(it.next());
         }
     }
 
-    void builGroup(const QDomElement& xml)
+    void buildGroup(const QDomElement& xml)
     {
         QString category;
         if (! xml.attribute("title").isEmpty())
