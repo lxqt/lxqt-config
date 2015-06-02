@@ -19,6 +19,7 @@
                 <Category>DesktopSettings</Category>
                 <Or>
                     <Category>LXQt</Category>
+                    <Category>X-LXQt</Category>
                     <!-- Include some optional components here -->
                     <Filename>obconf-qt.desktop</Filename>
                     <Filename>compton-conf.desktop</Filename>
