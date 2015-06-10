@@ -55,7 +55,11 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSpinBox" name="fontSize"/>
+       <widget class="QSpinBox" name="fontSize">
+        <property name="minimum">
+         <number>4</number>
+        </property>
+       </widget>
       </item>
       <item row="1" column="1">
        <widget class="QComboBox" name="fontStyle">
