@@ -93,6 +93,9 @@ QList<MonitorInfo*> XRandRBackend::getMonitorsInfo() {
           monitor->enabledOk = true;
         monitor->xPos = regMonitorLine.cap(4).toInt();
         monitor->yPos = regMonitorLine.cap(5).toInt();
+        if( monitor->xPos!=0 || monitor->yPos!=0 ) {
+          monitor->position = MonitorSettings::Manual;
+        }
       }
     }
     else { // reading properties of this monitor
