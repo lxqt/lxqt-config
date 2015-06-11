@@ -41,6 +41,10 @@ public slots:
   void setHardwareIdentifier(QString hardwareIdentifier);
   
   void setSavedSettings(QListWidgetItem * item);
+  
+  void onDeleteItem();
+  
+  void onRenameItem();
 
 private:
   LxQt::Settings*applicationSettings;

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QJsonDocument>
 #include <QProcess>
-
+#include <QInputDialog>
 
 ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
   QDialog(parent) {
@@ -41,19 +41,67 @@ ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
   ui.save->setIconSize(size);
   
   connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
+  connect(ui.deletePushButton, SIGNAL(clicked()), SLOT(onDeleteItem()));
+  connect(ui.renamePushButton, SIGNAL(clicked()), SLOT(onRenameItem()));
   
   loadSettings();
 }
 
 void ApplyDialog::setHardwareIdentifier(QString hardwareIdentifier) {
-	this->hardwareIdentifier = hardwareIdentifier;
-	loadSettings();
+  this->hardwareIdentifier = hardwareIdentifier;
+  loadSettings();
 }
 
 void ApplyDialog::setSavedSettings(QListWidgetItem * item) {
   QJsonObject o = item->data(Qt::UserRole).toJsonObject();
   QString cmd = o["command"].toString();
   QProcess::execute(cmd);
+}
+
+void ApplyDialog::onDeleteItem() {
+  if( ui.allConfigs->currentItem() == NULL )
+    return;
+  QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+  applicationSettings->beginGroup("configMonitor");
+  QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+  for(int i=0;i<savedConfigs.size();i++) {
+    const QJsonValue & v = savedConfigs[i];
+    QJsonObject o = v.toObject();
+    if( o["name"].toString() == obj["name"].toString() ) {
+      savedConfigs.removeAt(i);
+      break;
+    }
+  }
+  applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
+  applicationSettings->endGroup();
+  loadSettings();
+}
+
+void ApplyDialog::onRenameItem() {
+  if( ui.allConfigs->currentItem() == NULL )
+    return;
+  QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+  bool ok;
+  QString configName = QInputDialog::getText(this, tr("Name"),
+                                         tr("Name:"), QLineEdit::Normal,
+                                         obj["name"].toString(), &ok);
+  if (!ok || configName.isEmpty())
+    return;
+  applicationSettings->beginGroup("configMonitor");
+  QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+  for(int i=0;i<savedConfigs.size();i++) {
+    const QJsonValue & v = savedConfigs[i];
+    QJsonObject o = v.toObject();
+    if( o["name"].toString() == obj["name"].toString() ) {
+      savedConfigs.removeAt(i);
+      obj["name"] = configName;
+      savedConfigs.append(obj);
+      break;
+    }
+  }
+  applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
+  applicationSettings->endGroup();
+  loadSettings();
 }
 
 void ApplyDialog::loadSettings() {
