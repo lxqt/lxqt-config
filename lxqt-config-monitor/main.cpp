@@ -25,7 +25,7 @@
 #include "monitorsettingsdialog.h"
 #include "quickoptions.h"
 #include "xrandr.h"
-#include "applydialog.h"
+#include "savesettings.h"
 
 int main(int argc, char** argv) {
 	LxQt::SingleApplication app(argc, argv);
@@ -57,13 +57,13 @@ int main(int argc, char** argv) {
 	
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
 	
-	ApplyDialog *apply = new ApplyDialog(&settings);
-	apply->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
-	// monitorSettingsDialog->connect(apply->ui.apply, SIGNAL(clicked(bool)), SLOT(applySettings()));
-	monitorSettingsDialog->connect(apply->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
-	apply->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
+	SaveSettings *saveSettings = new SaveSettings(&settings);
+	saveSettings->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
+	// monitorSettingsDialog->connect(saveSettings->ui.saveSettings, SIGNAL(clicked(bool)), SLOT(saveSettingsSettings()));
+	monitorSettingsDialog->connect(saveSettings->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
+	saveSettings->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
 	
-	dlg.addPage(apply, QObject::tr("Save settings"), "system-run");
+	dlg.addPage(saveSettings, QObject::tr("Save settings"), "system-run");
 	
 	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
 

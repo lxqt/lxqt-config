@@ -17,20 +17,20 @@
 */
 
 
-#ifndef _APPLYDIALOG_H_
-#define _APPLYDIALOG_H_
+#ifndef _SAVESETTINGS_H_
+#define _SAVESETTINGS_H_
 
-#include "ui_applydialog.h"
+#include "ui_savesettings.h"
 #include <LXQt/Settings>
 
 // Monitor info
-class ApplyDialog : public QDialog {
+class SaveSettings : public QDialog {
   Q_OBJECT
 
 public:
-  ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent = 0);
+  SaveSettings(LxQt::Settings*applicationSettings, QWidget* parent = 0);
 
-  Ui::ApplyDialog ui;
+  Ui::SaveSettings ui;
 
 public slots:
   /*! Load settings to QListWidgets. 
@@ -52,4 +52,4 @@ private:
 
 };
 
-#endif // _APPLYDIALOG_H_
+#endif // _SAVESETTINGS_H_

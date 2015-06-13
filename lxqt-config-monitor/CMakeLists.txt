@@ -15,7 +15,7 @@ set(H_FILES
     xrandr.h
     monitorpicture.h
     quickoptions.h
-    applydialog.h
+    savesettings.h
 )
 
 set(CPP_FILES
@@ -27,7 +27,7 @@ set(CPP_FILES
     timeoutdialog.cpp
     monitorpicture.cpp
     quickoptions.cpp
-    applydialog.cpp
+    savesettings.cpp
 )
 
 set(UI_FILES
@@ -36,7 +36,7 @@ set(UI_FILES
     timeoutdialog.ui
     monitorpicture.ui
     quickoptions.ui
-    applydialog.ui
+    savesettings.ui
 )
 
 set(ICON_FILES

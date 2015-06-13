@@ -18,26 +18,22 @@
 
 #include <QJsonArray>
 #include <QJsonObject>
-#include "applydialog.h"
+#include "savesettings.h"
 #include "configure.h"
 #include <QDebug>
 #include <QJsonDocument>
 #include <QProcess>
 #include <QInputDialog>
 
-ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
+SaveSettings::SaveSettings(LxQt::Settings*applicationSettings, QWidget* parent):
   QDialog(parent) {
   
   this->applicationSettings = applicationSettings;
 
   ui.setupUi(this);
   
-  // ui.apply->setIcon(QIcon::fromTheme("system-run"));
-  ui.save->setIcon(QIcon::fromTheme("document-save"));
-
-  
   QSize size(128,64);
-  // ui.apply->setIconSize(size);
+  ui.save->setIcon(QIcon::fromTheme("document-save"));
   ui.save->setIconSize(size);
   
   connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
@@ -47,18 +43,19 @@ ApplyDialog::ApplyDialog(LxQt::Settings*applicationSettings, QWidget* parent):
   loadSettings();
 }
 
-void ApplyDialog::setHardwareIdentifier(QString hardwareIdentifier) {
+void SaveSettings::setHardwareIdentifier(QString hardwareIdentifier) {
   this->hardwareIdentifier = hardwareIdentifier;
   loadSettings();
 }
 
-void ApplyDialog::setSavedSettings(QListWidgetItem * item) {
+void SaveSettings::setSavedSettings(QListWidgetItem * item) {
   QJsonObject o = item->data(Qt::UserRole).toJsonObject();
   QString cmd = o["command"].toString();
+  qDebug() << "[SaveSettings::setSavedSettings]: " << cmd;
   QProcess::execute(cmd);
 }
 
-void ApplyDialog::onDeleteItem() {
+void SaveSettings::onDeleteItem() {
   if( ui.allConfigs->currentItem() == NULL )
     return;
   QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
@@ -77,14 +74,12 @@ void ApplyDialog::onDeleteItem() {
   loadSettings();
 }
 
-void ApplyDialog::onRenameItem() {
+void SaveSettings::onRenameItem() {
   if( ui.allConfigs->currentItem() == NULL )
     return;
   QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
   bool ok;
-  QString configName = QInputDialog::getText(this, tr("Name"),
-                                         tr("Name:"), QLineEdit::Normal,
-                                         obj["name"].toString(), &ok);
+  QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"), QLineEdit::Normal, obj["name"].toString(), &ok);
   if (!ok || configName.isEmpty())
     return;
   applicationSettings->beginGroup("configMonitor");
@@ -104,7 +99,7 @@ void ApplyDialog::onRenameItem() {
   loadSettings();
 }
 
-void ApplyDialog::loadSettings() {
+void SaveSettings::loadSettings() {
   ui.allConfigs->clear();
   ui.hardwareCompatibleConfigs->clear();
   applicationSettings->beginGroup("configMonitor");
