@@ -33,11 +33,11 @@
 #define ExtendDisplay 1
 #define CloneDisplay 2
 
-#define RightOf 1
-#define LeftOf 2
-#define Above 3
-#define Below 4
-#define Manually 5
+#define RightOf 0
+#define LeftOf 1
+#define Above 2
+#define Below 3
+#define Manually 4
 
 class MonitorWidget : public QGroupBox
 {
@@ -59,6 +59,7 @@ public Q_SLOTS:
     void setOnlyMonitor(bool isOnlyMonitor);
 
 private Q_SLOTS:
+    void onEnabledChanged(bool);
     void onBehaviorChanged(int);
     void onPositioningChanged(int);
     void onPositionChanged(int);

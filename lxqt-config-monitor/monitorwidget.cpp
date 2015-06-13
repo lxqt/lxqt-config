@@ -185,21 +185,21 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     ui.orientationCombo->addItem(tr("Inverted"), KScreen::Output::Inverted);
     switch(output->rotation())
     {
-        case KScreen::Output::None:
+    case KScreen::Output::None:
             ui.orientationCombo->setCurrentIndex(0);
-	    break;
-	case KScreen::Output::Left:
-	    ui.orientationCombo->setCurrentIndex(1);
-	    break;
-	case KScreen::Output::Right:
+        break;
+    case KScreen::Output::Left:
+        ui.orientationCombo->setCurrentIndex(1);
+        break;
+    case KScreen::Output::Right:
             ui.orientationCombo->setCurrentIndex(2);
-	    break;
-	case KScreen::Output::Inverted:
-	    ui.orientationCombo->setCurrentIndex(3);
-	    break;
+        break;
+    case KScreen::Output::Inverted:
+        ui.orientationCombo->setCurrentIndex(3);
+        break;
     }
 
-
+    connect(ui.enabledCheckbox, SIGNAL(toggled(bool)), this, SLOT(onEnabledChanged(bool)));
     connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
     connect(ui.positioningCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onPositioningChanged(int)));
     connect(ui.xPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
@@ -214,10 +214,24 @@ MonitorWidget::~MonitorWidget()
 {
 }
 
+void MonitorWidget::onEnabledChanged(bool enabled)
+{
+    output->setEnabled(enabled);
+
+    // If we're enabling a disabled output for the first time
+    if (enabled && !output->currentMode())
+    {
+        // order here matters
+        onResolutionChanged(ui.resolutionCombo->currentIndex());
+        onOrientationChanged(ui.orientationCombo->currentIndex());
+        onPositioningChanged(ui.positioningCombo->currentIndex());
+        onBehaviorChanged(ui.behaviorCombo->currentIndex());
+    }
+}
+
 void MonitorWidget::onOrientationChanged(int idx)
 {
-    //qDebug() << "Rotation: " << ui.orientationCombo->currentData().toInt(0);
-    output->setRotation((KScreen::Output::Rotation)ui.orientationCombo->currentData().toInt(0));
+    output->setRotation((KScreen::Output::Rotation) ui.orientationCombo->currentData().toInt(0));
 }
 
 void MonitorWidget::onBehaviorChanged(int idx)
@@ -240,7 +254,7 @@ void MonitorWidget::onPositioningChanged(int idx)
                                              config->outputs());
 
     // TODO: Figure out what to do here
-    if (!other->currentMode())
+    if (!other->currentMode() || !output->currentMode())
         return;
 
     QSize otherSize = other->currentMode()->size();
@@ -293,20 +307,27 @@ void MonitorWidget::updateRefreshRates()
 {
     disconnect(ui.rateCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onRateChanged(int)));
     ui.rateCombo->clear();
-    // FIXME: That's wrong
+
+    if (output->modes().size() < 0)
+        return;
+
     KScreen::ModePtr selectedMode = output->currentMode();
-    for (const KScreen::ModePtr &mode : output->modes())
-        if (selectedMode && mode->size() == selectedMode->size())
-            ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
-    int idx = ui.rateCombo->findData(output->currentMode()->id());
-    if(idx >= 0)
-        ui.rateCombo->setCurrentIndex(idx);
+    if (selectedMode)
+    {
+        for (const KScreen::ModePtr &mode : output->modes())
+            if (mode->size() == selectedMode->size())
+                ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
+
+        int idx = ui.rateCombo->findData(selectedMode->id());
+        if (idx >= 0)
+            ui.rateCombo->setCurrentIndex(idx);
+    }
+
     connect(ui.rateCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onRateChanged(int)));
 }
 
 void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor)
 {
-    ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
     ui.enabledCheckbox->setEnabled(!isOnlyMonitor);
     ui.behaviorCombo->setEnabled(!isOnlyMonitor);
     ui.xPosSpinBox->setVisible(!isOnlyMonitor);

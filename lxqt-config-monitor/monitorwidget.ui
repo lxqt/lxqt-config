@@ -116,11 +116,6 @@
           <widget class="QComboBox" name="positioningCombo">
            <item>
             <property name="text">
-             <string>Positioned manually</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
              <string>Right of...</string>
             </property>
            </item>
@@ -137,6 +132,11 @@
            <item>
             <property name="text">
              <string>Below...</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Positioned manually</string>
             </property>
            </item>
           </widget>
