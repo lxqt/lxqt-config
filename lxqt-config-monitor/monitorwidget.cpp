@@ -159,6 +159,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
             ui.clonesCombo->addItem(other->name(), other->id());
             ui.relativeScreensCombo->addItem(other->name(), other->id());
         }
+	connect(ui.clonesCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onCloneChanged(int)));
     }
 
     // Behavior chooser
@@ -243,8 +244,17 @@ void MonitorWidget::onBehaviorChanged(int idx)
     ui.xPosSpinBox->setVisible(idx == ExtendDisplay);
     ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
     ui.relativeScreensCombo->setEnabled(true);
+    if(idx == CloneDisplay)
+        onCloneChanged(ui.clonesCombo->currentIndex());
 
     output->setPrimary(idx == PrimaryDisplay);
+}
+
+void MonitorWidget::onCloneChanged(int idx)
+{
+    KScreen::OutputPtr other = getOutputById(ui.clonesCombo->currentData().toInt(),
+                                             config->outputs());
+    output->setPos( other->pos() );
 }
 
 void MonitorWidget::onPositioningChanged(int idx)
