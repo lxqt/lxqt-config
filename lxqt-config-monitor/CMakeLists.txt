@@ -2,7 +2,6 @@ project(lxqt-config-monitor)
 
 include_directories (
     "${CMAKE_CURRENT_BINARY_DIR}"
-    ${LXQT_INCLUDE_DIRS}
 )
 
 find_package(Qt5Svg REQUIRED)
@@ -84,7 +83,7 @@ target_link_libraries(${PROJECT_NAME}
     Qt5::Widgets
     Qt5::X11Extras
     Qt5::Svg
-    ${LXQT_LIBRARIES}
+    lxqt
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

@@ -78,8 +78,7 @@ target_link_libraries(lxqt-config-cursor
     Qt5::Xml
     ${X11_X11_LIB}
     ${X11_Xcursor_LIB}
-    ${LXQT_LIBRARIES}
-    ${QTXDG_LIBRARIES}
+    lxqt
     ${ZLIB_LIBRARY}
     ${X11_Xfixes_LIB}
 )

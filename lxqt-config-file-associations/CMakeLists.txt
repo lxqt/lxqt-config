@@ -31,8 +31,7 @@ set(UI_FILES
 set(QRC_FILES "")
 
 set(LIBRARIES
-    ${QTXDG_LIBRARIES}
-    ${LXQT_LIBRARIES}
+    lxqt
 )
 
 # Translations **********************************
