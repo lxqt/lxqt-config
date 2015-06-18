@@ -34,7 +34,7 @@
 class WarningLabel : public QWidget, public Ui::WarningLabel
 {
     Q_OBJECT
-    
+
 public:
     WarningLabel (QWidget *parent=0);
 

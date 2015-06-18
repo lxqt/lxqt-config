@@ -24,16 +24,16 @@ QuickOptions::QuickOptions(QWidget* parent):
   QDialog(parent) {
 
   ui.setupUi(this);
-  
+
   ui.useBoth->setIcon(QIcon(ICON_PATH "unified.svg"));
   ui.externalOnly->setIcon(QIcon(ICON_PATH "monitor1offmonitor2on.svg"));
   ui.extended->setIcon(QIcon(ICON_PATH "extended.svg"));
   ui.laptopOnly->setIcon(QIcon(ICON_PATH "monitor1onmonitor2ff.svg"));
-  
+
   QSize size(128,64);
   ui.useBoth->setIconSize(size);
   ui.externalOnly->setIconSize(size);
   ui.extended->setIconSize(size);
   ui.laptopOnly->setIconSize(size);
-  
+
 }

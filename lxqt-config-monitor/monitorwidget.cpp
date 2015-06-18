@@ -35,7 +35,7 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     // turn off screen is not allowed since there should be at least one monitor available.
     ui.enabled->setEnabled(false);
   }
-  
+
   ui.xPosSpinBox->setValue(monitor->xPos);
   ui.yPosSpinBox->setValue(monitor->yPos);
 
@@ -48,8 +48,8 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     QVariant monitorModeInfo = QVariant::fromValue(monitor->monitorModes[_mode_line]);
     ui.resolutionCombo->addItem(_mode_line, monitorModeInfo);
   }
-  
- 
+
+
   if(!monitor->currentMode.isEmpty())
     ui.resolutionCombo->setCurrentIndex(ui.resolutionCombo->findText(monitor->currentMode));
   else
@@ -58,14 +58,14 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     ui.rateCombo->setCurrentIndex(ui.rateCombo->findText(monitor->currentRate));
   else
      ui.rateCombo->setCurrentIndex(0);
-  
+
   int brightness;
   if( !monitorInfo->brightness.isEmpty() )
     brightness = monitorInfo->brightness.toFloat()*100;
   else
     brightness = 100;
   ui.brightnessSlider->setValue(brightness);
-  
+
   // Set gamma values
   ui.redSpinBox->setSingleStep(0.01);
   ui.greenSpinBox->setSingleStep(0.01);
@@ -76,7 +76,7 @@ MonitorWidget::MonitorWidget(MonitorInfo* monitor, const QList<MonitorInfo*> mon
     ui.greenSpinBox->setValue(gammaValues[1].toFloat());
     ui.blueSpinBox->setValue(gammaValues[2].toFloat());
   }
-  
+
   //Set backlight values
   if( !monitor->backlight.isEmpty() ) {
     ui.backlightSlider->setMinimum(monitor->backlightMin.toInt());

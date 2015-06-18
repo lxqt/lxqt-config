@@ -99,7 +99,7 @@ void StyleConfig::initControls()
 
     // activate item views with single click
     ui->singleClickActivate->setChecked( mSettings->value("single_click_activate", false).toBool());
-    
+
     update();
 }
 

@@ -249,11 +249,11 @@ bool XRandRBackend::setMonitorsSettings(const QList<MonitorSettings*> monitors) 
 QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
 
   QByteArray cmd = "xrandr";
-  
+
   int fb_width = 0, fb_height = 0;
-  
+
   QList<MonitorInfo*> monitorInfos = getMonitorsInfo();
-  
+
   foreach(MonitorSettings * monitor, monitors) {
     foreach(MonitorInfo * info, monitorInfos) {
 	    if(monitor->name == info->name) {
@@ -275,7 +275,7 @@ QString XRandRBackend::getCommand(const QList<MonitorSettings*> monitors)  {
 	    }
 	 }
   }
-  
+
   cmd.append(QString(" --fb %1x%2").arg(fb_width).arg(fb_height));
 
   foreach(MonitorSettings * monitor, monitors) {

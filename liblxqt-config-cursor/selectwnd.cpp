@@ -175,7 +175,7 @@ void SelectWnd::applyCurrent()
     mSettings->beginGroup("Mouse");
     mSettings->setValue("cursor_theme", theme->name());
     mSettings->endGroup();
-    
+
     // The XCURSOR_THEME environment varialbe does not work sometimes.
     // Besides, XDefaults values are not used by Qt.
     // So, let's write the new theme name to ~/.icons/default/index.theme.

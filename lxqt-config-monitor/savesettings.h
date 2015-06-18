@@ -33,17 +33,17 @@ public:
   Ui::SaveSettings ui;
 
 public slots:
-  /*! Load settings to QListWidgets. 
+  /*! Load settings to QListWidgets.
       eids is hardware code to detect hardware compatible settings.
    */
   void loadSettings();
-  
+
   void setHardwareIdentifier(QString hardwareIdentifier);
-  
+
   void setSavedSettings(QListWidgetItem * item);
-  
+
   void onDeleteItem();
-  
+
   void onRenameItem();
 
 private:

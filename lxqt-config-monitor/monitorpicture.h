@@ -52,7 +52,7 @@ public:
   MonitorPicture(QGraphicsItem * parent, MonitorWidget *monitorWidget, MonitorPictureDialog *monitorPictureDialog);
   void setMonitorPosition(int x, int y);
   void adjustNameSize();
- 
+
   MonitorWidget *monitorWidget;
   int originX, originY;
 private:

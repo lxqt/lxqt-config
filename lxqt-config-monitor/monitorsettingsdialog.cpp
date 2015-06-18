@@ -293,7 +293,7 @@ void MonitorSettingsDialog::saveSettings() {
       ok = QDir::root().mkpath(QDir::homePath() + "/.config/autostart/");
     QFile file(QDir::homePath() + "/.config/autostart/lxqt-config-monitor-autostart.desktop");
     if(ok)
-            ok = file.open(QIODevice::WriteOnly | QIODevice::Text); 
+            ok = file.open(QIODevice::WriteOnly | QIODevice::Text);
     if(!ok) {
       QMessageBox::critical(this, tr("Error"), tr("Config can not be saved"));
       return;
@@ -302,7 +302,7 @@ void MonitorSettingsDialog::saveSettings() {
     out << desktop;
     out.flush();
     file.close();
-    
+
     // Save config in applicationSettings
     applicationSettings->beginGroup("configMonitor");
     QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();

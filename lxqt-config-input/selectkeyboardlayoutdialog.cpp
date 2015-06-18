@@ -39,7 +39,7 @@ SelectKeyboardLayoutDialog::SelectKeyboardLayoutDialog(QMap< QString, KeyboardLa
 }
 
 SelectKeyboardLayoutDialog::~SelectKeyboardLayoutDialog() {
-  
+
 }
 
 void SelectKeyboardLayoutDialog::onLayoutChanged() {

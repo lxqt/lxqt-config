@@ -85,7 +85,7 @@ void KeyboardConfig::onKeyboardSliderChanged(int value) {
 
   /* apply keyboard values */
   XkbSetAutoRepeatRate(QX11Info::display(), XkbUseCoreKbd, delay, interval);
-  
+
   accept();
 }
 

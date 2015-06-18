@@ -68,7 +68,7 @@ public:
   QString preferredRate;
   QString edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
   QString vendor;
-  
+
   static bool LVDS_Ok; // Is true if LVDS (Laptop monitor) is connected.
   QString humanReadableName();
 };

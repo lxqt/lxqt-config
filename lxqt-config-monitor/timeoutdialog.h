@@ -34,7 +34,7 @@ public:
 
 protected:
   virtual void showEvent(QShowEvent* e);
-  
+
 private Q_SLOTS:
   void onTimeout();
 

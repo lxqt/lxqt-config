@@ -29,7 +29,7 @@
 
 int main(int argc, char** argv) {
 	LxQt::SingleApplication app(argc, argv);
-	
+
 	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
 	if(configName.isEmpty())
 		configName = "MonitorSettings";
@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
 	dlg.setButtons(QDialogButtonBox::QDialogButtonBox::Apply|QDialogButtonBox::Close);
 	app.setActivationWindow(&dlg);
 	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
-	
+
 	XRandRBackend *xrandr = new XRandRBackend();
 	MonitorSettingsDialog *monitorSettingsDialog = new MonitorSettingsDialog(xrandr, &settings);
 	monitorSettingsDialog->connect(&dlg, SIGNAL(clicked(QDialogButtonBox::StandardButton)), SLOT(processClickedFromDialog(QDialogButtonBox::StandardButton)));
@@ -54,22 +54,22 @@ int main(int argc, char** argv) {
 			dlg.addPage(quickOptions, QObject::tr("Quick Options"), "format-justify-left");
 		}
 	 }
-	
+
 	dlg.addPage(monitorSettingsDialog, QObject::tr("Settings"), "preferences-desktop-display");
-	
+
 	SaveSettings *saveSettings = new SaveSettings(&settings);
 	saveSettings->setHardwareIdentifier(monitorSettingsDialog->getHardwareIdentifier());
 	// monitorSettingsDialog->connect(saveSettings->ui.saveSettings, SIGNAL(clicked(bool)), SLOT(saveSettingsSettings()));
 	monitorSettingsDialog->connect(saveSettings->ui.save, SIGNAL(clicked(bool)), SLOT(saveSettings()));
 	saveSettings->connect(monitorSettingsDialog, SIGNAL(settingsSaved()), SLOT(loadSettings()));
-	
+
 	dlg.addPage(saveSettings, QObject::tr("Save settings"), "system-run");
-	
+
 	QObject::connect(&dlg, SIGNAL(reset()), &dlg, SLOT(accept()));
 
 	if(QDialog::Accepted == dlg.exec() ) {
 		main(argc, argv);
 	}
-	
+
 	return 0;
 }

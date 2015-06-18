@@ -27,19 +27,19 @@
 
 SaveSettings::SaveSettings(LxQt::Settings*applicationSettings, QWidget* parent):
   QDialog(parent) {
-  
+
   this->applicationSettings = applicationSettings;
 
   ui.setupUi(this);
-  
+
   QSize size(128,64);
   ui.save->setIcon(QIcon::fromTheme("document-save"));
   ui.save->setIconSize(size);
-  
+
   connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
   connect(ui.deletePushButton, SIGNAL(clicked()), SLOT(onDeleteItem()));
   connect(ui.renamePushButton, SIGNAL(clicked()), SLOT(onRenameItem()));
-  
+
   loadSettings();
 }
 

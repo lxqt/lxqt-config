@@ -70,7 +70,7 @@ private Q_SLOTS:
 private:
     void load();
     void queueSave();
-    
+
 private:
     bool mAntialias;
     bool mHinting;

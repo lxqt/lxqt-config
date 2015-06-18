@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published 
+ * License version 2 or at your option version 3 as published
  * by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -30,7 +30,7 @@ class QPainter;
 class ItemDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
-    
+
 public:
     ItemDelegate(QObject *parent = 0);
     ~ItemDelegate();

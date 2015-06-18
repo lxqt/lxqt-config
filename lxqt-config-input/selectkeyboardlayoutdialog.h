@@ -33,7 +33,7 @@ public:
 
   QString selectedLayout();
   QString selectedVariant();
-  
+
 private Q_SLOTS:
   void onLayoutChanged();
 

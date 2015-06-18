@@ -1,7 +1,7 @@
-/* 
+/*
  * File:   MimetypeItemModel.cpp
  * Author: christian
- * 
+ *
  * Created on 5. maj 2013, 09:18
  */
 #include <QObject>
@@ -12,17 +12,17 @@
 
 /*
  * Implementation note:
- * 
+ *
  * MimetypeItemModel is an implementation of QAbstractItemModel with XdgMimeInfoCache as backing store.
- * 
- * There are 2 levels of items in this model: mediatype ('application', 'audio', 'image' etc.) and 
+ *
+ * There are 2 levels of items in this model: mediatype ('application', 'audio', 'image' etc.) and
  * subtype ('application/pdf' which is a child of 'application' or 'image/jpeg' which is a child of 'image'.
- * 
- * A QModelIndex for a mediatype has a zero internal pointer. 
- * 
- * A QModelIndex for a subtype has an internal pointer to the XdgMimeInfo for that subtype - so the QModelIndex for 
+ *
+ * A QModelIndex for a mediatype has a zero internal pointer.
+ *
+ * A QModelIndex for a subtype has an internal pointer to the XdgMimeInfo for that subtype - so the QModelIndex for
  * 'image/jpeg' has an internal pointer that points to the XdgMineInfo for 'image/jpeg' which is held in XdgMimeInfoCache.
- * 
+ *
  * QModelIndexes for mediatypes have no parents, and QModelIndexes for subtypes have no children.
  */
 
@@ -38,11 +38,11 @@ MimetypeItemModel::~MimetypeItemModel()
 
 QVariant MimetypeItemModel::data(const QModelIndex& index, int role) const
 {
-    if (!index.isValid())   
+    if (!index.isValid())
     {
         return QVariant();
     }
-    
+
     XdgMimeInfo *mimeInfo = 0;
     QString text;
 
@@ -51,7 +51,7 @@ QVariant MimetypeItemModel::data(const QModelIndex& index, int role) const
         mimeInfo = static_cast<XdgMimeInfo*>(index.internalPointer());
         text = mimeInfo->subType();
     }
-    else 
+    else
     {
         text = XdgMimeInfoCache::mediatypes().value(index.row());
     }
@@ -70,27 +70,27 @@ QModelIndex MimetypeItemModel::index(int row, int column, const QModelIndex& par
     {
         return QModelIndex();
     }
-    
+
     if (parent.isValid())
     {
-        if (parent.row() >= XdgMimeInfoCache::mediatypes().size())  
+        if (parent.row() >= XdgMimeInfoCache::mediatypes().size())
         {
             return QModelIndex();
         }
 
         QString mediatype = XdgMimeInfoCache::mediatypes().value(parent.row());
-       
+
         if (row >= XdgMimeInfoCache::subtypes(mediatype).size())
         {
             return QModelIndex();
         }
-        
+
         QString subtype = XdgMimeInfoCache::subtypes(mediatype).value(row);
-        
+
         XdgMimeInfo* mimeInfo = XdgMimeInfoCache::xdgMimeInfo(mediatype, subtype);
         return createIndex(row, 0, mimeInfo);
     }
-    else 
+    else
     {
         if (row >= XdgMimeInfoCache::mediatypes().size())
         {
@@ -106,11 +106,11 @@ QModelIndex MimetypeItemModel::parent(const QModelIndex& index) const
     if (index.isValid() && index.internalPointer())
     {
         XdgMimeInfo* mimeInfo = static_cast<XdgMimeInfo*>(index.internalPointer());
-    
+
         int row = XdgMimeInfoCache::mediatypes().indexOf(mimeInfo->mediaType());
         return createIndex(row, 0);
     }
-    else 
+    else
     {
         return QModelIndex();
     }
@@ -133,14 +133,14 @@ int MimetypeItemModel::rowCount(const QModelIndex& parent) const
         QString media = XdgMimeInfoCache::mediatypes().value(parent.row());
         return XdgMimeInfoCache::subtypes(media).size();
     }
-    else 
+    else
     {
         return XdgMimeInfoCache::mediatypes().size();
     }
 }
 
 
-MimetypeFilterItemModel::MimetypeFilterItemModel(QObject* parent) : 
+MimetypeFilterItemModel::MimetypeFilterItemModel(QObject* parent) :
     QSortFilterProxyModel(parent)
 {
 }
@@ -148,16 +148,16 @@ MimetypeFilterItemModel::MimetypeFilterItemModel(QObject* parent) :
 bool MimetypeFilterItemModel::filterAcceptsRow(int source_row, const QModelIndex& source_parent) const
 {
     QModelIndex index = sourceModel()->index(source_row, 0, source_parent);
-  
-    if (source_parent.isValid()) 
+
+    if (source_parent.isValid())
     {
         return filterHelper(index);
-    } 
-    else 
+    }
+    else
     {
         for (int i = 0; i < sourceModel()->rowCount(index); i++)
         {
-            if (filterAcceptsRow(i, index)) 
+            if (filterAcceptsRow(i, index))
             {
                 return true;
             }
