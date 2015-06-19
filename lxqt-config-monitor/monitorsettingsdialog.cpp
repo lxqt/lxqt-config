@@ -118,6 +118,7 @@ void MonitorSettingsDialog::applyConfiguration()
                      QPoint pos = output->pos();
                      output->setPos(QPoint(pos.x()+10, pos.y()+10));
                      KScreen::SetConfigOperation(cloneConfig).exec();
+                     // Apply right settings
                      KScreen::SetConfigOperation(mConfig).exec();
                      break;
                  }
