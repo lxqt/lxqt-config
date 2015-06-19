@@ -79,11 +79,31 @@ void MonitorSettingsDialog::applyConfiguration()
 {
     if (mConfig && KScreen::Config::canBeApplied(mConfig))
     {
-        KScreen::SetConfigOperation(mConfig).exec();
+        // Clone config and disable outputs in order to force set framebuffer size
+	KScreen::ConfigPtr cloneConfig = mConfig->clone();
+	for (const KScreen::OutputPtr &output : mConfig->outputs())
+	{
+	     if(output->isEnabled())
+	     {
+	         QPoint pos = output->pos();
+	         output->setPos(QPoint(pos.x()+output->currentMode()->size().width(), pos.y()+output->currentMode()->size().height()));
+		 (new KScreen::SetConfigOperation(mConfig))->exec();
+		 //system("sleep 5");
+		 output->setPos(pos);
+		 KScreen::SetConfigOperation(mConfig).exec();
+		 break;
+             }
+	}
+        
+	// Reenable outputs
+        
+        //KScreen::SetConfigOperation(mConfig).exec();
+	//(new KScreen::SetConfigOperation(mConfig))->exec(); // it has delete later
 
         TimeoutDialog mTimeoutDialog;
         if (mTimeoutDialog.exec() == QDialog::Rejected)
-            KScreen::SetConfigOperation(mOldConfig).exec();
+            //KScreen::SetConfigOperation(mOldConfig).exec();
+            (new KScreen::SetConfigOperation(mOldConfig))->exec(); // it has delete later
         else
             mOldConfig = mConfig->clone();
     }
