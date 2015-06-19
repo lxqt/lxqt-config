@@ -72,6 +72,29 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     adjustSize();
 }
 
+
+static QSize screenSize(const KScreen::ConfigPtr &config) 
+{
+    QRect rect;
+    Q_FOREACH(const KScreen::OutputPtr &output, config->outputs()) {
+        if (!output->isConnected() || !output->isEnabled())
+            continue;
+
+        const KScreen::ModePtr currentMode = output->currentMode();
+        const QRect outputGeom = output->geometry();
+        rect = rect.united(outputGeom);
+    }
+
+    const QSize size = QSize(rect.width(), rect.height());
+    return size;
+}
+
+
+static int screenArea(QSize screenSize)
+{
+    return screenSize.width()*screenSize.height();
+}
+
 /**
  * Apply the settings
  */
@@ -79,24 +102,31 @@ void MonitorSettingsDialog::applyConfiguration()
 {
     if (mConfig && KScreen::Config::canBeApplied(mConfig))
     {
-        // Clone config and disable outputs in order to force set framebuffer size
-        KScreen::ConfigPtr cloneConfig = mConfig->clone();
-        for (const KScreen::OutputPtr &output : cloneConfig->outputs())
+        // FIXME: This is a hack to set right framebuffer size 
+        QSize currentScreenSize = screenSize(mOldConfig);
+        QSize newScreenSize = screenSize(mConfig);
+        if(screenArea(currentScreenSize) > screenArea(newScreenSize))
+            KScreen::SetConfigOperation(mConfig).exec();
+        else
         {
-             if(output->isEnabled())
-             {
-                 QPoint pos = output->pos();
-                 output->setPos(QPoint(pos.x()+output->currentMode()->size().width(), pos.y()+output->currentMode()->size().height()));
-                 (new KScreen::SetConfigOperation(cloneConfig))->exec();
-                 KScreen::SetConfigOperation(mConfig).exec();
-                 break;
-             }
-       }
+            // Clone config and change position of outputs in order to force set framebuffer size
+            KScreen::ConfigPtr cloneConfig = mConfig->clone();
+            for (const KScreen::OutputPtr &output : cloneConfig->outputs())
+            {
+                 if(output->isEnabled())
+                 {
+                     QPoint pos = output->pos();
+                     output->setPos(QPoint(pos.x()+10, pos.y()+10));
+                     KScreen::SetConfigOperation(cloneConfig).exec();
+                     KScreen::SetConfigOperation(mConfig).exec();
+                     break;
+                 }
+            }
+        }
 
         TimeoutDialog mTimeoutDialog;
         if (mTimeoutDialog.exec() == QDialog::Rejected)
-            //KScreen::SetConfigOperation(mOldConfig).exec();
-            (new KScreen::SetConfigOperation(mOldConfig))->exec(); // it has delete later
+            KScreen::SetConfigOperation(mOldConfig).exec();
         else
             mOldConfig = mConfig->clone();
     }
