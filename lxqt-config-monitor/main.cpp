@@ -24,33 +24,15 @@
 #include <QStandardPaths>
 #include "monitorsettingsdialog.h"
 
-static void killBackend()
-{
-    QProcess p;
-    p.start("killall kscreen_backend_launcher");
-    p.waitForFinished();
-}
-
-static void setBackend(const QString &backend)
-{
-    // Set new backend
-    if(backend.size() == 0)
-        qputenv("KSCREEN_BACKEND", QByteArray("XRandR"));
-}
-
 
 int main(int argc, char** argv)
 {
     LxQt::SingleApplication app(argc, argv);
-    // killBackend();
-    // setBackend(QString::fromLatin1(qgetenv("KSCREEN_BACKEND")));
 
     MonitorSettingsDialog dlg;
     app.setActivationWindow(&dlg);
     dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
     dlg.show();
 
-    int result = app.exec();
-    // killBackend();
-    return result;
+    return app.exec();
 }
