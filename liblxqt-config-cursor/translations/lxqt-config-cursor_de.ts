@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
 <context>
     <name>SelectWnd</name>
     <message>
@@ -20,17 +20,9 @@
         <translation>&amp;Neues Design installieren...</translation>
     </message>
     <message>
-        <source>&amp;Set Theme</source>
-        <translation>&amp;Design festlegen</translation>
-    </message>
-    <message>
         <location filename="../ui/selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
         <translation>D&amp;esign entfernen</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Schließen</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="208"/>
