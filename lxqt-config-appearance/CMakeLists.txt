@@ -3,8 +3,8 @@ project(lxqt-config-appearance)
 include_directories(
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     "${CMAKE_CURRENT_BINARY_DIR}"
-    "${CMAKE_SOURCE_DIR}/liblxqt-config-cursor"
-    "${CMAKE_BINARY_DIR}/liblxqt-config-cursor"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+    "${CMAKE_CURRENT_BINARY_DIR}/../liblxqt-config-cursor"
 )
 
 set(H_FILES

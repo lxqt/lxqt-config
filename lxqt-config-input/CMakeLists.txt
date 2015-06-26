@@ -7,8 +7,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
 include_directories(
     ${X11_INCLUDE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
-    "${CMAKE_SOURCE_DIR}/liblxqt-config-cursor"
-    "${CMAKE_BINARY_DIR}/liblxqt-config-cursor"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+    "${CMAKE_CURRENT_BINARY_DIR}/../liblxqt-config-cursor"
 )
 
 set(lxqt-config-input_HDRS
