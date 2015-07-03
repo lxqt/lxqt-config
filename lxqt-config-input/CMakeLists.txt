@@ -6,10 +6,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
 
 include_directories(
     ${X11_INCLUDE_DIR}
-    ${LXQT_INCLUDE_DIRS}
     ${CMAKE_CURRENT_BINARY_DIR}
-    "${CMAKE_SOURCE_DIR}/liblxqt-config-cursor"
-    "${CMAKE_BINARY_DIR}/liblxqt-config-cursor"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+    "${CMAKE_CURRENT_BINARY_DIR}/../liblxqt-config-cursor"
 )
 
 set(lxqt-config-input_HDRS
@@ -71,7 +70,7 @@ target_link_libraries(lxqt-config-input
     Qt5::Widgets
     Qt5::X11Extras
     ${X11_LIBRARIES}
-    ${LXQT_LIBRARIES}
+    lxqt
     lxqt-config-cursor
 )
 

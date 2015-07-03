@@ -3,8 +3,6 @@ add_subdirectory(qcategorizedview)
 
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${LXQT_INCLUDE_DIRS}
-    ${QTXDG_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
 )
 
@@ -55,8 +53,7 @@ target_link_libraries(lxqt-config
     KF5::WindowSystem
     Qt5::Widgets
     Qt5::Xml
-    ${QTXDG_LIBRARIES}
-    ${LXQT_LIBRARIES}
+    lxqt
 )
 # helper static lib
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview)

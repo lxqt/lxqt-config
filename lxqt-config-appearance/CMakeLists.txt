@@ -1,13 +1,10 @@
 project(lxqt-config-appearance)
 
 include_directories(
-    ${QTXDG_PRIVATE_INCLUDE_DIRS}
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     "${CMAKE_CURRENT_BINARY_DIR}"
-    ${LXQT_INCLUDE_DIRS}
-    ${QTXDG_INCLUDE_DIRS}
-    "${CMAKE_SOURCE_DIR}/liblxqt-config-cursor"
-    "${CMAKE_BINARY_DIR}/liblxqt-config-cursor"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+    "${CMAKE_CURRENT_BINARY_DIR}/../liblxqt-config-cursor"
 )
 
 set(H_FILES
@@ -42,8 +39,7 @@ set(UI_FILES
 set(QRC_FILES "")
 
 set(LIBRARIES
-    ${QTXDG_LIBRARIES}
-    ${LXQT_LIBRARIES}
+    lxqt
 )
 
 
