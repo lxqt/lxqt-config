@@ -20,6 +20,7 @@
 #ifndef _MONITOR_H_
 #define _MONITOR_H_
 
+#include <QObject>
 #include <QStringList>
 #include <QHash>
 #include <QList>
