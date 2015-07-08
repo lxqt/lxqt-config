@@ -23,6 +23,7 @@
 #include <QPen>
 #include <QDebug>
 #include <QVector2D>
+#include "configure.h"
 
 MonitorPictureProxy::MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture):QObject(parent)
 {
@@ -33,8 +34,6 @@ void MonitorPictureProxy::updateSize()
 {
     KScreen::OutputPtr output = monitorPicture->monitorWidget->output;
     QSize size = output->currentMode()->size();
-    if( output->rotation() == KScreen::Output::Left || output->rotation() == KScreen::Output::Right )
-        size.transpose();
     monitorPicture->updateSize(size);
 }
 
@@ -49,13 +48,16 @@ void MonitorPictureProxy::updatePosition()
 MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent, Qt::WindowFlags f) :
     QDialog(parent,f)
 {
+    updatingOk = false;
+    mConfig = config;
     ui.setupUi(this);
 }
 
+
 void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
 {
-    int monitorsWidth = 100.0;
-    int monitorsHeight = 100.0;
+    int monitorsWidth =0;
+    int monitorsHeight = 0;
     QGraphicsScene *scene = new QGraphicsScene();
     for (MonitorWidget *monitor : monitors)
     {
@@ -64,13 +66,15 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
         scene->addItem(monitorPicture);
         monitorsWidth += monitorPicture->rect().width();
         monitorsHeight += monitorPicture->rect().height();
-
         MonitorPictureProxy *proxy = new MonitorPictureProxy(this, monitorPicture);
-        proxy->connect(monitor->output.data(), SIGNAL(rotationChanged()), SLOT(updateSize()));
         proxy->connect(monitor->output.data(), SIGNAL(currentModeIdChanged()), SLOT(updateSize()));
         proxy->connect(monitor->output.data(), SIGNAL(posChanged()), SLOT(updatePosition()));
     }
-    ui.graphicsView->scale(200.0 / (float) monitorsWidth, 200.0 / (float) monitorsHeight);
+    // The blue rectangle is maximum size of virtual screen (framebuffer)
+    scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
+    int minWidgetLength = qMin(ui.graphicsView->size().width(), ui.graphicsView->size().width()) / 1.5;
+    int maxMonitorSize = qMax(monitorsWidth, monitorsHeight);
+    ui.graphicsView->scale(minWidgetLength / (float) maxMonitorSize, minWidgetLength / (float) maxMonitorSize);
     ui.graphicsView->setScene(scene);
 }
 
@@ -81,6 +85,13 @@ void MonitorPictureDialog::updateScene()
 
 void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
 {
+    // This method update spin boxes of position.
+    // If position is changed when this method is running, position is changed until buffer overflow.
+    // updatingOk control that this method can not be run twice in the same position change.
+
+    if(updatingOk)
+        return;
+    updatingOk = true;
     int x0, y0;
     x0 = y0 = 0;
 
@@ -89,19 +100,38 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
         if (picture->monitorWidget->output->name() == primaryMonitor
             || primaryMonitor == QStringLiteral(""))
         {
-            x0 = picture->monitorWidget->ui.xPosSpinBox->value() + picture->pos().x();
-            y0 = picture->monitorWidget->ui.yPosSpinBox->value() + picture->pos().y();
+            x0 = picture->originX + picture->pos().x();
+            y0 = picture->originY + picture->pos().y();
             break;
+        }
+    }
+
+    if( primaryMonitor == QStringLiteral("") )
+    {
+        for(MonitorPicture *picture: pictures)
+        {
+            int x1 = picture->originX + picture->pos().x();
+            int y1 = picture->originY + picture->pos().y();
+            x0 = qMin(x0, x1);
+            y0 = qMin(y0, y1);
         }
     }
 
     for (MonitorPicture *picture : pictures)
     {
-        int x = -x0 + picture->monitorWidget->ui.xPosSpinBox->value();
-        int y = -y0 + picture->monitorWidget->ui.yPosSpinBox->value();
-        picture->monitorWidget->ui.xPosSpinBox->setValue(x + picture->pos().x());
-        picture->monitorWidget->ui.yPosSpinBox->setValue(y + picture->pos().y());
+        int x = picture->originX + picture->pos().x() - x0;
+        int y = picture->originY + picture->pos().y() - y0;
+        if( x != picture->monitorWidget->ui.xPosSpinBox->value() )
+            picture->monitorWidget->ui.xPosSpinBox->setValue(x);
+        //else
+        //    qDebug() << "x Iguales";
+        if( y != picture->monitorWidget->ui.yPosSpinBox->value() )
+            picture->monitorWidget->ui.yPosSpinBox->setValue(y);
+        //else
+        //    qDebug() << "y Iguales";
+        //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]" << x << '=' <<  picture->monitorWidget->ui.xPosSpinBox->value() << ',' << y << '=' << picture->monitorWidget->ui.yPosSpinBox->value();
     }
+    updatingOk = false;
 }
 
 MonitorPicture::MonitorPicture(QGraphicsItem * parent,
@@ -118,25 +148,45 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
     int y = monitorWidget->ui.yPosSpinBox->value();
     setAcceptedMouseButtons(Qt::LeftButton);
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemSendsGeometryChanges);
-    setRect(x, y, currentSize.width(), currentSize.height());
     originX = x;
     originY = y;
-    setPen(QPen(Qt::black, 20));
+    
+    setRect(x, y, currentSize.width(), currentSize.height());
+    // setPen(QPen(Qt::black, 20));
+    // textItem = new QGraphicsTextItem(monitorWidget->output->name(), this);
+    // textItem->setX(x);
+    // textItem->setY(y);
+    // textItem->setParentItem(this);
+
+    QSvgRenderer *renderer = new QSvgRenderer(QLatin1String(ICON_PATH "monitor.svg"));
+    svgItem = new QGraphicsSvgItem();
+    svgItem->setSharedRenderer(renderer);
+    svgItem->setX(x);
+    svgItem->setY(y);
+    svgItem->setOpacity(0.7);
+    svgItem->setParentItem(this);
+  
+  
     textItem = new QGraphicsTextItem(monitorWidget->output->name(), this);
+    textItem->setDefaultTextColor(Qt::white);
     textItem->setX(x);
     textItem->setY(y);
     textItem->setParentItem(this);
+    setPen(QPen(Qt::black, 20));
+    
 
     adjustNameSize();
 }
 
 void MonitorPicture::adjustNameSize()
 {
+    prepareGeometryChange();
     qreal fontWidth = QFontMetrics(textItem->font()).width(monitorWidget->output->name() + QStringLiteral("  "));
     textItem->setScale((qreal) this->rect().width() / fontWidth);
     QTransform transform;
     qreal width = qAbs(this->rect().width()/svgItem->boundingRect().width());
     qreal height = qAbs(this->rect().height()/svgItem->boundingRect().height());
+    qDebug() << "Width x Height" << width << "x" << height;
     transform.scale(width, height);
     svgItem->setTransform(transform);
 }
@@ -151,24 +201,28 @@ void MonitorPicture::updateSize(QSize currentSize)
 
 QVariant MonitorPicture::itemChange(GraphicsItemChange change, const QVariant & value)
 {
-  //qDebug() << "[MonitorPicture::itemChange]: ";
-  //if ( change == ItemPositionChange && scene()) {
-        // value is the new position.
-        //QPointF newPos = value.toPointF();
-        //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]: " << newPos.x() << "x" << newPos.y();
-  //}
-    return QGraphicsItem::itemChange(change, value);
+    //qDebug() << "[MonitorPicture::itemChange]: ";
+    //if ( change == ItemPositionChange && scene()) {
+          // value is the new position.
+          //QPointF newPos = value.toPointF();
+          //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]: " << newPos.x() << "x" << newPos.y();
+    //}
+    QVariant v = QGraphicsItem::itemChange(change, value);
+    //monitorPictureDialog->updateMonitorWidgets(QString());
+    return v;
 }
 
 void MonitorPicture::setMonitorPosition(int x, int y)
 {
-    setPos(x,y);
+    setX( x - originX );
+    setY( y - originY );
 }
 
 void MonitorPicture::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 {
     QGraphicsRectItem::mouseReleaseEvent(event);
     monitorPictureDialog->moveMonitorPictureToNearest(this);
+    monitorPictureDialog->updateMonitorWidgets(QString());
 }
 
 //////////////////////////////////////////////////////////////////////////////////

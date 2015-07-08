@@ -162,6 +162,10 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 	connect(ui.clonesCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onCloneChanged(int)));
     }
 
+
+    ui.xPosSpinBox->setValue(output->pos().x());
+    ui.yPosSpinBox->setValue(output->pos().y());
+
     // Behavior chooser
     if (output->isPrimary())
         ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
@@ -173,11 +177,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         ui.clonesCombo->setCurrentIndex(idx);
     }
     else
-    {
         ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
-        ui.xPosSpinBox->setValue(output->pos().x());
-        ui.yPosSpinBox->setValue(output->pos().y());
-    }
 
     // Insert orientations
     ui.orientationCombo->addItem(tr("None"), KScreen::Output::None);

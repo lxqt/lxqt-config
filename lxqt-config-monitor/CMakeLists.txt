@@ -8,6 +8,7 @@ include_directories (
 )
 
 find_package(KF5Screen REQUIRED)
+find_package(Qt5Svg REQUIRED)
 
 set(H_FILES
     monitorsettingsdialog.h
@@ -34,11 +35,10 @@ set(UI_FILES
 
 set(ICON_FILES
 	icons/monitor.svg
-	icons/extended.svg
-	icons/monitor1onmonitor2ff.svg
-	icons/unified.svg
-	icons/monitor1offmonitor2on.svg
 )
+
+# Config file
+configure_file ( configure.in configure.h )
 
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
@@ -71,6 +71,7 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
     Qt5::Widgets
     Qt5::X11Extras
+    Qt5::Svg
     KF5::Screen
     ${LXQT_LIBRARIES}
 )

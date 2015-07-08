@@ -22,6 +22,8 @@
 #include <QGraphicsView>
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
+#include <QSvgRenderer>
+#include <QGraphicsSvgItem>
 #include <QDialog>
 #include "monitor.h"
 #include "ui_monitorpicture.h"
@@ -34,7 +36,7 @@ class MonitorPictureDialog : public QDialog
     Q_OBJECT
 
 public:
-    MonitorPictureDialog(QWidget * parent = 0, Qt::WindowFlags f = 0);
+    MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent = 0, Qt::WindowFlags f = 0);
     void setScene(QList<MonitorWidget*> monitors);
     void updateMonitorWidgets(QString primaryMonitor);
     void moveMonitorPictureToNearest(MonitorPicture* monitorPicture);
@@ -43,6 +45,8 @@ public:
 private:
     Ui::MonitorPictureDialog ui;
     QList<MonitorPicture*> pictures;
+    bool updatingOk;
+    KScreen::ConfigPtr mConfig; 
 };
 
 class MonitorPicture : public QGraphicsRectItem
@@ -57,13 +61,31 @@ public:
     MonitorWidget *monitorWidget;
     int originX, originY;
 
+    void updateSize(QSize size);
+
 private:
     QGraphicsTextItem *textItem;
+    QGraphicsSvgItem *svgItem;    
     MonitorPictureDialog *monitorPictureDialog;
+
 
 protected:
     QVariant itemChange(GraphicsItemChange change, const QVariant & value);
     void mouseReleaseEvent(QGraphicsSceneMouseEvent * event);
 };
+
+class MonitorPictureProxy: public QObject
+{
+    Q_OBJECT
+    public:
+        MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture);
+        MonitorPicture *monitorPicture;
+        
+    public slots:
+        void updateSize();
+        void updatePosition();
+        
+};
+
 
 #endif // _MONITORPICTURE_H_
