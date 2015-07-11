@@ -49,6 +49,7 @@ private Q_SLOTS:
   void onKeyboardSliderChanged(int value);
   void onKeyboardBeepToggled(bool checked);
   void onCorsorFlashTimeChanged(int value);
+  void onKeyboardNumLockToggled(bool checked);
 
 private:
   Ui::KeyboardConfig ui;
@@ -60,6 +61,7 @@ private:
   int oldInterval;
   bool beep;
   bool oldBeep;
+  bool numlock;
 };
 
 #endif // KEYBOARDCONFIG_H
