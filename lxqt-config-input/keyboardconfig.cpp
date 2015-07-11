@@ -44,7 +44,8 @@ KeyboardConfig::KeyboardConfig(LxQt::Settings* _settings, QSettings* _qtSettings
   interval(30),
   oldInterval(30),
   beep(true),
-  oldBeep(true) {
+  oldBeep(true),
+  numlock(false) {
 
   ui.setupUi(this);
 
@@ -58,6 +59,7 @@ KeyboardConfig::KeyboardConfig(LxQt::Settings* _settings, QSettings* _qtSettings
   connect(ui.keyboardInterval, SIGNAL(valueChanged(int)), SLOT(onKeyboardSliderChanged(int)));
   connect(ui.keyboardBeep, SIGNAL(toggled(bool)), SLOT(onKeyboardBeepToggled(bool)));
   connect(ui.cursorFlashTime, SIGNAL(valueChanged(int)), SLOT(onCorsorFlashTimeChanged(int)));
+  connect(ui.keyboardNumLock, SIGNAL(toggled(bool)), SLOT(onKeyboardNumLockToggled(bool)));
 }
 
 KeyboardConfig::~KeyboardConfig() {
@@ -68,6 +70,7 @@ void KeyboardConfig::initControls() {
   ui.keyboardDelay->setValue(delay);
   ui.keyboardInterval->setValue(interval);
   ui.keyboardBeep->setChecked(beep);
+  ui.keyboardNumLock->setChecked(numlock);
 
   qtSettings->beginGroup(QLatin1String("Qt"));
   int value = qtSettings->value(QLatin1String("cursorFlashTime"), 1000).toInt();
@@ -98,6 +101,11 @@ void KeyboardConfig::onKeyboardBeepToggled(bool checked) {
   accept();
 }
 
+void KeyboardConfig::onKeyboardNumLockToggled(bool checked) {
+  numlock = checked;
+  accept();
+}
+
 void KeyboardConfig::onCorsorFlashTimeChanged(int value)
 {
   qtSettings->beginGroup(QLatin1String("Qt"));
@@ -115,6 +123,7 @@ void KeyboardConfig::loadSettings() {
   oldDelay = delay = settings->value("delay", 500).toInt();
   oldInterval = interval = settings->value("interval", 30).toInt();
   oldBeep = beep = settings->value("beep", true).toBool();
+  numlock = settings->value("numlock", false).toBool();
   settings->endGroup();
 }
 
@@ -123,6 +132,7 @@ void KeyboardConfig::accept() {
   settings->setValue("delay", delay);
   settings->setValue("interval", interval);
   settings->setValue("beep", beep);
+  settings->setValue("numlock", numlock);
   settings->endGroup();
 }
 
