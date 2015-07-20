@@ -67,7 +67,6 @@ add_executable(${PROJECT_NAME}
     ${QRC_SOURCES}
     ${QM_FILES}
     ${QM_LOADER}
-    ${MOC_SOURCES}
     ${DESKTOP_FILES}
 )
 

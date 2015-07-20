@@ -63,7 +63,6 @@ lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
 add_library(lxqt-config-cursor
     SHARED
         ${lxqt-config-cursor_SRCS}
-        ${lxqt-config-cursor_MOCS}
         ${DESKTOP_FILES}
         ${QM_FILES}
         ${lxqt-config-cursor_QM_LOADER}

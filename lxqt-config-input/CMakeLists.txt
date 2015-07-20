@@ -57,7 +57,6 @@ add_definitions(
 
 add_executable(lxqt-config-input
     ${lxqt-config-input_SRCS}
-    ${lxqt-config-input_MOCS}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${QM_LOADER}

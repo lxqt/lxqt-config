@@ -40,7 +40,6 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config.desktop.in)
 
 add_executable(lxqt-config
     ${lxqt-config_SRCS}
-    ${MOCS}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${QM_LOADER}
