@@ -40,13 +40,15 @@ public:
     virtual void reject();
 
 private:
-    void applyConfiguration();
+    void applyConfiguration(bool saveConfigOk);
     void cancelConfiguration();
 
 private Q_SLOTS:
     void loadConfiguration(KScreen::ConfigPtr config);
 
 private:
+    void saveConfiguration(KScreen::ConfigPtr config);
+
     Ui::MonitorSettingsDialog ui;
 
     // Configutarions
