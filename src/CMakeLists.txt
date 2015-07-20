@@ -21,8 +21,6 @@ set(lxqt-config_UIS
     mainwindow.ui
 )
 
-qt5_wrap_ui(UIS ${lxqt-config_UIS})
-
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
@@ -42,7 +40,6 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config.desktop.in)
 
 add_executable(lxqt-config
     ${lxqt-config_SRCS}
-    ${UIS}
     ${MOCS}
     ${DESKTOP_FILES}
     ${QM_FILES}

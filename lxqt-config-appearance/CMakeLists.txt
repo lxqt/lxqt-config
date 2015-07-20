@@ -59,12 +59,10 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 #************************************************
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 qt5_add_resources(QRC_SOURCES ${QRC_FILES})
 
 add_executable(${PROJECT_NAME}
     ${CPP_FILES}
-    ${UI_FILES}
     ${RESOURCES}
     ${QRC_SOURCES}
     ${QM_FILES}

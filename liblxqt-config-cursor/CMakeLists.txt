@@ -38,13 +38,11 @@ set(lxqt-config-cursor_SRCS
 )
 
 set(lxqt-config-cursor_UIS
-    ui/selectwnd.ui
-    ui/warninglabel.ui
+    selectwnd.ui
+    warninglabel.ui
 )
 
 find_package(ZLIB REQUIRED)
-
-qt5_wrap_ui(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
@@ -65,7 +63,6 @@ lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
 add_library(lxqt-config-cursor
     SHARED
         ${lxqt-config-cursor_SRCS}
-        ${lxqt-config-cursor_CXX}
         ${lxqt-config-cursor_MOCS}
         ${DESKTOP_FILES}
         ${QM_FILES}
