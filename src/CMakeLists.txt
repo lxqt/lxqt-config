@@ -59,6 +59,6 @@ target_link_libraries(lxqt-config
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview)
 target_link_libraries(lxqt-config qcategorizedview)
 
-install(TARGETS lxqt-config RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
-install(FILES lxqt-config.menu DESTINATION /etc/xdg/menus/)
+install(TARGETS lxqt-config RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+install(FILES lxqt-config.menu DESTINATION "${LXQT_ETC_XDG_DIR}/menus")
