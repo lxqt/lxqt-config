@@ -51,12 +51,10 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 #************************************************
 
-qt5_add_resources(QRC_SOURCES ${QRC_FILES})
-
 add_executable(${PROJECT_NAME}
     ${CPP_FILES}
     ${RESOURCES}
-    ${QRC_SOURCES}
+    ${QRC_FILES}
     ${QM_FILES}
     ${QM_LOADER}
     ${DESKTOP_FILES}
