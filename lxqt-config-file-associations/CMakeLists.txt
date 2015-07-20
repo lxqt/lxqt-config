@@ -1,9 +1,5 @@
 project(lxqt-config-file-associations)
 
-include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
-)
-
 set(H_FILES
     mimetypedata.h
     mimetypeviewer.h

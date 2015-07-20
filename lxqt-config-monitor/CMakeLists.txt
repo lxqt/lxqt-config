@@ -1,9 +1,5 @@
 project(lxqt-config-monitor)
 
-include_directories (
-    "${CMAKE_CURRENT_BINARY_DIR}"
-)
-
 find_package(Qt5Svg REQUIRED)
 
 set(H_FILES

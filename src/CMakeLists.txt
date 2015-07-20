@@ -2,7 +2,6 @@ project(lxqt-config)
 add_subdirectory(qcategorizedview)
 
 include_directories (
-    ${CMAKE_CURRENT_BINARY_DIR}
     "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
 )
 

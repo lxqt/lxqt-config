@@ -8,9 +8,7 @@ include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})
 
 include_directories (
-    "${CMAKE_CURRENT_BINARY_DIR}"
     ${X11_INCLUDE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
 )
 
