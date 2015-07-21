@@ -27,6 +27,9 @@
 ScreenListener::ScreenListener(QObject *parent) : QObject(parent)
 {
     configMonitor = NULL;
+    timer = new QTimer(this);
+    timer->setInterval(30000);
+    connect(timer, SIGNAL(timeout()), this, SLOT(testOutputChanged()));
     init();
 
     // KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
@@ -46,6 +49,7 @@ void ScreenListener::init()
     qDebug() << "Conecting signals";
     KScreen::ConfigMonitor *configMonitor = KScreen::ConfigMonitor::instance();
     connect(configMonitor, SIGNAL(configurationChanged()), this, SLOT(configurationChanged()));
+    timer->start();
 }
 
 
@@ -54,3 +58,11 @@ void ScreenListener::configurationChanged()
     qDebug() << "Configuration Changed";
     QProcess::execute("lxqt-config-monitor");
 }
+
+void ScreenListener::testOutputChanged()
+{
+    // Write xrandr config for debug.
+    qDebug() << "testOutputChanged";
+    QProcess::execute("xrandr");
+}
+
