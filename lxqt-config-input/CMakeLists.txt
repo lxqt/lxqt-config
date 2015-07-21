@@ -69,5 +69,11 @@ target_link_libraries(lxqt-config-input
     lxqt-config-cursor
 )
 
-install(TARGETS lxqt-config-input RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+install(TARGETS
+    lxqt-config-input
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+)

@@ -78,5 +78,11 @@ target_link_libraries(lxqt-config-cursor
 )
 # not needed probably ${X11_Xfixes_LIB})
 
-install(TARGETS lxqt-config-cursor DESTINATION "${CMAKE_INSTALL_LIBDIR}")
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDOR}/applications")
+install(TARGETS
+    lxqt-config-cursor
+    DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDOR}/applications"
+)
