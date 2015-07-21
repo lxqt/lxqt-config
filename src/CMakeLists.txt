@@ -58,11 +58,14 @@ target_link_libraries(lxqt-config qcategorizedview)
 install(TARGETS
     lxqt-config
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
 )
 install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
 )
 install(FILES lxqt-config.menu
     DESTINATION "${LXQT_ETC_XDG_DIR}/menus"
+    COMPONENT Runtime
 )

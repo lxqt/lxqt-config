@@ -81,8 +81,10 @@ target_link_libraries(lxqt-config-cursor
 install(TARGETS
     lxqt-config-cursor
     DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+    COMPONENT Runtime
 )
 install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDOR}/applications"
+    COMPONENT Runtime
 )
