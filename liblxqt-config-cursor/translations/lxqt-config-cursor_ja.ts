@@ -4,22 +4,22 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <location filename="../ui/selectwnd.ui" line="14"/>
+        <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
         <translation>LXQtマウステーマの設定</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>使いたいカーソルテーマを選択 (プレビューをテストカーソルに合わせます). &lt;b&gt;LXQtセッションはこの変更後に再起動が必要です&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
         <translation>新しいテーマのインストール...(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
         <translation>テーマの削除(&amp;R)</translation>
     </message>
@@ -37,17 +37,17 @@
 <context>
     <name>WarningLabel</name>
     <message>
-        <location filename="../ui/warninglabel.ui" line="14"/>
+        <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
         <translation>フォーム</translation>
     </message>
     <message>
-        <location filename="../ui/warninglabel.ui" line="44"/>
+        <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
         <translation>カーソルテーマを見つけられませんでした。代わりに、デフォルトのX11カーソルテーマが使われます。LXQtは以下のディレクトリーを検索しました:</translation>
     </message>
     <message>
-        <location filename="../ui/warninglabel.ui" line="54"/>
+        <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
         <translation>表示</translation>
     </message>

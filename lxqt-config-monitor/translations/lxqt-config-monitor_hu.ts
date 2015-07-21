@@ -4,37 +4,37 @@
 <context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
+        <location filename="../monitor.cpp" line="43"/>
         <source>Laptop LCD Monitor</source>
         <translation>Beépített LCD Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
+        <location filename="../monitor.cpp" line="45"/>
         <source>External VGA Monitor</source>
         <translation>Külső LCD Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
+        <location filename="../monitor.cpp" line="45"/>
         <source>VGA Monitor</source>
         <translation>VGA Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
+        <location filename="../monitor.cpp" line="47"/>
         <source>External DVI Monitor</source>
         <translation>Külső DVI Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
+        <location filename="../monitor.cpp" line="47"/>
         <source>DVI Monitor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="60"/>
+        <location filename="../monitor.cpp" line="49"/>
         <source>TV</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="62"/>
+        <location filename="../monitor.cpp" line="51"/>
         <source>Default Monitor</source>
         <translation>Alapértelmezett Monitor</translation>
     </message>
@@ -60,67 +60,80 @@
         <translation>Monitor beállítás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="29"/>
         <source>Quick Options</source>
-        <translation>Gyors lehetőségek</translation>
+        <translation type="vanished">Gyors lehetőségek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="35"/>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation>Azonos kép a beépített LCD és külső monitoron</translation>
+        <translation type="vanished">Azonos kép a beépített LCD és külső monitoron</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="42"/>
         <source>Extended view</source>
-        <translation>Bővített megjelenítés</translation>
+        <translation type="vanished">Bővített megjelenítés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="49"/>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation>Beépített LCD kikapcsolása és csak a külső használata</translation>
+        <translation type="vanished">Beépített LCD kikapcsolása és csak a külső használata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="56"/>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation>Külső monor lekapcsolása és csak a belső LCD használata</translation>
+        <translation type="vanished">Külső monor lekapcsolása és csak a belső LCD használata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="77"/>
         <source>Settings</source>
-        <translation>beállítások</translation>
+        <translation type="vanished">beállítások</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="112"/>
+        <location filename="../mainwindow.ui" line="57"/>
         <source>Unify all monitors</source>
         <translation>Monitorok összevonása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="119"/>
+        <location filename="../mainwindow.ui" line="64"/>
         <source>Monitor Position</source>
         <translation>Monitor helyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="139"/>
+        <location filename="../mainwindow.ui" line="84"/>
         <source>Primary monitor:</source>
         <translation>Elsődleges monitor:</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="266"/>
+        <location filename="../monitorsettingsdialog.cpp" line="265"/>
         <source>Do you want to save changes?</source>
         <translation>Változtatások mentése?</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="267"/>
         <source>Please, check your config before to save.</source>
-        <translation>Mentés előtt ellenőrizd a beállításokat!</translation>
+        <translation type="vanished">Mentés előtt ellenőrizd a beállításokat!</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <location filename="../monitorsettingsdialog.cpp" line="266"/>
+        <source>Please, check the settings before saving.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="273"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="274"/>
+        <source>Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="275"/>
+        <source>Actual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="298"/>
         <source>Error</source>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <location filename="../monitorsettingsdialog.cpp" line="298"/>
         <source>Config can not be saved</source>
         <translation>A beállítás mentetlen</translation>
     </message>
@@ -193,10 +206,106 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="238"/>
-        <location filename="../xrandr.cpp" line="243"/>
+        <location filename="../xrandr.cpp" line="291"/>
+        <location filename="../xrandr.cpp" line="297"/>
         <source>Auto</source>
         <translation>Automata</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="37"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Monitor beállítás</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="54"/>
+        <source>Quick Options</source>
+        <translation type="unfinished">Gyors lehetőségek</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="58"/>
+        <source>Settings</source>
+        <translation type="unfinished">beállítások</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="66"/>
+        <source>Save settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QuickOptions</name>
+    <message>
+        <location filename="../quickoptions.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Monitor beállítás</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="33"/>
+        <source>Show the same screen on both laptop LCD and external monitor</source>
+        <translation type="unfinished">Azonos kép a beépített LCD és külső monitoron</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="49"/>
+        <source>Extended view</source>
+        <translation type="unfinished">Bővített megjelenítés</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="65"/>
+        <source>Turn off laptop LCD and use external monitor only</source>
+        <translation type="unfinished">Beépített LCD kikapcsolása és csak a külső használata</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="81"/>
+        <source>Turn off external monitor and use laptop LCD only</source>
+        <translation type="unfinished">Külső monor lekapcsolása és csak a belső LCD használata</translation>
+    </message>
+</context>
+<context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Monitor beállítás</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="33"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="43"/>
+        <source>Saved settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="49"/>
+        <source>All:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="56"/>
+        <source>Hardware compatible:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="71"/>
+        <source>Rename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="78"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -29,99 +29,99 @@
         <translation>Dimensione:</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="64"/>
+        <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
         <translation>Normale</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="69"/>
+        <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
         <translation>Grassetto</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="74"/>
+        <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
         <translation>Corsivo</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="79"/>
+        <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
         <translation>Grassetto corsivo</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="90"/>
+        <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
         <translation>Le impostazioni riguardano solo le applicazioni avviate nuovamente</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="96"/>
+        <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
         <translation>Utilizza anti-aliasing per i caratteri</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="103"/>
+        <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
         <translation>Stile di hinting</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="114"/>
-        <location filename="../fontsconfig.ui" line="179"/>
+        <location filename="../fontsconfig.ui" line="118"/>
+        <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="119"/>
+        <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
         <translation>Leggero</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="124"/>
+        <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
         <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="129"/>
+        <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
         <translation>Forte</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="137"/>
+        <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
         <translation>Hinting caratteri</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="144"/>
+        <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
         <translation>Resoluzione (DPI):</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="151"/>
+        <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
         <translation>Hinting automatico</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="168"/>
+        <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
         <translatorcomment>no idea how to translate that</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="184"/>
+        <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="189"/>
+        <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="194"/>
+        <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="199"/>
+        <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
         <translation></translation>
     </message>

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="hu_HU">
+<TS version="2.1" language="hu_HU">
 <context>
     <name>SelectWnd</name>
     <message>
-        <location filename="../ui/selectwnd.ui" line="14"/>
+        <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
         <translation>LXQt egértéma</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>A kívánt kurzortéma (előzetesen látható). &lt;b&gt;Érvénybeléptetéshez az LXQt munkamenet újraindíttandó&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Új téma telepítése...</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
         <translation>Téma kiny&amp;írása</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;Bezárás</translation>
+        <translation type="vanished">&amp;Bezárás</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="208"/>
@@ -41,17 +41,17 @@
 <context>
     <name>WarningLabel</name>
     <message>
-        <location filename="../ui/warninglabel.ui" line="14"/>
+        <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
         <translation>Űrlap</translation>
     </message>
     <message>
-        <location filename="../ui/warninglabel.ui" line="44"/>
+        <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
         <translation>Az LXQt nem lelt kurzor témát, az alapértelmezett lesz használva. Ezekben a mappákban kereste:</translation>
     </message>
     <message>
-        <location filename="../ui/warninglabel.ui" line="54"/>
+        <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
         <translation>Mutat...</translation>
     </message>
