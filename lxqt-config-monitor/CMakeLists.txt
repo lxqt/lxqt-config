@@ -19,6 +19,7 @@ set(H_FILES
     monitorpicture.h
     loadsettings.h
     settingsdialog.h
+    advanced/daemon.h
 )
 
 set(CPP_FILES
@@ -30,6 +31,7 @@ set(CPP_FILES
     monitorpicture.cpp
     loadsettings.cpp
     settingsdialog.cpp
+    advanced/daemon.cpp
 )
 
 set(UI_FILES
@@ -37,6 +39,7 @@ set(UI_FILES
     monitorwidget.ui
     timeoutdialog.ui
     monitorpicture.ui
+    advanced/daemon.ui
 )
 
 set(ICON_FILES
