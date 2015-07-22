@@ -24,7 +24,7 @@
    <item>
     <widget class="QCheckBox" name="magneticCheckBox">
      <property name="text">
-      <string>Always be joined</string>
+      <string>Keep monitors attached</string>
      </property>
      <property name="checked">
       <bool>true</bool>

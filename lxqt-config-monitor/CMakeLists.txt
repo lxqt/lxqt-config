@@ -18,6 +18,7 @@ set(H_FILES
     monitorwidget.h
     monitorpicture.h
     loadsettings.h
+    settingsdialog.h
 )
 
 set(CPP_FILES
@@ -28,6 +29,7 @@ set(CPP_FILES
     timeoutdialog.cpp
     monitorpicture.cpp
     loadsettings.cpp
+    settingsdialog.cpp
 )
 
 set(UI_FILES

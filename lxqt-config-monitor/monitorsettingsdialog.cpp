@@ -22,6 +22,7 @@
 #include "monitorwidget.h"
 #include "timeoutdialog.h"
 #include "monitorpicture.h"
+#include "settingsdialog.h"
 
 #include <KScreen/Output>
 #include <QJsonObject>
@@ -59,6 +60,8 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
         }
 
     });
+
+    connect(ui.settingsButton, SIGNAL(clicked()), this, SLOT(showSettingsDialog()));
 }
 
 MonitorSettingsDialog::~MonitorSettingsDialog()
@@ -201,4 +204,15 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
 
 }
 
-
+void MonitorSettingsDialog::showSettingsDialog()
+{
+    QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
+    
+    if(configName.isEmpty())
+        configName = "MonitorSettings";
+    
+    LxQt::Settings settings(configName);
+    
+    SettingsDialog settingsDialog(tr("Advanced settings"), &settings);
+    settingsDialog.exec();
+}

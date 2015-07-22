@@ -45,6 +45,7 @@ private:
 
 private Q_SLOTS:
     void loadConfiguration(KScreen::ConfigPtr config);
+    void showSettingsDialog();
 
 private:
     void saveConfiguration(KScreen::ConfigPtr config);
