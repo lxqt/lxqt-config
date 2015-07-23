@@ -33,17 +33,17 @@
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
-        <location filename="../applicationchooser.cpp" line="85"/>
+        <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
         <translation>その他のアプリケーション</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.cpp" line="86"/>
+        <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
         <translation>%1 を扱うアプリケーション</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.cpp" line="114"/>
+        <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
         <translation>アプリケーションが見つかりませんでした</translation>
     </message>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="209"/>
         <source>&amp;Choose...</source>
-        <translation >選択(&amp;C)</translation>
+        <translation>選択(&amp;C)</translation>
     </message>
 </context>
 <context>

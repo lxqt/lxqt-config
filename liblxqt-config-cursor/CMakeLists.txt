@@ -8,9 +8,7 @@ include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})
 
 include_directories (
-    "${CMAKE_CURRENT_BINARY_DIR}"
     ${X11_INCLUDE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
 )
 
@@ -38,13 +36,11 @@ set(lxqt-config-cursor_SRCS
 )
 
 set(lxqt-config-cursor_UIS
-    ui/selectwnd.ui
-    ui/warninglabel.ui
+    selectwnd.ui
+    warninglabel.ui
 )
 
 find_package(ZLIB REQUIRED)
-
-qt5_wrap_ui(lxqt-config-cursor_CXX   ${lxqt-config-cursor_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
@@ -65,8 +61,6 @@ lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
 add_library(lxqt-config-cursor
     SHARED
         ${lxqt-config-cursor_SRCS}
-        ${lxqt-config-cursor_CXX}
-        ${lxqt-config-cursor_MOCS}
         ${DESKTOP_FILES}
         ${QM_FILES}
         ${lxqt-config-cursor_QM_LOADER}
@@ -84,5 +78,13 @@ target_link_libraries(lxqt-config-cursor
 )
 # not needed probably ${X11_Xfixes_LIB})
 
-install(TARGETS lxqt-config-cursor DESTINATION ${LIB_INSTALL_DIR})
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
+install(TARGETS
+    lxqt-config-cursor
+    DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDOR}/applications"
+    COMPONENT Runtime
+)

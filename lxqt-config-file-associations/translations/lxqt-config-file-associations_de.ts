@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
 <context>
     <name>ApplicationChooser</name>
     <message>
@@ -33,17 +33,17 @@
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
-        <location filename="../applicationchooser.cpp" line="85"/>
+        <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
         <translation>Andere Anwendung</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.cpp" line="86"/>
+        <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
         <translation>Anwendungen die %1 verarbeiten</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.cpp" line="114"/>
+        <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
         <translation>Keine Anwendung gefunden</translation>
     </message>

@@ -6,9 +6,5 @@ set(SOURCES
     qcategorizedsortfilterproxymodel.cpp
 )
 
-include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
-)
-
-add_library(qcategorizedview STATIC ${SOURCES} ${MOC_SOURCES})
+add_library(qcategorizedview STATIC ${SOURCES})
 target_link_libraries(qcategorizedview Qt5::Widgets)

@@ -2,7 +2,6 @@ project(lxqt-config-appearance)
 
 include_directories(
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
-    "${CMAKE_CURRENT_BINARY_DIR}"
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
     "${CMAKE_CURRENT_BINARY_DIR}/../liblxqt-config-cursor"
 )
@@ -59,17 +58,12 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 #************************************************
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-qt5_add_resources(QRC_SOURCES ${QRC_FILES})
-
 add_executable(${PROJECT_NAME}
     ${CPP_FILES}
-    ${UI_FILES}
     ${RESOURCES}
-    ${QRC_SOURCES}
+    ${QRC_FILES}
     ${QM_FILES}
     ${QM_LOADER}
-    ${MOC_SOURCES}
     ${DESKTOP_FILES}
 )
 
@@ -81,5 +75,13 @@ target_link_libraries(${PROJECT_NAME}
     lxqt-config-cursor
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+install(TARGETS
+    ${PROJECT_NAME}
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)

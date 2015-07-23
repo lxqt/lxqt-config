@@ -4,29 +4,24 @@
 <context>
     <name>ApplyDialog</name>
     <message>
-        <location filename="../applydialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Настройки монитора</translation>
+        <translation type="vanished">Настройки монитора</translation>
     </message>
     <message>
-        <location filename="../applydialog.ui" line="33"/>
         <source>Save</source>
-        <translation>Сохранить</translation>
+        <translation type="vanished">Сохранить</translation>
     </message>
     <message>
-        <location filename="../applydialog.ui" line="43"/>
         <source>Saved settings</source>
-        <translation>Сохранённые настройки</translation>
+        <translation type="vanished">Сохранённые настройки</translation>
     </message>
     <message>
-        <location filename="../applydialog.ui" line="49"/>
         <source>All:</source>
-        <translation>Все:</translation>
+        <translation type="vanished">Все:</translation>
     </message>
     <message>
-        <location filename="../applydialog.ui" line="56"/>
         <source>Hardware compatible:</source>
-        <translation>Аппаратно-совместимые:</translation>
+        <translation type="vanished">Аппаратно-совместимые:</translation>
     </message>
 </context>
 <context>
@@ -103,42 +98,41 @@
         <translation>Первичный монитор:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="111"/>
         <source>Apply</source>
-        <translation>Применить</translation>
+        <translation type="vanished">Применить</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="269"/>
+        <location filename="../monitorsettingsdialog.cpp" line="265"/>
         <source>Do you want to save changes?</source>
         <translation>Вы хотите сохранить изменения?</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="270"/>
+        <location filename="../monitorsettingsdialog.cpp" line="266"/>
         <source>Please, check the settings before saving.</source>
         <translation>Проверьте, пожалуйста, настройки перед сохранением.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="277"/>
+        <location filename="../monitorsettingsdialog.cpp" line="273"/>
         <source>Name</source>
         <translation>Название</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="278"/>
+        <location filename="../monitorsettingsdialog.cpp" line="274"/>
         <source>Name:</source>
         <translation>Название:</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="279"/>
+        <location filename="../monitorsettingsdialog.cpp" line="275"/>
         <source>Actual</source>
         <translation>Текущие</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="302"/>
+        <location filename="../monitorsettingsdialog.cpp" line="298"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="302"/>
+        <location filename="../monitorsettingsdialog.cpp" line="298"/>
         <source>Config can not be saved</source>
         <translation>Не удалось сохранить конфигурацию</translation>
     </message>
@@ -211,8 +205,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="288"/>
-        <location filename="../xrandr.cpp" line="294"/>
+        <location filename="../xrandr.cpp" line="291"/>
+        <location filename="../xrandr.cpp" line="297"/>
         <source>Auto</source>
         <translation>Авто</translation>
     </message>
@@ -222,17 +216,17 @@
         <translation>Настройки монитора</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="53"/>
+        <location filename="../main.cpp" line="54"/>
         <source>Quick Options</source>
         <translation>Быстрые настройки</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="57"/>
+        <location filename="../main.cpp" line="58"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="65"/>
+        <location filename="../main.cpp" line="66"/>
         <source>Save settings</source>
         <translation>Сохранить настройки</translation>
     </message>
@@ -263,6 +257,54 @@
         <location filename="../quickoptions.ui" line="81"/>
         <source>Turn off external monitor and use laptop LCD only</source>
         <translation>Выключить внешний монитор и использовать только ЖК-монитор лэптопа</translation>
+    </message>
+</context>
+<context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Настройки монитора</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="33"/>
+        <source>Save</source>
+        <translation type="unfinished">Сохранить</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="43"/>
+        <source>Saved settings</source>
+        <translation type="unfinished">Сохранённые настройки</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="49"/>
+        <source>All:</source>
+        <translation type="unfinished">Все:</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="56"/>
+        <source>Hardware compatible:</source>
+        <translation type="unfinished">Аппаратно-совместимые:</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="71"/>
+        <source>Rename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="78"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation type="unfinished">Название</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation type="unfinished">Название:</translation>
     </message>
 </context>
 <context>

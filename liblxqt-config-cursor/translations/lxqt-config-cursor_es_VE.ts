@@ -4,17 +4,17 @@
 <context>
     <name>SelectWnd</name>
     <message>
-        <location filename="../ui/selectwnd.ui" line="14"/>
+        <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
         <translation>Configuracion de tema de raton de LXQt</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Selecciona el cursor del raton que tu desees usar (colocalo encima para ver una previsualizacion) &lt;b&gt;La sesion de LXQt necesita reinicializarse despues de un cambio&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Instalar nuevo tema</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation type="vanished">A&amp;Signar el tema</translation>
     </message>
     <message>
-        <location filename="../ui/selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Remover el tema</translation>
     </message>
@@ -45,17 +45,17 @@
 <context>
     <name>WarningLabel</name>
     <message>
-        <location filename="../ui/warninglabel.ui" line="14"/>
+        <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/warninglabel.ui" line="44"/>
+        <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/warninglabel.ui" line="54"/>
+        <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
         <translation type="unfinished"></translation>
     </message>

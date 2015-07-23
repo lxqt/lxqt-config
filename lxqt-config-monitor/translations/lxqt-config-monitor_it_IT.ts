@@ -4,37 +4,37 @@
 <context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
+        <location filename="../monitor.cpp" line="43"/>
         <source>Laptop LCD Monitor</source>
         <translation>Monitor portatile LCD</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
+        <location filename="../monitor.cpp" line="45"/>
         <source>External VGA Monitor</source>
         <translation>Monitor esterno VGA</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
+        <location filename="../monitor.cpp" line="45"/>
         <source>VGA Monitor</source>
         <translation>Monitor VGA</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
+        <location filename="../monitor.cpp" line="47"/>
         <source>External DVI Monitor</source>
         <translation>Monitor esterno DVI</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
+        <location filename="../monitor.cpp" line="47"/>
         <source>DVI Monitor</source>
         <translation>Monitor DVI</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="60"/>
+        <location filename="../monitor.cpp" line="49"/>
         <source>TV</source>
         <translation>TV</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="62"/>
+        <location filename="../monitor.cpp" line="51"/>
         <source>Default Monitor</source>
         <translation>Monitor principale</translation>
     </message>
@@ -60,67 +60,80 @@
         <translation>Impostazioni del monitor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="29"/>
         <source>Quick Options</source>
-        <translation>Opzioni veloci</translation>
+        <translation type="vanished">Opzioni veloci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="35"/>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation>Unifica uscite</translation>
+        <translation type="vanished">Unifica uscite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="42"/>
         <source>Extended view</source>
-        <translation>Vista estesa</translation>
+        <translation type="vanished">Vista estesa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="49"/>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation>Spegni monitor portatile LCD e usa solo monitor esterno</translation>
+        <translation type="vanished">Spegni monitor portatile LCD e usa solo monitor esterno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="56"/>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation>Spegni monitor esterno e usa solo monitor LCD</translation>
+        <translation type="vanished">Spegni monitor esterno e usa solo monitor LCD</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="77"/>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation type="vanished">Impostazioni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="112"/>
+        <location filename="../mainwindow.ui" line="57"/>
         <source>Unify all monitors</source>
         <translation>Unisci tutte le uscite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="119"/>
+        <location filename="../mainwindow.ui" line="64"/>
         <source>Monitor Position</source>
         <translation>Posizione dello schermo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="139"/>
+        <location filename="../mainwindow.ui" line="84"/>
         <source>Primary monitor:</source>
         <translation>Monitor principale:</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="266"/>
+        <location filename="../monitorsettingsdialog.cpp" line="265"/>
         <source>Do you want to save changes?</source>
         <translation>Salvare i cambiamenti?</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="267"/>
         <source>Please, check your config before to save.</source>
-        <translation>Per favore controlla la configurazione prima di salvare.</translation>
+        <translation type="vanished">Per favore controlla la configurazione prima di salvare.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <location filename="../monitorsettingsdialog.cpp" line="266"/>
+        <source>Please, check the settings before saving.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="273"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="274"/>
+        <source>Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="275"/>
+        <source>Actual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="298"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="293"/>
+        <location filename="../monitorsettingsdialog.cpp" line="298"/>
         <source>Config can not be saved</source>
         <translation>La configurazione non può essere salvata</translation>
     </message>
@@ -193,10 +206,106 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="238"/>
-        <location filename="../xrandr.cpp" line="243"/>
+        <location filename="../xrandr.cpp" line="291"/>
+        <location filename="../xrandr.cpp" line="297"/>
         <source>Auto</source>
         <translation>Auto</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="37"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Impostazioni del monitor</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="54"/>
+        <source>Quick Options</source>
+        <translation type="unfinished">Opzioni veloci</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="58"/>
+        <source>Settings</source>
+        <translation type="unfinished">Impostazioni</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="66"/>
+        <source>Save settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QuickOptions</name>
+    <message>
+        <location filename="../quickoptions.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Impostazioni del monitor</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="33"/>
+        <source>Show the same screen on both laptop LCD and external monitor</source>
+        <translation type="unfinished">Unifica uscite</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="49"/>
+        <source>Extended view</source>
+        <translation type="unfinished">Vista estesa</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="65"/>
+        <source>Turn off laptop LCD and use external monitor only</source>
+        <translation type="unfinished">Spegni monitor portatile LCD e usa solo monitor esterno</translation>
+    </message>
+    <message>
+        <location filename="../quickoptions.ui" line="81"/>
+        <source>Turn off external monitor and use laptop LCD only</source>
+        <translation type="unfinished">Spegni monitor esterno e usa solo monitor LCD</translation>
+    </message>
+</context>
+<context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation type="unfinished">Impostazioni del monitor</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="33"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="43"/>
+        <source>Saved settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="49"/>
+        <source>All:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="56"/>
+        <source>Hardware compatible:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="71"/>
+        <source>Rename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.ui" line="78"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

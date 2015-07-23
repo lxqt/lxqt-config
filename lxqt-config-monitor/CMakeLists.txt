@@ -1,9 +1,5 @@
 project(lxqt-config-monitor)
 
-include_directories (
-    "${CMAKE_CURRENT_BINARY_DIR}"
-)
-
 find_package(Qt5Svg REQUIRED)
 
 set(H_FILES
@@ -49,8 +45,6 @@ set(ICON_FILES
 # Config file
 configure_file ( configure.in configure.h )
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
@@ -70,11 +64,9 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 add_executable(${PROJECT_NAME}
     ${CPP_FILES}
-    ${UI_FILES}
     ${RESOURCES}
     ${QRC_SOURCES}
     ${QM_FILES}
-    ${MOC_SOURCES}
     ${DESKTOP_FILES}
     ${QM_LOADER}
 )
@@ -86,6 +78,18 @@ target_link_libraries(${PROJECT_NAME}
     lxqt
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
-install(FILES ${ICON_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lxqt/icons/")
+install(TARGETS
+    ${PROJECT_NAME}
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)
+install(FILES
+    ${ICON_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/lxqt/icons"
+    COMPONENT Runtime
+)

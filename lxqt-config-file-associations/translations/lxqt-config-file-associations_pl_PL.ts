@@ -33,17 +33,17 @@
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
-        <location filename="../applicationchooser.cpp" line="85"/>
+        <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
         <translation>Inne programy</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.cpp" line="86"/>
+        <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
         <translation>Programy obsługujące %1</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.cpp" line="114"/>
+        <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
         <translation>Nie znaleziono programów</translation>
     </message>
