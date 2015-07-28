@@ -1,9 +1,6 @@
 project(lxqt-config-input)
 find_package(X11 REQUIRED)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
-
-
 include_directories(
     ${X11_INCLUDE_DIR}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"

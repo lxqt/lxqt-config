@@ -15,6 +15,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include <lxqtglobals.h>
 
 namespace LxQt {
   class Settings;
@@ -23,7 +24,7 @@ namespace LxQt {
 class XCursorThemeModel;
 
 #include "ui_selectwnd.h"
-class SelectWnd : public QWidget, private Ui_SelectWnd
+class LXQT_API SelectWnd : public QWidget, private Ui_SelectWnd
 {
     Q_OBJECT
 
