@@ -42,6 +42,7 @@ int main (int argc, char **argv)
 {
     LxQt::SingleApplication app(argc, argv);
     LxQt::Settings* settings = new LxQt::Settings("lxqt");
+    LxQt::Settings* sessionSettings = new LxQt::Settings("session");
     LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
 
     app.setActivationWindow(dialog);
@@ -63,7 +64,7 @@ int main (int argc, char **argv)
     dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << "preferences-desktop-font" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
 
-    SelectWnd* cursorPage = new SelectWnd(settings, dialog);
+    SelectWnd* cursorPage = new SelectWnd(sessionSettings, dialog);
     cursorPage->setCurrent();
     dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << "input-mouse" << "preferences-desktop");
 
