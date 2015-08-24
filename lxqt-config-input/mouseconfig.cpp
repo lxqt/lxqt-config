@@ -175,8 +175,8 @@ void MouseConfig::loadSettings() {
   oldSingleClick = singleClick = qtSettings->value("single_click_activate", false).toBool();
 
   settings->beginGroup("Mouse");
-  oldAccel = accel = settings->value("acc_factor", 20).toInt();
-  oldThreshold = threshold = settings->value("acc_threshold", 10).toInt();
+  oldAccel = accel = settings->value("accel_factor", 20).toInt();
+  oldThreshold = threshold = settings->value("accel_threshold", 10).toInt();
   oldLeftHanded = leftHanded = settings->value("left_handed", false).toBool();
   settings->endGroup();
 }
@@ -185,8 +185,8 @@ void MouseConfig::accept() {
   qtSettings->setValue("single_click_activate", singleClick);
 
   settings->beginGroup("Mouse");
-  settings->setValue("acc_factor", accel);
-  settings->setValue("acc_threshold", threshold);
+  settings->setValue("accel_factor", accel);
+  settings->setValue("accel_threshold", threshold);
   settings->setValue("left_handed", leftHanded);
   settings->endGroup();
 }
