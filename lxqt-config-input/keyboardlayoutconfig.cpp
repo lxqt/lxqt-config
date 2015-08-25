@@ -26,7 +26,7 @@
 #include "selectkeyboardlayoutdialog.h"
 #include <LXQt/Settings>
 
-KeyboardLayoutConfig::KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent):
+KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent):
   QWidget(parent),
   settings(_settings) {
   ui.setupUi(this);

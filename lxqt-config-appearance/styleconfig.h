@@ -43,7 +43,7 @@ class StyleConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit StyleConfig(LxQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
+    explicit StyleConfig(LXQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
     ~StyleConfig();
 
 public slots:
@@ -57,7 +57,7 @@ private slots:
 private:
     Ui::StyleConfig *ui;
     QSettings *mQtSettings;
-    LxQt::Settings *mSettings;
+    LXQt::Settings *mSettings;
 };
 
 #endif // STYLECONFIG_H

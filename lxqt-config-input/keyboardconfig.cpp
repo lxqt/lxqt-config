@@ -35,7 +35,7 @@
 extern void qt_x11_apply_settings_in_all_apps();
 #endif
 
-KeyboardConfig::KeyboardConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
+KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
   QWidget(parent),
   settings(_settings),
   qtSettings(_qtSettings),

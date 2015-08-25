@@ -39,7 +39,7 @@
 
 using namespace QtXdg;
 
-IconThemeConfig::IconThemeConfig(LxQt::Settings* settings, QWidget* parent):
+IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
     QWidget(parent),
     m_settings(settings)
 {
@@ -50,7 +50,7 @@ IconThemeConfig::IconThemeConfig(LxQt::Settings* settings, QWidget* parent):
     connect(iconThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(iconThemeSelected(QTreeWidgetItem*,int)));
 
-    connect(LxQt::Settings::globalSettings(), SIGNAL(settingsChanged()),
+    connect(LXQt::Settings::globalSettings(), SIGNAL(settingsChanged()),
             this, SLOT(update()));
 }
 
@@ -126,7 +126,7 @@ void IconThemeConfig::initIconsThemes()
 
 void IconThemeConfig::initControls()
 {
-    QString currentTheme = LxQt::Settings::globalSettings()->value("icon_theme").toString();
+    QString currentTheme = LXQt::Settings::globalSettings()->value("icon_theme").toString();
     XdgIcon::setThemeName(currentTheme);
     QTreeWidgetItemIterator it(iconThemeList);
     while (*it) {

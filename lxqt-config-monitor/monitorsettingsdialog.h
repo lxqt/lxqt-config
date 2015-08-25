@@ -35,7 +35,7 @@ class MonitorSettingsDialog: public QDialog {
   Q_OBJECT
 
 public:
-  MonitorSettingsDialog(MonitorSettingsBackend* backend, LxQt::Settings *applicationSettings);
+  MonitorSettingsDialog(MonitorSettingsBackend* backend, LXQt::Settings *applicationSettings);
   virtual ~MonitorSettingsDialog();
   virtual void accept();
   QString getHardwareIdentifier();
@@ -79,7 +79,7 @@ private:
   TimeoutDialog* timeoutDialog;
   QTimer* timer;
   QList<MonitorInfo*> timeoutSettings;
-  LxQt::Settings *applicationSettings;
+  LXQt::Settings *applicationSettings;
   QString hardwareIdentifier;
 };
 

@@ -35,7 +35,7 @@
 
 class QCategorizedSortFilterProxyModel;
 
-namespace LxQtConfig {
+namespace LXQtConfig {
 
     class ConfigPaneModel;
 

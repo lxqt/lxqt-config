@@ -45,7 +45,7 @@ class FontsConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit FontsConfig(LxQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
+    explicit FontsConfig(LXQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
     ~FontsConfig();
 
 public Q_SLOTS:
@@ -63,7 +63,7 @@ private Q_SLOTS:
 private:
     Ui::FontsConfig *ui;
     QSettings *mQtSettings;
-    LxQt::Settings *mSettings;
+    LXQt::Settings *mSettings;
     FontConfigFile mFontConfigFile;
 };
 

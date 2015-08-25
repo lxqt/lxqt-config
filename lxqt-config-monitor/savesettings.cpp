@@ -25,7 +25,7 @@
 #include <QProcess>
 #include <QInputDialog>
 
-SaveSettings::SaveSettings(LxQt::Settings*applicationSettings, QWidget* parent):
+SaveSettings::SaveSettings(LXQt::Settings*applicationSettings, QWidget* parent):
   QDialog(parent) {
 
   this->applicationSettings = applicationSettings;

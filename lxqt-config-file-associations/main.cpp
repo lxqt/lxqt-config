@@ -40,7 +40,7 @@
 
 int main (int argc, char **argv)
 {
-    LxQt::SingleApplication app(argc, argv);
+    LXQt::SingleApplication app(argc, argv);
 
     MimetypeViewer mimetypeViewer;
     app.setActivationWindow(&mimetypeViewer);

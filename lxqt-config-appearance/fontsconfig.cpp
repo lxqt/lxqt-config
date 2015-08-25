@@ -45,7 +45,7 @@ extern void qt_x11_apply_settings_in_all_apps();
 static const char* subpixelNames[] = {"none", "rgb", "bgr", "vrgb", "vbgr"};
 static const char* hintStyleNames[] = {"hintnone", "hintslight", "hintmedium", "hintfull"};
 
-FontsConfig::FontsConfig(LxQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
+FontsConfig::FontsConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::FontsConfig),
     mSettings(settings),

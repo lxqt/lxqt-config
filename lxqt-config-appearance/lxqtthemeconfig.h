@@ -34,16 +34,16 @@
 class QTreeWidgetItem;
 
 namespace Ui {
-    class LxQtThemeConfig;
+    class LXQtThemeConfig;
 }
 
-class LxQtThemeConfig : public QWidget
+class LXQtThemeConfig : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent = 0);
-    ~LxQtThemeConfig();
+    explicit LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
+    ~LXQtThemeConfig();
 
 public slots:
     void initControls();
@@ -52,8 +52,8 @@ private slots:
     void lxqtThemeSelected(QTreeWidgetItem* item, int column);
 
 private:
-    Ui::LxQtThemeConfig *ui;
-    LxQt::Settings *mSettings;
+    Ui::LXQtThemeConfig *ui;
+    LXQt::Settings *mSettings;
 };
 
 #endif // LXQTTHEMECONFIG_H

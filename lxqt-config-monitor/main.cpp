@@ -28,13 +28,13 @@
 #include "savesettings.h"
 
 int main(int argc, char** argv) {
-	LxQt::SingleApplication app(argc, argv);
+	LXQt::SingleApplication app(argc, argv);
 
 	QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
 	if(configName.isEmpty())
 		configName = "MonitorSettings";
-	LxQt::Settings settings(configName);
-	LxQt::ConfigDialog dlg(QObject::tr("Monitor Settings"), &settings);
+	LXQt::Settings settings(configName);
+	LXQt::ConfigDialog dlg(QObject::tr("Monitor Settings"), &settings);
 	dlg.setButtons(QDialogButtonBox::QDialogButtonBox::Apply|QDialogButtonBox::Close);
 	app.setActivationWindow(&dlg);
 	dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));

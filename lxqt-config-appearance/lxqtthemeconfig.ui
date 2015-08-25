@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LxQtThemeConfig</class>
+ <class>LXQtThemeConfig</class>
  <widget class="QWidget" name="LXQtThemeConfig">
   <property name="geometry">
    <rect>

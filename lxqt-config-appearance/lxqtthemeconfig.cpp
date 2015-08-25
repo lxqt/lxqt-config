@@ -31,9 +31,9 @@
 #include <QDebug>
 #include <QProcess>
 
-LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :
+LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::LxQtThemeConfig),
+    ui(new Ui::LXQtThemeConfig),
     mSettings(settings)
 {
     ui->setupUi(this);
@@ -42,8 +42,8 @@ LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :
             this, SLOT(lxqtThemeSelected(QTreeWidgetItem*,int)));
 
 
-    QList<LxQt::LxQtTheme> themes = LxQt::LxQtTheme::allThemes();
-    foreach(LxQt::LxQtTheme theme, themes)
+    QList<LXQt::LXQtTheme> themes = LXQt::LXQtTheme::allThemes();
+    foreach(LXQt::LXQtTheme theme, themes)
     {
         QString themeName = theme.name();
         themeName[0] = themeName[0].toTitleCase();
@@ -61,13 +61,13 @@ LxQtThemeConfig::LxQtThemeConfig(LxQt::Settings *settings, QWidget *parent) :
 }
 
 
-LxQtThemeConfig::~LxQtThemeConfig()
+LXQtThemeConfig::~LXQtThemeConfig()
 {
     delete ui;
 }
 
 
-void LxQtThemeConfig::initControls()
+void LXQtThemeConfig::initControls()
 {
     QString currentTheme = mSettings->value("theme").toString();
 
@@ -85,7 +85,7 @@ void LxQtThemeConfig::initControls()
 }
 
 
-void LxQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
+void LXQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
 {
     Q_UNUSED(column);
     if (!item)
@@ -94,7 +94,7 @@ void LxQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
     QVariant themeName = item->data(0, Qt::UserRole);
     mSettings->setValue("theme", themeName);
 
-    LxQt::LxQtTheme theme(themeName.toString());
+    LXQt::LXQtTheme theme(themeName.toString());
     if(theme.isValid()) {
 		QString wallpaper = theme.desktopBackground();
 		if(!wallpaper.isEmpty()) {

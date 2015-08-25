@@ -31,12 +31,12 @@
 
 int main(int argc, char **argv)
 {
-    LxQt::SingleApplication app(argc, argv);
+    LXQt::SingleApplication app(argc, argv);
 
     // ensure that we use lxqt-config.menu file.
     qputenv("XDG_MENU_PREFIX", "lxqt-");
 
-    LxQtConfig::MainWindow w;
+    LXQtConfig::MainWindow w;
     app.setActivationWindow(&w);
     w.show();
 

@@ -41,7 +41,7 @@
 extern void qt_x11_apply_settings_in_all_apps();
 #endif
 
-StyleConfig::StyleConfig(LxQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
+StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),
     mSettings(settings),
@@ -88,7 +88,7 @@ void StyleConfig::initControls()
         ++it;
     }
 
-    // read other widget related settings form LxQt settings.
+    // read other widget related settings form LXQt settings.
     QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
     // convert toolbar style name to value
     QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();

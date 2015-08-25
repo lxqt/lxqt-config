@@ -30,7 +30,7 @@ int main (int argc, char *argv[])
     //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("koi8-r"));
     //QTextCodec::setCodecForLocale(QTextCodec::codecForName("koi8-r"));
 
-    LxQt::Application app(argc, argv);
+    LXQt::Application app(argc, argv);
     TRANSLATE_APP;
 
     //qDebug() << findDefaultTheme() << getCurrentTheme();

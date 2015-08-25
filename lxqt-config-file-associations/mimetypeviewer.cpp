@@ -110,7 +110,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
 
     QString mimeappsListPath(XdgDirs::dataHome(true) + "/applications/mimeapps.list");
     mDefaultsList = new QSettings(mimeappsListPath, XdgDesktopFileCache::desktopFileSettingsFormat(), this);
-    mSettingsCache = new LxQt::SettingsCache(mDefaultsList);
+    mSettingsCache = new LXQt::SettingsCache(mDefaultsList);
     mSettingsCache->loadFromSettings();
     initializeMimetypeTreeView();
     loadAllMimeTypes();

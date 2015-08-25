@@ -26,14 +26,14 @@
 #include <QMap>
 #include "ui_keyboardlayoutconfig.h"
 
-namespace LxQt {
+namespace LXQt {
   class Settings;
 }
 
 class KeyboardLayoutConfig : public QWidget {
   Q_OBJECT
 public:
-  KeyboardLayoutConfig(LxQt::Settings* _settings, QWidget* parent = 0);
+  KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent = 0);
   virtual ~KeyboardLayoutConfig();
 
 public Q_SLOTS:
@@ -57,7 +57,7 @@ private:
   QStringList currentOptions_;
   QList<QPair<QString, QString> > currentLayouts_;
   QMap<QString, KeyboardLayoutInfo> knownLayouts_;
-  LxQt::Settings* settings;
+  LXQt::Settings* settings;
 };
 
 #endif // KEYBOARDLAYOUTCONFIG_H

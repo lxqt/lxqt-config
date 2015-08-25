@@ -23,7 +23,7 @@
 #include <QWidget>
 #include "ui_mouseconfig.h"
 
-namespace LxQt {
+namespace LXQt {
   class Settings;
 }
 class QSettings;
@@ -32,7 +32,7 @@ class MouseConfig : public QWidget {
   Q_OBJECT
 
 public:
-  MouseConfig(LxQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent);
+  MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent);
   virtual ~MouseConfig();
 
   void accept();
@@ -54,7 +54,7 @@ private Q_SLOTS:
 
 private:
   Ui::MouseConfig ui;
-  LxQt::Settings* settings;
+  LXQt::Settings* settings;
   QSettings* qtSettings;
   int accel;
   int oldAccel;

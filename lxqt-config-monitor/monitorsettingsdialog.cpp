@@ -41,7 +41,7 @@
 #include "xrandr.h"
 #include "monitorpicture.h"
 
-MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend, LxQt::Settings *applicationSettings):
+MonitorSettingsDialog::MonitorSettingsDialog(MonitorSettingsBackend* backend, LXQt::Settings *applicationSettings):
   QDialog(NULL, 0),
   LVDS(NULL) {
   timeoutDialog = NULL;

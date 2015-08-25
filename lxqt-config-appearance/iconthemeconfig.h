@@ -31,7 +31,7 @@
 #include "ui_iconthemeconfig.h"
 #include "iconthemeinfo.h"
 
-namespace LxQt {
+namespace LXQt {
 class Settings;
 }
 
@@ -41,11 +41,11 @@ class IconThemeConfig : public QWidget, public Ui::IconThemeConfig
     Q_OBJECT
 
 public:
-    IconThemeConfig(LxQt::Settings *settings, QWidget *parent = 0);
+    IconThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
     ~IconThemeConfig();
 
 private:
-    LxQt::Settings *m_settings;
+    LXQt::Settings *m_settings;
     void initIconsThemes();
 
 public slots:

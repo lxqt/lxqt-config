@@ -37,7 +37,7 @@
 
 class QSettings;
 
-namespace LxQt {
+namespace LXQt {
 class SettingsCache;
 }
 
@@ -59,7 +59,7 @@ private:
     void loadAllMimeTypes();
     XdgMimeType m_CurrentMime;
     QSettings* mDefaultsList;
-    LxQt::SettingsCache *mSettingsCache;
+    LXQt::SettingsCache *mSettingsCache;
     Ui::mimetypeviewer widget;
     QStringList mediaTypes;
     QList <QTreeWidgetItem*> mItemList;

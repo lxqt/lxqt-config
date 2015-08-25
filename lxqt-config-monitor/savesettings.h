@@ -28,7 +28,7 @@ class SaveSettings : public QDialog {
   Q_OBJECT
 
 public:
-  SaveSettings(LxQt::Settings*applicationSettings, QWidget* parent = 0);
+  SaveSettings(LXQt::Settings*applicationSettings, QWidget* parent = 0);
 
   Ui::SaveSettings ui;
 
@@ -47,7 +47,7 @@ public slots:
   void onRenameItem();
 
 private:
-  LxQt::Settings*applicationSettings;
+  LXQt::Settings*applicationSettings;
   QString hardwareIdentifier;
 
 };

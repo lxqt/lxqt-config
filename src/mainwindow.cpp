@@ -43,7 +43,7 @@
 #include "qcategorydrawer.h"
 #include "qcategorizedsortfilterproxymodel.h"
 
-namespace LxQtConfig {
+namespace LXQtConfig {
 
 struct ConfigPaneData: public QSharedData
 {
@@ -193,7 +193,7 @@ private:
 };
 
 
-LxQtConfig::MainWindow::MainWindow() : QMainWindow()
+LXQtConfig::MainWindow::MainWindow() : QMainWindow()
 {
     setupUi(this);
 
@@ -216,7 +216,7 @@ LxQtConfig::MainWindow::MainWindow() : QMainWindow()
     QTimer::singleShot(1, this, SLOT(load()));
 }
 
-bool LxQtConfig::MainWindow::event(QEvent* event)
+bool LXQtConfig::MainWindow::event(QEvent* event)
 {
     // LXQt's Qt5 plugin sends a ThemeChange event
     if (event->type() == QEvent::ThemeChange)
@@ -243,7 +243,7 @@ bool LxQtConfig::MainWindow::event(QEvent* event)
     return QMainWindow::event(event);
 }
 
-void LxQtConfig::MainWindow::load()
+void LXQtConfig::MainWindow::load()
 {
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
@@ -257,7 +257,7 @@ void LxQtConfig::MainWindow::load()
     QApplication::restoreOverrideCursor();
 }
 
-void LxQtConfig::MainWindow::activateItem(const QModelIndex &index)
+void LXQtConfig::MainWindow::activateItem(const QModelIndex &index)
 {
     if (!index.isValid())
         return;

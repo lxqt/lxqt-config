@@ -25,16 +25,16 @@
 #include "keyboardlayoutconfig.h"
 
 int main(int argc, char** argv) {
-    LxQt::SingleApplication app(argc, argv);
+    LXQt::SingleApplication app(argc, argv);
 
     QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
     if(configName.isEmpty())
       configName = "session";
-    LxQt::Settings settings(configName);
-    LxQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
+    LXQt::Settings settings(configName);
+    LXQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
     app.setActivationWindow(&dlg);
 
-    LxQt::Settings qtSettings("lxqt");
+    LXQt::Settings qtSettings("lxqt");
     MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
     dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");
     QObject::connect(&dlg, SIGNAL(reset()), mouseConfig, SLOT(reset()));

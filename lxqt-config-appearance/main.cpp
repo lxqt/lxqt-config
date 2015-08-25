@@ -40,10 +40,10 @@
 
 int main (int argc, char **argv)
 {
-    LxQt::SingleApplication app(argc, argv);
-    LxQt::Settings* settings = new LxQt::Settings("lxqt");
-    LxQt::Settings* sessionSettings = new LxQt::Settings("session");
-    LxQt::ConfigDialog* dialog = new LxQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
+    LXQt::SingleApplication app(argc, argv);
+    LXQt::Settings* settings = new LXQt::Settings("lxqt");
+    LXQt::Settings* sessionSettings = new LXQt::Settings("session");
+    LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
 
     app.setActivationWindow(dialog);
 
@@ -56,7 +56,7 @@ int main (int argc, char **argv)
     dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), iconPage, SLOT(initControls()));
 
-    LxQtThemeConfig* themePage = new LxQtThemeConfig(settings, dialog);
+    LXQtThemeConfig* themePage = new LXQtThemeConfig(settings, dialog);
     dialog->addPage(themePage, QObject::tr("LXQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), themePage, SLOT(initControls()));
 

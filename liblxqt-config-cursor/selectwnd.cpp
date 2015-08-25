@@ -37,7 +37,7 @@
 
 #define HOME_ICON_DIR QDir::homePath() + "/.icons"
 
-SelectWnd::SelectWnd(LxQt::Settings* settings, QWidget *parent) : QWidget(parent), mSettings(settings)
+SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent) : QWidget(parent), mSettings(settings)
 {
     setupUi(this);
 
