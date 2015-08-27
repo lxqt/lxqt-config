@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 
 project(lxqt-config)
+set(LXQT_CONFIG_PROJECT "${PROJECT_NAME}")
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 

@@ -80,7 +80,7 @@ target_link_libraries(lxqt-config-cursor
 
 install(TARGETS
     lxqt-config-cursor
-    DESTINATION "${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}"
+    DESTINATION "${CMAKE_INSTALL_LIBDIR}/${LXQT_CONFIG_PROJECT}"
     COMPONENT Runtime
 )
 install(FILES
