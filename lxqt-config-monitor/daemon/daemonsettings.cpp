@@ -16,7 +16,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include "daemon.h"
+#include "daemonsettings.h"
 #include <QProcess>
 #include <QFile>
 #include <QDir>
@@ -24,7 +24,7 @@
 #include <QMessageBox>
 #include <QTextStream>
 
-DaemonSettings::DaemonSettings(LxQt::Settings *settings, QWidget *parent): QWidget(parent)
+DaemonSettings::DaemonSettings(LXQt::Settings *settings, QWidget *parent): QWidget(parent)
 {
     this->settings = settings;
 

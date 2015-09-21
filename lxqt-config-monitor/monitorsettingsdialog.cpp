@@ -74,8 +74,8 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         return;
 
     mConfig = config;
-    MonitorPictureDialog *monitorPicture = nullptr;
 
+    MonitorPictureDialog *monitorPicture = nullptr;
     KScreen::OutputList outputs = mConfig->outputs();
 
     int nMonitors = 0;
@@ -83,13 +83,14 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     {
         if (output->isConnected())
             nMonitors++;
-    }
 
-    if( nMonitors > 1 )
-    {
-        monitorPicture = new MonitorPictureDialog(config, this);
-        ui.monitorList->addItem(tr("Set position"));
-        ui.stackedWidget->addWidget(monitorPicture);
+        if (nMonitors > 1)
+        {
+            monitorPicture = new MonitorPictureDialog(config, this);
+            ui.monitorList->addItem(tr("Set position"));
+            ui.stackedWidget->addWidget(monitorPicture);
+            break;
+        }
     }
 
     QList<MonitorWidget*> monitors;
@@ -105,16 +106,13 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         }
     }
 
-    if( monitorPicture != nullptr )
+    if (monitorPicture)
         monitorPicture->setScene(monitors);
 
     ui.monitorList->setCurrentRow(0);
     adjustSize();
 }
 
-/**
- * Apply the settings
- */
 void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
 {
     if (mConfig && KScreen::Config::canBeApplied(mConfig))
@@ -127,7 +125,7 @@ void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
         else
         {
             mOldConfig = mConfig->clone();
-            if(saveConfigOk)
+            if (saveConfigOk)
                 saveConfiguration(mConfig);
         }
     }
@@ -207,12 +205,12 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
 void MonitorSettingsDialog::showSettingsDialog()
 {
     QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
-    
-    if(configName.isEmpty())
+
+    if (configName.isEmpty())
         configName = "MonitorSettings";
-    
-    LxQt::Settings settings(configName);
-    
+
+    LXQt::Settings settings(configName);
+
     SettingsDialog settingsDialog(tr("Advanced settings"), &settings);
     settingsDialog.exec();
 }

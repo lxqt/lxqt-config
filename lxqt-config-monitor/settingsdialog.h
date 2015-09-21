@@ -23,12 +23,12 @@
 #include <LXQt/Settings>
 
 
-class SettingsDialog : public LxQt::ConfigDialog
+class SettingsDialog : public LXQt::ConfigDialog
 {
     Q_OBJECT
 
 public:
-    SettingsDialog(const QString &title, LxQt::Settings *settings, QWidget *parent = 0);
+    SettingsDialog(const QString &title, LXQt::Settings *settings, QWidget *parent = 0);
 
 private Q_SLOTS:
 

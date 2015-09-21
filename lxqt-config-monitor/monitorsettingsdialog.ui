@@ -68,7 +68,13 @@
      <item>
       <widget class="QToolButton" name="settingsButton">
        <property name="text">
-        <string>...</string>
+        <string>Settings</string>
+       </property>
+       <property name="icon">
+        <iconset theme="preferences-system"/>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
        </property>
        <property name="autoRaise">
         <bool>false</bool>

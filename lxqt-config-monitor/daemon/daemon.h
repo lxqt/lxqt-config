@@ -19,31 +19,20 @@
 #ifndef _SCREEN_LISTENER_H_
 #define _SCREEN_LISTENER_H_
 
-
-#include <KScreen/Config>
-#include <KScreen/Output>
 #include <KScreen/ConfigMonitor>
-#include <QTimer>
 
-class ScreenListener : public QObject
+class Daemon : public QObject
 {
     Q_OBJECT
 
 public:
-    ScreenListener(QObject* parent = 0);
+    Daemon(QObject* parent = 0);
 
 public Q_SLOTS:
     void configurationChanged();
 
-private Q_SLOTS:
-    void testOutputChanged();
-
 private:
-    void init();
-
-    //KScreen::ConfigPtr config;
     KScreen::ConfigMonitor *configMonitor;
-    QTimer *timer;
 };
 
 #endif // _SCREEN_LISTENER_H_ 

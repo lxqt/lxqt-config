@@ -17,16 +17,14 @@
 */
 
 #include "settingsdialog.h"
-#include "advanced/daemon.h"
+#include "daemon/daemonsettings.h"
 
-SettingsDialog::SettingsDialog(const QString &title, LxQt::Settings *settings, QWidget *parent): LxQt::ConfigDialog(title, settings, parent)
+SettingsDialog::SettingsDialog(const QString &title, LXQt::Settings *settings, QWidget *parent)
+    : LXQt::ConfigDialog(title, settings, parent)
 {
-    setButtons(QDialogButtonBox::QDialogButtonBox::Apply|QDialogButtonBox::Close);
+    setButtons(QDialogButtonBox::QDialogButtonBox::Apply | QDialogButtonBox::Close);
     setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
 
     DaemonSettings *daemon = new DaemonSettings(settings, this);
     addPage(daemon, QObject::tr("Daemon"), "system-run");
-    daemon->show();
- 
-    showPage(daemon);
 }

@@ -1,27 +1,44 @@
 /*
-    Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
-
+    Copyright (C) 2015  P.L. Lucas <selairi@gmail.com>
+    
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
-
+    
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-
+    
     You should have received a copy of the GNU General Public License along
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include "daemon.h"
-#include <QCoreApplication>
+#ifndef __DAEMONSETTINGS_H__
+#define __DAEMONSETTINGS_H__
 
-int main(int argc, char** argv)
+#include <QWidget>
+#include "ui_daemonsettings.h"
+#include <LXQt/Settings>
+
+
+class DaemonSettings: public QWidget
 {
-    QCoreApplication app(argc, argv);
-    Daemon d;
-    return app.exec();
-}
+    Q_OBJECT
+
+    public:
+        DaemonSettings(LXQt::Settings *settings, QWidget *parent);
+
+    private Q_SLOTS:
+        void setAutostart(bool);
+        void startDaemon();
+        void stopDaemon();
+
+    private:
+        Ui::Daemon ui;
+        LXQt::Settings *settings;
+};
+
+#endif // __DAEMONSETTINGS_H__
