@@ -6,6 +6,6 @@ Comment=Appearance settings for LXQt
 Exec=lxqt-config-appearance
 Icon=preferences-desktop-theme
 Categories=Settings;DesktopSettings;Qt;LXQt;
-OnlyShowIn=LXDE;LXQt;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

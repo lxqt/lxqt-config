@@ -6,6 +6,6 @@ Comment=Locale settings for LXQt
 Exec=lxqt-config-locale
 Icon=preferences-desktop-locale
 Categories=Settings;DesktopSettings;Qt;LXQt;
-OnlyShowIn=LXDE;LXQt;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

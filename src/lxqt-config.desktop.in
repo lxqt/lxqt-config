@@ -6,6 +6,6 @@ Comment=Configure your system
 Exec=lxqt-config
 Icon=preferences-system
 Categories=Settings;DesktopSettings;Qt;LXQt;
-OnlyShowIn=LXDE;LXQt;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
