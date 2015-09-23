@@ -6,6 +6,6 @@ Comment=Configure keyboard, mouse, and other input devices
 Exec=lxqt-config-input
 Icon=input-keyboard
 Categories=Qt;Settings;HardwareSettings;DesktopSettings;LXQt;
-OnlyShowIn=LXDE;LXQt;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

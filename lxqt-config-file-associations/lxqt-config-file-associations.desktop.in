@@ -6,6 +6,6 @@ Comment=Configure applications associated with known file types
 Exec=lxqt-config-file-associations
 Icon=preferences-desktop-filetype-association
 Categories=Settings;DesktopSettings;Qt;LXQt;
-OnlyShowIn=LXDE;LXQt;
+OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
