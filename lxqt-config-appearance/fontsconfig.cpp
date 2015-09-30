@@ -48,8 +48,8 @@ static const char* hintStyleNames[] = {"hintnone", "hintslight", "hintmedium", "
 FontsConfig::FontsConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::FontsConfig),
-    mSettings(settings),
     mQtSettings(qtSettings),
+    mSettings(settings),
     mFontConfigFile()
 {
     ui->setupUi(this);

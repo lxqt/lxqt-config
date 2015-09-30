@@ -44,8 +44,8 @@ extern void qt_x11_apply_settings_in_all_apps();
 StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),
-    mSettings(settings),
-    mQtSettings(qtSettings)
+    mQtSettings(qtSettings),
+    mSettings(settings)
 {
     ui->setupUi(this);
 

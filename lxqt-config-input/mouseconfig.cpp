@@ -87,7 +87,6 @@ void MouseConfig::initControls() {
 
 
 void MouseConfig::onMouseAccelChanged(int value) {
-  QSlider* slider = static_cast<QSlider*>(sender());
   accel = value;
   XChangePointerControl(QX11Info::display(), True, False,
                         accel, 10, 0);
@@ -95,7 +94,6 @@ void MouseConfig::onMouseAccelChanged(int value) {
 }
 
 void MouseConfig::onMouseThresholdChanged(int value) {
-  QSlider* slider = static_cast<QSlider*>(sender());
   /* threshold = 110 - sensitivity. The lower the threshold, the higher the sensitivity */
   threshold = 110 - value;
   XChangePointerControl(QX11Info::display(), False, True,

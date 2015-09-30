@@ -217,7 +217,6 @@ void MimetypeViewer::filter(const QString& pattern)
 {
     QMimeDatabase db;
     MimeTypeData mimeData;
-    const int count = widget.mimetypeTreeWidget->topLevelItemCount();
 
     for (int i = 0; i < widget.mimetypeTreeWidget->topLevelItemCount(); ++i) {
         widget.mimetypeTreeWidget->topLevelItem(i)->setHidden(true);
