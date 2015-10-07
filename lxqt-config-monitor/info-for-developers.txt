@@ -28,7 +28,7 @@ Module Monitor
 
 Contains 4 classes:
 
-- Backend: Ii is an abstract class. It have to be implemented by monitor drivers. In X11 this driver is XRandR
+- Backend: It is an abstract class. It has to be implemented by monitor drivers. In X11 this driver is XRandR
 - MonitorInfo: This class contains all information about one monitor. It is obtained from Backend::getMonitorsInfo method.
 - MonitorSettings: This class is used by Backend::setMonitorsSettings method. This class contains settings for one monitor.
 - Monitor: This class is used by MonitorSettingsDialog in order to store monitor settings.
