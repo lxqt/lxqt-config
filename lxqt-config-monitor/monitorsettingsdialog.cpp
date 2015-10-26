@@ -61,6 +61,7 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
 
     });
 
+    ui.settingsButton->hide(); // Hide settings button until daemon works OK.
     connect(ui.settingsButton, SIGNAL(clicked()), this, SLOT(showSettingsDialog()));
 }
 
