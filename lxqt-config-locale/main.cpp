@@ -33,8 +33,8 @@
 int main (int argc, char **argv)
 {
     LXQt::SingleApplication app(argc, argv);
-    LXQt::Settings settings("LXQt-config-locale");
-    LXQt::Settings session_settings("LXQt-session");
+    LXQt::Settings settings("lxqt-config-locale");
+    LXQt::Settings session_settings("session");
     LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Locale Configuration"), &settings);
 
     app.setActivationWindow(dialog);
