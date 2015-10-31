@@ -24,7 +24,7 @@
 
 int main(int argc, char** argv)
 {
-    LxQt::SingleApplication app(argc, argv);
+    LXQt::SingleApplication app(argc, argv);
 
     MonitorSettingsDialog dlg;
     app.setActivationWindow(&dlg);

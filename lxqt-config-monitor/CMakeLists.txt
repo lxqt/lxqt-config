@@ -73,7 +73,7 @@ target_link_libraries(${PROJECT_NAME}
     Qt5::X11Extras
     Qt5::Svg
     KF5::Screen
-    ${LXQT_LIBRARIES}
+    lxqt
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
