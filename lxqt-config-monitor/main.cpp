@@ -20,11 +20,46 @@
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
 #include <QDebug>
+#include <QProcess>
+#include <QStandardPaths>
+#include <QCommandLineParser>
 #include "monitorsettingsdialog.h"
+#include <QCoreApplication>
+#include "loadsettings.h"
+
+static bool loadSettingsOk(int argc, char** argv)
+{
+    for(int i=0; i<argc; i++)
+    {
+        if(QString(argv[i]) == "-l")
+            return true;
+    }
+    return false;
+}
 
 int main(int argc, char** argv)
 {
+    if( loadSettingsOk(argc, argv) )
+    {
+        // If -l option is provided, settings are loaded and app is closed.
+        QCoreApplication app(argc, argv);
+        LoadSettings load;
+        return app.exec();
+    }
+
     LXQt::SingleApplication app(argc, argv);
+
+    // Command line options
+    QCommandLineParser parser;
+    QCommandLineOption loadOption(QStringList() << "l" << "loadlast",
+            app.tr("Load last settings."));
+    parser.addOption(loadOption);
+    QCommandLineOption helpOption = parser.addHelpOption();
+    parser.addOption(loadOption);
+    parser.addOption(helpOption);
+
+    //parser.process(app);
+    //bool loadLastSettings = parser.isSet(loadOption);
 
     MonitorSettingsDialog dlg;
     app.setActivationWindow(&dlg);
@@ -32,4 +67,5 @@ int main(int argc, char** argv)
     dlg.show();
 
     return app.exec();
+
 }
