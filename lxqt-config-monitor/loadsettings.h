@@ -1,6 +1,5 @@
 /*
-    Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
-    Copyright (C) 2013  <copyright holder> <email>
+    Copyright (C) 2015  P.L. Lucas <selairi@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,44 +16,27 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef MONITORSETTINGSDIALOG_H
-#define MONITORSETTINGSDIALOG_H
+#ifndef __LOADSETTINGS_H__
+#define __LOADSETTINGS_H__
 
-#include "ui_monitorsettingsdialog.h"
-#include "timeoutdialog.h"
 
-#include <QDialog>
-#include <QTimer>
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
 
-class MonitorSettingsDialog : public QDialog
+class LoadSettings : public QObject
 {
     Q_OBJECT
 
 public:
-    MonitorSettingsDialog();
-    virtual ~MonitorSettingsDialog();
-
-    virtual void accept();
-    virtual void reject();
-
-private:
-    void applyConfiguration(bool saveConfigOk);
-    void cancelConfiguration();
+    LoadSettings(QObject *parent = 0);
 
 private Q_SLOTS:
     void loadConfiguration(KScreen::ConfigPtr config);
-    void showSettingsDialog();
 
 private:
-    void saveConfiguration(KScreen::ConfigPtr config);
-
-    Ui::MonitorSettingsDialog ui;
 
     // Configutarions
-    KScreen::ConfigPtr mOldConfig;
     KScreen::ConfigPtr mConfig;
 };
 
-#endif // MONITORSETTINGSDIALOG_H
+#endif // __LOADSETTINGS_H__
