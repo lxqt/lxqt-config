@@ -172,24 +172,27 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     QSettings settings("LXQt", "lxqt-config-monitor");
     settings.setValue("currentConfig", QVariant(QJsonDocument(json).toJson()));
 
-    // Check if autostart file exists. It is commented because of old configs.
-    //QFileInfo desktopFileInfo(QDir::homePath() + "/.config/autostart/lxqt-config-monitor-autostart.desktop");
-    //if( desktopFileInfo.exists() )
-    //    return;
-
-
     QString desktop = QString("[Desktop Entry]\n"
                               "Type=Application\n"
                               "Name=LXQt-config-monitor autostart\n"
                               "Comment=Autostart monitor settings for LXQt-config-monitor\n"
                               "Exec=%1\n"
                               "OnlyShowIn=LXQt\n").arg("lxqt-config-monitor -l");
-    // Check if ~/.config/autostart/ exists
+    
+    // Check autostart path: $XDG_CONFIG_HOME or ~/.config/autostart
+    QString autostartPath;
     bool ok = true;
-    QFileInfo fileInfo(QDir::homePath() + "/.config/autostart/");
-    if( ! fileInfo.exists() )
-      ok = QDir::root().mkpath(QDir::homePath() + "/.config/autostart/");
-    QFile file(QDir::homePath() + "/.config/autostart/lxqt-config-monitor-autostart.desktop");
+    if(qEnvironmentVariableIsSet("XDG_CONFIG_HOME"))
+        autostartPath = QString(qgetenv("XDG_CONFIG_HOME"));
+    else
+    {
+         autostartPath = QDir::homePath() + "/.config/autostart/";
+        // Check if ~/.config/autostart/ exists
+        QFileInfo fileInfo(autostartPath);
+        if( ! fileInfo.exists() )
+            ok = QDir::root().mkpath(autostartPath);
+    }
+    QFile file(autostartPath + "/lxqt-config-monitor-autostart.desktop");
     if(ok)
             ok = file.open(QIODevice::WriteOnly | QIODevice::Text);
     if(!ok) {
