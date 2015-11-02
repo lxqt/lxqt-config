@@ -4,37 +4,37 @@
 <context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="43"/>
+        <location filename="../monitor.cpp" line="52"/>
         <source>Laptop LCD Monitor</source>
         <translation type="unfinished">筆記型電腦液晶螢幕</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="45"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>External VGA Monitor</source>
         <translation type="unfinished">外接VGA螢幕</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="45"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>VGA Monitor</source>
         <translation type="unfinished">VGA 螢幕</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="47"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>External DVI Monitor</source>
         <translation type="unfinished">外接 DVI 螢幕</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="47"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>DVI Monitor</source>
         <translation type="unfinished">DVI 螢幕</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="49"/>
+        <location filename="../monitor.cpp" line="58"/>
         <source>TV</source>
         <translation type="unfinished">電視</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="51"/>
+        <location filename="../monitor.cpp" line="60"/>
         <source>Default Monitor</source>
         <translation type="unfinished">預設螢幕</translation>
     </message>
@@ -48,7 +48,7 @@
     </message>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
-        <source>Magnetic attraction</source>
+        <source>Keep monitors attached</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -113,229 +113,199 @@ Monitor configuration tool for LXQt.</source>
         <translation type="vanished">LXQt-config-monitor 螢幕設定工具</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
+        <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="57"/>
-        <source>Unify all monitors</source>
+        <location filename="../monitorsettingsdialog.ui" line="71"/>
+        <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="64"/>
-        <source>Monitor Position</source>
+        <location filename="../monitorsettingsdialog.cpp" line="91"/>
+        <source>Set position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="84"/>
-        <source>Primary monitor:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="265"/>
-        <source>Do you want to save changes?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="266"/>
-        <source>Please, check the settings before saving.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="273"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="274"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="275"/>
-        <source>Actual</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="298"/>
+        <location filename="../monitorsettingsdialog.cpp" line="199"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="298"/>
+        <location filename="../monitorsettingsdialog.cpp" line="199"/>
         <source>Config can not be saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="218"/>
+        <source>Advanced settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MonitorWidget</name>
     <message>
-        <location filename="../monitorwidget.ui" line="23"/>
-        <source>Turn on</source>
+        <location filename="../monitorwidget.ui" line="21"/>
+        <source>Setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="30"/>
+        <location filename="../monitorwidget.ui" line="29"/>
+        <source> (x)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="45"/>
+        <source> (y)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="40"/>
-        <source>Rate:</source>
+        <location filename="../monitorwidget.ui" line="90"/>
+        <source>Enable this display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="58"/>
-        <source>Hz</source>
+        <location filename="../monitorwidget.ui" line="98"/>
+        <source>This is my primary display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="67"/>
-        <source>Position:</source>
+        <location filename="../monitorwidget.ui" line="103"/>
+        <source>This screen extends another display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="79"/>
-        <source>x:</source>
+        <location filename="../monitorwidget.ui" line="108"/>
+        <source>This screen clones another display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="96"/>
-        <source>y:</source>
+        <location filename="../monitorwidget.ui" line="119"/>
+        <source>Right of...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="115"/>
-        <source>Brightness:</source>
+        <location filename="../monitorwidget.ui" line="124"/>
+        <source>Left of...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="135"/>
-        <source>Gamma:</source>
+        <location filename="../monitorwidget.ui" line="129"/>
+        <source>Above...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="154"/>
-        <location filename="../monitorwidget.ui" line="171"/>
-        <source>:</source>
+        <location filename="../monitorwidget.ui" line="134"/>
+        <source>Below...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="193"/>
-        <source>Backlight:</source>
+        <location filename="../monitorwidget.ui" line="139"/>
+        <source>Positioned manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="46"/>
-        <location filename="../monitorwidget.cpp" line="97"/>
+        <location filename="../monitorwidget.ui" line="173"/>
+        <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="194"/>
+        <source>Refresh rate:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="201"/>
+        <source>Rotation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="224"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="230"/>
+        <source>Display information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Auto</source>
-        <translation type="unfinished">自動</translation>
+        <translation type="obsolete">自動</translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="136"/>
+        <source>Name: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="137"/>
+        <source>Vendor: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="138"/>
+        <source>Serial: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="139"/>
+        <source>Display size: %1cm x %2cm
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="140"/>
+        <source>Serial number: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="141"/>
+        <source>EISA device ID: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="183"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="184"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="185"/>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="186"/>
+        <source>Inverted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="329"/>
+        <source>%1 Hz</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="291"/>
-        <location filename="../xrandr.cpp" line="297"/>
         <source>Auto</source>
-        <translation>自動</translation>
-    </message>
-    <message>
-        <location filename="../main.cpp" line="37"/>
-        <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.cpp" line="54"/>
-        <source>Quick Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.cpp" line="58"/>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.cpp" line="66"/>
-        <source>Save settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QuickOptions</name>
-    <message>
-        <location filename="../quickoptions.ui" line="14"/>
-        <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../quickoptions.ui" line="33"/>
-        <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../quickoptions.ui" line="49"/>
-        <source>Extended view</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../quickoptions.ui" line="65"/>
-        <source>Turn off laptop LCD and use external monitor only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../quickoptions.ui" line="81"/>
-        <source>Turn off external monitor and use laptop LCD only</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.ui" line="14"/>
-        <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="33"/>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="43"/>
-        <source>Saved settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="49"/>
-        <source>All:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="56"/>
-        <source>Hardware compatible:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="71"/>
-        <source>Rename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="78"/>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">自動</translation>
     </message>
 </context>
 <context>
@@ -346,12 +316,12 @@ Monitor configuration tool for LXQt.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timeoutdialog.ui" line="23"/>
+        <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timeoutdialog.cpp" line="52"/>
+        <location filename="../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
         <translation type="unfinished"></translation>
     </message>

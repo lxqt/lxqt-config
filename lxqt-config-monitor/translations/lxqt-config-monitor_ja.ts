@@ -4,37 +4,37 @@
 <context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="43"/>
+        <location filename="../monitor.cpp" line="52"/>
         <source>Laptop LCD Monitor</source>
         <translation>ラップトップ液晶モニター</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="45"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>External VGA Monitor</source>
         <translation>外部VGAモニター</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="45"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>VGA Monitor</source>
         <translation>VGAモニター</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="47"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>External DVI Monitor</source>
         <translation>外部DVIモニター</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="47"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>DVI Monitor</source>
         <translation>DVIモニター</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="49"/>
+        <location filename="../monitor.cpp" line="58"/>
         <source>TV</source>
         <translation>TV</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="51"/>
+        <location filename="../monitor.cpp" line="60"/>
         <source>Default Monitor</source>
         <translation>デフォルトのモニター</translation>
     </message>
@@ -48,14 +48,14 @@
     </message>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
-        <source>Magnetic attraction</source>
+        <source>Keep monitors attached</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MonitorSettingsDialog</name>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
+        <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
         <translation>モニターの設定</translation>
     </message>
@@ -80,232 +80,296 @@
         <translation type="vanished">外部モニターを無効にし、ラップトップ液晶画面のみ使う</translation>
     </message>
     <message>
+        <location filename="../monitorsettingsdialog.ui" line="71"/>
         <source>Settings</source>
-        <translation type="vanished">設定</translation>
+        <translation>設定</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="57"/>
         <source>Unify all monitors</source>
-        <translation>すべてのモニターの表示を共通にする</translation>
+        <translation type="vanished">すべてのモニターの表示を共通にする</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="64"/>
         <source>Monitor Position</source>
-        <translation>モニターの位置</translation>
+        <translation type="vanished">モニターの位置</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="84"/>
         <source>Primary monitor:</source>
-        <translation>プライマリーモニター:</translation>
+        <translation type="vanished">プライマリーモニター:</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="265"/>
         <source>Do you want to save changes?</source>
-        <translation>変更を保存しますか？</translation>
+        <translation type="vanished">変更を保存しますか？</translation>
     </message>
     <message>
         <source>Please, check your config before to save.</source>
         <translation type="vanished">保存する前に、設定結果を確認してください</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="266"/>
-        <source>Please, check the settings before saving.</source>
+        <location filename="../monitorsettingsdialog.cpp" line="91"/>
+        <source>Set position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="273"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="274"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="275"/>
-        <source>Actual</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="298"/>
+        <location filename="../monitorsettingsdialog.cpp" line="199"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="298"/>
+        <location filename="../monitorsettingsdialog.cpp" line="199"/>
         <source>Config can not be saved</source>
         <translation>設定を保存することができませんでした</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="218"/>
+        <source>Advanced settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MonitorWidget</name>
     <message>
-        <location filename="../monitorwidget.ui" line="23"/>
         <source>Turn on</source>
-        <translation>有効にする</translation>
+        <translation type="vanished">有効にする</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="30"/>
+        <location filename="../monitorwidget.ui" line="21"/>
+        <source>Setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="29"/>
+        <source> (x)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="45"/>
+        <source> (y)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
         <translation>解像度:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="40"/>
+        <location filename="../monitorwidget.ui" line="90"/>
+        <source>Enable this display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="98"/>
+        <source>This is my primary display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="103"/>
+        <source>This screen extends another display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="108"/>
+        <source>This screen clones another display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="119"/>
+        <source>Right of...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="124"/>
+        <source>Left of...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="129"/>
+        <source>Above...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="134"/>
+        <source>Below...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="139"/>
+        <source>Positioned manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="173"/>
+        <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="194"/>
+        <source>Refresh rate:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="201"/>
+        <source>Rotation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="224"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="230"/>
+        <source>Display information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Rate:</source>
-        <translation>リフレッシュレート:</translation>
+        <translation type="vanished">リフレッシュレート:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="58"/>
         <source>Hz</source>
-        <translation>Hz</translation>
+        <translation type="vanished">Hz</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="67"/>
         <source>Position:</source>
-        <translation>位置:</translation>
+        <translation type="vanished">位置:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="79"/>
         <source>x:</source>
-        <translation>X座標:</translation>
+        <translation type="vanished">X座標:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="96"/>
         <source>y:</source>
-        <translation>Y座標:</translation>
+        <translation type="vanished">Y座標:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="115"/>
         <source>Brightness:</source>
-        <translation>明るさ:</translation>
+        <translation type="vanished">明るさ:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="135"/>
         <source>Gamma:</source>
-        <translation>ガンマ:</translation>
+        <translation type="vanished">ガンマ:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="154"/>
-        <location filename="../monitorwidget.ui" line="171"/>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="vanished">:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="193"/>
         <source>Backlight:</source>
-        <translation>バックライト:</translation>
+        <translation type="vanished">バックライト:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="46"/>
-        <location filename="../monitorwidget.cpp" line="97"/>
         <source>Auto</source>
-        <translation>自動</translation>
+        <translation type="vanished">自動</translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="136"/>
+        <source>Name: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="137"/>
+        <source>Vendor: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="138"/>
+        <source>Serial: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="139"/>
+        <source>Display size: %1cm x %2cm
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="140"/>
+        <source>Serial number: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="141"/>
+        <source>EISA device ID: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="183"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="184"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="185"/>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="186"/>
+        <source>Inverted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="329"/>
+        <source>%1 Hz</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="291"/>
-        <location filename="../xrandr.cpp" line="297"/>
         <source>Auto</source>
-        <translation>自動</translation>
+        <translation type="vanished">自動</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="37"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">モニターの設定</translation>
+        <translation type="obsolete">モニターの設定</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="54"/>
         <source>Quick Options</source>
-        <translation type="unfinished">クイックオプション</translation>
+        <translation type="obsolete">クイックオプション</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="58"/>
         <source>Settings</source>
-        <translation type="unfinished">設定</translation>
-    </message>
-    <message>
-        <location filename="../main.cpp" line="66"/>
-        <source>Save settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">設定</translation>
     </message>
 </context>
 <context>
     <name>QuickOptions</name>
     <message>
-        <location filename="../quickoptions.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">モニターの設定</translation>
+        <translation type="obsolete">モニターの設定</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="33"/>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation type="unfinished">ラップトップ液晶パネルと外部モニターで同じ画面を表示</translation>
+        <translation type="obsolete">ラップトップ液晶パネルと外部モニターで同じ画面を表示</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="49"/>
         <source>Extended view</source>
-        <translation type="unfinished">拡張領域</translation>
+        <translation type="obsolete">拡張領域</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="65"/>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation type="unfinished">ラップトップ液晶画面を無効にし、外部モニターのみ使う</translation>
+        <translation type="obsolete">ラップトップ液晶画面を無効にし、外部モニターのみ使う</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="81"/>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation type="unfinished">外部モニターを無効にし、ラップトップ液晶画面のみ使う</translation>
+        <translation type="obsolete">外部モニターを無効にし、ラップトップ液晶画面のみ使う</translation>
     </message>
 </context>
 <context>
     <name>SaveSettings</name>
     <message>
-        <location filename="../savesettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">モニターの設定</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="33"/>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="43"/>
-        <source>Saved settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="49"/>
-        <source>All:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="56"/>
-        <source>Hardware compatible:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="71"/>
-        <source>Rename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="78"/>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">モニターの設定</translation>
     </message>
 </context>
 <context>
@@ -316,12 +380,12 @@
         <translation>設定は変更されました</translation>
     </message>
     <message>
-        <location filename="../timeoutdialog.ui" line="23"/>
+        <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
         <translation>この設定で問題ないですか？</translation>
     </message>
     <message>
-        <location filename="../timeoutdialog.cpp" line="52"/>
+        <location filename="../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
         <translation>残り %1 秒</translation>
     </message>

@@ -4,37 +4,37 @@
 <context>
     <name>MonitorInfo</name>
     <message>
-        <location filename="../monitor.cpp" line="43"/>
+        <location filename="../monitor.cpp" line="52"/>
         <source>Laptop LCD Monitor</source>
         <translation>Beépített LCD Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="45"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>External VGA Monitor</source>
         <translation>Külső LCD Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="45"/>
+        <location filename="../monitor.cpp" line="54"/>
         <source>VGA Monitor</source>
         <translation>VGA Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="47"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>External DVI Monitor</source>
         <translation>Külső DVI Monitor</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="47"/>
+        <location filename="../monitor.cpp" line="56"/>
         <source>DVI Monitor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="49"/>
+        <location filename="../monitor.cpp" line="58"/>
         <source>TV</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="51"/>
+        <location filename="../monitor.cpp" line="60"/>
         <source>Default Monitor</source>
         <translation>Alapértelmezett Monitor</translation>
     </message>
@@ -48,14 +48,18 @@
     </message>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
+        <source>Keep monitors attached</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Magnetic attraction</source>
-        <translation>Mégneses elhajlás</translation>
+        <translation type="vanished">Mégneses elhajlás</translation>
     </message>
 </context>
 <context>
     <name>MonitorSettingsDialog</name>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
+        <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
         <translation>Monitor beállítás</translation>
     </message>
@@ -80,232 +84,276 @@
         <translation type="vanished">Külső monor lekapcsolása és csak a belső LCD használata</translation>
     </message>
     <message>
+        <location filename="../monitorsettingsdialog.ui" line="71"/>
         <source>Settings</source>
-        <translation type="vanished">beállítások</translation>
+        <translation>beállítások</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="57"/>
         <source>Unify all monitors</source>
-        <translation>Monitorok összevonása</translation>
+        <translation type="vanished">Monitorok összevonása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="64"/>
         <source>Monitor Position</source>
-        <translation>Monitor helyzet</translation>
+        <translation type="vanished">Monitor helyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="84"/>
         <source>Primary monitor:</source>
-        <translation>Elsődleges monitor:</translation>
+        <translation type="vanished">Elsődleges monitor:</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="265"/>
         <source>Do you want to save changes?</source>
-        <translation>Változtatások mentése?</translation>
+        <translation type="vanished">Változtatások mentése?</translation>
     </message>
     <message>
         <source>Please, check your config before to save.</source>
         <translation type="vanished">Mentés előtt ellenőrizd a beállításokat!</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="266"/>
-        <source>Please, check the settings before saving.</source>
+        <location filename="../monitorsettingsdialog.cpp" line="91"/>
+        <source>Set position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="273"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="274"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="275"/>
-        <source>Actual</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="298"/>
+        <location filename="../monitorsettingsdialog.cpp" line="199"/>
         <source>Error</source>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="298"/>
+        <location filename="../monitorsettingsdialog.cpp" line="199"/>
         <source>Config can not be saved</source>
         <translation>A beállítás mentetlen</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="218"/>
+        <source>Advanced settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MonitorWidget</name>
     <message>
-        <location filename="../monitorwidget.ui" line="23"/>
         <source>Turn on</source>
-        <translation>Bekapcsolás</translation>
+        <translation type="vanished">Bekapcsolás</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="30"/>
+        <location filename="../monitorwidget.ui" line="21"/>
+        <source>Setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="29"/>
+        <source> (x)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="45"/>
+        <source> (y)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
         <translation>Felbontás:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="40"/>
+        <location filename="../monitorwidget.ui" line="90"/>
+        <source>Enable this display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="98"/>
+        <source>This is my primary display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="103"/>
+        <source>This screen extends another display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="108"/>
+        <source>This screen clones another display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="119"/>
+        <source>Right of...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="124"/>
+        <source>Left of...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="129"/>
+        <source>Above...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="134"/>
+        <source>Below...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="139"/>
+        <source>Positioned manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="173"/>
+        <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="194"/>
+        <source>Refresh rate:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="201"/>
+        <source>Rotation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="224"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.ui" line="230"/>
+        <source>Display information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Rate:</source>
-        <translation>Arány:</translation>
+        <translation type="vanished">Arány:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="58"/>
-        <source>Hz</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="67"/>
         <source>Position:</source>
-        <translation>Helyzet:</translation>
+        <translation type="vanished">Helyzet:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="79"/>
-        <source>x:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="96"/>
-        <source>y:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="115"/>
         <source>Brightness:</source>
-        <translation>Fényerő:</translation>
+        <translation type="vanished">Fényerő:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="135"/>
-        <source>Gamma:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="154"/>
-        <location filename="../monitorwidget.ui" line="171"/>
-        <source>:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="193"/>
         <source>Backlight:</source>
-        <translation>Háttérfény:</translation>
+        <translation type="vanished">Háttérfény:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="46"/>
-        <location filename="../monitorwidget.cpp" line="97"/>
         <source>Auto</source>
-        <translation>Automata</translation>
+        <translation type="vanished">Automata</translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="136"/>
+        <source>Name: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="137"/>
+        <source>Vendor: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="138"/>
+        <source>Serial: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="139"/>
+        <source>Display size: %1cm x %2cm
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="140"/>
+        <source>Serial number: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="141"/>
+        <source>EISA device ID: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="183"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="184"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="185"/>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="186"/>
+        <source>Inverted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorwidget.cpp" line="329"/>
+        <source>%1 Hz</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../xrandr.cpp" line="291"/>
-        <location filename="../xrandr.cpp" line="297"/>
         <source>Auto</source>
-        <translation>Automata</translation>
+        <translation type="vanished">Automata</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="37"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">Monitor beállítás</translation>
+        <translation type="obsolete">Monitor beállítás</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="54"/>
         <source>Quick Options</source>
-        <translation type="unfinished">Gyors lehetőségek</translation>
+        <translation type="obsolete">Gyors lehetőségek</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="58"/>
         <source>Settings</source>
-        <translation type="unfinished">beállítások</translation>
-    </message>
-    <message>
-        <location filename="../main.cpp" line="66"/>
-        <source>Save settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">beállítások</translation>
     </message>
 </context>
 <context>
     <name>QuickOptions</name>
     <message>
-        <location filename="../quickoptions.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">Monitor beállítás</translation>
+        <translation type="obsolete">Monitor beállítás</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="33"/>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation type="unfinished">Azonos kép a beépített LCD és külső monitoron</translation>
+        <translation type="obsolete">Azonos kép a beépített LCD és külső monitoron</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="49"/>
         <source>Extended view</source>
-        <translation type="unfinished">Bővített megjelenítés</translation>
+        <translation type="obsolete">Bővített megjelenítés</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="65"/>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation type="unfinished">Beépített LCD kikapcsolása és csak a külső használata</translation>
+        <translation type="obsolete">Beépített LCD kikapcsolása és csak a külső használata</translation>
     </message>
     <message>
-        <location filename="../quickoptions.ui" line="81"/>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation type="unfinished">Külső monor lekapcsolása és csak a belső LCD használata</translation>
+        <translation type="obsolete">Külső monor lekapcsolása és csak a belső LCD használata</translation>
     </message>
 </context>
 <context>
     <name>SaveSettings</name>
     <message>
-        <location filename="../savesettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">Monitor beállítás</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="33"/>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="43"/>
-        <source>Saved settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="49"/>
-        <source>All:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="56"/>
-        <source>Hardware compatible:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="71"/>
-        <source>Rename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.ui" line="78"/>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Monitor beállítás</translation>
     </message>
 </context>
 <context>
@@ -316,12 +364,12 @@
         <translation>Beállítások változtatása</translation>
     </message>
     <message>
-        <location filename="../timeoutdialog.ui" line="23"/>
+        <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
         <translation>Jók a beállítások?</translation>
     </message>
     <message>
-        <location filename="../timeoutdialog.cpp" line="52"/>
+        <location filename="../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
         <translation>%1 másodperc van hátra</translation>
     </message>

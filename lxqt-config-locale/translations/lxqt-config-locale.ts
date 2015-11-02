@@ -64,32 +64,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="118"/>
+        <location filename="../localeconfig.cpp" line="119"/>
         <source>No change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="306"/>
+        <location filename="../localeconfig.cpp" line="308"/>
         <source>Format Settings Changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="307"/>
+        <location filename="../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="428"/>
+        <location filename="../localeconfig.cpp" line="430"/>
         <source>Imperial UK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="432"/>
+        <location filename="../localeconfig.cpp" line="434"/>
         <source>Imperial US</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="436"/>
+        <location filename="../localeconfig.cpp" line="438"/>
         <source>Metric</source>
         <translation type="unfinished"></translation>
     </message>

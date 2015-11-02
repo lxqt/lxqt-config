@@ -66,6 +66,11 @@
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../keyboardconfig.ui" line="167"/>
+        <source>Turn on NumLock after login</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardLayoutConfig</name>

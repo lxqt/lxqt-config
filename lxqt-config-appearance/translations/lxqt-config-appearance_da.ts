@@ -141,47 +141,40 @@
 <context>
     <name>LXQtThemeConfig</name>
     <message>
-        <source>LXQt Theme</source>
-        <translation type="vanished">LXQt Tema</translation>
-    </message>
-</context>
-<context>
-    <name>LXQtThemeConfig</name>
-    <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished">LXQt Tema</translation>
+        <translation>LXQt Tema</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="45"/>
+        <location filename="../main.cpp" line="46"/>
         <source>LXQt Appearance Configuration</source>
         <translation>LXQt Indstillinger for Udseende</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="51"/>
+        <location filename="../main.cpp" line="52"/>
         <source>Widget Style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="56"/>
         <source>Icons Theme</source>
         <translation>Ikontema</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="59"/>
+        <location filename="../main.cpp" line="60"/>
         <source>LXQt Theme</source>
         <translation>LXQt Tema</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="63"/>
+        <location filename="../main.cpp" line="64"/>
         <source>Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="68"/>
+        <location filename="../main.cpp" line="69"/>
         <source>Cursor</source>
         <translation type="unfinished"></translation>
     </message>
