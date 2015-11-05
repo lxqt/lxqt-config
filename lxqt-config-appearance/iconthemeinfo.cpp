@@ -139,10 +139,12 @@ QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
             bool found = false;
             for (int i = 0; i < numEntries; ++i) {
                 QIconLoaderEngineEntry *entry = info.entries.at(i);
+                if (directoryMatchesSize(entry->dir, PREVIEW_ICON_SIZE)) {
                     icons.append(QIcon(entry->filename));
                     found = true;
                     break;
                 }
+            }
             if (!found) {  // No exact match. Search for an approximation
                 // Find the minimum distance icon
                 int minimalSize = INT_MAX;
