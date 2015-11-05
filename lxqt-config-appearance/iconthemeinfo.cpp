@@ -9,7 +9,7 @@
  *   Alexander Sokoloff <sokoloff.a@gmail.com>
  *   Luis Pereira <luis.artur.pereira@gmail.com>
  *
- * The directoryMatchesSize() and thedirectorySizeDistance() functions were
+ * The directorySizeDistance() function was
  * taken from Qt5 qtbase/src/gui/image/qiconloader.cpp
  * Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies).
  *
@@ -40,29 +40,6 @@
 #define PREVIEW_ICON_SIZE 22
 
 using namespace QtXdg;
-
-/*
- * This algorithm is defined by the freedesktop spec:
- * http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
- */
-static bool directoryMatchesSize(const QIconDirInfo &dir, int iconsize)
-{
-    if (dir.type == QIconDirInfo::Fixed) {
-        return dir.size == iconsize;
-
-    } else if (dir.type == QIconDirInfo::Scalable) {
-        return dir.size <= dir.maxSize &&
-                iconsize >= dir.minSize;
-
-    } else if (dir.type == QIconDirInfo::Threshold) {
-        return iconsize >= dir.size - dir.threshold &&
-                iconsize <= dir.size + dir.threshold;
-    }
-
-    Q_ASSERT(1); // Not a valid value
-    return false;
-}
-
 
 /*
  * This algorithm is defined by the freedesktop spec:
