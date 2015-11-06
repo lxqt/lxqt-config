@@ -183,15 +183,15 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     QString autostartPath;
     bool ok = true;
     if(qEnvironmentVariableIsSet("XDG_CONFIG_HOME"))
-        autostartPath = QString(qgetenv("XDG_CONFIG_HOME"));
+        autostartPath = QString(qgetenv("XDG_CONFIG_HOME")) + "/autostart/";
     else
-    {
          autostartPath = QDir::homePath() + "/.config/autostart/";
-        // Check if ~/.config/autostart/ exists
-        QFileInfo fileInfo(autostartPath);
-        if( ! fileInfo.exists() )
-            ok = QDir::root().mkpath(autostartPath);
-    }
+    
+    // Check if ~/.config/autostart/ exists
+    QFileInfo fileInfo(autostartPath);
+    if( ! fileInfo.exists() )
+        ok = QDir::root().mkpath(autostartPath);
+    
     QFile file(autostartPath + "/lxqt-config-monitor-autostart.desktop");
     if(ok)
             ok = file.open(QIODevice::WriteOnly | QIODevice::Text);
