@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>KeyboardConfig</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Kurzos villogási idő</translation>
+        <translation>Kurzos villogási idő:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -53,12 +53,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Ismétlési időköz</translation>
+        <translation>Ismétlési időköz:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Írj ide valamit tesztelésre!</translation>
+        <translation>Írj ide valamit tesztelésre</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Numlok bekapcsolása bejelenkezéskor</translation>
     </message>
 </context>
 <context>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Gördítő sorok</translation>
+        <translation>Gördítő sorok:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>

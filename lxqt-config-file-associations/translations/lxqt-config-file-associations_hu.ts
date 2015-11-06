@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>ApplicationChooser</name>
     <message>
@@ -59,12 +59,12 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="204"/>
         <source>&amp;Change...</source>
-        <translation>&amp;Változtat</translation>
+        <translation>&amp;Változtat...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="209"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Választás</translation>
+        <translation>&amp;Választás...</translation>
     </message>
 </context>
 <context>
