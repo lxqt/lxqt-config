@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>SelectWnd</name>
     <message>
@@ -21,11 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>Téma kiny&amp;írása</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation type="vanished">&amp;Bezárás</translation>
+        <translation>Téma tö&amp;rlése</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="208"/>
