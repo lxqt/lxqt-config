@@ -33,6 +33,8 @@
 #include <QtDebug>
 #include <QMessageBox>
 #include <QStyledItemDelegate>
+#include <QShortcut>
+#include <QKeySequence>
 
 #include <XdgDesktopFile>
 #include <XdgIcon>
@@ -214,6 +216,7 @@ LXQtConfig::MainWindow::MainWindow() : QMainWindow()
     view->setFocus();
 
     QTimer::singleShot(1, this, SLOT(load()));
+    new QShortcut{QKeySequence{Qt::CTRL + Qt::Key_Q}, this, SLOT(close())};
 }
 
 bool LXQtConfig::MainWindow::event(QEvent* event)
