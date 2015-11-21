@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT" sourcelanguage="it_IT">
+<TS version="2.0" language="it_IT" sourcelanguage="it_IT">
 <context>
     <name>ApplicationChooser</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Scegli un applicazione per:</translation>
+        <translation>Scegli un&apos;applicazione per:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -29,7 +29,7 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation></translation>
+        <translation>Nuovo sottoelemento</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
@@ -87,17 +87,17 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation></translation>
+        <translation>EtichettaTesto</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
         <source>None</source>
-        <translation></translation>
+        <translation>Nessuna</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
         <source>Patterns</source>
-        <translation>Tipi di file</translation>
+        <translation>Modelli</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>

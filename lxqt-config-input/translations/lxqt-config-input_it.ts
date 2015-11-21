@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it">
+<TS version="2.0" language="it">
 <context>
     <name>KeyboardConfig</name>
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulo</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Emetti un beep per gli errori di input da tastiera</translation>
+        <translation>Emetti un bip per gli errori di input da tastiera</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
@@ -42,23 +42,23 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Attesa ripetizione:</translation>
+        <translation>Ritardo di ripetizione:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation>Corto</translation>
+        <translation>Breve</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Intervallo ripetizione:</translation>
+        <translation>Intervallo di ripetizione:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Scrivere nella casella sottostante per provare le impostazioni della tastiera</translation>
+        <translation>Digita nella casella sottostante per provare le impostazioni della tastiera</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva il tastierino numerico dopo l&apos;accesso</translation>
     </message>
 </context>
 <context>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation>Mappatura della tastiera</translation>
+        <translation>&lt;b&gt;Mappatura della tastiera&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Scorciatoia per cambio mappatura:</translation>
+        <translation>Scorciatoia per cambiare la mappa:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -127,86 +127,86 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;b&gt;Nota:&lt;/b&gt; Se viene usato un metodo di input come IBus, uim, fcitx o gcin questi settaggi potrebbero non avere effetto.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: se utilizzi un viene usato un&lt;span style=&quot; font-weight:600;&quot;&gt;metodo di inserimento&lt;/span&gt; come IBus, uim, fcitx o gcin, queste impostazioni &lt;span style=&quot; font-weight:600;&quot;&gt;potrebbero non funzionare&lt;/span&gt; poiché sono scavalcate dai metodi di inserimento.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>MainDialog</name>
     <message>
         <source>Input Device Preferences</source>
-        <translation type="vanished">Preferenze dei dispositivi di ingresso</translation>
+        <translation>Preferenze dei dispositivi di inserimento</translation>
     </message>
     <message>
         <source>Motion</source>
-        <translation type="vanished">Movimento</translation>
+        <translation>Movimento</translation>
     </message>
     <message>
         <source>High</source>
-        <translation type="vanished">Alta</translation>
+        <translation>Alta</translation>
     </message>
     <message>
         <source>Fast</source>
-        <translation type="vanished">Veloce</translation>
+        <translation>Veloce</translation>
     </message>
     <message>
         <source>Sensitivity:</source>
-        <translation type="vanished">Sensibilità:</translation>
+        <translation>Sensibilità:</translation>
     </message>
     <message>
         <source>Low</source>
-        <translation type="vanished">Bassa</translation>
+        <translation>Bassa</translation>
     </message>
     <message>
         <source>Acceleration:</source>
-        <translation type="vanished">Accelerazione:</translation>
+        <translation>Accelerazione:</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation type="vanished">Lenta</translation>
+        <translation>Lenta</translation>
     </message>
     <message>
         <source>0</source>
-        <translation type="vanished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="vanished">Mancino (inverte tasto destro e sinistro del mouse)</translation>
+        <translation>Mancino (inverte tasto destro e sinistro del mouse)</translation>
     </message>
     <message>
         <source>Mouse</source>
-        <translation type="vanished">Mouse</translation>
+        <translation>Mouse</translation>
     </message>
     <message>
         <source>Character Repeat</source>
-        <translation type="vanished">Ripetizione caratteri</translation>
+        <translation>Ripetizione caratteri</translation>
     </message>
     <message>
         <source>Long</source>
-        <translation type="vanished">Lungo</translation>
+        <translation>Lungo</translation>
     </message>
     <message>
         <source>Repeat delay:</source>
-        <translation type="vanished">Attesa ripetizione:</translation>
+        <translation>Ritardo di ripetizione:</translation>
     </message>
     <message>
         <source>Short</source>
-        <translation type="vanished">Corto</translation>
+        <translation>Corto</translation>
     </message>
     <message>
         <source>Repeat interval:</source>
-        <translation type="vanished">Intervallo ripetizione:</translation>
+        <translation>Intervallo di ripetizione:</translation>
     </message>
     <message>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation type="vanished">Scrivere nella casella sottostante per provare le impostazioni della tastiera</translation>
+        <translation>Digita nella casella sottostante per provare le impostazioni della tastiera</translation>
     </message>
     <message>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="vanished">Emetti un beep per gli errori di input da tastiera</translation>
+        <translation>Emetti un bip per gli errori di inserimento da tastiera</translation>
     </message>
     <message>
         <source>Keyboard</source>
-        <translation type="vanished">Tastiera</translation>
+        <translation>Tastiera</translation>
     </message>
 </context>
 <context>
@@ -214,12 +214,12 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulo</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Mouse&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
@@ -275,7 +275,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Righe che scrolla la rotella:</translation>
+        <translation>Righe che scorre la rotella:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
@@ -321,12 +321,12 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>Selezione una mappatura</translation>
+        <translation>Seleziona una mappa della tastiera</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>&lt;b&gt;Mappatura della tastiera&gt;&lt;/b&gt;</translation>
+        <translation>Mappa della tastiera</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>

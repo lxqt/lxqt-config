@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>SelectWnd</name>
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Configurazione del aspetto del cursore</translation>
+        <translation>Configurazione del tema di puntatori di LXQt</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translatorcomment>hover seems not working, and restart seems not necessary to take effect</translatorcomment>
-        <translation>Seleziona il tema del cursore che vuoi utilizzare </translation>
+        <translation>Seleziona il tema dei puntatori che vuoi utilizzare (passa sull&apos;anteprima per provare il puntatore). &lt;b&gt;La sessione di LXQt deve essere riavviata dopo questa modifica&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
         <translatorcomment>&amp; to remove in source</translatorcomment>
-        <translation>Installa un nuovo tema...</translation>
+        <translation>&amp;Installa nuovo tema...</translation>
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation type="vanished">&amp;Imposta il tema</translation>
+        <translation>&amp;Imposta tema</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>Rimuovi il tema</translation>
+        <translation>&amp;Rimuovi tema</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="vanished">&amp;Chiudi</translation>
+        <translation>&amp;Chiudi</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="208"/>
         <source>XCurTheme error</source>
-        <translation>Errore tema X-cursore</translation>
+        <translation>Errore XCurTheme</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="209"/>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Modulo</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt non ha trovato nessun tema per i cursori in queste directories: (Verrà usato il tema di default di X11):</translation>
+        <translation>LXQt non ha trovato alcun tema di puntatori in queste cartelle. Sarà utilizzato il tema predefinito di X11. LXQt ha cercato nelle seguenti cartelle:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
