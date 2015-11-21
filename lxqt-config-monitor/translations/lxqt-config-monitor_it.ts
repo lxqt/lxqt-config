@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT" sourcelanguage="it_IT">
+<TS version="2.0" language="it_IT" sourcelanguage="it_IT">
 <context>
     <name>MonitorInfo</name>
     <message>
         <location filename="../monitor.cpp" line="52"/>
         <source>Laptop LCD Monitor</source>
-        <translation>Monitor portatile LCD</translation>
+        <translation>Monitor LCD portatile</translation>
     </message>
     <message>
         <location filename="../monitor.cpp" line="54"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../monitor.cpp" line="60"/>
         <source>Default Monitor</source>
-        <translation>Monitor principale</translation>
+        <translation>Monitor predefinito</translation>
     </message>
 </context>
 <context>
@@ -44,16 +44,16 @@
     <message>
         <location filename="../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation></translation>
+        <translation>Finestra</translation>
     </message>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantieni i monitor collegati</translation>
     </message>
     <message>
         <source>Magnetic attraction</source>
-        <translation type="vanished">Attrazione magnetica</translation>
+        <translation>Attrazione magnetica</translation>
     </message>
 </context>
 <context>
@@ -65,23 +65,23 @@
     </message>
     <message>
         <source>Quick Options</source>
-        <translation type="vanished">Opzioni veloci</translation>
+        <translation>Opzioni rapide</translation>
     </message>
     <message>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation type="vanished">Unifica uscite</translation>
+        <translation>Mostra lo stesso schermo sullo schermo LCD del portatile e sul monitor esterno</translation>
     </message>
     <message>
         <source>Extended view</source>
-        <translation type="vanished">Vista estesa</translation>
+        <translation>Vista estesa</translation>
     </message>
     <message>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation type="vanished">Spegni monitor portatile LCD e usa solo monitor esterno</translation>
+        <translation>Spegni monitor lo schermo LCD del portatile e usa solo il monitor esterno</translation>
     </message>
     <message>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation type="vanished">Spegni monitor esterno e usa solo monitor LCD</translation>
+        <translation>Spegni monitor esterno e usa lo schermo LCD del portatile</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="71"/>
@@ -90,28 +90,28 @@
     </message>
     <message>
         <source>Unify all monitors</source>
-        <translation type="vanished">Unisci tutte le uscite</translation>
+        <translation>Unfica tutte le uscite</translation>
     </message>
     <message>
         <source>Monitor Position</source>
-        <translation type="vanished">Posizione dello schermo</translation>
+        <translation>Posizione dello schermo</translation>
     </message>
     <message>
         <source>Primary monitor:</source>
-        <translation type="vanished">Monitor principale:</translation>
+        <translation>Schermo principale:</translation>
     </message>
     <message>
         <source>Do you want to save changes?</source>
-        <translation type="vanished">Salvare i cambiamenti?</translation>
+        <translation>Vuoi salvare le modifiche?</translation>
     </message>
     <message>
         <source>Please, check your config before to save.</source>
-        <translation type="vanished">Per favore controlla la configurazione prima di salvare.</translation>
+        <translation>Controlla la configurazione prima di salvare.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="91"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>Imposta la posizione</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="199"/>
@@ -126,29 +126,29 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="218"/>
         <source>Advanced settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni avanzate</translation>
     </message>
 </context>
 <context>
     <name>MonitorWidget</name>
     <message>
         <source>Turn on</source>
-        <translation type="vanished">Accendi</translation>
+        <translation>Accendi</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurazione</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="29"/>
         <source> (x)</source>
-        <translation type="unfinished"></translation>
+        <translation> (x)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="45"/>
         <source> (y)</source>
-        <translation type="unfinished"></translation>
+        <translation> (y)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="78"/>
@@ -158,160 +158,165 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita questo schermo</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo è il mio schermo principale</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo schermo estende un altro schermo</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="108"/>
         <source>This screen clones another display</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo schermo clona un altro schermo</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="119"/>
         <source>Right of...</source>
-        <translation type="unfinished"></translation>
+        <translation>A destra di...</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="124"/>
         <source>Left of...</source>
-        <translation type="unfinished"></translation>
+        <translation>A sinistra di...</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="129"/>
         <source>Above...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sopra...</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="134"/>
         <source>Below...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sotto...</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="139"/>
         <source>Positioned manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Posizionato manualmente</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="173"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Avanzate</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="194"/>
         <source>Refresh rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervallo di aggiornamento:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="201"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotazione:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="224"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="230"/>
         <source>Display information</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sullo schermo</translation>
     </message>
     <message>
         <source>Rate:</source>
-        <translation type="vanished">Frequenza:</translation>
+        <translation>Frequenza:</translation>
     </message>
     <message>
         <source>Position:</source>
-        <translation type="vanished">Posizione:</translation>
+        <translation>Posizione:</translation>
     </message>
     <message>
         <source>Brightness:</source>
-        <translation type="vanished">Luminosità:</translation>
+        <translation>Luminosità:</translation>
     </message>
     <message>
         <source>Backlight:</source>
-        <translation type="vanished">Retroilluminazione:</translation>
+        <translation>Retroilluminazione:</translation>
     </message>
     <message>
         <source>Auto</source>
-        <translation type="vanished">Auto</translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Name: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Nome: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Vendor: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Produttore: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Serial: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Seriale: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="139"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensioni dello schermo: %1cm x %2cm
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>Serial number: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di serie: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="141"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ID di dispositivo EISA: %1</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="184"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinistra</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="185"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Destra</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="186"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Inversa</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="329"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Auto</source>
-        <translation type="vanished">Auto</translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <source>Monitor Settings</source>
@@ -361,12 +366,12 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>Impostazione modificate</translation>
+        <translation>Le impostazioni sono cambiate</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Mantenere questa configurazione?</translation>
+        <translation>Vuoi mantenere questa configurazione?</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.cpp" line="62"/>

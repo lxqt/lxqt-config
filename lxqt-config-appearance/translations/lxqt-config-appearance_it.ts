@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it">
+<TS version="2.0" language="it">
 <context>
     <name>FontsConfig</name>
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation>Caratteri</translation>
+        <translation>Carattere</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Carattere generale</translation>
+        <translation>Carattere predefinito per l&apos;interfaccia utente</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -51,17 +51,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Le impostazioni riguardano solo le applicazioni avviate nuovamente</translation>
+        <translation>Le impostazioni riguardano solo le applicazioni appena avviate</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Utilizza anti-aliasing per i caratteri</translation>
+        <translation>Utilizza l&apos;anti-aliasing per i caratteri</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Stile di hinting</translation>
+        <translation>Stile di hinting del carattere:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation>Forte</translation>
+        <translation>Intero</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Centro di Configurazione LXQt</translation>
+        <translation>Centro di configurazione LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../main.cpp" line="46"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Centro di Configurazione LXQt</translation>
+        <translation>Centro di configurazione LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
@@ -172,12 +172,12 @@
     <message>
         <location filename="../main.cpp" line="64"/>
         <source>Font</source>
-        <translation>Caratteri</translation>
+        <translation>Carattere</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="69"/>
         <source>Cursor</source>
-        <translation>Cursore</translation>
+        <translation>Puntatore</translation>
     </message>
 </context>
 <context>
@@ -195,32 +195,32 @@
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation>Mostra solo icone</translation>
+        <translation>Mostra solo l&apos;icona</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation>Mostra solo testo</translation>
+        <translation>Mostra solo il testo</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation>Testo accanto le icone</translation>
+        <translation>Testo accanto all&apos;icona</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation>Testo sotto le icone</translation>
+        <translation>Testo sotto l&apos;icona</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Predefinito</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation>Attiva elementi con clic singolo</translation>
+        <translation>Attiva elementi con un clic singolo</translation>
     </message>
 </context>
 </TS>
