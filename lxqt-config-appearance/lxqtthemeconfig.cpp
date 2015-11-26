@@ -30,6 +30,30 @@
 #include <QTreeWidget>
 #include <QDebug>
 #include <QProcess>
+#include <QItemDelegate>
+#include <QPainter>
+
+/*!
+ * \brief Simple delegate to draw system background color below decoration/icon
+ * (needed by System theme, which uses widget background and therefore provides semi-transparent preview)
+ */
+class ThemeDecorator : public QItemDelegate
+{
+public:
+    using QItemDelegate::QItemDelegate;
+protected:
+    virtual void drawDecoration(QPainter * painter, const QStyleOptionViewItem & option, const QRect & rect, const QPixmap & pixmap) const override
+    {
+        //Note: can't use QItemDelegate::drawDecoration, because it is ignoring pixmap,
+        //if the icon is valid (and that is set in paint())
+        if (pixmap.isNull() || !rect.isValid())
+            return;
+
+        QPoint p = QStyle::alignedRect(option.direction, option.decorationAlignment, pixmap.size(), rect).topLeft();
+        painter->fillRect(QRect{p, pixmap.size()}, QApplication::palette().color(QPalette::Window));
+        painter->drawPixmap(p, pixmap);
+    }
+};
 
 LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
@@ -37,6 +61,10 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     mSettings(settings)
 {
     ui->setupUi(this);
+    {
+        QScopedPointer<QAbstractItemDelegate> p{ui->lxqtThemeList->itemDelegate()};
+        ui->lxqtThemeList->setItemDelegate(new ThemeDecorator{this});
+    }
 
     connect(ui->lxqtThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(lxqtThemeSelected(QTreeWidgetItem*,int)));
