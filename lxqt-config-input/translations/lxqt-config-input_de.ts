@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>NUM-Taste nach dem Einloggen einschalten</translation>
     </message>
 </context>
 <context>
