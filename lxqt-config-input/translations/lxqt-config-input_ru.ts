@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Форма</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Пищать об ошибке ввода с клавиатуры</translation>
+        <translation>Пищать при ошибке ввода с клавиатуры</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -64,12 +64,12 @@
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Включать NumLock при логине</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание&lt;/span&gt;: Если вы используете &lt;span style=&quot; font-weight:600;&quot;&gt;метод ввода&lt;/span&gt;, такой как IBus, uim, fcitx, или gcin, настройки здесь &lt;span style=&quot; font-weight:600;&quot;&gt;могут не работать&lt;/span&gt; поскольку они переопределятся этим методом ввода.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание&lt;/span&gt;: если вы используете &lt;span style=&quot; font-weight:600;&quot;&gt;метод ввода&lt;/span&gt;, такой как IBus, uim, fcitx или gcin, настройки здесь &lt;span style=&quot; font-weight:600;&quot;&gt;могут не работать&lt;/span&gt;, поскольку они переопределятся этим методом ввода.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Форма</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
@@ -181,7 +181,7 @@
         <location filename="../mouseconfig.ui" line="116"/>
         <location filename="../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
