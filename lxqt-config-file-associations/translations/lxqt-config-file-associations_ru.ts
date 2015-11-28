@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>ApplicationChooser</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
@@ -29,7 +29,7 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation type="unfinished"></translation>
+        <translation>Новый элемент</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
@@ -40,12 +40,12 @@
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>Приложение, которое поддерживает %1</translation>
+        <translation>Приложения, которые поддерживают %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>Не найдены приложения</translation>
+        <translation>Приложения не найдены</translation>
     </message>
 </context>
 <context>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Ассоциация файлов</translation>
+        <translation>Ассоциации файлов</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>

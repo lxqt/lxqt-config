@@ -130,12 +130,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Меню программ</translation>
+        <translation>Настройка внешнего вида LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Иконки темы</translation>
+        <translation>Тема иконок</translation>
     </message>
 </context>
 <context>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>LXQt Theme</source>
-        <translation>LXQt темы</translation>
+        <translation>Тема LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
