@@ -66,10 +66,19 @@ target_link_libraries(lxqt-config-input
     lxqt-config-cursor
 )
 
-set_target_properties(lxqt-config-input
-    PROPERTIES
-    INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/${LXQT_CONFIG_PROJECT}"
-)
+
+if(IS_ABSOLUTE ${CMAKE_INSTALL_LIBDIR})
+  set_target_properties(lxqt-config-input
+      PROPERTIES
+      INSTALL_RPATH "${CMAKE_INSTALL_LIBDIR}/${LXQT_CONFIG_PROJECT}"
+  )
+else(IS_ABSOLUTE ${CMAKE_INSTALL_LIBDIR})
+  set_target_properties(lxqt-config-input
+      PROPERTIES
+      INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/${LXQT_CONFIG_PROJECT}"
+  )
+endif(IS_ABSOLUTE ${CMAKE_INSTALL_LIBDIR})
+
 
 install(TARGETS
     lxqt-config-input
