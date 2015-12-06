@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Включать NumLock при логине</translation>
+        <translation>Включать NumLock при входе в систему</translation>
     </message>
 </context>
 <context>
