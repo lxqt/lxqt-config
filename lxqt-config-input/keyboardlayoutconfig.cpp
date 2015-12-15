@@ -94,8 +94,8 @@ enum ListSection{
 
 void KeyboardLayoutConfig::loadLists() {
   // load known lists from xkb data files
-  // FIXME: maybe we should use different files for different OSes?
-  QFile file(QLatin1String("/usr/share/X11/xkb/rules/base.lst"));
+  // XKBD_BASELIST_PATH is os dependent see keyboardlayoutconfig.h
+  QFile file(QLatin1String(XKBD_BASELIST_PATH));
   if(file.open(QIODevice::ReadOnly)) {
     ListSection section = NoSection;
     while(!file.atEnd()) {
