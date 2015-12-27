@@ -10,6 +10,7 @@ set(HEADERS
     monitorpicture.h
     loadsettings.h
     settingsdialog.h
+    managesavedsettings.h
 )
 
 set(SOURCES
@@ -21,6 +22,7 @@ set(SOURCES
     monitorpicture.cpp
     loadsettings.cpp
     settingsdialog.cpp
+    managesavedsettings.cpp
 )
 
 set(UIS
@@ -28,6 +30,7 @@ set(UIS
     monitorwidget.ui
     timeoutdialog.ui
     monitorpicture.ui
+    managesavedsettings.ui
 )
 
 set(ICONS

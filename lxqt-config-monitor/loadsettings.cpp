@@ -52,6 +52,15 @@ void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
     QJsonDocument document = QJsonDocument::fromJson( settings.value("currentConfig").toByteArray() );
     QJsonObject json = document.object();
     QJsonArray array = json["outputs"].toArray();
+
+    applyJsonSettings(config, array);
+
+    exit(0);
+}
+
+
+void applyJsonSettings(KScreen::ConfigPtr config, QJsonArray array)
+{
     KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs)
     {
@@ -83,7 +92,5 @@ void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
 
     if (KScreen::Config::canBeApplied(config))
         KScreen::SetConfigOperation(config).exec();
-
-    exit(0);
 }
 

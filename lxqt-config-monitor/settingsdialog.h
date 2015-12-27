@@ -21,6 +21,8 @@
 
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
+#include <KScreen/GetConfigOperation>
+#include <KScreen/SetConfigOperation>
 
 
 class SettingsDialog : public LXQt::ConfigDialog
@@ -28,7 +30,7 @@ class SettingsDialog : public LXQt::ConfigDialog
     Q_OBJECT
 
 public:
-    SettingsDialog(const QString &title, LXQt::Settings *settings, QWidget *parent = 0);
+    SettingsDialog(const QString &title, LXQt::Settings *settings, KScreen::ConfigPtr config, QWidget *parent = 0);
 
 private Q_SLOTS:
 

@@ -22,6 +22,7 @@
 
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
+#include <QJsonArray>
 
 class LoadSettings : public QObject
 {
@@ -38,5 +39,10 @@ private:
     // Configutarions
     KScreen::ConfigPtr mConfig;
 };
+
+/*! Apply settings in Json format.
+ */
+void applyJsonSettings(KScreen::ConfigPtr config, QJsonArray array);
+
 
 #endif // __LOADSETTINGS_H__

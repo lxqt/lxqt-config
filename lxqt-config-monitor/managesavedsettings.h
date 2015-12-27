@@ -16,19 +16,43 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include "settingsdialog.h"
-#include "managesavedsettings.h"
+
+#ifndef _SAVESETTINGS_H_
+#define _SAVESETTINGS_H_
+
+#include "ui_managesavedsettings.h"
+#include <LXQt/Settings>
 #include <KScreen/Output>
+#include <KScreen/EDID>
+#include <KScreen/Config>
 
-SettingsDialog::SettingsDialog(const QString &title, LXQt::Settings *settings, KScreen::ConfigPtr config, QWidget *parent)
-    : LXQt::ConfigDialog(title, settings, parent)
-{
-    setButtons(QDialogButtonBox::QDialogButtonBox::Apply | QDialogButtonBox::Close);
-    setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
+class ManageSavedSettings : public QDialog {
+  Q_OBJECT
 
-    //DaemonSettings *daemon = new DaemonSettings(settings, this);
-    //addPage(daemon, QObject::tr("Daemon"), "system-run");
-    
-    ManageSavedSettings * savedSettings = new ManageSavedSettings(settings, config, this);
-    addPage(savedSettings, QObject::tr("Manage Saved Settings"), "system-run");
-}
+public:
+  ManageSavedSettings(LXQt::Settings *applicationSettings, KScreen::ConfigPtr config, QWidget* parent = 0);
+
+  Ui::ManageSavedSettings ui;
+
+public slots:
+  /*! Load settings to QListWidgets.
+      edids is hardware code to detect hardware compatible settings.
+   */
+  void loadSettings();
+
+  void showSelectedConfig(QListWidgetItem * item);
+
+  void onDeleteItem();
+
+  void onRenameItem();
+
+  void onApplyItem();
+
+private:
+  LXQt::Settings *applicationSettings;
+  KScreen::ConfigPtr config;
+  bool isHardwareCompatible(QJsonObject json);
+  
+};
+
+#endif // _SAVESETTINGS_H_

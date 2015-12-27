@@ -34,6 +34,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QMessageBox>
+#include <QDateTime>
 
 MonitorSettingsDialog::MonitorSettingsDialog() :
     QDialog(nullptr, 0)
@@ -61,7 +62,6 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
 
     });
 
-    ui.settingsButton->hide(); // Hide settings button until daemon works OK.
     connect(ui.settingsButton, SIGNAL(clicked()), this, SLOT(showSettingsDialog()));
 }
 
@@ -163,6 +163,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
             monitorSettings["xPos"] = output->pos().x();
             monitorSettings["yPos"] = output->pos().y();
             monitorSettings["currentMode"] = output->currentMode()->id();
+            monitorSettings["currentModeSize"] = QString("%1x%2").arg(output->currentMode()->size().width()).arg(output->currentMode()->size().height());
             monitorSettings["rotation"] = output->rotation();
         }
         jsonArray.append(monitorSettings);
@@ -171,6 +172,18 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     
     QSettings settings("LXQt", "lxqt-config-monitor");
     settings.setValue("currentConfig", QVariant(QJsonDocument(json).toJson()));
+
+    QJsonDocument document = QJsonDocument::fromJson(settings.value("SavedConfigs").toByteArray());
+    QJsonObject jsonSavedConfigs = document.object();
+    jsonArray = jsonSavedConfigs["configs"].toArray();
+    json["name"] = QDateTime::currentDateTime().toString();
+    json["date"] = QDateTime::currentDateTime().toString(Qt::ISODate);
+    jsonArray.append(json);
+    jsonSavedConfigs["configs"] = jsonArray;
+
+    settings.setValue("SavedConfigs", QVariant(QJsonDocument(jsonSavedConfigs).toJson()));
+
+
 
     QString desktop = QString("[Desktop Entry]\n"
                               "Type=Application\n"
@@ -215,6 +228,6 @@ void MonitorSettingsDialog::showSettingsDialog()
 
     LXQt::Settings settings(configName);
 
-    SettingsDialog settingsDialog(tr("Advanced settings"), &settings);
+    SettingsDialog settingsDialog(tr("Advanced settings"), &settings, mConfig);
     settingsDialog.exec();
 }
