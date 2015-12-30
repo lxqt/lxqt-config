@@ -162,8 +162,9 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
             monitorSettings["primary"] = output->isPrimary();
             monitorSettings["xPos"] = output->pos().x();
             monitorSettings["yPos"] = output->pos().y();
-            monitorSettings["currentMode"] = output->currentMode()->id();
+            monitorSettings["currentMode"] = output->currentModeId();
             monitorSettings["currentModeSize"] = QString("%1x%2").arg(output->currentMode()->size().width()).arg(output->currentMode()->size().height());
+            monitorSettings["currentModeRate"] = output->currentMode()->refreshRate();
             monitorSettings["rotation"] = output->rotation();
         }
         jsonArray.append(monitorSettings);

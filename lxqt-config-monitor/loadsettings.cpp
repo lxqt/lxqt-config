@@ -84,8 +84,26 @@ void applyJsonSettings(KScreen::ConfigPtr config, QJsonArray array)
                 output->setEnabled( monitorSettings["enabled"].toBool() );
                 output->setPrimary( monitorSettings["primary"].toBool() );
                 output->setPos( QPoint(monitorSettings["xPos"].toInt(),monitorSettings["yPos"].toInt()) );
-                output->setCurrentModeId( monitorSettings["currentMode"].toString() );
                 output->setRotation( (KScreen::Output::Rotation)(monitorSettings["rotation"].toInt()) );
+                // output->setCurrentModeId sometimes fails. KScreen sometimes changes mode Id.
+                KScreen::ModeList modeList = output->modes();
+                foreach(const KScreen::ModePtr &mode, modeList)
+                {
+                    QString modeSize = QString("%1x%2").arg(mode->size().width()).arg(mode->size().height());
+                    if( mode->id() == monitorSettings["currentMode"].toString() 
+                            ||
+                            (
+                                modeSize == monitorSettings["currentModeSize"].toString() 
+                                    && 
+                                mode->refreshRate() == monitorSettings["currentModeRate"].toDouble() 
+                            )
+                      )
+                    {
+                        output->setCurrentModeId( mode->id() );
+                        break;
+                    }
+                }
+
             }
         }
     }
