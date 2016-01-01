@@ -29,13 +29,13 @@
 #include <QSettings>
 #include <QJsonDocument>
 #include <KScreen/EDID>
-
-
+#include <QThread>
 
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 {
-    KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
+    QThread::sleep(10); // KScreen is  slow loading screen modes
+    KScreen::GetConfigOperation *operation  = new KScreen::GetConfigOperation();
     connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
         if (configOp)
@@ -85,7 +85,7 @@ void applyJsonSettings(KScreen::ConfigPtr config, QJsonArray array)
                 output->setPrimary( monitorSettings["primary"].toBool() );
                 output->setPos( QPoint(monitorSettings["xPos"].toInt(),monitorSettings["yPos"].toInt()) );
                 output->setRotation( (KScreen::Output::Rotation)(monitorSettings["rotation"].toInt()) );
-                // output->setCurrentModeId sometimes fails. KScreen sometimes changes mode Id.
+                // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
                 KScreen::ModeList modeList = output->modes();
                 foreach(const KScreen::ModePtr &mode, modeList)
                 {
