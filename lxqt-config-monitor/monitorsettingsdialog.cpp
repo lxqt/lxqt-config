@@ -35,6 +35,7 @@
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QDateTime>
+#include <lxqtautostartentry.h>
 
 MonitorSettingsDialog::MonitorSettingsDialog() :
     QDialog(nullptr, 0)
@@ -184,41 +185,15 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
 
     settings.setValue("SavedConfigs", QVariant(QJsonDocument(jsonSavedConfigs).toJson()));
 
-
-
-    QString desktop = QString("[Desktop Entry]\n"
-                              "Type=Application\n"
-                              "Name=LXQt-config-monitor autostart\n"
-                              "Comment=Autostart monitor settings for LXQt-config-monitor\n"
-                              "Exec=%1\n"
-                              "OnlyShowIn=LXQt\n").arg("lxqt-config-monitor -l");
-    
-    // Check autostart path: $XDG_CONFIG_HOME or ~/.config/autostart
-    QString autostartPath;
-    bool ok = true;
-    if(qEnvironmentVariableIsSet("XDG_CONFIG_HOME"))
-        autostartPath = QString(qgetenv("XDG_CONFIG_HOME")) + "/autostart/";
-    else
-         autostartPath = QDir::homePath() + "/.config/autostart/";
-    
-    // Check if ~/.config/autostart/ exists
-    QFileInfo fileInfo(autostartPath);
-    if( ! fileInfo.exists() )
-        ok = QDir::root().mkpath(autostartPath);
-    
-    QFile file(autostartPath + "/lxqt-config-monitor-autostart.desktop");
-    if(ok)
-            ok = file.open(QIODevice::WriteOnly | QIODevice::Text);
-    if(!ok) {
-      QMessageBox::critical(this, tr("Error"), tr("Config can not be saved"));
-      return;
-    }
-    QTextStream out(&file);
-    out << desktop;
-    out.flush();
-    file.close();
-
+    LXQt::AutostartEntry autoStart("lxqt-config-monitor-autostart.desktop");
+    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, "lxqt-config-monitor-autostart", "lxqt-config-monitor -l");
+    //desktopFile.setValue("OnlyShowIn", QString(qgetenv("XDG_CURRENT_DESKTOP")));
+    desktopFile.setValue("OnlyShowIn", "LXQt");
+    desktopFile.setValue("Comment", "Autostart monitor settings for LXQt-config-monitor");
+    autoStart.setFile(desktopFile);
+    autoStart.commit();
 }
+
 
 void MonitorSettingsDialog::showSettingsDialog()
 {
