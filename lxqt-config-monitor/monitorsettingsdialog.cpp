@@ -45,11 +45,27 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
     KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
     connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
-        if (configOp)
+        qDebug() << "Connecting to KScreen...";
+        if (configOp && configOp->config() && configOp->config()->screen())
         {
             mOldConfig = configOp->config()->clone();
             loadConfiguration(configOp->config());
             operation->deleteLater();
+        }
+        else if(configOp && !configOp->config())
+        {
+            qDebug() << "Error: Config is invalid, probably backend couldn't load";
+            exit(1);
+        }
+        else if(configOp && configOp->config() && !configOp->config()->screen())
+        {
+            qDebug() << "Error: No screen in the configuration, broken backend";
+            exit(2);
+        }
+        else
+        {
+            qDebug() << "Error: Connect to KScreen is not possible";
+            exit(3);
         }
     });
 

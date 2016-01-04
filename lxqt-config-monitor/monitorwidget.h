@@ -31,7 +31,6 @@
 
 #define PrimaryDisplay 0
 #define ExtendDisplay 1
-#define CloneDisplay 2
 
 #define RightOf 0
 #define LeftOf 1
@@ -61,12 +60,10 @@ public Q_SLOTS:
 private Q_SLOTS:
     void onEnabledChanged(bool);
     void onBehaviorChanged(int);
-    void onPositioningChanged(int);
     void onPositionChanged(int);
     void onResolutionChanged(int);
     void onRateChanged(int);
     void onOrientationChanged(int);
-    void onCloneChanged(int);
 
 private:
     Ui::MonitorWidget ui;

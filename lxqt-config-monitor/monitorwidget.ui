@@ -21,7 +21,7 @@
        <string>Setup</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="9" column="0" colspan="2">
+       <item row="7" column="0" colspan="2">
         <layout class="QHBoxLayout" name="xyPosLayout">
          <item>
           <widget class="QSpinBox" name="xPosSpinBox">
@@ -103,54 +103,9 @@
            <string>This screen extends another display</string>
           </property>
          </item>
-         <item>
-          <property name="text">
-           <string>This screen clones another display</string>
-          </property>
-         </item>
         </widget>
        </item>
-       <item row="4" column="0" colspan="2">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QComboBox" name="positioningCombo">
-           <item>
-            <property name="text">
-             <string>Right of...</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Left of...</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Above...</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Below...</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Positioned manually</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="relativeScreensCombo">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="10" column="0" colspan="2">
+       <item row="8" column="0" colspan="2">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -162,9 +117,6 @@
           </size>
          </property>
         </spacer>
-       </item>
-       <item row="3" column="0" colspan="2">
-        <widget class="QComboBox" name="clonesCombo"/>
        </item>
       </layout>
      </widget>
