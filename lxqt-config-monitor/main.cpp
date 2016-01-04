@@ -69,7 +69,7 @@ int main(int argc, char** argv)
     int ok = app.exec();
     
     // FIXME: kscreen backend doesn't close properly.
-    system("killall kscreen_backend_launcher");
+    //system("killall kscreen_backend_launcher");
     
     return ok;
 
