@@ -53,6 +53,9 @@ public:
 
     KScreen::OutputPtr output;
     KScreen::ConfigPtr config;
+    
+signals:
+    void primaryOutputChanged(MonitorWidget *widget);
 
 public Q_SLOTS:
     void setOnlyMonitor(bool isOnlyMonitor);
@@ -64,6 +67,7 @@ private Q_SLOTS:
     void onResolutionChanged(int);
     void onRateChanged(int);
     void onOrientationChanged(int);
+    void onPrimaryOutputChanged(MonitorWidget *widget);
 
 private:
     Ui::MonitorWidget ui;

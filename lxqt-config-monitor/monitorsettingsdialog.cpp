@@ -123,6 +123,15 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
             monitors.append(monitor);
         }
     }
+    
+    Q_FOREACH(MonitorWidget *monitor1, monitors)
+    {
+        Q_FOREACH(MonitorWidget *monitor, monitors)
+        {
+            if(monitor != monitor1)
+                connect(monitor, SIGNAL(primaryOutputChanged(MonitorWidget *)), monitor1, SLOT(onPrimaryOutputChanged(MonitorWidget *)));
+        }
+    }
 
     if (monitorPicture)
         monitorPicture->setScene(monitors);

@@ -217,6 +217,8 @@ void MonitorWidget::onBehaviorChanged(int idx)
     ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
 
     output->setPrimary(idx == PrimaryDisplay);
+    if(idx == PrimaryDisplay)
+        emit primaryOutputChanged(this);
 }
 
 void MonitorWidget::onPositionChanged(int value)
@@ -269,4 +271,11 @@ void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor)
         ui.xPosSpinBox->setValue(0);
         ui.yPosSpinBox->setValue(0);
     }
+}
+
+void MonitorWidget::onPrimaryOutputChanged(MonitorWidget *widget)
+{
+    if(widget == this)
+        return;
+    ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
 }
