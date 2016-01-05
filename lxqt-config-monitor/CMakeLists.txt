@@ -11,6 +11,7 @@ set(HEADERS
     loadsettings.h
     settingsdialog.h
     managesavedsettings.h
+    fastmenu.h
 )
 
 set(SOURCES
@@ -23,6 +24,7 @@ set(SOURCES
     loadsettings.cpp
     settingsdialog.cpp
     managesavedsettings.cpp
+    fastmenu.cpp
 )
 
 set(UIS
@@ -31,6 +33,7 @@ set(UIS
     timeoutdialog.ui
     monitorpicture.ui
     managesavedsettings.ui
+    fastmenu.ui
 )
 
 set(ICONS

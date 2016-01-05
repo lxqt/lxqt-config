@@ -23,6 +23,7 @@
 #include "timeoutdialog.h"
 #include "monitorpicture.h"
 #include "settingsdialog.h"
+#include "fastmenu.h"
 
 #include <KScreen/Output>
 #include <QJsonObject>
@@ -94,6 +95,7 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     mConfig = config;
 
     MonitorPictureDialog *monitorPicture = nullptr;
+    FastMenu *fastMenu = nullptr;
     KScreen::OutputList outputs = mConfig->outputs();
 
     int nMonitors = 0;
@@ -104,6 +106,10 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
         if (nMonitors > 1)
         {
+            fastMenu = new FastMenu(config, this);
+            ui.monitorList->addItem(tr("Fast Menu"));
+            ui.stackedWidget->addWidget(fastMenu);
+            
             monitorPicture = new MonitorPictureDialog(config, this);
             ui.monitorList->addItem(tr("Set position"));
             ui.stackedWidget->addWidget(monitorPicture);
