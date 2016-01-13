@@ -71,9 +71,10 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
         proxy->connect(monitor->output.data(), SIGNAL(posChanged()), SLOT(updatePosition()));
     }
     // The blue rectangle is maximum size of virtual screen (framebuffer)
-    scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
-    int minWidgetLength = qMin(ui.graphicsView->size().width(), ui.graphicsView->size().width()) / 1.5;
+    //scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
+    int minWidgetLength = qMin(ui.graphicsView->size().width(), ui.graphicsView->size().width());
     int maxMonitorSize = qMax(monitorsWidth, monitorsHeight);
+    qDebug() << "minWidgetLength" << minWidgetLength << "maxMonitorSize" << maxMonitorSize << "scale" << minWidgetLength / (float) maxMonitorSize;
     ui.graphicsView->scale(minWidgetLength / (float) maxMonitorSize, minWidgetLength / (float) maxMonitorSize);
     ui.graphicsView->setScene(scene);
 }
