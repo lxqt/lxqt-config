@@ -23,6 +23,8 @@
 #include <QPen>
 #include <QDebug>
 #include <QVector2D>
+#include <QScrollBar>
+
 #include "configure.h"
 
 MonitorPictureProxy::MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture):QObject(parent)
@@ -49,6 +51,8 @@ MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * 
     QDialog(parent,f)
 {
     updatingOk = false;
+    firstShownOk = false;
+    maxMonitorSize = 0;
     mConfig = config;
     ui.setupUi(this);
 }
@@ -71,12 +75,26 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
         proxy->connect(monitor->output.data(), SIGNAL(posChanged()), SLOT(updatePosition()));
     }
     // The blue rectangle is maximum size of virtual screen (framebuffer)
-    //scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
-    int minWidgetLength = qMin(ui.graphicsView->size().width(), ui.graphicsView->size().width());
-    int maxMonitorSize = qMax(monitorsWidth, monitorsHeight);
-    qDebug() << "minWidgetLength" << minWidgetLength << "maxMonitorSize" << maxMonitorSize << "scale" << minWidgetLength / (float) maxMonitorSize;
-    ui.graphicsView->scale(minWidgetLength / (float) maxMonitorSize, minWidgetLength / (float) maxMonitorSize);
+    scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
+    maxMonitorSize = qMax(monitorsWidth, monitorsHeight);
     ui.graphicsView->setScene(scene);
+}
+
+void MonitorPictureDialog::showEvent(QShowEvent * event)
+{
+    QWidget::showEvent(event);
+    if( ! firstShownOk )
+    {
+        // Update scale and set scrollbar position.
+        // Real widget size is not set, until widget is shown.
+        firstShownOk = true;
+        int minWidgetLength = qMin(ui.graphicsView->size().width(), ui.graphicsView->size().width()) / 1.5;
+        qDebug() << "minWidgetLength" << minWidgetLength << "maxMonitorSize" << maxMonitorSize << "scale" << minWidgetLength / (float) maxMonitorSize;
+        ui.graphicsView->scale(minWidgetLength / (float) maxMonitorSize, minWidgetLength / (float) maxMonitorSize);
+        updateScene();
+        ui.graphicsView->verticalScrollBar()->setValue(0);
+        ui.graphicsView->horizontalScrollBar()->setValue(0);
+    }
 }
 
 void MonitorPictureDialog::updateScene()

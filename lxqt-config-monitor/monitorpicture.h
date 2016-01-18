@@ -42,11 +42,16 @@ public:
     void moveMonitorPictureToNearest(MonitorPicture* monitorPicture);
     void updateScene();
 
+protected:
+    virtual void showEvent(QShowEvent * event);
+
 private:
     Ui::MonitorPictureDialog ui;
     QList<MonitorPicture*> pictures;
     bool updatingOk;
-    KScreen::ConfigPtr mConfig; 
+    KScreen::ConfigPtr mConfig;
+    bool firstShownOk;
+    int maxMonitorSize;
 };
 
 class MonitorPicture : public QGraphicsRectItem
