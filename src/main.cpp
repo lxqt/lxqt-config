@@ -26,19 +26,29 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/SingleApplication>
+#include <QSettings>
 #include "mainwindow.h"
 
 
 int main(int argc, char **argv)
 {
     LXQt::SingleApplication app(argc, argv);
+    app.setOrganizationName(QStringLiteral("lxqt"));
+    app.setApplicationName(QStringLiteral("lxqt-config"));
 
     // ensure that we use lxqt-config.menu file.
     qputenv("XDG_MENU_PREFIX", "lxqt-");
 
     LXQtConfig::MainWindow w;
     app.setActivationWindow(&w);
+    QSize s = QSettings{}.value("size").toSize();
+    if (!s.isEmpty())
+        w.resize(s);
     w.show();
 
-    return app.exec();
+    int ret = app.exec();
+
+    QSettings{}.setValue("size", w.size());
+
+    return ret;
 }
