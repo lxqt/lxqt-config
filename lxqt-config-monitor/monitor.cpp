@@ -18,56 +18,116 @@
 
 #include "monitor.h"
 
-bool MonitorInfo::LVDS_Ok = false;
-
-QSize sizeFromString(QString str)
+bool MonitorSavedSettings::operator==(const MonitorSavedSettings &obj)
 {
-    int width = 0;
-    int height = 0;
-    int x = str.indexOf('x');
-    if (x > 0)
+    if(name != obj.name)
+        return false;
+    if(date != obj.date)
+        return false;
+    // TODO: Check QList<MonitorSettings> monitors.
+    return true;
+}
+
+void saveMonitorSettings(QSettings & settings, QList<MonitorSettings> monitors)
+{
+    settings.remove("settings");
+    settings.beginWriteArray("settings");
+    int i = 0;
+    Q_FOREACH(MonitorSettings monitor, monitors)
     {
-        width = str.left(x).toInt();
-        height = str.mid(x + 1).toInt();
+        settings.setArrayIndex(i++);
+        saveMonitorSettings(settings, monitor);
     }
-    return QSize(width, height);
+    settings.endArray();
 }
 
-MonitorSettings::MonitorSettings(QObject* parent) :
-    QObject(parent)
+void saveMonitorSettings(QSettings &settings, MonitorSettings &monitor)
 {
-    position = None;
-    primaryOk = false;
-    enabledOk = false;
+    settings.setValue("name", monitor.name);
+    settings.setValue("hash", monitor.hash);
+    settings.setValue("connected", monitor.connected);
+    if(monitor.connected)
+    {
+        settings.setValue("enabled", monitor.enabled);
+        settings.setValue("primary", monitor.primary);
+        settings.setValue("xPos", monitor.xPos);
+        settings.setValue("yPos", monitor.yPos);
+        settings.setValue("currentMode", monitor.currentMode);
+        settings.setValue("currentModeWidth", monitor.currentModeWidth);
+        settings.setValue("currentModeHeight", monitor.currentModeHeight);
+        settings.setValue("currentModeRate", monitor.currentModeRate);
+        settings.setValue("rotation", monitor.rotation);
+    }
 }
 
-MonitorInfo::MonitorInfo(QObject* parent) :
-    MonitorSettings(parent)
+void loadMonitorSettings(QSettings & settings, QList<MonitorSettings> &monitors)
 {
+    int size = settings.beginReadArray("settings");
+    for(int i=0; i<size; i++)
+    {
+        settings.setArrayIndex(i);
+        MonitorSettings monitor;
+        loadMonitorSettings(settings, monitor);
+        monitors.append(monitor);
+    }
+    settings.endArray();
 }
 
-QString MonitorInfo::humanReadableName()
+void loadMonitorSettings(QSettings &settings, MonitorSettings &monitor)
 {
-    if (name.startsWith("LVDS"))
-        return tr("Laptop LCD Monitor");
-    else if (name.startsWith("VGA") || name.startsWith("Analog"))
-        return LVDS_Ok ? tr("External VGA Monitor") :  tr("VGA Monitor");
-    else if (name.startsWith("DVI") || name.startsWith("TMDS") || name.startsWith("Digital") || name.startsWith("LVDS"))
-        return LVDS_Ok ? tr("External DVI Monitor") : tr("DVI Monitor");
-    else if (name.startsWith("TV") || name.startsWith("S-Video"))
-        return tr("TV");
-    else if (name == "default")
-        return tr("Default Monitor");
-
-    return name;
+    monitor.name = settings.value("name").toString();
+    monitor.hash = settings.value("hash").toString();
+    monitor.connected = settings.value("connected").toBool();
+    if(monitor.connected)
+    {
+        monitor.enabled = settings.value("enabled").toBool();
+        monitor.primary = settings.value("primary").toBool();
+        monitor.xPos = settings.value("xPos").toInt();
+        monitor.yPos = settings.value("yPos").toInt();
+        monitor.currentMode = settings.value("currentMode").toString();
+        monitor.currentModeWidth = settings.value("currentModeWidth").toInt();
+        monitor.currentModeHeight = settings.value("currentModeHeight").toInt();
+        monitor.currentModeRate = settings.value("currentModeRate").toFloat();
+        monitor.rotation = settings.value("rotation").toInt();
+    }
 }
 
-QSize MonitorSettings::currentSize()
+void saveMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> monitors)
 {
-    return sizeFromString(currentMode);
+    settings.remove("SavedSettings");
+    settings.beginWriteArray("SavedSettings");
+    int i = 0;
+    Q_FOREACH(MonitorSavedSettings monitor, monitors)
+    {
+        settings.setArrayIndex(i++);
+        saveMonitorSettings(settings, monitor);
+    }
+    settings.endArray();
 }
 
-QRect MonitorSettings::geometry()
+void saveMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor)
 {
-    return QRect(QPoint(xPos, yPos), currentSize());
+    settings.setValue("name", monitor.name);
+    settings.setValue("date", monitor.date);
+    saveMonitorSettings(settings, monitor.monitors);
+}
+
+void loadMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> &monitors)
+{
+    int size = settings.beginReadArray("SavedSettings");
+    for(int i=0; i<size; i++)
+    {
+        settings.setArrayIndex(i);
+        MonitorSavedSettings monitor;
+        loadMonitorSettings(settings, monitor);
+        monitors.append(monitor);
+    }
+    settings.endArray();
+}
+
+void loadMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor)
+{
+    monitor.name = settings.value("name").toString();
+    monitor.date = settings.value("date").toString();
+    loadMonitorSettings(settings, monitor.monitors);
 }

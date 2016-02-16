@@ -18,7 +18,6 @@
 */
 
 #include "monitorwidget.h"
-#include "monitor.h"
 
 #include <QComboBox>
 #include <QStringBuilder>

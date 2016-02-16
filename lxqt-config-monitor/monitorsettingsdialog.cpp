@@ -20,6 +20,7 @@
 #include "monitorsettingsdialog.h"
 
 #include "monitorwidget.h"
+#include "monitor.h"
 #include "timeoutdialog.h"
 #include "monitorpicture.h"
 #include "settingsdialog.h"
@@ -28,7 +29,7 @@
 #include <KScreen/Output>
 #include <QJsonObject>
 #include <QJsonArray>
-#include <QSettings>
+#include <LXQt/Settings>
 #include <QJsonDocument>
 #include <KScreen/EDID>
 #include <QFile>
@@ -177,44 +178,49 @@ void MonitorSettingsDialog::reject()
 
 void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
 {
-    QJsonObject json;
-    QJsonArray jsonArray;
+    
+    QList<MonitorSettings> currentSettings;
     KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs)
     {
-        QJsonObject monitorSettings;
-        monitorSettings["name"] = output->name();
+        MonitorSettings monitor;
+        monitor.name = output->name();
         KScreen::Edid* edid = output->edid();
         if (edid && edid->isValid())
-            monitorSettings["hash"] = edid->hash();
-        monitorSettings["connected"] = output->isConnected();
+            monitor.hash = edid->hash();
+        monitor.connected = output->isConnected();
         if ( output->isConnected() )
         {
-            monitorSettings["enabled"] = output->isEnabled();
-            monitorSettings["primary"] = output->isPrimary();
-            monitorSettings["xPos"] = output->pos().x();
-            monitorSettings["yPos"] = output->pos().y();
-            monitorSettings["currentMode"] = output->currentModeId();
-            monitorSettings["currentModeSize"] = QString("%1x%2").arg(output->currentMode()->size().width()).arg(output->currentMode()->size().height());
-            monitorSettings["currentModeRate"] = output->currentMode()->refreshRate();
-            monitorSettings["rotation"] = output->rotation();
+            monitor.enabled = output->isEnabled();
+            monitor.primary = output->isPrimary();
+            monitor.xPos = output->pos().x();
+            monitor.yPos = output->pos().y();
+            monitor.currentMode = output->currentModeId();
+            monitor.currentModeWidth = output->currentMode()->size().width();
+            monitor.currentModeHeight = output->currentMode()->size().height();
+            monitor.currentModeRate = output->currentMode()->refreshRate();
+            monitor.rotation = output->rotation();
         }
-        jsonArray.append(monitorSettings);
+        currentSettings.append(monitor);
     }
-    json["outputs"] = jsonArray;
     
-    QSettings settings("LXQt", "lxqt-config-monitor");
-    settings.setValue("currentConfig", QVariant(QJsonDocument(json).toJson()));
-
-    QJsonDocument document = QJsonDocument::fromJson(settings.value("SavedConfigs").toByteArray());
-    QJsonObject jsonSavedConfigs = document.object();
-    jsonArray = jsonSavedConfigs["configs"].toArray();
-    json["name"] = QDateTime::currentDateTime().toString();
-    json["date"] = QDateTime::currentDateTime().toString(Qt::ISODate);
-    jsonArray.append(json);
-    jsonSavedConfigs["configs"] = jsonArray;
-
-    settings.setValue("SavedConfigs", QVariant(QJsonDocument(jsonSavedConfigs).toJson()));
+    LXQt::Settings settings("lxqt-config-monitor");
+    settings.beginGroup("currentConfig");
+    saveMonitorSettings(settings, currentSettings);
+    settings.endGroup();
+    
+    QList<MonitorSavedSettings> monitors;
+    settings.beginGroup("SavedConfigs");
+    loadMonitorSettings(settings, monitors);
+    qDebug() << "[ MonitorSettingsDialog::saveConfiguration] # monitors Read:" << monitors.size();
+    MonitorSavedSettings monitor;
+    monitor.name = QDateTime::currentDateTime().toString();
+    monitor.date = QDateTime::currentDateTime().toString(Qt::ISODate);
+    monitor.monitors = currentSettings;
+    monitors.append(monitor);
+    saveMonitorSettings(settings, monitors);
+    qDebug() << "[ MonitorSettingsDialog::saveConfiguration] # monitors Write:" << monitors.size();
+    settings.endGroup();
 
     LXQt::AutostartEntry autoStart("lxqt-config-monitor-autostart.desktop");
     XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, "lxqt-config-monitor-autostart", "lxqt-config-monitor -l");

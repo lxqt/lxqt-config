@@ -19,56 +19,56 @@
 #ifndef _MONITOR_H_
 #define _MONITOR_H_
 
-#include <QObject>
-#include <QStringList>
-#include <QHash>
+#include <QSettings>
+#include <QString>
 #include <QList>
-#include <QRect>
-#include <KScreen/Config>
 
-//Settings to pass to backend
-class MonitorSettings : public QObject
-{
-    Q_OBJECT
-
-public:
-    MonitorSettings(QObject* parent = 0);
+//Settings to be stored or read from settings file.
+struct MonitorSettings {
     QString name;
+    QString hash;
+    bool connected;
+    bool enabled;
+    bool primary;
     QString currentMode;
-    QString currentRate;
-    QString gamma;
+    int currentModeWidth;
+    int currentModeHeight;
+    float currentModeRate;
     int xPos;
     int yPos;
-    bool enabledOk;
-    enum Position {None = 0, Manual};
-    Position position;
-    bool primaryOk;
-
-    QSize currentSize();
-    QRect geometry();
+    int rotation;
 };
 
-// Monitor information from backend
-class MonitorInfo : public MonitorSettings
-{
-    Q_OBJECT
-
-public:
-    KScreen::ConfigPtr mConfig;
-
-    MonitorInfo(QObject* parent = 0);
-    QStringList modes; // Modes of this monitor in order
-    QHash<QString, QStringList> modeLines; // Rates suported by each mode
-    QString preferredMode;
-    QString preferredRate;
-    QString edid; // EDID data, not used yet, can be used to detect vendor name of the monitor
-    QString vendor;
-
-    static bool LVDS_Ok; // Is true if LVDS (Laptop monitor) is connected.
-    QString humanReadableName();
+struct MonitorSavedSettings {
+    QString name;
+    QString date;
+    QList<MonitorSettings> monitors;
+    
+    bool operator==(const MonitorSavedSettings &obj);
 };
 
-// Gets size from string rate. String rate format is "widthxheight". Example: 800x600
-QSize sizeFromString(QString str);
+/**This function saves a list of MonitorSettings in QSettings file.
+ * Before using this function, QSettings group must be opened.
+ */
+void saveMonitorSettings(QSettings &settings, QList<MonitorSettings> monitors);
+void saveMonitorSettings(QSettings &settings, MonitorSettings &monitor);
+
+/**This function loads a list of MonitorSettings from QSettings file.
+ * Before using this function, QSettings group must be opened.
+ */
+void loadMonitorSettings(QSettings &settings, QList<MonitorSettings> &monitors);
+void loadMonitorSettings(QSettings &settings, MonitorSettings &monitor);
+
+/**This function saves a list of MonitorSavedSettings in QSettings file.
+ * Before using this function, QSettings group must be opened.
+ */
+void saveMonitorSettings(QSettings &settings, QList<MonitorSavedSettings> monitors);
+void saveMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor);
+
+/**This function loads a list of MonitorSavedSettings in QSettings file.
+ * Before using this function, QSettings group must be opened.
+ */
+void loadMonitorSettings(QSettings &settings, QList<MonitorSavedSettings> &monitors);
+void loadMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor);
 
 #endif // _MONITOR_H_

@@ -21,6 +21,7 @@
 #define _SAVESETTINGS_H_
 
 #include "ui_managesavedsettings.h"
+#include "monitor.h"
 #include <LXQt/Settings>
 #include <KScreen/Output>
 #include <KScreen/EDID>
@@ -51,7 +52,7 @@ public slots:
 private:
   LXQt::Settings *applicationSettings;
   KScreen::ConfigPtr config;
-  bool isHardwareCompatible(QJsonObject json);
+  bool isHardwareCompatible(MonitorSavedSettings &settings);
   
 };
 

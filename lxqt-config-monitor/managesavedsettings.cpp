@@ -16,15 +16,16 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <QJsonArray>
-#include <QJsonObject>
+
 #include "managesavedsettings.h"
 #include "loadsettings.h"
 #include "configure.h"
+#include "monitor.h"
 #include <QDebug>
-#include <QJsonDocument>
 #include <QInputDialog>
 #include <QDateTime>
+
+Q_DECLARE_METATYPE(MonitorSavedSettings)
 
 
 ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  KScreen::ConfigPtr config, QWidget * parent):
@@ -47,17 +48,17 @@ QDialog(parent)
 
 void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
 {
-    QJsonObject o = item->data(Qt::UserRole).toJsonObject();
-    QJsonArray jsonArray = o["outputs"].toArray();
+    MonitorSavedSettings o = item->data(Qt::UserRole).value<MonitorSavedSettings>();
     QString text;
-    for(int i=0; i < jsonArray.size(); i++)
+    for(int i=0; i < o.monitors.size(); i++)
     {
-        QJsonObject setting = jsonArray[i].toObject();
-        if(setting["connected"].toBool() == false)
+        MonitorSettings setting = o.monitors[i];
+        if(! setting.connected )
             continue;
-        text += QString("<b>%1:</b><br/>").arg(setting["name"].toString());
-        text += QString("&nbsp;Mode: %1<br/>").arg(setting["currentModeSize"].toString());
-        switch(setting["rotation"].toInt())
+        text += QString("<b>%1:</b><br/>").arg(setting.name);
+        text += QString("&nbsp;Mode: %1x%2<br/>").arg(setting.currentModeWidth).arg(setting.currentModeHeight);
+        text += QString("&nbsp;Rate: %1 Hz<br/>").arg(setting.currentModeRate);
+        switch(setting.rotation)
         {
             case KScreen::Output::Rotation::None:
                 text += QString("&nbsp;Rotation: %1<br/>").arg(tr("None"));
@@ -72,31 +73,30 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
                 text += QString("&nbsp;Rotation: %1<br/>").arg(tr("Right"));
                 break;
         }
-        text += QString("&nbsp;Position: %1x%2<br/>").arg(setting["xPos"].toInt()).arg(setting["yPos"].toInt());
-        text += QString("&nbsp;Primary: %1<br/>").arg(setting["primary"].toBool()?tr("True"):tr("False"));
-        text += QString("&nbsp;Enabled: %1<br/>").arg(setting["enabled"].toBool()?tr("True"):tr("False"));
+        text += QString("&nbsp;Position: %1x%2<br/>").arg(setting.xPos).arg(setting.yPos);
+        text += QString("&nbsp;Primary: %1<br/>").arg(setting.primary?tr("True"):tr("False"));
+        text += QString("&nbsp;Enabled: %1<br/>").arg(setting.enabled?tr("True"):tr("False"));
     }
     text += "<br/>";
     ui.selectedSettingsTextEdit->setText(text);
+    ui.applyPushButton->setEnabled(isHardwareCompatible(o));
 }
 
 
-bool ManageSavedSettings::isHardwareCompatible(QJsonObject json)
+bool ManageSavedSettings::isHardwareCompatible(MonitorSavedSettings &settings)
 {
     KScreen::OutputList outputs = config->outputs();
-    QJsonArray jsonArray = json["outputs"].toArray();
     for (const KScreen::OutputPtr &output : outputs)
     {
         bool ok = false;
-        for (int i=0; i < jsonArray.size(); i++)
+        for (int i=0; i < settings.monitors.size(); i++)
         {
-            const QJsonValue & v = jsonArray[i];
-            QJsonObject o = v.toObject();
-            if(o["name"] != output->name())
+            MonitorSettings o = settings.monitors[i];
+            if(o.name != output->name())
                 continue;
             KScreen::Edid *edid = output->edid();
             if(edid && edid->isValid())
-                if(o["hash"] != output->edid()->hash())
+                if(o.hash != output->edid()->hash())
                     return false;
             ok = true;
             break;
@@ -111,21 +111,22 @@ void ManageSavedSettings::onDeleteItem()
 {
     if (ui.allConfigs->currentItem() == NULL)
         return;
-    QJsonObject obj = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
-    QSettings settings("LXQt", "lxqt-config-monitor");
-    QJsonDocument document = QJsonDocument::fromJson(settings.value("SavedConfigs").toByteArray());
-    QJsonObject json = document.object();
-    QJsonArray jsonArray = json["configs"].toArray();
-    for (int i = 0; i < jsonArray.size(); i++) {
-        const QJsonValue & v = jsonArray[i];
-        QJsonObject o = v.toObject();
+    MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
+
+    LXQt::Settings settings("lxqt-config-monitor");
+    QList<MonitorSavedSettings> monitors;
+    settings.beginGroup("SavedConfigs");
+    loadMonitorSettings(settings, monitors);
+    for (int i = 0; i < monitors.size(); i++) {
+        MonitorSavedSettings o = monitors[i];
         if (o == obj) {
-            jsonArray.removeAt(i);
+            monitors.removeAt(i);
             break;
         }
     }
-    json["configs"] = jsonArray;
-    settings.setValue("SavedConfigs", QVariant(QJsonDocument(json).toJson()));
+    saveMonitorSettings(settings, monitors);
+
+    settings.endGroup();
 
     loadSettings();
 }
@@ -134,30 +135,30 @@ void ManageSavedSettings::onRenameItem()
 {
     if (ui.allConfigs->currentItem() == NULL)
         return;
-    QJsonObject obj = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+    MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
     bool ok;
     QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"),
                                                QLineEdit::Normal,
-                                               obj["name"].toString(), &ok);
+                                               obj.name, &ok);
     if (!ok || configName.isEmpty())
         return;
 
-    QSettings settings("LXQt", "lxqt-config-monitor");
-    QJsonDocument document = QJsonDocument::fromJson(settings.value("SavedConfigs").toByteArray());
-    QJsonObject json = document.object();
-    QJsonArray jsonArray = json["configs"].toArray();
-    for (int i = 0; i < jsonArray.size(); i++) {
-        const QJsonValue & v = jsonArray[i];
-        QJsonObject o = v.toObject();
+    LXQt::Settings settings("lxqt-config-monitor");
+    QList<MonitorSavedSettings> monitors;
+    settings.beginGroup("SavedConfigs");
+    loadMonitorSettings(settings, monitors);
+    for (int i = 0; i < monitors.size(); i++) {
+        MonitorSavedSettings o = monitors[i];
         if (o == obj) {
-            jsonArray.removeAt(i);
-            obj["name"] = configName;
-            jsonArray.append(obj);
+            monitors.removeAt(i);
+            obj.name = configName;
+            monitors.append(obj);
             break;
         }
     }
-    json["configs"] = jsonArray;
-    settings.setValue("SavedConfigs", QVariant(QJsonDocument(json).toJson()));
+    saveMonitorSettings(settings, monitors);
+
+    settings.endGroup();
 
     loadSettings();
 }
@@ -166,8 +167,8 @@ void ManageSavedSettings::onApplyItem()
 {
     if (ui.allConfigs->currentItem() == NULL)
         return;
-    QJsonObject json = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
-    applyJsonSettings(config, json["outputs"].toArray());
+    MonitorSavedSettings settings = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
+    applySettings(config, settings.monitors);
 }
 
 
@@ -176,17 +177,17 @@ void ManageSavedSettings::loadSettings()
 {
     ui.allConfigs->clear();
     //ui.hardwareCompatibleConfigs->clear();
-    QSettings settings("LXQt", "lxqt-config-monitor");
-    QJsonDocument document = QJsonDocument::fromJson(settings.value("SavedConfigs").toByteArray());
-    QJsonArray savedConfigs = document.object()["configs"].toArray();
-    foreach(const QJsonValue & v, savedConfigs) {
-        QJsonObject o = v.toObject();
-        QListWidgetItem *item = new QListWidgetItem(o["name"].toString()+" - "+o["date"].toString(), ui.allConfigs);
-        item->setData(Qt::UserRole, QVariant(o));
+    LXQt::Settings settings("lxqt-config-monitor");
+    QList<MonitorSavedSettings> monitors;
+    settings.beginGroup("SavedConfigs");
+    loadMonitorSettings(settings, monitors);
+    settings.endGroup();
+    foreach(MonitorSavedSettings o, monitors) {
+        QListWidgetItem *item = new QListWidgetItem(o.name+" - "+o.date, ui.allConfigs);
+        QVariant var;
+        var.setValue(o);
+        item->setData(Qt::UserRole, var);
         if (isHardwareCompatible(o)) {
-            //QListWidgetItem *item1 = new QListWidgetItem(o["name"].toString(),
-            //                                            ui.hardwareCompatibleConfigs);
-            //item1->setData(Qt::UserRole, QVariant(o));
             QFont font = ui.allConfigs->font();
             font.setBold(true);
             item->setData(Qt::FontRole, font);

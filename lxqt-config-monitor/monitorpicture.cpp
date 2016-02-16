@@ -27,6 +27,20 @@
 
 #include "configure.h"
 
+// Gets size from string rate. String rate format is "widthxheight". Example: 800x600
+static QSize sizeFromString(QString str)
+{
+    int width = 0;
+    int height = 0;
+    int x = str.indexOf('x');
+    if (x > 0)
+    {
+        width = str.left(x).toInt();
+        height = str.mid(x + 1).toInt();
+    }
+    return QSize(width, height);
+}
+
 MonitorPictureProxy::MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture):QObject(parent)
 {
     this->monitorPicture = monitorPicture;

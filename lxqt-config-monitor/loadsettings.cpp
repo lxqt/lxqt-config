@@ -26,7 +26,7 @@
 #include <KScreen/SetConfigOperation>
 #include <QJsonObject>
 #include <QJsonArray>
-#include <QSettings>
+#include <lxqtsettings.h>
 #include <QJsonDocument>
 #include <KScreen/EDID>
 #include <QThread>
@@ -48,54 +48,56 @@ LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 
 void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
 {
-    QSettings settings("LXQt", "lxqt-config-monitor");
-    QJsonDocument document = QJsonDocument::fromJson( settings.value("currentConfig").toByteArray() );
-    QJsonObject json = document.object();
-    QJsonArray array = json["outputs"].toArray();
+    LXQt::Settings settings("lxqt-config-monitor");
+    QList<MonitorSettings> monitors;
+    settings.beginGroup("currentConfig");
+    loadMonitorSettings(settings, monitors);
+    settings.endGroup();
 
-    applyJsonSettings(config, array);
+    applySettings(config, monitors);
 
     exit(0);
 }
 
 
-void applyJsonSettings(KScreen::ConfigPtr config, QJsonArray array)
+void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 {
     KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs)
     {
         qDebug() << "Output: " << output->name();
-        for(int i=0;i<array.size();i++)
+        for(int i=0;i<monitors.size();i++)
         {
-            QJsonObject monitorSettings = array[i].toObject();
-            if( monitorSettings["name"] == output->name() )
+            MonitorSettings monitor = monitors[i];
+            if( monitor.name == output->name() )
             {
                 KScreen::Edid* edid = output->edid();
                 if (edid && edid->isValid())
-                    if( monitorSettings["hash"].toString() != edid->hash() )
+                    if( monitor.hash != edid->hash() )
                     {
-                        qDebug() << "Hash: " << monitorSettings["hash"].toString() << "==" << edid->hash();
+                        qDebug() << "Hash: " << monitor.hash << "==" << edid->hash();
                         return exit(1); // Saved settings are from other monitor
                     }
-                if( monitorSettings["connected"].toBool() != output->isConnected() )
+                if( monitor.connected != output->isConnected() )
                     return exit(2); // Saved settings are from other monitor
                 if( !output->isConnected() )
                     continue;
-                output->setEnabled( monitorSettings["enabled"].toBool() );
-                output->setPrimary( monitorSettings["primary"].toBool() );
-                output->setPos( QPoint(monitorSettings["xPos"].toInt(),monitorSettings["yPos"].toInt()) );
-                output->setRotation( (KScreen::Output::Rotation)(monitorSettings["rotation"].toInt()) );
+                output->setEnabled( monitor.enabled );
+                output->setPrimary( monitor.primary );
+                output->setPos( QPoint(monitor.xPos, monitor.yPos) );
+                output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
                 // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
                 KScreen::ModeList modeList = output->modes();
                 foreach(const KScreen::ModePtr &mode, modeList)
                 {
-                    QString modeSize = QString("%1x%2").arg(mode->size().width()).arg(mode->size().height());
-                    if( mode->id() == monitorSettings["currentMode"].toString() 
+                    if( mode->id() == QString(monitor.currentMode) 
                             ||
                             (
-                                modeSize == monitorSettings["currentModeSize"].toString() 
+                                mode->size().width() == monitor.currentModeWidth
+                                    &&
+                                mode->size().height() == monitor.currentModeHeight 
                                     && 
-                                mode->refreshRate() == monitorSettings["currentModeRate"].toDouble() 
+                                mode->refreshRate() == monitor.currentModeRate 
                             )
                       )
                     {
