@@ -303,7 +303,8 @@ protected:
       * Reimplemented from QAbstractItemView.
       */
     virtual void dataChanged(const QModelIndex &topLeft,
-                             const QModelIndex &bottomRight);
+                             const QModelIndex &bottomRight,
+                             const QVector<int> & roles = QVector<int> ());
 
     /**
       * Reimplemented from QAbstractItemView.
