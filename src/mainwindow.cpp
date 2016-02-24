@@ -208,42 +208,11 @@ LXQtConfig::MainWindow::MainWindow() : QMainWindow()
     view->setUniformItemSizes(true);
     view->setCategoryDrawer(new QCategoryDrawerV3(view));
 
-    // Qt bug: signal activated should respect the hint, but it doesn't
-    if (style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick))
-        connect(view, SIGNAL(clicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
-    else
-        connect(view, SIGNAL(doubleClicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
+    connect(view, &QAbstractItemView::activated, this, &MainWindow::activateItem);
     view->setFocus();
 
     QTimer::singleShot(1, this, SLOT(load()));
     new QShortcut{QKeySequence{Qt::CTRL + Qt::Key_Q}, this, SLOT(close())};
-}
-
-bool LXQtConfig::MainWindow::event(QEvent* event)
-{
-    // LXQt's Qt5 plugin sends a ThemeChange event
-    if (event->type() == QEvent::ThemeChange)
-    {
-        // Qt bug: signal activated should respect the hint, but it doesn't
-        if (style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick))
-        {
-            view->disconnect(this);
-            connect(view, SIGNAL(clicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
-        }
-        else
-        {
-            view->disconnect(this);
-            connect(view, SIGNAL(doubleClicked(const QModelIndex&)), SLOT(activateItem(const QModelIndex&)));
-        }
-    }
-    else if (event->type() == QEvent::KeyRelease)
-    {
-        int key = static_cast<QKeyEvent*>(event)->key();
-        if (key == Qt::Key_Enter || key == Qt::Key_Return)
-            activateItem(view->selectionModel()->currentIndex());
-    }
-
-    return QMainWindow::event(event);
 }
 
 void LXQtConfig::MainWindow::load()
