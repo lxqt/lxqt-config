@@ -213,6 +213,7 @@ private:
 LXQtConfig::MainWindow::MainWindow() : QMainWindow()
 {
     setupUi(this);
+    view->installEventFilter(this);
 
     /* To always have the intended layout on startup,
        the listview should be shown after it's fully formed. */
@@ -225,7 +226,7 @@ LXQtConfig::MainWindow::MainWindow() : QMainWindow()
     view->setUniformItemSizes(true);
     view->setCategoryDrawer(new QCategoryDrawerV3(view));
 
-    connect(view, &QAbstractItemView::activated, this, &MainWindow::activateItem);
+    connect(view, &QAbstractItemView::activated, [this] (const QModelIndex & index) { pendingActivation = index; });
     view->setFocus();
 
     QTimer::singleShot(0, [this] { setSizing(); });
@@ -249,13 +250,50 @@ void LXQtConfig::MainWindow::load()
     QApplication::restoreOverrideCursor();
 }
 
-void LXQtConfig::MainWindow::activateItem(const QModelIndex &index)
+void LXQtConfig::MainWindow::activateItem()
 {
-    if (!index.isValid())
-        return;
+    if (pendingActivation.isValid())
+    {
+        model->activateItem(pendingActivation);
+        pendingActivation = QModelIndex{};
+    }
+}
 
-    QModelIndex orig = proxyModel->mapToSource(index);
-    model->activateItem(orig);
+/*Note: all this delayed activation is here to workaround the auto-repeated
+ * Enter/Return key activation -> if the user keeps pressing the enter/return
+ * we normaly will keep activating (spawning new processes) until the focus
+ * isn't stolen from our window. New process is not spawned until the
+ * (non-autorepeated) KeyRelease is delivered.
+ *
+ * ref https://github.com/lxde/lxqt/issues/965
+ */
+bool LXQtConfig::MainWindow::eventFilter(QObject * watched, QEvent * event)
+{
+    if (view != watched)
+        return false;
+    switch (event->type())
+    {
+        case QEvent::KeyPress:
+        case QEvent::KeyRelease:
+            {
+                QKeyEvent * ev = dynamic_cast<QKeyEvent *>(event);
+                switch (ev->key())
+                {
+                    case Qt::Key_Enter:
+                    case Qt::Key_Return:
+                        if (QEvent::KeyRelease == ev->type() && !ev->isAutoRepeat())
+                            activateItem();
+                }
+            }
+            break;
+        case QEvent::MouseButtonRelease:
+            activateItem();
+            break;
+        default:
+            //keep warnings quiet
+            break;
+    }
+    return false;
 }
 
 void LXQtConfig::MainWindow::setSizing()

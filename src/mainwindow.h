@@ -52,18 +52,20 @@ public:
 
 protected:
     virtual bool event(QEvent * event) override;
+    virtual bool eventFilter(QObject * watched, QEvent * event) override;
 
 private:
     QCategorizedSortFilterProxyModel *proxyModel;
     ConfigPaneModel *model;
+    QPersistentModelIndex pendingActivation;
 
 private:
     void builGroup(const QDomElement& xml);
     void setSizing();
+    void activateItem();
 
 private slots:
     void load();
-    void activateItem(const QModelIndex &index);
 };
 
 }; // namespace
