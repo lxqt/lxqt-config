@@ -265,7 +265,7 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
       return false;
     }
     if (curType != 1) {
-     qDebug() << "skiping 'press' cursor; shape no" << curShape << "named" << curShapeName[curShape];
+     qDebug() << "skipping 'press' cursor; shape no" << curShape << "named" << curShapeName[curShape];
       continue;
       // we need only 'normal' cursors
     }
@@ -273,14 +273,14 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
     const char **nlst = findCursorByFXId((int)curShape);
     if (!nlst) {
       // unknown cursor type, skip it
-     qDebug() << "CursorFX: skiping cursor shape:" << curShapeName[curShape];
-      qWarning() << "CursorFX: skiping cursor shape:" << curShapeName[curShape];
+     qDebug() << "CursorFX: skipping cursor shape:" << curShapeName[curShape];
+      qWarning() << "CursorFX: skipping cursor shape:" << curShapeName[curShape];
       continue;
     }
     if (shapesSeen.contains(curShape&0xff)) {
       // unknown cursor type, skip it
-     qDebug() << "CursorFX: skiping duplicate cursor shape:" << curShapeName[curShape];
-      qWarning() << "CursorFX: skiping duplicate cursor shape:" << curShapeName[curShape];
+     qDebug() << "CursorFX: skipping duplicate cursor shape:" << curShapeName[curShape];
+      qWarning() << "CursorFX: skipping duplicate cursor shape:" << curShapeName[curShape];
       continue;
     }
     shapesSeen << (curShape&0xff);
