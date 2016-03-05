@@ -30,6 +30,7 @@ add_subdirectory(lxqt-config-input)
 add_subdirectory(lxqt-config-file-associations)
 add_subdirectory(lxqt-config-appearance)
 add_subdirectory(lxqt-config-monitor)
+add_subdirectory(lxqt-config-brightness-settings)
 add_subdirectory(lxqt-config-locale)
 
 # building tarball with CPack -------------------------------------------------

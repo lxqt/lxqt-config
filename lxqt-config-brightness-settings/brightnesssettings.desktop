@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Brightness Settings
+Exec=lxqt-config-brightness-settings 
+Terminal=false
+Type=Application
+Icon=brightnesssettings
+Categories=Settings;DesktopSettings;Qt;LXQt;HardwareSettings;
+OnlyShowIn=LXQt;
