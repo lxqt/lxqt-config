@@ -6,3 +6,5 @@ Type=Application
 Icon=brightnesssettings
 Categories=Settings;DesktopSettings;Qt;LXQt;HardwareSettings;
 OnlyShowIn=LXQt;
+
+#TRANSLATIONS_DIR=translations

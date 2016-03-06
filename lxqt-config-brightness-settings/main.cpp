@@ -18,12 +18,12 @@
 
 #include "xrandrbrightness.h"
 #include <QDebug>
-#include <QApplication>
+#include <LXQt/SingleApplication>
 #include "brightnesssettings.h"
 
 int main(int argn, char* argv[])
 {
-    QApplication app(argn, argv);
+    LXQt::SingleApplication app(argn, argv);
     /*
      * XRandrBrightness *brightness = new XRandrBrightness();
      * if(brightness->isSupported())
