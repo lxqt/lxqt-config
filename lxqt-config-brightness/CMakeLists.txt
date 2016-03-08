@@ -1,4 +1,4 @@
-project(lxqt-config-brightness-settings)
+project(lxqt-config-brightness)
 
 find_package(Qt5Widgets REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
