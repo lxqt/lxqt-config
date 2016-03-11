@@ -19,24 +19,58 @@
 #include "xrandrbrightness.h"
 #include <QDebug>
 #include <LXQt/SingleApplication>
+#include <QCommandLineParser>
 #include "brightnesssettings.h"
 
 int main(int argn, char* argv[])
 {
     LXQt::SingleApplication app(argn, argv);
-    /*
-     * XRandrBrightness *brightness = new XRandrBrightness();
-     * if(brightness->isSupported())
-     * {
-     *     qDebug() << "Brightness" << brightness->brightness();
-     *     qDebug() << "Max. brightness" << brightness->brightnessMax();
-     *     brightness->setPercentBrightness(0.04);
-     * }
-     * else
-     * {
-     *     qDebug("Brightness control is not supported");
-     * }
-     */
+     
+    // Command line options
+    QCommandLineParser parser;
+    QCommandLineOption increaseOption(QStringList() << "i" << "icrease",
+            app.tr("Increase brightness."));
+    parser.addOption(increaseOption);
+    QCommandLineOption decreaseOption(QStringList() << "d" << "decrease",
+            app.tr("Decrease brightness."));
+    parser.addOption(decreaseOption);
+    QCommandLineOption helpOption = parser.addHelpOption();
+    parser.addOption(increaseOption);
+    parser.addOption(decreaseOption);
+    parser.addOption(helpOption);
+
+    parser.process(app);
+    if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) )
+    {
+        XRandrBrightness *brightness = new XRandrBrightness();
+        QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
+        QList<MonitorInfo> monitorsChanged;
+        float sign = parser.isSet(decreaseOption)?-1.0:1.0;
+        foreach(MonitorInfo monitor, monitors)
+        {
+            
+            if( monitor.isBacklightSupported() )
+            {
+                long backlight = monitor.backlight() + sign*(monitor.backlightMax()/30 + 1);
+                if(backlight<monitor.backlightMax())
+                {
+                    monitor.setBacklight(backlight);
+                    monitorsChanged.append(monitor);
+                }
+            }
+            else
+            {
+                float brightness = monitor.brightness() + 0.1*sign;
+                if(brightness<2.0)
+                {
+                    monitor.setBrightness(brightness);
+                    monitorsChanged.append(monitor);
+                }
+            }
+        }
+        brightness->setMonitorsSettings(monitorsChanged);
+        return 0;
+    }
 
     BrightnessSettings *brightnessSettings = new BrightnessSettings();
     brightnessSettings->setWindowIcon(QIcon(ICON_DIR "/brightnesssettings.svg"));
