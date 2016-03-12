@@ -34,25 +34,33 @@ int main(int argn, char* argv[])
     QCommandLineOption decreaseOption(QStringList() << "d" << "decrease",
             app.tr("Decrease brightness."));
     parser.addOption(decreaseOption);
+    QCommandLineOption setOption(QStringList() << "s" << "set",
+            app.tr("Set brightness from 1 to 100."), "brightness");
+    parser.addOption(setOption);
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(increaseOption);
     parser.addOption(decreaseOption);
+    parser.addOption(setOption);
     parser.addOption(helpOption);
 
     parser.process(app);
-    if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) )
+    if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) )
     {
         XRandrBrightness *brightness = new XRandrBrightness();
         QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
         QList<MonitorInfo> monitorsChanged;
         float sign = parser.isSet(decreaseOption)?-1.0:1.0;
+        double brightness_value = parser.value(setOption).toFloat();
+        brightness_value = qMin( qMax(brightness_value, 0.0), 100.0 ) / 100.0;
+        if(!parser.value(setOption).isEmpty())
+            sign = 0.0;
         foreach(MonitorInfo monitor, monitors)
         {
             
             if( monitor.isBacklightSupported() )
             {
-                long backlight = monitor.backlight() + sign*(monitor.backlightMax()/30 + 1);
-                if(backlight<monitor.backlightMax())
+                long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
+                if(backlight<monitor.backlightMax() && backlight>0)
                 {
                     monitor.setBacklight(backlight);
                     monitorsChanged.append(monitor);
@@ -60,8 +68,8 @@ int main(int argn, char* argv[])
             }
             else
             {
-                float brightness = monitor.brightness() + 0.1*sign;
-                if(brightness<2.0)
+                float brightness = (monitor.brightness() + 0.1*sign)*qAbs(sign) + brightness_value*2.0;
+                if(brightness<2.0 && brightness>0.0)
                 {
                     monitor.setBrightness(brightness);
                     monitorsChanged.append(monitor);
