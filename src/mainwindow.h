@@ -50,12 +50,16 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
 public:
     MainWindow();
 
+protected:
+    virtual bool event(QEvent * event) override;
+
 private:
     QCategorizedSortFilterProxyModel *proxyModel;
     ConfigPaneModel *model;
 
 private:
     void builGroup(const QDomElement& xml);
+    void setSizing();
 
 private slots:
     void load();
