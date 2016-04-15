@@ -190,14 +190,15 @@ protected:
         QStyleOptionViewItemV4 opt = option;
         initStyleOption(&opt, index);
 
+        const QSize & iconSize = option.decorationSize;
         QSize size(mView->gridSize().width() - 8, // 4-px margin around each cell
-                   mView->iconSize().height());
+                   iconSize.height());
         // for having sharp non-scalable icons with HDPI
         int dpr = qApp->devicePixelRatio();
         if (dpr < 1) dpr = 1;
-        QPixmap pixmap = opt.icon.pixmap(mView->iconSize() / dpr); // -> Qt doc -> QIcon::pixmap()
-        if (dpr > 1 && pixmap.size() == mView->iconSize()) // exceptional (scalable or not from icon set)
-            pixmap = opt.icon.pixmap(mView->iconSize());
+        QPixmap pixmap = opt.icon.pixmap(iconSize / dpr); // -> Qt doc -> QIcon::pixmap()
+        if (dpr > 1 && pixmap.size() == iconSize) // exceptional (scalable or not from icon set)
+            pixmap = opt.icon.pixmap(iconSize);
         opt.icon = QIcon(pixmap.copy(QRect(QPoint(0, 0), size * dpr)));
         opt.decorationSize = size;
 
@@ -220,7 +221,6 @@ LXQtConfig::MainWindow::MainWindow() : QMainWindow()
     model = new ConfigPaneModel();
 
     view->setViewMode(QListView::IconMode);
-    setSizing();
     view->setWordWrap(true);
     view->setUniformItemSizes(true);
     view->setCategoryDrawer(new QCategoryDrawerV3(view));
@@ -228,6 +228,7 @@ LXQtConfig::MainWindow::MainWindow() : QMainWindow()
     connect(view, &QAbstractItemView::activated, this, &MainWindow::activateItem);
     view->setFocus();
 
+    QTimer::singleShot(0, [this] { setSizing(); });
     QTimer::singleShot(1, this, SLOT(load()));
     new QShortcut{QKeySequence{Qt::CTRL + Qt::Key_Q}, this, SLOT(close())};
 }
@@ -260,8 +261,7 @@ void LXQtConfig::MainWindow::activateItem(const QModelIndex &index)
 void LXQtConfig::MainWindow::setSizing()
 {
     // consult the style to know the icon size
-    int iconSize = qBound(16, QApplication::style()->pixelMetric(QStyle::PM_IconViewIconSize), 256);
-    view->setIconSize(QSize(iconSize, iconSize));
+    int iconSize = qBound(16, view->decorationSize().height(), 256);
     // DPR is automatically taken into account in setIconSize()
     // but wee need to consider it explicitly below
     int dpr = qApp->devicePixelRatio();
