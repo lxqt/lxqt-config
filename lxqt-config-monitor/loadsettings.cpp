@@ -34,7 +34,7 @@
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 {
-    QThread::sleep(10); // KScreen is  slow loading screen modes
+    //QThread::sleep(10); // KScreen is  slow loading screen modes
     KScreen::GetConfigOperation *operation  = new KScreen::GetConfigOperation();
     connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
