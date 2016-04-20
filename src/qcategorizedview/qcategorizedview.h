@@ -213,6 +213,11 @@ public:
       */
     virtual void reset();
 
+    /**
+     * @return The icon size by considering all the styling
+     */
+    QSize decorationSize() const;
+
 protected:
     /**
       * Reimplemented from QWidget.

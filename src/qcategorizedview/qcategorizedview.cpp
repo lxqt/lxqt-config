@@ -781,6 +781,11 @@ void QCategorizedView::reset()
     QListView::reset();
 }
 
+QSize QCategorizedView::decorationSize() const
+{
+    return viewOptions().decorationSize;
+}
+
 void QCategorizedView::paintEvent(QPaintEvent *event)
 {
     if (!d->isCategorized()) {

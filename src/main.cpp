@@ -35,6 +35,7 @@ int main(int argc, char **argv)
     LXQt::SingleApplication app(argc, argv);
     app.setOrganizationName(QStringLiteral("lxqt"));
     app.setApplicationName(QStringLiteral("lxqt-config"));
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     // ensure that we use lxqt-config.menu file.
     qputenv("XDG_MENU_PREFIX", "lxqt-");

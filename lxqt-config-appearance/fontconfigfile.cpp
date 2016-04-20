@@ -179,6 +179,7 @@ void FontConfigFile::save()
         "<!DOCTYPE fontconfig SYSTEM \"fonts.dtd\">\n"
         "<!-- created by lxqt-config-appearance (DO NOT EDIT!) -->\n"
         "<fontconfig>\n"
+        "  <include ignore_missing=\"yes\">conf.d</include>\n"
         "  <match target=\"font\">\n"
         "    <edit name=\"antialias\" mode=\"assign\">\n"
         "      <bool>" << (mAntialias ? "true" : "false") << "</bool>\n"
