@@ -2,41 +2,101 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru" sourcelanguage="en">
 <context>
-    <name>MonitorInfo</name>
+    <name>FastMenu</name>
     <message>
-        <location filename="../monitor.cpp" line="52"/>
-        <source>Laptop LCD Monitor</source>
-        <translation>ЖК-монитор лэптопа</translation>
+        <location filename="../fastmenu.ui" line="20"/>
+        <source>Fast options</source>
+        <translation>Быстрые настройки</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
-        <source>External VGA Monitor</source>
-        <translation>Внешний VGA-монитор</translation>
+        <location filename="../fastmenu.ui" line="40"/>
+        <source> ❶ ❷ Extended view</source>
+        <translation> ❶ ❷ Расширенный рабочий стол</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
-        <source>VGA Monitor</source>
-        <translation>VGA-монитор</translation>
+        <location filename="../fastmenu.ui" line="45"/>
+        <source> ❶ ❶ Unified view</source>
+        <translation> ❶ ❶ Объединённый рабочий стол</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
-        <source>External DVI Monitor</source>
-        <translation>Внешний DVI-монитор</translation>
+        <location filename="../fastmenu.ui" line="50"/>
+        <source> ❶     Only first</source>
+        <translation> ❶     Только перый</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
-        <source>DVI Monitor</source>
-        <translation>DVI-монитор</translation>
+        <location filename="../fastmenu.ui" line="55"/>
+        <source>     ❷ Only second</source>
+        <translation>     ❷ Только второй</translation>
+    </message>
+</context>
+<context>
+    <name>ManageSavedSettings</name>
+    <message>
+        <location filename="../managesavedsettings.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation>Настройки монитора</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
-        <source>TV</source>
-        <translation>ТВ</translation>
+        <location filename="../managesavedsettings.ui" line="27"/>
+        <source>Saved settings</source>
+        <translation>Сохранённые настройки</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="60"/>
-        <source>Default Monitor</source>
-        <translation>Монитор по умолчанию</translation>
+        <location filename="../managesavedsettings.ui" line="38"/>
+        <source>Rename</source>
+        <translation>Переименовать</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.ui" line="45"/>
+        <source>Delete</source>
+        <translation>Удалить</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.ui" line="52"/>
+        <source>Apply</source>
+        <translation>Применить</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="64"/>
+        <source>None</source>
+        <translation>Нет</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="67"/>
+        <source>Left</source>
+        <translation>Слева</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="70"/>
+        <source>Inverted</source>
+        <translation>Перевернуть</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="73"/>
+        <source>Right</source>
+        <translation>Справа</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="77"/>
+        <location filename="../managesavedsettings.cpp" line="78"/>
+        <source>True</source>
+        <translation>Правильно</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="77"/>
+        <location filename="../managesavedsettings.cpp" line="78"/>
+        <source>False</source>
+        <translation>Неправильно</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="140"/>
+        <source>Name</source>
+        <translation>Название</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="140"/>
+        <source>Name:</source>
+        <translation>Название:</translation>
     </message>
 </context>
 <context>
@@ -50,10 +110,6 @@
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
         <translation>Держать мониторы подключенными</translation>
-    </message>
-    <message>
-        <source>Magnetic attraction</source>
-        <translation>Магнитное притяжение</translation>
     </message>
 </context>
 <context>
@@ -69,68 +125,23 @@
         <translation>Настройки</translation>
     </message>
     <message>
-        <source>Unify all monitors</source>
-        <translation>Объединить все мониторы</translation>
+        <location filename="../monitorsettingsdialog.cpp" line="111"/>
+        <source>Fast Menu</source>
+        <translation>Быстрое меню</translation>
     </message>
     <message>
-        <source>Monitor Position</source>
-        <translation>Положение монитора</translation>
-    </message>
-    <message>
-        <source>Primary monitor:</source>
-        <translation>Первичный монитор:</translation>
-    </message>
-    <message>
-        <source>Apply</source>
-        <translation>Применить</translation>
-    </message>
-    <message>
-        <source>Do you want to save changes?</source>
-        <translation>Вы хотите сохранить изменения?</translation>
-    </message>
-    <message>
-        <source>Please, check the settings before saving.</source>
-        <translation>Проверьте, пожалуйста, настройки перед сохранением.</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Название</translation>
-    </message>
-    <message>
-        <source>Name:</source>
-        <translation>Название:</translation>
-    </message>
-    <message>
-        <source>Actual</source>
-        <translation>Текущие</translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="91"/>
+        <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
         <translation>Указать позицию</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="199"/>
-        <source>Error</source>
-        <translation>Ошибка</translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="199"/>
-        <source>Config can not be saved</source>
-        <translation>Не удалось сохранить конфигурацию</translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="218"/>
+        <location filename="../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
         <translation>Дополнительные настройки</translation>
     </message>
 </context>
 <context>
     <name>MonitorWidget</name>
-    <message>
-        <source>Turn on</source>
-        <translation>Включить</translation>
-    </message>
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
@@ -167,148 +178,111 @@
         <translation>Этот экран расширяет другой монитор</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="108"/>
-        <source>This screen clones another display</source>
-        <translation>Этот экран повторяет другой монитор</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="119"/>
-        <source>Right of...</source>
-        <translation>Справа от...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="124"/>
-        <source>Left of...</source>
-        <translation>Слева от...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="129"/>
-        <source>Above...</source>
-        <translation>Над...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="134"/>
-        <source>Below...</source>
-        <translation>Под...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="139"/>
-        <source>Positioned manually</source>
-        <translation>Ручное позиционирование</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="173"/>
+        <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
         <translation>Дополнительные</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="194"/>
+        <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
         <translation>Частота обновления:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="201"/>
+        <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
         <translation>Поворот:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="224"/>
+        <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
         <translation>Информация</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="230"/>
+        <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
         <translation>Информация о мониторе</translation>
     </message>
     <message>
-        <source>Rate:</source>
-        <translation>Частота:</translation>
-    </message>
-    <message>
-        <source>Hz</source>
-        <translation>Гц</translation>
-    </message>
-    <message>
-        <source>Position:</source>
-        <translation>Положение:</translation>
-    </message>
-    <message>
-        <source>Backlight:</source>
-        <translation>Подсветка:</translation>
-    </message>
-    <message>
-        <source>Brightness:</source>
-        <translation>Яркость:</translation>
-    </message>
-    <message>
-        <source>Gamma:</source>
-        <translation>Гамма:</translation>
-    </message>
-    <message>
-        <source>Auto</source>
-        <translation>Авто</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.cpp" line="136"/>
+        <location filename="../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
         <translation>Название: %1</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="137"/>
+        <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
         <translation>Производитель: %1</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="138"/>
+        <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
         <translation>Серийный номер: %1</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="139"/>
+        <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
         <translation>Размер монитора: %1см x %2см</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="140"/>
+        <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
         <translation>Серийный номер: %1</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="141"/>
+        <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
         <translation>EISA ID устройства: %1</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="183"/>
+        <location filename="../monitorwidget.cpp" line="159"/>
         <source>None</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="184"/>
+        <location filename="../monitorwidget.cpp" line="160"/>
         <source>Left</source>
         <translation>Слева</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="185"/>
+        <location filename="../monitorwidget.cpp" line="161"/>
         <source>Right</source>
         <translation>Справа</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="186"/>
+        <location filename="../monitorwidget.cpp" line="162"/>
         <source>Inverted</source>
         <translation>Наоборот</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="329"/>
+        <location filename="../monitorwidget.cpp" line="252"/>
         <source>%1 Hz</source>
         <translation>%1 Гц</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../settingsdialog.cpp" line="33"/>
+        <source>Manage Saved Settings</source>
+        <translation>Управление сохранёнными настройками</translation>
+    </message>
+</context>
+<context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation>Название</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation>Название:</translation>
     </message>
 </context>
 <context>
