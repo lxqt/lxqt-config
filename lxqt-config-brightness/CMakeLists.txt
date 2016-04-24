@@ -45,9 +45,9 @@ lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
         ${UPDATE_TRANSLATIONS}
     SOURCES
-        ${HEADERS}
-        ${SOURCES}
-        ${UIS}
+        ${H_FILES}
+        ${CPP_FILES}
+        ${UI_FILES}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
@@ -56,7 +56,7 @@ lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/${PROJECT_NAME}.desktop.in")
 
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
+add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${RESOURCES} ${QRC_SOURCES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES} ${QM_LOADER})
 
 target_link_libraries(
     ${PROJECT_NAME}
@@ -76,4 +76,3 @@ install(
     FILES icons/brightnesssettings.svg
     DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps"
 )
-    

@@ -2,52 +2,119 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="de">
 <context>
-    <name>MonitorInfo</name>
+    <name>FastMenu</name>
     <message>
-        <location filename="../monitor.cpp" line="52"/>
-        <source>Laptop LCD Monitor</source>
-        <translation>Laptop-Bildschirm</translation>
+        <location filename="../fastmenu.ui" line="17"/>
+        <source>Fast options</source>
+        <translation>Schnelleinstellungen</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
-        <source>External VGA Monitor</source>
-        <translation>Externer VGA-Bildschirm</translation>
+        <location filename="../fastmenu.ui" line="37"/>
+        <source> ❶ ❷ Extended view</source>
+        <translation> ❶ ❷ Erweiterter Bildschirm</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="54"/>
-        <source>VGA Monitor</source>
-        <translation>VGA-Bildschirm</translation>
+        <location filename="../fastmenu.ui" line="42"/>
+        <source> ❶ ❶ Unified view</source>
+        <translation> ❶ ❶ Gemeinsamer Bildschirm</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
-        <source>External DVI Monitor</source>
-        <translation>Externer DVI-Bildschirm</translation>
+        <location filename="../fastmenu.ui" line="47"/>
+        <source> ❶     Only first</source>
+        <translation> ❶     Nur erster</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="56"/>
-        <source>DVI Monitor</source>
-        <translation>DVI-Bildschirm</translation>
+        <location filename="../fastmenu.ui" line="52"/>
+        <source>     ❷ Only second</source>
+        <translation>     ❷ Nur zweiter</translation>
+    </message>
+</context>
+<context>
+    <name>LXQt::SingleApplication</name>
+    <message>
+        <location filename="../main.cpp" line="55"/>
+        <source>Load last settings.</source>
+        <translation>Letzte Einstellungen laden.</translation>
+    </message>
+</context>
+<context>
+    <name>ManageSavedSettings</name>
+    <message>
+        <location filename="../managesavedsettings.ui" line="14"/>
+        <source>Monitor Settings</source>
+        <translation>Bildschirmeinstellungen</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="58"/>
-        <source>TV</source>
-        <translation>Fernseher</translation>
+        <location filename="../managesavedsettings.ui" line="27"/>
+        <source>Saved settings</source>
+        <translation>Gespeicherte Einstellungen</translation>
     </message>
     <message>
-        <location filename="../monitor.cpp" line="60"/>
-        <source>Default Monitor</source>
-        <translation>Standardbildschirm</translation>
+        <location filename="../managesavedsettings.ui" line="38"/>
+        <source>Rename</source>
+        <translation>Umbenennen</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.ui" line="45"/>
+        <source>Delete</source>
+        <translation>Löschen</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.ui" line="52"/>
+        <source>Apply</source>
+        <translation>Anwenden</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="64"/>
+        <source>None</source>
+        <translation>Keine</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="67"/>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="70"/>
+        <source>Inverted</source>
+        <translation>Vertauscht</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="73"/>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="77"/>
+        <location filename="../managesavedsettings.cpp" line="78"/>
+        <source>True</source>
+        <translation>Wahr</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="77"/>
+        <location filename="../managesavedsettings.cpp" line="78"/>
+        <source>False</source>
+        <translation>Falsch</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="140"/>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="140"/>
+        <source>Name:</source>
+        <translation>Name:</translation>
     </message>
 </context>
 <context>
     <name>MonitorPictureDialog</name>
     <message>
-        <location filename="../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialogfenster</translation>
+        <translation type="vanished">Dialogfenster</translation>
     </message>
     <message>
-        <location filename="../monitorpicture.ui" line="27"/>
+        <location filename="../monitorpicture.ui" line="24"/>
         <source>Keep monitors attached</source>
         <translation>Bildschirme verbunden lassen</translation>
     </message>
@@ -65,22 +132,17 @@
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="91"/>
+        <location filename="../monitorsettingsdialog.cpp" line="111"/>
+        <source>Fast Menu</source>
+        <translation>Schnelleinstellungen</translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
         <translation>Position setzen</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="199"/>
-        <source>Error</source>
-        <translation>Fehler</translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="199"/>
-        <source>Config can not be saved</source>
-        <translation>Konfiguration kann nicht gespeichert werden</translation>
-    </message>
-    <message>
-        <location filename="../monitorsettingsdialog.cpp" line="218"/>
+        <location filename="../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
         <translation>Erweiterte Einstellungen</translation>
     </message>
@@ -123,126 +185,104 @@
         <translation>Erweiterter Bildschirm</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="108"/>
-        <source>This screen clones another display</source>
-        <translation>Klon eines anderen Bildschirms</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="119"/>
-        <source>Right of...</source>
-        <translation>Rechts von...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="124"/>
-        <source>Left of...</source>
-        <translation>Links von...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="129"/>
-        <source>Above...</source>
-        <translation>Über...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="134"/>
-        <source>Below...</source>
-        <translation>Unter...</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="139"/>
-        <source>Positioned manually</source>
-        <translation>Manuelle Position</translation>
-    </message>
-    <message>
-        <location filename="../monitorwidget.ui" line="173"/>
+        <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
         <translation>Erweiterte Einstellungen</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="194"/>
+        <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
         <translation>Bildwiederholfrequenz:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="201"/>
+        <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
         <translation>Drehung:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="224"/>
+        <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="230"/>
+        <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
         <translation>Bildschirm-Informationen</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="136"/>
+        <location filename="../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
         <translation>Name: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="137"/>
+        <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
         <translation>Hersteller: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="138"/>
+        <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
         <translation>Serie: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="139"/>
+        <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
         <translation>Bildschirmgröße: %1cm x %2cm
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="140"/>
+        <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
         <translation>Seriennummer: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="141"/>
+        <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished">EISA Geräte-ID: %1
+        <translation>EISA Geräte-ID: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="183"/>
+        <location filename="../monitorwidget.cpp" line="159"/>
         <source>None</source>
         <translation>Keine</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="184"/>
+        <location filename="../monitorwidget.cpp" line="160"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="185"/>
+        <location filename="../monitorwidget.cpp" line="161"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="186"/>
+        <location filename="../monitorwidget.cpp" line="162"/>
         <source>Inverted</source>
         <translation>Kopfstehend</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="329"/>
+        <location filename="../monitorwidget.cpp" line="252"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../settingsdialog.cpp" line="33"/>
+        <source>Manage Saved Settings</source>
+        <translation>Gespeicherte Einstellungen verwalten</translation>
     </message>
 </context>
 <context>
