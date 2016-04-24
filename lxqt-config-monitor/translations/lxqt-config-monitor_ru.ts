@@ -102,11 +102,6 @@
 <context>
     <name>MonitorPictureDialog</name>
     <message>
-        <location filename="../monitorpicture.ui" line="14"/>
-        <source>Dialog</source>
-        <translation>Диалог</translation>
-    </message>
-    <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
         <translation>Держать мониторы подключенными</translation>
@@ -256,7 +251,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="162"/>
         <source>Inverted</source>
-        <translation>Наоборот</translation>
+        <translation>Перевернуть</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="252"/>
