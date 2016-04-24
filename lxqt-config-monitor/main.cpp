@@ -52,7 +52,7 @@ int main(int argc, char** argv)
     // Command line options
     QCommandLineParser parser;
     QCommandLineOption loadOption(QStringList() << "l" << "loadlast",
-            app.tr("Load last settings."));
+            LXQt::SingleApplication::tr("Load last settings."));
     parser.addOption(loadOption);
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(loadOption);

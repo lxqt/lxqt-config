@@ -25,17 +25,17 @@
 int main(int argn, char* argv[])
 {
     LXQt::SingleApplication app(argn, argv);
-     
+
     // Command line options
     QCommandLineParser parser;
-    QCommandLineOption increaseOption(QStringList() << "i" << "icrease",
-            app.tr("Increase brightness."));
+    QCommandLineOption increaseOption(QStringList() << "i" << "increase",
+            LXQt::SingleApplication::tr("Increase brightness."));
     parser.addOption(increaseOption);
     QCommandLineOption decreaseOption(QStringList() << "d" << "decrease",
-            app.tr("Decrease brightness."));
+            LXQt::SingleApplication::tr("Decrease brightness."));
     parser.addOption(decreaseOption);
     QCommandLineOption setOption(QStringList() << "s" << "set",
-            app.tr("Set brightness from 1 to 100."), "brightness");
+            LXQt::SingleApplication::tr("Set brightness from 1 to 100."), "brightness");
     parser.addOption(setOption);
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(increaseOption);
@@ -56,7 +56,7 @@ int main(int argn, char* argv[])
             sign = 0.0;
         foreach(MonitorInfo monitor, monitors)
         {
-            
+
             if( monitor.isBacklightSupported() )
             {
                 long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
