@@ -58,7 +58,7 @@ IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
 void IconThemeConfig::initIconsThemes()
 {
     QStringList processed;
-    QStringList baseDirs = QIcon::themeSearchPaths();
+    const QStringList baseDirs = QIcon::themeSearchPaths();
     static const QStringList iconNames = QStringList()
                     << QStringLiteral("document-open")
                     << QStringLiteral("document-new")
@@ -69,14 +69,14 @@ void IconThemeConfig::initIconsThemes()
     iconThemeList->setColumnCount(iconNamesN + 2);
 
     QList<QTreeWidgetItem *> items;
-    foreach (QString baseDirName, baseDirs)
+    foreach (const QString &baseDirName, baseDirs)
     {
         QDir baseDir(baseDirName);
         if (!baseDir.exists())
             continue;
 
-        QFileInfoList dirs = baseDir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
-        foreach (QFileInfo dir, dirs)
+        const QFileInfoList dirs = baseDir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
+        foreach (const QFileInfo &dir, dirs)
         {
             if (!processed.contains(dir.canonicalFilePath()))
             {

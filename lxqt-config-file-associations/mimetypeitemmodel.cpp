@@ -188,7 +188,7 @@ bool MimetypeFilterItemModel::filterHelper(QModelIndex& source_index) const
         return true;
     }
 
-    foreach (const QString pattern, mimeInfo->patterns())
+    foreach (const QString &pattern, mimeInfo->patterns())
     {
         if (pattern.contains(filterRegExp()))
         {
