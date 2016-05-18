@@ -35,9 +35,7 @@
 #include <QIcon>
 #include <QDebug>
 
-#include <private/qtxdg/qiconloader_p.h>
-
-using namespace QtXdg;
+#include <private/xdgiconloader/xdgiconloader_p.h>
 
 IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
     QWidget(parent),
@@ -114,7 +112,7 @@ void IconThemeConfig::initIconsThemes()
             }
         }
     }
-    QIconLoader::instance()->updateSystemTheme();
+    XdgIconLoader::instance()->updateSystemTheme();
 
     iconThemeList->insertTopLevelItems(0, items);
     for (int i=0; i<iconThemeList->header()->count()-1; ++i)
@@ -157,7 +155,7 @@ void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
 
         // An hack to ensure that this widget also re loads it's own icons
         // from the selected icon theme.
-        QIconLoader::instance()->setThemeName(QString());
+        XdgIconLoader::instance()->setThemeName(QString());
 
         m_settings->setValue("icon_theme",  theme);
         m_settings->sync();
