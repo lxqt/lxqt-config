@@ -26,9 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/SingleApplication>
-#include <QDebug>
 
-#include <XdgIcon>
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include "iconthemeconfig.h"
