@@ -61,13 +61,17 @@ void FastMenu::extended()
         //first left one as primary
         output->setPrimary(width == 0);
         KScreen::ModePtr mode(output->currentMode());
-        if (!mode) { // set first mode
+        if (!mode)
+        { // set first mode
             mode = output->modes().first();
-            if (mode) {
+            if (mode)
+            {
                 output->setCurrentModeId(mode->id());
             }
         }
-        if (mode) width += mode->size().width();
+        if (mode) {
+            width += mode->size().width();
+        }
     }
 }
 
