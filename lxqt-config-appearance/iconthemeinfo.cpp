@@ -126,7 +126,6 @@ QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
 {
     QVector<QIcon> icons;
 
-    const QString currentThemeName = XdgIconLoader::instance()->themeName();
     XdgIconLoader::instance()->setThemeName(mName);
     foreach (const QString &i, iconNames) {
         QThemeIconInfo info = XdgIconLoader::instance()->loadIcon(i);
@@ -161,6 +160,6 @@ QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
             icons.append(QIcon());
         }
     }
-    XdgIconLoader::instance()->setThemeName(currentThemeName);
+    XdgIconLoader::instance()->setThemeName(QString());
     return icons;
 }
