@@ -6,12 +6,14 @@ find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(PkgConfig)
 
 pkg_check_modules(XRANDR xcb-randr)
+pkg_check_modules(XCB xcb)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
 
 
 include_directories (
     ${XRANDR_INCLUDE_DIRS}
+    ${XCB_INCLUDE_DIRS}
 )
 
 set(H_FILES
@@ -69,6 +71,7 @@ target_link_libraries(
     ${PROJECT_NAME}
     ${QTX_LIBRARIES}
     ${XRANDR_LDFLAGS}
+    ${XCB_LDFLAGS}
     lxqt
 )
 
