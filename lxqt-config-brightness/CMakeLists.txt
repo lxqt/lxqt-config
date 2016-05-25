@@ -7,13 +7,10 @@ find_package(PkgConfig)
 
 pkg_check_modules(XRANDR xcb-randr)
 
-set(QTX_INCLUDE_DIRS  "")
 set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
 
 
 include_directories (
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${QTX_INCLUDE_DIRS}
     ${XRANDR_INCLUDE_DIRS}
 )
 
@@ -71,7 +68,7 @@ add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DESKTOP_FI
 target_link_libraries(
     ${PROJECT_NAME}
     ${QTX_LIBRARIES}
-    ${XRANDR_LIBRARIES}
+    ${XRANDR_LDFLAGS}
     lxqt
 )
 
