@@ -243,7 +243,7 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
         int value = qMin((int)(((float)i/(float)(red_length-1))*max_gamma),65535);
         green[i] = blue[i] = red[i] = value;
     }
-    xcb_void_cookie_t void_cookie = xcb_randr_set_crtc_gamma (QX11Info::connection(), output_info->crtc, red_length, red, green, blue);
+    xcb_randr_set_crtc_gamma (QX11Info::connection(), output_info->crtc, red_length, red, green, blue);
 }
 
 
