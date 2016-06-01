@@ -154,7 +154,10 @@ QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
                         closestMatch = entry;
                     }
                 }
-                icons.append(QIcon(closestMatch->filename));
+                if (closestMatch)
+                    icons.append(QIcon(closestMatch->filename));
+                else
+                    icons.append(QIcon());
             }
         } else {
             icons.append(QIcon());
