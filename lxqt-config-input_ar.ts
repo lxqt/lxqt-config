@@ -6,70 +6,70 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>نموذج</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation type="unfinished"></translation>
+        <translation>وقت وميض المؤشّر:</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;لوحة المفاتيح&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished"></translation>
+        <translation>أصدر صوتًا عند وجود مشكلة في دخل لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> م‌ث</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>تكارار المحارف</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="79"/>
         <location filename="../../../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished"></translation>
+        <translation>قصير(ة)</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>تأخير التّكرار:</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="115"/>
         <location filename="../../../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished"></translation>
+        <translation>طويل(ة)</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>فترة التّكرار:</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation type="unfinished"></translation>
+        <translation>اكتب في المربّع الآتي لتختبر إعدادات لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="150"/>
         <location filename="../../../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>فعّل &quot;قافل الأرقام&quot; بعد الولوج</translation>
     </message>
 </context>
 <context>
@@ -77,57 +77,57 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;تخطيط لوحة المفاتيح&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>التّخطيط</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>التّنويعة</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>أ&amp;ضف</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>أ&amp;زل</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="77"/>
         <source>up</source>
-        <translation type="unfinished"></translation>
+        <translation>لأعلى</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="84"/>
         <source>down</source>
-        <translation type="unfinished"></translation>
+        <translation>لأسفل</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"></translation>
+        <translation>طراز لوحة المفاتيح:</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>مفاتيح تغيير التّخطيط:</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>بلا</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;لاحظ&lt;/span&gt;: إن كنت تستخدم &lt;span style=&quot; font-weight:600;&quot;&gt;طريقة دخل&lt;/span&gt;، مثل IBus، أو uim، أو fcitx أو gcin، فإنّ الإعدادات هنا &lt;span style=&quot; font-weight:600;&quot;&gt;قد لا تعمل&lt;/span&gt; لأنّ طرق الدّخل تتجاهلها.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -135,78 +135,78 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>نموذج</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;الفأرة&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation type="unfinished"></translation>
+        <translation>الحركة</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>عالية</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation type="unfinished"></translation>
+        <translation>سريع</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation type="unfinished"></translation>
+        <translation>الحساسيّة:</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>منخفضة</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation type="unfinished"></translation>
+        <translation>التّسارع:</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>بطيء</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="116"/>
         <location filename="../../../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>فترة النّقر المزدوج:</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> م‌ث</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>تمرّر العجلة أسطرًا بعدد:</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished"></translation>
+        <translation>يد عسراء (أبدل زرّيّ الفأرة الأيمن بالأيسر)</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation>النّقر المفرد يفعّل العناصر</translation>
     </message>
 </context>
 <context>
@@ -214,27 +214,27 @@
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="34"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>إعدادات لوحة المفاتيح والفأرة</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="39"/>
         <source>Mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>الفأرة</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="44"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>المؤشّر</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="47"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>تخطيط لوحة المفاتيح</translation>
     </message>
 </context>
 <context>
@@ -242,17 +242,17 @@
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>اختر تخطيط لوحة مفاتيح</translation>
     </message>
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>تخطيط لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>التّنويعة</translation>
     </message>
 </context>
 </TS>
