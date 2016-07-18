@@ -24,12 +24,10 @@
 #include <KScreen/Config>
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <lxqtsettings.h>
-#include <QJsonDocument>
+#include <LXQt/Settings>
 #include <KScreen/EDID>
 #include <QThread>
+#include <QCoreApplication>
 
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
@@ -55,8 +53,6 @@ void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
     settings.endGroup();
 
     applySettings(config, monitors);
-
-    exit(0);
 }
 
 
@@ -76,10 +72,10 @@ void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                     if( monitor.hash != edid->hash() )
                     {
                         qDebug() << "Hash: " << monitor.hash << "==" << edid->hash();
-                        return exit(1); // Saved settings are from other monitor
+                        return QCoreApplication::instance()->exit(1); // Saved settings are from other monitor
                     }
                 if( monitor.connected != output->isConnected() )
-                    return exit(2); // Saved settings are from other monitor
+                    return QCoreApplication::instance()->exit(2); // Saved settings are from other monitor
                 if( !output->isConnected() )
                     continue;
                 output->setEnabled( monitor.enabled );
@@ -112,5 +108,7 @@ void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 
     if (KScreen::Config::canBeApplied(config))
         KScreen::SetConfigOperation(config).exec();
+
+    QCoreApplication::instance()->exit(0);
 }
 
