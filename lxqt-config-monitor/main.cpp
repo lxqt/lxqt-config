@@ -42,7 +42,7 @@ int main(int argc, char** argv)
     if( loadSettingsOk(argc, argv) )
     {
         // If -l option is provided, settings are loaded and app is closed.
-        QCoreApplication app(argc, argv);
+        QGuiApplication app(argc, argv);
         LoadSettings load;
         return app.exec();
     }
