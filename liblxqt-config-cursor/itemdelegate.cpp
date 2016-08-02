@@ -106,7 +106,7 @@ void ItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     QColor textcol = option.palette.color(foregroundRole(option, index));
 
     // Draw the background
-    QStyleOptionViewItemV4 opt = option;
+    QStyleOptionViewItem opt = option;
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, opt.widget);
 

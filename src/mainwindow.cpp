@@ -175,7 +175,7 @@ public:
         /* We let Qt calculate the real cell size but consider the 4-px margin
            around each cell and try to add a 2-px margin around the selection
            rectangle for styles that, unlike Fusion, highlight the whole item. */
-        QStyleOptionViewItemV4 opt = option;
+        QStyleOptionViewItem opt = option;
         int delta = opt.rect.width() - (mView->gridSize().width() - 8);
         if (delta > 0)
           opt.rect.adjust(delta/2, 0 , -delta/2, 0);
@@ -187,7 +187,7 @@ public:
 protected:
     void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
     {
-        QStyleOptionViewItemV4 opt = option;
+        QStyleOptionViewItem opt = option;
         initStyleOption(&opt, index);
 
         const QSize & iconSize = option.decorationSize;
