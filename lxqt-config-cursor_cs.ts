@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation type="vanished">&amp;Nastavit motiv</translation>
+        <translation>&amp;Nastavit motiv</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="vanished">&amp;Zavřít</translation>
+        <translation>&amp;Zavřít</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="208"/>
@@ -47,17 +47,17 @@
     <message>
         <location filename="../../../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulář</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt se nepodařilo najít žádný motiv ukazovátka. Bude se používat výchozí motiv ukazovátka X11. LXQt se podívalo do následujících adresářů:</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukázat...</translation>
     </message>
 </context>
 <context>
