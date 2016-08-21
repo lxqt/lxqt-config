@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation type="vanished">Ε&amp;πιλογή θέματος</translation>
+        <translation>&amp;Ορισμός θέματος</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="vanished">&amp;Κλείσιμο</translation>
+        <translation>&amp;Κλείσιμο</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="208"/>
