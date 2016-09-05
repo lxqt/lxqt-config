@@ -1,33 +1,77 @@
-## lxqt-config
+# lxqt-config
 
-This repository is providing several tools involved in the configuration of both LXQt and the underlying operating
-system.
+## Overview
 
-It is comprising several tiny GUIs meant to configure a distinct functionality of LXQt that is stated in their title
-bar and can be derived from the binary name as well.   
-E. g. there's a GUI "LXQt Appearance Configuration", binary `lxqt-config-appearance`, that can be used to configure
-the general appearance of LXQt, namely stuff like icon and LXQt theme or fonts.
+This repository is providing several tools involved in the configuration of both LXQt and the underlying operating system.
 
-![lxqt-config-appearance](lxqt-config-appearance.png)
+On the one hand it is featuring several GUI tools to configure topics like general appearance, pointer devices or screen resolutions.   
+On the other hand there's a GUI "Configuration Center" which summarizes all those configuration tools as well as counterparts of other LXQt components or third-party applications.   
 
-The "Monitor Settings", binary `lxqt-config-monitor`, allow for adjusting screen resolutions, positioning of screens
-and the likes.
+### Configuration GUI tools
 
-![lxqt-config-monitor](lxqt-config-monitor.png)
+#### LXQt Appearance Configuration
 
-In "LXQt Session Settings", binary `lxqt-config-session` topics affecting the LXQt session itself can be configured, e. g.
-applications to be launched at the beginning or dedicated directories according to
-[xdg-user-dirs](https://www.freedesktop.org/wiki/Software/xdg-user-dirs/).
+Appearance of LXQt, that is topics like icon and LXQt theme or fonts.   
 
-![lxqt-config-session](lxqt-config-session.png)
+![LXQt Appearance Configuration (lxqt-config-appearance)](lxqt-config-appearance.png)
 
-The other main component is the so-called "Configuration Center", binary `lxqt-config`.   
-It's a GUI hosting configuration tools like the ones mentioned above but not limited to those. Several other LXQt
-components like [lxqt-notificationd](https://github.com/lxde/lxqt-notificationd) come with their own configuration GUIs
-which are placed in the "Configuration Center" as well. [lxqt-admin](https://github.com/lxde/lxqt-admin) is providing tools
-similar to those depicted above but meant to configure parts of the underlying OS. In fact any arbitrary application may
-place its tools within the "Configuration Center". This can be seen in the following screenshot where it's featuring icon
-"Connman UI Setup" which belongs to [cmst](https://github.com/andrew-bibb/cmst) and "SDDM Configuration" which belongs to
-[sddm-config-editor](https://github.com/hagabaka/sddm-config-editor).
+Binary `lxqt-config-appearance`.
 
-![lxqt-config](lxqt-config.png)
+#### Brightness
+
+Brightness settings of output devices.   
+
+Technically colors are adjusted to simulate varying brightness if the system LXQt is running on doesn't allow for adjusting the brightness itself.   
+
+Binary `lxqt-config-brightness`.
+
+#### File Associations
+
+Assigns MIME types to applications used to handle them. Not too user-friendly so far, see e. g. discussion in https://github.com/lxde/lxqt/issues/433.   
+
+Binary `lxqt-config-file-associations`.
+
+#### Keyboard and Mouse
+
+Configures hardware of pointer devices. Settings like repeat delay and interval of keyboards or acceleration of pointer devices.
+
+Binary `lxqt-config-input`.
+
+#### Locale
+
+Locale used within LXQt sessions. Basically this GUI sets the well-known environment variables like `LANG` or `LC_*`. The settings apply to the session as a whole, that is to applications running within LXQt sessions but not belonging to LXQt, too.
+
+Binary `lxqt-config-locale`.
+
+#### Monitor Settings
+
+Adjusts screen resolutions, positioning of screens and the likes.
+
+Binary `lxqt-config-monitor`.
+
+### Configuration Center
+
+The "Configuration Center" (binary `lxqt-config`) is summarizing and providing various configuration GUIs.   
+
+![Configuration Center (lxqt-config)](lxqt-config.png)
+
+First of all these are the ones belonging to repository lxqt-config described [above](https://github.com/pmattern/lxqt-config#configuration-gui-tools). Next, it is hosting counterparts of several other LXQt components like "Desktop Notifications" of [lxqt-notificationd](https://github.com/lxde/lxqt-notificationd), "Shortcut Keys" of [lxqt-globalkeyshortcuts](https://github.com/lxde/lxqt-globalkeyshortcuts) or the tools provided by [lxqt-admin](https://github.com/lxde/lxqt-admin). Third-party applications can include their configuration tools in "Configuration Center", too. This applies e. g. to "Connman UI Setup" of [cmst](https://github.com/andrew-bibb/cmst) or "SDDM Configuration" of [sddm-config-editor](https://github.com/hagabaka/sddm-config-editor).
+
+## Installation
+
+### Compiling source code
+
+Runtime dependencies are Xcursor, qtsvg, KScreen and [liblxqt](https://github.com/lxde/liblxqt).   
+Additional build dependencies are CMake and optionally Git to pull latest VCS checkouts. The localization files were outsourced to repository [lxqt-l10n](https://github.com/lxde/lxqt-l10n) so the corresponding dependencies are needed, too. Please refer to this repository's `README.md` for further information.   
+
+Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX` has to be set to `/usr` on most operating systems, depending on the way library paths are dealt with on 64bit systems variables like `CMAKE_INSTALL_LIBDIR` may have to be set as well.   
+
+To build run `make`, to install `make install` which accepts variable `DESTDIR` as usual.   
+
+### Binary packages
+
+The library is provided by all major Linux distributions like Arch Linux, Debian (as of Debian stretch only), Fedora and openSUSE. Just use your package manager to search for string `lxqt-config`.
+
+## Usage
+
+Both the various configuration tools and the Configuration Center can be launched from the panel's main menu - Preferences - LXQt settings. Obviously the former can be launched from the latter, too.   
