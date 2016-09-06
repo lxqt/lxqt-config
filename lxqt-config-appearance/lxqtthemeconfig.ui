@@ -51,6 +51,16 @@
      </column>
     </widget>
    </item>
+   <item>
+    <widget class="QCheckBox" name="wallpaperOverride">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Override independently set wallper</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
