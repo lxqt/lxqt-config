@@ -28,7 +28,7 @@
 #include "lxqtthemeconfig.h"
 #include "ui_lxqtthemeconfig.h"
 #include <QTreeWidget>
-#include <QDebug>
+#include <QStandardPaths>
 #include <QProcess>
 #include <QItemDelegate>
 #include <QPainter>
@@ -55,6 +55,19 @@ protected:
     }
 };
 
+/*!
+ * \brief Check if currently configured wallpaper (read from pcmanfm-qt's
+ * settings) is the same as \param themeWallpaper
+ */
+static bool isWallpaperChanged(const QString & themeWallpaper)
+{
+    static const QString config_path = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)
+        + QStringLiteral("/pcmanfm-qt/lxqt/settings.conf");
+    static const QString wallpaper_key = QStringLiteral("Desktop/Wallpaper");
+    const QString current_wallpaper = QSettings{config_path, QSettings::IniFormat}.value(wallpaper_key).toString();
+    return themeWallpaper != current_wallpaper;
+}
+
 LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::LXQtThemeConfig),
@@ -68,6 +81,10 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
 
     connect(ui->lxqtThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(lxqtThemeSelected(QTreeWidgetItem*,int)));
+    connect(ui->wallpaperOverride, &QAbstractButton::toggled, [this] (bool checked) {
+            if (checked)
+                lxqtThemeSelected(ui->lxqtThemeList->currentItem(), 0/*not used*/);
+    });
 
 
     QList<LXQt::LXQtTheme> themes = LXQt::LXQtTheme::allThemes();
@@ -119,13 +136,13 @@ void LXQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
     if (!item)
         return;
 
+    LXQt::LXQtTheme currentTheme{mSettings->value("theme").toString()};
     QVariant themeName = item->data(0, Qt::UserRole);
     mSettings->setValue("theme", themeName);
-
     LXQt::LXQtTheme theme(themeName.toString());
     if(theme.isValid()) {
 		QString wallpaper = theme.desktopBackground();
-		if(!wallpaper.isEmpty()) {
+		if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
 			// call pcmanfm-qt to update wallpaper
 			QProcess process;
 			QStringList args;
