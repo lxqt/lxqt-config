@@ -30,6 +30,16 @@
     <layout class="QVBoxLayout" name="layout"/>
    </item>
    <item>
+    <widget class="QCheckBox" name="confirmCB">
+     <property name="text">
+      <string>Require confirmation after settings change</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

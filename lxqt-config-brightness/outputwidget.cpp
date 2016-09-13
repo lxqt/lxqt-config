@@ -54,3 +54,15 @@ void OutputWidget::brightnessChanged(int value)
     emit changed(mMonitor);
 }
 
+void OutputWidget::setRevertedValues(const MonitorInfo & monitor)
+{
+    if (mMonitor.id() == monitor.id() && mMonitor.name() == monitor.name())
+    {
+        ui->backlightSlider->blockSignals(true);
+        ui->backlightSlider->setValue(monitor.backlight());
+        ui->backlightSlider->blockSignals(false);
+        ui->brightnessSlider->blockSignals(true);
+        ui->brightnessSlider->setValue(monitor.brightness()*100);
+        ui->brightnessSlider->blockSignals(false);
+    }
+}

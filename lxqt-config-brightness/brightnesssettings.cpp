@@ -18,7 +18,8 @@
 
 #include "brightnesssettings.h"
 #include "outputwidget.h"
-#include <QDebug>
+#include <QMessageBox>
+#include <QPushButton>
 
 BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
 {
@@ -26,22 +27,75 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     ui->setupUi(this);
     
     mBrightness = new XRandrBrightness();
-    QList<MonitorInfo> monitors = mBrightness->getMonitorsInfo();
+    mMonitors = mBrightness->getMonitorsInfo();
 
-    for(MonitorInfo monitor: monitors)
+    for(MonitorInfo monitor: mMonitors)
     {
         OutputWidget *output = new OutputWidget(monitor, this);
         ui->layout->addWidget(output);
         output->show();
         connect(output, SIGNAL(changed(MonitorInfo)), this, SLOT(monitorSettingsChanged(MonitorInfo)));
+        connect(this, &BrightnessSettings::monitorReverted, output, &OutputWidget::setRevertedValues);
     }
+
+    mConfirmRequestTimer.setSingleShot(true);
+    mConfirmRequestTimer.setInterval(1000);
+    connect(&mConfirmRequestTimer, &QTimer::timeout, this, &BrightnessSettings::requestConfirmation);
     
 }
 
 void BrightnessSettings::monitorSettingsChanged(MonitorInfo monitor)
 {
-    QList<MonitorInfo> monitors;
-    monitors.append(monitor);
-    mBrightness->setMonitorsSettings(monitors);
+    mBrightness->setMonitorsSettings(QList<MonitorInfo>{}  << monitor);
+    if (ui->confirmCB->isChecked())
+    {
+        mConfirmRequestTimer.start();
+    } else
+    {
+        for (auto & m : mMonitors)
+        {
+            if (m.id() == monitor.id() && m.name() == monitor.name())
+            {
+                m.setBacklight(monitor.backlight());
+                m.setBrightness(monitor.brightness());
+            }
+        }
+    }
 }
 
+void BrightnessSettings::requestConfirmation()
+{
+    QMessageBox msg{QMessageBox::Question, tr("Brightness settings changed")
+        , tr("Confirmation required. Are the settings correct?")
+        , QMessageBox::Yes | QMessageBox::No};
+    int timeout = 5; // seconds
+    QString no_text = msg.button(QMessageBox::No)->text();
+    no_text += QStringLiteral("(%1)");
+    msg.setButtonText(QMessageBox::No, no_text.arg(timeout));
+    msg.setDefaultButton(QMessageBox::No);
+
+    QTimer timeoutTimer;
+    timeoutTimer.setSingleShot(false);
+    timeoutTimer.setInterval(1000);
+    connect(&timeoutTimer, &QTimer::timeout, [&] {
+        msg.setButtonText(QMessageBox::No, no_text.arg(--timeout));
+        if (timeout == 0)
+        {
+            timeoutTimer.stop();
+            msg.reject();
+        }
+    });
+    timeoutTimer.start();
+
+    if (QMessageBox::Yes == msg.exec())
+    {
+        // re-read current values
+        mMonitors = mBrightness->getMonitorsInfo();
+    } else
+    {
+        // revert the changes
+        mBrightness->setMonitorsSettings(mMonitors);
+        for (const auto & monitor : mMonitors)
+            emit monitorReverted(monitor);
+    }
+}

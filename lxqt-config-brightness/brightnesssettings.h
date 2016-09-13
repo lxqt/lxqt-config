@@ -20,6 +20,7 @@
 #define __BRIGHTNESS_SETTINGS_H__
 
 #include <QDialog>
+#include <QTimer>
 #include "xrandrbrightness.h"
 #include "ui_brightnesssettings.h"
 
@@ -31,11 +32,17 @@ Q_OBJECT
 public:
     BrightnessSettings(QWidget *parent =0);
 
+signals:
+    void monitorReverted(const MonitorInfo & monitor);
+
 public slots:
     void monitorSettingsChanged(MonitorInfo monitor);
+    void requestConfirmation();
 
 private:
     XRandrBrightness *mBrightness;
+    QList<MonitorInfo> mMonitors;
+    QTimer mConfirmRequestTimer;
     Ui::BrightnessSettings *ui;
 
 

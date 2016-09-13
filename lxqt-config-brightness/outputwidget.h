@@ -35,6 +35,7 @@ signals:
 public slots:
     void backlightChanged(int value);
     void brightnessChanged(int value);
+    void setRevertedValues(const MonitorInfo & monitor);
 private:
     MonitorInfo mMonitor;
     Ui::OutputWidget *ui;
