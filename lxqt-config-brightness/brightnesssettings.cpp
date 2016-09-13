@@ -26,7 +26,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     ui->setupUi(this);
     
     mBrightness = new XRandrBrightness();
-        QList<MonitorInfo> monitors = mBrightness->getMonitorsInfo();
+    QList<MonitorInfo> monitors = mBrightness->getMonitorsInfo();
 
     for(MonitorInfo monitor: monitors)
     {
