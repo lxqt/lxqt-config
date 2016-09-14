@@ -144,11 +144,9 @@ void LXQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
 		QString wallpaper = theme.desktopBackground();
 		if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
 			// call pcmanfm-qt to update wallpaper
-			QProcess process;
 			QStringList args;
 			args << "--set-wallpaper" << wallpaper;
-			process.start("pcmanfm-qt", args, QIODevice::NotOpen);
-			process.waitForFinished();
+			QProcess::startDetached("pcmanfm-qt", args);
 		}
 	}
 }
