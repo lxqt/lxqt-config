@@ -68,6 +68,10 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
 
     connect(ui->lxqtThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(lxqtThemeSelected(QTreeWidgetItem*,int)));
+    connect(ui->wallpaperOverride, &QAbstractButton::toggled, [this] (bool checked) {
+            if (checked)
+                lxqtThemeSelected(ui->lxqtThemeList->currentItem(), 0/*not used*/);
+    });
 
 
     QList<LXQt::LXQtTheme> themes = LXQt::LXQtTheme::allThemes();
@@ -98,6 +102,9 @@ LXQtThemeConfig::~LXQtThemeConfig()
 void LXQtThemeConfig::initControls()
 {
     QString currentTheme = mSettings->value("theme").toString();
+    if (mSettings->value("wallpaperChanged", false).toBool()) {
+        ui->wallpaperOverride->setEnabled(true); //it is disabled by default
+    }
 
     QTreeWidgetItemIterator it(ui->lxqtThemeList);
     while (*it) {
@@ -121,15 +128,23 @@ void LXQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
 
     QVariant themeName = item->data(0, Qt::UserRole);
     mSettings->setValue("theme", themeName);
+    if (ui->wallpaperOverride->isChecked())
+    {
+        mSettings->setValue("wallpaperChanged", false);
+        ui->wallpaperOverride->setEnabled(false);
+        ui->wallpaperOverride->blockSignals(true);
+        ui->wallpaperOverride->setChecked(false);
+        ui->wallpaperOverride->blockSignals(false);
+    }
 
     LXQt::LXQtTheme theme(themeName.toString());
     if(theme.isValid()) {
 		QString wallpaper = theme.desktopBackground();
-		if(!wallpaper.isEmpty()) {
+		if(!wallpaper.isEmpty() && !mSettings->value("wallpaperChanged", false).toBool()) {
 			// call pcmanfm-qt to update wallpaper
 			QProcess process;
 			QStringList args;
-			args << "--set-wallpaper" << wallpaper;
+			args << "--set-wallpaper" << wallpaper << "--wallpaper-by-lxqt-theme";
 			process.start("pcmanfm-qt", args, QIODevice::NotOpen);
 			process.waitForFinished();
 		}
