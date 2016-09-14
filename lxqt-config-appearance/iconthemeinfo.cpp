@@ -31,67 +31,8 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include "iconthemeinfo.h"
-#include <QDebug>
-
-#include <private/xdgiconloader/xdgiconloader_p.h>
-
-#include <QStringBuilder>
 
 #define PREVIEW_ICON_SIZE 22
-
-/*
- * This algorithm is defined by the freedesktop spec:
- * http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
- */
-static bool directoryMatchesSize(const XdgIconDirInfo &dir, int iconsize)
-{
-    if (dir.type == XdgIconDirInfo::Fixed) {
-        return dir.size == iconsize;
-
-    } else if (dir.type == XdgIconDirInfo::Scalable) {
-        return dir.size <= dir.maxSize &&
-                iconsize >= dir.minSize;
-
-    } else if (dir.type == XdgIconDirInfo::Threshold) {
-        return iconsize >= dir.size - dir.threshold &&
-                iconsize <= dir.size + dir.threshold;
-    }
-
-    Q_ASSERT(1); // Not a valid value
-    return false;
-}
-
-
-/*
- * This algorithm is defined by the freedesktop spec:
- * http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
- */
-static int directorySizeDistance(const XdgIconDirInfo &dir, int iconsize)
-{
-    if (dir.type == XdgIconDirInfo::Fixed) {
-        return qAbs(dir.size - iconsize);
-
-    } else if (dir.type == XdgIconDirInfo::Scalable) {
-        if (iconsize < dir.minSize)
-            return dir.minSize - iconsize;
-        else if (iconsize > dir.maxSize)
-            return iconsize - dir.maxSize;
-        else
-            return 0;
-
-    } else if (dir.type == XdgIconDirInfo::Threshold) {
-        if (iconsize < dir.size - dir.threshold)
-            return dir.minSize - iconsize;
-        else if (iconsize > dir.size + dir.threshold)
-            return iconsize - dir.maxSize;
-        else return 0;
-    }
-
-    Q_ASSERT(1); // Not a valid value
-    return INT_MAX;
-}
-
-
 
 IconThemeInfo::IconThemeInfo(const QDir &dir):
     mValid(false),
@@ -125,44 +66,15 @@ void IconThemeInfo::load(const QString &fileName)
 QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
 {
     QVector<QIcon> icons;
+    QString current_theme = QIcon::themeName();
 
-    XdgIconLoader::instance()->setThemeName(mName);
-    foreach (const QString &i, iconNames) {
-        QThemeIconInfo info = XdgIconLoader::instance()->loadIcon(i);
-        if (!info.entries.isEmpty()) {
-            const int numEntries = info.entries.size();
-
-            // Search for exact matches first
-            bool found = false;
-            for (int i = 0; i < numEntries; ++i) {
-                XdgIconLoaderEngineEntry *entry = info.entries.at(i);
-                if (directoryMatchesSize(entry->dir, PREVIEW_ICON_SIZE)) {
-                    icons.append(QIcon(entry->filename));
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {  // No exact match. Search for an approximation
-                // Find the minimum distance icon
-                int minimalSize = INT_MAX;
-                XdgIconLoaderEngineEntry *closestMatch = 0;
-                for (int i = 0; i < numEntries; ++i) {
-                    XdgIconLoaderEngineEntry *entry = info.entries.at(i);
-                    int distance = directorySizeDistance(entry->dir, PREVIEW_ICON_SIZE);
-                    if (distance < minimalSize) {
-                        minimalSize  = distance;
-                        closestMatch = entry;
-                    }
-                }
-                if (closestMatch)
-                    icons.append(QIcon(closestMatch->filename));
-                else
-                    icons.append(QIcon());
-            }
-        } else {
-            icons.append(QIcon());
-        }
+    QIcon::setThemeName(mName);
+    for (const auto & i : iconNames)
+    {
+        icons.push_back({QIcon::fromTheme(i).pixmap({PREVIEW_ICON_SIZE, PREVIEW_ICON_SIZE})});
     }
-    XdgIconLoader::instance()->setThemeName(QString());
+
+    QIcon::setThemeName(current_theme);
+
     return icons;
 }

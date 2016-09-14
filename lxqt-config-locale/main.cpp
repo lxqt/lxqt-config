@@ -25,7 +25,6 @@
 
 #include <LXQt/SingleApplication>
 
-#include <XdgIcon>
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include "localeconfig.h"

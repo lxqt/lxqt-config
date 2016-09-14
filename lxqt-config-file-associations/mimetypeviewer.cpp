@@ -34,7 +34,6 @@
 #include <QDateTime>
 #include <QFileInfo>
 
-#include <XdgIcon>
 #include <XdgDesktopFile>
 #include <XdgDirs>
 #include <LXQt/Settings>
