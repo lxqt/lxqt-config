@@ -131,7 +131,7 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Centro di configurazione LXQt</translation>
+        <translation>Aspetto di LXQt</translation>
     </message>
     <message>
         <location filename="../../../iconthemeconfig.ui" line="26"/>
