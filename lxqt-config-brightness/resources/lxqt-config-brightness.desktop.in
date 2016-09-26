@@ -1,5 +1,7 @@
 [Desktop Entry]
-Name=Brightness Settings
+Name=Brightness
+GenericName=Brightness Settings
+Comment=Configure brightness
 Exec=lxqt-config-brightness
 Terminal=false
 Type=Application
