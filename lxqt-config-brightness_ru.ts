@@ -16,17 +16,17 @@
     <message>
         <location filename="../../../brightnesssettings.ui" line="35"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать подтверждения после изменения настроек</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="68"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки яркости изменены</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="69"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Требуется подтверждение. Настройки правильные?</translation>
     </message>
 </context>
 <context>
