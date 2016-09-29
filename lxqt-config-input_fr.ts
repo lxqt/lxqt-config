@@ -16,12 +16,12 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Clavier&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished">Émettre un son lors d&apos;une erreur d&apos;entrée sur le clavier</translation>
+        <translation>Émettre un son lors d&apos;une erreur d&apos;entrée sur le clavier</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="41"/>
@@ -31,24 +31,24 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished">Répétition de caractère</translation>
+        <translation>Répétition de caractères</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="79"/>
         <location filename="../../../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished">Long</translation>
+        <translation>Long</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished">Délai de répétition :</translation>
+        <translation>Délai de répétition :</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="115"/>
         <location filename="../../../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished">Court</translation>
+        <translation>Court</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="122"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer  le verrouillage numérique au démarrage</translation>
     </message>
 </context>
 <context>
@@ -77,52 +77,52 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Disposition du clavier&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Disposition</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Variante</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ajouter</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="77"/>
         <source>up</source>
-        <translation type="unfinished"></translation>
+        <translation>haut</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="84"/>
         <source>down</source>
-        <translation type="unfinished"></translation>
+        <translation>bas</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modèle de clavier :</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Raccourcis pour basculer une disposition:</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="141"/>
@@ -214,12 +214,12 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formulaire</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translatio>&lt;b&gt;Souris&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="30"/>
@@ -265,7 +265,7 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Durée d'un double-clic:</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="140"/>
@@ -275,7 +275,7 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vitesse de défilement de la molette (lignes):</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="160"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Clic simple pour activer des éléments</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="34"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Paramètres Clavier et Souris</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="39"/>
@@ -303,7 +303,7 @@
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="44"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Curseur</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="47"/>
@@ -313,7 +313,7 @@
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Disposition du clavier</translation>
     </message>
 </context>
 <context>
@@ -321,17 +321,18 @@
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Choisissez une disposition de clavier</translation>
     </message>
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Disposition du clavier</translation>
     </message>
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Variante</translation>
     </message>
 </context>
 </TS>
+menu://applications/DesktopSettings/lxinput.desktop
