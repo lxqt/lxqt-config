@@ -219,7 +219,7 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translatio>&lt;b&gt;Souris&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Souris&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="30"/>
@@ -335,4 +335,3 @@
     </message>
 </context>
 </TS>
-menu://applications/DesktopSettings/lxinput.desktop
