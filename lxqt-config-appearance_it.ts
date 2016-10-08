@@ -152,7 +152,7 @@
     <message>
         <location filename="../../../main.cpp" line="44"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Centro di configurazione LXQt</translation>
+        <translation>Configurazione dell&apos;aspetto di LXQt</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="50"/>
