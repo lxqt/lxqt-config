@@ -99,7 +99,7 @@
     <message>
         <location filename="../../../main.cpp" line="38"/>
         <source>LXQt Locale Configuration</source>
-        <translation>Configurazione localizzazione di LXQt</translation>
+        <translation>Configurazione della lingua e del paese di LXQt</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="43"/>
