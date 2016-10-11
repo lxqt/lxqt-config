@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>FastMenu</name>
     <message>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../../../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation>Mudar nome</translation>
+        <translation>Renomear</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="45"/>
@@ -132,7 +132,7 @@
     </message>
     <message>
         <source>Default Monitor</source>
-        <translation>Monitor pré-definido</translation>
+        <translation>Monitor padrão</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,7 @@
     </message>
     <message>
         <source>Default Monitor</source>
-        <translation>Monitor pré-definido</translation>
+        <translation>Monitor padrão</translation>
     </message>
     <message>
         <source>Auto</source>
@@ -282,7 +282,7 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     </message>
     <message>
         <source>Please, check your config before to save.</source>
-        <translation>Verifique a configuraçao antes de guardar.</translation>
+        <translation>Verifique a configuração antes de guardar.</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="111"/>
@@ -292,7 +292,7 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation>definir posição</translation>
+        <translation>Definir posição</translation>
     </message>
     <message>
         <source>Error</source>
@@ -342,7 +342,7 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     <message>
         <location filename="../../../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Este é o ecrã primário</translation>
+        <translation>Este é o ecrã principal</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="103"/>
