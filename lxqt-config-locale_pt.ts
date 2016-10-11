@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>LocaleConfig</name>
     <message>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../../../main.cpp" line="38"/>
         <source>LXQt Locale Configuration</source>
-        <translation>Configurações regionais do LxQt</translation>
+        <translation>Configurações regionais do LXQt</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="43"/>
