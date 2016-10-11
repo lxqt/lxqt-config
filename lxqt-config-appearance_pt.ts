@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>FontsConfig</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Tamanho:</translation>
+        <translation>Tamanho (pt):</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="68"/>
@@ -67,7 +67,7 @@
         <location filename="../../../fontsconfig.ui" line="118"/>
         <location filename="../../../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation>Nenhum</translation>
+        <translation>Nenhuma</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="123"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Suavização de sub-pixél:</translation>
+        <translation>Suavização de sub-pixel:</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="188"/>
