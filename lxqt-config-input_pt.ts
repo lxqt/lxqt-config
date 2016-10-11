@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>KeyboardConfig</name>
     <message>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Digite algo na caixa de teste para testar o teclado</translation>
+        <translation>Digite algo na caixa abaixo para testar o teclado</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="150"/>
@@ -77,12 +77,12 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Esquema do teclado&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Disposição do teclado&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation>Esquema</translation>
+        <translation>Disposição</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="53"/>
@@ -117,17 +117,17 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Teclas para alterar o esquema:</translation>
+        <translation>Teclas para alterar a disposição:</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation>Nenhumas</translation>
+        <translation>Nenhuma</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: se estiver a utilizar um &lt;span style=&quot; font-weight:600;&quot;&gt;método de introdução&lt;/span&gt;, tais como IBus, uim, fcitx ou gcin, as alterações aqui efetuadas &lt;span style=&quot; font-weight:600;&quot;&gt;poderão não funcionar&lt;/span&gt;, uma vez que serão substituídas pelos métodos de introdução indicados.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: se estiver a utilizar um &lt;span style=&quot; font-weight:600;&quot;&gt;método de introdução&lt;/span&gt;, tal como IBus, uim, fcitx ou gcin, as alterações aqui efetuadas &lt;span style=&quot; font-weight:600;&quot;&gt;poderão não funcionar&lt;/span&gt;, uma vez que serão substituídas pelos métodos de introdução utilizados.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -198,7 +198,7 @@
     </message>
     <message>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Escreva algo na caixa de teste abaixo para testar o teclado</translation>
+        <translation>Digite algo na caixa abaixo para testar o teclado</translation>
     </message>
     <message>
         <source>Beep when there is an error of keyboard input</source>
@@ -313,7 +313,7 @@
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard Layout</source>
-        <translation>Esquema do teclado</translation>
+        <translation>Disposição do teclado</translation>
     </message>
 </context>
 <context>
@@ -321,12 +321,12 @@
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>Selecione um esquema de teclado</translation>
+        <translation>Selecione uma disposição</translation>
     </message>
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>Esquema do teclado</translation>
+        <translation>Disposição do teclado</translation>
     </message>
     <message>
         <location filename="../../../selectkeyboardlayoutdialog.ui" line="27"/>
