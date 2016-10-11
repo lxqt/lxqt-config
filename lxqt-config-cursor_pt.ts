@@ -11,7 +11,7 @@
     <message>
         <location filename="../../../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Escolha o tema de cursor a utilizar (passe com o rato para testar). &lt;b&gt;Tem que reiniciar o LXQt a sessão após a alteração&lt;/b&gt;:</translation>
+        <translation>Escolha o tema de cursor a utilizar (passe com o rato para testar). &lt;b&gt;Tem que reiniciar a sessão para aplicar esta alteração&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="81"/>
@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation type="vanished">&amp;Definir tema</translation>
+        <translation>&amp;Definir tema</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="vanished">Fe&amp;char</translation>
+        <translation>Fe&amp;char</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="208"/>
