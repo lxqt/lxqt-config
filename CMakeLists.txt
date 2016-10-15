@@ -28,6 +28,11 @@ find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
 include(LXQtTranslate)
 
 add_subdirectory(src)
