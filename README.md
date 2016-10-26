@@ -55,7 +55,7 @@ The "Configuration Center" (binary `lxqt-config`) is summarizing and providing v
 
 ![Configuration Center (lxqt-config)](lxqt-config.png)
 
-First of all these are the ones belonging to repository lxqt-config described [above](https://github.com/pmattern/lxqt-config#configuration-gui-tools). Next, it is hosting counterparts of several other LXQt components like "Desktop Notifications" of [lxqt-notificationd](https://github.com/lxde/lxqt-notificationd), "Shortcut Keys" of [lxqt-globalkeyshortcuts](https://github.com/lxde/lxqt-globalkeyshortcuts) or the tools provided by [lxqt-admin](https://github.com/lxde/lxqt-admin). Third-party applications can include their configuration tools in "Configuration Center", too. This applies e. g. to "Connman UI Setup" of [cmst](https://github.com/andrew-bibb/cmst) or "SDDM Configuration" of [sddm-config-editor](https://github.com/hagabaka/sddm-config-editor).
+First of all these are the ones belonging to repository lxqt-config described [above](https://github.com/lxde/lxqt-config#configuration-gui-tools). Next, it is hosting counterparts of several other LXQt components like "Desktop Notifications" of [lxqt-notificationd](https://github.com/lxde/lxqt-notificationd), "Shortcut Keys" of [lxqt-globalkeyshortcuts](https://github.com/lxde/lxqt-globalkeyshortcuts) or the tools provided by [lxqt-admin](https://github.com/lxde/lxqt-admin). Third-party applications can include their configuration tools in "Configuration Center", too. This applies e. g. to "Connman UI Setup" of [cmst](https://github.com/andrew-bibb/cmst) or "SDDM Configuration" of [sddm-config-editor](https://github.com/hagabaka/sddm-config-editor).
 
 ## Installation
 
