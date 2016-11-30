@@ -25,6 +25,7 @@
 #include "keyboardconfig.h"
 #include "../liblxqt-config-cursor/selectwnd.h"
 #include "keyboardlayoutconfig.h"
+#include "touchpadconfig.h"
 
 int main(int argc, char** argv) {
     LXQt::SingleApplication app(argc, argv);
@@ -67,6 +68,11 @@ int main(int argc, char** argv) {
     KeyboardLayoutConfig* keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
     dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
     QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
+
+    TouchpadConfig* touchpadConfig = new TouchpadConfig(&settings, &dlg);
+    dlg.addPage(touchpadConfig, QObject::tr("Touchpad"), "input-tablet");
+    QObject::connect(&dlg, &LXQt::ConfigDialog::reset,
+                     touchpadConfig, &TouchpadConfig::reset);
 
     dlg.setWindowIcon(QIcon::fromTheme("input-keyboard"));
 
