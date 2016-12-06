@@ -3,16 +3,12 @@ project(lxqt-config-brightness)
 find_package(Qt5Widgets REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 
-find_package(PkgConfig)
-
-pkg_check_modules(XRANDR xcb-randr)
-pkg_check_modules(XCB xcb)
+find_package(XCB REQUIRED xcb xcb-randr)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
 
 
 include_directories (
-    ${XRANDR_INCLUDE_DIRS}
     ${XCB_INCLUDE_DIRS}
 )
 
@@ -70,8 +66,7 @@ add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DESKTOP_FI
 target_link_libraries(
     ${PROJECT_NAME}
     ${QTX_LIBRARIES}
-    ${XRANDR_LDFLAGS}
-    ${XCB_LDFLAGS}
+    ${XCB_LIBRARIES}
     lxqt
 )
 
