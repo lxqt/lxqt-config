@@ -6,36 +6,27 @@
     <message>
         <location filename="../../../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt Musemarkør Tema Indstillinger</translation>
+        <translation>Konfiguration af LXQt musemarkør-tema</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Vælg det markør tema, du vil bruge (forhåndsvisning for at teste markør).
-&lt;b&gt; LXQt session skal genstartes efter denne ændring &lt;/ b&gt;:</translation>
+        <translation>Vælg det markør-tema, du vil bruge (hold over forhåndsvisning for at teste markør). &lt;b&gt;LXQt-sessionen skal genstartes efter denne ændring&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Installer Nyt Tema...</translation>
-    </message>
-    <message>
-        <source>&amp;Set Theme</source>
-        <translation type="vanished">&amp;Sæt Tema</translation>
+        <translation>&amp;Installer nyt tema...</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>&amp;Fjern Tema</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation type="vanished">&amp;Afslut</translation>
+        <translation>&amp;Fjern tema</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="208"/>
         <source>XCurTheme error</source>
-        <translation>XCurTheme fejl</translation>
+        <translation>Fejl ved XCurTheme</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="209"/>
@@ -48,17 +39,17 @@
     <message>
         <location filename="../../../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt kunne ikke finde noget markør-tema. Standard X11-markør-temaet vil i stedet blive brugt. LXQt ledte i følgende mapper:</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis...</translation>
     </message>
 </context>
 <context>
