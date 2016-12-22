@@ -59,9 +59,9 @@ void XCursorImage::convertARGB2PreMul (QImage &img) {
   switch (img.format()) {
     case QImage::Format_ARGB32_Premultiplied: return;
     case QImage::Format_ARGB32: break;
-    default: img.convertToFormat(QImage::Format_ARGB32/*_Premultiplied*/);
+    default: (void) img.convertToFormat(QImage::Format_ARGB32/*_Premultiplied*/);
   }
-  img.convertToFormat(QImage::Format_ARGB32_Premultiplied); // this shouldn't convert anything
+  (void) img.convertToFormat(QImage::Format_ARGB32_Premultiplied); // this shouldn't convert anything
   // so convert it!
   for (int y = img.height()-1; y >= 0; y--) {
     quint8 *line = (quint8 *)img.scanLine(y);
@@ -150,7 +150,7 @@ void XCursorImage::genXCursorImg (QByteArray &res) const {
   baPutDW(res, (quint32)mDelay);
   // now put the pixels
   QImage i = mImage->copy();
-  i.convertToFormat(QImage::Format_ARGB32_Premultiplied);
+  (void) i.convertToFormat(QImage::Format_ARGB32_Premultiplied);
   //i.convertToFormat(QImage::Format_ARGB32);
   for (int y = 0; y < i.height(); y++) {
     const uchar *sl = i.scanLine(y);
