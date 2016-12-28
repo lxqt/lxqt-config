@@ -138,7 +138,7 @@ IconThemeConfig::~IconThemeConfig()
 void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
 {
     Q_UNUSED(column);
-    QString theme = item->data(0, Qt::UserRole).toString();
+    const QString theme = item->data(0, Qt::UserRole).toString();
     if (!theme.isEmpty())
     {
         // Ensure that this widget also updates it's own icons
