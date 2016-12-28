@@ -141,6 +141,9 @@ void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
     QString theme = item->data(0, Qt::UserRole).toString();
     if (!theme.isEmpty())
     {
+        // Ensure that this widget also updates it's own icons
+        QIcon::setThemeName(theme);
+
         m_settings->setValue("icon_theme",  theme);
         m_settings->sync();
     }
