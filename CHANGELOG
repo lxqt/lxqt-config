@@ -1,7 +1,28 @@
 
-lxqt-config-0.11.0 / 2016-09-24
+lxqt-config-0.11.1 / 2017-01-01
 ===============================
 
+  * lxqt-config-monitor: remove unnecessary wait before settings load (#114)
+  * Fix self icontheme update (#113)
+  * liblxqt-config-cursor: Don't check for null pointer before deleting it
+  * liblxqt-config-cursor: Explicitly ignore function return value
+  * Updated and added *_da.desktop files and removed da_DK
+  * Use FindXCB CMake module
+  * Activate items on releasing Enter instead of pressing it. (#78)
+  * Update and rename lxqt-config_fr_FR.desktop to lxqt-config_fr.desktop
+  * Fix faulty link in README.md
+  * if not set, set the build type to Release
+  * Desktop entry files: Update French translation
+  * lxqt-config: Avoid multiple spawn on auto-repeat
+  * Fix loading of translations for brightness
+  * Create lxqt-config-brightness_it.desktop
+  * Remove cpack (#104)
+  * lxqt-config-brightness: Add GenericName and Comment to desktop entry
+
+0.11.0 / 2016-09-24
+===================
+
+  * Release 0.11.0: Add changelog
   * appearance: Avoid blocking when setting wallpaper
   * appearance: Do (not) change wallpaper with theme
   * all: Remove XdgIcon & XdgIconLoader usage
