@@ -28,7 +28,7 @@ SelectKeyboardLayoutDialog::SelectKeyboardLayoutDialog(QMap< QString, KeyboardLa
   connect(ui.layouts, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), SLOT(onLayoutChanged()));
 
   QMap<QString, KeyboardLayoutInfo >::const_iterator it;
-  for(it = knownLayouts_.begin(); it != knownLayouts_.end(); ++it) {
+  for(it = knownLayouts_.constBegin(); it != knownLayouts_.constEnd(); ++it) {
     const QString& name = it.key();
     const KeyboardLayoutInfo& info = *it;
     QListWidgetItem * item = new QListWidgetItem(info.description);
