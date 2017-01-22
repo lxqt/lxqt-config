@@ -61,7 +61,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Etil del contorn del tipus de lletra:</translation>
+        <translation>Estil del contorn del tipus de lletra:</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="118"/>
