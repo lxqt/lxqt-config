@@ -6,12 +6,12 @@
     <message>
         <location filename="../../../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Configuració del dema del ratolí de LXQt</translation>
+        <translation>Configuració del tema del ratolí de LXQt</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Seleccioneu el tema de cursors que vulgueu utilitzar (passeu el cursor per sobre de la vista prèvia per a provar el cursor). &lt;b&gt;Després d&apos;aquest canvi cal que es reiniiï la sessió de LXQt&lt;/b&gt;:</translation>
+        <translation>Seleccioneu el tema de cursors que vulgueu utilitzar (passeu el cursor per sobre de la vista prèvia per a provar el cursor). &lt;b&gt;Després d&apos;aquest canvi cal que es reiniciï la sessió de LXQt&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="81"/>
