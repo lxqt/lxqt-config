@@ -154,6 +154,8 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     // Behavior chooser
     if (output->isPrimary())
         ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
+    else
+        ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
 
     // Insert orientations
     ui.orientationCombo->addItem(tr("None"), KScreen::Output::None);
