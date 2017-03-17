@@ -6,17 +6,17 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation>Tipus de lletra</translation>
+        <translation>Lletra</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Tipus de lletra predeterminat per a la interfície d&apos;usuari</translation>
+        <translation>Lletra predeterminada per a la interfície d&apos;usuari</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Nom del tipus de lletra:</translation>
+        <translation>Nom de la lletra:</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="46"/>
@@ -56,12 +56,12 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Utilitza els tipus de lletres amb antialiàsing</translation>
+        <translation>Utilitza les lletres amb antialiàsing</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Estil del contorn del tipus de lletra:</translation>
+        <translation>Estil del contorn de la lletra:</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="118"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Contorn del tipus de lletra</translation>
+        <translation>Contorn de la lletra</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="148"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../../../main.cpp" line="62"/>
         <source>Font</source>
-        <translation>Tipus de lletra</translation>
+        <translation>Lletra</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="67"/>
