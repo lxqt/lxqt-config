@@ -74,6 +74,16 @@ add_library(lxqt-config-cursor
         ${lxqt-config-cursor_QM_LOADER}
 )
 
+if(CMAKE_VERSION VERSION_LESS 3.8.0)
+    set(UI_PATH "${CMAKE_CURRENT_BINARY_DIR}")
+else(CMAKE_VERSION VERSION_LESS 3.8.0)
+    set(UI_PATH "${CMAKE_CURRENT_BINARY_DIR}/lxqt-config-cursor_autogen/include")
+endif(CMAKE_VERSION VERSION_LESS 3.8.0)
+
+set_target_properties(lxqt-config-cursor PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR};${UI_PATH}")
+
+
 target_link_libraries(lxqt-config-cursor
     Qt5::X11Extras
     Qt5::DBus
