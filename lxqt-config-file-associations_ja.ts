@@ -51,18 +51,18 @@
 <context>
     <name>MimetypeViewer</name>
     <message>
-        <location filename="../../../mimetypeviewer.cpp" line="157"/>
-        <location filename="../../../mimetypeviewer.cpp" line="208"/>
+        <location filename="../../../mimetypeviewer.cpp" line="156"/>
+        <location filename="../../../mimetypeviewer.cpp" line="207"/>
         <source>None</source>
         <translation>なし</translation>
     </message>
     <message>
-        <location filename="../../../mimetypeviewer.cpp" line="204"/>
+        <location filename="../../../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
         <translation>変更(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../../mimetypeviewer.cpp" line="209"/>
+        <location filename="../../../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
         <translation>選択(&amp;C)</translation>
     </message>
