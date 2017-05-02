@@ -42,6 +42,9 @@ IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
     initControls();
     connect(iconThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(iconThemeSelected(QTreeWidgetItem*,int)));
+    connect(iconFollowColorSchemeCB, &QAbstractButton::toggled, this, [this] (bool checked) {
+            m_settings->setValue("icon_follow_color_scheme", checked);
+    });
 }
 
 
@@ -125,6 +128,8 @@ void IconThemeConfig::initControls()
         }
         ++it;
     }
+
+    iconFollowColorSchemeCB->setChecked(m_settings->value("icon_follow_color_theme", true).toBool());
 
     update();
 }

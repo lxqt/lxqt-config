@@ -81,6 +81,16 @@
      </column>
     </widget>
    </item>
+   <item>
+    <widget class="QCheckBox" name="iconFollowColorSchemeCB">
+     <property name="toolTip">
+      <string>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</string>
+     </property>
+     <property name="text">
+      <string>Colorize icons based on widget style (palette)</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
