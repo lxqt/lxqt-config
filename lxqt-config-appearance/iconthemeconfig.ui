@@ -87,7 +87,7 @@
       <string>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</string>
      </property>
      <property name="text">
-      <string>Colorize icons based on widget style (pallete)</string>
+      <string>Colorize icons based on widget style (palette)</string>
      </property>
     </widget>
    </item>
