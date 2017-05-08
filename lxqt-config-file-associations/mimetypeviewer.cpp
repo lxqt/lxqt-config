@@ -113,6 +113,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     mSettingsCache->loadFromSettings();
     initializeMimetypeTreeView();
     loadAllMimeTypes();
+    widget.searchTermLineEdit->setFocus();
 
     connect(widget.mimetypeTreeWidget, SIGNAL(itemSelectionChanged()),
             this, SLOT(currentMimetypeChanged()));
@@ -146,7 +147,6 @@ void MimetypeViewer::initializeMimetypeTreeView()
 {
     currentMimetypeChanged();
     widget.mimetypeTreeWidget->setColumnCount(2);
-    widget.mimetypeTreeWidget->setFocus();
     widget.searchTermLineEdit->setEnabled(true);
 }
 
