@@ -29,7 +29,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mBrightness = new XRandrBrightness();
     mMonitors = mBrightness->getMonitorsInfo();
 
-    for(MonitorInfo monitor: mMonitors)
+    for(const MonitorInfo &monitor: mMonitors)
     {
         OutputWidget *output = new OutputWidget(monitor, this);
         ui->layout->addWidget(output);
