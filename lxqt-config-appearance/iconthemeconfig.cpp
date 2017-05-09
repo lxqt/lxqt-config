@@ -129,7 +129,7 @@ void IconThemeConfig::initControls()
         ++it;
     }
 
-    iconFollowColorSchemeCB->setChecked(m_settings->value("icon_follow_color_theme", true).toBool());
+    iconFollowColorSchemeCB->setChecked(m_settings->value("icon_follow_color_scheme", true).toBool());
 
     update();
 }
