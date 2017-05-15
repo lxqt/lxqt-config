@@ -87,8 +87,8 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     });
 
 
-    QList<LXQt::LXQtTheme> themes = LXQt::LXQtTheme::allThemes();
-    foreach(LXQt::LXQtTheme theme, themes)
+    const QList<LXQt::LXQtTheme> themes = LXQt::LXQtTheme::allThemes();
+    foreach(const LXQt::LXQtTheme &theme, themes)
     {
         QString themeName = theme.name();
         themeName[0] = themeName[0].toTitleCase();

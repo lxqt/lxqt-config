@@ -394,7 +394,7 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
         float brightness_value = gamma_brightness_get(output);
 
         // Compare output info with settings and set it.
-        for(MonitorInfo monitor: monitors)
+        for(const MonitorInfo &monitor: monitors)
         {
             if(monitor.id() == (int)output && monitor.name() == name)
             {

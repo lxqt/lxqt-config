@@ -65,8 +65,8 @@ void KeyboardLayoutConfig::loadSettings() {
         variants = line.mid(8).trimmed().split(',');
       }
       else if(line.startsWith("options:")) {
-        QList<QByteArray> options = line.mid(9).trimmed().split(',');
-        Q_FOREACH(QByteArray option, options) {
+        const QList<QByteArray> options = line.mid(9).trimmed().split(',');
+        Q_FOREACH(const QByteArray &option, options) {
           if(option.startsWith("grp:"))
             switchKey_ = QString::fromLatin1(option);
           else

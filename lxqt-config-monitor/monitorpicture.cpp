@@ -35,8 +35,8 @@ static QSize sizeFromString(QString str)
     int x = str.indexOf('x');
     if (x > 0)
     {
-        width = str.left(x).toInt();
-        height = str.mid(x + 1).toInt();
+        width = str.leftRef(x).toInt();
+        height = str.midRef(x + 1).toInt();
     }
     return QSize(width, height);
 }
