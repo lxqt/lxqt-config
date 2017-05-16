@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 
 project(lxqt-config)
 set(LXQT_CONFIG_PROJECT "${PROJECT_NAME}")
+set(LXQTBT_MINIMUM_VERSION "0.1.0")
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 option(WITH_INPUT "Build the 'lxqt-config-input'" ON)
@@ -26,8 +27,10 @@ find_package(Qt5Concurrent REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
+find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
+include(LXQtConfigVars)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
