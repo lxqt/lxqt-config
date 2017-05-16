@@ -13,6 +13,8 @@ option(WITH_LOCALE "Build the 'lxqt-config-locale'" ON)
 
 include(GNUInstallDirs)
 
+set(LXQTBT_MINIMUM_VERSION "0.1.0")
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
@@ -25,6 +27,7 @@ find_package(Qt5Xml REQUIRED QUIET)
 find_package(Qt5Concurrent REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
+find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt REQUIRED QUIET)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
