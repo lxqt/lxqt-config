@@ -26,6 +26,7 @@ find_package(Qt5Concurrent REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
+find_package(Qt5XdgIconLoader REQUIRED QUIET)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
