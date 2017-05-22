@@ -87,12 +87,12 @@
     <message>
         <location filename="../../../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location filename="../../../mimetypeviewer.ui" line="124"/>
         <source>None</source>
-        <translation>None</translation>
+        <translation>Brak</translation>
     </message>
     <message>
         <location filename="../../../mimetypeviewer.ui" line="144"/>
