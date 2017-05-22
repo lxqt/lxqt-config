@@ -6,36 +6,32 @@
     <message>
         <location filename="../../../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt pelės temos konfigūravimas</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkite žymeklio temą, kurią norite naudoti (užveskite pelę ant peržiūros, kad išbandytumėte žymeklį). &lt;b&gt;Po šio pakeitimo LXQt seansą reikės paleisti iš naujo&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation type="unfinished"></translation>
+        <translation>Į&amp;diegti naują temą...</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation type="vanished">&amp;Užverti</translation>
+        <translation>Ša&amp;linti temą</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="208"/>
         <source>XCurTheme error</source>
-        <translation type="unfinished"></translation>
+        <translation>XCurTheme klaida</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="209"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation type="unfinished"></translation>
+        <translation>Jūs negalite pašalinti aktyvios temos!</translation>
     </message>
 </context>
 <context>
@@ -43,17 +39,17 @@
     <message>
         <location filename="../../../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt nepavyko rasti jokios žymeklio temos. Vietoj to, bus naudojama numatytoji X11 žymeklio tema. LXQt žiūrėjo šiuose kataloguose:</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti...</translation>
     </message>
 </context>
 <context>
@@ -61,12 +57,12 @@
     <message>
         <location filename="../../../thememodel.cpp" line="61"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Pavadinimas</translation>
     </message>
     <message>
         <location filename="../../../thememodel.cpp" line="62"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Aprašas</translation>
     </message>
 </context>
 </TS>
