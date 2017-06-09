@@ -1,16 +1,16 @@
 /*
     Copyright (C) 2016  P.L. Lucas <selairi@gmail.com>
-    
+
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either
     version 2.1 of the License, or (at your option) any later version.
-    
+
     This library is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
     Lesser General Public License for more details.
-    
+
     You should have received a copy of the GNU Lesser General Public
     License along with this library; if not, write to the Free Software
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -25,9 +25,14 @@
 int main(int argn, char* argv[])
 {
     LXQt::SingleApplication app(argn, argv);
-     
+
     // Command line options
     QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config Brightness"));
+    const QString VERINFO = LXQT_CONFIG_VERSION \
+                            "\n\nliblxqt:   " LXQT_VERSION \
+                            "\nQt:        " QT_VERSION_STR;
+    app.setApplicationVersion(VERINFO);
     QCommandLineOption increaseOption(QStringList() << "i" << "icrease",
             app.tr("Increase brightness."));
     parser.addOption(increaseOption);
@@ -42,6 +47,7 @@ int main(int argn, char* argv[])
     parser.addOption(decreaseOption);
     parser.addOption(setOption);
     parser.addOption(helpOption);
+    parser.addVersionOption();
 
     parser.process(app);
     if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) )
@@ -56,7 +62,6 @@ int main(int argn, char* argv[])
             sign = 0.0;
         foreach(MonitorInfo monitor, monitors)
         {
-            
             if( monitor.isBacklightSupported() )
             {
                 long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
