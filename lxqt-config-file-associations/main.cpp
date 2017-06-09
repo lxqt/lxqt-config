@@ -32,6 +32,7 @@
 #include <QIODevice>
 #include <QSettings>
 #include <QVariant>
+#include <QCommandLineParser>
 
 #include <LXQt/Settings>
 #include <XdgDesktopFile>
@@ -41,6 +42,16 @@
 int main (int argc, char **argv)
 {
     LXQt::SingleApplication app(argc, argv);
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config File Associations"));
+    const QString VERINFO = LXQT_CONFIG_VERSION \
+                            "\n\nliblxqt:   " LXQT_VERSION\
+                            "\nQt:        " QT_VERSION_STR;
+    app.setApplicationVersion(VERINFO);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(app);
 
     MimetypeViewer mimetypeViewer;
     app.setActivationWindow(&mimetypeViewer);
