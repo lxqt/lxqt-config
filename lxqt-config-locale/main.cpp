@@ -36,9 +36,9 @@ int main (int argc, char **argv)
 
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("LXQt Config Locale"));
-    const QString VERINFO = LXQT_CONFIG_VERSION \
-                            "\n\nliblxqt:   " LXQT_VERSION\
-                            "\nQt:        " QT_VERSION_STR;
+    const QString VERINFO = QStringLiteral(LXQT_CONFIG_VERSION
+                                           "\nliblxqt   " LXQT_VERSION
+                                           "\nQt        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
     parser.addVersionOption();
     parser.addHelpOption();
