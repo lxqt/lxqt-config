@@ -29,9 +29,9 @@ int main(int argn, char* argv[])
     // Command line options
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("LXQt Config Brightness"));
-    const QString VERINFO = LXQT_CONFIG_VERSION \
-                            "\n\nliblxqt:   " LXQT_VERSION \
-                            "\nQt:        " QT_VERSION_STR;
+    const QString VERINFO = QStringLiteral(LXQT_CONFIG_VERSION
+                                           "\nliblxqt   " LXQT_VERSION
+                                           "\nQt        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
     QCommandLineOption increaseOption(QStringList() << "i" << "icrease",
             app.tr("Increase brightness."));

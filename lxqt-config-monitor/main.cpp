@@ -51,14 +51,20 @@ int main(int argc, char** argv)
 
     // Command line options
     QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config Monitor"));
+    const QString VERINFO = QStringLiteral(LXQT_CONFIG_VERSION
+                                           "\nliblxqt   " LXQT_VERSION
+                                           "\nQt        " QT_VERSION_STR);
+    app.setApplicationVersion(VERINFO);
     QCommandLineOption loadOption(QStringList() << "l" << "loadlast",
             app.tr("Load last settings."));
     parser.addOption(loadOption);
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(loadOption);
-    parser.addOption(helpOption);
+    parser.addVersionOption();
+    parser.addHelpOption();
 
-    //parser.process(app);
+    parser.process(app);
     //bool loadLastSettings = parser.isSet(loadOption);
 
     MonitorSettingsDialog dlg;
