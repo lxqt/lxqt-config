@@ -28,6 +28,7 @@
 #include <LXQt/SingleApplication>
 #include <QSettings>
 #include "mainwindow.h"
+#include "QCommandLineParser"
 
 
 int main(int argc, char **argv)
@@ -36,6 +37,16 @@ int main(int argc, char **argv)
     app.setOrganizationName(QStringLiteral("lxqt"));
     app.setApplicationName(QStringLiteral("lxqt-config"));
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config"));
+    const QString VERINFO = LXQT_CONFIG_VERSION \
+                            "\n\nliblxqt:   " LXQT_VERSION \
+                            "\nQt:        " QT_VERSION_STR;
+    app.setApplicationVersion(VERINFO);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(app);
 
     // ensure that we use lxqt-config.menu file.
     qputenv("XDG_MENU_PREFIX", "lxqt-");
