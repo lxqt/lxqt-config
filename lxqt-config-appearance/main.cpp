@@ -29,6 +29,7 @@
 
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
+#include <QCommandLineParser>
 #include "iconthemeconfig.h"
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
@@ -39,6 +40,17 @@
 int main (int argc, char **argv)
 {
     LXQt::SingleApplication app(argc, argv);
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config Appearance"));
+    const QString VERINFO = LXQT_CONFIG_VERSION \
+                            "\n\nliblxqt:   " LXQT_VERSION\
+                            "\nQt:        " QT_VERSION_STR;
+    app.setApplicationVersion(VERINFO);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(app);
+
     LXQt::Settings* settings = new LXQt::Settings("lxqt");
     LXQt::Settings* sessionSettings = new LXQt::Settings("session");
     LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
