@@ -11,27 +11,27 @@
     <message>
         <location filename="../../../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation type="unfinished"></translation>
+        <translation>Szybkie ustawienia</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❷ Widok rozszerzony</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❶ Połączony widok</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶     Tylko pierwszy</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation type="unfinished"></translation>
+        <translation>     ❷ Tylko drugi</translation>
     </message>
 </context>
 <context>
@@ -39,69 +39,69 @@
     <message>
         <location filename="../../../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">Ustawienia monitora</translation>
+        <translation>Ustawienia monitora</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisane ustawienia</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmień nazwę</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuń</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="52"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastosuj</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="67"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewo</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="70"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Odwrócony</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="73"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawo</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="77"/>
         <location filename="../../../managesavedsettings.cpp" line="78"/>
         <source>True</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawda</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="77"/>
         <location filename="../../../managesavedsettings.cpp" line="78"/>
         <source>False</source>
-        <translation type="unfinished"></translation>
+        <translation>Fałsz</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="140"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="140"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa:</translation>
     </message>
 </context>
 <context>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../../../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Okno dialogowe</translation>
     </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozostaw monitory podłączone</translation>
     </message>
 </context>
 <context>
@@ -195,12 +195,12 @@
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Szybkie menu</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw położenie</translation>
     </message>
     <message>
         <source>Error</source>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaawansowane ustawienia</translation>
     </message>
 </context>
 <context>
@@ -225,17 +225,17 @@
     <message>
         <location filename="../../../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguracja</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="29"/>
         <source> (x)</source>
-        <translation type="unfinished"></translation>
+        <translation> (x)</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="45"/>
         <source> (y)</source>
-        <translation type="unfinished"></translation>
+        <translation> (y)</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="78"/>
@@ -245,42 +245,42 @@
     <message>
         <location filename="../../../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz ten ekran</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation type="unfinished"></translation>
+        <translation>To jest główny ekran</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ten ekran rozszerza inny wyświetlacz</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaawansowane</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwość odświeżania:</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrót:</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacja</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacje o ekranie</translation>
     </message>
     <message>
         <source>Rate:</source>
@@ -322,62 +322,68 @@
         <location filename="../../../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Producent: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Numer seryjny: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar ekranu: %1 cm x %2 cm
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Numer seryjny: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ID urządzenia EISA: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="159"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="160"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewo</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawo</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Odwrócony</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="252"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
 </context>
 <context>
@@ -401,7 +407,7 @@
     <message>
         <location filename="../../../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Zarządzaj zapisanymi ustawieniami</translation>
     </message>
 </context>
 <context>
