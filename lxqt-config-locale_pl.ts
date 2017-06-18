@@ -21,22 +21,22 @@
     <message>
         <location filename="../../../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>&amp;Czas</translation>
+        <translation>&amp;Czas:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>&amp;Waluta</translation>
+        <translation>&amp;Waluta:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation>Jednostki pomiar&amp;u</translation>
+        <translation>Jednostki pomiar&amp;u:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Porównywanie i &amp;sortowanie</translation>
+        <translation>Porównywanie i &amp;sortowanie:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="238"/>
