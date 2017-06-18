@@ -6,7 +6,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="20"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation>ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="51"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz Num Lock po zalogowaniu</translation>
     </message>
 </context>
 <context>
