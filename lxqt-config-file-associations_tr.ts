@@ -21,7 +21,7 @@
     <message>
         <location filename="../../../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation type="unfinished"></translation>
+        <translation>JPEG işleyen uygulamalar</translation>
     </message>
     <message>
         <location filename="../../../applicationchooser.ui" line="124"/>
@@ -29,7 +29,7 @@
         <location filename="../../../applicationchooser.ui" line="139"/>
         <location filename="../../../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni Altnesne</translation>
     </message>
     <message>
         <location filename="../../../applicationchooser.ui" line="135"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../../../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 işleyen uygulamalar</translation>
     </message>
     <message>
         <location filename="../../../applicationchooser.cpp" line="151"/>
