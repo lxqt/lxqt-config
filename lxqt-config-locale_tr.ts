@@ -81,12 +81,12 @@
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Birleşik Krallık</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="434"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>Birleşik Devletler</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="438"/>
