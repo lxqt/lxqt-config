@@ -202,7 +202,9 @@
     </message>
     <message>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="vanished">Brzęczyk, gdy wystąpi błąd podczas wprowadzania z klawiatury</translation>
+        <translation type="vanished">Zabrzęcz, gdy wystąpi błąd podczas wprowadzania 
+z 
+klawiatury</translation>
     </message>
     <message>
         <source>Keyboard</source>
@@ -285,7 +287,7 @@
     <message>
         <location filename="../../../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>Pojedyńcze kliknięcie wyzwala akcję</translation>
+        <translation type="unfinished">Pojedyncze kliknięcie wyzwala akcję</translation>
     </message>
 </context>
 <context>
