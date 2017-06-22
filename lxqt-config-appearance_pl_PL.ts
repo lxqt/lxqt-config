@@ -102,7 +102,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Antyaliasing subpikselowy:</translation>
+        <translation>Antyaliasing subpikseli:</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="188"/>
