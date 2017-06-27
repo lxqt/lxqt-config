@@ -25,6 +25,7 @@
 int main(int argn, char* argv[])
 {
     LXQt::SingleApplication app(argn, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     // Command line options
     QCommandLineParser parser;
