@@ -33,6 +33,7 @@
 int main (int argc, char **argv)
 {
     LXQt::SingleApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("LXQt Config Locale"));
@@ -61,4 +62,3 @@ int main (int argc, char **argv)
 
     return app.exec();
 }
-
