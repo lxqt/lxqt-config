@@ -24,12 +24,12 @@
         <translation>Sup&amp;rimeix el tema</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="208"/>
+        <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
         <translation>Error XCurTheme</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="209"/>
+        <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>No podeu suprimir el tema actiu!</translation>
     </message>

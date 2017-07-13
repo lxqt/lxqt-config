@@ -33,12 +33,12 @@
         <translation type="vanished">關閉(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="208"/>
+        <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme錯誤</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="209"/>
+        <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>您無法移除正在套用的主題!</translation>
     </message>

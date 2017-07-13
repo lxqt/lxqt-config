@@ -24,12 +24,12 @@
         <translation>Téma tö&amp;rlése</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="208"/>
+        <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
         <translation>Témahiba</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="209"/>
+        <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Az aktuális téma eltávolíthatatlan!</translation>
     </message>

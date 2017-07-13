@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation>&amp;Ορισμός θέματος</translation>
+        <translation type="vanished">&amp;Ορισμός θέματος</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -29,15 +29,15 @@
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;Κλείσιμο</translation>
+        <translation type="vanished">&amp;Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="208"/>
+        <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
         <translation>Σφάλμα του θέματος δρομέα X</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="209"/>
+        <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Δεν μπορείτε να αφαιρέσετε το ενεργό θέμα!</translation>
     </message>

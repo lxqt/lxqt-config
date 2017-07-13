@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation>&amp;Definir tema</translation>
+        <translation type="vanished">&amp;Definir tema</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -29,15 +29,15 @@
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Fe&amp;char</translation>
+        <translation type="vanished">Fe&amp;char</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="208"/>
+        <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
         <translation>Erro XCurTheme</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="209"/>
+        <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Não pode remover o tema ativo!</translation>
     </message>

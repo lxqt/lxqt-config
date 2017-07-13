@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>SelectWnd</name>
     <message>
@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Set Theme</source>
-        <translation>&amp;Призначити тему</translation>
+        <translation type="vanished">&amp;Призначити тему</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -29,15 +29,15 @@
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;Закрити</translation>
+        <translation type="vanished">&amp;Закрити</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="208"/>
+        <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
         <translation>Збій XCurTheme</translation>
     </message>
     <message>
-        <location filename="../../../selectwnd.cpp" line="209"/>
+        <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Неможливо вилучити активну тему!</translation>
     </message>
