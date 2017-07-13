@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="uk">
+<TS version="2.1" language="uk">
 <context>
     <name>LocaleConfig</name>
     <message>
@@ -97,12 +97,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../main.cpp" line="38"/>
+        <location filename="../../../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
         <translation>Налаштування локалі LXQT</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="43"/>
+        <location filename="../../../main.cpp" line="55"/>
         <source>Locale Settings</source>
         <translation>Налаштування локалі</translation>
     </message>

@@ -97,12 +97,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../main.cpp" line="37"/>
+        <location filename="../../../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
         <translation>LXQt Paramètres régionaux</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="42"/>
+        <location filename="../../../main.cpp" line="55"/>
         <source>Locale Settings</source>
         <translation>Paramètres régionaux</translation>
     </message>
