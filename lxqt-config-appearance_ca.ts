@@ -140,12 +140,12 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;extensió de KDE dels temes d&apos;icones XDG -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../../../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Acoloreix les icones en funció de l&apos;estil de l&apos;estri (paleta)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../../../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Anul·la el fons de pantalla definit per l&apos;usuari</translation>
     </message>
 </context>
 <context>
