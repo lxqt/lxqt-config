@@ -134,79 +134,79 @@
     <name>MainDialog</name>
     <message>
         <source>Input Device Preferences</source>
-        <translation>Preferências de dispositivos</translation>
+        <translation type="vanished">Preferências de dispositivos</translation>
     </message>
     <message>
         <source>Motion</source>
-        <translation>Movimento</translation>
+        <translation type="vanished">Movimento</translation>
     </message>
     <message>
         <source>High</source>
-        <translation>Muito rápido</translation>
+        <translation type="vanished">Muito rápido</translation>
     </message>
     <message>
         <source>Fast</source>
-        <translation>Rápido</translation>
+        <translation type="vanished">Rápido</translation>
     </message>
     <message>
         <source>Sensitivity:</source>
-        <translation>Sensibilidade:</translation>
+        <translation type="vanished">Sensibilidade:</translation>
     </message>
     <message>
         <source>Low</source>
-        <translation>Baixa</translation>
+        <translation type="vanished">Baixa</translation>
     </message>
     <message>
         <source>Acceleration:</source>
-        <translation>Aceleração:</translation>
+        <translation type="vanished">Aceleração:</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Lenta</translation>
+        <translation type="vanished">Lenta</translation>
     </message>
     <message>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
     <message>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Canhoto (inverter botões do rato)</translation>
+        <translation type="vanished">Canhoto (inverter botões do rato)</translation>
     </message>
     <message>
         <source>Mouse</source>
-        <translation>Rato</translation>
+        <translation type="vanished">Rato</translation>
     </message>
     <message>
         <source>Character Repeat</source>
-        <translation>Repetição de caracteres</translation>
+        <translation type="vanished">Repetição de caracteres</translation>
     </message>
     <message>
         <source>Long</source>
-        <translation>Longa</translation>
+        <translation type="vanished">Longa</translation>
     </message>
     <message>
         <source>Repeat delay:</source>
-        <translation>Atraso de repetição:</translation>
+        <translation type="vanished">Atraso de repetição:</translation>
     </message>
     <message>
         <source>Short</source>
-        <translation>Curto</translation>
+        <translation type="vanished">Curto</translation>
     </message>
     <message>
         <source>Repeat interval:</source>
-        <translation>Intervalo de repetição:</translation>
+        <translation type="vanished">Intervalo de repetição:</translation>
     </message>
     <message>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Digite algo na caixa abaixo para testar o teclado</translation>
+        <translation type="vanished">Digite algo na caixa abaixo para testar o teclado</translation>
     </message>
     <message>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Reproduzir um som se ocorrer um erro de teclado</translation>
+        <translation type="vanished">Reproduzir um som se ocorrer um erro de teclado</translation>
     </message>
     <message>
         <source>Keyboard</source>
-        <translation>Teclado</translation>
+        <translation type="vanished">Teclado</translation>
     </message>
 </context>
 <context>
@@ -291,27 +291,27 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="34"/>
+        <location filename="../../../lxqt-config-input.cpp" line="46"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Definições do teclado e do rato</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="39"/>
+        <location filename="../../../lxqt-config-input.cpp" line="51"/>
         <source>Mouse</source>
         <translation>Rato</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="44"/>
+        <location filename="../../../lxqt-config-input.cpp" line="56"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="47"/>
+        <location filename="../../../lxqt-config-input.cpp" line="59"/>
         <source>Keyboard</source>
         <translation>Teclado</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="51"/>
+        <location filename="../../../lxqt-config-input.cpp" line="63"/>
         <source>Keyboard Layout</source>
         <translation>Disposição do teclado</translation>
     </message>

@@ -293,27 +293,27 @@ klawiatury</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="34"/>
+        <location filename="../../../lxqt-config-input.cpp" line="46"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Ustawienia myszy i klawiatury</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="39"/>
+        <location filename="../../../lxqt-config-input.cpp" line="51"/>
         <source>Mouse</source>
         <translation>Mysz</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="44"/>
+        <location filename="../../../lxqt-config-input.cpp" line="56"/>
         <source>Cursor</source>
         <translation>Kursor</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="47"/>
+        <location filename="../../../lxqt-config-input.cpp" line="59"/>
         <source>Keyboard</source>
         <translation>Klawiatura</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="51"/>
+        <location filename="../../../lxqt-config-input.cpp" line="63"/>
         <source>Keyboard Layout</source>
         <translation>Układ klawiatury</translation>
     </message>

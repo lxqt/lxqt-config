@@ -212,27 +212,27 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="34"/>
+        <location filename="../../../lxqt-config-input.cpp" line="46"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Billentyű és egérbeállítás</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="39"/>
+        <location filename="../../../lxqt-config-input.cpp" line="51"/>
         <source>Mouse</source>
         <translation>Egér</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="44"/>
+        <location filename="../../../lxqt-config-input.cpp" line="56"/>
         <source>Cursor</source>
         <translation>Kurzor</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="47"/>
+        <location filename="../../../lxqt-config-input.cpp" line="59"/>
         <source>Keyboard</source>
         <translation>Billentyűzet</translation>
     </message>
     <message>
-        <location filename="../../../lxqt-config-input.cpp" line="51"/>
+        <location filename="../../../lxqt-config-input.cpp" line="63"/>
         <source>Keyboard Layout</source>
         <translation>Billentyűkiosztás</translation>
     </message>
