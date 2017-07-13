@@ -32,11 +32,6 @@
 <context>
     <name>OutputWidget</name>
     <message>
-        <location filename="../../../outputwidget.ui" line="20"/>
-        <source>Form</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../../../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
         <translatorcomment>no idea where this appears</translatorcomment>
