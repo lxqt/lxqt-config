@@ -5,7 +5,7 @@
     <name>FastMenu</name>
     <message>
         <source>Form</source>
-        <translation type="vanished">Formulari</translation>
+        <translation>Formulari</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="20"/>
@@ -107,7 +107,7 @@
     <name>MonitorPictureDialog</name>
     <message>
         <source>Dialog</source>
-        <translation type="vanished">Diàleg</translation>
+        <translation>Diàleg</translation>
     </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
@@ -295,14 +295,15 @@
     </message>
     <message>
         <source>%1 second(s) remaining</source>
-        <translation type="vanished">Queden %1 segons</translation>
+        <translation>Queden %1 segons</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Quede %n segon</numerusform>
+            <numerusform>Quede %n segon</numerusform>
+            <numerusform>Queden %n segons</numerusform>
         </translation>
     </message>
 </context>
