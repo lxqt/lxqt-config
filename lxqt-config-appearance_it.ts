@@ -138,6 +138,16 @@
         <source>Icons Theme</source>
         <translation>Temi delle icone</translation>
     </message>
+    <message>
+        <location filename="../../../iconthemeconfig.ui" line="87"/>
+        <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../iconthemeconfig.ui" line="90"/>
+        <source>Colorize icons based on widget style (palette)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LXQtThemeConfig</name>
@@ -146,36 +156,41 @@
         <source>LXQt Theme</source>
         <translation>Tema di LXQt</translation>
     </message>
+    <message>
+        <location filename="../../../lxqtthemeconfig.ui" line="57"/>
+        <source>Override user-defined wallpaper</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../main.cpp" line="44"/>
+        <location filename="../../../main.cpp" line="57"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Configurazione dell&apos;aspetto di LXQt</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="50"/>
+        <location filename="../../../main.cpp" line="63"/>
         <source>Widget Style</source>
         <translation>Stile degli elementi</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="54"/>
+        <location filename="../../../main.cpp" line="67"/>
         <source>Icons Theme</source>
         <translation>Tema delle icone</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="58"/>
+        <location filename="../../../main.cpp" line="71"/>
         <source>LXQt Theme</source>
         <translation>Tema di LXQt</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="62"/>
+        <location filename="../../../main.cpp" line="75"/>
         <source>Font</source>
         <translation>Carattere</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="67"/>
+        <location filename="../../../main.cpp" line="80"/>
         <source>Cursor</source>
         <translation>Puntatore</translation>
     </message>
