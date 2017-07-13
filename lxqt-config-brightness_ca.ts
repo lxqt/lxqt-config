@@ -16,24 +16,24 @@
     <message>
         <location filename="../../../brightnesssettings.ui" line="35"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Requereix la confirmació després de canviar els ajusts</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="68"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>S&apos;han canviat els ajusts de la brillantor</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="69"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Cal confirmar. Són correctes els ajusts?</translation>
     </message>
 </context>
 <context>
     <name>OutputWidget</name>
     <message>
         <source>Form</source>
-        <translation type="vanished">Formulari</translation>
+        <translation>Formulari</translation>
     </message>
     <message>
         <location filename="../../../outputwidget.ui" line="38"/>
