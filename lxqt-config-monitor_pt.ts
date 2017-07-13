@@ -4,9 +4,8 @@
 <context>
     <name>FastMenu</name>
     <message>
-        <location filename="../../../fastmenu.ui" line="14"/>
         <source>Form</source>
-        <translation>Formulário</translation>
+        <translation type="vanished">Formulário</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="20"/>
@@ -108,39 +107,38 @@
     <name>MonitorInfo</name>
     <message>
         <source>Laptop LCD Monitor</source>
-        <translation>Monitor LCD de portátil</translation>
+        <translation type="vanished">Monitor LCD de portátil</translation>
     </message>
     <message>
         <source>External VGA Monitor</source>
-        <translation>Monitor externo VGA</translation>
+        <translation type="vanished">Monitor externo VGA</translation>
     </message>
     <message>
         <source>VGA Monitor</source>
-        <translation>Monitor VGA</translation>
+        <translation type="vanished">Monitor VGA</translation>
     </message>
     <message>
         <source>External DVI Monitor</source>
-        <translation>Monitor externo DVI</translation>
+        <translation type="vanished">Monitor externo DVI</translation>
     </message>
     <message>
         <source>DVI Monitor</source>
-        <translation>Monitor DVI</translation>
+        <translation type="vanished">Monitor DVI</translation>
     </message>
     <message>
         <source>TV</source>
-        <translation>TV</translation>
+        <translation type="vanished">TV</translation>
     </message>
     <message>
         <source>Default Monitor</source>
-        <translation>Monitor padrão</translation>
+        <translation type="vanished">Monitor padrão</translation>
     </message>
 </context>
 <context>
     <name>MonitorPictureDialog</name>
     <message>
-        <location filename="../../../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Caixa de diálogo</translation>
+        <translation type="vanished">Caixa de diálogo</translation>
     </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
@@ -149,88 +147,88 @@
     </message>
     <message>
         <source>Magnetic attraction</source>
-        <translation>Atração magnética</translation>
+        <translation type="vanished">Atração magnética</translation>
     </message>
 </context>
 <context>
     <name>MonitorSettingsDialog</name>
     <message>
         <source>Laptop LCD Monitor</source>
-        <translation>Monitor LCD de portátil</translation>
+        <translation type="vanished">Monitor LCD de portátil</translation>
     </message>
     <message>
         <source>External VGA Monitor</source>
-        <translation>Monitor externo VGA</translation>
+        <translation type="vanished">Monitor externo VGA</translation>
     </message>
     <message>
         <source>VGA Monitor</source>
-        <translation>Monitor VGA</translation>
+        <translation type="vanished">Monitor VGA</translation>
     </message>
     <message>
         <source>External DVI Monitor</source>
-        <translation>Monitor externo DVI</translation>
+        <translation type="vanished">Monitor externo DVI</translation>
     </message>
     <message>
         <source>DVI Monitor</source>
-        <translation>Monitor DVI</translation>
+        <translation type="vanished">Monitor DVI</translation>
     </message>
     <message>
         <source>TV</source>
-        <translation>TV</translation>
+        <translation type="vanished">TV</translation>
     </message>
     <message>
         <source>Default Monitor</source>
-        <translation>Monitor padrão</translation>
+        <translation type="vanished">Monitor padrão</translation>
     </message>
     <message>
         <source>Auto</source>
-        <translation>Automático</translation>
+        <translation type="vanished">Automático</translation>
     </message>
     <message>
         <source>OK?</source>
-        <translation>Aceitar?</translation>
+        <translation type="vanished">Aceitar?</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Sim</translation>
+        <translation type="vanished">Sim</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>Sobre</translation>
+        <translation type="vanished">Sobre</translation>
     </message>
     <message>
         <source>Left of</source>
-        <translation>Esquerda de</translation>
+        <translation type="vanished">Esquerda de</translation>
     </message>
     <message>
         <source>Right of</source>
-        <translation>Direita de</translation>
+        <translation type="vanished">Direita de</translation>
     </message>
     <message>
         <source>Above of</source>
-        <translation>Acima de</translation>
+        <translation type="vanished">Acima de</translation>
     </message>
     <message>
         <source>Below of</source>
-        <translation>Abaixo de</translation>
+        <translation type="vanished">Abaixo de</translation>
     </message>
     <message>
         <source>Show the same screen on both</source>
-        <translation>Mostrar o mesmo ecrã em ambos</translation>
+        <translation type="vanished">Mostrar o mesmo ecrã em ambos</translation>
     </message>
     <message>
         <source>Turn off first monitor and use second monitor only</source>
-        <translation>Desligar o primeiro monitor e utilizar o segundo</translation>
+        <translation type="vanished">Desligar o primeiro monitor e utilizar o segundo</translation>
     </message>
     <message>
         <source>Turn off second monitor and use first monitor only</source>
-        <translation>Desligar o segundo monitor e utilizar o primeiro</translation>
+        <translation type="vanished">Desligar o segundo monitor e utilizar o primeiro</translation>
     </message>
     <message>
         <source>LXQt-config-monitor
 
 Monitor configuration tool for LXQt.</source>
-        <translation>LXQt-config-monitor
+        <translation type="vanished">LXQt-config-monitor
 
 Ferramenta de configuração de monitores do LXQt.</translation>
     </message>
@@ -241,23 +239,23 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     </message>
     <message>
         <source>Quick Options</source>
-        <translation>Opções rápidas</translation>
+        <translation type="vanished">Opções rápidas</translation>
     </message>
     <message>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation>Mostrar o mesmo ecrã no portátil e no monitor externo</translation>
+        <translation type="vanished">Mostrar o mesmo ecrã no portátil e no monitor externo</translation>
     </message>
     <message>
         <source>Extended view</source>
-        <translation>Vista detalhada</translation>
+        <translation type="vanished">Vista detalhada</translation>
     </message>
     <message>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation>Desligar ecrã do portátil e utilizar o monitor externo</translation>
+        <translation type="vanished">Desligar ecrã do portátil e utilizar o monitor externo</translation>
     </message>
     <message>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation>Desligar o monitor externo e utilizar o ecrã do portátil</translation>
+        <translation type="vanished">Desligar o monitor externo e utilizar o ecrã do portátil</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.ui" line="71"/>
@@ -266,23 +264,23 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     </message>
     <message>
         <source>Unify all monitors</source>
-        <translation>Unificar todos os monitores</translation>
+        <translation type="vanished">Unificar todos os monitores</translation>
     </message>
     <message>
         <source>Monitor Position</source>
-        <translation>Posição do monitor</translation>
+        <translation type="vanished">Posição do monitor</translation>
     </message>
     <message>
         <source>Primary monitor:</source>
-        <translation>Monitor principal:</translation>
+        <translation type="vanished">Monitor principal:</translation>
     </message>
     <message>
         <source>Do you want to save changes?</source>
-        <translation>Quer guardar as alterações?</translation>
+        <translation type="vanished">Quer guardar as alterações?</translation>
     </message>
     <message>
         <source>Please, check your config before to save.</source>
-        <translation>Verifique a configuração antes de guardar.</translation>
+        <translation type="vanished">Verifique a configuração antes de guardar.</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="111"/>
@@ -296,11 +294,11 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Erro</translation>
+        <translation type="vanished">Erro</translation>
     </message>
     <message>
         <source>Config can not be saved</source>
-        <translation>Não é possível guardar a configuração</translation>
+        <translation type="vanished">Não é possível guardar a configuração</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="244"/>
@@ -312,7 +310,7 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     <name>MonitorWidget</name>
     <message>
         <source>Turn on</source>
-        <translation>Ligar</translation>
+        <translation type="vanished">Ligar</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="21"/>
@@ -376,43 +374,43 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     </message>
     <message>
         <source>Rate:</source>
-        <translation>Taxa:</translation>
+        <translation type="vanished">Taxa:</translation>
     </message>
     <message>
         <source>Hz</source>
-        <translation>Hz</translation>
+        <translation type="vanished">Hz</translation>
     </message>
     <message>
         <source>Position:</source>
-        <translation>Posição:</translation>
+        <translation type="vanished">Posição:</translation>
     </message>
     <message>
         <source>x:</source>
-        <translation>x:</translation>
+        <translation type="vanished">x:</translation>
     </message>
     <message>
         <source>y:</source>
-        <translation>y:</translation>
+        <translation type="vanished">y:</translation>
     </message>
     <message>
         <source>Brightness:</source>
-        <translation>Brilho:</translation>
+        <translation type="vanished">Brilho:</translation>
     </message>
     <message>
         <source>Gamma:</source>
-        <translation>Gama:</translation>
+        <translation type="vanished">Gama:</translation>
     </message>
     <message>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="vanished">:</translation>
     </message>
     <message>
         <source>Backlight:</source>
-        <translation>Luz de fundo:</translation>
+        <translation type="vanished">Luz de fundo:</translation>
     </message>
     <message>
         <source>Auto</source>
-        <translation>Automático</translation>
+        <translation type="vanished">Automático</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="135"/>
@@ -451,27 +449,27 @@ Ferramenta de configuração de monitores do LXQt.</translation>
         <translation>EISA do dispositivo: %1</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="159"/>
+        <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>None</source>
         <translation>Nenhuma</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="160"/>
+        <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="161"/>
+        <location filename="../../../monitorwidget.cpp" line="163"/>
         <source>Right</source>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="162"/>
+        <location filename="../../../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
         <translation>Invertido</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="252"/>
+        <location filename="../../../monitorwidget.cpp" line="254"/>
         <source>%1 Hz</source>
         <translation>%1 HZ</translation>
     </message>
@@ -480,7 +478,7 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     <name>QObject</name>
     <message>
         <source>Auto</source>
-        <translation>Automático</translation>
+        <translation type="vanished">Automático</translation>
     </message>
     <message>
         <source>Monitor Settings</source>
@@ -543,9 +541,16 @@ Ferramenta de configuração de monitores do LXQt.</translation>
         <translation>As definições estão certas para si?</translation>
     </message>
     <message>
-        <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
-        <translation>%1 segundo(s) em falta</translation>
+        <translation type="vanished">%1 segundo(s) em falta</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../timeoutdialog.cpp" line="62"/>
+        <source>%n second(s) remaining</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>

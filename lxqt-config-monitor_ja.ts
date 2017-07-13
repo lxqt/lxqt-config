@@ -4,11 +4,6 @@
 <context>
     <name>FastMenu</name>
     <message>
-        <location filename="../../../fastmenu.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../fastmenu.ui" line="20"/>
         <source>Fast options</source>
         <translation type="unfinished"></translation>
@@ -138,9 +133,8 @@
 <context>
     <name>MonitorPictureDialog</name>
     <message>
-        <location filename="../../../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation>ダイアログ</translation>
+        <translation type="vanished">ダイアログ</translation>
     </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
@@ -367,27 +361,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="159"/>
+        <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>None</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="160"/>
+        <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="161"/>
+        <location filename="../../../monitorwidget.cpp" line="163"/>
         <source>Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="162"/>
+        <location filename="../../../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="252"/>
+        <location filename="../../../monitorwidget.cpp" line="254"/>
         <source>%1 Hz</source>
         <translation type="unfinished"></translation>
     </message>
@@ -459,9 +453,15 @@
         <translation>この設定で問題ないですか？</translation>
     </message>
     <message>
-        <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
-        <translation>残り %1 秒</translation>
+        <translation type="vanished">残り %1 秒</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../timeoutdialog.cpp" line="62"/>
+        <source>%n second(s) remaining</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>

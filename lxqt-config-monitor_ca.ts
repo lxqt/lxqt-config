@@ -4,9 +4,8 @@
 <context>
     <name>FastMenu</name>
     <message>
-        <location filename="../../../fastmenu.ui" line="14"/>
         <source>Form</source>
-        <translation>Formulari</translation>
+        <translation type="vanished">Formulari</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="20"/>
@@ -107,9 +106,8 @@
 <context>
     <name>MonitorPictureDialog</name>
     <message>
-        <location filename="../../../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Diàleg</translation>
+        <translation type="vanished">Diàleg</translation>
     </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
@@ -250,27 +248,27 @@
 </translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="159"/>
+        <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>None</source>
         <translation>Sense</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="160"/>
+        <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Left</source>
         <translation>Esquerra</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="161"/>
+        <location filename="../../../monitorwidget.cpp" line="163"/>
         <source>Right</source>
         <translation>Dreta</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="162"/>
+        <location filename="../../../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
         <translation>Invertit</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="252"/>
+        <location filename="../../../monitorwidget.cpp" line="254"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>
@@ -296,9 +294,16 @@
         <translation>Esteu segur que els ajusts us van bé?</translation>
     </message>
     <message>
-        <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
-        <translation>Queden %1 segons</translation>
+        <translation type="vanished">Queden %1 segons</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../timeoutdialog.cpp" line="62"/>
+        <source>%n second(s) remaining</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>

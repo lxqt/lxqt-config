@@ -4,9 +4,8 @@
 <context>
     <name>FastMenu</name>
     <message>
-        <location filename="../../../fastmenu.ui" line="14"/>
         <source>Form</source>
-        <translation>Φόρμα</translation>
+        <translation type="vanished">Φόρμα</translation>
     </message>
     <message>
         <location filename="../../../fastmenu.ui" line="20"/>
@@ -108,39 +107,38 @@
     <name>MonitorInfo</name>
     <message>
         <source>Laptop LCD Monitor</source>
-        <translation>Οθόνη LCD φορητού</translation>
+        <translation type="vanished">Οθόνη LCD φορητού</translation>
     </message>
     <message>
         <source>External VGA Monitor</source>
-        <translation>Εξωτερική οθόνη VGA</translation>
+        <translation type="vanished">Εξωτερική οθόνη VGA</translation>
     </message>
     <message>
         <source>VGA Monitor</source>
-        <translation>Οθόνη VGA</translation>
+        <translation type="vanished">Οθόνη VGA</translation>
     </message>
     <message>
         <source>External DVI Monitor</source>
-        <translation>Εξωτερική οθόνη DVI</translation>
+        <translation type="vanished">Εξωτερική οθόνη DVI</translation>
     </message>
     <message>
         <source>DVI Monitor</source>
-        <translation>Οθόνη DVI</translation>
+        <translation type="vanished">Οθόνη DVI</translation>
     </message>
     <message>
         <source>TV</source>
-        <translation>Τηλεόραση</translation>
+        <translation type="vanished">Τηλεόραση</translation>
     </message>
     <message>
         <source>Default Monitor</source>
-        <translation>Οθόνη εξ ορισμού</translation>
+        <translation type="vanished">Οθόνη εξ ορισμού</translation>
     </message>
 </context>
 <context>
     <name>MonitorPictureDialog</name>
     <message>
-        <location filename="../../../monitorpicture.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Διάλογος</translation>
+        <translation type="vanished">Διάλογος</translation>
     </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
@@ -149,7 +147,7 @@
     </message>
     <message>
         <source>Magnetic attraction</source>
-        <translation>Μαγνητική έλξη</translation>
+        <translation type="vanished">Μαγνητική έλξη</translation>
     </message>
 </context>
 <context>
@@ -166,35 +164,35 @@
     </message>
     <message>
         <source>Unify all monitors</source>
-        <translation>Ενοποίηση όλων των οθονών</translation>
+        <translation type="vanished">Ενοποίηση όλων των οθονών</translation>
     </message>
     <message>
         <source>Monitor Position</source>
-        <translation>Θέση της οθόνης</translation>
+        <translation type="vanished">Θέση της οθόνης</translation>
     </message>
     <message>
         <source>Primary monitor:</source>
-        <translation>Πρωτεύουσα οθόνη:</translation>
+        <translation type="vanished">Πρωτεύουσα οθόνη:</translation>
     </message>
     <message>
         <source>Do you want to save changes?</source>
-        <translation>Επιθυμείτε την αποθήκευση των αλλαγών;</translation>
+        <translation type="vanished">Επιθυμείτε την αποθήκευση των αλλαγών;</translation>
     </message>
     <message>
         <source>Please, check the settings before saving.</source>
-        <translation>Παρακαλώ, ελέγξτε τις ρυθμίσεις πριν την αποθήκευση.</translation>
+        <translation type="vanished">Παρακαλώ, ελέγξτε τις ρυθμίσεις πριν την αποθήκευση.</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation>Όνομα</translation>
+        <translation type="vanished">Όνομα</translation>
     </message>
     <message>
         <source>Name:</source>
-        <translation>Όνομα:</translation>
+        <translation type="vanished">Όνομα:</translation>
     </message>
     <message>
         <source>Actual</source>
-        <translation>Τρέχον</translation>
+        <translation type="vanished">Τρέχον</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="111"/>
@@ -208,11 +206,11 @@
     </message>
     <message>
         <source>Error</source>
-        <translation>Σφάλμα</translation>
+        <translation type="vanished">Σφάλμα</translation>
     </message>
     <message>
         <source>Config can not be saved</source>
-        <translation>Δεν είναι δυνατή η αποθήκευση της διαμόρφωσης</translation>
+        <translation type="vanished">Δεν είναι δυνατή η αποθήκευση της διαμόρφωσης</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="244"/>
@@ -224,7 +222,7 @@
     <name>MonitorWidget</name>
     <message>
         <source>Turn on</source>
-        <translation>Ενεργοποίηση</translation>
+        <translation type="vanished">Ενεργοποίηση</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="21"/>
@@ -288,43 +286,43 @@
     </message>
     <message>
         <source>Rate:</source>
-        <translation>Ρυθμός:</translation>
+        <translation type="vanished">Ρυθμός:</translation>
     </message>
     <message>
         <source>Hz</source>
-        <translation>Hz</translation>
+        <translation type="vanished">Hz</translation>
     </message>
     <message>
         <source>Position:</source>
-        <translation>Θέση:</translation>
+        <translation type="vanished">Θέση:</translation>
     </message>
     <message>
         <source>x:</source>
-        <translation>x:</translation>
+        <translation type="vanished">x:</translation>
     </message>
     <message>
         <source>y:</source>
-        <translation>y:</translation>
+        <translation type="vanished">y:</translation>
     </message>
     <message>
         <source>Brightness:</source>
-        <translation>Φωτεινότητα:</translation>
+        <translation type="vanished">Φωτεινότητα:</translation>
     </message>
     <message>
         <source>Gamma:</source>
-        <translation>Γάμμα:</translation>
+        <translation type="vanished">Γάμμα:</translation>
     </message>
     <message>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="vanished">:</translation>
     </message>
     <message>
         <source>Backlight:</source>
-        <translation>Οπισθόφως:</translation>
+        <translation type="vanished">Οπισθόφως:</translation>
     </message>
     <message>
         <source>Auto</source>
-        <translation>Αυτόματο</translation>
+        <translation type="vanished">Αυτόματο</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="135"/>
@@ -367,27 +365,27 @@
         <translation>Αναγνωριστικό συσκευής EISA: %1</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="159"/>
+        <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>None</source>
         <translation>Ουδέν</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="160"/>
+        <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Left</source>
         <translation>Αριστερά</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="161"/>
+        <location filename="../../../monitorwidget.cpp" line="163"/>
         <source>Right</source>
         <translation>Δεξιά</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="162"/>
+        <location filename="../../../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
         <translation>Ανεστραμμένα</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="252"/>
+        <location filename="../../../monitorwidget.cpp" line="254"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>
@@ -396,23 +394,23 @@
     <name>QObject</name>
     <message>
         <source>Auto</source>
-        <translation>Αυτόματο</translation>
+        <translation type="vanished">Αυτόματο</translation>
     </message>
     <message>
         <source>Monitor Settings</source>
-        <translation>Ρυθμίσεις οθόνης</translation>
+        <translation type="vanished">Ρυθμίσεις οθόνης</translation>
     </message>
     <message>
         <source>Quick Options</source>
-        <translation>Γρήγορες επιλογές</translation>
+        <translation type="vanished">Γρήγορες επιλογές</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Ρυθμίσεις</translation>
+        <translation type="vanished">Ρυθμίσεις</translation>
     </message>
     <message>
         <source>Save settings</source>
-        <translation>Αποθήκευση ρυθμίσεων</translation>
+        <translation type="vanished">Αποθήκευση ρυθμίσεων</translation>
     </message>
     <message>
         <location filename="../../../settingsdialog.cpp" line="33"/>
@@ -424,62 +422,62 @@
     <name>QuickOptions</name>
     <message>
         <source>Monitor Settings</source>
-        <translation>Ρυθμίσεις οθόνης</translation>
+        <translation type="vanished">Ρυθμίσεις οθόνης</translation>
     </message>
     <message>
         <source>Show the same screen on both laptop LCD and external monitor</source>
-        <translation>Εμφάνιση της ίδιας οθόνης στην LCD του φορητού και στην εξωτερική οθόνη</translation>
+        <translation type="vanished">Εμφάνιση της ίδιας οθόνης στην LCD του φορητού και στην εξωτερική οθόνη</translation>
     </message>
     <message>
         <source>Extended view</source>
-        <translation>Εκτεταμένη προβολή</translation>
+        <translation type="vanished">Εκτεταμένη προβολή</translation>
     </message>
     <message>
         <source>Turn off laptop LCD and use external monitor only</source>
-        <translation>Απενεργοποίηση της οθόνης LCD του φορητού και χρήση μόνον της εξωτερικής οθόνης</translation>
+        <translation type="vanished">Απενεργοποίηση της οθόνης LCD του φορητού και χρήση μόνον της εξωτερικής οθόνης</translation>
     </message>
     <message>
         <source>Turn off external monitor and use laptop LCD only</source>
-        <translation>Απενεργοποίηση της εξωτερικής οθόνης και χρήση μόνον της οθόνης LCD του φορητού</translation>
+        <translation type="vanished">Απενεργοποίηση της εξωτερικής οθόνης και χρήση μόνον της οθόνης LCD του φορητού</translation>
     </message>
 </context>
 <context>
     <name>SaveSettings</name>
     <message>
         <source>Monitor Settings</source>
-        <translation>Ρυθμίσεις οθόνης</translation>
+        <translation type="vanished">Ρυθμίσεις οθόνης</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Αποθήκευση</translation>
+        <translation type="vanished">Αποθήκευση</translation>
     </message>
     <message>
         <source>Saved settings</source>
-        <translation>Αποθηκευμένες ρυθμίσεις</translation>
+        <translation type="vanished">Αποθηκευμένες ρυθμίσεις</translation>
     </message>
     <message>
         <source>All:</source>
-        <translation>Όλες:</translation>
+        <translation type="vanished">Όλες:</translation>
     </message>
     <message>
         <source>Hardware compatible:</source>
-        <translation>Συμβατές με το υλικό:</translation>
+        <translation type="vanished">Συμβατές με το υλικό:</translation>
     </message>
     <message>
         <source>Rename</source>
-        <translation>Μετονομασία</translation>
+        <translation type="vanished">Μετονομασία</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation>Διαγραφή</translation>
+        <translation type="vanished">Διαγραφή</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation>Όνομα</translation>
+        <translation type="vanished">Όνομα</translation>
     </message>
     <message>
         <source>Name:</source>
-        <translation>Όνομα:</translation>
+        <translation type="vanished">Όνομα:</translation>
     </message>
 </context>
 <context>
@@ -495,9 +493,16 @@
         <translation>Οι τρέχουσες ρυθμίσεις σας ικανοποιούν;</translation>
     </message>
     <message>
-        <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%1 second(s) remaining</source>
-        <translation>Υπολείπεται %1 δευτερόλεπτο(α)</translation>
+        <translation type="vanished">Υπολείπεται %1 δευτερόλεπτο(α)</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../timeoutdialog.cpp" line="62"/>
+        <source>%n second(s) remaining</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>
