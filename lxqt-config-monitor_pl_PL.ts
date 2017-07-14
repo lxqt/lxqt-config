@@ -454,9 +454,9 @@
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>pozostała %n sekunda</numerusform>
+            <numerusform>pozostały %n sekundy</numerusform>
+            <numerusform>pozostało %n sekund</numerusform>
         </translation>
     </message>
 </context>
