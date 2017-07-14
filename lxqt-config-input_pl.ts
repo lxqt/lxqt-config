@@ -287,7 +287,7 @@ klawiatury</translation>
     <message>
         <location filename="../../../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished">Pojedyncze kliknięcie wyzwala akcję</translation>
+        <translation>Pojedyncze kliknięcie aktywuje akcje</translation>
     </message>
 </context>
 <context>
