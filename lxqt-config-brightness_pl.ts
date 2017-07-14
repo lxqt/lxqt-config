@@ -16,12 +16,12 @@
     <message>
         <location filename="../../../brightnesssettings.ui" line="35"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Wymaga potwierdzenia po zmianie ustawień</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="68"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmieniono ustawienia jasności</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="69"/>
