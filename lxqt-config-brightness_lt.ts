@@ -16,17 +16,17 @@
     <message>
         <location filename="../../../brightnesssettings.ui" line="35"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Po nustatymų pakeitimo, reikalauti patvirtinimo</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="68"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ryškumo nustatymai pakeisti</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="69"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Reikalingas patvirtinimas. Ar nustatymai teisingi?</translation>
     </message>
 </context>
 <context>
