@@ -140,12 +140,12 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>XDG piktogramų temos KDE plėtinys -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../../../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Spalvinti piktogramas valdiklių stiliaus (spalvų paletės) pagrindu</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../../../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Nustelbti naudotojo apibrėžtą darbalaukio foną</translation>
     </message>
 </context>
 <context>
