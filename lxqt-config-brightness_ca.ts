@@ -33,7 +33,7 @@
     <name>OutputWidget</name>
     <message>
         <source>Form</source>
-        <translation>Formulari</translation>
+        <translation type="vanished">Formulari</translation>
     </message>
     <message>
         <location filename="../../../outputwidget.ui" line="38"/>
