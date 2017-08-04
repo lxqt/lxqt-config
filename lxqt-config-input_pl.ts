@@ -216,7 +216,7 @@ klawiatury</translation>
     <message>
         <location filename="../../../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formularz</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="23"/>
