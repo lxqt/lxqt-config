@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>FastMenu</name>
     <message>
@@ -453,7 +453,7 @@
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>pozostała %n sekunda</numerusform>
             <numerusform>pozostały %n sekundy</numerusform>
             <numerusform>pozostało %n sekund</numerusform>
