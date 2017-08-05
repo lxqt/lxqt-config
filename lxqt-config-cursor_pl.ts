@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Zainstaluj Nowy Motyw...</translation>
+        <translation>&amp;Zainstaluj Nowy Motyw…</translation>
     </message>
     <message>
         <source>&amp;Set Theme</source>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../../../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>Pokaż...</translation>
+        <translation>Pokaż…</translation>
     </message>
 </context>
 <context>
