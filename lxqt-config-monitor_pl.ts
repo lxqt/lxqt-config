@@ -189,7 +189,7 @@
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation>Szybkie menu</translation>
+        <translation>Szybkie ustawienia</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="115"/>
