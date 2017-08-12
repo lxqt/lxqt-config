@@ -306,7 +306,7 @@ void LocaleConfig::saveSettings()
     {
         QMessageBox msgBox;
         msgBox.setWindowTitle(tr("Format Settings Changed"));
-        msgBox.setText(tr("Save the settings ? (they will take effect the next time you log in)"));
+        msgBox.setText(tr("Do you want to save your changes? They will take effect the next time you log in."));
         msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
         msgBox.setDefaultButton(QMessageBox::Cancel);
         
