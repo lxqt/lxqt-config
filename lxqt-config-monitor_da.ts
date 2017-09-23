@@ -4,10 +4,6 @@
 <context>
     <name>FastMenu</name>
     <message>
-        <source>Form</source>
-        <translation type="vanished">Formular</translation>
-    </message>
-    <message>
         <location filename="../../../fastmenu.ui" line="20"/>
         <source>Fast options</source>
         <translation>Hurtige valgmuligheder</translation>
@@ -105,10 +101,6 @@
 </context>
 <context>
     <name>MonitorPictureDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation type="vanished">Dialog</translation>
-    </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
@@ -293,16 +285,12 @@
         <source>Are the current settings OK for you?</source>
         <translation>Er de aktuelle indstillinger OK for dig?</translation>
     </message>
-    <message>
-        <source>%1 second(s) remaining</source>
-        <translation type="vanished">%1 sekund(er) tilbage</translation>
-    </message>
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1 sekund tilbage</numerusform>
+            <numerusform>%1 sekunder tilbage</numerusform>
         </translation>
     </message>
 </context>
