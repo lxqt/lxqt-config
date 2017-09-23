@@ -74,9 +74,13 @@
         <translation>Настройки формата изменены</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Сохранить изменения? (они будут применены при следующем логине)</translation>
+        <translation type="vanished">Сохранить изменения? (они будут применены при следующем логине)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>

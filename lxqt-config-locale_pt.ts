@@ -74,9 +74,13 @@
         <translation>Definições alteradas</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Guardar definições? (Serão aplicadas na próxima sessão)</translation>
+        <translation type="vanished">Guardar definições? (Serão aplicadas na próxima sessão)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>

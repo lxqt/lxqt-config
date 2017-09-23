@@ -74,9 +74,13 @@
         <translation>تغيّر إعدادات التّنسيق</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>أأحفظ الإعدادات؟ (ستأخذ مفعولها في الولوج الآتي)</translation>
+        <translation type="vanished">أأحفظ الإعدادات؟ (ستأخذ مفعولها في الولوج الآتي)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>

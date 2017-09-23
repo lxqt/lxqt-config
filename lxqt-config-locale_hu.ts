@@ -74,9 +74,13 @@
         <translation>Formátumváltozott</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Véltoztatások mentése ? (legközelebbi bejelentkezéskor hatásos)</translation>
+        <translation type="vanished">Véltoztatások mentése ? (legközelebbi bejelentkezéskor hatásos)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>

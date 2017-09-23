@@ -74,9 +74,13 @@
         <translation>Biçim Ayarları Değiştirildi</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Ayarlar kaydedilsin mi? (Ayarlar oturumu yeniden başlattığınızda etkin olacak)</translation>
+        <translation type="vanished">Ayarlar kaydedilsin mi? (Ayarlar oturumu yeniden başlattığınızda etkin olacak)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>

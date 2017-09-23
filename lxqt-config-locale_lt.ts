@@ -74,9 +74,13 @@
         <translation>Formato nustatymai pakeisti</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Įrašyti nustatymus ? (jie įsigalios kitą kartą jums prisijungus)</translation>
+        <translation type="vanished">Įrašyti nustatymus ? (jie įsigalios kitą kartą jums prisijungus)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>
