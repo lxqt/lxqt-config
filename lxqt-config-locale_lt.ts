@@ -75,7 +75,7 @@
     </message>
     <message>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Įrašyti nustatymus ? (jie įsigalios kitą kartą jums prisijungus)</translation>
+        <translation type="vanished">Įrašyti nustatymus ? (jie įsigalios kitą kartą jums prisijungus)</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="309"/>
