@@ -26,7 +26,7 @@
     <message>
         <location filename="../../../brightnesssettings.cpp" line="69"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished">Wymagane jest potwierdzenie. Czy te ustawienia są poprawne?</translation>
+        <translation>Wymagane jest potwierdzenie. Czy te ustawienia są poprawne?</translation>
     </message>
 </context>
 <context>
