@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="id">
+<TS version="2.1" language="id">
 <context>
     <name>LocaleConfig</name>
     <message>
@@ -74,9 +74,13 @@
         <translation>Pengaturan Format telah diubah</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation>Simpan pengaturan ? (mereka akan berlaku setelah Anda masuk ulang)</translation>
+        <translation type="vanished">Simpan pengaturan ? (mereka akan berlaku setelah Anda masuk ulang)</translation>
+    </message>
+    <message>
+        <location filename="../../../localeconfig.cpp" line="309"/>
+        <source>Do you want to save your changes? They will take effect the next time you log in.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>
