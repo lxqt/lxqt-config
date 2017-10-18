@@ -19,13 +19,13 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5Widgets REQUIRED QUIET)
-find_package(Qt5DBus REQUIRED QUIET)
-find_package(Qt5Xml REQUIRED QUIET)
-find_package(Qt5Concurrent REQUIRED QUIET)
-find_package(Qt5X11Extras REQUIRED QUIET)
-find_package(Qt5LinguistTools REQUIRED QUIET)
-find_package(lxqt REQUIRED QUIET)
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5DBus REQUIRED)
+find_package(Qt5Xml REQUIRED)
+find_package(Qt5Concurrent REQUIRED)
+find_package(Qt5X11Extras REQUIRED)
+find_package(Qt5LinguistTools REQUIRED)
+find_package(lxqt REQUIRED)
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
@@ -33,7 +33,9 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-set(LXQT_CONFIG_PATCH_VERSION 2)
+# Patch Version
+set(LXQT_CONFIG_PATCH_VERSION 0)
+
 set(LXQT_CONFIG_VERSION ${LXQT_MAJOR_VERSION}.${LXQT_MINOR_VERSION}.${LXQT_CONFIG_PATCH_VERSION})
 add_definitions("-DLXQT_CONFIG_VERSION=\"${LXQT_CONFIG_VERSION}\"")
 
