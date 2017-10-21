@@ -1,7 +1,44 @@
 
-lxqt-config-0.11.1 / 2017-01-01
+lxqt-config-0.12.0 / 2017-10-21
 ===============================
 
+  * Set patch version
+  * Use $XDG_CONFIG_HOME/mimeapps.list for mime data instead of $XDG_DATA_HOME/applications/mimeapps.list (#129)
+  * Don't export github templates
+  * Update monitorsettingsdialog.ui
+  * lxqt-config-locale: corrected/reworded Save Changed Settings dialog
+  * Add/update *lt.desktop files
+  * lxq-config-monitor: set Qt::AA_UseHighDpiPixmaps to true
+  * lxqt-config-locale: set Qt::AA_UseHighDpiPixmaps to true
+  * lxqt-config-input: set Qt::AA_UseHighDpiPixmaps to true
+  * lxqt-config-file-ass.: set Qt::AA_UseHighDpiPixmaps to true
+  * lxqt-config-brightness: set Qt::AA_UseHighDpiPixmaps to true
+  * lxqt-config-appearance: set Qt::AA_UseHighDpiPixmaps to true
+  * liblxqt-config-cursor: set Qt::AA_UseHighDpiPixmaps to true
+  * Added QCommandLineParser and basic cli interface to lxqt-config-monitor
+  * Added QCommandLineParser and basic cli interface to lxqt-config-locale
+  * Added QCommandLineParser and basic cli interface to lxqt-config-input
+  * Added QCommandLineParser and basic cli interface to lxqt-config-file-associations
+  * Added version info to lxqt-config-brightness cli
+  * Added QCommandLineParser and basic cli interface to lxqt-config-appearance
+  * Added QCommandLineParser and basic cli interface to lxqt-config
+  * Added LXQT_CONFIG_PATCH_VERSION
+  * Fixed typo in appearance_pl_PL.desktop (#124)
+  * i18n: added some *.desktop for Polish language
+  * Fixes (#121)
+  * appearance: Fix typo from @aca544479
+  * lxqt-config-file-associations: Sets the initial focus (#120)
+  * appearance: Add icon FollowColorScheme configuration (#119)
+  * Show non-primary screens in UI. (#116)
+  * Removes unneeded include_directories() entry
+  * Fixes a FTBFS with CMake v3.8
+  * Use const iterators
+  * Update AUTHORS
+
+0.11.1 / 2017-01-01
+===================
+
+  * Release 0.11.1: Update changelog
   * lxqt-config-monitor: remove unnecessary wait before settings load (#114)
   * Fix self icontheme update (#113)
   * liblxqt-config-cursor: Don't check for null pointer before deleting it
