@@ -4,10 +4,6 @@
 <context>
     <name>FastMenu</name>
     <message>
-        <source>Form</source>
-        <translation type="vanished">Formulaire</translation>
-    </message>
-    <message>
         <location filename="../../../fastmenu.ui" line="20"/>
         <source>Fast options</source>
         <translation>Options rapides</translation>
@@ -105,10 +101,6 @@
 </context>
 <context>
     <name>MonitorPictureDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation type="vanished">Dialogue</translation>
-    </message>
     <message>
         <location filename="../../../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
@@ -283,12 +275,14 @@
 <context>
     <name>SaveSettings</name>
     <message>
+        <location filename="../../../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="vanished">Nom</translation>
+        <translation>Nom</translation>
     </message>
     <message>
+        <location filename="../../../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="vanished">Nom :</translation>
+        <translation>Nom :</translation>
     </message>
 </context>
 <context>
@@ -303,13 +297,10 @@
         <source>Are the current settings OK for you?</source>
         <translation>Est-ce que les paramètres actuels sont correctes ?</translation>
     </message>
-    <message numerus="yes">
+    <message>
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform>%n seconde(s) restante(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
+        <translation>%n seconde(s) restante(s)</translation>
     </message>
 </context>
 </TS>
