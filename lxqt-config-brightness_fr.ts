@@ -32,10 +32,6 @@
 <context>
     <name>OutputWidget</name>
     <message>
-        <source>Form</source>
-        <translation type="vanished">Formulaire</translation>
-    </message>
-    <message>
         <location filename="../../../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Sortie:&lt;/b&gt;</translation>
