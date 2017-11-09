@@ -283,7 +283,7 @@
     <message>
         <location filename="../../../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Er de aktuelle indstillinger OK for dig?</translation>
+        <translation>Er de nuværende indstillinger OK for dig?</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
