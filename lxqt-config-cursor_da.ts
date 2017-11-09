@@ -44,7 +44,7 @@
     <message>
         <location filename="../../../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt kunne ikke finde noget markør-tema. Standard X11-markør-temaet vil i stedet blive brugt. LXQt ledte i følgende mapper:</translation>
+        <translation>LXQt kunne ikke finde noget markør-tema. Standard-X11-markør-temaet vil i stedet blive brugt. LXQt ledte i følgende mapper:</translation>
     </message>
     <message>
         <location filename="../../../warninglabel.ui" line="54"/>
