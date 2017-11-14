@@ -71,14 +71,14 @@ target_link_libraries(
 )
 
 add_definitions(
-  -DICON_DIR="${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps"
+    -DICON_DIR="${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps"
 )
 
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 install(
     FILES icons/brightnesssettings.svg
-    DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps"
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps"
 )
     
