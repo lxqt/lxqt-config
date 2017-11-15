@@ -34,37 +34,37 @@
     <message>
         <location filename="../../../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished">モニターの設定</translation>
+        <translation>モニターの設定</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation type="unfinished"></translation>
+        <translation>設定の保存</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>名前の変更</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>削除</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.ui" line="52"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>適用</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>なし</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="67"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="70"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../../../managesavedsettings.cpp" line="73"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="77"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../../managesavedsettings.cpp" line="140"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名前</translation>
     </message>
     <message>
         <location filename="../../../managesavedsettings.cpp" line="140"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>名前:</translation>
     </message>
 </context>
 <context>
@@ -197,12 +197,12 @@
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>ファストメニュー</translation>
     </message>
     <message>
         <location filename="../../../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置の設定</translation>
     </message>
     <message>
         <source>Error</source>
@@ -247,42 +247,42 @@
     <message>
         <location filename="../../../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation type="unfinished"></translation>
+        <translation>このディスプレイを有効にする</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation type="unfinished"></translation>
+        <translation>このディスプレイを優先する</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation type="unfinished"></translation>
+        <translation>他のディスプレイにこのスクリーンを拡張する</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>高度</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>リフレッシュレート:</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>回転:</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>情報</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation type="unfinished"></translation>
+        <translation>ディスプレイの情報</translation>
     </message>
     <message>
         <source>Rate:</source>
@@ -328,31 +328,36 @@
         <location filename="../../../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>名前: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ベンダー: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>シリアル番号: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ディスプレイのサイズ: %1cm x %2cm
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>シリアル番号: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="140"/>
@@ -363,17 +368,17 @@
     <message>
         <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>なし</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="163"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="164"/>
@@ -407,7 +412,7 @@
     <message>
         <location filename="../../../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>保存された設定の管理</translation>
     </message>
 </context>
 <context>
@@ -459,8 +464,8 @@
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>残り %n 秒</numerusform>
         </translation>
     </message>
 </context>
