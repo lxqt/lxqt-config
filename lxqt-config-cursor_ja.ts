@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>新しいテーマのインストール...(&amp;I)</translation>
+        <translation>新しいテーマのインストール(&amp;I)...</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="88"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../../../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>表示</translation>
+        <translation>表示...</translation>
     </message>
 </context>
 <context>
