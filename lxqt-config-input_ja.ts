@@ -11,7 +11,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>カーソルの点滅時間</translation>
+        <translation>カーソルの点滅時間:</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="27"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>ログイン後にNumlockを有効にする</translation>
     </message>
 </context>
 <context>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>レイアウトを変更するためのキー</translation>
+        <translation>レイアウトを変更するためのキー:</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="133"/>
