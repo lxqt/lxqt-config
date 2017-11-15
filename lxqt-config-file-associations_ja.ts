@@ -59,12 +59,12 @@
     <message>
         <location filename="../../../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation>変更(&amp;C)</translation>
+        <translation>変更(&amp;C)...</translation>
     </message>
     <message>
         <location filename="../../../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation>選択(&amp;C)</translation>
+        <translation>選択(&amp;C)...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../../../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation>選択(&amp;C)</translation>
+        <translation>選択(&amp;C)...</translation>
     </message>
     <message>
         <location filename="../../../mimetypeviewer.ui" line="117"/>
