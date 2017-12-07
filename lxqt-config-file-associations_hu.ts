@@ -40,7 +40,7 @@
     <message>
         <location filename="../../../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>A %1 kezelő alkalmazás</translation>
+        <translation>A %1 alkalmazásai</translation>
     </message>
     <message>
         <location filename="../../../applicationchooser.cpp" line="151"/>
