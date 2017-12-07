@@ -11,12 +11,12 @@
     <message>
         <location filename="../../../brightnesssettings.ui" line="25"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use arrow keys to change settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Háttérvilágítás és fényerő beállításs:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Nyílbillentyűkkel változtatható.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Háttérvilágítás és fényerő beállítás:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Nyílbillentyűkkel változtatható.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.ui" line="35"/>
         <source>Require confirmation after settings change</source>
-        <translation>A változtatásho megerősítés kell</translation>
+        <translation>A változtatáshoz megerősítés kell</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.cpp" line="68"/>
