@@ -66,12 +66,12 @@
     <message>
         <location filename="../../../localeconfig.cpp" line="119"/>
         <source>No change</source>
-        <translation>Véltozatlan</translation>
+        <translation>Változatlan</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="308"/>
         <source>Format Settings Changed</source>
-        <translation>Formátumváltozott</translation>
+        <translation>Formátum változott</translation>
     </message>
     <message>
         <source>Save the settings ? (they will take effect the next time you log in)</source>
