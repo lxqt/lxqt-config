@@ -61,7 +61,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Betű mankó stílus:</translation>
+        <translation>Betű javasolt stílus:</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="118"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Betű mankó</translation>
+        <translation>Betű tipp</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="148"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Mankó</translation>
+        <translation>Automata tipp</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="172"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Alkalmazásmenü</translation>
+        <translation>LXQt megjelenésbeállítás</translation>
     </message>
     <message>
         <location filename="../../../iconthemeconfig.ui" line="26"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Színes ikonok a bigyó stílusból (paletta)</translation>
+        <translation>Színes ikonok az elemek stílusából (paletta)</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../../../main.cpp" line="63"/>
         <source>Widget Style</source>
-        <translation>Bigyótéma</translation>
+        <translation>Elemtéma</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="67"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../../../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Bigyótéma</translation>
+        <translation>Elemtéma</translation>
     </message>
     <message>
         <location filename="../../../styleconfig.ui" line="54"/>
