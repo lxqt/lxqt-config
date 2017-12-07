@@ -21,7 +21,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Billentyű hibánál csipogás</translation>
+        <translation>Billentyű hibánál csipog</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="41"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Megjegyzés&lt;/span&gt;: Ha bevitelként &lt;span style=&quot; font-weight:600;&quot;&gt;például&lt;/span&gt;, IBus, uim, fcitx, or gcin, szolgálnakl, ezek a beállítások &lt;span style=&quot; font-weight:600;&quot;&gt;nem működnek&lt;/span&gt; mert azok a beviteli módok ezt felülírják.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Megjegyzés&lt;/span&gt;: Ha bevitelként &lt;span style=&quot; font-weight:600;&quot;&gt;például&lt;/span&gt;, IBus, uim, fcitx, or gcin, szolgálnak, ezek a beállítások &lt;span style=&quot; font-weight:600;&quot;&gt;nem működnek&lt;/span&gt; mert a beviteli módok ezt felülírják.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
