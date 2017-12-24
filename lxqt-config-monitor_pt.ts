@@ -416,37 +416,43 @@ Ferramenta de configuração de monitores do LXQt.</translation>
         <location filename="../../../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation>Nome: %1</translation>
+        <translation>Nome: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation>Fornecedor: %1</translation>
+        <translation>Fornecedor: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation>Série: %1</translation>
+        <translation>Série: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Tamanho do ecrã: %1cm x %2cm</translation>
+        <translation>Tamanho do ecrã: %1cm x %2cm
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation>Número de série: %1</translation>
+        <translation>Número de série: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA do dispositivo: %1</translation>
+        <translation>EISA do dispositivo: %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="161"/>
@@ -547,9 +553,9 @@ Ferramenta de configuração de monitores do LXQt.</translation>
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Resta %n segundo</numerusform>
+            <numerusform>Restam %n segundos</numerusform>
         </translation>
     </message>
 </context>
