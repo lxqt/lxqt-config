@@ -71,7 +71,7 @@ target_link_libraries(
 )
 
 add_definitions(
-    -DICON_DIR="${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps"
+    -DICON_DIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/48x48/apps"
 )
 
 
