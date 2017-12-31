@@ -140,12 +140,12 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Η επέκταση KDE για τα θέματα εικονιδίων XDG -&gt; Ακολουθεί τον χρωματικό συνδυασμό</translation>
     </message>
     <message>
         <location filename="../../../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρωματισμός εικονιδίων βάσει της τεχνοτροπίας του γραφικού συστατικού (χρωματοπυξίδα)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../../../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντικατάσταση της καθορισμένης από τον χρήστη ταπετσαρίας</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../../../main.cpp" line="63"/>
         <source>Widget Style</source>
-        <translation>Στιλ συστατικού</translation>
+        <translation>Τεχνοτροπία συστατικού</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="67"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../../../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Στιλ συστατικού</translation>
+        <translation>Τεχνοτροπία συστατικού</translation>
     </message>
     <message>
         <location filename="../../../styleconfig.ui" line="54"/>
