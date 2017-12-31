@@ -80,7 +80,7 @@
     <message>
         <location filename="../../../localeconfig.cpp" line="309"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιθυμείτε την αποθήκευση των ρυθμίσεων; Θα λάβουν χώρα κατά την επόμενη σύνδεση.</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="430"/>
