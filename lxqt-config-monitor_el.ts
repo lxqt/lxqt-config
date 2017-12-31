@@ -499,9 +499,9 @@
     <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Υπολείπεται %n δευτερόλεπτο(α)</numerusform>
+            <numerusform>Υπολείπεται %n δευτερόλεπτο(α)</numerusform>
         </translation>
     </message>
 </context>
