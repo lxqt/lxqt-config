@@ -51,7 +51,7 @@ void SelectKeyboardLayoutDialog::onLayoutChanged() {
   if(item) { // add variants of this layout to the list view
     QString name = item->data(Qt::UserRole).toString();
     const KeyboardLayoutInfo& info = knownLayouts_[name];
-    Q_FOREACH(const LayoutVariantInfo& vinfo, info.variants) {
+    for(const LayoutVariantInfo& vinfo : qAsConst(info.variants)) {
       QListWidgetItem * vitem = new QListWidgetItem(vinfo.description);
       // qDebug() << "vitem" << vinfo.name << vinfo.description;
       vitem->setData(Qt::UserRole, vinfo.name);

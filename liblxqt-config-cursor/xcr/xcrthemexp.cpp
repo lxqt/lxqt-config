@@ -58,8 +58,8 @@ static const char *findCurShapeName (const QString &s) {
 
 
 static QString findFile (const QDir &dir, const QString &name, bool fullName=false) {
-  QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
-  foreach (const QFileInfo &fi, lst) {
+  const QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
+  for (const QFileInfo &fi : lst) {
     if (!name.compare(fi.fileName(), Qt::CaseInsensitive)) {
       if (fullName) return fi.absoluteFilePath();
       return fi.fileName();
@@ -181,13 +181,13 @@ static void removeFilesAndDirs (QDir &dir) {
   //qDebug() << "dir:" << dir.path();
   // files
   QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
-  foreach (const QFileInfo &fi, lst) {
+  for (const QFileInfo &fi : qAsConst(lst)) {
     //qDebug() << "removing" << fi.fileName() << fi.absoluteFilePath();
     dir.remove(fi.fileName());
   }
   // dirs
   lst = dir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot | QDir::Hidden);
-  foreach (const QFileInfo &fi, lst) {
+  for (const QFileInfo &fi : qAsConst(lst)) {
     dir.cd(fi.fileName());
     removeFilesAndDirs(dir);
     dir.cd("..");
@@ -316,7 +316,7 @@ bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
        qDebug() << "frameWdt:" << frameWdt << "left:" << img.width()%(frameWdt*info.frameCnt);
         // now build animation sequence
         int fCnt = 0;
-        foreach (const XCursorThemeFX::tAnimSeq &a, aseq) {
+        for (const XCursorThemeFX::tAnimSeq &a : qAsConst(aseq)) {
           bool back = a.from > a.to; // going backwards
           quint32 fNo = a.from;
           for (;; fCnt++) {

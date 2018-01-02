@@ -261,7 +261,7 @@ bool applyTheme(const XCursorThemeData &theme)
           << "pirate";
 
     //QX11Info x11Info;
-    foreach (const QString &name, names)
+    for (const QString &name : qAsConst(names))
     {
         Cursor cursor = (Cursor)theme.loadCursorHandle(name);
         XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name));

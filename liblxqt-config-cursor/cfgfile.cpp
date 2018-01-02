@@ -88,7 +88,7 @@ void fixXDefaults(const QString &themeName)
         {
             QTextStream stream;
             stream.setDevice(&fl);
-            foreach (const QString &s, lst)
+            for (const QString &s : qAsConst(lst))
             {
                 stream << s << "\n";
             }

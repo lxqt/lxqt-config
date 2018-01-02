@@ -131,9 +131,9 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         }
     }
     
-    Q_FOREACH(MonitorWidget *monitor1, monitors)
+    for(const MonitorWidget *monitor1 : qAsConst(monitors))
     {
-        Q_FOREACH(MonitorWidget *monitor, monitors)
+        for(const MonitorWidget *monitor : qAsConst(monitors))
         {
             if(monitor != monitor1)
                 connect(monitor, SIGNAL(primaryOutputChanged(MonitorWidget *)), monitor1, SLOT(onPrimaryOutputChanged(MonitorWidget *)));

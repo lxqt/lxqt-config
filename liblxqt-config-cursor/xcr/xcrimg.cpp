@@ -192,7 +192,7 @@ QByteArray XCursorImages::genXCursor () const {
   baPutDW(res, 65536); // version number
   // TOC
   quint32 cnt = 0;
-  foreach (const XCursorImage *i, mList) if (i->xcurSize() > 0) cnt++;
+  for (const XCursorImage *i : qAsConst(mList)) if (i->xcurSize() > 0) cnt++;
   // 'credits'
   for (int f = 0; f < 7; f++) if (!crdBA[f].isEmpty()) cnt++;
   //
@@ -208,7 +208,7 @@ QByteArray XCursorImages::genXCursor () const {
     dataOfs += crdBA[f].size()+20;
   }
   // add image chunks
-  foreach (const XCursorImage *i, mList) {
+  for (const XCursorImage *i : qAsConst(mList)) {
     quint32 isz = i->xcurSize();
     if (!isz) continue;
     baPutDW(res, 0xfffd0002); // entry type
@@ -227,7 +227,7 @@ QByteArray XCursorImages::genXCursor () const {
     res.append(crdBA[f]);
   }
   // images
-  foreach (const XCursorImage *i, mList) {
+  for (const XCursorImage *i : qAsConst(mList)) {
     quint32 isz = i->xcurSize();
     if (!isz) continue;
     i->genXCursorImg(res);
@@ -238,7 +238,7 @@ QByteArray XCursorImages::genXCursor () const {
 
 QImage XCursorImages::buildImage () const {
   int width = 0, height = 0, cnt = 0;
-  foreach (const XCursorImage *i, mList) {
+  for (const XCursorImage *i : qAsConst(mList)) {
     if (i->xcurSize() > 0) {
       QImage img = i->image();
       width = qMax(width, img.width());
@@ -251,7 +251,7 @@ QImage XCursorImages::buildImage () const {
   QImage res(width*cnt, height, QImage::Format_ARGB32);
   QPainter p(&res);
   int x = 0;
-  foreach (const XCursorImage *i, mList) {
+  for (const XCursorImage *i : qAsConst(mList)) {
     if (i->xcurSize() > 0) {
       QImage img = i->image();
       p.drawImage(QPoint(x, 0), img);

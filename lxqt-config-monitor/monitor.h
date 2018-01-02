@@ -50,8 +50,8 @@ struct MonitorSavedSettings {
 /**This function saves a list of MonitorSettings in QSettings file.
  * Before using this function, QSettings group must be opened.
  */
-void saveMonitorSettings(QSettings &settings, QList<MonitorSettings> monitors);
-void saveMonitorSettings(QSettings &settings, MonitorSettings &monitor);
+void saveMonitorSettings(QSettings &settings, const QList<MonitorSettings> monitors);
+void saveMonitorSettings(QSettings &settings, const MonitorSettings &monitor);
 
 /**This function loads a list of MonitorSettings from QSettings file.
  * Before using this function, QSettings group must be opened.

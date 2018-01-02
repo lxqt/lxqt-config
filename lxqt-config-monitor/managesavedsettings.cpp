@@ -83,7 +83,7 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
 }
 
 
-bool ManageSavedSettings::isHardwareCompatible(MonitorSavedSettings &settings)
+bool ManageSavedSettings::isHardwareCompatible(const MonitorSavedSettings &settings)
 {
     KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs)
@@ -182,7 +182,7 @@ void ManageSavedSettings::loadSettings()
     settings.beginGroup("SavedConfigs");
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
-    foreach(MonitorSavedSettings o, monitors) {
+    for(const MonitorSavedSettings& o : qAsConst(monitors)) {
         QListWidgetItem *item = new QListWidgetItem(o.name+" - "+o.date, ui.allConfigs);
         QVariant var;
         var.setValue(o);

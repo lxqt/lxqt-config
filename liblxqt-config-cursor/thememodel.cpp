@@ -143,7 +143,7 @@ const QStringList XCursorThemeModel::searchPaths()
 bool XCursorThemeModel::hasTheme(const QString &name) const
 {
     const uint hash = qHash(name);
-    foreach (const XCursorThemeData *theme, mList) if (theme->hash() == hash) return true;
+    for (const XCursorThemeData *theme : qAsConst(mList)) if (theme->hash() == hash) return true;
     return false;
 }
 
@@ -152,7 +152,8 @@ bool XCursorThemeModel::isCursorTheme(const QString &theme, const int depth)
     // Prevent infinite recursion
     if (depth > 10) return false;
     // Search each icon theme directory for 'theme'
-    foreach (const QString &baseDir, searchPaths())
+    const auto dirs = searchPaths();
+    for (const QString &baseDir : dirs)
     {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme)) continue;
@@ -244,7 +245,8 @@ void XCursorThemeModel::processThemeDir(const QDir &themeDir)
     if (!haveCursors)
     {
         bool foundCursorTheme = false;
-        foreach (const QString &name, theme->inherits())
+        const auto names = theme->inherits();
+        for (const QString &name : names)
         {
             if ((foundCursorTheme = isCursorTheme(name))) break;
         }
@@ -261,15 +263,16 @@ void XCursorThemeModel::processThemeDir(const QDir &themeDir)
 void XCursorThemeModel::insertThemes()
 {
     // Scan each base dir for Xcursor themes and add them to the list
-    foreach (const QString &baseDir, searchPaths())
+    const auto dirs = searchPaths();
+    for (const QString &baseDir : dirs)
     {
         QDir dir(baseDir);
         //qDebug() << "TOPLEVEL" << baseDir;
         if (!dir.exists()) continue;
         //qDebug() << "    continue passed";
         // Process each subdir in the directory
-        foreach (const QString &name, dir.entryList(QDir::AllDirs |
-                 QDir::NoDotAndDotDot | QDir::Readable | QDir::Executable))
+        const auto names = dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot | QDir::Readable | QDir::Executable);
+        for (const QString &name : names)
         {
         //qDebug() << " SUBDIR" << name;
         // Don't process the theme if a theme with the same name already exists
