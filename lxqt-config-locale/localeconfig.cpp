@@ -89,14 +89,14 @@ void LocaleConfig::load()
 {
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     qSort(allLocales.begin(), allLocales.end(), countryLessThan);
-    foreach(QComboBox * combo, m_combos)
+    for(QComboBox * combo : qAsConst(m_combos))
     {
         initCombo(combo, allLocales);
     }
 
     readConfig();
 
-    foreach(QComboBox * combo, m_combos)
+    for(QComboBox * combo : qAsConst(m_combos))
     {
         connectCombo(combo);
     }
@@ -119,7 +119,7 @@ void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales
     const QString clabel = tr("No change");
     combo->setInsertPolicy(QComboBox::InsertAlphabetically);
     combo->addItem(clabel, QString());
-    foreach(const QLocale & l, allLocales)
+    for(const QLocale & l : qAsConst(allLocales))
     {
         addLocaleToCombo(combo, l);
     }

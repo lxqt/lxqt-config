@@ -66,7 +66,7 @@ void MimetypeViewer::loadAllMimeTypes()
     QList<QMimeType> mimetypes = db.allMimeTypes();
 
     qSort(mimetypes.begin(), mimetypes.end(), mimeTypeLessThan);
-    foreach (const QMimeType &mt, mimetypes) {
+    for (const QMimeType &mt : qAsConst(mimetypes)) {
         const QString mimetype = mt.name();
         const int i = mimetype.indexOf(QLatin1Char('/'));
         const QString mediaType = mimetype.left(i);
@@ -221,7 +221,7 @@ void MimetypeViewer::filter(const QString& pattern)
         widget.mimetypeTreeWidget->topLevelItem(i)->setHidden(true);
     }
 
-    foreach(QTreeWidgetItem* it, mItemList) {
+    for(QTreeWidgetItem* it : qAsConst(mItemList)) {
         mimeData = it->data(0, Qt::UserRole).value<MimeTypeData>();
         if (pattern.isEmpty() || mimeData.matches(pattern)) {
             const int i = mimeData.name().indexOf(QLatin1Char('/'));

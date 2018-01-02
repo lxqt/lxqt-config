@@ -153,13 +153,13 @@ static void removeFilesAndDirs (QDir &dir) {
   //qDebug() << "dir:" << dir.path();
   // files
   QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
-  foreach (const QFileInfo &fi, lst) {
+  for (const QFileInfo &fi : qAsConst(lst)) {
     //qDebug() << "removing" << fi.fileName() << fi.absoluteFilePath();
     dir.remove(fi.fileName());
   }
   // dirs
   lst = dir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot | QDir::Hidden);
-  foreach (const QFileInfo &fi, lst) {
+  for (const QFileInfo &fi : qAsConst(lst)) {
     dir.cd(fi.fileName());
     removeFilesAndDirs(dir);
     dir.cd("..");
@@ -171,8 +171,8 @@ static void removeFilesAndDirs (QDir &dir) {
 
 static void removeFiles (QDir &dir) {
   //
-  QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
-  foreach (const QFileInfo &fi, lst) {
+  const QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
+  for (const QFileInfo &fi : lst) {
     qDebug() << "removing" << fi.fileName() << fi.absoluteFilePath();
     QFile fl(fi.absoluteFilePath());
     fl.remove();
@@ -303,7 +303,7 @@ bool XCursorTheme::writeToDir (const QDir &destDir) {
   dir.cd("cursors");
   removeCursorFiles(dir);
   //
-  foreach (const XCursorImages *ci, mList) {
+  for (const XCursorImages *ci : qAsConst(mList)) {
     const char **nlst = findCursorRecord(ci->name());
     if (!nlst) continue; // unknown cursor, skip it
     qDebug() << "writing" << *nlst;
@@ -452,7 +452,7 @@ void XCursorTheme::parseXCursorTheme (const QDir &dir) {
 
 
 void XCursorTheme::fixInfoFields () {
-  foreach (XCursorImages *ci, mList) {
+  for (XCursorImages *ci : qAsConst(mList)) {
     if (!mTitle.isEmpty() && ci->title().isEmpty()) ci->setTitle(title());
     if (!mAuthor.isEmpty() && ci->author().isEmpty()) ci->setAuthor(author());
     if (!mLicense.isEmpty() && ci->license().isEmpty()) ci->setLicense(license());
@@ -563,7 +563,7 @@ Inherits=core
     QTextStream stream;
     stream.setDevice(&fl);
     stream.setCodec("UTF-8");
-    foreach (const QString &s, cfg) stream << s << "\n";
+    for (const QString &s : qAsConst(cfg)) stream << s << "\n";
     stream << "[Icon Theme]\n";
     stream << "Name=" << name << "\n";
     stream << "Comment=" << cmt << "\n";
@@ -571,7 +571,7 @@ Inherits=core
     stream << "Url=" << url << "\n";
     stream << "Description=" << dscr << "\n";
     stream << "Example=" << mSample << "\n";
-    foreach (const QString &s, inhs) stream << "Inherits=" << s << "\n";
+    for (const QString &s : qAsConst(inhs)) stream << "Inherits=" << s << "\n";
   }
   fl.close();
   return true;
@@ -590,7 +590,7 @@ static bool removeXCTheme (const QDir &thDir) {
   // check if there are some other files
   QFileInfoList lst = thDir.entryInfoList(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
   bool cantKill = false;
-  foreach (const QFileInfo &fi, lst) {
+  for (const QFileInfo &fi : qAsConst(lst)) {
     QString s(fi.fileName());
     if (s != "icon-theme.cache" && s != "index.theme") {
       cantKill = true;
@@ -706,7 +706,7 @@ bool XCursorTheme::writeXPTheme (const QDir &destDir) {
     stream << "[General]\r\n";
     stream << "Version=130\r\n";
     qDebug() << "writing images...";
-    foreach (XCursorImages *ci, mList) {
+    for (XCursorImages *ci : qAsConst(mList)) {
       const char **nlst = findCursorRecord(ci->name());
       if (!nlst) continue; // unknown cursor, skip it
       qDebug() << "image:" << *(nlst-1);

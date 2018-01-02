@@ -52,7 +52,7 @@ public slots:
 private:
   LXQt::Settings *applicationSettings;
   KScreen::ConfigPtr config;
-  bool isHardwareCompatible(MonitorSavedSettings &settings);
+  bool isHardwareCompatible(const MonitorSavedSettings &settings);
   
 };
 

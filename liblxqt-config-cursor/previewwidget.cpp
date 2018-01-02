@@ -131,7 +131,7 @@ void PreviewWidget::setCursorHandle(xcb_cursor_t cursorHandle)
 QSize PreviewWidget::sizeHint() const
 {
     int totalWidth = 0, maxHeight = 0;
-    foreach (const PreviewCursor *c, mList)
+    for (const PreviewCursor *c : qAsConst(mList))
     {
         totalWidth += c->width();
         maxHeight = qMax(c->height(), maxHeight);
@@ -148,7 +148,7 @@ void PreviewWidget::layoutItems()
         QSize size = sizeHint();
         int cursorWidth = size.width()/mList.count();
         int nextX = (width()-size.width())/2;
-        foreach (PreviewCursor *c, mList)
+        for (PreviewCursor *c : qAsConst(mList))
         {
             c->setPosition(nextX+(cursorWidth-c->width())/2, (height()-c->height())/2);
             nextX += cursorWidth;
@@ -181,7 +181,7 @@ void PreviewWidget::paintEvent(QPaintEvent *)
 {
     QPainter p(this);
     if (mNeedLayout) layoutItems();
-    foreach (const PreviewCursor *c, mList)
+    for (const PreviewCursor *c : qAsConst(mList))
     {
         if (c->pixmap().isNull()) continue;
         p.drawPixmap(c->position(), *c);
@@ -191,7 +191,7 @@ void PreviewWidget::paintEvent(QPaintEvent *)
 void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
 {
     if (mNeedLayout) layoutItems();
-    foreach (const PreviewCursor *c, mList)
+    for (const PreviewCursor *c : qAsConst(mList))
     {
         if (c->rect().contains(e->pos()))
         {

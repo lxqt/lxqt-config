@@ -66,9 +66,9 @@ bool XCursorThemeFX::str2num (const QString &s, quint32 &res) {
 QList<XCursorThemeFX::tAnimSeq> XCursorThemeFX::parseScript (const QString &script, quint32 maxFrame) {
   QList<tAnimSeq> res;
   QString scp = script; scp.replace("\r", "\n");
-  QStringList scpL = scp.split('\n', QString::SkipEmptyParts);
-  foreach (QString s, scpL) {
-    s = s.simplified();
+  const QStringList scpL = scp.split('\n', QString::SkipEmptyParts);
+  for (const QString &ss : scpL) {
+    const QString s = ss.simplified();
     //qDebug() << s;
     QStringList fld = s.split(',', QString::SkipEmptyParts); //BUG!BUG!BUG!
     if (fld.size() != 2) {
@@ -366,7 +366,7 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
    qDebug() << "frameWdt:" << frameWdt << "left:" << img.width()%(frameWdt*frameCnt);
     // now build animation sequence
     int fCnt = 0;
-    foreach (const tAnimSeq &a, aseq) {
+    for (const tAnimSeq &a : qAsConst(aseq)) {
       bool back = a.from > a.to; // going backwards
       quint32 fNo = a.from;
       for (;; fCnt++) {

@@ -54,16 +54,16 @@ int main(int argn, char* argv[])
     if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) )
     {
         XRandrBrightness *brightness = new XRandrBrightness();
-        QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
+        const QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
         QList<MonitorInfo> monitorsChanged;
         float sign = parser.isSet(decreaseOption)?-1.0:1.0;
         double brightness_value = parser.value(setOption).toFloat();
         brightness_value = qMin( qMax(brightness_value, 0.0), 100.0 ) / 100.0;
         if(!parser.value(setOption).isEmpty())
             sign = 0.0;
-        foreach(MonitorInfo monitor, monitors)
+        for(MonitorInfo monitor : monitors)
         {
-            if( monitor.isBacklightSupported() )
+            if(monitor.isBacklightSupported() )
             {
                 long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
                 if(backlight<monitor.backlightMax() && backlight>0)

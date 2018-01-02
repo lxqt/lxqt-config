@@ -52,7 +52,8 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
     connect(ui->styleList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
             this, SLOT(styleSelected(QTreeWidgetItem*,int)));
 
-    Q_FOREACH(const QString& name, QStyleFactory::keys())
+    const auto keys = QStyleFactory::keys();
+    for(const QString& name : keys)
     {
         QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(name));
         ui->styleList->addTopLevelItem(item);

@@ -106,7 +106,7 @@ void ApplicationChooser::fillApplicationListWidget()
     // cursor to Wait.
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
     QMimeDatabase db;
-    foreach(const QString& mts, mimetypes) {
+    for(const QString& mts : qAsConst(mimetypes)) {
         QMimeType mt = db.mimeTypeForName(mts);
         QString heading;
         heading = mt.name() == QLatin1String("application/octet-stream") ?
@@ -157,7 +157,7 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
         else
         {
             // Insert applications in the listwidget, skipping already added applications
-            foreach (XdgDesktopFile* desktopFile, applications)
+            for (XdgDesktopFile* desktopFile : qAsConst(applications))
             {
                 if (alreadyAdded.contains(desktopFile))
                     continue;

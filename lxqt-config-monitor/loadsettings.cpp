@@ -82,7 +82,7 @@ void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
                 // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
                 KScreen::ModeList modeList = output->modes();
-                foreach(const KScreen::ModePtr &mode, modeList)
+                for(const KScreen::ModePtr &mode : qAsConst(modeList))
                 {
                     if( mode->id() == QString(monitor.currentMode) 
                             ||

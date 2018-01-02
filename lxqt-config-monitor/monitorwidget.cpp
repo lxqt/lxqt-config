@@ -72,7 +72,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     // Remove duplicate sizes
     QMap<QString, KScreen::ModePtr> noDuplicateModes;
-    foreach(const KScreen::ModePtr &mode, modeList)
+    for(const KScreen::ModePtr &mode : qAsConst(modeList))
     {
         if( noDuplicateModes.keys().contains(modeToString(mode)) )
         {
@@ -91,7 +91,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     qSort(modeList.begin(), modeList.end(), sizeBiggerThan);
 
     // Add each mode to the list
-    foreach (const KScreen::ModePtr &mode, modeList)
+    for (const KScreen::ModePtr &mode : qAsConst(modeList))
     {
         ui.resolutionCombo->addItem(modeToString(mode), mode->id());
         if(output->preferredModes().contains(mode->id()))
@@ -112,7 +112,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         if (idx < 0)
         {
             // Select mode with same size
-            foreach (const KScreen::ModePtr &mode, modeList)
+            for (const KScreen::ModePtr &mode : qAsConst(modeList))
             {
                 if( mode->size() == output->currentMode()->size() )
                     idx = ui.resolutionCombo->findData(output->currentMode()->id());

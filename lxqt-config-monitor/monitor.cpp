@@ -28,12 +28,12 @@ bool MonitorSavedSettings::operator==(const MonitorSavedSettings &obj)
     return true;
 }
 
-void saveMonitorSettings(QSettings & settings, QList<MonitorSettings> monitors)
+void saveMonitorSettings(QSettings & settings, const QList<MonitorSettings> monitors)
 {
     settings.remove("settings");
     settings.beginWriteArray("settings");
     int i = 0;
-    Q_FOREACH(MonitorSettings monitor, monitors)
+    for(const MonitorSettings& monitor : monitors)
     {
         settings.setArrayIndex(i++);
         saveMonitorSettings(settings, monitor);
@@ -41,7 +41,7 @@ void saveMonitorSettings(QSettings & settings, QList<MonitorSettings> monitors)
     settings.endArray();
 }
 
-void saveMonitorSettings(QSettings &settings, MonitorSettings &monitor)
+void saveMonitorSettings(QSettings &settings, const MonitorSettings &monitor)
 {
     settings.setValue("name", monitor.name);
     settings.setValue("hash", monitor.hash);
@@ -97,7 +97,7 @@ void saveMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> monit
     settings.remove("SavedSettings");
     settings.beginWriteArray("SavedSettings");
     int i = 0;
-    Q_FOREACH(MonitorSavedSettings monitor, monitors)
+    for(MonitorSavedSettings& monitor : monitors)
     {
         settings.setArrayIndex(i++);
         saveMonitorSettings(settings, monitor);

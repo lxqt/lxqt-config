@@ -62,14 +62,14 @@ void IconThemeConfig::initIconsThemes()
     iconThemeList->setColumnCount(iconNamesN + 2);
 
     QList<QTreeWidgetItem *> items;
-    foreach (const QString &baseDirName, baseDirs)
+    for (const QString &baseDirName : baseDirs)
     {
         QDir baseDir(baseDirName);
         if (!baseDir.exists())
             continue;
 
         const QFileInfoList dirs = baseDir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
-        foreach (const QFileInfo &dir, dirs)
+        for (const QFileInfo &dir : dirs)
         {
             if (!processed.contains(dir.canonicalFilePath()))
             {
