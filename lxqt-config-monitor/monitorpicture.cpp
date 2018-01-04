@@ -128,7 +128,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
     int x0, y0;
     x0 = y0 = 0;
 
-    for (MonitorPicture *picture : pictures)
+    for (MonitorPicture *picture : qAsConst(pictures))
     {
         if (picture->monitorWidget->output->name() == primaryMonitor
             || primaryMonitor == QStringLiteral(""))
@@ -141,7 +141,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
 
     if( primaryMonitor == QStringLiteral("") )
     {
-        for(MonitorPicture *picture: pictures)
+        for(MonitorPicture *picture : qAsConst(pictures))
         {
             int x1 = picture->originX + picture->pos().x();
             int y1 = picture->originY + picture->pos().y();
@@ -150,7 +150,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
         }
     }
 
-    for (MonitorPicture *picture : pictures)
+    for (MonitorPicture *picture : qAsConst(pictures))
     {
         int x = picture->originX + picture->pos().x() - x0;
         int y = picture->originY + picture->pos().y() - y0;
@@ -399,7 +399,7 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
         return;
 
     QVector2D vector(0, 0);
-    for (MonitorPicture *picture : pictures)
+    for (MonitorPicture *picture : qAsConst(pictures))
     {
         if (picture == monitorPicture)
             continue;
