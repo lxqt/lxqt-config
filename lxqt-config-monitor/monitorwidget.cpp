@@ -249,7 +249,8 @@ void MonitorWidget::updateRefreshRates()
     KScreen::ModePtr selectedMode = output->currentMode();
     if (selectedMode)
     {
-        for (const KScreen::ModePtr &mode : output->modes())
+        const auto modes = output->modes();
+        for (const KScreen::ModePtr &mode : modes)
             if (mode->size() == selectedMode->size())
                 ui.rateCombo->addItem(tr("%1 Hz").arg(mode->refreshRate()), mode->id());
 

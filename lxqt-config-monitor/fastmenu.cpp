@@ -82,14 +82,16 @@ static bool sizeBiggerThan(const QSize &sizeA, const QSize &sizeB)
 
 void FastMenu::unified()
 {
-    KScreen::OutputList outputs = mConfig->outputs();
+    const KScreen::OutputList outputs = mConfig->outputs();
     // Look for common size
     QList<QSize> commonSizes;
     for (const KScreen::OutputPtr &output : outputs)
     {
         if( !output->isConnected() )
             continue;
-        for(const KScreen::ModePtr &mode: output->modes())
+
+        const auto modes = output->modes();
+        for(const KScreen::ModePtr &mode : modes)
         {
             commonSizes.append(mode->size());
         }
@@ -100,7 +102,8 @@ void FastMenu::unified()
         if( !output->isConnected() )
             continue;
         QList<QSize> sizes;
-        for(const KScreen::ModePtr &mode: output->modes())
+        const auto modes = output->modes();
+        for(const KScreen::ModePtr &mode : modes)
         {
             if( commonSizes.contains(mode->size()) )
                 sizes.append(mode->size());
@@ -124,7 +127,8 @@ void FastMenu::unified()
         output->setEnabled(true);
         // Select mode with the biggest refresh rate
         float maxRefreshRate = 0.0;
-        for(const KScreen::ModePtr &mode: output->modes())
+        const auto outputs = output->modes();
+        for(const KScreen::ModePtr &mode : outputs)
         {
             if(mode->size() == commonSize && maxRefreshRate < mode->refreshRate())
             {
@@ -138,7 +142,7 @@ void FastMenu::unified()
 void FastMenu::onlyFirst()
 {
     bool foundOk = false;
-    KScreen::OutputList outputs = mConfig->outputs();
+    const KScreen::OutputList outputs = mConfig->outputs();
     for (const KScreen::OutputPtr &output : outputs)
     {
         if( !output->isConnected() )
@@ -155,7 +159,7 @@ void FastMenu::onlyFirst()
 void FastMenu::onlySecond()
 {
     bool foundOk = true;
-    KScreen::OutputList outputs = mConfig->outputs();
+    const KScreen::OutputList outputs = mConfig->outputs();
     for (const KScreen::OutputPtr &output : outputs)
     {
         if( !output->isConnected() )
