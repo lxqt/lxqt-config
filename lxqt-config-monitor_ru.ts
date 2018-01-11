@@ -258,7 +258,7 @@
         <translation>Наоборот</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="254"/>
+        <location filename="../../../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
         <translation>%1 Гц</translation>
     </message>

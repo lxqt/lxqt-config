@@ -259,7 +259,7 @@
         <translation>Inversé</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="254"/>
+        <location filename="../../../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>
@@ -275,14 +275,12 @@
 <context>
     <name>SaveSettings</name>
     <message>
-        <location filename="../../../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation>Nom</translation>
+        <translation type="vanished">Nom</translation>
     </message>
     <message>
-        <location filename="../../../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation>Nom :</translation>
+        <translation type="vanished">Nom :</translation>
     </message>
 </context>
 <context>
@@ -297,10 +295,13 @@
         <source>Are the current settings OK for you?</source>
         <translation>Est-ce que les paramètres actuels sont correctes ?</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../timeoutdialog.cpp" line="62"/>
         <source>%n second(s) remaining</source>
-        <translation>%n seconde(s) restante(s)</translation>
+        <translation type="unfinished">
+            <numerusform>%n seconde(s) restante(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>
