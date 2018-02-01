@@ -20,6 +20,7 @@
 #define __OUTPUT_WIDGET_H__
 
 #include <QGroupBox>
+#include <QMouseEvent>
 #include "monitorinfo.h"
 #include "ui_outputwidget.h"
 
@@ -36,6 +37,8 @@ public slots:
     void backlightChanged(int value);
     void brightnessChanged(int value);
     void setRevertedValues(const MonitorInfo & monitor);
+protected:
+    void mouseReleaseEvent(QMouseEvent *event) override;
 private:
     MonitorInfo mMonitor;
     Ui::OutputWidget *ui;

@@ -63,6 +63,9 @@
           <height>48</height>
          </size>
         </property>
+        <property name="toolTip">
+         <string>Right click to reset</string>
+        </property>
         <property name="wrapping">
          <bool>false</bool>
         </property>
