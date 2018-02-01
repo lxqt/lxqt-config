@@ -40,15 +40,18 @@ int main(int argn, char* argv[])
             app.tr("Decrease brightness."));
     QCommandLineOption setOption(QStringList() << "s" << "set",
             app.tr("Set brightness from 1 to 100."), "brightness");
+    QCommandLineOption resetGammaOption(QStringList() << "r" << "reset",
+            app.tr("Reset gamma to default value."));
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(increaseOption);
     parser.addOption(decreaseOption);
     parser.addOption(setOption);
+    parser.addOption(resetGammaOption);
     parser.addOption(helpOption);
     parser.addVersionOption();
 
     parser.process(app);
-    if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) )
+    if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) || parser.isSet(resetGammaOption) )
     {
         XRandrBrightness *brightness = new XRandrBrightness();
         const QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
@@ -58,8 +61,16 @@ int main(int argn, char* argv[])
         brightness_value = qMin( qMax(brightness_value, 0.0), 100.0 ) / 100.0;
         if(!parser.value(setOption).isEmpty())
             sign = 0.0;
+
         for(MonitorInfo monitor : monitors)
         {
+            if(parser.isSet(resetGammaOption))
+            {
+                monitor.setBrightness(1.0);
+                monitorsChanged.append(monitor);
+                continue;
+            }
+
             if(monitor.isBacklightSupported() )
             {
                 long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
