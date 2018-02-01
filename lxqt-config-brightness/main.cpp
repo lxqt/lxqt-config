@@ -36,13 +36,10 @@ int main(int argn, char* argv[])
     app.setApplicationVersion(VERINFO);
     QCommandLineOption increaseOption(QStringList() << "i" << "icrease",
             app.tr("Increase brightness."));
-    parser.addOption(increaseOption);
     QCommandLineOption decreaseOption(QStringList() << "d" << "decrease",
             app.tr("Decrease brightness."));
-    parser.addOption(decreaseOption);
     QCommandLineOption setOption(QStringList() << "s" << "set",
             app.tr("Set brightness from 1 to 100."), "brightness");
-    parser.addOption(setOption);
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(increaseOption);
     parser.addOption(decreaseOption);
