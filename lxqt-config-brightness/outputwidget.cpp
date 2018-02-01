@@ -41,6 +41,14 @@ OutputWidget::OutputWidget(MonitorInfo monitor, QWidget *parent):QWidget(parent)
     connect(ui->brightnessSlider, SIGNAL(valueChanged(int)), this, SLOT(brightnessChanged(int)));
 }
 
+void OutputWidget::mouseReleaseEvent(QMouseEvent *event)
+{
+    if ( event->button() == Qt::RightButton && ui->brightnessSlider->underMouse() )
+    {
+        ui->brightnessSlider->setValue(100);
+    }
+}
+
 void OutputWidget::backlightChanged(int value)
 {
     mMonitor.setBacklight(value);
