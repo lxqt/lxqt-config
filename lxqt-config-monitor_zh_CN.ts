@@ -260,7 +260,7 @@
         <translation>上下反转</translation>
     </message>
     <message>
-        <location filename="../../../monitorwidget.cpp" line="254"/>
+        <location filename="../../../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
         <translation></translation>
     </message>
