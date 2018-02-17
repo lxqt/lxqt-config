@@ -40,5 +40,10 @@
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Wyjście:&lt;/b&gt;</translation>
     </message>
+    <message>
+        <location filename="../../../outputwidget.ui" line="67"/>
+        <source>Right click to reset</source>
+        <translation>Naciśnij prawym przyciskiem myszy aby przywrócić</translation>
+    </message>
 </context>
 </TS>

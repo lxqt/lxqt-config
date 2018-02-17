@@ -37,5 +37,10 @@
         <translatorcomment>no idea where this appears</translatorcomment>
         <translation type="unfinished">&lt;b&gt;&lt;/b</translation>
     </message>
+    <message>
+        <location filename="../../../outputwidget.ui" line="67"/>
+        <source>Right click to reset</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

@@ -36,5 +36,10 @@
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Keluaran:&lt;/b&gt;</translation>
     </message>
+    <message>
+        <location filename="../../../outputwidget.ui" line="67"/>
+        <source>Right click to reset</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
