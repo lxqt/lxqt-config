@@ -14,6 +14,8 @@ set(UI_FILES
     localeconfig.ui
 )
 
+qt5_wrap_cpp(COMBO_HEADER combobox.h)
+
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
@@ -43,6 +45,7 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 add_executable(${PROJECT_NAME}
     ${CPP_FILES}
+    ${COMBO_HEADER}
     ${RESOURCES}
     ${QRC_SOURCES}
     ${QM_FILES}
