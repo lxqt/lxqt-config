@@ -82,7 +82,13 @@ LocaleConfig::~LocaleConfig()
 
 bool countryLessThan(const QLocale & c1, const QLocale & c2)
 {
-    return QString::localeAwareCompare(c1.nativeCountryName(), c2.nativeCountryName()) < 0;
+    // get the strings as in addLocaleToCombo() -> clabel
+    return QString::localeAwareCompare(!c1.nativeCountryName().isEmpty()
+                                           ? c1.nativeCountryName()
+                                           : c1.countryToString(c1.country()),
+                                       !c2.nativeCountryName().isEmpty()
+                                           ? c2.nativeCountryName()
+                                           : c2.countryToString(c2.country())) < 0;
 }
 
 void LocaleConfig::load()
