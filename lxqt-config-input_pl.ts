@@ -58,7 +58,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Zacznij pisać w okienku, aby przetestować ustawienia swojej klawiatury</translation>
+        <translation>Użyj poniższego pola, aby przetestować ustawienia swojej klawiatury</translation>
     </message>
     <message>
         <location filename="../../../keyboardconfig.ui" line="150"/>
@@ -102,12 +102,12 @@
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="77"/>
         <source>up</source>
-        <translation>do góry</translation>
+        <translation>Przenieś w górę</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="84"/>
         <source>down</source>
-        <translation>w dół</translation>
+        <translation>Przenieś w dół</translation>
     </message>
     <message>
         <location filename="../../../keyboardlayoutconfig.ui" line="108"/>
@@ -277,7 +277,7 @@ klawiatury</translation>
     <message>
         <location filename="../../../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Przwijanie kółkiem (linie):</translation>
+        <translation>Przewijanie kółkiem (linie):</translation>
     </message>
     <message>
         <location filename="../../../mouseconfig.ui" line="160"/>
