@@ -28,6 +28,14 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     
     mBrightness = new XRandrBrightness();
     mMonitors = mBrightness->getMonitorsInfo();
+    mBacklight = new LXQt::Backlight(this);
+    
+    ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable());
+    if(mBacklight->isBacklightAvailable()) {
+        ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
+        ui->backlightSlider->setValue(mLastBacklightValue = mBacklight->getBacklight());
+        connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
+    }
 
     for(const MonitorInfo &monitor: qAsConst(mMonitors))
     {
@@ -42,6 +50,12 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mConfirmRequestTimer.setInterval(1000);
     connect(&mConfirmRequestTimer, &QTimer::timeout, this, &BrightnessSettings::requestConfirmation);
     
+}
+
+void BrightnessSettings::setBacklight(int value)
+{
+    mBacklight->setBacklight(value);
+    mConfirmRequestTimer.start();
 }
 
 void BrightnessSettings::monitorSettingsChanged(MonitorInfo monitor)
@@ -90,10 +104,18 @@ void BrightnessSettings::requestConfirmation()
     if (QMessageBox::Yes == msg.exec())
     {
         // re-read current values
+        if(mBacklight->isBacklightAvailable()) 
+            mLastBacklightValue = mBacklight->getBacklight();
+        
         mMonitors = mBrightness->getMonitorsInfo();
     } else
     {
         // revert the changes
+        if(mBacklight->isBacklightAvailable()) {
+            mBacklight->setBacklight(mLastBacklightValue);
+            ui->backlightSlider->setValue(mLastBacklightValue);
+        }
+        
         mBrightness->setMonitorsSettings(mMonitors);
         for (const auto & monitor : qAsConst(mMonitors))
             emit monitorReverted(monitor);
