@@ -33,6 +33,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable());
     if(mBacklight->isBacklightAvailable()) {
         ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
+        ui->backlightSlider->setMinimum((float)(mBacklight->getMaxBacklight())*0.02);
         ui->backlightSlider->setValue(mLastBacklightValue = mBacklight->getBacklight());
         connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
     }
@@ -112,8 +113,10 @@ void BrightnessSettings::requestConfirmation()
     {
         // revert the changes
         if(mBacklight->isBacklightAvailable()) {
+            disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
             mBacklight->setBacklight(mLastBacklightValue);
             ui->backlightSlider->setValue(mLastBacklightValue);
+            connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
         }
         
         mBrightness->setMonitorsSettings(mMonitors);
