@@ -30,7 +30,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mMonitors = mBrightness->getMonitorsInfo();
     mBacklight = new LXQt::Backlight(this);
     
-    ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable());
+    ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     if(mBacklight->isBacklightAvailable()) {
         ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
         ui->backlightSlider->setMinimum((float)(mBacklight->getMaxBacklight())*0.02);
