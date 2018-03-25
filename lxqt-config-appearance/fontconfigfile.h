@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
- * LXQt project: http://lxde.org/
+ * LXQt project: http://lxqt.org/
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
