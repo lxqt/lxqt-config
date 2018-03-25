@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://lxde.org/
+ * http://lxqt.org/
  *
  * Copyright: 2014 LXQt team
  * Authors:

@@ -265,7 +265,7 @@ void LXQtConfig::MainWindow::activateItem()
  * isn't stolen from our window. New process is not spawned until the
  * (non-autorepeated) KeyRelease is delivered.
  *
- * ref https://github.com/lxde/lxqt/issues/965
+ * ref https://github.com/lxqt/lxqt/issues/965
  */
 bool LXQtConfig::MainWindow::eventFilter(QObject * watched, QEvent * event)
 {
