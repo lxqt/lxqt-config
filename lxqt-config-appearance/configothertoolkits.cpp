@@ -30,6 +30,7 @@
 #include <QProcess>
 #include <QMetaEnum>
 #include <QToolBar>
+#include <QDir>
 
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
@@ -89,8 +90,6 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
     
     QFile file(path);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        #include <stdio.h>
-        printf("No se ha podido abrir: %s\n", path.toLocal8Bit().data());
         return;
     }
     QTextStream out(&file);
@@ -102,12 +101,27 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
     file.close();
 }
 
+
 void ConfigOtherToolKits::updateConfigFromSettings()
 {
     mSettings->beginGroup(QLatin1String("Qt"));
     mConfig.styleTheme = mSettings->value("style").toString();
     mConfig.fontName = mSettings->value("font").toString();
     mSettings->endGroup();
+    {
+        // Find Gtk theme
+        QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+        for(QString dataPath: dataPaths) {
+            QDir themesPath(dataPath + "/themes");
+            QStringList themes = themesPath.entryList(QDir::Dirs);
+            for(QString theme: themes) {
+                if(mConfig.styleTheme.toLower() == theme.toLower()) {
+                    mConfig.styleTheme = theme;
+                    break;
+                }
+            }
+        }
+    }
     mConfig.iconTheme = mSettings->value("icon_theme").toString();
     {
         // Tool button style
