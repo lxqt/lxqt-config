@@ -151,5 +151,7 @@ void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
 
         m_settings->setValue("icon_theme",  theme);
         m_settings->sync();
+        
+        emit updateSettings();
     }
 }

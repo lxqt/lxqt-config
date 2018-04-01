@@ -51,6 +51,9 @@ public:
 public Q_SLOTS:
     void initControls();
 
+signals:
+    void updateSettings();
+
 private Q_SLOTS:
     void updateQtFont();
     void antialiasToggled(bool toggled);

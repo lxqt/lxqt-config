@@ -4,9 +4,7 @@
  * LXQt - a lightweight, Qt based, desktop toolset
  * https://lxqt.org
  *
- * Copyright: 2010-2011 Razor team
- * Authors:
- *   Petr Vanek <petr@scribus.info>
+ * Copyright: 2018 LXQt team
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -25,37 +23,32 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef CONFIGOTHERTOOLKITS_H
+#define CONFIGOTHERTOOLKITS_H
 
-#include "ui_iconthemeconfig.h"
-#include "iconthemeinfo.h"
+#include <QWidget>
+#include <LXQt/Settings>
 
-namespace LXQt {
-class Settings;
-}
-
-
-class IconThemeConfig : public QWidget, public Ui::IconThemeConfig
+class ConfigOtherToolKits : public QObject
 {
     Q_OBJECT
 
 public:
-    IconThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
-    ~IconThemeConfig();
-
-private:
-    LXQt::Settings *m_settings;
-    void initIconsThemes();
+    ConfigOtherToolKits(LXQt::Settings *settings, QObject *parent = 0);
 
 public slots:
-    void initControls();
+    void setConfig();
+    
+private:
+    struct Config {
+        QString iconTheme;
+        QString styleTheme;
+        QString fontName;
+    } mConfig;
+    void writeConfig(QString path, const char *configString);
+    void updateConfigFromSettings();
 
-signals:
-    void updateSettings();
-
-private slots:
-    void iconThemeSelected(QTreeWidgetItem *item, int column);
+    LXQt::Settings *mSettings;
 };
 
-#endif
+#endif // CONFIGOTHERTOOLKITS_H

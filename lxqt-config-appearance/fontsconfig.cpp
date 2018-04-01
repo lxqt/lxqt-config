@@ -187,6 +187,8 @@ void FontsConfig::updateQtFont()
     mQtSettings->setValue("font", font.toString());
     mQtSettings->endGroup();
     mQtSettings->sync();
+    
+    emit updateSettings();
 
 #ifdef Q_WS_X11
     qt_x11_apply_settings_in_all_apps();

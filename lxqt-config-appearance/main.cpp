@@ -34,6 +34,7 @@
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
 #include "fontsconfig.h"
+#include "configothertoolkits.h"
 
 #include "../liblxqt-config-cursor/selectwnd.h"
 
@@ -57,15 +58,19 @@ int main (int argc, char **argv)
     LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
 
     app.setActivationWindow(dialog);
+    
+    ConfigOtherToolKits *configOtherToolKits = new ConfigOtherToolKits(settings, dialog);
 
     QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
     StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), stylePage, SLOT(initControls()));
+    QObject::connect(stylePage, SIGNAL(updateSettings()), configOtherToolKits, SLOT(setConfig()));
 
     IconThemeConfig* iconPage = new IconThemeConfig(settings, dialog);
     dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), iconPage, SLOT(initControls()));
+    QObject::connect(iconPage, SIGNAL(updateSettings()), configOtherToolKits, SLOT(setConfig()));
 
     LXQtThemeConfig* themePage = new LXQtThemeConfig(settings, dialog);
     dialog->addPage(themePage, QObject::tr("LXQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
@@ -74,6 +79,7 @@ int main (int argc, char **argv)
     FontsConfig* fontsPage = new FontsConfig(settings, &qtSettings, dialog);
     dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << "preferences-desktop-font" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), fontsPage, SLOT(initControls()));
+    QObject::connect(fontsPage, SIGNAL(updateSettings()), configOtherToolKits, SLOT(setConfig()));
 
     SelectWnd* cursorPage = new SelectWnd(sessionSettings, dialog);
     cursorPage->setCurrent();
