@@ -28,12 +28,17 @@
 #include <QTextStream>
 #include <QStandardPaths>
 #include <QProcess>
+#include <QMetaEnum>
+#include <QToolBar>
 
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
 gtk-theme-name = "%1"
 gtk-icon-theme-name = "%2"
 gtk-font-name = "%3"
+gtk-button-images = %4
+gtk-menu-images = %4
+gtk-toolbar-style = %5
 )GTK2_CONFIG";
 
 static const char *GTK3_CONFIG = R"GTK3_CONFIG(
@@ -42,6 +47,9 @@ static const char *GTK3_CONFIG = R"GTK3_CONFIG(
 gtk-theme-name = %1
 gtk-icon-theme-name = %2
 gtk-font-name = %3
+gtk-menu-images = %4
+gtk-button-images = %4
+gtk-toolbar-style = %5
 )GTK3_CONFIG";
 
 static const char *XSETTINGS_CONFIG = R"XSETTINGS_CONFIG(
@@ -49,6 +57,9 @@ static const char *XSETTINGS_CONFIG = R"XSETTINGS_CONFIG(
 Net/IconThemeName "%2"
 Net/ThemeName "%1"
 Gtk/FontName "%3"
+Gtk/MenuImages %4
+Gtk/ButtonImages %4
+Gtk/ToolbarStyle "%5"
 )XSETTINGS_CONFIG";
 
 ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, QObject *parent) : QObject(parent)
@@ -83,7 +94,10 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
         return;
     }
     QTextStream out(&file);
-    out << QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme, mConfig.fontName);
+    out << QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
+        mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
+        mConfig.toolButtonStyle 
+        );
     out.flush();
     file.close();
 }
@@ -95,4 +109,27 @@ void ConfigOtherToolKits::updateConfigFromSettings()
     mConfig.fontName = mSettings->value("font").toString();
     mSettings->endGroup();
     mConfig.iconTheme = mSettings->value("icon_theme").toString();
+    {
+        // Tool button style
+        QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
+        // convert toolbar style name to value
+        QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
+        int val = me.keyToValue(tb_style.constData());
+        mConfig.buttonStyle = 1;
+        switch(val) {
+            case Qt::ToolButtonIconOnly:
+                mConfig.toolButtonStyle = "GTK_TOOLBAR_ICONS";
+                break;
+            case Qt::ToolButtonTextOnly:
+                mConfig.toolButtonStyle = "GTK_TOOLBAR_TEXT";
+                mConfig.buttonStyle = 0;
+                break;
+            case Qt::ToolButtonTextUnderIcon:
+                mConfig.toolButtonStyle = "GTK_TOOLBAR_BOTH";
+                break;
+            default:
+                mConfig.toolButtonStyle = "GTK_TOOLBAR_BOTH_HORIZ";
+        }
+    }
+    
 }

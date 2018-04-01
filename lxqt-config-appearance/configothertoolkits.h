@@ -44,6 +44,8 @@ private:
         QString iconTheme;
         QString styleTheme;
         QString fontName;
+        QString toolButtonStyle;
+        int buttonStyle;
     } mConfig;
     void writeConfig(QString path, const char *configString);
     void updateConfigFromSettings();

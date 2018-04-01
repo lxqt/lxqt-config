@@ -134,6 +134,7 @@ void StyleConfig::toolButtonStyleSelected(int index)
     {
         mSettings->setValue("tool_button_style", str);
         mSettings->sync();
+        emit updateSettings();
     }
 }
 
