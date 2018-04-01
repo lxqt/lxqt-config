@@ -15,6 +15,7 @@ set(MOC_FILES
     fontsconfig.h
     styleconfig.h
     fontconfigfile.h
+    configothertoolkits.h
 )
 
 set(CPP_FILES
@@ -25,6 +26,7 @@ set(CPP_FILES
     fontsconfig.cpp
     styleconfig.cpp
     fontconfigfile.cpp
+    configothertoolkits.cpp
 )
 
 set(UI_FILES

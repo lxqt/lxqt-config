@@ -116,6 +116,8 @@ void StyleConfig::styleSelected(QTreeWidgetItem* item, int column)
     mQtSettings->endGroup();
     mQtSettings->sync();
 
+    emit updateSettings();
+    
 #ifdef Q_WS_X11
     qt_x11_apply_settings_in_all_apps();
 #endif
@@ -131,7 +133,7 @@ void StyleConfig::toolButtonStyleSelected(int index)
     if(str)
     {
         mSettings->setValue("tool_button_style", str);
-	mSettings->sync();
+        mSettings->sync();
     }
 }
 

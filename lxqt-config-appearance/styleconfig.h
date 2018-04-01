@@ -49,6 +49,9 @@ public:
 public slots:
     void initControls();
 
+signals:
+    void updateSettings();
+
 private slots:
     void styleSelected(QTreeWidgetItem* item, int column);
     void toolButtonStyleSelected(int index);

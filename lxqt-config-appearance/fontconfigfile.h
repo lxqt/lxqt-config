@@ -64,6 +64,7 @@ public:
     }
     void setAutohint(bool value);
 
+
 private Q_SLOTS:
     void save();
 
