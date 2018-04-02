@@ -31,6 +31,7 @@
 #include <QMetaEnum>
 #include <QToolBar>
 #include <QDir>
+#include <QFont>
 
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
@@ -47,6 +48,7 @@ static const char *GTK3_CONFIG = R"GTK3_CONFIG(
 [Settings]
 gtk-theme-name = %1
 gtk-icon-theme-name = %2
+# GTK3 ignores bold or italic attributes.
 gtk-font-name = %3
 gtk-menu-images = %4
 gtk-button-images = %4
@@ -71,21 +73,35 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, QObject *pare
 void ConfigOtherToolKits::setConfig()
 {
     updateConfigFromSettings();
-    writeConfig("~/.gtkrc-2.0", GTK2_CONFIG);
+    writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
     writeConfig("$XDG_CONFIG_HOME/gtk-3.0/settings.ini", GTK3_CONFIG);
+    writeConfig("$XDG_CONFIG_HOME/gtk-4.0/settings.ini", GTK3_CONFIG);
     writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
     // Reload settings. xsettingsd must be installed.
     QProcess::startDetached("xsettingsd");
+}
+
+static QString get_environment_var(const char *envvar, const char *defaultValue)
+{
+    QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+    QString mDirPath = QString::fromLocal8Bit(qgetenv(envvar));
+    if(mDirPath.isEmpty())
+        mDirPath = homeDir + defaultValue;
+    else {
+        for(QString path : mDirPath.split(":") ) {
+            mDirPath = path;
+            break;
+        }
+    }
+    return mDirPath;
 }
 
 void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 {
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     
-    QString mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
-    if(mDirPath.isEmpty())
-        mDirPath = homeDir + "/.config";
-    path.replace("$XDG_CONFIG_HOME", mDirPath);
+    path.replace("$XDG_CONFIG_HOME", get_environment_var("XDG_CONFIG_HOME", "/.config"));
+    path.replace("$GTK2_RC_FILES",   get_environment_var("GTK2_RC_FILES", "/.gtkrc-2.0"));
     path.replace("~", homeDir);
     
     QFile file(path);
@@ -101,12 +117,21 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
     file.close();
 }
 
-
 void ConfigOtherToolKits::updateConfigFromSettings()
 {
     mSettings->beginGroup(QLatin1String("Qt"));
     mConfig.styleTheme = mSettings->value("style").toString();
-    mConfig.fontName = mSettings->value("font").toString();
+    QFont font;
+    font.fromString(mSettings->value("font").toString());
+    // Font name from: https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string
+    // FAMILY-LIST [SIZE]", where FAMILY-LIST is a comma separated list of families optionally terminated by a comma, 
+    // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and 
+    // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size. 
+    mConfig.fontName = QString("%1 %2 %3 %4")
+        .arg(font.family())                                 //%1
+        .arg(font.style()==QFont::StyleNormal?"":"Italic")  //%2
+        .arg(font.weight()==QFont::Normal?"":"Bold")        //%3
+        .arg(font.pointSize());                             //%4
     mSettings->endGroup();
     {
         // Find Gtk theme
