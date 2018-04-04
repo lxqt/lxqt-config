@@ -31,6 +31,7 @@
 #include <QMetaEnum>
 #include <QToolBar>
 #include <QDir>
+#include <QFileInfo>
 #include <QFont>
 
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
@@ -73,13 +74,33 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, QObject *pare
 void ConfigOtherToolKits::setConfig()
 {
     updateConfigFromSettings();
-    writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
-    writeConfig("$XDG_CONFIG_HOME/gtk-3.0/settings.ini", GTK3_CONFIG);
-    writeConfig("$XDG_CONFIG_HOME/gtk-4.0/settings.ini", GTK3_CONFIG);
-    writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
-    // Reload settings. xsettingsd must be installed.
-    QProcess::startDetached("xsettingsd");
+    if(mConfig.useGlobalTheme) {
+        writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
+        writeConfig("$XDG_CONFIG_HOME/gtk-3.0/settings.ini", GTK3_CONFIG);
+        writeConfig("$XDG_CONFIG_HOME/gtk-4.0/settings.ini", GTK3_CONFIG);
+        writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
+        // Reload settings. xsettingsd must be installed.
+        //QProcess::startDetached("xsettingsd");
+    } else {
+        setGTKConfig("2.0");
+        setGTKConfig("3.0");
+    }
 }
+
+void ConfigOtherToolKits::setGTKConfig(QString version)
+{
+    updateConfigFromSettings();
+    mSettings->beginGroup(QLatin1String("Themes"));
+    if(version == "2.0") {
+        mConfig.styleTheme = mSettings->value("GTK2ThemeName").toString();
+        writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
+    } else {
+        mConfig.styleTheme = mSettings->value("GTK3ThemeName").toString();
+        writeConfig( QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version), GTK3_CONFIG);
+    }
+    mSettings->endGroup();
+}
+
 
 static QString get_environment_var(const char *envvar, const char *defaultValue)
 {
@@ -119,15 +140,18 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 
 void ConfigOtherToolKits::updateConfigFromSettings()
 {
+    mSettings->beginGroup(QLatin1String("Themes"));
+    mConfig.styleTheme = mSettings->value("GlobalThemeName").toString();
+    mConfig.useGlobalTheme = mSettings->value("GlobalThemeEnable").toBool();
+    mSettings->endGroup();
     mSettings->beginGroup(QLatin1String("Qt"));
-    mConfig.styleTheme = mSettings->value("style").toString();
     QFont font;
     font.fromString(mSettings->value("font").toString());
     // Font name from: https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string
     // FAMILY-LIST [SIZE]", where FAMILY-LIST is a comma separated list of families optionally terminated by a comma, 
     // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and 
     // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size. 
-    mConfig.fontName = QString("%1 %2 %3 %4")
+    mConfig.fontName = QString("%1, %2 %3 %4")
         .arg(font.family())                                 //%1
         .arg(font.style()==QFont::StyleNormal?"":"Italic")  //%2
         .arg(font.weight()==QFont::Normal?"":"Bold")        //%3
@@ -170,5 +194,23 @@ void ConfigOtherToolKits::updateConfigFromSettings()
                 mConfig.toolButtonStyle = "GTK_TOOLBAR_BOTH_HORIZ";
         }
     }
-    
 }
+
+QStringList ConfigOtherToolKits::getGTKThemes(QString version)
+{
+    QStringList themeList;
+    QString configFile = version=="2.0" ? "gtk-2.0/gtkrc" : QString("gtk-%1/gtk.css").arg(version);
+
+    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for(QString dataPath : dataPaths) {
+        QDir themesPath(dataPath + "/themes");
+        QStringList themes = themesPath.entryList(QDir::Dirs);
+        for(QString theme : themes) {
+            QFileInfo themePath(QString("%1/themes/%2/%3").arg(dataPath, theme, configFile));
+            if(themePath.exists())
+                themeList.append(theme);
+        }
+    }
+    return themeList;
+}
+
