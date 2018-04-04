@@ -30,6 +30,7 @@
 
 #include <QWidget>
 #include <LXQt/Settings>
+#include "configothertoolkits.h"
 
 class QTreeWidgetItem;
 class QSettings;
@@ -53,7 +54,13 @@ signals:
     void updateSettings();
 
 private slots:
-    void styleSelected(QTreeWidgetItem* item, int column);
+    void globalThemeSelected(const QString &themeName);
+    void gtk2StyleSelected(const QString &themeName);
+    void gtk3StyleSelected(const QString &themeName);
+    void qtStyleSelected(const QString &themeName);
+    
+    void showAdvancedOptions(bool on);
+    
     void toolButtonStyleSelected(int index);
     void singleClickActivateToggled(bool toggled);
 
@@ -61,6 +68,7 @@ private:
     Ui::StyleConfig *ui;
     QSettings *mQtSettings;
     LXQt::Settings *mSettings;
+    ConfigOtherToolKits *mConfigOtherToolKits;
 };
 
 #endif // STYLECONFIG_H
