@@ -53,8 +53,7 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
     initControls();
     
     connect(ui->globalThemeComboBox, SIGNAL(activated(const QString &)), this, SLOT(globalThemeSelected(const QString &)));
-    connect(ui->gtk2ComboBox, SIGNAL(activated(const QString &)), this, SLOT(gtk2StyleSelected(const QString &)));
-    connect(ui->gtk3ComboBox, SIGNAL(activated(const QString &)), this, SLOT(gtk3StyleSelected(const QString &)));
+    connect(ui->gtkComboBox, SIGNAL(activated(const QString &)), this, SLOT(gtkStyleSelected(const QString &)));
     connect(ui->qtComboBox, SIGNAL(activated(const QString &)), this, SLOT(qtStyleSelected(const QString &)));
     
     connect(ui->advancedOptionsGroupBox, SIGNAL(toggled(bool)), this, SLOT(showAdvancedOptions(bool)));
@@ -117,12 +116,10 @@ void StyleConfig::initControls()
     ui->qtComboBox->addItems(qtThemes);
     
     // Fill GTK themes
-    ui->gtk2ComboBox->addItems(gtk2Themes);
-    ui->gtk3ComboBox->addItems(gtk3Themes);
+    ui->gtkComboBox->addItems(gtk3Themes);
     
     mSettings->beginGroup(QLatin1String("Themes"));
-    ui->gtk2ComboBox->setCurrentText(mSettings->value("GTK2ThemeName").toString());
-    ui->gtk3ComboBox->setCurrentText(mSettings->value("GTK3ThemeName").toString());
+    ui->gtkComboBox->setCurrentText(mSettings->value("GTK3ThemeName").toString());
     ui->qtComboBox->setCurrentText(mSettings->value("QtThemeName").toString());
     mSettings->endGroup();
 
@@ -181,22 +178,16 @@ void StyleConfig::qtStyleSelected(const QString &themeName)
     mSettings->sync();
 }
 
-void StyleConfig::gtk2StyleSelected(const QString &themeName)
-{
-    mSettings->beginGroup(QLatin1String("Themes"));
-    mSettings->setValue("GTK2ThemeName", themeName);
-    mSettings->endGroup();
-    mSettings->sync();
-    mConfigOtherToolKits->setGTKConfig("2.0");
-}
-
-void StyleConfig::gtk3StyleSelected(const QString &themeName)
+void StyleConfig::gtkStyleSelected(const QString &themeName)
 {
     mSettings->beginGroup(QLatin1String("Themes"));
     mSettings->setValue("GTK3ThemeName", themeName);
+    mSettings->setValue("GTK2ThemeName", themeName);
     mSettings->endGroup();
     mSettings->sync();
-    mConfigOtherToolKits->setGTKConfig("3.0");
+    //mConfigOtherToolKits->setGTKConfig("2.0");
+    //mConfigOtherToolKits->setGTKConfig("3.0");
+    mConfigOtherToolKits->setConfig();
 }
 
 void StyleConfig::showAdvancedOptions(bool on)
@@ -220,8 +211,7 @@ void StyleConfig::showAdvancedOptions(bool on)
         QString gtk3ThemeName = mSettings->value("GTK3ThemeName").toString();
         QString qtThemeName = mSettings->value("QtThemeName").toString();
         mSettings->endGroup();
-        gtk2StyleSelected(gtk2ThemeName);
-        gtk3StyleSelected(gtk3ThemeName);
+        gtkStyleSelected(gtk3ThemeName);
         qtStyleSelected(qtThemeName);
     }
 }

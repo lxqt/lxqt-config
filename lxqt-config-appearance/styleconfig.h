@@ -55,8 +55,7 @@ signals:
 
 private slots:
     void globalThemeSelected(const QString &themeName);
-    void gtk2StyleSelected(const QString &themeName);
-    void gtk3StyleSelected(const QString &themeName);
+    void gtkStyleSelected(const QString &themeName);
     void qtStyleSelected(const QString &themeName);
     
     void showAdvancedOptions(bool on);

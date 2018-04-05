@@ -73,18 +73,18 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, QObject *pare
 
 void ConfigOtherToolKits::setConfig()
 {
-    updateConfigFromSettings();
     if(mConfig.useGlobalTheme) {
+        updateConfigFromSettings();
         writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
         writeConfig("$XDG_CONFIG_HOME/gtk-3.0/settings.ini", GTK3_CONFIG);
         writeConfig("$XDG_CONFIG_HOME/gtk-4.0/settings.ini", GTK3_CONFIG);
-        writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
-        // Reload settings. xsettingsd must be installed.
-        //QProcess::startDetached("xsettingsd");
     } else {
         setGTKConfig("2.0");
         setGTKConfig("3.0");
     }
+    writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
+    // Reload settings. xsettingsd must be installed.
+    QProcess::startDetached("xsettingsd");
 }
 
 void ConfigOtherToolKits::setGTKConfig(QString version)
@@ -151,10 +151,10 @@ void ConfigOtherToolKits::updateConfigFromSettings()
     // FAMILY-LIST [SIZE]", where FAMILY-LIST is a comma separated list of families optionally terminated by a comma, 
     // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and 
     // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size. 
-    mConfig.fontName = QString("%1, %2 %3 %4")
+    mConfig.fontName = QString("%1%2%3 %4")
         .arg(font.family())                                 //%1
-        .arg(font.style()==QFont::StyleNormal?"":"Italic")  //%2
-        .arg(font.weight()==QFont::Normal?"":"Bold")        //%3
+        .arg(font.style()==QFont::StyleNormal?"":" Italic") //%2
+        .arg(font.weight()==QFont::Normal?"":" Bold")       //%3
         .arg(font.pointSize());                             //%4
     mSettings->endGroup();
     {
