@@ -82,10 +82,12 @@ void StyleConfig::initControls()
         if( !globalThemeList.contains(qtTheme) &&  gtk3Themes.contains(qtTheme)  &&  gtk2Themes.contains(qtTheme) )
             globalThemeList.append(qtTheme);
     }
-    // GTK2 and GTK3 themes. Qt style will be set to gtk2.
-    for(QString theme : gtk2Themes) {
-        if( !globalThemeList.contains(theme) &&  gtk3Themes.contains(theme) )
-            globalThemeList.append(theme);
+    if(qtThemes.contains("gtk2")) {
+        // GTK2 and GTK3 themes. Qt style will be set to gtk2.
+        for(QString theme : gtk2Themes) {
+            if( !globalThemeList.contains(theme) &&  gtk3Themes.contains(theme) )
+                globalThemeList.append(theme);
+        }
     }
     
     ui->globalThemeComboBox->addItems( globalThemeList );
