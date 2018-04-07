@@ -57,6 +57,7 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
     connect(ui->qtComboBox, SIGNAL(activated(const QString &)), this, SLOT(qtStyleSelected(const QString &)));
     
     connect(ui->advancedOptionsGroupBox, SIGNAL(toggled(bool)), this, SLOT(showAdvancedOptions(bool)));
+    connect(ui->advancedOptionsGroupBox, SIGNAL(toggled(bool)), this, SLOT(setAdvancedSettings(bool)));
     
     connect(ui->toolButtonStyle, SIGNAL(currentIndexChanged(int)), SLOT(toolButtonStyleSelected(int)));
     connect(ui->singleClickActivate, SIGNAL(toggled(bool)), SLOT(singleClickActivateToggled(bool)));
@@ -93,15 +94,15 @@ void StyleConfig::initControls()
     ui->globalThemeComboBox->addItems( globalThemeList );
     mSettings->beginGroup(QLatin1String("Themes"));
     ui->globalThemeComboBox->setCurrentText(mSettings->value("GlobalThemeName").toString());
-    if(!mSettings->contains("GlobalThemeEnable"))
-        mSettings->setValue("GlobalThemeEnable", true);
-    bool globalThemeEnabled = mSettings->value("GlobalThemeEnable").toBool();
+    if(!mSettings->contains("GlobalThemeEnabled"))
+        mSettings->setValue("GlobalThemeEnabled", true);
+    bool GlobalThemeEnabledd = mSettings->value("GlobalThemeEnabled").toBool();
     mSettings->endGroup();
     
-    showAdvancedOptions(!globalThemeEnabled);
-    ui->advancedOptionsGroupBox->setChecked(!globalThemeEnabled);
+    showAdvancedOptions(!GlobalThemeEnabledd);
+    ui->advancedOptionsGroupBox->setChecked(!GlobalThemeEnabledd);
 
-    // read other widget related settings form LXQt settings.
+    // read other widget related settings from LXQt settings.
     QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
     // convert toolbar style name to value
     QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
@@ -121,6 +122,21 @@ void StyleConfig::initControls()
     ui->gtkComboBox->addItems(gtk3Themes);
     
     mSettings->beginGroup(QLatin1String("Themes"));
+    if(! mSettings->contains("GTK3ThemeName")) {
+        // Set default values
+        QString themeName = mConfigOtherToolKits->getGTKThemeFromRCFile("3.0");
+        mSettings->setValue("GTK3ThemeName", themeName);
+        mSettings->setValue("GTK2ThemeName", themeName);
+    }
+    if(! mSettings->contains("QtThemeName")) {
+        // Set default values
+        mSettings->endGroup();
+        mQtSettings->beginGroup(QLatin1String("Qt"));
+        QString styleName = mQtSettings->value("style").toString();
+        mQtSettings->endGroup();
+        mSettings->beginGroup(QLatin1String("Themes"));
+        mSettings->setValue("QtThemeName", styleName);
+    }
     ui->gtkComboBox->setCurrentText(mSettings->value("GTK3ThemeName").toString());
     ui->qtComboBox->setCurrentText(mSettings->value("QtThemeName").toString());
     mSettings->endGroup();
@@ -187,8 +203,7 @@ void StyleConfig::gtkStyleSelected(const QString &themeName)
     mSettings->setValue("GTK2ThemeName", themeName);
     mSettings->endGroup();
     mSettings->sync();
-    //mConfigOtherToolKits->setGTKConfig("2.0");
-    //mConfigOtherToolKits->setGTKConfig("3.0");
+
     mConfigOtherToolKits->setConfig();
 }
 
@@ -196,8 +211,12 @@ void StyleConfig::showAdvancedOptions(bool on)
 {
     ui->globalThemeLabel->setEnabled(!on);
     ui->globalThemeComboBox->setEnabled(!on);
+}
+
+void StyleConfig::setAdvancedSettings(bool on)
+{
     mSettings->beginGroup(QLatin1String("Themes"));
-    mSettings->setValue("GlobalThemeEnable", !on);
+    mSettings->setValue("GlobalThemeEnabled", !on);
     mSettings->endGroup();
     mSettings->sync();
     if(!on) {
