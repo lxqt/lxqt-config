@@ -71,37 +71,6 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, QObject *pare
     mSettings = settings;
 }
 
-void ConfigOtherToolKits::setConfig()
-{
-    if(mConfig.useGlobalTheme) {
-        updateConfigFromSettings();
-        writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
-        writeConfig("$XDG_CONFIG_HOME/gtk-3.0/settings.ini", GTK3_CONFIG);
-        writeConfig("$XDG_CONFIG_HOME/gtk-4.0/settings.ini", GTK3_CONFIG);
-    } else {
-        setGTKConfig("2.0");
-        setGTKConfig("3.0");
-    }
-    writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
-    // Reload settings. xsettingsd must be installed.
-    QProcess::startDetached("xsettingsd");
-}
-
-void ConfigOtherToolKits::setGTKConfig(QString version)
-{
-    updateConfigFromSettings();
-    mSettings->beginGroup(QLatin1String("Themes"));
-    if(version == "2.0") {
-        mConfig.styleTheme = mSettings->value("GTK2ThemeName").toString();
-        writeConfig("$GTK2_RC_FILES", GTK2_CONFIG); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
-    } else {
-        mConfig.styleTheme = mSettings->value("GTK3ThemeName").toString();
-        writeConfig( QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version), GTK3_CONFIG);
-    }
-    mSettings->endGroup();
-}
-
-
 static QString get_environment_var(const char *envvar, const char *defaultValue)
 {
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
@@ -117,13 +86,169 @@ static QString get_environment_var(const char *envvar, const char *defaultValue)
     return mDirPath;
 }
 
-void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
+static QString _get_config_path(QString path)
 {
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
-    
     path.replace("$XDG_CONFIG_HOME", get_environment_var("XDG_CONFIG_HOME", "/.config"));
-    path.replace("$GTK2_RC_FILES",   get_environment_var("GTK2_RC_FILES", "/.gtkrc-2.0"));
+    path.replace("$GTK2_RC_FILES",   get_environment_var("GTK2_RC_FILES", "/.gtkrc-2.0")); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
     path.replace("~", homeDir);
+    return path;
+}
+
+void ConfigOtherToolKits::setConfig()
+{
+    updateConfigFromSettings();
+    setGTKConfig("2.0");
+    setGTKConfig("3.0");
+    // setGTKConfig("4.0");
+    writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
+    // Reload settings. xsettingsd must be installed.
+    QProcess::startDetached("xsettingsd");
+}
+
+void ConfigOtherToolKits::setGTKConfig(QString version)
+{
+    updateConfigFromSettings();
+    mSettings->beginGroup(QLatin1String("Themes"));
+    if(version == "2.0") {
+        if(! mConfig.useGlobalTheme)
+            mConfig.styleTheme = mSettings->value("GTK2ThemeName").toString();
+        bool rcFileContainsTheme = false;
+        bool rcFileContainsFont = false;
+        bool rcFileContainsIcons = false;
+        bool rcFileContainsMenuImages = false;
+        bool rcFileContainsToolBarStyle = false;
+        QString gtkrcPath = _get_config_path("$GTK2_RC_FILES");
+        QFile file(gtkrcPath);
+        if(! file.exists() )
+            writeConfig(gtkrcPath, GTK2_CONFIG);
+        else {
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+                return;
+             while (!file.atEnd()) {
+                QByteArray line = file.readLine().trimmed();
+                rcFileContainsTheme = rcFileContainsTheme || line.startsWith("gtk-theme-name");
+                rcFileContainsFont = rcFileContainsFont || line.startsWith("gtk-font-name");
+                rcFileContainsIcons = rcFileContainsIcons || line.startsWith("gtk-icon-theme-name");
+                rcFileContainsMenuImages = rcFileContainsMenuImages || line.startsWith("gtk-menu-images");
+                rcFileContainsToolBarStyle = rcFileContainsToolBarStyle || line.startsWith("gtk-toolbar-style");
+            }
+            file.close();
+            QByteArray gtkrc;
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+                return;
+            while (!file.atEnd()) {
+                QByteArray line = file.readLine();
+                QByteArray line_trimmed = line.trimmed();
+                if(line_trimmed.startsWith("gtk-theme-name"))
+                    gtkrc.append("gtk-theme-name = \"%1\"\n");
+                else if(line_trimmed.startsWith("gtk-font-name"))
+                    gtkrc.append("gtk-font-name = \"%3\"\n");
+                else if(line_trimmed.startsWith("gtk-icon-theme-name"))
+                    gtkrc.append("gtk-icon-theme-name = \"%2\"\n");
+                else if(line_trimmed.startsWith("gtk-menu-images"))
+                    rcFileContainsMenuImages = false;
+                else if(line_trimmed.startsWith("gtk-button-images"))
+                    rcFileContainsMenuImages = false;
+                else if(line_trimmed.startsWith("gtk-toolbar-style"))
+                    gtkrc.append("gtk-toolbar-style = %5\n");
+                else
+                    gtkrc.append(line);
+            }
+            file.close();
+            if(! rcFileContainsTheme)
+                gtkrc.append("gtk-theme-name = \"%1\"\n");
+            if(! rcFileContainsFont)
+                gtkrc.append("gtk-font-name = \"%3\"\n");
+            if(! rcFileContainsMenuImages)
+                gtkrc.append("gtk-button-images = %4\ngtk-menu-images = %4\n");
+            if(! rcFileContainsIcons)
+                gtkrc.append("gtk-icon-theme-name = \"%2\"\n");
+            if(! rcFileContainsToolBarStyle)
+                gtkrc.append("gtk-toolbar-style = %5\n");
+            writeConfig(gtkrcPath, gtkrc.data());
+        }
+    } else {
+        if(! mConfig.useGlobalTheme)
+            mConfig.styleTheme = mSettings->value("GTK3ThemeName").toString();
+        bool rcFileContainsTheme = false;
+        bool rcFileContainsFont = false;
+        bool rcFileContainsIcons = false;
+        bool rcFileContainsMenuImages = false;
+        bool rcFileContainsToolBarStyle = false;
+        QString gtkrcPath = _get_config_path(QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
+        QFile file(gtkrcPath);
+        if(! file.exists() )
+            writeConfig(gtkrcPath, GTK3_CONFIG);
+        else {
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+                return;
+            bool settingsFound = false;
+            while (!file.atEnd()) {
+                QByteArray line = file.readLine().trimmed();
+                if(line.startsWith("[Settings]"))
+                    settingsFound = true;
+                else if(line.startsWith("[") && line.endsWith("]"))
+                    settingsFound = false;
+                else if(settingsFound) {
+                    rcFileContainsTheme = rcFileContainsTheme || line.startsWith("gtk-theme-name");
+                    rcFileContainsFont = rcFileContainsFont || line.startsWith("gtk-font-name");
+                    rcFileContainsIcons = rcFileContainsIcons || line.startsWith("gtk-icon-theme-name");
+                    rcFileContainsMenuImages = rcFileContainsMenuImages || line.startsWith("gtk-menu-images");
+                    rcFileContainsToolBarStyle = rcFileContainsToolBarStyle || line.startsWith("gtk-toolbar-style");
+                }
+            }
+            file.close();
+            QByteArray gtkrc;
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+                return;
+            settingsFound = false;
+            while (!file.atEnd()) {
+                QByteArray line = file.readLine();
+                QByteArray line_trimmed = line.trimmed();
+                if(line_trimmed.startsWith("[Settings]")) {
+                    gtkrc.append(line);
+                    settingsFound = true;
+                    if(! rcFileContainsTheme)
+                        gtkrc.append("gtk-theme-name = %1\n");
+                    if(! rcFileContainsFont)
+                        gtkrc.append("gtk-font-name = %3\n");
+                    if(! rcFileContainsMenuImages)
+                        gtkrc.append("gtk-button-images = %4\ngtk-menu-images = %4\n");
+                    if(! rcFileContainsIcons)
+                        gtkrc.append("gtk-icon-theme-name = %2\n");
+                    if(! rcFileContainsToolBarStyle)
+                        gtkrc.append("gtk-toolbar-style = %5\n");
+                }
+                else if(line_trimmed.startsWith("[") && line_trimmed.endsWith("]"))
+                    settingsFound = false;
+                else if(settingsFound) {
+                    if(line_trimmed.startsWith("gtk-theme-name"))
+                        gtkrc.append("gtk-theme-name = %1\n");
+                    else if(line_trimmed.startsWith("gtk-font-name"))
+                        gtkrc.append("gtk-font-name = %3\n");
+                    else if(line_trimmed.startsWith("gtk-icon-theme-name"))
+                        gtkrc.append("gtk-icon-theme-name = %2\n");
+                    else if(line_trimmed.startsWith("gtk-menu-images"))
+                        gtkrc.append("gtk-button-images = %4\ngtk-menu-images = %4\n");
+                    else if(line_trimmed.startsWith("gtk-button-images"))
+                        ; // This line is not included in gtkrc
+                    else if(line_trimmed.startsWith("gtk-toolbar-style"))
+                        gtkrc.append("gtk-toolbar-style = %5\n");
+                }
+                else
+                    gtkrc.append(line);
+            }
+            file.close();
+            writeConfig(gtkrcPath, gtkrc.data());
+        }
+    }
+    mSettings->endGroup();
+}
+
+void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
+{
+    path = _get_config_path(path);
     
     QFile file(path);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -142,7 +267,7 @@ void ConfigOtherToolKits::updateConfigFromSettings()
 {
     mSettings->beginGroup(QLatin1String("Themes"));
     mConfig.styleTheme = mSettings->value("GlobalThemeName").toString();
-    mConfig.useGlobalTheme = mSettings->value("GlobalThemeEnable").toBool();
+    mConfig.useGlobalTheme = mSettings->value("GlobalThemeEnabled").toBool();
     mSettings->endGroup();
     mSettings->beginGroup(QLatin1String("Qt"));
     QFont font;
@@ -212,5 +337,52 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
         }
     }
     return themeList;
+}
+
+QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
+{
+    if(version == "2.0") {
+        QString gtkrcPath = _get_config_path("$GTK2_RC_FILES");
+        QFile file(gtkrcPath);
+        if(file.exists()) {
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+                return QString();
+            while (!file.atEnd()) {
+                QByteArray line = file.readLine().trimmed();
+                if(line.startsWith("gtk-theme-name")) {
+                    QList<QByteArray> parts = line.split('=');
+                    if(parts.size()>=2) {
+                        file.close();
+                        return parts[1].replace('"', "").trimmed(); 
+                    }   
+                }
+            }
+            file.close();
+        }
+    } else {
+        QString gtkrcPath = _get_config_path(QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
+        QFile file(gtkrcPath);
+        if(file.exists()) {
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+                return QString();
+            bool settingsFound = false;
+            while (!file.atEnd()) {
+                QByteArray line = file.readLine().trimmed();
+                if(line.startsWith("[Settings]"))
+                    settingsFound = true;
+                else if(line.startsWith("[") && line.endsWith("]"))
+                    settingsFound = false;
+                else if(settingsFound && line.startsWith("gtk-theme-name")) {
+                    QList<QByteArray> parts = line.split('=');
+                    if(parts.size()>=2) {
+                        file.close();
+                        return parts[1].trimmed();
+                    }   
+                }
+            }
+            file.close();
+        }
+    }
+    return QString();
 }
 

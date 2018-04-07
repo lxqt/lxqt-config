@@ -59,6 +59,7 @@ private slots:
     void qtStyleSelected(const QString &themeName);
     
     void showAdvancedOptions(bool on);
+    void setAdvancedSettings(bool on);
     
     void toolButtonStyleSelected(int index);
     void singleClickActivateToggled(bool toggled);
