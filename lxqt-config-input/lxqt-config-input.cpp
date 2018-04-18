@@ -18,6 +18,7 @@
 
 #include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
+#include <LXQt/ConfigDialogCmdLineOptions>
 #include <LXQt/Settings>
 #include <QCommandLineParser>
 #include "mouseconfig.h"
@@ -30,14 +31,18 @@ int main(int argc, char** argv) {
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QCommandLineParser parser;
+    LXQt::ConfigDialogCmdLineOptions dlgOptions;
     parser.setApplicationDescription(QStringLiteral("LXQt Config Input"));
     const QString VERINFO = QStringLiteral(LXQT_CONFIG_VERSION
                                            "\n\nliblxqt:   " LXQT_VERSION
                                            "\nQt:        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
+
+    dlgOptions.setCommandLine(&parser);
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
+    dlgOptions.process(parser);
 
     QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
     if(configName.isEmpty())
@@ -64,6 +69,10 @@ int main(int argc, char** argv) {
     QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
 
     dlg.setWindowIcon(QIcon::fromTheme("input-keyboard"));
+
+    const QString initialPage = dlgOptions.page();
+    if (!initialPage.isEmpty())
+        dlg.showPage(initialPage);
 
     dlg.exec();
     return 0;
