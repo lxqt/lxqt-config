@@ -145,7 +145,7 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Colorear los iconos según el estilo de la miniaplicación (paleta)</translation>
+        <translation>Colorear los iconos según el estilo de los controles (paleta)</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../../../main.cpp" line="63"/>
         <source>Widget Style</source>
-        <translation>Estilo de las miniaplicaciones</translation>
+        <translation>Estilo de los controles</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="67"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../../../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Estilo de la miniaplicación</translation>
+        <translation>Estilo de los controles</translation>
     </message>
     <message>
         <location filename="../../../styleconfig.ui" line="54"/>
