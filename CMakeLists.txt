@@ -27,6 +27,7 @@ find_package(Qt5X11Extras REQUIRED)
 find_package(Qt5LinguistTools REQUIRED)
 find_package(lxqt REQUIRED)
 
+include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 if(NOT CMAKE_BUILD_TYPE)
