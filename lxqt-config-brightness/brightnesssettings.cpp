@@ -33,7 +33,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     if(mBacklight->isBacklightAvailable()) {
         ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
-        ui->backlightSlider->setMinimum((float)(mBacklight->getMaxBacklight())*0.02);
+        ui->backlightSlider->setMinimum(0);
         ui->backlightSlider->setValue(mLastBacklightValue = mBacklight->getBacklight());
         connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
     }
