@@ -39,12 +39,13 @@ signals:
 public slots:
     void monitorSettingsChanged(MonitorInfo monitor);
     void requestConfirmation();
-    void setBacklight(int value);
+    void setBacklight();
 
 private:
     XRandrBrightness *mBrightness;
     QList<MonitorInfo> mMonitors;
     QTimer mConfirmRequestTimer;
+    QTimer mBacklightTimer;
     Ui::BrightnessSettings *ui;
     LXQt::Backlight *mBacklight;
     int mLastBacklightValue;
