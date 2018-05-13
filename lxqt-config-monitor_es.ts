@@ -26,8 +26,7 @@
     <message>
         <location filename="../../../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translatorcomment>     ❷ Solo el segundo</translatorcomment>
-        <translation></translation>
+        <translation>     ❷ Solo el segundo</translation>
     </message>
 </context>
 <context>
@@ -243,22 +242,22 @@
     <message>
         <location filename="../../../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation>Ninguno</translation>
+        <translation>Ninguna</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="162"/>
         <source>Left</source>
-        <translation>Izquierda</translation>
+        <translation>A la izquierda</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="163"/>
         <source>Right</source>
-        <translation>Derecha</translation>
+        <translation>A la derecha</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation>Invertido</translation>
+        <translation>Invertir</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="255"/>
