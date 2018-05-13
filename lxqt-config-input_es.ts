@@ -69,7 +69,7 @@
     <message>
         <location filename="../../../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Activar el bloqueo numérico al iniciar sesión</translation>
+        <translation>Activar el bloqueo numérico al iniciar la sesión</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="46"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation>Configuración de Teclado y ratón</translation>
+        <translation>Configuración de teclado y ratón</translation>
     </message>
     <message>
         <location filename="../../../lxqt-config-input.cpp" line="51"/>
