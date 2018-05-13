@@ -54,7 +54,7 @@
         <location filename="../../../mimetypeviewer.cpp" line="156"/>
         <location filename="../../../mimetypeviewer.cpp" line="207"/>
         <source>None</source>
-        <translation>Ninguno</translation>
+        <translation>Ninguna</translation>
     </message>
     <message>
         <location filename="../../../mimetypeviewer.cpp" line="203"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../../../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation>Elegir...</translation>
+        <translation>&amp;Elegir...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../../../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation>Elegir...</translation>
+        <translation>&amp;Elegir...</translation>
     </message>
     <message>
         <location filename="../../../mimetypeviewer.ui" line="117"/>
