@@ -46,7 +46,7 @@
     <message>
         <location filename="../../../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation>Negrita-cursiva</translation>
+        <translation>Negrita cursiva</translation>
     </message>
     <message>
         <location filename="../../../fontsconfig.ui" line="94"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../../../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuración de Apariencia de LXQt</translation>
+        <translation>Configuración de apariencia de LXQt</translation>
     </message>
     <message>
         <location filename="../../../iconthemeconfig.ui" line="26"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../../../main.cpp" line="57"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuración de Apariencia de LXQt</translation>
+        <translation>Configuración de apariencia de LXQt</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="63"/>
