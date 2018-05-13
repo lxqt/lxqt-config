@@ -6,7 +6,7 @@
     <message>
         <location filename="../../../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Configuración de LXQt para el Tema del ratón</translation>
+        <translation>Configuración del tema del ratón de LXQt</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.ui" line="20"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../../../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
-        <translation>Error en XCurTheme</translation>
+        <translation>Error de XCurTheme</translation>
     </message>
     <message>
         <location filename="../../../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>¡No puedes eliminar el tema activo!</translation>
+        <translation>¡No puede eliminar el tema activo!</translation>
     </message>
 </context>
 <context>
