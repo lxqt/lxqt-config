@@ -21,12 +21,12 @@
     <message>
         <location filename="../../../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>Hora:</translation>
+        <translation>&amp;Hora:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>Moneda:</translation>
+        <translation>&amp;Moneda:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="170"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../../../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Clasificación y ordenación:</translation>
+        <translation>C&amp;lasificación y ordenación:</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.ui" line="238"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../../../localeconfig.cpp" line="308"/>
         <source>Format Settings Changed</source>
-        <translation>La configuración de formato ha cambiado</translation>
+        <translation>La configuración del formato ha cambiado</translation>
     </message>
     <message>
         <location filename="../../../localeconfig.cpp" line="309"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../../../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>Configuración de LXQT de Configuración regional</translation>
+        <translation>Configuración regional de LXQT</translation>
     </message>
     <message>
         <location filename="../../../main.cpp" line="55"/>
