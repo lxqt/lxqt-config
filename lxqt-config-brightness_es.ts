@@ -6,12 +6,12 @@
     <message>
         <location filename="../../../brightnesssettings.ui" line="14"/>
         <source>Brightness Settings</source>
-        <translation>Configuracion de Brillo y contraste</translation>
+        <translation>Configuracion del brillo</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.ui" line="25"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use arrow keys to change settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración de luz de fondo y brillo:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use las teclas de dirección para ajustar la configuración.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración de la luz de fondo y brillo:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use las teclas de dirección para ajustar la configuración.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../../../brightnesssettings.ui" line="35"/>
