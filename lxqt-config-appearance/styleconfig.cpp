@@ -162,23 +162,14 @@ void StyleConfig::showAdvancedOptions(bool on)
         mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
     bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
     if(on && !controlGTKThemeEnabled) {
-        QString gtk2BackupMessage, gtk3BackupMessage;
-        if( mConfigOtherToolKits->backupGTKSettings("2.0") )
-            gtk2BackupMessage = tr("<p>'%1' has been backed up.</p>").arg(mConfigOtherToolKits->getGTKConfigPath("2.0"));
-        if( mConfigOtherToolKits->backupGTKSettings("3.0") )
-            gtk3BackupMessage = tr("<p>'%1' has been backed up.</p>").arg(mConfigOtherToolKits->getGTKConfigPath("3.0"));
-        
         QMessageBox::warning(this, tr("GTK themes"),
-            gtk2BackupMessage + gtk3BackupMessage +
-            tr("'%1' and '%2' will be overwritten. "
-            "<p>Please, if you have changed them, you should save them.</p>"
+            tr("<p>'%1' and '%2' will be overwritten.</p>"
             "<p>To attempt uniform theming, either select similar style/theme"
             " (if available) across all lists, or select 'gtk2' Qt style (if available) to mimic GTK themes.</p>"
             "<p>Make sure 'xsettingsd' is installed to help GTK applications apply themes on the fly.</p>")
             .arg(mConfigOtherToolKits->getGTKConfigPath("2.0"))
             .arg(mConfigOtherToolKits->getGTKConfigPath("3.0"))
             , QMessageBox::Ok);
-        mConfigOtherToolKits->backupGTKSettings("2.0");
     }
     mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", on);
 }

@@ -160,13 +160,12 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
     updateConfigFromSettings();
     if(!theme.isEmpty())
         mConfig.styleTheme = theme;
-    if(version == "2.0") {
-        QString gtkrcPath = _get_config_path("$GTK2_RC_FILES");
+    backupGTKSettings(version);
+    QString gtkrcPath = getGTKConfigPath(version);
+    if(version == "2.0")
         writeConfig(gtkrcPath, GTK2_CONFIG);
-    } else {
-        QString gtkrcPath = _get_config_path(QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
+    else
         writeConfig(gtkrcPath, GTK3_CONFIG);
-    }
 }
 
 void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
