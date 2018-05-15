@@ -37,10 +37,12 @@ public:
     ConfigOtherToolKits(LXQt::Settings *settings, QObject *parent = 0);
     QStringList getGTKThemes(QString version);
     QString getGTKThemeFromRCFile(QString version);
+    void backupGTKSettings();
 
 public slots:
     void setConfig();
-    void setGTKConfig(QString version);
+    void setXSettingsConfig();
+    void setGTKConfig(QString version, QString theme = QString());
     
 private:
     struct Config {
@@ -48,7 +50,6 @@ private:
         QString styleTheme;
         QString fontName;
         QString toolButtonStyle;
-        bool useGlobalTheme;
         int buttonStyle;
     } mConfig;
     void writeConfig(QString path, const char *configString);
