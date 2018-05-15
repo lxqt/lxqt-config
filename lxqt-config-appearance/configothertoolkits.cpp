@@ -67,9 +67,10 @@ Gtk/ButtonImages %4
 Gtk/ToolbarStyle "%5"
 )XSETTINGS_CONFIG";
 
-ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, QObject *parent) : QObject(parent)
+ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
 {
     mSettings = settings;
+    mConfigAppearanceSettings = configAppearanceSettings;
 }
 
 static QString get_environment_var(const char *envvar, const char *defaultValue)
@@ -96,26 +97,45 @@ static QString _get_config_path(QString path)
     return path;
 }
 
-void ConfigOtherToolKits::backupGTKSettings()
+QString ConfigOtherToolKits::getGTKConfigPath(QString version)
 {
-    // GTK2 backup
-    {
-        QString gtkrcPath = _get_config_path("$GTK2_RC_FILES");
-        QFile file(gtkrcPath);
-        if(file.exists())
-            file.copy(gtkrcPath + "-" + QString::number(QDateTime::currentSecsSinceEpoch()) +"~");
+    if(version == "2.0")
+        return _get_config_path("$GTK2_RC_FILES");
+    return _get_config_path(QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
+}
+
+static bool grep(QFile &file, QByteArray text)
+{
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        return false;
+    while (!file.atEnd()) {
+        QByteArray line = file.readLine().trimmed();
+        if(line.startsWith(text)) {
+            return true;   
+        }
     }
-    // GTK3 backup
-    {
-        QString gtkrcPath = _get_config_path("$XDG_CONFIG_HOME/gtk-3.0/settings.ini");
+    file.close();
+    return false;
+}
+
+bool ConfigOtherToolKits::backupGTKSettings(QString version)
+{
+        QString gtkrcPath = getGTKConfigPath(version);
         QFile file(gtkrcPath);
-        if(file.exists())
+        if(file.exists() && !grep(file, "# Created by lxqt-config-appearance (DO NOT EDIT!)")) {
             file.copy(gtkrcPath + "-" + QString::number(QDateTime::currentSecsSinceEpoch()) + "~");
-    }
+            return true;
+        }
+        return false;
 }
 
 void ConfigOtherToolKits::setConfig()
 {
+    if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
+        mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
+    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
+    if(! controlGTKThemeEnabled)
+        return;
     updateConfigFromSettings();
     mConfig.styleTheme = getGTKThemeFromRCFile("3.0");
     setGTKConfig("3.0");
