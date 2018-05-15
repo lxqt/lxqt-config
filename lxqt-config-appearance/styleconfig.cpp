@@ -42,13 +42,14 @@
 extern void qt_x11_apply_settings_in_all_apps();
 #endif
 
-StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
+StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),
     mQtSettings(qtSettings),
     mSettings(settings)
 {
-    mConfigOtherToolKits = new ConfigOtherToolKits(settings, this);
+    mConfigAppearanceSettings = configAppearanceSettings;
+    mConfigOtherToolKits = configOtherToolKits;
     ui->setupUi(this);
 
     initControls();
@@ -78,15 +79,12 @@ void StyleConfig::initControls()
     QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes("2.0");
     QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes("3.0");
     
-    // mSettings->beginGroup(QLatin1String("Themes"));
-    // ui->globalThemeComboBox->setCurrentText(mSettings->value("GlobalThemeName").toString());
-    // if(!mSettings->contains("GlobalThemeEnabled"))
-    //     mSettings->setValue("GlobalThemeEnabled", true);
-    // bool GlobalThemeEnabledd = mSettings->value("GlobalThemeEnabled").toBool();
-    // mSettings->endGroup();
-    // 
-    // showAdvancedOptions(!GlobalThemeEnabledd);
-    // ui->advancedOptionsGroupBox->setChecked(!GlobalThemeEnabledd);
+    if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
+        mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
+    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
+    
+    showAdvancedOptions(controlGTKThemeEnabled);
+    ui->advancedOptionsGroupBox->setChecked(controlGTKThemeEnabled);
 
     // read other widget related settings from LXQt settings.
     QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
@@ -160,13 +158,27 @@ void StyleConfig::gtk2StyleSelected(const QString &themeName)
 
 void StyleConfig::showAdvancedOptions(bool on)
 {
-    if(on) {
+    if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
+        mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
+    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
+    if(on && !controlGTKThemeEnabled) {
+        QString gtk2BackupMessage, gtk3BackupMessage;
+        if( mConfigOtherToolKits->backupGTKSettings("2.0") )
+            gtk2BackupMessage = tr("<p>'%1' has been backed up.</p>").arg(mConfigOtherToolKits->getGTKConfigPath("2.0"));
+        if( mConfigOtherToolKits->backupGTKSettings("3.0") )
+            gtk3BackupMessage = tr("<p>'%1' has been backed up.</p>").arg(mConfigOtherToolKits->getGTKConfigPath("3.0"));
+        
         QMessageBox::warning(this, tr("GTK themes"),
-            tr("~/.gtkrc-2.0 and ~/.config/settings.ini will be changed. "
-            "Please, if you have changed them, you should save them.<br/>"
-            "Select the same style/theme (if available) in all lists to attempt uniform theming.<br/>"
-            "Make sure 'xsettingsd' is installed to help GTK applications apply themes on the fly."),
-            QMessageBox::Ok);
-        mConfigOtherToolKits->backupGTKSettings();
+            gtk2BackupMessage + gtk3BackupMessage +
+            tr("'%1' and '%2' will be overwritten. "
+            "<p>Please, if you have changed them, you should save them.</p>"
+            "<p>To attempt uniform theming, either select similar style/theme"
+            " (if available) across all lists, or select 'gtk2' Qt style (if available) to mimic GTK themes.</p>"
+            "<p>Make sure 'xsettingsd' is installed to help GTK applications apply themes on the fly.</p>")
+            .arg(mConfigOtherToolKits->getGTKConfigPath("2.0"))
+            .arg(mConfigOtherToolKits->getGTKConfigPath("3.0"))
+            , QMessageBox::Ok);
+        mConfigOtherToolKits->backupGTKSettings("2.0");
     }
+    mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", on);
 }

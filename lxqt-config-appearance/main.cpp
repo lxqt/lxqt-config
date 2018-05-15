@@ -58,11 +58,12 @@ int main (int argc, char **argv)
     LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
 
     app.setActivationWindow(dialog);
-    
-    ConfigOtherToolKits *configOtherToolKits = new ConfigOtherToolKits(settings, dialog);
+   
+    LXQt::Settings mConfigAppearanceSettings("appearance");
+    ConfigOtherToolKits *configOtherToolKits = new ConfigOtherToolKits(settings, &mConfigAppearanceSettings, dialog);
 
     QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
-    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
+    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, &mConfigAppearanceSettings, configOtherToolKits, dialog);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
     QObject::connect(dialog, SIGNAL(reset()), stylePage, SLOT(initControls()));
     QObject::connect(stylePage, SIGNAL(updateSettings()), configOtherToolKits, SLOT(setConfig()));

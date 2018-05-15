@@ -34,10 +34,11 @@ class ConfigOtherToolKits : public QObject
     Q_OBJECT
 
 public:
-    ConfigOtherToolKits(LXQt::Settings *settings, QObject *parent = 0);
+    ConfigOtherToolKits(LXQt::Settings *settings, LXQt::Settings *configAppearanceSettings, QObject *parent = 0);
     QStringList getGTKThemes(QString version);
     QString getGTKThemeFromRCFile(QString version);
-    void backupGTKSettings();
+    QString getGTKConfigPath(QString version);
+    bool backupGTKSettings(QString version);
 
 public slots:
     void setConfig();
@@ -56,6 +57,7 @@ private:
     void updateConfigFromSettings();
 
     LXQt::Settings *mSettings;
+    LXQt::Settings *mConfigAppearanceSettings;
 };
 
 #endif // CONFIGOTHERTOOLKITS_H
