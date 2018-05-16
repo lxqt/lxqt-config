@@ -36,7 +36,6 @@
 #include <QMetaProperty>
 #include <QMetaEnum>
 #include <QToolBar>
-#include <QMessageBox>
 
 #ifdef Q_WS_X11
 extern void qt_x11_apply_settings_in_all_apps();
@@ -158,18 +157,6 @@ void StyleConfig::gtk2StyleSelected(const QString &themeName)
 
 void StyleConfig::showAdvancedOptions(bool on)
 {
-    if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
-        mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
-    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
-    if(on && !controlGTKThemeEnabled) {
-        QMessageBox::warning(this, tr("GTK themes"),
-            tr("<p>'%1' and '%2' will be overwritten.</p>"
-            "<p>To attempt uniform theming, either select similar style/theme"
-            " (if available) across all lists, or select 'gtk2' Qt style (if available) to mimic GTK themes.</p>"
-            "<p>Make sure 'xsettingsd' is installed to help GTK applications apply themes on the fly.</p>")
-            .arg(mConfigOtherToolKits->getGTKConfigPath("2.0"))
-            .arg(mConfigOtherToolKits->getGTKConfigPath("3.0"))
-            , QMessageBox::Ok);
-    }
+    ui->uniformThemeLabel->setVisible(on);
     mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", on);
 }
