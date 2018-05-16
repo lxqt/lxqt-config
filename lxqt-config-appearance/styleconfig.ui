@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>552</width>
-    <height>298</height>
+    <width>609</width>
+    <height>344</height>
    </rect>
   </property>
   <layout class="QFormLayout" name="formLayout">
@@ -75,6 +75,18 @@
         </item>
         <item row="1" column="1">
          <widget class="QComboBox" name="gtk2ComboBox"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="uniformThemeLabel">
+          <property name="text">
+           <string>To attempt uniform theming, either select similar style/theme
+(if available) across all lists, or select 'gtk2' Qt style (if available)
+ to mimic GTK themes.
+
+Make sure 'xsettingsd' is installed to help GTK applications apply
+themes on the fly.</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

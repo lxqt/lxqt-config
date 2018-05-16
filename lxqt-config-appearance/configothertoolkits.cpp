@@ -34,6 +34,7 @@
 #include <QFileInfo>
 #include <QFont>
 #include <QDateTime>
+#include <QMessageBox>
 
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
@@ -123,7 +124,13 @@ bool ConfigOtherToolKits::backupGTKSettings(QString version)
         QString gtkrcPath = getGTKConfigPath(version);
         QFile file(gtkrcPath);
         if(file.exists() && !grep(file, "# Created by lxqt-config-appearance (DO NOT EDIT!)")) {
-            file.copy(gtkrcPath + "-" + QString::number(QDateTime::currentSecsSinceEpoch()) + "~");
+            QString backupPath = gtkrcPath + "-" + QString::number(QDateTime::currentSecsSinceEpoch()) + "~";
+            file.copy(backupPath);
+            QMessageBox::warning(nullptr, tr("GTK themes"),
+                tr("<p>'%1' has been overwritten.</p><p>You can find a copy of your old settings in '%2'</p>")
+                .arg(getGTKConfigPath(version))
+                .arg(backupPath)
+                , QMessageBox::Ok);
             return true;
         }
         return false;
