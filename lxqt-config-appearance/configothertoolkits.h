@@ -54,6 +54,7 @@ private:
         int buttonStyle;
     } mConfig;
     void writeConfig(QString path, const char *configString);
+    QString getConfig(const char *configString);
     void updateConfigFromSettings();
 
     LXQt::Settings *mSettings;

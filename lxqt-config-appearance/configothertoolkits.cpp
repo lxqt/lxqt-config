@@ -157,9 +157,25 @@ void ConfigOtherToolKits::setXSettingsConfig()
     mConfig.styleTheme = getGTKThemeFromRCFile("3.0");
     if(mConfig.styleTheme.isEmpty())
         mConfig.styleTheme = getGTKThemeFromRCFile("2.0");
-    writeConfig("~/.xsettingsd", XSETTINGS_CONFIG);
+    
     // Reload settings. xsettingsd must be installed.
-    QProcess::startDetached("xsettingsd");
+    // xsettingsd settings are written to stdin.
+    QProcess proc;
+    proc.setProcessChannelMode(QProcess::MergedChannels);
+    proc.start("xsettingsd", QStringList() << "-c" << "/dev/stdin");
+    if(!proc.waitForStarted())
+        return;
+    proc.write( getConfig(XSETTINGS_CONFIG).toLocal8Bit() );
+    proc.waitForBytesWritten();
+    proc.closeWriteChannel();
+    proc.waitForReadyRead();
+    while(!proc.atEnd()) {
+        QByteArray line = proc.readLine();
+        if(line.trimmed() == "xsettingsd: Took ownership of selection _XSETTINGS_S0")
+            break;
+        proc.waitForReadyRead(100);
+    }
+    proc.close();
 }
 
 void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
@@ -175,6 +191,14 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
         writeConfig(gtkrcPath, GTK3_CONFIG);
 }
 
+QString ConfigOtherToolKits::getConfig(const char *configString)
+{
+    return QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
+        mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
+        mConfig.toolButtonStyle 
+        );
+}
+
 void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 {
     path = _get_config_path(path);
@@ -184,10 +208,7 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
         return;
     }
     QTextStream out(&file);
-    out << QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
-        mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
-        mConfig.toolButtonStyle 
-        );
+    out << getConfig(configString);
     out.flush();
     file.close();
 }
