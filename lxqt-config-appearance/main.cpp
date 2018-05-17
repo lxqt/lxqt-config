@@ -59,7 +59,7 @@ int main (int argc, char **argv)
 
     app.setActivationWindow(dialog);
    
-    LXQt::Settings mConfigAppearanceSettings("appearance");
+    LXQt::Settings mConfigAppearanceSettings("lxqt-config-appearance");
     ConfigOtherToolKits *configOtherToolKits = new ConfigOtherToolKits(settings, &mConfigAppearanceSettings, dialog);
 
     QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.

@@ -28,6 +28,7 @@
 
 #include <QWidget>
 #include <QProcess>
+#include <QTemporaryFile>
 #include <LXQt/Settings>
 
 class ConfigOtherToolKits : public QObject
@@ -63,6 +64,7 @@ private:
     LXQt::Settings *mConfigAppearanceSettings;
     
     QProcess mXsettingsdProc;
+    QTemporaryFile tempFile;
 };
 
 #endif // CONFIGOTHERTOOLKITS_H

@@ -35,6 +35,9 @@
 #include <QDateTime>
 #include <QMessageBox>
 
+#include <sys/types.h>
+#include <signal.h>
+
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
 gtk-theme-name = "%1"
@@ -71,6 +74,13 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settin
 {
     mSettings = settings;
     mConfigAppearanceSettings = configAppearanceSettings;
+    if(tempFile.open()) {
+        mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
+        mXsettingsdProc.start("xsettingsd", QStringList() << "-c" << tempFile.fileName());
+        if(!mXsettingsdProc.waitForStarted())
+            return;
+        tempFile.close();
+    }
 }
 
 ConfigOtherToolKits::~ConfigOtherToolKits()
@@ -164,14 +174,16 @@ void ConfigOtherToolKits::setXSettingsConfig()
     
     // Reload settings. xsettingsd must be installed.
     // xsettingsd settings are written to stdin.
-    mXsettingsdProc.close();
-    mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
-    mXsettingsdProc.start("xsettingsd", QStringList() << "-c" << "/dev/stdin");
-    if(!mXsettingsdProc.waitForStarted())
-        return;
-    mXsettingsdProc.write( getConfig(XSETTINGS_CONFIG).toLocal8Bit() );
-    mXsettingsdProc.waitForBytesWritten();
-    mXsettingsdProc.closeWriteChannel();
+    if(QProcess::Running == mXsettingsdProc.state()) {
+        QFile file(tempFile.fileName());
+        if(file.open(QIODevice::WriteOnly)) {
+            file.write( getConfig(XSETTINGS_CONFIG).toLocal8Bit() );
+            file.flush();
+            file.close();
+        }
+        int pid = mXsettingsdProc.processId();
+        kill(pid, SIGHUP);
+    }
 }
 
 void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
