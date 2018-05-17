@@ -27,6 +27,7 @@
 #define CONFIGOTHERTOOLKITS_H
 
 #include <QWidget>
+#include <QProcess>
 #include <LXQt/Settings>
 
 class ConfigOtherToolKits : public QObject
@@ -35,6 +36,7 @@ class ConfigOtherToolKits : public QObject
 
 public:
     ConfigOtherToolKits(LXQt::Settings *settings, LXQt::Settings *configAppearanceSettings, QObject *parent = 0);
+    ~ConfigOtherToolKits();
     QStringList getGTKThemes(QString version);
     QString getGTKThemeFromRCFile(QString version);
     QString getGTKConfigPath(QString version);
@@ -59,6 +61,8 @@ private:
 
     LXQt::Settings *mSettings;
     LXQt::Settings *mConfigAppearanceSettings;
+    
+    QProcess mXsettingsdProc;
 };
 
 #endif // CONFIGOTHERTOOLKITS_H
