@@ -39,7 +39,7 @@
       </size>
      </property>
      <property name="title">
-      <string>Govern GTK themes (GTK configuration files will be overwritten!)</string>
+      <string>Set GTK themes (GTK configuration files will be overwritten!)</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

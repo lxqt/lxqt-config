@@ -27,7 +27,6 @@
 #include <QFile>
 #include <QTextStream>
 #include <QStandardPaths>
-#include <QProcess>
 #include <QMetaEnum>
 #include <QToolBar>
 #include <QDir>
@@ -72,6 +71,11 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settin
 {
     mSettings = settings;
     mConfigAppearanceSettings = configAppearanceSettings;
+}
+
+ConfigOtherToolKits::~ConfigOtherToolKits()
+{
+    mXsettingsdProc.close();
 }
 
 static QString get_environment_var(const char *envvar, const char *defaultValue)
@@ -160,22 +164,14 @@ void ConfigOtherToolKits::setXSettingsConfig()
     
     // Reload settings. xsettingsd must be installed.
     // xsettingsd settings are written to stdin.
-    QProcess proc;
-    proc.setProcessChannelMode(QProcess::MergedChannels);
-    proc.start("xsettingsd", QStringList() << "-c" << "/dev/stdin");
-    if(!proc.waitForStarted())
+    mXsettingsdProc.close();
+    mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
+    mXsettingsdProc.start("xsettingsd", QStringList() << "-c" << "/dev/stdin");
+    if(!mXsettingsdProc.waitForStarted())
         return;
-    proc.write( getConfig(XSETTINGS_CONFIG).toLocal8Bit() );
-    proc.waitForBytesWritten();
-    proc.closeWriteChannel();
-    proc.waitForReadyRead();
-    while(!proc.atEnd()) {
-        QByteArray line = proc.readLine();
-        if(line.trimmed() == "xsettingsd: Took ownership of selection _XSETTINGS_S0")
-            break;
-        proc.waitForReadyRead(100);
-    }
-    proc.close();
+    mXsettingsdProc.write( getConfig(XSETTINGS_CONFIG).toLocal8Bit() );
+    mXsettingsdProc.waitForBytesWritten();
+    mXsettingsdProc.closeWriteChannel();
 }
 
 void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
