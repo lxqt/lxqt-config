@@ -1,4 +1,3 @@
-# Translations
 Name[es]=Asociaciones de archivo
-GenericName[es]=Define las asociaciones de archivo
-Comment[es]=Define asociaciones entre tipos de archivo y los programas que los utilizan
+GenericName[es]=Configuración de las asociaciones de archivo
+Comment[es]=Configura las aplicaciones asociadas con tipos de archivo conocidos
