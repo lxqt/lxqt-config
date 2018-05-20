@@ -70,7 +70,7 @@ First of all these are the ones belonging to repository lxqt-config described
 [above](https://github.com/lxqt/lxqt-config#configuration-gui-tools). Next, it
 is hosting counterparts of several other LXQt components like "Desktop
 Notifications" of [lxqt-notificationd](https://github.com/lxqt/lxqt-notificationd),
-"Shortcut Keys" of [lxqt-globalkeyshortcuts](https://github.com/lxqt/lxqt-globalkeyshortcuts)
+"Shortcut Keys" of [lxqt-globalkeys](https://github.com/lxqt/lxqt-globalkeys)
 or the tools provided by [lxqt-admin](https://github.com/lxqt/lxqt-admin).
 Third-party applications can include their configuration tools in
 "Configuration Center", too. This applies e. g. to "Connman UI Setup" of
