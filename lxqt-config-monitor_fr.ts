@@ -215,7 +215,8 @@
         <location filename="../../../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation>Série : %1</translation>
+        <translation>Série : %1
+</translation>
     </message>
     <message>
         <location filename="../../../monitorwidget.cpp" line="138"/>
@@ -275,12 +276,14 @@
 <context>
     <name>SaveSettings</name>
     <message>
+        <location filename="../../../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="vanished">Nom</translation>
+        <translation>Nom</translation>
     </message>
     <message>
+        <location filename="../../../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="vanished">Nom :</translation>
+        <translation>Nom :</translation>
     </message>
 </context>
 <context>
@@ -296,7 +299,7 @@
         <translation>Est-ce que les paramètres actuels sont correctes ?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../timeoutdialog.cpp" line="62"/>
+        <location filename="../../../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
         <translation type="unfinished">
             <numerusform>%n seconde(s) restante(s)</numerusform>
