@@ -167,10 +167,10 @@ void ConfigOtherToolKits::setConfig()
 
 void ConfigOtherToolKits::setXSettingsConfig()
 {
-    updateConfigFromSettings();
-    mConfig.styleTheme = getGTKThemeFromRCFile("3.0");
-    if(mConfig.styleTheme.isEmpty())
-        mConfig.styleTheme = getGTKThemeFromRCFile("2.0");
+    // setGTKConfig is called before calling setXSettingsConfig,
+    // then updateConfigFromSettings is not required.
+    //updateConfigFromSettings();
+    //mConfig.styleTheme = getGTKThemeFromRCFile(version);
     
     // Reload settings. xsettingsd must be installed.
     // xsettingsd settings are written to stdin.
