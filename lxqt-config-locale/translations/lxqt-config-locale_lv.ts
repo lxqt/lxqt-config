@@ -4,96 +4,92 @@
 <context>
     <name>LocaleConfig</name>
     <message>
-        <location filename="../../../localeconfig.ui" line="47"/>
+        <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
         <translation>Reģions:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="76"/>
+        <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
         <translation>Detalizēti iestatījumi</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="83"/>
+        <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
         <translation>Skatļi:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="112"/>
+        <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
         <translation>Laiks:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="141"/>
+        <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
         <translation>Valūta</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="170"/>
+        <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
         <translation>Mērvienības:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="199"/>
+        <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
         <translation>Salīdzināšana un kārtošana:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="238"/>
+        <location filename="../localeconfig.ui" line="238"/>
         <source>&lt;b&gt;Examples&lt;/b&gt;</source>
         <translation>&lt;b&gt;Piemēri&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="248"/>
+        <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
         <translation>Skaitļi:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="268"/>
+        <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
         <translation>Laiks:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="288"/>
+        <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
         <translation>Valūta:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.ui" line="308"/>
+        <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
         <translation>Mērvienības:</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="119"/>
+        <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
         <translation>Nav izmaiņu</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="308"/>
+        <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
         <translation>Formāta iestatījumi izmainīti</translation>
     </message>
     <message>
-        <source>Save the settings ? (they will take effect the next time you log in)</source>
-        <translation type="vanished">Saglabāt iestatījumus? (izmaiņas tiks pielietotas nākamajā ienākšanas reizē)</translation>
-    </message>
-    <message>
-        <location filename="../../../localeconfig.cpp" line="309"/>
+        <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="430"/>
+        <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
         <translation>Imperiālā britu</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="434"/>
+        <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
         <translation>Imperiālā amerikāņu</translation>
     </message>
     <message>
-        <location filename="../../../localeconfig.cpp" line="438"/>
+        <location filename="../localeconfig.cpp" line="444"/>
         <source>Metric</source>
         <translation>Metriskā</translation>
     </message>
@@ -101,12 +97,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
         <translation>LXQt reģionālā konfigurācija</translation>
     </message>
     <message>
-        <location filename="../../../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
         <translation>Reģionālie iestatījumi</translation>
     </message>
