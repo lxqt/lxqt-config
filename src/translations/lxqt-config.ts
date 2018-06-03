@@ -4,7 +4,7 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../../mainwindow.ui" line="14"/>
+        <location filename="../mainwindow.ui" line="14"/>
         <source>Configuration Center</source>
         <translation type="unfinished"></translation>
     </message>
