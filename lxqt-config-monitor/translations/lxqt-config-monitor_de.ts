@@ -288,11 +288,9 @@
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n Sekunde verbleibt</numerusform>
+        <numerusform>%n Sekunden verbleiben</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>SaveSettings</name>
