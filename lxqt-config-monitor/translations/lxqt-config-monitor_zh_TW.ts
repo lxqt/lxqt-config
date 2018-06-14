@@ -127,12 +127,12 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>設定位置</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
-        <translation type="unfinished"></translation>
+        <translation>進階設定</translation>
     </message>
 </context>
 <context>
