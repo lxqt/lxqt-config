@@ -91,7 +91,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
