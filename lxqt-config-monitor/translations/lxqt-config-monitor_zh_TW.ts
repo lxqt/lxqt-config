@@ -96,7 +96,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱：</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation type="unfinished"></translation>
+        <translation>保持顯示器連接</translation>
     </message>
 </context>
 <context>
@@ -112,17 +112,17 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示器設定</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="71"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>快速選單</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
