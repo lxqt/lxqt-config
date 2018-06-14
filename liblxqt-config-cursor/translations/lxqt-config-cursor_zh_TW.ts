@@ -39,17 +39,17 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>形式</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt找不到任何游標主題，將改為使用X11預設的游標主題，LXQt在下列目錄中尋找：</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示...</translation>
     </message>
 </context>
 <context>
