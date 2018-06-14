@@ -140,123 +140,129 @@
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation type="unfinished"></translation>
+        <translation>建立</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="29"/>
         <source> (x)</source>
-        <translation type="unfinished"></translation>
+        <translation> (否)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="45"/>
         <source> (y)</source>
-        <translation type="unfinished"></translation>
+        <translation> (是)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>解析度：</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用這個螢幕</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation type="unfinished"></translation>
+        <translation>這是我的主螢幕</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation type="unfinished"></translation>
+        <translation>此螢幕延伸自另一個螢幕</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>進階</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>更新率：</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>旋轉：</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>資訊</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示資訊</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>名稱： %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>發行商： %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>序列： %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation type="unfinished"></translation>
+        <translation>顯示大小： %1公分 x %2公分
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>序列號： %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>EISA 裝置號碼： %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="162"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="163"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>顛倒</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 赫茲</translation>
     </message>
 </context>
 <context>
@@ -264,7 +270,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>管理儲存的設定</translation>
     </message>
 </context>
 <context>
@@ -272,32 +278,30 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation type="unfinished"></translation>
+        <translation>設定已更改</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation type="unfinished"></translation>
+        <translation>現在的設定是否合適？</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>剩餘 %n 秒</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>SaveSettings</name>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱：</translation>
     </message>
 </context>
 </TS>
