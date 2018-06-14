@@ -6,27 +6,27 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation type="unfinished"></translation>
+        <translation>快速設定</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❷ 延伸螢幕</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❶ 同步螢幕</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶     僅顯示第一螢幕</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation type="unfinished"></translation>
+        <translation>     ❷ 僅顯示第二螢幕</translation>
     </message>
 </context>
 <context>
@@ -34,64 +34,64 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示器設定</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation type="unfinished"></translation>
+        <translation>儲存設定</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>重新命名</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>刪除</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>套用</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="67"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>顛倒</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>True</source>
-        <translation type="unfinished"></translation>
+        <translation>是</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>False</source>
-        <translation type="unfinished"></translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
