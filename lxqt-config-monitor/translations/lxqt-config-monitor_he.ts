@@ -6,27 +6,27 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation></translation>
+        <translation>אפשרויות מהירות</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation></translation>
+        <translation> ❶ ❷ תצוגה מורחבת</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation></translation>
+        <translation> ❶ ❶ תצוגה מאוחדת</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation></translation>
+        <translation> ❶     רק הראשונה</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation></translation>
+        <translation>     ❷ רק השנייה</translation>
     </message>
 </context>
 <context>
@@ -34,69 +34,69 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation></translation>
+        <translation>הגדרות צגים</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation></translation>
+        <translation>הגדרות שנשמרו</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation></translation>
+        <translation>שינוי שם</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation></translation>
+        <translation>מחיקה</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
         <source>Apply</source>
-        <translation></translation>
+        <translation>החלה</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation></translation>
+        <translation>ללא</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="67"/>
         <source>Left</source>
-        <translation></translation>
+        <translation>שמאל</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Inverted</source>
-        <translation></translation>
+        <translation>הפוך</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Right</source>
-        <translation></translation>
+        <translation>ימין</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>True</source>
-        <translation></translation>
+        <translation>אמת</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>False</source>
-        <translation></translation>
+        <translation>שקר</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name</source>
-        <translation></translation>
+        <translation>שם</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name:</source>
-        <translation></translation>
+        <translation>שם:</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation></translation>
+        <translation>להשאיר את הצגים מחוברים</translation>
     </message>
 </context>
 <context>
@@ -112,27 +112,27 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation></translation>
+        <translation>הגדרות צג</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="71"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>הגדרות</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation></translation>
+        <translation>תפריט מהיר</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation></translation>
+        <translation>הגדרת מיקום</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
-        <translation></translation>
+        <translation>הגדרות מתקדמות</translation>
     </message>
 </context>
 <context>
@@ -140,7 +140,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation></translation>
+        <translation>התקנה</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="29"/>
@@ -155,108 +155,114 @@
     <message>
         <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
-        <translation></translation>
+        <translation>רזולוציה:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation></translation>
+        <translation>הפעלת התצוגה הזו</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation></translation>
+        <translation>זו התצוגה הראשית שלי</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation></translation>
+        <translation>צג זה מרחיב תצוגה אחרת</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation></translation>
+        <translation>מתקדם</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation></translation>
+        <translation>קצב רענון:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation></translation>
+        <translation>הטיה:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation></translation>
+        <translation>מידע</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation></translation>
+        <translation>פרטי התצוגה</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation></translation>
+        <translation>שם: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation></translation>
+        <translation>יצרן: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation></translation>
+        <translation>מס׳ סידורי: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation></translation>
+        <translation>גודל תצוגה: %1 ס״מ × %2 ס״מ
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation></translation>
+        <translation>מספר סידורי: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation></translation>
+        <translation>מזהה התקן EISA:‏ %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation></translation>
+        <translation>אין</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="162"/>
         <source>Left</source>
-        <translation></translation>
+        <translation>שמאל</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="163"/>
         <source>Right</source>
-        <translation></translation>
+        <translation>ימין</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation></translation>
+        <translation>הפוך</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
-        <translation></translation>
+        <translation>%1 הרץ</translation>
     </message>
 </context>
 <context>
@@ -264,7 +270,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation></translation>
+        <translation>ניהול הגדרות שמורות</translation>
     </message>
 </context>
 <context>
@@ -272,32 +278,33 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation></translation>
+        <translation>ההגדרות נערכו</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation></translation>
+        <translation>ההגדרות הנוכחיות מתאימות לך?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>נותרה שנייה אחת</numerusform>
+        <numerusform>נותרו %n שניות</numerusform>
+        <numerusform>נותרו %n שניות</numerusform>
+        <numerusform>נותרו %n שניות</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>SaveSettings</name>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation></translation>
+        <translation>שם</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation></translation>
+        <translation>שם:</translation>
     </message>
 </context>
 </TS>
