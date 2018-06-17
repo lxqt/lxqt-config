@@ -305,12 +305,12 @@
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="unfinished">الاسم</translation>
+        <translation>الاسم</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="unfinished">الاسم:</translation>
+        <translation>الاسم :</translation>
     </message>
 </context>
 </TS>
