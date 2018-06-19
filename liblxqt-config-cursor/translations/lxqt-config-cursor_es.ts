@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Seleccione el tema del cursor que desea utilizar (pase el cursor por encima para una vista previa). &lt;b&gt;LXQt necesita reiniciar la sesión después de este cambio &lt;/ b&gt;:</translation>
+        <translation>Seleccione el tema del cursor que desea utilizar (pase el cursor por encima para una vista previa). &lt;b&gt;LXQt necesita reiniciar la sesión después de este cambio &lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
