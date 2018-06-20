@@ -39,7 +39,7 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation>形式</translation>
+        <translation>表單</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
