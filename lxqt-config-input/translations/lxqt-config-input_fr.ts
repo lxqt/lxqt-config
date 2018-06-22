@@ -102,13 +102,21 @@
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
-        <source>up</source>
-        <translation>haut</translation>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>up</source>
+        <translation type="vanished">haut</translation>
+    </message>
+    <message>
         <source>down</source>
-        <translation>bas</translation>
+        <translation type="vanished">bas</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
