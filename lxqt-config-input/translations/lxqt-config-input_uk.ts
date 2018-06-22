@@ -101,13 +101,21 @@
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
-        <source>up</source>
-        <translation>вверх</translation>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>up</source>
+        <translation type="vanished">вверх</translation>
+    </message>
+    <message>
         <source>down</source>
-        <translation>вниз</translation>
+        <translation type="vanished">вниз</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
