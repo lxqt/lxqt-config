@@ -21,12 +21,12 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Helligkeitseinstellungen geändert</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestätigung erforderlich. Sind diese Einstellungen korrekt?</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechtsklick zum Zurücksetzen</translation>
     </message>
 </context>
 </TS>
