@@ -6,22 +6,22 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation>Re&amp;gion:</translation>
+        <translation>&amp;Region:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>De&amp;taillierte Einstellungen</translation>
+        <translation>&amp;Detaillierte Einstellungen</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>Zahle&amp;n:</translation>
+        <translation>&amp;Zahlen:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>Zei&amp;t:</translation>
+        <translation>&amp;Zeit:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Verg&amp;leich und Sortierung:</translation>
+        <translation>&amp;Vergleich und Sortierung:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
