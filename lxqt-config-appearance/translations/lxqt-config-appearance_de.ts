@@ -51,7 +51,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Folgende Einstellungen wirken nur auf neu gestartete Programme</translation>
+        <translation>Folgende Einstellungen beeinflussen nur neu gestartete Programme</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Die KDE Erweiterung der XDG Symbolthemen -&gt; Folgt dem Farbschema</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Färbe Symbole aufgrund der Widgetpalette</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Über benutzerdefinierten Desktophintergrund hinwegsetzen</translation>
     </message>
 </context>
 <context>
