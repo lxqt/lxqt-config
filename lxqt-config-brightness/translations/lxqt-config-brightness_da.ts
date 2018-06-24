@@ -11,7 +11,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use arrow keys to change settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Indstillinger for backlight og lysstyrke:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Brug piletasterne for at ændre indstillingerne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Indstillinger for baggrundsbelysning og lysstyrke:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Brug piletasterne for at ændre indstillingerne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
