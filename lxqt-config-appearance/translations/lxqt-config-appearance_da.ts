@@ -61,7 +61,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Skrifttype hinting-stil:</translation>
+        <translation>Skrifttype hintingstil:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Farvelagte ikoner baseret på widget-stil (palet)</translation>
+        <translation>Farvelagte ikoner baseret på widgetstil (palet)</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../main.cpp" line="63"/>
         <source>Widget Style</source>
-        <translation>Widget-stil</translation>
+        <translation>Widgetstil</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
@@ -199,12 +199,12 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Widget-stil</translation>
+        <translation>Widgetstil</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation>Værktøjslinje knap-stil:</translation>
+        <translation>Værktøjslinje knapstil:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
