@@ -22,7 +22,7 @@
     <message>
         <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>D&amp;esign entfernen</translation>
+        <translation>&amp;Design entfernen</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="212"/>
