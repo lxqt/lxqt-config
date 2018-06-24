@@ -66,7 +66,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation>Ingen ændring</translation>
+        <translation>Uændret</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
