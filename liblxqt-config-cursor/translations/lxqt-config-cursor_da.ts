@@ -6,12 +6,12 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Konfiguration af LXQt musemarkør-tema</translation>
+        <translation>Konfiguration af LXQt musemarkørtema</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Vælg det markør-tema, du vil bruge (hold over forhåndsvisning for at teste markør). &lt;b&gt;LXQt-sessionen skal genstartes efter denne ændring&lt;/b&gt;:</translation>
+        <translation>Vælg det markørtema, du vil bruge (hold over forhåndsvisning for at teste markør). &lt;b&gt;LXQt-sessionen skal genstartes efter denne ændring&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt kunne ikke finde noget markør-tema. Standard-X11-markør-temaet vil i stedet blive brugt. LXQt ledte i følgende mapper:</translation>
+        <translation>LXQt kunne ikke finde noget markørtema. Standard-X11-markørtemaet vil i stedet blive brugt. LXQt ledte i følgende mapper:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
