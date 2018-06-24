@@ -35,7 +35,7 @@
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>Andere Anwendung</translation>
+        <translation>Andere Anwendungen</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>Keine Anwendung gefunden</translation>
+        <translation>Keine Anwendungen gefunden</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation>Ä&amp;ndern...</translation>
+        <translation>&amp;Ändern...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation>Default-Anwendungsprogramm</translation>
+        <translation>Standardanwendung</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation>Textfeld</translation>
+        <translation>Textkennzeichen</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
         <source>Patterns</source>
-        <translation>Dateimuster</translation>
+        <translation>Muster</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
