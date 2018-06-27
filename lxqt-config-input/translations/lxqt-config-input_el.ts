@@ -102,12 +102,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Πάνω</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Κάτω</translation>
     </message>
     <message>
         <source>up</source>
