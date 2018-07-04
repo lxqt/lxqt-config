@@ -107,3 +107,11 @@ to search for string `lxqt-config`.
 Both the various configuration tools and the Configuration Center can be launched
 from the panel's main menu - Preferences - LXQt settings. Obviously the former
 can be launched from the latter, too.
+
+
+
+### Translation (Weblate)
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-config/">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-config/multi-auto.svg" alt="Translation status" />
+</a>
