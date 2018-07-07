@@ -49,7 +49,7 @@
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>Mostrar...</translation>
+        <translation>Exibir...</translation>
     </message>
 </context>
 <context>
