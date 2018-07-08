@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Rychlost blikání ukazovátka:</translation>
+        <translation>Rychlost blikání ukazatele:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Rychlost:</translation>
+        <translation>Interval opakování:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
@@ -92,22 +92,22 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation>&amp;Přidat</translation>
+        <translation>Přid&amp;at</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation>&amp;Odstranit</translation>
+        <translation>Odst&amp;ranit</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahoru</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolů</translation>
     </message>
     <message>
         <source>up</source>
