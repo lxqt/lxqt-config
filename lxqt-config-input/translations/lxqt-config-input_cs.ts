@@ -232,7 +232,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation>Ukazatel</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
