@@ -111,11 +111,11 @@
     </message>
     <message>
         <source>up</source>
-        <translation type="vanished">Nahoru</translation>
+        <translation>nahoru</translation>
     </message>
     <message>
         <source>down</source>
-        <translation type="vanished">Dolů</translation>
+        <translation>dolů</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>Rychlost dvojitého klepnutí:</translation>
+        <translation>Interval dvojkliku:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
