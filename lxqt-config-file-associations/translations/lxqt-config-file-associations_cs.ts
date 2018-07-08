@@ -35,7 +35,7 @@
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>Jiné programy</translation>
+        <translation>Ostatní aplikace</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
@@ -59,12 +59,12 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation>&amp;Změnit...</translation>
+        <translation>&amp;Změnit…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Vybrat...</translation>
+        <translation>&amp;Vybrat…</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Vybrat...</translation>
+        <translation>&amp;Vybrat…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
