@@ -6,17 +6,17 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Nastavení motivu myši</translation>
+        <translation>Nastavení motivu ukazatele myši</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Vyberte motiv ukazovátka, jejž chcete používat (přejeďte myší nad náhledem kvůli vyzkoušení ukazovátka). &lt;b&gt;Sezení LXQt je potřeba po této změně spustit znovu&lt;/b&gt;:</translation>
+        <translation>Vyberte motiv ukazatele, který chcete používat (vyzkoušíte najetím myší na náhled). &lt;b&gt;Po provedení změny je třeba restartovat sezení LXQt&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>Na&amp;instalovat nový motiv...</translation>
+        <translation>Na&amp;instalovat nový motiv…</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="88"/>
@@ -44,12 +44,12 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt se nepodařilo najít žádný motiv ukazovátka. Bude se používat výchozí motiv ukazovátka X11. LXQt se podívalo do následujících adresářů:</translation>
+        <translation>LXQt se nepodařilo najít žádný motiv ukazatele. Bude se používat výchozí motiv ukazatele X11. LXQt hledalo v následujících složkách:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>Ukázat...</translation>
+        <translation>Ukázat…</translation>
     </message>
 </context>
 <context>
