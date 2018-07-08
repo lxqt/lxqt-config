@@ -26,7 +26,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Bodová velikost:</translation>
+        <translation>Velikost (body):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation>Kurzíva</translation>
+        <translation>Kurzíva (skloněné)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Styl prostrkávání písma:</translation>
+        <translation>Styl přizpůsobování písma mřížce pixelů obrazovky</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -87,22 +87,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Prostrkávání písma</translation>
+        <translation>přizpůsobování písma mřížce pixelů obrazovky</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Rozlišení (DPI):</translation>
+        <translation>Rozlišení na palec (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Automatické prostrkávání</translation>
+        <translation>Automatické přizpůsobování písma mřížce pixelů obrazovky</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Podpixelové vyhlazování:</translation>
+        <translation>Vyhlazování na úrovni dílčích segmentů pixelu obrazovky:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -153,12 +153,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>Motiv LXQt</translation>
+        <translation>Téma vzhledu LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepsat uživatelem určené pozadí plochy</translation>
     </message>
 </context>
 <context>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../main.cpp" line="80"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation>Ukazatel</translation>
     </message>
 </context>
 <context>
@@ -209,12 +209,12 @@
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation>Pouze ikona</translation>
+        <translation>Zobrazovat pouze ikonu</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation>Pouze text</translation>
+        <translation>Zobrazovat pouze text</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation>Jedno klepnutí zapne prvek</translation>
+        <translation>Aktivovat prvek jedním klikem</translation>
     </message>
 </context>
 </TS>
