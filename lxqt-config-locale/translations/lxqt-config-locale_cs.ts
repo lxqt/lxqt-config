@@ -11,7 +11,7 @@
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>&amp;Podrobná nastavení</translation>
+        <translation>Podrobná nas&amp;tavení</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chcete změny uložit? Projeví se po příštím přihlášení.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
