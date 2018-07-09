@@ -61,7 +61,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo de suavização da fonte:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Suavização da fonte</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Antisserrilhamento:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>.A extensão para temas de ícones XDG para KDE -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Colorir ícones baseado no estilo de um widget (paleta)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar papel de parede definido pelo usuário</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../main.cpp" line="63"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo dos widgets</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../main.cpp" line="75"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonte</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="80"/>
@@ -199,42 +199,42 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo dos widgets</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo dos botões da barra de ferramentas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar ícones apenas</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar texto apenas</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>O texto aparece ao lado do ícone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>O texto aparece abaixo do ícone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Ativar item com um clique</translation>
     </message>
 </context>
 </TS>
