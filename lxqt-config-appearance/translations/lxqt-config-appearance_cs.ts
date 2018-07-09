@@ -26,7 +26,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Velikost (body):</translation>
+        <translation>Velikost bodu:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation>Kurzíva (skloněné)</translation>
+        <translation>Kurzíva (skloněné písmo)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
@@ -67,7 +67,7 @@
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation>Žádný</translation>
+        <translation>Žádné</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>přizpůsobování písma mřížce pixelů obrazovky</translation>
+        <translation>Doladění zobrazení písma</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -97,12 +97,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Automatické přizpůsobování písma mřížce pixelů obrazovky</translation>
+        <translation>Automatické doladění zobrazení písma</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Vyhlazování na úrovni dílčích segmentů pixelu obrazovky:</translation>
+        <translation>Vyhlazování na úrovni dílčích segmentů obrazových bodů obrazovky:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Nastavení vzhledu</translation>
+        <translation>Nastavení vzhledu LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../main.cpp" line="57"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Nastavení vzhledu</translation>
+        <translation>Nastavení vzhledu LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="63"/>
@@ -176,12 +176,12 @@
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>Icons Theme</source>
-        <translation>Podoba ikon</translation>
+        <translation>Vzhled ikon</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>LXQt Theme</source>
-        <translation>Motiv LXQt</translation>
+        <translation>Vzhled LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../main.cpp" line="80"/>
         <source>Cursor</source>
-        <translation>Ukazatel</translation>
+        <translation>Ukazovátko</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation>Aktivovat prvek jedním klikem</translation>
+        <translation>Zapnout prvek jedním klepnutím</translation>
     </message>
 </context>
 </TS>
