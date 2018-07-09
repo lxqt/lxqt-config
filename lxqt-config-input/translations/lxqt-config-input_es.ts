@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -102,12 +102,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Arriba</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Abajo</translation>
     </message>
     <message>
         <source>up</source>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
