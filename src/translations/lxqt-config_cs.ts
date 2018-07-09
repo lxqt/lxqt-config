@@ -6,7 +6,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Configuration Center</source>
-        <translation>Nastavovací středisko</translation>
+        <translation>Centrum nastavování</translation>
     </message>
 </context>
 </TS>
