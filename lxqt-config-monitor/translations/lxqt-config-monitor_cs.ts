@@ -160,17 +160,17 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation>Povolit tuto obrazovku</translation>
+        <translation>Používat tuto obrazovku</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Hlavní obrazovka</translation>
+        <translation>Toto je hlavní obrazovka</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Rozšiřující obrazovka</translation>
+        <translation>Tato obrazovka rozšiřuje jinou</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -180,7 +180,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Obnovovací kmitočet obrazu:</translation>
+        <translation>Četnost obnovování obrazu:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
@@ -208,7 +208,7 @@
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation>Dodavatel: %1
+        <translation>Výrobce: %1
 </translation>
     </message>
     <message>
@@ -236,7 +236,7 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>ID zařízení EISA: %1
+        <translation>EISA identifikátor zařízení: %1
 </translation>
     </message>
     <message>
@@ -288,12 +288,10 @@
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Zbývá %n sekunda</numerusform>
+        <numerusform>Zbývají %n sekundy</numerusform>
+        <numerusform>Zbývá %n sekund</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>SaveSettings</name>
