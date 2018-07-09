@@ -35,7 +35,7 @@
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>Ostatní aplikace</translation>
+        <translation>Ostatní programy</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
