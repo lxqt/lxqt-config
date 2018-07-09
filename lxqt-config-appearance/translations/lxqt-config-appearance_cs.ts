@@ -61,7 +61,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Styl přizpůsobování písma mřížce pixelů obrazovky</translation>
+        <translation>Styl doladění zobrazení písma:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozšíření KDE témat ikon XDG -&gt; Následuje barevné schéma</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Barvit ikony na základě palety se styly prvků</translation>
     </message>
 </context>
 <context>
