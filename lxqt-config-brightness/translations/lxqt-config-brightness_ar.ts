@@ -16,17 +16,17 @@
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>طلب تأكيد بعد تغيير الإعدادات</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>تم تعديل إعدادات السّطوع</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>التأكيد مطلوب. هل الإعدادات صحيحة ؟</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>النقر بزر اليمين لإعادة التعيين</translation>
     </message>
 </context>
 </TS>
