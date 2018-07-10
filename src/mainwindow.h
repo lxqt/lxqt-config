@@ -68,7 +68,7 @@ private slots:
     void load();
 };
 
-}; // namespace
+} // namespace
 
 
 #endif
