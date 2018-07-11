@@ -26,7 +26,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Velikost bodu:</translation>
+        <translation>Velikost v bodech:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
