@@ -48,7 +48,7 @@
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation>Krátké</translation>
+        <translation>Krátký</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Poznámka&lt;/span&gt;: Pokud používáte &lt;span style=&quot; font-weight:600;&quot;&gt;vstupní metodu&lt;/span&gt;, jako je IBus, uim, fcitx, nebo gcin, nastavení zde &lt;span style=&quot; font-weight:600;&quot;&gt;nemusí pracovat&lt;/span&gt;, protože jsou potlačeny vstupními metodami.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Poznámka&lt;/span&gt;: Pokud používáte &lt;span style=&quot; font-weight:600;&quot;&gt;vstupní metodu&lt;/span&gt;, jako je IBus, uim, fcitx, nebo gcin, nastavení zde &lt;span style=&quot; font-weight:600;&quot;&gt;nemusí fungovat&lt;/span&gt;, protože jsou potlačeny vstupními metodami.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Kolečko myši vytváří pohyb obrazu o ... řádků:</translation>
+        <translation>Kolečko myši vytváří pohyb obrazu o … řádků:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
