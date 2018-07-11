@@ -236,7 +236,7 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA identifikátor zařízení: %1
+        <translation>EISA identif. zařízení: %1
 </translation>
     </message>
     <message>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Jsou nynější nastavení správná?</translation>
+        <translation>Jsou stávající nastavení správná?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
