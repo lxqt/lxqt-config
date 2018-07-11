@@ -224,7 +224,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Osoitin</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
