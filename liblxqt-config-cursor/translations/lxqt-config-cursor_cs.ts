@@ -31,7 +31,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Nemůžete odstranit nynější vzhled!</translation>
+        <translation>Není možné odstranit právě používaný vzhled!</translation>
     </message>
 </context>
 <context>
