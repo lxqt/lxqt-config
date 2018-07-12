@@ -11,7 +11,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use arrow keys to change settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení podsvětlení a jasu:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Pro změnu nastavení použijte kurzorové klávesy.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení podsvětlení a jasu:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Pro změnu nastavení použijte šipky na klávesnici.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation>Resetujte kliknutím pravým tlačítkem</translation>
+        <translation>Do výchozích hodnot vrátíte kliknutím pravým tlačítkem</translation>
     </message>
 </context>
 </TS>
