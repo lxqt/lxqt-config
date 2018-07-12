@@ -41,7 +41,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation>Kurzíva (skloněné písmo)</translation>
+        <translation>Kurzíva</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
@@ -51,12 +51,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Následující nastavení ovlivní jen nově spuštěné programy</translation>
+        <translation>Následující nastavení ovlivní pouze nově spuštěné programy</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Použít vyhlazovaná písma</translation>
+        <translation>Vyhlazovat hrany písmen</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Vyhlazování na úrovni dílčích segmentů obrazových bodů obrazovky:</translation>
+        <translation>Vyhlazování na úrovni dílčích segmentů bodů obrazovky:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>Rozšíření KDE témat ikon XDG -&gt; Následuje barevné schéma</translation>
+        <translation>KDE rozšíření témat XDG ikon  -&gt; Následuje barevné schéma</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Barvit ikony na základě palety se styly prvků</translation>
+        <translation>Obarvovat ikony na základě stylu prvku (palety)</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation>Zapnout prvek jedním klepnutím</translation>
+        <translation>Zapnout prvek jedním kliknutím</translation>
     </message>
 </context>
 </TS>
