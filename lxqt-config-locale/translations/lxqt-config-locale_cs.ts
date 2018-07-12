@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Srovnání a třídění:</translation>
+        <translation>&amp;Srovnání a řazení:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation>Žádná změna</translation>
+        <translation>Beze změny</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
