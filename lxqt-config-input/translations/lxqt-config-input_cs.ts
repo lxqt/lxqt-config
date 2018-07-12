@@ -37,18 +37,18 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Dlouhý</translation>
+        <translation>Dlouhá</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Zpoždění:</translation>
+        <translation>Prodleva opakování:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation>Krátký</translation>
+        <translation>Krátká</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Zkušební oblast pro nastavení klávesnice</translation>
+        <translation>Nastavení klávesnice vyzkoušíte psaním do následující oblasti</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Po přihlášení vypnout číselnou klávesnici (NumLock)</translation>
+        <translation>Po přihlášení zapnout číselnou klávesnici (NumLock)</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation>Uspořádání</translation>
+        <translation>Rozložení</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Kombinace kláves ke změně rozložení:</translation>
+        <translation>Kombinace kláves pro přepnutí rozložení:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation>Vysoko</translation>
+        <translation>Vysoká</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation>Nízko</translation>
+        <translation>Nízká</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>Jedno klepnutí zapne prvky</translation>
+        <translation>Aktivovat prvky jedním kliknutím</translation>
     </message>
 </context>
 <context>
