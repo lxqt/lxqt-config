@@ -61,7 +61,6 @@ target_link_libraries(${PROJECT_NAME}
     Qt5::Xml
     Qt5::DBus
     Qt5::Widgets
-    Qt5::Concurrent
     ${LIBRARIES}
 )
 
