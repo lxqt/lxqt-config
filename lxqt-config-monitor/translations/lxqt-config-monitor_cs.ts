@@ -11,22 +11,22 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ Rozšířený pohled</translation>
+        <translation> ❶ ❷ Rozšířené zobrazení</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ Jednotný pohled</translation>
+        <translation> ❶ ❶ Jednotné zobrazení</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation> ❶     Jen první pohled</translation>
+        <translation> ❶     Pouze první</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation>     ❷ Jen druhý pohled</translation>
+        <translation>     ❷ Pouze druhý</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation>Žádný</translation>
+        <translation>Žádné</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="67"/>
@@ -180,7 +180,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Četnost obnovování obrazu:</translation>
+        <translation>Frekvence obnovování obrazu:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
@@ -222,7 +222,7 @@
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Velikost obrazovky: %1cm x %2cm
+        <translation>Velikost obrazovky: %1  x %2 cm
 </translation>
     </message>
     <message>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation>Obrácený</translation>
+        <translation>Převrácený</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
