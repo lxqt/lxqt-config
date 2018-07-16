@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation>منتقي التّطبيقات</translation>
+        <translation>منتقي التطبيقات</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>اختر تطبيقًا لِ‍:</translation>
+        <translation>اختر تطبيقا لِ‍:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>التّطبيقات التي تتعامل مع JPEG</translation>
+        <translation>التطبيقات التي تتعامل مع JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -29,23 +29,23 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation>عنصر فرعيّ جديد</translation>
+        <translation>عنصر فرعي جديد</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>التّطبيقات الأخرى</translation>
+        <translation>التطبيقات الأخرى</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>التّطبيقات التي تتعامل مع %1</translation>
+        <translation>التطبيقات التي تتعامل مع %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>لا تطبيقات وُجدت</translation>
+        <translation>لم يُعثر على أي تطبيق</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>ارتباطات الملفّات</translation>
+        <translation>ارتباطات الملفات</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation>التّطبيق الافتراضيّ</translation>
+        <translation>التطبيق المبدئي</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation>لصيقة نصّ</translation>
+        <translation>لصيقة نصية</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
         <source>*.txt *.xml</source>
-        <translation>*.txt *.xml</translation>
+        <translation>‎*.txt *.xml</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
