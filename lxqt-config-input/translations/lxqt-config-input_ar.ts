@@ -125,7 +125,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>مفاتيح تغيير التّخطيط:</translation>
+        <translation>مفاتيح تغيير التخطيط:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;لاحظ&lt;/span&gt;: إن كنت تستخدم &lt;span style=&quot; font-weight:600;&quot;&gt;طريقة دخل&lt;/span&gt;، مثل IBus، أو uim، أو fcitx أو gcin، فإنّ الإعدادات هنا &lt;span style=&quot; font-weight:600;&quot;&gt;قد لا تعمل&lt;/span&gt; لأنّ طرق الدّخل تتجاهلها.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html dir=&quot;rtl&quot;&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;لاحظ&lt;/span&gt;: إن كنت تستخدم &lt;span style=&quot; font-weight:600;&quot;&gt;طريقة دخل&lt;/span&gt;، مثل IBus، أو uim، أو fcitx أو gcin، فإن الإعدادات هنا &lt;span style=&quot; font-weight:600;&quot;&gt;قد لا تعمل&lt;/span&gt; لأن طرق الدخل تتجاهلها.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation>نموذج</translation>
+        <translation>استمارة</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation>الحساسيّة:</translation>
+        <translation>الحساسية:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
@@ -178,7 +178,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation>التّسارع:</translation>
+        <translation>التسارع:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>فترة النّقر المزدوج:</translation>
+        <translation>فترة النقر المزدوج:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -204,17 +204,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>تمرّر العجلة أسطرًا بعدد:</translation>
+        <translation>تمرّر العجلة أسطرا بعدد:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>يد عسراء (أبدل زرّيّ الفأرة الأيمن بالأيسر)</translation>
+        <translation>يد عسراء (أبدِل زرّي الفأرة الأيمن بالأيسر)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>النّقر المفرد يفعّل العناصر</translation>
+        <translation>النقر المفرد يُفعّل العناصر</translation>
     </message>
 </context>
 <context>
@@ -260,7 +260,7 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation>التّنويعة</translation>
+        <translation>التنويعة</translation>
     </message>
 </context>
 </TS>
