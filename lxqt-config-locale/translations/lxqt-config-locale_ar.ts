@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>التّ&amp;جميع والفرز:</translation>
+        <translation>الت&amp;جميع والفرز:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -71,22 +71,22 @@
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation>تغيّر إعدادات التّنسيق</translation>
+        <translation>تغيّرت إعدادات التنسيق</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>هل تريد حفظ التغييرات ؟ سيتم تفعيلها عند تسجيل دخولك في المرة اللاحقة.</translation>
+        <translation>أتريد حفظ التغييرات؟ ستأخذ مفعولها مع الولوج التالي.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation>إمبراطوريّة إنجليزيّة</translation>
+        <translation>إمبراطورية إنجليزية</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation>إمبراطوريّة أمريكيّة</translation>
+        <translation>إمبراطورية أمريكية</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
