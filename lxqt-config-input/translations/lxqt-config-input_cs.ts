@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Signalizační/sdělovací tón při chybném zadání</translation>
+        <translation>Při chybném vstupu z klávesnice zvukově upozornit</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -232,7 +232,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation>Ukazatel</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
