@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation>Přiřazení souborů</translation>
+        <translation>Volba aplikace</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Vybrat program pro:</translation>
+        <translation>Vybrat aplikaci pro:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Programy zpracovávající JPEG</translation>
+        <translation>Aplikace zpracovávající JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -35,17 +35,17 @@
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>Ostatní programy</translation>
+        <translation>Ostatní aplikace</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>Programy zpracovávající %1</translation>
+        <translation>Aplikace zpracovávající %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>Nenalezeny žádné programy</translation>
+        <translation>Nenalezeny žádné aplikace</translation>
     </message>
 </context>
 <context>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Vybrat…</translation>
+        <translation>&amp;Zvolit…</translation>
     </message>
 </context>
 <context>
@@ -77,12 +77,12 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation>Výchozí program</translation>
+        <translation>Výchozí aplikace</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Vybrat…</translation>
+        <translation>&amp;Zvolit…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
