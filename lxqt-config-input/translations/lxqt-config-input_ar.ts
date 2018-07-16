@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation>نموذج</translation>
+        <translation>استمارة</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>أصدر صوتًا عند وجود مشكلة في دخل لوحة المفاتيح</translation>
+        <translation>أصدِر صوتا عند وجود مشكلة في دخل لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation>تكارار المحارف</translation>
+        <translation>تكرار المحارف</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>تأخير التّكرار:</translation>
+        <translation>تأخير التكرار:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,12 +53,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>فترة التّكرار:</translation>
+        <translation>فترة التكرار:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>اكتب في المربّع الآتي لتختبر إعدادات لوحة المفاتيح</translation>
+        <translation>اكتب في المربع الآتي لتختبر إعدادات لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>فعّل &quot;قافل الأرقام&quot; بعد الولوج</translation>
+        <translation>فعّل ”قافل الأرقام“ بعد الولوج</translation>
     </message>
 </context>
 <context>
@@ -82,32 +82,32 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation>التّخطيط</translation>
+        <translation>التخطيط</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation>التّنويعة</translation>
+        <translation>التنويعة</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation>أ&amp;ضف</translation>
+        <translation>أ&amp;ضِف</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation>أ&amp;زل</translation>
+        <translation>أ&amp;زِل</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>لأعلى</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>لأسفل</translation>
     </message>
     <message>
         <source>up</source>
