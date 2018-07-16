@@ -51,7 +51,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Následující nastavení ovlivní pouze nově spuštěné programy</translation>
+        <translation>Následující nastavení ovlivní pouze nově spuštěné aplikace</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Obarvovat ikony na základě stylu prvku (palety)</translation>
+        <translation>Obarvovat ikony na základě stylu prvku (paleta)</translation>
     </message>
 </context>
 <context>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../main.cpp" line="80"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation>Ukazatel</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation>Zapnout prvek jedním kliknutím</translation>
+        <translation>Aktivovat prvek jedním kliknutím</translation>
     </message>
 </context>
 </TS>
