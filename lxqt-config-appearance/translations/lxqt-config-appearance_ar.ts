@@ -6,32 +6,32 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation>الخطّ</translation>
+        <translation>الخط</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>خطّ واجهة المستخدم الافتراضيّ</translation>
+        <translation>خط واجهة المستخدم المبدئي</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>اسم الخطّ:</translation>
+        <translation>اسم الخط:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>النّمط:</translation>
+        <translation>النمط:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>حجم النّقطة:</translation>
+        <translation>حجم النقطة:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation>عاديّ</translation>
+        <translation>عادي</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
@@ -51,12 +51,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>ستؤثّر التّعديلات الآتية على التّطبيقات التي تبدأ بعد تطبيقها</translation>
+        <translation>ستؤثّر التعديلات الآتية على التطبيقات التي تبدأ بعد تطبيقها</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>استخدم خطوطًا محسّنة حوافها</translation>
+        <translation>استخدم خطوطا محسّنة حوافها</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>مضادّ تعرّج البكسلات الفرعيّة:</translation>
+        <translation>مضادّ تعرّج البكسلات الفرعية:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>امتداد «كدي» لسمات أيقونات XDG ← ‏FollowsColorScheme (يتبع نمط الألوان)</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>لوّن الأيقونات حسب نمط الودجات (لوحة الألوان)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>تجاهل الخلفية التي عرّفها المستخدم</translation>
     </message>
 </context>
 <context>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../main.cpp" line="75"/>
         <source>Font</source>
-        <translation>الخطّ</translation>
+        <translation>الخط</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="80"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../styleconfig.ui" line="54"/>
         <source>Toolbar button style:</source>
-        <translation>نمط زرّ شريط الأدوات:</translation>
+        <translation>نمط زر شريط الأدوات:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
@@ -214,27 +214,27 @@
     <message>
         <location filename="../styleconfig.ui" line="67"/>
         <source>Only display the text</source>
-        <translation>اعرض النّصّ فقط</translation>
+        <translation>اعرض النص فقط</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>The text appears beside the icon</source>
-        <translation>يظهر النّصّ بجانب الأيقونة</translation>
+        <translation>يظهر النص بجانب الأيقونة</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>The text appears under the icon</source>
-        <translation>يظهر النّصّ أسفل الأيقونة</translation>
+        <translation>يظهر النص أسفل الأيقونة</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>Default</source>
-        <translation>الافتراضيّ</translation>
+        <translation>المبدئي</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="90"/>
         <source>Activate item on single click</source>
-        <translation>فعّل العنصر بالنّقر المفرد</translation>
+        <translation>فعّل العنصر بالنقر المفرد</translation>
     </message>
 </context>
 </TS>
