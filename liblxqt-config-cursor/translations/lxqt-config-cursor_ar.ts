@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>أ&amp;زل السّمة</translation>
+        <translation>أ&amp;زِل السمة</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="212"/>
@@ -39,17 +39,17 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation>نموذج</translation>
+        <translation>استمارة</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>تعذّر على لكسكيوت إيجاد أيّ سمة أيقونات. ستُستخدم سمة مؤشّرات X11 الافتراضيّة. بحثت لكسكيوت في الأدلّة الآتية:</translation>
+        <translation>تعذر على لكسكيوت العثور على أية سمة أيقونات. ستُستخدم سمة مؤشّرات X11 المبدئية. بحثت لكسكيوت في الأدلة الآتية:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>أظهر...</translation>
+        <translation>اعرض...</translation>
     </message>
 </context>
 <context>
