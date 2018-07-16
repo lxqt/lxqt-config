@@ -6,7 +6,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Configuration Center</source>
-        <translation>مركز الضّبط</translation>
+        <translation>مركز الضبط</translation>
     </message>
 </context>
 </TS>
