@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Doladění zobrazení písma</translation>
+        <translation>Doladění zobrazení písma (hinting)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
