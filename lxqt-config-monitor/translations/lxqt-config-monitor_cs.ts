@@ -242,7 +242,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation>Žádný</translation>
+        <translation>Žádné</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="162"/>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation>Převrácený</translation>
+        <translation>Převrácené</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
