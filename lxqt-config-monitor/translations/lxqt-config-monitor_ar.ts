@@ -11,22 +11,22 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ عرض ممتدّ</translation>
+        <translation> ❶ ❷ منظور ممتد</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ عرض موحّد</translation>
+        <translation> ❶ ❶ منظور موحّد</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation> ❶     الأوّل فقط</translation>
+        <translation> ❶     الأول فقط</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation>     ❷ الثّاني فقط</translation>
+        <translation>     ❷ الثاني فقط</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>إعدادات الشّاشة</translation>
+        <translation>إعدادات الشاشة</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation>أعد التّسمية</translation>
+        <translation>غيّر الاسم</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>أبقِ الشّاشات مرفقة</translation>
+        <translation>أبقِ الشاشات مرفقة</translation>
     </message>
 </context>
 <context>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>إعدادات الشّاشة</translation>
+        <translation>إعدادات الشاشة</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="71"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation>القائمة السّريعة</translation>
+        <translation>القائمة السريعة</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
-        <translation>الإعدادات المتقدّمة</translation>
+        <translation>الإعدادات المتقدمة</translation>
     </message>
 </context>
 <context>
@@ -167,17 +167,17 @@
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>هذا هو العرض الأساسيّ</translation>
+        <translation>هذا هو العرض الأساسي</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>هذه الشّاشة تمتدّ إلى عرض آخر</translation>
+        <translation>تمتد هذه الشاشة إلى عرض آخر</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation>متقدّم</translation>
+        <translation>متقدم</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation>التّدوير:</translation>
+        <translation>التدوير:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
@@ -217,7 +217,7 @@
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation>التّسلسليّ: %1
+        <translation>التسلسلي: %1
 </translation>
     </message>
     <message>
@@ -231,7 +231,7 @@
         <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation>الرّقم التّسلسليّ: %1
+        <translation>الرقم التسلسلي: %1
 </translation>
     </message>
     <message>
@@ -272,7 +272,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>أدر الإعدادات المحفوظة</translation>
+        <translation>أدِر الإعدادات المحفوظة</translation>
     </message>
 </context>
 <context>
@@ -285,17 +285,17 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>أتناسبك الإعدادات الحاليّة هذه؟</translation>
+        <translation>أتناسبك الإعدادات الحالية هذه؟</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation><numerusform>دقيقة متبقّية</numerusform>
-        <numerusform></numerusform>
-        <numerusform></numerusform>
-        <numerusform>%n دقائق متبقّية</numerusform>
-        <numerusform>%n دقائق متبقّية</numerusform>
-        <numerusform>%n دقائق متبقّية</numerusform>
+        <translation><numerusform>بقي أقل من دقيقة</numerusform>
+        <numerusform>بقي دقيقة واحدة</numerusform>
+        <numerusform>بقي دقيقتين</numerusform>
+        <numerusform>بقي %n دقائق</numerusform>
+        <numerusform>بقي %n دقيقة</numerusform>
+        <numerusform>بقي %n دقيقة</numerusform>
         </translation></message>
 </context>
 <context>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation>الاسم :</translation>
+        <translation>الاسم:</translation>
     </message>
 </context>
 </TS>
