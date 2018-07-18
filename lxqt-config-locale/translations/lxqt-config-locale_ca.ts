@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Voleu desar els canvis? Tindran efecte la propera vegada que inicieu sessió.</translation>
+        <translation>Voleu desar els canvis? Tindran efecte la pròxima vegada que inicieu la sessió.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
