@@ -236,7 +236,8 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>ID di dispositivo EISA: %1</translation>
+        <translation>ID di dispositivo EISA: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
