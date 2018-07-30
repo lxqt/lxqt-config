@@ -18,7 +18,7 @@
 
 #include "monitor.h"
 
-bool MonitorSavedSettings::operator==(const MonitorSavedSettings &obj)
+bool MonitorSavedSettings::operator==(const MonitorSavedSettings &obj) const
 {
     if(name != obj.name)
         return false;

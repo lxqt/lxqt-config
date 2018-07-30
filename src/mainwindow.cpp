@@ -65,7 +65,7 @@ public:
     inline void setXdg(XdgDesktopFile xdg) { d->xdg = xdg; }
     inline QString &category() const { return d->category; }
 
-    bool operator==(const ConfigPane &other)
+    bool operator==(const ConfigPane &other) const
     {
         return d->id == other.id();
     }
