@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>De KDE-extensie van XDG pictogramthema&apos;s -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleur pictogrammen in op basis van stijl van minitoepassing (palet)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Door gebruiker ingestelde bureaubladachtergrond negeren</translation>
     </message>
 </context>
 <context>
