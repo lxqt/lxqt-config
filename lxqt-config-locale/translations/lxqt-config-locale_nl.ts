@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wilt u uw wijzigingen opslaan? Ze zullen van kracht worden nadat u zich opnieuw hebt aangemeld.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
