@@ -11,22 +11,22 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation>Verlengde weergave</translation>
+        <translation> ❶ ❷ Verlengde weergave</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation>Verenigde weergave</translation>
+        <translation> ❶ ❶ Verenigde weergave</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation>Alleen de eerste</translation>
+        <translation> ❶     Alleen de eerste</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation>Alleen de tweede</translation>
+        <translation>     ❷ Alleen de tweede</translation>
     </message>
 </context>
 <context>
