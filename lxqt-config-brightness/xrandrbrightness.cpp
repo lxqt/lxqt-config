@@ -89,7 +89,7 @@ bool XRandrBrightness::backlight_get_with_range(xcb_randr_output_t output, long 
     , nullptr));
 
     if (!propertyReply) {
-        return -1;
+        return false;
     }
 
     if (propertyReply->range && xcb_randr_query_output_property_valid_values_length(propertyReply.data()) == 2) {
