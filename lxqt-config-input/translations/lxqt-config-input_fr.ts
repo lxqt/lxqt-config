@@ -103,12 +103,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Haut</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Bas</translation>
     </message>
     <message>
         <source>up</source>
@@ -126,7 +126,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Raccourcis pour basculer une disposition:</translation>
+        <translation>Raccourcis pour changer de disposition:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: Si vous utilisez une &lt;span style=&quot; font-weight:600;&quot;&gt;méthode de saisie&lt;/span&gt;, telle que IBus, uim, fcitx, ou gcin, les réglages suivants &lt;span style=&quot; font-weight:600;&quot;&gt;peuvent ne pas fonctionner&lt;/span&gt; parce qu&apos;ils sont substitués par celle-ci.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: Si vous utilisez une &lt;span style=&quot; font-weight:600;&quot;&gt;méthode de saisie&lt;/span&gt;, telle que IBus, uim, fcitx, ou gcin, les réglages suivants &lt;span style=&quot; font-weight:600;&quot;&gt;peuvent ne pas fonctionner&lt;/span&gt; parce qu&apos;ils sont écrasés par les méthodes de saisie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
