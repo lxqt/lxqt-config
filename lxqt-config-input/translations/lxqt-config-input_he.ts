@@ -6,59 +6,59 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>טופס</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation></translation>
+        <translation>זמן הבהוב סמן:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;מקלדת&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation></translation>
+        <translation>יש לצפצף כאשר יש תקלה בקלט המקלדת</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation></translation>
+        <translation> מ״ש</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation></translation>
+        <translation>חזרה על תווים</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation></translation>
+        <translation>ארוכה</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation></translation>
+        <translation>השהיית חזרה:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation></translation>
+        <translation>קצרה</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation></translation>
+        <translation>הפרש בין חזרות:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation></translation>
+        <translation>ניתן להקליד בתיבה שלהלן כדי לבדוק את הגדרות המקלדת שלך</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation></translation>
+        <translation>הפעלת NumLock לאחר הכניסה</translation>
     </message>
 </context>
 <context>
@@ -77,52 +77,52 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;פריסת מקלדת&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation></translation>
+        <translation>פריסה</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation></translation>
+        <translation>הגוון</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation></translation>
+        <translation>הו&amp;ספה</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation></translation>
+        <translation>הס&amp;רה</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation></translation>
+        <translation>למעלה</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation></translation>
+        <translation>למטה</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation></translation>
+        <translation>דגם מקלדת:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation></translation>
+        <translation>מקשים להחלפת פריסה:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation></translation>
+        <translation>אין</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
@@ -135,47 +135,47 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>טופס</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;עכבר&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation></translation>
+        <translation>תנועה</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation></translation>
+        <translation>מהירה</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation></translation>
+        <translation>אטית</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation></translation>
+        <translation>רגישות:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation></translation>
+        <translation>נמוכה</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation></translation>
+        <translation>תאוצה:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation></translation>
+        <translation>אטית</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="116"/>
@@ -186,17 +186,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation></translation>
+        <translation>הפרש בלחיצות כפולות:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation></translation>
+        <translation> מ״ש</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation></translation>
+        <translation>שורות לגלילה עם גלגלת:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
