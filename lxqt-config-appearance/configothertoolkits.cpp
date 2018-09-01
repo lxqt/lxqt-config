@@ -212,6 +212,10 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
     path = _get_config_path(path);
     
     QFile file(path);
+    if(! file.exists()) {
+        QFileInfo fileInfo(file);
+        QDir::home().mkpath(fileInfo.path());
+    }
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         return;
     }
