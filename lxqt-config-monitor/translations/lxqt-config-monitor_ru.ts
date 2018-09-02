@@ -201,37 +201,43 @@
         <location filename="../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation>Название: %1</translation>
+        <translation>Название: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation>Производитель: %1</translation>
+        <translation>Производитель: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation>Серийный номер: %1</translation>
+        <translation>Серийный номер: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Размер монитора: %1см x %2см</translation>
+        <translation>Размер монитора: %1см x %2см
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation>Серийный номер: %1</translation>
+        <translation>Серийный номер: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA ID устройства: %1</translation>
+        <translation>EISA ID устройства: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
