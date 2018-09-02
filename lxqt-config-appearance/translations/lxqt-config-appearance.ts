@@ -164,32 +164,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="57"/>
+        <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="63"/>
+        <location filename="../main.cpp" line="67"/>
         <source>Widget Style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="75"/>
+        <location filename="../main.cpp" line="81"/>
         <source>Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="80"/>
+        <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -202,38 +202,81 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="54"/>
-        <source>Toolbar button style:</source>
+        <location filename="../styleconfig.ui" line="42"/>
+        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
-        <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="67"/>
-        <source>Only display the text</source>
+        <source>GTK 3 Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
-        <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="77"/>
-        <source>The text appears under the icon</source>
+        <source>GTK 2 Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
+        <source>To attempt uniform theming, either select similar style/theme
+(if available) across all lists, or select &apos;gtk2&apos; Qt style (if available)
+ to mimic GTK themes.
+
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
+themes on the fly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="99"/>
+        <source>Toolbar button style:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="107"/>
+        <source>Only display the icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="112"/>
+        <source>Only display the text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="117"/>
+        <source>The text appears beside the icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="122"/>
+        <source>The text appears under the icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="127"/>
         <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="90"/>
+        <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="145"/>
+        <source>Qt Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ConfigOtherToolKits</name>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="143"/>
+        <source>GTK themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="144"/>
+        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
