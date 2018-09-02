@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Сравнение и сортировка:</translation>
+        <translation>Ср&amp;авнение и сортировка:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation>Имперская (Британия)</translation>
+        <translation>Имперская (Великобритания)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
