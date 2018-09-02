@@ -34,6 +34,7 @@
 #include <QFont>
 #include <QDateTime>
 #include <QMessageBox>
+#include <QProcess>
 
 #include <sys/types.h>
 #include <signal.h>
@@ -250,7 +251,7 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
         QFile file(gtkrcPath);
         if(file.exists()) {
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-                return QString();
+                return getDefaultGTKTheme();
             while (!file.atEnd()) {
                 QByteArray line = file.readLine().trimmed();
                 if(line.startsWith("gtk-theme-name")) {
@@ -268,7 +269,7 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
         QFile file(gtkrcPath);
         if(file.exists()) {
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-                return QString();
+                return getDefaultGTKTheme();
             bool settingsFound = false;
             while (!file.atEnd()) {
                 QByteArray line = file.readLine().trimmed();
@@ -287,7 +288,26 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
             file.close();
         }
     }
-    return QString();
+    return getDefaultGTKTheme();
+}
+
+QString ConfigOtherToolKits::getDefaultGTKTheme()
+{
+    // Get the GTK default theme. Command line:
+    // $ gsettings get org.gnome.desktop.interface gtk-theme
+    QProcess gsettings;
+    QStringList args;
+    args << "get" << "org.gnome.desktop.interface" << "gtk-theme";
+    gsettings.start("gsettings", args);
+    if(! gsettings.waitForFinished())
+        return QString();
+    QByteArray defaultTheme = gsettings.readAll();
+    gsettings.close();
+    if(defaultTheme.size() <= 1)
+        return QString();
+    // The theme has got quotation marks. Remove it:
+    defaultTheme.replace("'","");
+    return QString(defaultTheme);
 }
 
 void ConfigOtherToolKits::updateConfigFromSettings()
