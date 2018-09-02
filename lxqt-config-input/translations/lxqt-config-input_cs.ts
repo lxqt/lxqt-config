@@ -111,11 +111,11 @@
     </message>
     <message>
         <source>up</source>
-        <translation>nahoru</translation>
+        <translation type="vanished">nahoru</translation>
     </message>
     <message>
         <source>down</source>
-        <translation>dolů</translation>
+        <translation type="vanished">dolů</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>

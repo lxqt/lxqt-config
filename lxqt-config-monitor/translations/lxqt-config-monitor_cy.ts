@@ -284,6 +284,10 @@
         <source>%n second(s) remaining</source>
         <translation>
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
