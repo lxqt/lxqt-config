@@ -164,32 +164,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="57"/>
+        <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Διαμόρφωση της εμφάνισης του LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="63"/>
+        <location filename="../main.cpp" line="67"/>
         <source>Widget Style</source>
         <translation>Τεχνοτροπία συστατικού</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
         <translation>Θέμα εικονιδίων</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
         <translation>Θέμα LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="75"/>
+        <location filename="../main.cpp" line="81"/>
         <source>Font</source>
         <translation>Γραμματοσειρά</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="80"/>
+        <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
         <translation>Δρομέας</translation>
     </message>
@@ -202,39 +202,82 @@
         <translation>Τεχνοτροπία συστατικού</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="54"/>
+        <location filename="../styleconfig.ui" line="42"/>
+        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="62"/>
+        <source>GTK 3 Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="72"/>
+        <source>GTK 2 Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="82"/>
+        <source>To attempt uniform theming, either select similar style/theme
+(if available) across all lists, or select &apos;gtk2&apos; Qt style (if available)
+ to mimic GTK themes.
+
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
+themes on the fly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
         <translation>Ύφος των κουμπιών της γραμμής εργαλείων:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="62"/>
+        <location filename="../styleconfig.ui" line="107"/>
         <source>Only display the icon</source>
         <translation>Εμφάνιση μόνον του εικονιδίου</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="67"/>
+        <location filename="../styleconfig.ui" line="112"/>
         <source>Only display the text</source>
         <translation>Εμφάνιση μόνον του κειμένου</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="72"/>
+        <location filename="../styleconfig.ui" line="117"/>
         <source>The text appears beside the icon</source>
         <translation>Το κείμενο εμφανίζεται δίπλα από το εικονίδιο</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="77"/>
+        <location filename="../styleconfig.ui" line="122"/>
         <source>The text appears under the icon</source>
         <translation>Το κείμενο εμφανίζεται κάτω από το εικονίδιο</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="82"/>
+        <location filename="../styleconfig.ui" line="127"/>
         <source>Default</source>
         <translation>Εξ ορισμού</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="90"/>
+        <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
         <translation>Ενεργοποίηση των αντικειμένων με μονό κλικ</translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="145"/>
+        <source>Qt Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ConfigOtherToolKits</name>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="143"/>
+        <source>GTK themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="144"/>
+        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

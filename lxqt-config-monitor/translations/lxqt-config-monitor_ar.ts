@@ -290,13 +290,15 @@
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation><numerusform>بقي أقل من دقيقة</numerusform>
-        <numerusform>بقي دقيقة واحدة</numerusform>
-        <numerusform>بقي دقيقتين</numerusform>
-        <numerusform>بقي %n دقائق</numerusform>
-        <numerusform>بقي %n دقيقة</numerusform>
-        <numerusform>بقي %n دقيقة</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>بقي أقل من دقيقة</numerusform>
+            <numerusform>بقي دقيقة واحدة</numerusform>
+            <numerusform>بقي دقيقتين</numerusform>
+            <numerusform>بقي %n دقائق</numerusform>
+            <numerusform>بقي %n دقيقة</numerusform>
+            <numerusform>بقي %n دقيقة</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>SaveSettings</name>

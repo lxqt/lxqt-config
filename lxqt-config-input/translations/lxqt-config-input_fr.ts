@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Délai de répétition :</translation>
+        <translation>Délai de répétition&#xa0;:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation>Modèle de clavier :</translation>
+        <translation>Modèle de clavier&#xa0;:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
@@ -169,7 +169,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation>Sensibilité :</translation>
+        <translation>Sensibilité&#xa0;:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation>Accélération :</translation>
+        <translation>Accélération&#xa0;:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
