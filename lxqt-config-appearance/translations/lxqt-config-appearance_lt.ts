@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nustatyti GTK temas (GTK konfigūracijos failai bus nustelbti!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 tema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 tema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,13 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Norėdami pasiekti suvienodintą apipavidalinimą, pasirinkite
+visuose sąrašuose panašų stilių/temą (jei prieinama), arba
+pasirinkite &quot;gtk2&quot; Qt stilių (jei prieinama), kad pamėgdžiotumėte
+GTK temas.
+
+Įsitikinkite, kad esate įdiegę &quot;xsettingsd&quot;, kad padėtumėte GTK
+programų temoms būti akimirksniu pritaikytoms.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +270,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt stilius</translation>
     </message>
 </context>
 <context>
@@ -272,12 +278,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK temos</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&quot;%1&quot; buvo perrašyta.&lt;/p&gt;&lt;p&gt;Savo senųjų nustatymų kopiją galite rasti ties &quot;%2&quot;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
