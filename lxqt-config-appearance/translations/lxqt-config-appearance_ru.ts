@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Расширение KDE тем значков XDG -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет значков в соответствии с палитрой виджетов</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Заменить пользовательские обои</translation>
     </message>
 </context>
 <context>
@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Установить темы GTK (будет перезаписан файл конфигурации GTK)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,12 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Для достижения однородного применения тем, выберите
+похожий стиль/тему во всех списках, или же выберите стиль Qt
+«gtk2» (если доступно), чтобы имитировать темы GTK.
+
+Убедитесь, что &apos;xsettingsd&apos; установлен, чтобы GTK-приложения
+могли немедленно применять новые темы.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +269,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль Qt</translation>
     </message>
 </context>
 <context>
@@ -272,12 +277,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Темы GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;«%1» был перезаписан.&lt;/p&gt;&lt;p&gt;Копия прежних настроек находится в «%2»&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
