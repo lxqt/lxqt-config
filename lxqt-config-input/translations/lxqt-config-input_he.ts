@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;לתשומת לבך&lt;/span&gt;: אם במחשב זה נעשה שימוש ב&lt;span style=&quot; font-weight:600;&quot;&gt;שיטות קלט&lt;/span&gt;, כגון IBus,‏ uim,‏ fcitx, או gcin, יתכן כי ההגדרות שכאן &lt;span style=&quot; font-weight:600;&quot;&gt;לא תעבודנה&lt;/span&gt; כיוון שהן נדרסות על ידי שיטות הקלט.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -201,12 +201,12 @@
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation></translation>
+        <translation>יד שמאלית (להחליף בין הכפתור השמאלי לימני)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation></translation>
+        <translation>לחיצה בודדת להפעלת פריטים</translation>
     </message>
 </context>
 <context>
@@ -214,27 +214,27 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation></translation>
+        <translation>הגדרות מקלדת ועכבר</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
         <source>Mouse</source>
-        <translation></translation>
+        <translation>עכבר</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
         <source>Cursor</source>
-        <translation></translation>
+        <translation>סמן</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
         <source>Keyboard</source>
-        <translation></translation>
+        <translation>מקלדת</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
         <source>Keyboard Layout</source>
-        <translation></translation>
+        <translation>פריסת מקלדת</translation>
     </message>
 </context>
 <context>
@@ -242,17 +242,17 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation></translation>
+        <translation>נא לבחור בפריסת מקלדת</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation></translation>
+        <translation>פריסת מקלדת</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation></translation>
+        <translation>הגוון</translation>
     </message>
 </context>
 </TS>
