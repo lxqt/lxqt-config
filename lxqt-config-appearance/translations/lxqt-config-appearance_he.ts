@@ -191,7 +191,7 @@
     <message>
         <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
-        <translation>סמן עכבר</translation>
+        <translation>סמן</translation>
     </message>
 </context>
 <context>
