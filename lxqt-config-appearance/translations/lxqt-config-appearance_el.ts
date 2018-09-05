@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός θεμάτων GTK (τα αρχεία διαμόρφωσης του GTK θα αντικατασταθούν!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,9 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Για να καταφέρετε μια ομοιόμορφη θεματοποίηση, μπορείτε είτε να επιλέξετε ένα παρεμφερές θέμα/ύφος (αν είναι διαθέσιμο) μεταξύ των κατάστιχων, είτε να επιλέξετε το ύφος Qt &apos;gtk&apos; (αν είναι διαθέσιμο) να την μίμηση των θεμάτων GTK.
+
+Σιγουρευτείτε ότι το &apos;xsettingsd&apos; είναι εγκατεστημένο ούτως ώστε να βοηθήσετε τις εφαρμογές GTK να εφαρμόζουν τα θέματα σε πραγματικό χρόνο.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +266,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Ύφος Qt</translation>
     </message>
 </context>
 <context>
@@ -272,12 +274,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέματα GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Το %1 αντικαταστάθηκε.&lt;/p&gt;&lt;p&gt;Μπορείτε να βρείτε ένα αντίγραφο της παλιά διαμόρφωσης στο &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
