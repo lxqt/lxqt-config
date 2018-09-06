@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Estableix els temes de GTK (es sobreescriuran els fitxers de configuració de GTK!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema de GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema de GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,12 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per provar temàtiques uniformes, seleccioneu un estil o tema
+similar (si està disponible) de tot el llistat, o seleccioneu l&apos;estil
+Qt de «gtk2» (si està disponible) per imitar els temes de GTK.
+
+Assegureu-vos que «xsettingsd» està instal·lat per ajudar a les
+aplicacions GTK aplicar els temes sobre la marxa.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +269,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil Qt</translation>
     </message>
 </context>
 <context>
@@ -272,12 +277,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Temes de GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;«%1» ha estat sobreescrit.&lt;/p&gt;&lt;p&gt;Podeu trobar una còpia dels vostres ajusts antics a «%2»&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
