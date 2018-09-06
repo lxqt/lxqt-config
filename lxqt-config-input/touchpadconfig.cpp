@@ -72,6 +72,10 @@ void TouchpadConfig::initFeatureControl(QCheckBox* control, int featureEnabled)
 
 void TouchpadConfig::initControls()
 {
+    if (curDevice < 0) {
+        return;
+    }
+
     const TouchpadDevice& device = devices[curDevice];
     initFeatureControl(ui.tappingEnabledCheckBox, device.tappingEnabled());
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());

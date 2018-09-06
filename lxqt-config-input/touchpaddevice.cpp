@@ -162,6 +162,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
     
     udev_enumerate *enumerate = udev_enumerate_new(ud);
     udev_enumerate_add_match_property(enumerate, "ID_INPUT_TOUCHPAD", "1");
+    udev_enumerate_add_match_property(enumerate, "ID_INPUT_MOUSE", "1");
     udev_enumerate_scan_devices(enumerate);
     udev_list_entry *devices = udev_enumerate_get_list_entry(enumerate);
     for (udev_list_entry *entry = devices; entry; entry = udev_list_entry_get_next(entry)) {
@@ -254,6 +255,10 @@ int TouchpadDevice::scrollMethodsAvailable() const
 {
     QList<QVariant> values = get_xi2_property(LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE);
 
+    if (!values.size()) {
+        return 0;
+    }
+
     Q_ASSERT(values.size() == 3);
 
     return (values[0].toInt() ? TWO_FINGER : 0) |
@@ -264,6 +269,10 @@ int TouchpadDevice::scrollMethodsAvailable() const
 ScrollingMethod TouchpadDevice::scrollingMethodEnabled() const
 {
     QList<QVariant> values = get_xi2_property(LIBINPUT_PROP_SCROLL_METHOD_ENABLED);
+
+    if (!values.size()) {
+        return NONE;
+    }
 
     Q_ASSERT(values.size() == 3);
     
