@@ -1,8 +1,11 @@
 project(lxqt-config-input)
 find_package(X11 REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(XORG_LIBINPUT REQUIRED xorg-libinput)
 
 include_directories(
     ${X11_INCLUDE_DIR}
+    ${XORG_LIBINPUT_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
 )
 

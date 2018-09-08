@@ -24,7 +24,7 @@
 #include <LXQt/Settings>
 #include <X11/Xatom.h>
 #include <X11/extensions/XInput2.h>
-#include <xorg/libinput-properties.h>
+#include <libinput-properties.h>
 
 static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
 {
