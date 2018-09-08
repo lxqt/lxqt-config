@@ -301,7 +301,7 @@ QString ConfigOtherToolKits::getDefaultGTKTheme()
     gsettings.start("gsettings", args);
     if(! gsettings.waitForFinished())
         return QString();
-    QByteArray defaultTheme = gsettings.readAll();
+    QByteArray defaultTheme = gsettings.readAll().trimmed();
     gsettings.close();
     if(defaultTheme.size() <= 1)
         return QString();
