@@ -22,6 +22,10 @@
 #include <QList>
 #include <QVariant>
 
+namespace LXQt {
+    class Settings;
+}
+
 enum ScrollingMethod
 {
     NONE = 0,
@@ -29,6 +33,10 @@ enum ScrollingMethod
     EDGE = 2,
     BUTTON = 4
 };
+
+const char TAPPING_ENABLED[] = "tappingEnabled";
+const char NATURAL_SCROLLING_ENABLED[] = "naturalScrollingEnabled";
+const char SCROLLING_METHOD_ENABLED[] = "scrollingMethodEnabled";
 
 class TouchpadDevice
 {
@@ -38,18 +46,22 @@ public:
     static QList<TouchpadDevice> enumerate_from_udev();
 
     const QString& name() const { return m_name; }
+    QString escapedName() const;
 
     int tappingEnabled() const;
     int naturalScrollingEnabled() const;
-    bool setTappingEnabled(bool enabled);
-    bool setNaturalScrollingEnabled(bool enabled);
+    bool setTappingEnabled(bool enabled) const;
+    bool setNaturalScrollingEnabled(bool enabled) const;
     bool oldTappingEnabled() const { return m_oldTappingEnabled; }
     bool oldNaturalScrollingEnabled() const { return m_oldNaturalScrollingEnabled; }
     ScrollingMethod oldScrollingMethodEnabled() const { return m_oldScrollingMethodEnabled; }
 
     int scrollMethodsAvailable() const;
     ScrollingMethod scrollingMethodEnabled() const;
-    bool setScrollingMethodEnabled(ScrollingMethod method);
+    bool setScrollingMethodEnabled(ScrollingMethod method) const;
+
+    static void loadSettings(LXQt::Settings* settings);
+    void saveSettings(LXQt::Settings* settings) const;
 private:
     QString m_name;
     QString devnode;
@@ -60,7 +72,7 @@ private:
     ScrollingMethod m_oldScrollingMethodEnabled;
 
     QList<QVariant> get_xi2_property(const char* prop) const;
-    bool set_xi2_property(const char* prop, QList<QVariant> values);
+    bool set_xi2_property(const char* prop, QList<QVariant> values) const;
     bool find_xi2_device();
     int featureEnabled(const char* prop) const;
 };

@@ -106,18 +106,10 @@ void TouchpadConfig::initControls()
 
 void TouchpadConfig::accept()
 {
-    settings->beginGroup("Touchpad");
     for (const TouchpadDevice& device : devices)
     {
-        // device names may contain '/' or '\\' so it should be escaped first
-        // XXX: special characters are double escaped (see writeIniFile in qsettings.cpp)
-        settings->beginGroup(QUrl::toPercentEncoding(device.name(), QByteArray(), QByteArray("/\\")));
-        settings->setValue("tappingEnabled", device.tappingEnabled());
-        settings->setValue("naturalScrollingEnabled", device.naturalScrollingEnabled());
-        settings->setValue("scrollingMethodEnabled", device.scrollingMethodEnabled());
-        settings->endGroup();
+        device.saveSettings(settings);
     }
-    settings->endGroup();
 }
 
 void TouchpadConfig::reset()

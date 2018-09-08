@@ -21,6 +21,7 @@
 #include <QDebug>
 #include <QX11Info>
 #include <libudev.h>
+#include <LXQt/Settings>
 #include <X11/Xatom.h>
 #include <X11/extensions/XInput2.h>
 #include <xorg/libinput-properties.h>
@@ -142,7 +143,7 @@ QList<QVariant> TouchpadDevice::get_xi2_property(const char* prop) const
     return xi2_get_device_property(deviceid, prop);
 }
 
-bool TouchpadDevice::set_xi2_property(const char* prop, QList<QVariant> values)
+bool TouchpadDevice::set_xi2_property(const char* prop, QList<QVariant> values) const
 {
     Q_ASSERT(deviceid);
 
@@ -159,7 +160,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
         qWarning() << "Fails to initialize udev";
         return ret;
     }
-    
+
     udev_enumerate *enumerate = udev_enumerate_new(ud);
     udev_enumerate_add_match_property(enumerate, "ID_INPUT_TOUCHPAD", "1");
     udev_enumerate_add_match_property(enumerate, "ID_INPUT_MOUSE", "1");
@@ -218,6 +219,49 @@ bool TouchpadDevice::find_xi2_device()
     return found;
 }
 
+QString TouchpadDevice::escapedName() const
+{
+    // device names may contain '/' or '\\' so it should be escaped first
+    // XXX: special characters are double escaped (see writeIniFile in qsettings.cpp)
+    return QUrl::toPercentEncoding(name(), QByteArray(), QByteArray("/\\"));
+}
+
+void TouchpadDevice::loadSettings(LXQt::Settings* settings)
+{
+    QList<TouchpadDevice> devices = enumerate_from_udev();
+    settings->beginGroup("Touchpad");
+    for (const TouchpadDevice& device : devices) {
+        qDebug() << "Load settings for" << device.name();
+
+        settings->beginGroup(device.escapedName());
+        if (settings->contains(TAPPING_ENABLED)) {
+            device.setTappingEnabled(settings->value(TAPPING_ENABLED).toBool());
+        }
+        if (settings->contains(NATURAL_SCROLLING_ENABLED)) {
+            device.setNaturalScrollingEnabled(settings->value(NATURAL_SCROLLING_ENABLED).toBool());
+        }
+        if (settings->contains(SCROLLING_METHOD_ENABLED)) {
+            device.setScrollingMethodEnabled(
+                static_cast<ScrollingMethod>(settings->value(SCROLLING_METHOD_ENABLED).toInt()));
+        }
+        settings->endGroup();
+    }
+    settings->endGroup();
+}
+
+void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
+{
+    settings->beginGroup("Touchpad");
+
+    settings->beginGroup(escapedName());
+    settings->setValue(TAPPING_ENABLED, tappingEnabled());
+    settings->setValue(NATURAL_SCROLLING_ENABLED, naturalScrollingEnabled());
+    settings->setValue(SCROLLING_METHOD_ENABLED, scrollingMethodEnabled());
+    settings->endGroup(); // device name
+
+    settings->endGroup(); // "Touchpad"
+}
+
 int TouchpadDevice::featureEnabled(const char* prop) const
 {
     QList<QVariant> propVal = get_xi2_property(prop);
@@ -241,12 +285,12 @@ int TouchpadDevice::naturalScrollingEnabled() const
     return featureEnabled(LIBINPUT_PROP_NATURAL_SCROLL);
 }
 
-bool TouchpadDevice::setTappingEnabled(bool enabled)
+bool TouchpadDevice::setTappingEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_TAP, QList<QVariant>({enabled ? 1 : 0}));
 }
 
-bool TouchpadDevice::setNaturalScrollingEnabled(bool enabled)
+bool TouchpadDevice::setNaturalScrollingEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_NATURAL_SCROLL, QList<QVariant>({enabled ? 1 : 0}));
 }
@@ -275,7 +319,7 @@ ScrollingMethod TouchpadDevice::scrollingMethodEnabled() const
     }
 
     Q_ASSERT(values.size() == 3);
-    
+
     // those methods are mutually exclusive
     if (values[0].toInt())
         return TWO_FINGER;
@@ -287,7 +331,7 @@ ScrollingMethod TouchpadDevice::scrollingMethodEnabled() const
         return NONE;
 }
 
-bool TouchpadDevice::setScrollingMethodEnabled(ScrollingMethod method)
+bool TouchpadDevice::setScrollingMethodEnabled(ScrollingMethod method) const
 {
     QList<QVariant> values;
 

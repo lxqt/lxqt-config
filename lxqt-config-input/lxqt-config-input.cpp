@@ -26,6 +26,7 @@
 #include "../liblxqt-config-cursor/selectwnd.h"
 #include "keyboardlayoutconfig.h"
 #include "touchpadconfig.h"
+#include "touchpaddevice.h"
 
 int main(int argc, char** argv) {
     LXQt::SingleApplication app(argc, argv);
@@ -40,6 +41,9 @@ int main(int argc, char** argv) {
     app.setApplicationVersion(VERINFO);
 
     dlgOptions.setCommandLine(&parser);
+    QCommandLineOption loadOption("load-touchpad",
+            app.tr("Load last touchpad settings."));
+    parser.addOption(loadOption);
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
@@ -49,6 +53,13 @@ int main(int argc, char** argv) {
     if(configName.isEmpty())
       configName = "session";
     LXQt::Settings settings(configName);
+
+    bool loadLastTouchpadSettings = parser.isSet(loadOption);
+    if (loadLastTouchpadSettings) {
+        TouchpadDevice::loadSettings(&settings);
+        return 0;
+    }
+
     LXQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
     app.setActivationWindow(&dlg);
 
