@@ -20,6 +20,7 @@
 #include "touchpaddevice.h"
 
 #include <QUrl>
+#include <LXQt/AutostartEntry>
 #include <LXQt/Settings>
 
 TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
@@ -110,6 +111,13 @@ void TouchpadConfig::accept()
     {
         device.saveSettings(settings);
     }
+
+    LXQt::AutostartEntry autoStart("lxqt-config-touchpad-autostart.desktop");
+    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, "lxqt-config-touchpad-autostart", "lxqt-config-input --load-touchpad");
+    desktopFile.setValue("OnlyShowIn", "LXQt");
+    desktopFile.setValue("Comment", "Autostart touchpad settings for lxqt-config-input");
+    autoStart.setFile(desktopFile);
+    autoStart.commit();
 }
 
 void TouchpadConfig::reset()
