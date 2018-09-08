@@ -145,7 +145,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Farvelagte ikoner baseret på widgetstil (palet)</translation>
+        <translation>Farvelæg ikoner baseret på widgetstil (palet)</translation>
     </message>
 </context>
 <context>
