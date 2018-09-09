@@ -52,6 +52,7 @@ private:
     void initFeatureControl(QCheckBox* control, int featureEnabled);
     void setTappingEnabled(int state);
     void setNaturalScrollingEnabled(int state);
+    void setTapToDragEnabled(int state);
 };
 
 #endif

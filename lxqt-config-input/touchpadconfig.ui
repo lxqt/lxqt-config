@@ -19,7 +19,7 @@
      <x>0</x>
      <y>10</y>
      <width>551</width>
-     <height>171</height>
+     <height>192</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -48,6 +48,13 @@
      <widget class="QCheckBox" name="naturalScrollingEnabledCheckBox">
       <property name="text">
        <string>Natural Scrolling</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="tapToDragEnabledCheckBox">
+      <property name="text">
+       <string>Tap to drag</string>
       </property>
      </widget>
     </item>
@@ -92,8 +99,6 @@
     </item>
    </layout>
   </widget>
-  <zorder>verticalLayoutWidget</zorder>
-  <zorder>naturalScrollingEnabledCheckBox</zorder>
  </widget>
  <resources/>
  <connections/>

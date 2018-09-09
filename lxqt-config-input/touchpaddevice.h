@@ -36,6 +36,7 @@ enum ScrollingMethod
 
 const char TAPPING_ENABLED[] = "tappingEnabled";
 const char NATURAL_SCROLLING_ENABLED[] = "naturalScrollingEnabled";
+const char TAP_TO_DRAG_ENABLED[] = "tapToDragEnabled";
 const char SCROLLING_METHOD_ENABLED[] = "scrollingMethodEnabled";
 
 class TouchpadDevice
@@ -50,10 +51,13 @@ public:
 
     int tappingEnabled() const;
     int naturalScrollingEnabled() const;
+    int tapToDragEnabled() const;
     bool setTappingEnabled(bool enabled) const;
     bool setNaturalScrollingEnabled(bool enabled) const;
+    bool setTapToDragEnabled(bool enabled) const;
     bool oldTappingEnabled() const { return m_oldTappingEnabled; }
     bool oldNaturalScrollingEnabled() const { return m_oldNaturalScrollingEnabled; }
+    bool oldTapToDragEnabled() const { return m_oldTapToDragEnabled; }
     ScrollingMethod oldScrollingMethodEnabled() const { return m_oldScrollingMethodEnabled; }
 
     int scrollMethodsAvailable() const;
@@ -69,6 +73,7 @@ private:
 
     bool m_oldTappingEnabled;
     bool m_oldNaturalScrollingEnabled;
+    bool m_oldTapToDragEnabled;
     ScrollingMethod m_oldScrollingMethodEnabled;
 
     QList<QVariant> get_xi2_property(const char* prop) const;

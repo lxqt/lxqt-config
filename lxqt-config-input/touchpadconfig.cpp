@@ -46,6 +46,8 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
             this, &TouchpadConfig::setTappingEnabled);
     connect(ui.naturalScrollingEnabledCheckBox, &QCheckBox::stateChanged,
             this, &TouchpadConfig::setNaturalScrollingEnabled);
+    connect(ui.tapToDragEnabledCheckBox, &QCheckBox::stateChanged,
+            this, &TouchpadConfig::setTapToDragEnabled);
     connect(ui.twoFingerScrollingRadioButton, &QRadioButton::toggled,
             this, &TouchpadConfig::scrollingRadioButtonToggled);
     connect(ui.edgeScrollingRadioButton, &QRadioButton::toggled,
@@ -80,6 +82,7 @@ void TouchpadConfig::initControls()
     const TouchpadDevice& device = devices[curDevice];
     initFeatureControl(ui.tappingEnabledCheckBox, device.tappingEnabled());
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
+    initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
 
     int scrollMethodsAvailable = device.scrollMethodsAvailable();
     ui.twoFingerScrollingRadioButton->setEnabled(scrollMethodsAvailable & TWO_FINGER);
@@ -126,6 +129,7 @@ void TouchpadConfig::reset()
     {
         device.setTappingEnabled(device.oldTappingEnabled());
         device.setNaturalScrollingEnabled(device.oldNaturalScrollingEnabled());
+        device.setTapToDragEnabled(device.oldTapToDragEnabled());
         device.setScrollingMethodEnabled(device.oldScrollingMethodEnabled());
     }
     initControls();
@@ -141,6 +145,12 @@ void TouchpadConfig::setTappingEnabled(int state)
 void TouchpadConfig::setNaturalScrollingEnabled(int state)
 {
     devices[curDevice].setNaturalScrollingEnabled(state == Qt::Checked);
+    accept();
+}
+
+void TouchpadConfig::setTapToDragEnabled(int state)
+{
+    devices[curDevice].setTapToDragEnabled(state == Qt::Checked);
     accept();
 }
 

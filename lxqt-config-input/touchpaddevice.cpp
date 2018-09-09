@@ -180,6 +180,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
                 qDebug() << "Detected" << dev.m_name << "on" << dev.devnode;
                 dev.m_oldTappingEnabled = dev.tappingEnabled();
                 dev.m_oldNaturalScrollingEnabled = dev.naturalScrollingEnabled();
+                dev.m_oldTapToDragEnabled = dev.tapToDragEnabled();
                 dev.m_oldScrollingMethodEnabled = dev.scrollingMethodEnabled();
                 ret << dev;
             }
@@ -240,6 +241,9 @@ void TouchpadDevice::loadSettings(LXQt::Settings* settings)
         if (settings->contains(NATURAL_SCROLLING_ENABLED)) {
             device.setNaturalScrollingEnabled(settings->value(NATURAL_SCROLLING_ENABLED).toBool());
         }
+        if (settings->contains(TAP_TO_DRAG_ENABLED)) {
+            device.setTapToDragEnabled(settings->value(TAP_TO_DRAG_ENABLED).toBool());
+        }
         if (settings->contains(SCROLLING_METHOD_ENABLED)) {
             device.setScrollingMethodEnabled(
                 static_cast<ScrollingMethod>(settings->value(SCROLLING_METHOD_ENABLED).toInt()));
@@ -256,6 +260,7 @@ void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
     settings->beginGroup(escapedName());
     settings->setValue(TAPPING_ENABLED, tappingEnabled());
     settings->setValue(NATURAL_SCROLLING_ENABLED, naturalScrollingEnabled());
+    settings->setValue(TAP_TO_DRAG_ENABLED, tapToDragEnabled());
     settings->setValue(SCROLLING_METHOD_ENABLED, scrollingMethodEnabled());
     settings->endGroup(); // device name
 
@@ -285,6 +290,11 @@ int TouchpadDevice::naturalScrollingEnabled() const
     return featureEnabled(LIBINPUT_PROP_NATURAL_SCROLL);
 }
 
+int TouchpadDevice::tapToDragEnabled() const
+{
+    return featureEnabled(LIBINPUT_PROP_TAP_DRAG);
+}
+
 bool TouchpadDevice::setTappingEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_TAP, QList<QVariant>({enabled ? 1 : 0}));
@@ -293,6 +303,11 @@ bool TouchpadDevice::setTappingEnabled(bool enabled) const
 bool TouchpadDevice::setNaturalScrollingEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_NATURAL_SCROLL, QList<QVariant>({enabled ? 1 : 0}));
+}
+
+bool TouchpadDevice::setTapToDragEnabled(bool enabled) const
+{
+    return set_xi2_property(LIBINPUT_PROP_TAP_DRAG, QList<QVariant>({enabled ? 1 : 0}));
 }
 
 int TouchpadDevice::scrollMethodsAvailable() const
