@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2016 Yen Chi Hsuan <yan12125@gmail.com>
+    Copyright (C) 2016-2018 Chih-Hsuan Yen <yan12125@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
