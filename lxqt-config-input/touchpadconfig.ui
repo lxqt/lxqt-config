@@ -40,7 +40,7 @@
     <item>
      <widget class="QCheckBox" name="tappingEnabledCheckBox">
       <property name="text">
-       <string>Tapping</string>
+       <string>Single click to activate items</string>
       </property>
      </widget>
     </item>
