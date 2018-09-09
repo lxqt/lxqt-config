@@ -53,6 +53,7 @@ private:
     void setTappingEnabled(int state);
     void setNaturalScrollingEnabled(int state);
     void setTapToDragEnabled(int state);
+    void setAccelSpeed(float speed);
 };
 
 #endif

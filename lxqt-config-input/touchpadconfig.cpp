@@ -19,6 +19,7 @@
 #include "touchpadconfig.h"
 #include "touchpaddevice.h"
 
+#include <cmath>
 #include <QUrl>
 #include <LXQt/AutostartEntry>
 #include <LXQt/Settings>
@@ -48,6 +49,8 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
             this, &TouchpadConfig::setNaturalScrollingEnabled);
     connect(ui.tapToDragEnabledCheckBox, &QCheckBox::stateChanged,
             this, &TouchpadConfig::setTapToDragEnabled);
+    connect(ui.accelSpeedDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged),
+            this, [this] (double value) { setAccelSpeed(static_cast<float>(value)); });
     connect(ui.twoFingerScrollingRadioButton, &QRadioButton::toggled,
             this, &TouchpadConfig::scrollingRadioButtonToggled);
     connect(ui.edgeScrollingRadioButton, &QRadioButton::toggled,
@@ -83,6 +86,14 @@ void TouchpadConfig::initControls()
     initFeatureControl(ui.tappingEnabledCheckBox, device.tappingEnabled());
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
     initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
+
+    float accelSpeed = device.accelSpeed();
+    if (!std::isnan(accelSpeed)) {
+        ui.accelSpeedDoubleSpinBox->setEnabled(true);
+        ui.accelSpeedDoubleSpinBox->setValue(accelSpeed);
+    } else {
+        ui.accelSpeedDoubleSpinBox->setEnabled(false);
+    }
 
     int scrollMethodsAvailable = device.scrollMethodsAvailable();
     ui.twoFingerScrollingRadioButton->setEnabled(scrollMethodsAvailable & TWO_FINGER);
@@ -130,6 +141,7 @@ void TouchpadConfig::reset()
         device.setTappingEnabled(device.oldTappingEnabled());
         device.setNaturalScrollingEnabled(device.oldNaturalScrollingEnabled());
         device.setTapToDragEnabled(device.oldTapToDragEnabled());
+        device.setAccelSpeed(device.oldAccelSpeed());
         device.setScrollingMethodEnabled(device.oldScrollingMethodEnabled());
     }
     initControls();
@@ -151,6 +163,12 @@ void TouchpadConfig::setNaturalScrollingEnabled(int state)
 void TouchpadConfig::setTapToDragEnabled(int state)
 {
     devices[curDevice].setTapToDragEnabled(state == Qt::Checked);
+    accept();
+}
+
+void TouchpadConfig::setAccelSpeed(float speed)
+{
+    devices[curDevice].setAccelSpeed(speed);
     accept();
 }
 

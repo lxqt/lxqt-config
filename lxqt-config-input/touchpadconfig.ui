@@ -19,7 +19,7 @@
      <x>0</x>
      <y>10</y>
      <width>551</width>
-     <height>192</height>
+     <height>265</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -34,6 +34,33 @@
       </item>
       <item>
        <widget class="QComboBox" name="devicesComboBox"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Acceleration speed</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="accelSpeedDoubleSpinBox">
+        <property name="decimals">
+         <number>2</number>
+        </property>
+        <property name="minimum">
+         <double>-1.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

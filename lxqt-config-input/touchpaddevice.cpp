@@ -18,6 +18,7 @@
 
 #include "touchpaddevice.h"
 
+#include <cmath>
 #include <QDebug>
 #include <QX11Info>
 #include <libudev.h>
@@ -70,7 +71,13 @@ static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
             break;
         }
         default:
-            qWarning() << "Unrecognized type " << act_type << " for property " << prop;
+            if (act_type == XInternAtom(dpy, "FLOAT", False)) {
+                Q_ASSERT(act_format == 32);
+                ret << *reinterpret_cast<float*>(ptr);
+                ptr += 4;
+            } else {
+                qWarning() << "Unrecognized type" << act_type << "for property" << prop;
+            }
         }
     }
 
@@ -89,6 +96,7 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
     int act_format;
     unsigned long nitems, bytes_after;
     unsigned char *data;
+    float* float_data = nullptr;
     // get the property first to determine its type and format
     XIGetProperty(dpy, deviceid, prop_atom, 0, 1000, False, AnyPropertyType,
                   &act_type, &act_format, &nitems, &bytes_after, &data);
@@ -99,7 +107,8 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
 
     XFree(data);
 
-    switch (values[0].type())
+    auto dataType = values[0].type();
+    switch (dataType)
     {
     case QVariant::Int:
         Q_ASSERT(act_type == XA_INTEGER);
@@ -123,8 +132,18 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
             }
         }
         break;
+    case QMetaType::Float:
+        Q_ASSERT(act_type == XInternAtom(dpy, "FLOAT", False));
+        Q_ASSERT(act_format == 32);
+        float_data = new float[values.size()];
+        for (int i = 0; i < values.size(); i++)
+        {
+            float_data[i] = values[i].toFloat();
+        }
+        data = reinterpret_cast<unsigned char*>(float_data);
+        break;
     default:
-        qWarning("Unsupported data type");
+        qWarning() << "Unsupported data type" << dataType;
     }
     if (!data)
     {
@@ -133,6 +152,9 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
     XIChangeProperty(dpy, deviceid, prop_atom, act_type, act_format,
                      XIPropModeReplace, data, values.size());
     // XXX How to catch errors?
+
+    delete [] float_data;
+
     return true;
 }
 
@@ -181,6 +203,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
                 dev.m_oldTappingEnabled = dev.tappingEnabled();
                 dev.m_oldNaturalScrollingEnabled = dev.naturalScrollingEnabled();
                 dev.m_oldTapToDragEnabled = dev.tapToDragEnabled();
+                dev.m_oldAccelSpeed = dev.accelSpeed();
                 dev.m_oldScrollingMethodEnabled = dev.scrollingMethodEnabled();
                 ret << dev;
             }
@@ -244,6 +267,9 @@ void TouchpadDevice::loadSettings(LXQt::Settings* settings)
         if (settings->contains(TAP_TO_DRAG_ENABLED)) {
             device.setTapToDragEnabled(settings->value(TAP_TO_DRAG_ENABLED).toBool());
         }
+        if (settings->contains(ACCELERATION_SPEED)) {
+            device.setAccelSpeed(settings->value(ACCELERATION_SPEED).toFloat());
+        }
         if (settings->contains(SCROLLING_METHOD_ENABLED)) {
             device.setScrollingMethodEnabled(
                 static_cast<ScrollingMethod>(settings->value(SCROLLING_METHOD_ENABLED).toInt()));
@@ -261,6 +287,7 @@ void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
     settings->setValue(TAPPING_ENABLED, tappingEnabled());
     settings->setValue(NATURAL_SCROLLING_ENABLED, naturalScrollingEnabled());
     settings->setValue(TAP_TO_DRAG_ENABLED, tapToDragEnabled());
+    settings->setValue(ACCELERATION_SPEED, accelSpeed());
     settings->setValue(SCROLLING_METHOD_ENABLED, scrollingMethodEnabled());
     settings->endGroup(); // device name
 
@@ -295,6 +322,19 @@ int TouchpadDevice::tapToDragEnabled() const
     return featureEnabled(LIBINPUT_PROP_TAP_DRAG);
 }
 
+float TouchpadDevice::accelSpeed() const
+{
+    QList<QVariant> propVal = get_xi2_property(LIBINPUT_PROP_ACCEL);
+    if (propVal.size())
+    {
+        return propVal[0].toFloat();
+    }
+    else
+    {
+        return std::nanf("");
+    }
+}
+
 bool TouchpadDevice::setTappingEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_TAP, QList<QVariant>({enabled ? 1 : 0}));
@@ -308,6 +348,11 @@ bool TouchpadDevice::setNaturalScrollingEnabled(bool enabled) const
 bool TouchpadDevice::setTapToDragEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_TAP_DRAG, QList<QVariant>({enabled ? 1 : 0}));
+}
+
+bool TouchpadDevice::setAccelSpeed(float speed) const
+{
+    return set_xi2_property(LIBINPUT_PROP_ACCEL, QList<QVariant>({speed}));
 }
 
 int TouchpadDevice::scrollMethodsAvailable() const
