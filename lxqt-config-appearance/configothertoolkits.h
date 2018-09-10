@@ -42,6 +42,7 @@ public:
     QString getGTKThemeFromRCFile(QString version);
     QString getGTKConfigPath(QString version);
     bool backupGTKSettings(QString version);
+    QString getDefaultGTKTheme();
 
 public slots:
     void setConfig();
