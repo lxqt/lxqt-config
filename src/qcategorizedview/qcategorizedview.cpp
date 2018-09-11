@@ -868,8 +868,8 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
             } else {
                 option.state &= ~QStyle::State_Selected;
             }
-            option.state |= (index == currentIndex()) ? QStyle::State_HasFocus
-                                                      : QStyle::State_None;
+            option.state |= (index == currentIndex() && viewport()->hasFocus()) ? QStyle::State_HasFocus
+                                                                                : QStyle::State_None;
             if (!(flags & Qt::ItemIsEnabled)) {
                 option.state &= ~QStyle::State_Enabled;
             } else {
