@@ -187,6 +187,9 @@ public:
 protected:
     void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
     {
+        if(!index.isValid())
+            return;
+
         QStyleOptionViewItem opt = option;
         initStyleOption(&opt, index);
 
@@ -202,7 +205,9 @@ protected:
         opt.icon = QIcon(pixmap.copy(QRect(QPoint(0, 0), size * dpr)));
         opt.decorationSize = size;
 
-        QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &opt, painter);
+        const QWidget* widget = opt.widget;
+        QStyle* style = widget ? widget->style() : QApplication::style();
+        style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
     }
 
 private:
