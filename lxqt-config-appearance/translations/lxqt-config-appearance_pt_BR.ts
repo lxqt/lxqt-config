@@ -191,7 +191,7 @@
     <message>
         <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
 </context>
 <context>
@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Definir temas GTK (Os arquivos de configuração GTK serão sobrescritos)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,12 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Para conseguir um tema uniforme, selecione estilos/temas similares
+(se disponíveis) em qualquer uma das listas, ou selecione estilo &apos;gtk2&apos; Qt 
+(se disponível) para simular temas GTK.
+
+Certifique-se que &apos;xsettingsd&apos; está instalado para auxiliar as aplicações GTK 
+a aplicarem o tema sem interromper o programa.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +269,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo Qt</translation>
     </message>
 </context>
 <context>
@@ -272,12 +277,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Temas GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode achar uma cópia das configurações antigas em &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
