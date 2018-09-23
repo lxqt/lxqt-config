@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Elegir los temas para GTK (sobrescribe los archivos de configuración de GTK)</translation>
+        <translation>Temas para GTK (sobrescribe los archivos de configuración de GTK)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation>Tema GTK 3</translation>
+        <translation>Tema para GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation>Tema GTK 2</translation>
+        <translation>Tema para GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -234,7 +234,7 @@ GTK cambien de tema al instante.</translation>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
-        <translation>Estilo del botón de la barra de herramientas:</translation>
+        <translation>Estilo de los botones de la barra de herramientas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
@@ -269,7 +269,7 @@ GTK cambien de tema al instante.</translation>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation>Estilo Qt</translation>
+        <translation>Estilo de Qt</translation>
     </message>
 </context>
 <context>
@@ -277,7 +277,7 @@ GTK cambien de tema al instante.</translation>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation>Temas GTK</translation>
+        <translation>Temas de GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
