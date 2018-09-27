@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw motywy GTK (pliki konfiguracji GTK zostaną nadpisane!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw GTK3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw GTK2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -264,7 +264,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Styl Qt</translation>
     </message>
 </context>
 <context>
@@ -272,12 +272,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Motywy GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; został nadpisany.&lt;/p&gt;&lt;p&gt;Możesz znaleźć kopię starych ustawień w &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
