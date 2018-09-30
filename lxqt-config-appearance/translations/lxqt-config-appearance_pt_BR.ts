@@ -171,7 +171,7 @@
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>Widget Style</source>
-        <translation>Estilo dos widgets</translation>
+        <translation>Estilo de Widgets</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
