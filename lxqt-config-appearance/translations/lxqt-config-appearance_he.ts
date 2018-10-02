@@ -224,7 +224,12 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>כדי לנסות ערכת עיצוב אחידה, יש לבחור בסגנון/ערכת עיצוב (אם קיימת)
+בכל הרשימות, או לבחור בסגנון Qt בשם ‚gtk2’ (אם קיים)
+ כדי לחקות ערכות עיצוב של GTK.
+
+עליך לוודא כי ‚xsettings’ מותקן כדי לסייע ליישומי GTK להחיל
+ערכות עיצוב ללא הפעלה מחדש.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -277,7 +282,7 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;‚%1’ שוכתב.&lt;/p&gt;&lt;p&gt;ניתן למצוא עותק של ההגדרות הישנות שלך תחת ‚%2’&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
