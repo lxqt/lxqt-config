@@ -6,12 +6,12 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Configuração Do Tema Do Mouse</translation>
+        <translation>Configuração do Tema do Mouse do LXQT</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Selecione o tema do cursor que você deseja usar (coloque o cursor em cima  para testar). &lt;b&gt;A sessão LXQt precisa reiniciar após esta mudança&lt;/b&gt;:</translation>
+        <translation>Selecione o tema do cursor que você deseja usar (coloque o cursor em cima para testar). &lt;b&gt;Precisa reiniciar a sessão LXQt  após esta mudança&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation>Formato</translation>
+        <translation>Formulário</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
