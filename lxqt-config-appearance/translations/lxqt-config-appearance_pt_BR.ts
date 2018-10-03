@@ -51,7 +51,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>As configurações a seguir afetam apenas os aplicativos recém-iniciados</translation>
+        <translation>As configurações a seguir afetam somente os aplicativos iniciados recentemente</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation>Fraco</translation>
+        <translation>Leve</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>.A extensão para temas de ícones XDG para KDE -&gt; FollowsColorScheme</translation>
+        <translation>A extensão do KDE de temas de ícones do XDG -&gt; Segue o Esquema de Cores</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Colorir ícones baseado no estilo de um widget (paleta)</translation>
+        <translation>Colorir ícones baseado no estilo de widget (paleta)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Ignorar papel de parede definido pelo usuário</translation>
+        <translation>Substituir papel de parede definido pelo usuário</translation>
     </message>
 </context>
 <context>
@@ -282,7 +282,7 @@ a aplicarem o tema sem interromper o programa.</translation>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode achar uma cópia das configurações antigas em &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode encontrar uma cópia das configurações antigas em &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
