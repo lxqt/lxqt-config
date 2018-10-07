@@ -153,7 +153,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt-Design</translation>
+        <translation>LXQt-Thema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
-        <translation>LXQt-Design</translation>
+        <translation>LXQt-Thema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="81"/>
