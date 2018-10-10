@@ -87,7 +87,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation></translation>
+        <translation>etiqueta de texto</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
