@@ -1,6 +1,6 @@
 project(lxqt-config-cursor)
-find_package(X11 REQUIRED)
 
+find_package(X11 REQUIRED)
 find_package(XCB REQUIRED xcb)
 include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})

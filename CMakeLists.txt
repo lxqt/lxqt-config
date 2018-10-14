@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
-
 project(lxqt-config)
+# CMP0000 - A minimum required CMake version must be specified.
+# Note that the command invocation must appear in the CMakeLists.txt
+# file itself; a call in an included file is not sufficient.
+cmake_minimum_required(VERSION 3.6.2 FATAL_ERROR)
+
 set(LXQT_CONFIG_PROJECT "${PROJECT_NAME}")
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
@@ -28,10 +31,6 @@ find_package(lxqt REQUIRED)
 
 include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
-
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
 
 # Patch Version
 set(LXQT_CONFIG_PATCH_VERSION 0)
