@@ -1,4 +1,5 @@
 project(lxqt-config-input)
+
 find_package(X11 REQUIRED)
 
 include_directories(
