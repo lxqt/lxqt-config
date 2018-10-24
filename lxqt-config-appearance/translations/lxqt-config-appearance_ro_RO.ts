@@ -92,7 +92,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Rezolutie (DPI)</translation>
+        <translation>Rezoluție (DPI)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
