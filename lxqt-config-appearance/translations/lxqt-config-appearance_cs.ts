@@ -204,17 +204,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavit GTK motivy vzhledu (soubory s nastaveními GTK budou přepsány!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 motiv vzhledu</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 motiv vzhledu</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,13 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokud se chcete pokusit o jednotný vzhled, vyberte buď podobný
+styl/motiv vzhledu (pokud je k dispozici) napříč všemi seznamy, nebo
+vyberte „gtk2“ Qt styl (pokud je k dispozici), který napodobuje GTK
+motivy vzhledu.
+
+Aby GTK aplikace mohly měnit vzhled za běhu, je třeba zajistit instalaci
+procesu služby „xsettingsd“.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +270,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt styl</translation>
     </message>
 </context>
 <context>
@@ -272,12 +278,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK motivy vzhledu</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;„%1“ bylo přepsáno.&lt;/p&gt;&lt;p&gt;Kopie původních nastavení je k dispozici v „%2“&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
