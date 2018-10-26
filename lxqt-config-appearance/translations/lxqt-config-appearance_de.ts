@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>Die KDE Erweiterung der XDG Symbolthemen -&gt; Folgt dem Farbschema</translation>
+        <translation>Die KDE-Erweiterung der XDG-Symbolthemen -&gt; Folgt dem Farbschema</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Färbe Symbole aufgrund der Widgetpalette</translation>
+        <translation>Symbole nach dem Stil der Bedienelemente einfärben (Palette)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Über benutzerdefinierten Desktophintergrund hinwegsetzen</translation>
+        <translation>Benutzerdefinierten Schreibtischhintergrund überschreiben</translation>
     </message>
 </context>
 <context>
@@ -209,12 +209,12 @@
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation>GTK 3-Design</translation>
+        <translation>GTK 3-Thema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation>GTK 2-Design</translation>
+        <translation>GTK 2-Thema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -234,17 +234,17 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
         <source>Only display the icon</source>
-        <translation>Nur Symbol</translation>
+        <translation>Nur das Symbol anzeigen</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>Only display the text</source>
-        <translation>Nur Text</translation>
+        <translation>Nur den Text anzeigen</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="117"/>
         <source>The text appears beside the icon</source>
-        <translation>Text neben dem Symbol</translation>
+        <translation>Der Text erscheint neben dem Symbol</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
@@ -272,7 +272,7 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation>GTK-Designs</translation>
+        <translation>GTK-Themen</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
