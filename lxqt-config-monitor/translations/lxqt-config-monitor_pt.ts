@@ -11,12 +11,12 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ Vista expandida</translation>
+        <translation> ❶ ❷ Visão estendida</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ Vista unificada</translation>
+        <translation> ❶ ❶ Visão unificada</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Definições do monitor</translation>
+        <translation>Configurações do Monitor</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation>Definições guardadas</translation>
+        <translation>Configurações salvas</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation>Apagar</translation>
+        <translation>Excluir</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
@@ -112,17 +112,17 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Definições do monitor</translation>
+        <translation>Configurações do Monitor</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="71"/>
         <source>Settings</source>
-        <translation>Definições</translation>
+        <translation>Configurações</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation>Menu rápido</translation>
+        <translation>Menu Rápido</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="244"/>
         <source>Advanced settings</source>
-        <translation>Definições avançadas</translation>
+        <translation>Configurações avançadas</translation>
     </message>
 </context>
 <context>
@@ -160,17 +160,17 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation>Ativar este ecrã</translation>
+        <translation>Habilitar esta tela</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Este é o ecrã principal</translation>
+        <translation>Esta é minha tela principal</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Expandir este ecrã até outro</translation>
+        <translation>Esta tela estende até outra tela</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>Informação do ecrã</translation>
+        <translation>Informação da tela</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
@@ -208,7 +208,7 @@
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation>Fornecedor: %1
+        <translation>Fabricante: %1
 </translation>
     </message>
     <message>
@@ -222,7 +222,7 @@
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Tamanho do ecrã: %1cm x %2cm
+        <translation>Tamanho da tela: %1cm x %2cm
 </translation>
     </message>
     <message>
@@ -236,7 +236,7 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA do dispositivo: %1
+        <translation>ID do dispositivo EISA: %1
 </translation>
     </message>
     <message>
@@ -270,7 +270,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>Gerir definições guardadas</translation>
+        <translation>Gerenciar Configurações Salvas</translation>
     </message>
 </context>
 <context>
@@ -278,21 +278,19 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>Definições alteradas</translation>
+        <translation>Configurações são alteradas</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>As definições estão certas para si?</translation>
+        <translation>As configurações atuais estão corretas para você?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation>
-            <numerusform>Resta %n segundo</numerusform>
-            <numerusform>Restam %n segundos</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n segundo(s) restante(s)</numerusform>
+        <numerusform>%n segundos restantes</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>SaveSettings</name>
