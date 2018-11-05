@@ -11,17 +11,17 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation></translation>
+        <translation>Pekeblinketid:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Tastatur&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation></translation>
+        <translation>Lag lyd når det er en feil med tastaturinndata</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -31,34 +31,34 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation></translation>
+        <translation>Tegngjentagelse</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation></translation>
+        <translation>Lang</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation></translation>
+        <translation>Pause ved repetisjon:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation></translation>
+        <translation>Kort</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation></translation>
+        <translation>Gjentagelsesintervall:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation></translation>
+        <translation>Skriv i den følgende boksen for å teste tastaturinnstillingene</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation></translation>
+        <translation>Skru på NumLock etter innlogging</translation>
     </message>
 </context>
 <context>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Tastaturlayout&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
@@ -92,42 +92,42 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation></translation>
+        <translation>&amp;Legg til</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation></translation>
+        <translation>&amp;Fjern</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation></translation>
+        <translation>Opp</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation></translation>
+        <translation>Ned</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation></translation>
+        <translation>Tastaturmodell:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation></translation>
+        <translation>Taster for å forandre layout:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation></translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Obs&lt;/span&gt;: Hvis du bruker en&lt;span style=&quot; font-weight:600;&quot;&gt;inndatametode&lt;/span&gt;, sånn som IBus, uim, fcitx eller gcin kan innstillingene her &lt;span style=&quot; font-weight:600;&quot;&gt;kanskje ikke virke&lt;/span&gt; fordi de blir overskrevet av inndatametoden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -140,42 +140,42 @@
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Mus&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation></translation>
+        <translation>Bevegelse</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation></translation>
+        <translation>Høy</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation></translation>
+        <translation>Rask</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation></translation>
+        <translation>Følsomhet:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation></translation>
+        <translation>Lav</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation></translation>
+        <translation>Akselerasjon:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation></translation>
+        <translation>Treg</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="116"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation></translation>
+        <translation>Dobbeltklikkingsintervall:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -196,17 +196,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation></translation>
+        <translation>Linjer hjulet blar:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation></translation>
+        <translation>Venstrehendt (bytt høyre og venstre musknapp)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation></translation>
+        <translation>Enkeltklikk for å aktivere</translation>
     </message>
 </context>
 <context>
@@ -214,12 +214,12 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation></translation>
+        <translation>Tastatur- og musinnstillinger</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
         <source>Mouse</source>
-        <translation></translation>
+        <translation>Mus</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
@@ -229,12 +229,12 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
         <source>Keyboard</source>
-        <translation></translation>
+        <translation>Tastatur</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
         <source>Keyboard Layout</source>
-        <translation></translation>
+        <translation>Tastaturlayout</translation>
     </message>
 </context>
 <context>
@@ -242,12 +242,12 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation></translation>
+        <translation>Velg en tastaturlayout</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation></translation>
+        <translation>Tastaturlayout</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
