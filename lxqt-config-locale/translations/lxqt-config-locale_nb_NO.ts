@@ -6,77 +6,77 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation></translation>
+        <translation>Om&amp;råde:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation></translation>
+        <translation>De&amp;taljerte innstillinger</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation></translation>
+        <translation>&amp;Tall:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation></translation>
+        <translation>&amp;Tid:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation></translation>
+        <translation>Valuta:&amp;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation></translation>
+        <translation>Måleenheter:&amp;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation></translation>
+        <translation>So&amp;rteringsrekkefølge:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>&lt;b&gt;Examples&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Eksempler&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation></translation>
+        <translation>Tall:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation></translation>
+        <translation>Tid:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation></translation>
+        <translation>Valuta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation></translation>
+        <translation>Måleenheter:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation></translation>
+        <translation>Ingen forandring</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation></translation>
+        <translation>Formateringsinnstillinger ble forandret</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation></translation>
+        <translation>Ønsker du å lagre endringene? De vil begynne å virke neste gang du logger inn.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
         <source>Metric</source>
-        <translation></translation>
+        <translation>Metrisk</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation></translation>
+        <translation>LXQt Stedstilpasninger</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation></translation>
+        <translation>Stedstilpasninger</translation>
     </message>
 </context>
 </TS>
