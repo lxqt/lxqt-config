@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Verificação e &amp;organização:</translation>
+        <translation>Co&amp;lação e Classificação:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
