@@ -318,9 +318,6 @@ protected:
                               int start,
                               int end);
 
-    void keyPressEvent(QKeyEvent *event);
-    void keyReleaseEvent(QKeyEvent *event);
-
 protected Q_SLOTS:
     /**
       * @internal
@@ -351,11 +348,6 @@ protected Q_SLOTS:
 private:
     class Private;
     Private *const d;
-    /**
-      * For knowing that Enter is pressed after
-      * the widget gets focus and not before that.
-      */
-    bool enterPressed;
 
     Q_PRIVATE_SLOT(d, void _k_slotCollapseOrExpandClicked(QModelIndex))
 };
