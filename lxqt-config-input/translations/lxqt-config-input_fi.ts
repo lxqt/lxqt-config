@@ -16,7 +16,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Näppäimistö&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
