@@ -125,7 +125,10 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         if (output->isConnected())
         {
             MonitorWidget *monitor = new MonitorWidget(output, mConfig, this);
-            ui.monitorList->addItem(output->name() + " " + output->edid()->name() + " " + output->edid()->vendor());
+            QString monitorName = output->edid()->name() + " " + output->edid()->vendor();
+            if(monitorName.trimmed().size() > 0)
+                monitorName = "(" + monitorName + ")";
+            ui.monitorList->addItem(output->name() + " " + monitorName);
             ui.stackedWidget->addWidget(monitor);
             monitors.append(monitor);
         }
