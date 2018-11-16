@@ -6,32 +6,32 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation></translation>
+        <translation>Configuración de tema do rato de LXQt</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation></translation>
+        <translation>Seleccione o tema de cursor que queira empregar (pase o cursor por riba para ter unha vista previa). &lt;b&gt;Após este cambio é necesario reiniciar a sesión de LXQt&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation></translation>
+        <translation>&amp;Instalar un tema novo...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation></translation>
+        <translation>&amp;Retirar o tema</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
-        <translation></translation>
+        <translation>Produciuse un erro de XCurTheme</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation></translation>
+        <translation>Non pode retirar o tema activo!</translation>
     </message>
 </context>
 <context>
@@ -39,17 +39,17 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation></translation>
+        <translation>LXQt non foi quen de atopar ningún tema de cursores. Usarase o tema de cursor preestabelecido de X11. LXQt buscou nos seguintes directorios:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation></translation>
+        <translation>Amosar...</translation>
     </message>
 </context>
 <context>
@@ -57,12 +57,12 @@
     <message>
         <location filename="../thememodel.cpp" line="61"/>
         <source>Name</source>
-        <translation></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../thememodel.cpp" line="62"/>
         <source>Description</source>
-        <translation></translation>
+        <translation>Descrición</translation>
     </message>
 </context>
 </TS>
