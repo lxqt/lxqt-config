@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation></translation>
+        <translation>Selector de aplicacións</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation></translation>
+        <translation>Escolla unha aplicación para:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation></translation>
+        <translation>Aplicacións para manexar JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -29,23 +29,23 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation></translation>
+        <translation>Novo subelemento</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation></translation>
+        <translation>Outras aplicacións</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation></translation>
+        <translation>Aplicacións para manexar %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation></translation>
+        <translation>Non se atoparon aplicacións</translation>
     </message>
 </context>
 <context>
@@ -54,17 +54,17 @@
         <location filename="../mimetypeviewer.cpp" line="156"/>
         <location filename="../mimetypeviewer.cpp" line="207"/>
         <source>None</source>
-        <translation></translation>
+        <translation>Ningunha</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation></translation>
+        <translation>&amp;Cambiar...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation></translation>
+        <translation>&amp;Escoller...</translation>
     </message>
 </context>
 <context>
@@ -72,32 +72,32 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation></translation>
+        <translation>Asociacións de ficheiros</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation></translation>
+        <translation>Aplicación por omisión</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation></translation>
+        <translation>&amp;Escoller...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation></translation>
+        <translation>EtiquetaDeTexto</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
         <source>None</source>
-        <translation></translation>
+        <translation>Ningunha</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
         <source>Patterns</source>
-        <translation></translation>
+        <translation>Modelos</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
@@ -107,17 +107,17 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
         <source>MIME type</source>
-        <translation></translation>
+        <translation>Tipo MIME</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="191"/>
         <source>Icon</source>
-        <translation></translation>
+        <translation>Icona</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="198"/>
         <source>Description</source>
-        <translation></translation>
+        <translation>Descrición</translation>
     </message>
 </context>
 </TS>
