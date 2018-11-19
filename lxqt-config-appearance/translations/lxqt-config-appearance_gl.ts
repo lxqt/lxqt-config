@@ -6,27 +6,27 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation></translation>
+        <translation>Tipo de letra</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation></translation>
+        <translation>Tipo de letra predeterminado para a interface</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation></translation>
+        <translation>Nome do tipo de letra:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation></translation>
+        <translation>Estilo:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation></translation>
+        <translation>Tamaño do punto:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -36,73 +36,73 @@
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>Negriña</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Itálica</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation></translation>
+        <translation>Itálica negriña</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation></translation>
+        <translation>Os seguintes axustes só afectan ás aplicacións iniciadas a partires de agora</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation></translation>
+        <translation>Usar o suavizado das letras</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation></translation>
+        <translation>Estilo do suavizado das letras:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation></translation>
+        <translation>Ningún</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation></translation>
+        <translation>Lene</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation></translation>
+        <translation>Medio</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation></translation>
+        <translation>Total</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation></translation>
+        <translation>Suavizado das letras</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation></translation>
+        <translation>Resolución (PPP):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation></translation>
+        <translation>Suavizado automático</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation></translation>
+        <translation>Suavizado de subpixel:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -130,22 +130,22 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation></translation>
+        <translation>Configuración da aparencia do LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation></translation>
+        <translation>Tema de iconas</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation></translation>
+        <translation>A extensión de KDE para temas de iconas XDG -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation></translation>
+        <translation>Colorear as iconas segundo o estilo dos controles (paleta)</translation>
     </message>
 </context>
 <context>
@@ -153,12 +153,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation></translation>
+        <translation>Tema do LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation></translation>
+        <translation>Substituír o fondo de pantalla definido polo usuario</translation>
     </message>
 </context>
 <context>
@@ -166,27 +166,27 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation></translation>
+        <translation>Configuración da aparencia do LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>Widget Style</source>
-        <translation></translation>
+        <translation>Estilo dos trebellos</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
-        <translation></translation>
+        <translation>Tema de iconas</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
-        <translation></translation>
+        <translation>Tema do LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="81"/>
         <source>Font</source>
-        <translation></translation>
+        <translation>Tipo de letra</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="87"/>
@@ -199,22 +199,22 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation></translation>
+        <translation>Estilo dos trebellos</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation></translation>
+        <translation>Estabelecer os temas para GTK (sobrescribe os ficheiros de configuración de GTK)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation></translation>
+        <translation>Tema para GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation></translation>
+        <translation>Tema para GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,47 +224,52 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation></translation>
+        <translation>Para tentar conseguir unha aparencia uniforme, escolla un estilo/tema
+similar (se está dispoñíbel) en todas as listas, ou escolla o estilo «gtk2»
+de Qt (se está dispoñíbel) para imitar os temas de GTK.
+
+Asegúrese de que «xsettingsd» está instalado para que as aplicacións
+GTK cambien de tema no instante.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
-        <translation></translation>
+        <translation>Estilo dos botóns da barra de ferramentas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
         <source>Only display the icon</source>
-        <translation></translation>
+        <translation>Amosar só a icona</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>Only display the text</source>
-        <translation></translation>
+        <translation>Amosar só o texto</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="117"/>
         <source>The text appears beside the icon</source>
-        <translation></translation>
+        <translation>O texto aparece á beira da icona</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>The text appears under the icon</source>
-        <translation></translation>
+        <translation>O texto aparece baixo a icona</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="127"/>
         <source>Default</source>
-        <translation></translation>
+        <translation>Predeterminado</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation></translation>
+        <translation>Activar elementos cun só clic</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation></translation>
+        <translation>Estilo de Qt</translation>
     </message>
 </context>
 <context>
@@ -272,12 +277,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation></translation>
+        <translation>Temas de GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;p&gt;«%1» foi sobrescrito.&lt;/p&gt;&lt;p&gt;Pode atopar unha copia da configuración antiga en «%2»&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
