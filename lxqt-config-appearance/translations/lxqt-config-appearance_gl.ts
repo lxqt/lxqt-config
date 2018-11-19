@@ -26,7 +26,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Tamaño do punto:</translation>
+        <translation>Tamaño en puntos:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation>Negriña</translation>
+        <translation>Grosa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation>Itálica negriña</translation>
+        <translation>Itálica grosa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Colorear as iconas segundo o estilo dos controles (paleta)</translation>
+        <translation>Colorar as iconas segundo o estilo dos controles (paleta)</translation>
     </message>
 </context>
 <context>
@@ -264,7 +264,7 @@ GTK cambien de tema no instante.</translation>
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Activar elementos cun só clic</translation>
+        <translation>Activar os elementos cun só clic</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
