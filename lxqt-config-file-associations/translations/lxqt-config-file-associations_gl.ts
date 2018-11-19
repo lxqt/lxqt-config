@@ -77,7 +77,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation>Aplicación por omisión</translation>
+        <translation>Aplicación predeterminada</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
