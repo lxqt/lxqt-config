@@ -91,3 +91,9 @@ install(FILES
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     COMPONENT Runtime
 )
+
+install(FILES
+    man/lxqt-config-appearance.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+    COMPONENT Runtime
+)

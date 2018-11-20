@@ -66,3 +66,9 @@ endif()
 if (WITH_LOCALE)
     add_subdirectory(lxqt-config-locale)
 endif()
+
+install(FILES
+    man/lxqt-config.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+    COMPONENT Runtime
+)
