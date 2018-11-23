@@ -145,7 +145,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Colorar as iconas segundo o estilo dos controles (paleta)</translation>
+        <translation>Colorar as iconas segundo o estilo dos trebellos (paleta)</translation>
     </message>
 </context>
 <context>
