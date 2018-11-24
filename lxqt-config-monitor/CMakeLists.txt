@@ -1,7 +1,7 @@
 project(lxqt-config-monitor)
 
-find_package(KF5Screen REQUIRED)
-find_package(Qt5Svg REQUIRED)
+find_package(KF5Screen ${KF5_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5Svg ${QT_MINIMUM_VERSION} REQUIRED)
 
 set(HEADERS
     monitorsettingsdialog.h
