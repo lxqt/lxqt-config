@@ -1,7 +1,7 @@
 project(lxqt-config-brightness)
 
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5X11Extras REQUIRED)
+find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5X11Extras ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(XCB REQUIRED xcb xcb-randr)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
