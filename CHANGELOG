@@ -1,4 +1,28 @@
 
+lxqt-config-0.14.0 / 2018-12-01
+===============================
+
+  * Implemented Features:
+    - Introduced GTK appearance settings
+  * Implementation fixed:
+    - lxqt-config: Removed ancient Qt workaround that creates problems now
+    - lxqt-config-appearance: Some GUI fixes
+    - lxqt-config-appearance: mkpath if settings of GTK doesn't exists.
+    - lxqt-config-brightness: Backlight control updated
+    - lxqt-config-brightness: 
+      XRandrBrightness::backlight_get_with_range return value
+    - lxqt-config-monitor: Monitor name is added to output.
+  * Improved cmake scripting
+    - Set cmake_minimum_required to 3.1.0
+    - Removed QUIET from find_package
+    - Removed dependency on QtConcurrent
+    - Installed former missed man pages
+    - Removed locale compile definitons
+  * Moved translations from lxqt-l10n back to lxqt-policykit
+    - Removed obsolete translation fuctionality
+    - Added translation promo in README.md
+  * Translation updates
+
 lxqt-config-0.13.0 / 2018-05-21
 ===============================
 
