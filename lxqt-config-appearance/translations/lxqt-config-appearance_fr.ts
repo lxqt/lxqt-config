@@ -140,12 +140,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;extension KDE du thème d’icône XDG -&gt; Suivez le schéma de couleur</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Coloriser les icônes en fonction du style du widget (palette)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Substituer au papier-peint défini par l&apos;utilisateur</translation>
+        <translation>Remplacer le papier peint défini par l&apos;utilisateur</translation>
     </message>
 </context>
 <context>
@@ -176,17 +176,17 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
-        <translation>Thème d&apos;icones</translation>
+        <translation>Thème d’icônes</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
-        <translation>Thème de LXQt</translation>
+        <translation>Thème LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="81"/>
         <source>Font</source>
-        <translation>Fonte</translation>
+        <translation>Police de caractère</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="87"/>
@@ -199,22 +199,22 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Style des widgets</translation>
+        <translation>Style de widget</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir les thèmes GTK (les fichiers de configuration GTK seront écrasés!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Thème GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Thème GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -224,7 +224,12 @@
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
 themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour essayer une thématisation uniforme, sélectionnez un style / thème similaire.
+(si disponible) dans toutes les listes, ou sélectionnez le style Qt &apos;gtk2&apos; (si disponible)
+  imiter les thèmes GTK.
+
+Assurez-vous que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer
+thèmes à la volée.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -264,7 +269,7 @@ themes on the fly.</source>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Style QT</translation>
     </message>
 </context>
 <context>
@@ -272,12 +277,12 @@ themes on the fly.</source>
     <message>
         <location filename="../configothertoolkits.cpp" line="143"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Thème GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt; 1 &apos;% 1&apos; a été écrasé. &lt;/ p&gt; 2 &lt;p&gt; 3Vous pouvez trouver une copie de vos anciens paramètres dans &apos;% 2&apos; &lt;/ p&gt; 4.</translation>
     </message>
 </context>
 </TS>
