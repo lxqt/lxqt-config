@@ -282,7 +282,7 @@ thèmes à la volée.</translation>
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt; 1 &apos;% 1&apos; a été écrasé. &lt;/ p&gt; 2 &lt;p&gt; 3Vous pouvez trouver une copie de vos anciens paramètres dans &apos;% 2&apos; &lt;/ p&gt; 4.</translation>
+        <translation>p 1 été écrasé.Vous pouvez trouver une copie de vos anciens paramètres dans p 4</translation>
     </message>
 </context>
 </TS>
