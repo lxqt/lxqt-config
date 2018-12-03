@@ -1,7 +1,7 @@
 project(lxqt-config-monitor)
 
-find_package(KF5Screen REQUIRED)
-find_package(Qt5Svg REQUIRED)
+find_package(KF5Screen ${KF5SCREEN_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5Svg ${QT_MINIMUM_VERSION} REQUIRED)
 
 set(HEADERS
     monitorsettingsdialog.h
@@ -53,16 +53,6 @@ lxqt_translate_ts(QM_FILES
         ${UIS}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-config/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
@@ -90,3 +80,4 @@ target_link_libraries(${PROJECT_NAME}
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_FULL_DATADIR}/applications")
 install(FILES ${ICONS} DESTINATION "${CMAKE_INSTALL_FULL_DATADIR}/lxqt/icons")
+

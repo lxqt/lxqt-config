@@ -516,7 +516,6 @@ void QCategorizedView::Private::_k_slotCollapseOrExpandClicked(QModelIndex)
 QCategorizedView::QCategorizedView(QWidget *parent)
     : QListView(parent)
     , d(new Private(this))
-    , enterPressed(false)
 {
 }
 
@@ -868,8 +867,8 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
             } else {
                 option.state &= ~QStyle::State_Selected;
             }
-            option.state |= (index == currentIndex()) ? QStyle::State_HasFocus
-                                                      : QStyle::State_None;
+            option.state |= (index == currentIndex() && viewport()->hasFocus()) ? QStyle::State_HasFocus
+                                                                                : QStyle::State_None;
             if (!(flags & Qt::ItemIsEnabled)) {
                 option.state &= ~QStyle::State_Enabled;
             } else {
@@ -1535,45 +1534,6 @@ void QCategorizedView::slotLayoutChanged()
     if (d->proxyModel->rowCount()) {
         d->rowsInserted(rootIndex(), 0, d->proxyModel->rowCount() - 1);
     }
-}
-
-void QCategorizedView::keyPressEvent(QKeyEvent *event)
-{
-    // Don't emit activated() by pressing Enter! ...
-    switch (event->key()) {
-        case Qt::Key_Enter:
-        case Qt::Key_Return:
-            if (state() != EditingState) {
-              event->ignore();
-              if (hasFocus() && !event->isAutoRepeat())
-                  enterPressed = true; // Pressed after getting focus.
-              return;
-            }
-            break;
-        default: break;
-    }
-    QAbstractItemView::keyPressEvent(event);
-}
-
-void QCategorizedView::keyReleaseEvent(QKeyEvent *event)
-{
-    // ... Emit activated() by releasing Enter instead!
-    switch (event->key()) {
-        case Qt::Key_Enter:
-        case Qt::Key_Return:
-            if (hasFocus() && state() != EditingState
-                && !event->isAutoRepeat() // No multiple signals.
-                && enterPressed // No signal if Enter is pressed before getting focus.
-                && currentIndex().isValid()) {
-                emit activated(currentIndex());
-                event->accept();
-                enterPressed = false;
-                return;
-            }
-            break;
-        default: break;
-    }
-    QAbstractItemView::keyReleaseEvent(event);
 }
 
 //END: Public part

@@ -1,6 +1,6 @@
 project(lxqt-config-cursor)
-find_package(X11 REQUIRED)
 
+find_package(X11 REQUIRED)
 find_package(XCB REQUIRED xcb)
 include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})
@@ -50,16 +50,6 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config-cursor_UIS}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-config/liblxqt-config-cursor"
 )
 
 lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
@@ -94,5 +84,11 @@ install(TARGETS
 install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDOR}/applications"
+    COMPONENT Runtime
+)
+
+install(FILES
+    man/lxqt-config-mouse.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
     COMPONENT Runtime
 )

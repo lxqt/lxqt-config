@@ -1,8 +1,7 @@
 project(lxqt-config-brightness)
 
-find_package(Qt5Widgets REQUIRED QUIET)
-find_package(Qt5X11Extras REQUIRED QUIET)
-
+find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5X11Extras ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(XCB REQUIRED xcb xcb-randr)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
@@ -45,16 +44,6 @@ lxqt_translate_ts(QM_FILES
         ${UI_FILES}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-config/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})

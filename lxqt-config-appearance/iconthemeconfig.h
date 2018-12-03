@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://razor-qt.org
+ * https://lxqt.org
  *
  * Copyright: 2010-2011 Razor team
  * Authors:
@@ -50,6 +50,9 @@ private:
 
 public slots:
     void initControls();
+
+signals:
+    void updateSettings();
 
 private slots:
     void iconThemeSelected(QTreeWidgetItem *item, int column);

@@ -14,6 +14,8 @@ set(UI_FILES
     localeconfig.ui
 )
 
+qt5_wrap_cpp(COMBO_HEADER combobox.h)
+
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
@@ -24,16 +26,6 @@ lxqt_translate_ts(QM_FILES
         ${UI_FILES}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-config/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
@@ -43,6 +35,7 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in)
 
 add_executable(${PROJECT_NAME}
     ${CPP_FILES}
+    ${COMBO_HEADER}
     ${RESOURCES}
     ${QRC_SOURCES}
     ${QM_FILES}

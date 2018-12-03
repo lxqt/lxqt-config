@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://razor-qt.org
+ * https://lxqt.org
  *
  * Copyright: 2012 Razor team
  * Authors:
@@ -50,6 +50,9 @@ public:
 
 public Q_SLOTS:
     void initControls();
+
+signals:
+    void updateSettings();
 
 private Q_SLOTS:
     void updateQtFont();

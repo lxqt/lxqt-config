@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://lxqt.org
+ * https://lxqt.org
  *
  * Copyright: 2010-2011 Razor team
  * Authors:
@@ -65,7 +65,7 @@ public:
     inline void setXdg(XdgDesktopFile xdg) { d->xdg = xdg; }
     inline QString &category() const { return d->category; }
 
-    bool operator==(const ConfigPane &other)
+    bool operator==(const ConfigPane &other) const
     {
         return d->id == other.id();
     }
@@ -187,6 +187,9 @@ public:
 protected:
     void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
     {
+        if(!index.isValid())
+            return;
+
         QStyleOptionViewItem opt = option;
         initStyleOption(&opt, index);
 
@@ -202,7 +205,9 @@ protected:
         opt.icon = QIcon(pixmap.copy(QRect(QPoint(0, 0), size * dpr)));
         opt.decorationSize = size;
 
-        QApplication::style()->drawControl(QStyle::CE_ItemViewItem, &opt, painter);
+        const QWidget* widget = opt.widget;
+        QStyle* style = widget ? widget->style() : QApplication::style();
+        style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
     }
 
 private:
@@ -265,7 +270,7 @@ void LXQtConfig::MainWindow::activateItem()
  * isn't stolen from our window. New process is not spawned until the
  * (non-autorepeated) KeyRelease is delivered.
  *
- * ref https://github.com/lxde/lxqt/issues/965
+ * ref https://github.com/lxqt/lxqt/issues/965
  */
 bool LXQtConfig::MainWindow::eventFilter(QObject * watched, QEvent * event)
 {

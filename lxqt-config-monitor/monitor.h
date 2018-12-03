@@ -44,7 +44,7 @@ struct MonitorSavedSettings {
     QString date;
     QList<MonitorSettings> monitors;
     
-    bool operator==(const MonitorSavedSettings &obj);
+    bool operator==(const MonitorSavedSettings &obj) const;
 };
 
 /**This function saves a list of MonitorSettings in QSettings file.

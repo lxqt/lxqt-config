@@ -40,16 +40,6 @@ lxqt_translate_ts(QM_FILES
         ${UI_FILES}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-config/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
@@ -71,7 +61,6 @@ target_link_libraries(${PROJECT_NAME}
     Qt5::Xml
     Qt5::DBus
     Qt5::Widgets
-    Qt5::Concurrent
     ${LIBRARIES}
 )
 

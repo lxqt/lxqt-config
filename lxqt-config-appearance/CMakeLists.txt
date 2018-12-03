@@ -15,6 +15,7 @@ set(MOC_FILES
     fontsconfig.h
     styleconfig.h
     fontconfigfile.h
+    configothertoolkits.h
 )
 
 set(CPP_FILES
@@ -25,6 +26,7 @@ set(CPP_FILES
     fontsconfig.cpp
     styleconfig.cpp
     fontconfigfile.cpp
+    configothertoolkits.cpp
 )
 
 set(UI_FILES
@@ -50,16 +52,6 @@ lxqt_translate_ts(QM_FILES
         ${UI_FILES}
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-config/${PROJECT_NAME}"
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
@@ -97,5 +89,11 @@ install(TARGETS
 install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)
+
+install(FILES
+    man/lxqt-config-appearance.1
+    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
     COMPONENT Runtime
 )

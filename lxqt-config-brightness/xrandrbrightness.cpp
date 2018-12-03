@@ -89,7 +89,7 @@ bool XRandrBrightness::backlight_get_with_range(xcb_randr_output_t output, long 
     , nullptr));
 
     if (!propertyReply) {
-        return -1;
+        return false;
     }
 
     if (propertyReply->range && xcb_randr_query_output_property_valid_values_length(propertyReply.data()) == 2) {
@@ -381,13 +381,12 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
 
         // Output is connected and enabled. Get data: 
         bool backlightIsSuported = false;
-        long cur, min, max, backlight_max = -1, backlight_value = 0;
+        long cur, min, max, backlight_value = 0;
         if (backlight_get(output) != -1)
         {
             if (backlight_get_with_range(output, cur, min, max))
             {
                 backlightIsSuported = true;
-                backlight_max = max - min;
                 backlight_value = cur - min;
             }
         }

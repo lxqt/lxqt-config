@@ -24,6 +24,7 @@
 #include "xrandrbrightness.h"
 #include "ui_brightnesssettings.h"
 
+#include <LXQt/lxqtbacklight.h>
 
 class BrightnessSettings: public QDialog
 {
@@ -38,13 +39,16 @@ signals:
 public slots:
     void monitorSettingsChanged(MonitorInfo monitor);
     void requestConfirmation();
+    void setBacklight();
 
 private:
     XRandrBrightness *mBrightness;
     QList<MonitorInfo> mMonitors;
     QTimer mConfirmRequestTimer;
+    QTimer mBacklightTimer;
     Ui::BrightnessSettings *ui;
-
+    LXQt::Backlight *mBacklight;
+    int mLastBacklightValue;
 
 };
 

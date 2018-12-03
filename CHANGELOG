@@ -1,7 +1,38 @@
 
-lxqt-config-0.12.0 / 2017-10-21
+lxqt-config-0.13.0 / 2018-05-21
 ===============================
 
+  * Spanish translation uptdate
+  * Update name for shortcut component
+  * timeoutdialog.cpp: include QIcon, QStyle explicitely
+  * Remove time-out from backlight slider
+  * lxqt-config-brightness: Sets minimum backlight value to 0
+  * CMake: Prevent in-source builds
+  * lxqt-config-brightness backlight checks if backlight power is on.
+  * Backlight can not be under 2%.
+  * Backlight control updated.
+  * lxqt-config-input: Adds the ability to set the initial page
+  * Fix combo boxes
+  * fixed two typos (#146)
+  * Fixed http -> https and razor-qt -> lxqt
+  * Fixed some LXDE mentions
+  * Add gamma(brightness) reset as a cli option
+  * Remove unnecessary repeating statements
+  * Add brightness reset by right-clicking on the knob.
+  * Update Simplified Chinese translations (#139)
+  * Prevent possible container detachments
+  * Drop Qt foreach
+  * Use absolute paths for DATAROOTDIR
+  * Update Catalan translation
+  *_hu.desktops added/modified
+  * Use CMAKE_INSTALL_DATAROOTDIR
+  * Add Spanish desktop entry.
+  * Add Spanish desktop entry
+
+0.12.0 / 2017-10-21
+===================
+
+  * Release 0.12.0: Update changelog
   * Set patch version
   * Use $XDG_CONFIG_HOME/mimeapps.list for mime data instead of $XDG_DATA_HOME/applications/mimeapps.list (#129)
   * Don't export github templates

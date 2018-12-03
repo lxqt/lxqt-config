@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * http://razor-qt.org
+ * https://lxqt.org
  *
  * Copyright: 2010-2011 Razor team
  * Authors:
@@ -151,5 +151,7 @@ void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
 
         m_settings->setValue("icon_theme",  theme);
         m_settings->sync();
+        
+        emit updateSettings();
     }
 }
