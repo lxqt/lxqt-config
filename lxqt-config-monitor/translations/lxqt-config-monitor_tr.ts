@@ -288,22 +288,21 @@
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n saniye kaldı</numerusform>
+        <numerusform>%n saniyeler kaldı</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>SaveSettings</name>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="unfinished">Adı</translation>
+        <translation>Adı</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="unfinished">Adı:</translation>
+        <translation>Adı:</translation>
     </message>
 </context>
 </TS>
