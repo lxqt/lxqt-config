@@ -51,7 +51,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Los ajustes siguientes solo afectan a las nuevas aplicaciones iniciadas</translation>
+        <translation>Los ajustes siguientes solo afectan a las aplicaciones iniciadas a partir de ahora</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
