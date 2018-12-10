@@ -110,14 +110,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">föl</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">le</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Billentyűzet modell:</translation>

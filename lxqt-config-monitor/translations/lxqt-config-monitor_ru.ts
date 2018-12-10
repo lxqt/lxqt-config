@@ -115,7 +115,7 @@
         <translation>Настройки монитора</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.ui" line="71"/>
+        <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
@@ -130,7 +130,7 @@
         <translation>Указать позицию</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="244"/>
+        <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
         <translation>Дополнительные настройки</translation>
     </message>

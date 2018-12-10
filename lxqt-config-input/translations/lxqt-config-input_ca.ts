@@ -110,14 +110,6 @@
         <translation>Avall</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">Amunt</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">Avall</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Model del teclat:</translation>

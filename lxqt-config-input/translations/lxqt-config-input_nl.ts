@@ -110,14 +110,6 @@
         <translation>Omlaag</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">omhoog</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">omlaag</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Toetsenbordmodel:</translation>

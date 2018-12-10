@@ -110,14 +110,6 @@
         <translation>Nach unten</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">Nach oben</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">Nach unten</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Tastatur-Modell:</translation>

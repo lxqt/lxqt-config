@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fr">
 <context>
+    <name>ConfigOtherToolKits</name>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="144"/>
+        <source>GTK themes</source>
+        <translation>Thème GTK</translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="145"/>
+        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
+        <translation>p 1 été écrasé.Vous pouvez trouver une copie de vos anciens paramètres dans p 4</translation>
+    </message>
+</context>
+<context>
     <name>FontsConfig</name>
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
@@ -218,18 +231,10 @@
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
-        <source>To attempt uniform theming, either select similar style/theme
-(if available) across all lists, or select &apos;gtk2&apos; Qt style (if available)
- to mimic GTK themes.
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
-themes on the fly.</source>
-        <translation>Pour essayer une thématisation uniforme, sélectionnez un style / thème similaire.
-(si disponible) dans toutes les listes, ou sélectionnez le style Qt &apos;gtk2&apos; (si disponible)
-  imiter les thèmes GTK.
-
-Assurez-vous que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer
-thèmes à la volée.</translation>
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -270,19 +275,6 @@ thèmes à la volée.</translation>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
         <translation>Style QT</translation>
-    </message>
-</context>
-<context>
-    <name>ConfigOtherToolKits</name>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="143"/>
-        <source>GTK themes</source>
-        <translation>Thème GTK</translation>
-    </message>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
-        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>p 1 été écrasé.Vous pouvez trouver une copie de vos anciens paramètres dans p 4</translation>
     </message>
 </context>
 </TS>

@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="el">
 <context>
+    <name>ConfigOtherToolKits</name>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="144"/>
+        <source>GTK themes</source>
+        <translation>Θέματα GTK</translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="145"/>
+        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Το %1 αντικαταστάθηκε.&lt;/p&gt;&lt;p&gt;Μπορείτε να βρείτε ένα αντίγραφο της παλιά διαμόρφωσης στο &apos;%2&apos;&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>FontsConfig</name>
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
@@ -218,15 +231,10 @@
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
-        <source>To attempt uniform theming, either select similar style/theme
-(if available) across all lists, or select &apos;gtk2&apos; Qt style (if available)
- to mimic GTK themes.
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
-themes on the fly.</source>
-        <translation>Για να καταφέρετε μια ομοιόμορφη θεματοποίηση, μπορείτε είτε να επιλέξετε ένα παρεμφερές θέμα/ύφος (αν είναι διαθέσιμο) μεταξύ των κατάστιχων, είτε να επιλέξετε το ύφος Qt &apos;gtk&apos; (αν είναι διαθέσιμο) να την μίμηση των θεμάτων GTK.
-
-Σιγουρευτείτε ότι το &apos;xsettingsd&apos; είναι εγκατεστημένο ούτως ώστε να βοηθήσετε τις εφαρμογές GTK να εφαρμόζουν τα θέματα σε πραγματικό χρόνο.</translation>
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -267,19 +275,6 @@ themes on the fly.</source>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
         <translation>Ύφος Qt</translation>
-    </message>
-</context>
-<context>
-    <name>ConfigOtherToolKits</name>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="143"/>
-        <source>GTK themes</source>
-        <translation>Θέματα GTK</translation>
-    </message>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
-        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Το %1 αντικαταστάθηκε.&lt;/p&gt;&lt;p&gt;Μπορείτε να βρείτε ένα αντίγραφο της παλιά διαμόρφωσης στο &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

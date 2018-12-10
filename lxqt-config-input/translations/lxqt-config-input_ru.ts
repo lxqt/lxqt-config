@@ -110,14 +110,6 @@
         <translation type="unfinished">Вниз</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">выше</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">ниже</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Модель клавиатуры:</translation>

@@ -110,14 +110,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">Yukarı</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">Aşağı</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Klavye modeli:</translation>
