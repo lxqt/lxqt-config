@@ -110,14 +110,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">subir</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">descer</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Modelo do teclado:</translation>

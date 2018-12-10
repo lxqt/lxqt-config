@@ -110,14 +110,6 @@
         <translation>Κάτω</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">πάνω</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">κάτω</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Μοντέλο πληκτρολογίου:</translation>

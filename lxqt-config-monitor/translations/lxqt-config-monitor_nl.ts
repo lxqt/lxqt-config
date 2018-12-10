@@ -115,7 +115,7 @@
         <translation>Beeldscherminstellingen</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.ui" line="71"/>
+        <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
@@ -130,7 +130,7 @@
         <translation>Positie instellen</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="244"/>
+        <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
         <translation>Geavanceerde instellingen</translation>
     </message>
@@ -274,6 +274,19 @@
     </message>
 </context>
 <context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation>Naam</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation>Naam:</translation>
+    </message>
+</context>
+<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
@@ -292,19 +305,6 @@
             <numerusform>%n second(en) te gaan</numerusform>
             <numerusform>%n seconden te gaan</numerusform>
         </translation>
-    </message>
-</context>
-<context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation>Naam</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation>Naam:</translation>
     </message>
 </context>
 </TS>

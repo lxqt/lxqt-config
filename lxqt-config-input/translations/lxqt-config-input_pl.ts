@@ -110,14 +110,6 @@
         <translation>W dół</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">Przenieś w górę</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">Przenieś w dół</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Model klawiatury:</translation>

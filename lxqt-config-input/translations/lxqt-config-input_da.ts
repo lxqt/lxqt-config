@@ -110,14 +110,6 @@
         <translation>Ned</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">op</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">ned</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Tastaturmodel:</translation>

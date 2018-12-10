@@ -110,14 +110,6 @@
         <translation>Bawah</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">naik</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">turun</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Model papan tik:</translation>

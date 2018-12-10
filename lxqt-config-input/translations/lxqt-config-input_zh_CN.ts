@@ -110,14 +110,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">上移</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">下移</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>键盘型号:</translation>

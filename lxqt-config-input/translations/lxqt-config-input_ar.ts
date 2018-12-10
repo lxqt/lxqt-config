@@ -110,14 +110,6 @@
         <translation>لأسفل</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">لأعلى</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">لأسفل</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>طراز لوحة المفاتيح:</translation>

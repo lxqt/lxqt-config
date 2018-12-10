@@ -115,7 +115,7 @@
         <translation>Skærmindstillinger</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.ui" line="71"/>
+        <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
         <translation>Indstillinger</translation>
     </message>
@@ -130,7 +130,7 @@
         <translation>Sæt placering</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="244"/>
+        <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
         <translation>Avancerede indstillinger</translation>
     </message>
@@ -274,6 +274,19 @@
     </message>
 </context>
 <context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation>Navn</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation>Navn:</translation>
+    </message>
+</context>
+<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
@@ -292,19 +305,6 @@
             <numerusform>%1 sekund tilbage</numerusform>
             <numerusform>%1 sekunder tilbage</numerusform>
         </translation>
-    </message>
-</context>
-<context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation>Navn</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation>Navn:</translation>
     </message>
 </context>
 </TS>

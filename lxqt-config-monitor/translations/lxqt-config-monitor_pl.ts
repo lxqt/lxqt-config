@@ -115,7 +115,7 @@
         <translation>Ustawienia monitora</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.ui" line="71"/>
+        <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
@@ -130,7 +130,7 @@
         <translation>Ustaw położenie</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="244"/>
+        <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
         <translation>Zaawansowane ustawienia</translation>
     </message>
@@ -274,6 +274,19 @@
     </message>
 </context>
 <context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation>Nazwa</translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation>Nazwa:</translation>
+    </message>
+</context>
+<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
@@ -293,19 +306,6 @@
             <numerusform>pozostały %n sekundy</numerusform>
             <numerusform>pozostało %n sekund</numerusform>
         </translation>
-    </message>
-</context>
-<context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation>Nazwa</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation>Nazwa:</translation>
     </message>
 </context>
 </TS>

@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="gl">
 <context>
+    <name>ConfigOtherToolKits</name>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="144"/>
+        <source>GTK themes</source>
+        <translation>Temas de GTK</translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="145"/>
+        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;«%1» foi sobrescrito.&lt;/p&gt;&lt;p&gt;Pode atopar unha copia da configuración antiga en «%2»&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>FontsConfig</name>
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
@@ -218,18 +231,10 @@
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
-        <source>To attempt uniform theming, either select similar style/theme
-(if available) across all lists, or select &apos;gtk2&apos; Qt style (if available)
- to mimic GTK themes.
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
-themes on the fly.</source>
-        <translation>Para tentar conseguir unha aparencia uniforme, escolla un estilo/tema
-similar (se está dispoñíbel) en todas as listas, ou escolla o estilo «gtk2»
-de Qt (se está dispoñíbel) para imitar os temas de GTK.
-
-Asegúrese de que «xsettingsd» está instalado para que as aplicacións
-GTK cambien de tema no instante.</translation>
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -270,19 +275,6 @@ GTK cambien de tema no instante.</translation>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
         <translation>Estilo de Qt</translation>
-    </message>
-</context>
-<context>
-    <name>ConfigOtherToolKits</name>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="143"/>
-        <source>GTK themes</source>
-        <translation>Temas de GTK</translation>
-    </message>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
-        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;«%1» foi sobrescrito.&lt;/p&gt;&lt;p&gt;Pode atopar unha copia da configuración antiga en «%2»&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

@@ -110,14 +110,6 @@
         <translation>Dolů</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">nahoru</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">dolů</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Model klávesnice:</translation>

@@ -115,7 +115,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.ui" line="71"/>
+        <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -130,7 +130,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="244"/>
+        <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -268,6 +268,19 @@
     </message>
 </context>
 <context>
+    <name>SaveSettings</name>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../savesettings.cpp" line="82"/>
+        <source>Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
@@ -285,19 +298,6 @@
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
-    </message>
-</context>
-<context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="82"/>
-        <source>Name:</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

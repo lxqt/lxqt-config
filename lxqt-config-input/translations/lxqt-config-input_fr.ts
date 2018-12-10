@@ -111,14 +111,6 @@
         <translation>Bas</translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">haut</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">bas</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>Modèle de clavier&#xa0;:</translation>

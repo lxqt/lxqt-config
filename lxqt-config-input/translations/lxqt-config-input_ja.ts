@@ -110,14 +110,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>up</source>
-        <translation type="vanished">上へ</translation>
-    </message>
-    <message>
-        <source>down</source>
-        <translation type="vanished">下へ</translation>
-    </message>
-    <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
         <translation>キーボードの型式:</translation>

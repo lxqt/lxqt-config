@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="nb_NO">
 <context>
+    <name>ConfigOtherToolKits</name>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="144"/>
+        <source>GTK themes</source>
+        <translation>GTK temaer</translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="145"/>
+        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&apos;%1&apos; har blitt overskrevet.&lt;/p&gt;&lt;p&gt;Du kan finne en kopi av dine gamle innstillinger i &apos;%2&apos;&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>FontsConfig</name>
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
@@ -218,18 +231,10 @@
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
-        <source>To attempt uniform theming, either select similar style/theme
-(if available) across all lists, or select &apos;gtk2&apos; Qt style (if available)
- to mimic GTK themes.
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply
-themes on the fly.</source>
-        <translation>For å prøve å få helhetlige temainnstillinger, enten velg lignende
-stil eller tema (hvis tilgjengelig) på tvers av alle lister eller velg 
-&quot;gtk2&quot; Qt stil (hvis tilgjengelig) for å imitere GTK temaer.
-
-Pass på at &quot;xsettingsd&quot; er installert for å hjelpe GTK-programmer
-til å bruke temainnstillingene der og da.</translation>
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -270,19 +275,6 @@ til å bruke temainnstillingene der og da.</translation>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
         <translation>Qt stil</translation>
-    </message>
-</context>
-<context>
-    <name>ConfigOtherToolKits</name>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="143"/>
-        <source>GTK themes</source>
-        <translation>GTK temaer</translation>
-    </message>
-    <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
-        <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; har blitt overskrevet.&lt;/p&gt;&lt;p&gt;Du kan finne en kopi av dine gamle innstillinger i &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
