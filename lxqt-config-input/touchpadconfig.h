@@ -46,13 +46,12 @@ private:
     LXQt::Settings* settings;
     Ui::TouchpadConfig ui;
     QList<TouchpadDevice> devices;
-    int curDevice;
 
     void initControls();
     void initFeatureControl(QCheckBox* control, int featureEnabled);
-    void setTappingEnabled(int state);
-    void setNaturalScrollingEnabled(int state);
-    void setTapToDragEnabled(int state);
+    void setTappingEnabled();
+    void setNaturalScrollingEnabled();
+    void setTapToDragEnabled();
     void setAccelSpeed(float speed);
 };
 

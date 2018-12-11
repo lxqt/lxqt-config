@@ -26,8 +26,7 @@
 
 TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     QWidget(parent),
-    settings(_settings),
-    curDevice(-1)
+    settings(_settings)
 {
     ui.setupUi(this);
 
@@ -36,26 +35,28 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     {
         ui.devicesComboBox->addItem(device.name());
     }
-    if (devices.size())
-    {
-        curDevice = 0;
-    }
 
     initControls();
 
-    connect(ui.tappingEnabledCheckBox, &QCheckBox::stateChanged,
+    connect(ui.devicesComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
+            this, [this] (int index) { initControls(); }); // update GUI on device change
+    // we use the singal QAbstractButton::clicked instead of QCheckBox::stateChanged
+    // to apply changes only with a user interaction because GUI can change on changing device
+    connect(ui.tappingEnabledCheckBox, &QAbstractButton::clicked,
             this, &TouchpadConfig::setTappingEnabled);
-    connect(ui.naturalScrollingEnabledCheckBox, &QCheckBox::stateChanged,
+    connect(ui.naturalScrollingEnabledCheckBox, &QAbstractButton::clicked,
             this, &TouchpadConfig::setNaturalScrollingEnabled);
-    connect(ui.tapToDragEnabledCheckBox, &QCheckBox::stateChanged,
+    connect(ui.tapToDragEnabledCheckBox, &QAbstractButton::clicked,
             this, &TouchpadConfig::setTapToDragEnabled);
     connect(ui.accelSpeedDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged),
             this, [this] (double value) { setAccelSpeed(static_cast<float>(value)); });
-    connect(ui.twoFingerScrollingRadioButton, &QRadioButton::toggled,
+    connect(ui.noScrollingRadioButton, &QAbstractButton::clicked,
             this, &TouchpadConfig::scrollingRadioButtonToggled);
-    connect(ui.edgeScrollingRadioButton, &QRadioButton::toggled,
+    connect(ui.twoFingerScrollingRadioButton, &QAbstractButton::clicked,
             this, &TouchpadConfig::scrollingRadioButtonToggled);
-    connect(ui.buttonScrollingRadioButton, &QRadioButton::toggled,
+    connect(ui.edgeScrollingRadioButton, &QAbstractButton::clicked,
+            this, &TouchpadConfig::scrollingRadioButtonToggled);
+    connect(ui.buttonScrollingRadioButton, &QAbstractButton::clicked,
             this, &TouchpadConfig::scrollingRadioButtonToggled);
 }
 
@@ -78,6 +79,7 @@ void TouchpadConfig::initFeatureControl(QCheckBox* control, int featureEnabled)
 
 void TouchpadConfig::initControls()
 {
+    int curDevice = ui.devicesComboBox->currentIndex();
     if (curDevice < 0) {
         return;
     }
@@ -90,7 +92,10 @@ void TouchpadConfig::initControls()
     float accelSpeed = device.accelSpeed();
     if (!std::isnan(accelSpeed)) {
         ui.accelSpeedDoubleSpinBox->setEnabled(true);
+        // prevent setAccelSpeed() from being called because the device may have changed
+        ui.accelSpeedDoubleSpinBox->blockSignals(true);
         ui.accelSpeedDoubleSpinBox->setValue(accelSpeed);
+        ui.accelSpeedDoubleSpinBox->blockSignals(false);
     } else {
         ui.accelSpeedDoubleSpinBox->setEnabled(false);
     }
@@ -148,32 +153,52 @@ void TouchpadConfig::reset()
     accept();
 }
 
-void TouchpadConfig::setTappingEnabled(int state)
+void TouchpadConfig::setTappingEnabled()
 {
-    devices[curDevice].setTappingEnabled(state == Qt::Checked);
-    accept();
+    int curDevice = ui.devicesComboBox->currentIndex();
+    if (curDevice >= 0)
+    {
+        devices[curDevice].setTappingEnabled(ui.tappingEnabledCheckBox->checkState() == Qt::Checked);
+        accept();
+    }
 }
 
-void TouchpadConfig::setNaturalScrollingEnabled(int state)
+void TouchpadConfig::setNaturalScrollingEnabled()
 {
-    devices[curDevice].setNaturalScrollingEnabled(state == Qt::Checked);
-    accept();
+    int curDevice = ui.devicesComboBox->currentIndex();
+    if (curDevice >= 0)
+    {
+        devices[curDevice].setNaturalScrollingEnabled(ui.naturalScrollingEnabledCheckBox->checkState() == Qt::Checked);
+        accept();
+    }
 }
 
-void TouchpadConfig::setTapToDragEnabled(int state)
+void TouchpadConfig::setTapToDragEnabled()
 {
-    devices[curDevice].setTapToDragEnabled(state == Qt::Checked);
-    accept();
+    int curDevice = ui.devicesComboBox->currentIndex();
+    if (curDevice >= 0)
+    {
+        devices[curDevice].setTapToDragEnabled(ui.tapToDragEnabledCheckBox->checkState() == Qt::Checked);
+        accept();
+    }
 }
 
 void TouchpadConfig::setAccelSpeed(float speed)
 {
-    devices[curDevice].setAccelSpeed(speed);
-    accept();
+    int curDevice = ui.devicesComboBox->currentIndex();
+    if (curDevice >= 0)
+    {
+        devices[curDevice].setAccelSpeed(speed);
+        accept();
+    }
 }
 
 void TouchpadConfig::scrollingRadioButtonToggled()
 {
+    int curDevice = ui.devicesComboBox->currentIndex();
+    if (curDevice < 0) {
+        return;
+    }
     TouchpadDevice& device = devices[curDevice];
     if (ui.noScrollingRadioButton->isChecked())
     {
