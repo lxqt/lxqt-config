@@ -81,7 +81,7 @@ int main(int argc, char** argv) {
     QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
 
     TouchpadConfig* touchpadConfig = new TouchpadConfig(&settings, &dlg);
-    dlg.addPage(touchpadConfig, QObject::tr("Touchpad"), "input-tablet");
+    dlg.addPage(touchpadConfig, QObject::tr("Mouse and Touchpad"), "input-tablet");
     QObject::connect(&dlg, &LXQt::ConfigDialog::reset,
                      touchpadConfig, &TouchpadConfig::reset);
 
