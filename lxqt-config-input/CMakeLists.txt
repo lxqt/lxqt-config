@@ -1,9 +1,12 @@
 project(lxqt-config-input)
 
 find_package(X11 REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(XORG_LIBINPUT REQUIRED xorg-libinput)
 
 include_directories(
     ${X11_INCLUDE_DIR}
+    ${XORG_LIBINPUT_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
 )
 
@@ -13,6 +16,7 @@ set(lxqt-config-input_HDRS
     mouseconfig.h
     keyboardlayoutconfig.h
     selectkeyboardlayoutdialog.h
+    touchpadconfig.h
 )
 
 set(lxqt-config-input_SRCS
@@ -21,6 +25,8 @@ set(lxqt-config-input_SRCS
     mouseconfig.cpp
     keyboardlayoutconfig.cpp
     selectkeyboardlayoutdialog.cpp
+    touchpadconfig.cpp
+    touchpaddevice.cpp
 )
 
 set(lxqt-config-input_UIS
@@ -28,6 +34,7 @@ set(lxqt-config-input_UIS
     keyboardconfig.ui
     keyboardlayoutconfig.ui
     selectkeyboardlayoutdialog.ui
+    touchpadconfig.ui
 )
 
 # Translations **********************************
@@ -62,8 +69,10 @@ target_link_libraries(lxqt-config-input
     Qt5::Widgets
     Qt5::X11Extras
     ${X11_LIBRARIES}
+    ${X11_Xinput_LIB}
     lxqt
     lxqt-config-cursor
+    udev
 )
 
 set_target_properties(lxqt-config-input
