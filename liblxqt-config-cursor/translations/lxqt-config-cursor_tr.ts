@@ -26,7 +26,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="212"/>
         <source>XCurTheme error</source>
-        <translation>XCurTema hatası</translation>
+        <translation>XCurTheme hatası</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="213"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQT bir imleç teması buladı. Öntanımlı X11 imleç teması kullanılacak. LXQT aşağıdaki dizinlere baktı:</translation>
+        <translation>LXQT bir imleç teması bulamadı. Öntanımlı X11 imleç teması kullanılacak. LXQT aşağıdaki dizinlere baktı:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
