@@ -107,7 +107,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
         <source>MIME type</source>
-        <translation>Mime türü</translation>
+        <translation>MIME türü</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="191"/>
