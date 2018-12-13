@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK temaları</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; üzerine yazıldı.&lt;/p&gt;&lt;p&gt;&apos;%2&apos; dizininde eski ayarlarınızın bir kopyasını bulabilirsiniz.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -153,12 +153,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>XDG simge temasının KDE eklentisi -&gt; Aşağıdaki Renk Şeması</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Simgeleri programcık biçemine (palet) dayalı renklendir</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Kullanıcı tanımlı duvar kağıdını geçersiz kıl</translation>
     </message>
 </context>
 <context>
@@ -217,24 +217,26 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK temalarını ayarla (GTK yapılandırma dosyaları üzerine yazılacak!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 Teması</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 Teması</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekdüzen temalı girişimleri denemek için, ya tüm listelerde benzer stil / temayı (varsa) seçin ya da GTK temalarını taklit etmek için &apos;gtk2&apos; Qt stilini (varsa) seçin.
+
+GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &apos;xsettingsd&apos; &apos;nin kurulu olduğundan emin olun.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -274,7 +276,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Biçemi</translation>
     </message>
 </context>
 </TS>
