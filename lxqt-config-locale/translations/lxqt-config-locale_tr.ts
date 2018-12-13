@@ -46,7 +46,7 @@
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation>Sayı:</translation>
+        <translation>Sayılar:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
