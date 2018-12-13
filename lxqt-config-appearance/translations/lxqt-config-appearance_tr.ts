@@ -24,22 +24,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Kullanıcı arabirimi için varsayılan yazı tipi</translation>
+        <translation>Kullanıcı arayüzü öntanımlı yazıtipi</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Yazı tipi:</translation>
+        <translation>Yazı tipi adı:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Tarz:</translation>
+        <translation>Biçem:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Punto boyutu:</translation>
+        <translation>Yazıtipi boyutu:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -69,23 +69,23 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Antialias yazıtipi kullan</translation>
+        <translation>Yazıtipi yumuşatması kullan</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Yazı tipi imleme stili:</translation>
+        <translation>Yazıtipi ipucu biçemi:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation>Yok</translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation>Slayt</translation>
+        <translation>Hafif</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
@@ -115,7 +115,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Altpiksel anti-aliasing:</translation>
+        <translation>Alt-piksel yumuşatma:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Görünüm Ayarları</translation>
+        <translation>LXQt Görünüm Yapılandırma</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Gereç Stili</translation>
+        <translation>Gereç Biçemi</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
@@ -241,7 +241,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
-        <translation>Araç Çubuğu düğme stili:</translation>
+        <translation>Araç çubuğu düğme stili:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
