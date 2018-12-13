@@ -34,7 +34,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Monitör Ayarları</translation>
+        <translation>Ekran Ayarları</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Monitör Ayarları</translation>
+        <translation>Ekran Ayarları</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
