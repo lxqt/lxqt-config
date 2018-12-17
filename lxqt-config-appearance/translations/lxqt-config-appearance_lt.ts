@@ -234,7 +234,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Norėdami pabandyti suvienodintą apipavidalinimą, visuose sąrašuose pasirinkite panašų stilių/temą (jei prieinama), arba pasirinkite &quot;gtk2&quot; Qt stilių (jei prieinama), kuris mėgdžiotų GTK temas.
+
+Įsitikinkite, kad yra įdiegtas paketas &quot;xsettingsd&quot;, kuris padėtų GTK programoms iš karto taikyti temas.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
