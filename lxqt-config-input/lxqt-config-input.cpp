@@ -25,8 +25,11 @@
 #include "keyboardconfig.h"
 #include "../liblxqt-config-cursor/selectwnd.h"
 #include "keyboardlayoutconfig.h"
+
+#ifdef WITH_TOUCHPAD
 #include "touchpadconfig.h"
 #include "touchpaddevice.h"
+#endif
 
 int main(int argc, char** argv) {
     LXQt::SingleApplication app(argc, argv);
@@ -41,9 +44,11 @@ int main(int argc, char** argv) {
     app.setApplicationVersion(VERINFO);
 
     dlgOptions.setCommandLine(&parser);
+#ifdef WITH_TOUCHPAD
     QCommandLineOption loadOption("load-touchpad",
             app.tr("Load last touchpad settings."));
     parser.addOption(loadOption);
+#endif
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
@@ -54,11 +59,13 @@ int main(int argc, char** argv) {
       configName = "session";
     LXQt::Settings settings(configName);
 
+#ifdef WITH_TOUCHPAD
     bool loadLastTouchpadSettings = parser.isSet(loadOption);
     if (loadLastTouchpadSettings) {
         TouchpadDevice::loadSettings(&settings);
         return 0;
     }
+#endif
 
     LXQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
     app.setActivationWindow(&dlg);
@@ -80,10 +87,12 @@ int main(int argc, char** argv) {
     dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
     QObject::connect(&dlg, SIGNAL(reset()), keyboardLayoutConfig, SLOT(reset()));
 
+#ifdef WITH_TOUCHPAD
     TouchpadConfig* touchpadConfig = new TouchpadConfig(&settings, &dlg);
     dlg.addPage(touchpadConfig, QObject::tr("Mouse and Touchpad"), "input-tablet");
     QObject::connect(&dlg, &LXQt::ConfigDialog::reset,
                      touchpadConfig, &TouchpadConfig::reset);
+#endif
 
     dlg.setWindowIcon(QIcon::fromTheme("input-keyboard"));
 

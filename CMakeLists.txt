@@ -15,6 +15,7 @@ option(WITH_FILE_ASSOCIATIONS "Build the 'lxqt-config-file-associations'" ON)
 option(WITH_INPUT "Build the 'lxqt-config-input'" ON)
 option(WITH_LOCALE "Build the 'lxqt-config-locale'" ON)
 option(WITH_MONITOR "Build the 'lxqt-config-monitor'" ON)
+option(WITH_TOUCHPAD "Build touchpad settings" ON)
 
 include(GNUInstallDirs)
 
