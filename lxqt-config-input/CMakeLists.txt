@@ -1,15 +1,32 @@
 project(lxqt-config-input)
 
 find_package(X11 REQUIRED)
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(XORG_LIBINPUT REQUIRED xorg-libinput)
-pkg_check_modules(XORG_XI REQUIRED xi)
-pkg_check_modules(LIBUDEV REQUIRED libudev)
+
+if (WITH_TOUCHPAD)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(XORG_LIBINPUT REQUIRED xorg-libinput)
+    pkg_check_modules(XORG_XI REQUIRED xi)
+    pkg_check_modules(LIBUDEV REQUIRED libudev)
+endif ()
+
+set(lxqt-config-input_INCS
+    ${X11_INCLUDE_DIR}
+    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+)
+
+if (WITH_TOUCHPAD)
+    add_definitions(
+        "-DWITH_TOUCHPAD=\"ON\""
+    )
+
+    set(lxqt-config-input_INCS
+        ${lxqt-config-input_INCS}
+        ${XORG_LIBINPUT_INCLUDE_DIRS}
+    )
+endif ()
 
 include_directories(
-    ${X11_INCLUDE_DIR}
-    ${XORG_LIBINPUT_INCLUDE_DIRS}
-    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+    ${lxqt-config-input_INCS}
 )
 
 set(lxqt-config-input_HDRS
@@ -18,7 +35,6 @@ set(lxqt-config-input_HDRS
     mouseconfig.h
     keyboardlayoutconfig.h
     selectkeyboardlayoutdialog.h
-    touchpadconfig.h
 )
 
 set(lxqt-config-input_SRCS
@@ -27,8 +43,6 @@ set(lxqt-config-input_SRCS
     mouseconfig.cpp
     keyboardlayoutconfig.cpp
     selectkeyboardlayoutdialog.cpp
-    touchpadconfig.cpp
-    touchpaddevice.cpp
 )
 
 set(lxqt-config-input_UIS
@@ -36,8 +50,25 @@ set(lxqt-config-input_UIS
     keyboardconfig.ui
     keyboardlayoutconfig.ui
     selectkeyboardlayoutdialog.ui
-    touchpadconfig.ui
 )
+
+if (WITH_TOUCHPAD)
+    set(lxqt-config-input_HDRS
+        ${lxqt-config-input_HDRS}
+        touchpadconfig.h
+    )
+
+    set(lxqt-config-input_SRCS
+        ${lxqt-config-input_SRCS}
+        touchpadconfig.cpp
+        touchpaddevice.cpp
+    )
+
+    set(lxqt-config-input_UIS
+        ${lxqt-config-input_UIS}
+        touchpadconfig.ui
+    )
+endif ()
 
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
@@ -67,14 +98,24 @@ add_executable(lxqt-config-input
     ${QM_LOADER}
 )
 
-target_link_libraries(lxqt-config-input
+set(lxqt-config-input_TLBS
     Qt5::Widgets
     Qt5::X11Extras
     ${X11_LIBRARIES}
-    ${X11_Xinput_LIB}
     lxqt
     lxqt-config-cursor
-    udev
+)
+
+if (WITH_TOUCHPAD)
+    set(lxqt-config-input_TLBS
+        ${lxqt-config-input_TLBS}
+        ${X11_Xinput_LIB}
+        udev
+    )
+endif ()
+
+target_link_libraries(lxqt-config-input
+    ${lxqt-config-input_TLBS}
 )
 
 set_target_properties(lxqt-config-input
