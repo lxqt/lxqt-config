@@ -11,7 +11,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode encontrar uma cópia das configurações antigas em &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode encontrar uma cópia de suas configurações anteriores em &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>As configurações a seguir afetam somente os aplicativos iniciados recentemente</translation>
+        <translation>As configurações a seguir afetam somente os aplicativos iniciados após as mudanças feitas</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Use fontes antialias</translation>
+        <translation>Usar fontes com anti-serrilhado</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Colorir ícones baseado no estilo de widget (paleta)</translation>
+        <translation>Colorir os ícones se baseando no estilo de widget (paleta)</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Substituir papel de parede definido pelo usuário</translation>
+        <translation>Substituir o papel de parede definido pelo usuário</translation>
     </message>
 </context>
 <context>
@@ -212,12 +212,12 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Estilo dos widgets</translation>
+        <translation>Estilo dos Widgets</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Definir temas GTK (Os arquivos de configuração GTK serão sobrescritos)</translation>
+        <translation>Definir temas GTK (os arquivos de configuração do GTK serão sobrescritos)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
@@ -246,12 +246,12 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../styleconfig.ui" line="107"/>
         <source>Only display the icon</source>
-        <translation>Mostrar ícones apenas</translation>
+        <translation>Mostrar apenas ícones</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>Only display the text</source>
-        <translation>Mostrar texto apenas</translation>
+        <translation>Mostrar apenas texto</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="117"/>
@@ -271,7 +271,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Ativar item com um clique</translation>
+        <translation>Ativar item com um clique único</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
