@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Пищать при ошибке ввода с клавиатуры</translation>
+        <translation>Звуковой сигнал при ошибке ввода с клавиатуры</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
