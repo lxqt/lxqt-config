@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Abgleich und Sortierung:</translation>
+        <translation>Abg&amp;leich und Sortierung:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Änderungen speichern? Sie werden beim nächsten Login angewandt.</translation>
+        <translation>Möchten Sie Ihre Änderungen speichern? Sie werden bei der nächsten Anmeldung wirksam.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt Regionaleinstellungen</translation>
+        <translation>LXQt-Gebietsschema-Konfiguration</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>Regionaleinstellungen</translation>
+        <translation>Gebietsschema-Einstellungen</translation>
     </message>
 </context>
 </TS>
