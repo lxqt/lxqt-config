@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Signalton bei Fehleingaben</translation>
+        <translation>Piepton bei einem Fehler der Tastatureingabe</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Verzögerung:</translation>
+        <translation>Wiederholungsverzögerung:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,12 +53,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Geschwindigkeit:</translation>
+        <translation>Wiederholungsintervall:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Testbereich für Tastatureinstellungen</translation>
+        <translation>Tippen Sie in das folgende Feld, um Ihre Tastatureinstellungen zu testen</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>NUM-Taste nach dem Einloggen einschalten</translation>
+        <translation>Num-Taste nach der Anmeldung einschalten</translation>
     </message>
 </context>
 <context>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Tastenbelegung&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Tastaturbelegung&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation>H&amp;inzufügen</translation>
+        <translation>&amp;Hinzufügen</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation>&amp;Entfernen</translation>
+        <translation>Entfe&amp;rnen</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation>Tastatur-Modell:</translation>
+        <translation>Tastaturmodell:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Tastenkombination zum Ändern der Belegung:</translation>
+        <translation>Tasten zum Ändern der Belegung:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>Doppelklickgeschwindigkeit:</translation>
+        <translation>Doppelklickintervall:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Mausrad erzeugt Bildlauf um ... Zeilen:</translation>
+        <translation>Mausrad-Bildlaufzeilen:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>Einfacher Klick aktiviert Elemente</translation>
+        <translation>Einfacher Klick zum Aktivieren von Elementen</translation>
     </message>
 </context>
 <context>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation>Einstellungen von Tastatur und Maus</translation>
+        <translation>Tastatur- und Mauseinstellungen</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
         <source>Keyboard Layout</source>
-        <translation>Tastenbelegung</translation>
+        <translation>Tastaturbelegung</translation>
     </message>
 </context>
 <context>
@@ -242,12 +242,12 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>Auswählen der Tastenbelegung</translation>
+        <translation>Wählen Sie eine Tastaturbelegung aus</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>Tastenbelegung</translation>
+        <translation>Tastaturbelegung</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
