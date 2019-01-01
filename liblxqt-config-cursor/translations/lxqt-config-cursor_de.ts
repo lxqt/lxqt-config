@@ -6,7 +6,7 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt Mauszeiger-Design Konfiguration</translation>
+        <translation>LXQt Mauszeiger-Thema Konfiguration</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
@@ -17,12 +17,12 @@
     <message>
         <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Neues Design installieren...</translation>
+        <translation>Neues Thema &amp;installieren...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="88"/>
         <source>&amp;Remove Theme</source>
-        <translation>&amp;Design entfernen</translation>
+        <translation>Thema entfe&amp;rnen</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="212"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Das aktive Design kann nicht entfernt werden!</translation>
+        <translation>Sie können das aktive Thema nicht entfernen!</translation>
     </message>
 </context>
 <context>
