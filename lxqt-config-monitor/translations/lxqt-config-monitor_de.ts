@@ -6,7 +6,7 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation>Schnelleinstellungen</translation>
+        <translation>Schnelloptionen</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ Gemeinsame Anzeige</translation>
+        <translation> ❶ ❶ Einheitliche Ansicht</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation> ❶     Nur erste Anzeige</translation>
+        <translation> ❶     Nur erste</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation>     ❷ Nur zweite Anzeige</translation>
+        <translation>     ❷ Nur zweite</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>Bildschirme verbunden lassen</translation>
+        <translation>Lassen Sie die Bildschirme angeschlossen</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation>Position setzen</translation>
+        <translation>Position festlegen</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
@@ -160,27 +160,27 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation>Diesen Bildschirm freigeben</translation>
+        <translation>Diesen Bildschirm aktivieren</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Hauptbildschirm</translation>
+        <translation>Dies ist mein primärer Bildschirm</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Erweiterter Bildschirm</translation>
+        <translation>Dieser Bildschirm erweitert einen anderen Bildschirm</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation>Erweiterte Einstellungen</translation>
+        <translation>Erweitert</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Bildwiederholfrequenz:</translation>
+        <translation>Bildwiederholrate:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>Bildschirm-Informationen</translation>
+        <translation>Bildschirminformationen</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
@@ -222,7 +222,7 @@
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Bildschirmgröße: %1cm x %2cm
+        <translation>Bildschirmgröße: %1 cm x %2 cm
 </translation>
     </message>
     <message>
@@ -296,7 +296,7 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Sind die Einstellungen korrekt?</translation>
+        <translation>Sind die aktuellen Einstellungen für Sie in Ordnung?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
