@@ -148,7 +148,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Symboldesign</translation>
+        <translation>Symbolthema</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
-        <translation>Symboldesign</translation>
+        <translation>Symbolthema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="77"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>GTK-Design festlegen (GTK-Konfigurationsdateien werden überschrieben!)</translation>
+        <translation>GTK-Themen festlegen (GTK-Konfigurationsdateien werden überschrieben!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
@@ -239,7 +239,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
-        <translation>Werkzeugleistenstil:</translation>
+        <translation>Werkzeugleisten-Schaltflächenstil:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
@@ -259,17 +259,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>The text appears under the icon</source>
-        <translation>Text unterhalb des Symbols</translation>
+        <translation>Der Text erscheint unter dem Symbol</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="127"/>
         <source>Default</source>
-        <translation>Default</translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Einfacher Klick aktiviert Elemente</translation>
+        <translation>Element mit einem einzigen Klick aktivieren</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
