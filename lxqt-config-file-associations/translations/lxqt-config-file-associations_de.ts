@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation>Dateizuordnungen</translation>
+        <translation>Anwendungsauswahl</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Anwendung auswählen für:</translation>
+        <translation>Wählen Sie eine Anwendung aus für:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Anwendungen die JPEG verarbeiten</translation>
+        <translation>Anwendungen, die JPEG verarbeiten</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>Anwendungen die %1 verarbeiten</translation>
+        <translation>Anwendungen, die %1 verarbeiten</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
         <source>None</source>
-        <translation>Keins</translation>
+        <translation>Keine</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
