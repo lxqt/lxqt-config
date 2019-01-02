@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation>Selector de aplicacións</translation>
+        <translation>Selector de aplicativos</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Escolla unha aplicación para:</translation>
+        <translation>Escolla un aplicativo para:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Aplicacións para manexar JPEG</translation>
+        <translation>Aplicativos para manexar JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -35,17 +35,17 @@
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>Outras aplicacións</translation>
+        <translation>Outros aplicativos</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>Aplicacións para manexar %1</translation>
+        <translation>Aplicativos para manexar %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>Non se atoparon aplicacións</translation>
+        <translation>Non se atoparon aplicativos</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
         <location filename="../mimetypeviewer.cpp" line="156"/>
         <location filename="../mimetypeviewer.cpp" line="207"/>
         <source>None</source>
-        <translation>Ningunha</translation>
+        <translation>Ningún</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation>Aplicación predeterminada</translation>
+        <translation>Aplicativo predeterminado</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
