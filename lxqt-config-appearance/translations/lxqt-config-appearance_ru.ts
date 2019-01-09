@@ -64,7 +64,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Следующие настройки подействуют только на вновь запущенные приложения</translation>
+        <translation>Настройки будут применены к вновь запущенным приложениям</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Тема иконок</translation>
+        <translation>Тема Значков</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -246,7 +246,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="107"/>
         <source>Only display the icon</source>
-        <translation>Показывать только иконку</translation>
+        <translation>Показывать только значок</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
@@ -256,12 +256,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="117"/>
         <source>The text appears beside the icon</source>
-        <translation>Текст появляется сбоку от иконки</translation>
+        <translation>Текст появляется сбоку от значка</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>The text appears under the icon</source>
-        <translation>Текст появляется под иконкой</translation>
+        <translation>Текст появляется под значком</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="127"/>
