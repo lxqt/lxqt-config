@@ -69,7 +69,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>反転</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="73"/>
