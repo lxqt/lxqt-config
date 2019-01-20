@@ -222,12 +222,12 @@
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3主題</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2主題</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
