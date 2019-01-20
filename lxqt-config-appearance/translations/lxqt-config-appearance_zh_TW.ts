@@ -217,7 +217,7 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>設定GTK主題 (GTK設定將會被覆蓋!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
