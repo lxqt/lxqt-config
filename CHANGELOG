@@ -1,4 +1,30 @@
 
+lxqt-config-0.14.0 / 2019-01-25
+===============================
+
+  * Implemented Features:
+    - Introduced GTK appearance settings
+    - Initial touchpad settings and improved input device handling
+  * Implementation fixed:
+    - lxqt-config: Removed ancient Qt workaround that creates problems now
+    - lxqt-config-appearance: Some GUI fixes
+    - lxqt-config-appearance: mkpath if settings of GTK doesn't exists.
+    - lxqt-config-brightness: Backlight control updated
+    - lxqt-config-brightness: 
+      XRandrBrightness::backlight_get_with_range return value
+    - lxqt-config-monitor: Monitor name is added to output.
+  * Improved cmake scripting
+    - Set cmake_minimum_required to 3.1.0
+    - Check for xi and libudev
+    - Removed QUIET from find_package
+    - Removed dependency on QtConcurrent
+    - Removed locale compile definitons
+    - Installed former missed man pages
+  * Moved translations from lxqt-l10n back to lxqt-policykit
+    - Removed obsolete translation fuctionality
+    - Added translation promo in README.md
+  * Translation updates
+
 lxqt-config-0.13.0 / 2018-05-21
 ===============================
 
@@ -29,8 +55,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * Add Spanish desktop entry.
   * Add Spanish desktop entry
 
-0.12.0 / 2017-10-21
-===================
+lxqt-config-0.12.0 / 2017-10-21
+===============================
 
   * Release 0.12.0: Update changelog
   * Set patch version
@@ -66,8 +92,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * Use const iterators
   * Update AUTHORS
 
-0.11.1 / 2017-01-01
-===================
+lxqt-config-0.11.1 / 2017-01-01
+===============================
 
   * Release 0.11.1: Update changelog
   * lxqt-config-monitor: remove unnecessary wait before settings load (#114)
@@ -87,8 +113,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * Remove cpack (#104)
   * lxqt-config-brightness: Add GenericName and Comment to desktop entry
 
-0.11.0 / 2016-09-24
-===================
+lxqt-config-0.11.0 / 2016-09-24
+===============================
 
   * Release 0.11.0: Add changelog
   * appearance: Avoid blocking when setting wallpaper
@@ -163,8 +189,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * Mkdir $XDG_CONFIG_HOME/autostart or ~/.config/autostart, if not exists.
   * lxqt-config-appearance: Choose the icon with the matching size
 
-0.10.0 / 2015-11-02
-===================
+lxqt-config-0.10.0 / 2015-11-02
+===============================
 
   * Update translations
   * Fix license file
@@ -250,8 +276,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * file-associations:Return from the busy cursor only after the Ui stuff ended
   * Remove an unneeded dependency on KWindowSystem
 
-0.9.0 / 2015-01-31
-==================
+lxqt-config-0.9.0 / 2015-01-31
+==============================
 
   * Delay loading of application icons in the app-chooser dialog for faster loading.
   * Make the user aware of still ongoing work (Application Chooser)
@@ -290,8 +316,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * Drop Qt4 support in code
   * Clean up CMakeLists.txt and drop Qt 4 support
 
-0.8.0 / 2014-10-10
-==================
+lxqt-config-0.8.0 / 2014-10-10
+==============================
 
   * Adapts to translations infrastructure
   * Option to set single-click as default and sigle-click handling in system settings' main window
@@ -349,8 +375,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * Fix a null dereference
   * Remove unnecessary use of alloca, which is not portable.
 
-0.7.0 / 2014-05-07
-==================
+lxqt-config-0.7.0 / 2014-05-07
+==============================
 
   * Mention lxqt-config-cursor in AUTHORS
   * Include some optional components in LXQt settings.
@@ -360,8 +386,8 @@ lxqt-config-0.13.0 / 2018-05-21
   * String changes LxQt -> LXQt and LXDE-Qt -> LXQt without refactoring classes, namespaces and so on
   * removal of old templates in translations
 
-0.6.99 / 2014-05-01
-===================
+lxqt-config-0.6.99 / 2014-05-01
+===============================
 
   * Update manpages
   * Update AUTHORS
