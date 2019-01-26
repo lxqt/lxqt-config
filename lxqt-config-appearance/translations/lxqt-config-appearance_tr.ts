@@ -158,7 +158,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Simgeleri programcık biçemine (palet) dayalı renklendir</translation>
+        <translation>Simgeleri gereç biçemine (palet) göre renklendir</translation>
     </message>
 </context>
 <context>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>Widget Style</source>
-        <translation>Gereç Tarzı</translation>
+        <translation>Gereç Biçemi</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
