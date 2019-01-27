@@ -35,7 +35,7 @@
         <location filename="../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
         <translatorcomment>no idea where this appears</translatorcomment>
-        <translation type="unfinished">&lt;b&gt;&lt;/b</translation>
+        <translation>&lt;b&gt;Output:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="67"/>
