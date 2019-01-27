@@ -116,7 +116,7 @@
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
         <translatorcomment>no idea how to translate that</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Antialiasing dei subpixel:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -235,7 +235,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per provare ad uniformare il tema, seleziona uno stile/tema simile (se disponibile) nella lista, o seleziona &apos;gtk2&apos; Qt style (se disponibile) per mimare i temi GTK. 
+
+Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni GTK ad applicare i temi automaticamente.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
