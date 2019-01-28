@@ -11,7 +11,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; foi substituído.&lt;/p&gt;&lt;p&gt;Pode encontrar uma cópia do seu ficheiro antigo em &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; foi substituído.&lt;/p&gt;&lt;p&gt;Você pode encontrar uma cópia de suas configurações antigas em &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -212,12 +212,12 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Estilo do widget</translation>
+        <translation>Estilo do Widget</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Definir tema GTK (ficheiros de configuração GTK serão substituídos)</translation>
+        <translation>Definir temas GTK (Arquivos de configuração do GTK serão substituídos!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
@@ -241,12 +241,12 @@ Certifique-se de que o &apos;xsettingsd&apos; esteja instalado para ajudar os ap
     <message>
         <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
-        <translation>Botões da barra de ferramentas:</translation>
+        <translation>Estilo do botão da barra de ferramentas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
         <source>Only display the icon</source>
-        <translation>Mostrar apenas os ícones</translation>
+        <translation>Mostrar apenas o ícone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
@@ -256,12 +256,12 @@ Certifique-se de que o &apos;xsettingsd&apos; esteja instalado para ajudar os ap
     <message>
         <location filename="../styleconfig.ui" line="117"/>
         <source>The text appears beside the icon</source>
-        <translation>Texto ao lado dos ícones</translation>
+        <translation>O texto aparece ao lado do ícone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>The text appears under the icon</source>
-        <translation>Texto por baixo dos ícones</translation>
+        <translation>O texto aparece sob o ícone</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="127"/>
@@ -271,7 +271,7 @@ Certifique-se de que o &apos;xsettingsd&apos; esteja instalado para ajudar os ap
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Ativar itens com um clique</translation>
+        <translation>Ativar item em um único clique</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
