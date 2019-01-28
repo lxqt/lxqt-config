@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Reproduzir um som se ocorrer um erro de teclado</translation>
+        <translation>Bipe quando há um erro de entrada do teclado</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -31,18 +31,18 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation>Repetição de caracteres</translation>
+        <translation>Repetição de Caractere</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Longa</translation>
+        <translation>Longo</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Atraso de repetição:</translation>
+        <translation>Atraso de Repetição:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,12 +53,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Intervalo de repetição:</translation>
+        <translation>Intervalo de Repetição:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Digite algo na caixa abaixo para testar o teclado</translation>
+        <translation>Digite na caixa abaixo para testar suas configurações de teclado</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation>Nenhuma</translation>
+        <translation>Nenhum</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: se estiver a utilizar um &lt;span style=&quot; font-weight:600;&quot;&gt;método de introdução&lt;/span&gt;, tal como IBus, uim, fcitx ou gcin, as alterações aqui efetuadas &lt;span style=&quot; font-weight:600;&quot;&gt;poderão não funcionar&lt;/span&gt;, uma vez que serão substituídas pelos métodos de introdução utilizados.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: Se você estiver usando um &lt;span style=&quot; font-weight:600;&quot;&gt;método de entrada&lt;/span&gt;, tal como IBus, uim, fcitx ou gcin, as configurações aqui &lt;span style=&quot; font-weight:600;&quot;&gt;poderão não funcionar&lt;/span&gt;porque eles são substituídos pelos métodos de entrada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -140,7 +140,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Rato&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Mouse&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation>Baixa</translation>
+        <translation>Baixo</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
@@ -196,17 +196,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Roda do rato desloca:</translation>
+        <translation>Linhas de rolagem da roda:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Canhoto (inverter botões do rato)</translation>
+        <translation>Canhoto (Trocar os botões esquerdo e direito do mouse)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>Ativar itens com um clique</translation>
+        <translation>Clique único para ativar itens</translation>
     </message>
 </context>
 <context>
@@ -214,12 +214,12 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation>Definições do teclado e do rato</translation>
+        <translation>Configurações de Teclado e Mouse</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
         <source>Mouse</source>
-        <translation>Rato</translation>
+        <translation>Mouse</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
         <source>Keyboard Layout</source>
-        <translation>Disposição do teclado</translation>
+        <translation>Disposição do Teclado</translation>
     </message>
 </context>
 <context>
@@ -242,7 +242,7 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>Selecione uma disposição</translation>
+        <translation>Selecione uma disposição do teclado</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
