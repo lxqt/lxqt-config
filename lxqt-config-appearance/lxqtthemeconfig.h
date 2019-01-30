@@ -45,11 +45,13 @@ public:
     explicit LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
     ~LXQtThemeConfig();
 
+    void applyLxqtTheme();
+
 public slots:
     void initControls();
 
-private slots:
-    void lxqtThemeSelected(QTreeWidgetItem* item, int column);
+signals:
+    void settingsChanged();
 
 private:
     Ui::LXQtThemeConfig *ui;

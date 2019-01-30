@@ -43,9 +43,12 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
   oldDelay(500),
   interval(30),
   oldInterval(30),
+  flashTime(1000),
+  oldFlashTime(1000),
   beep(true),
   oldBeep(true),
-  numlock(false) {
+  numlock(false),
+  oldNumlock(false) {
 
   ui.setupUi(this);
 
@@ -54,12 +57,12 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
   initControls();
 
   // set_range_stops(ui.keyboardDelay, 10);
-  connect(ui.keyboardDelay, SIGNAL(valueChanged(int)), SLOT(onKeyboardSliderChanged(int)));
+  connect(ui.keyboardDelay, &QAbstractSlider::valueChanged, this, &KeyboardConfig::settingsChanged);
   // set_range_stops(ui.keyboardInterval, 10);
-  connect(ui.keyboardInterval, SIGNAL(valueChanged(int)), SLOT(onKeyboardSliderChanged(int)));
-  connect(ui.keyboardBeep, SIGNAL(toggled(bool)), SLOT(onKeyboardBeepToggled(bool)));
-  connect(ui.cursorFlashTime, SIGNAL(valueChanged(int)), SLOT(onCorsorFlashTimeChanged(int)));
-  connect(ui.keyboardNumLock, SIGNAL(toggled(bool)), SLOT(onKeyboardNumLockToggled(bool)));
+  connect(ui.keyboardInterval, &QAbstractSlider::valueChanged, this, &KeyboardConfig::settingsChanged);
+  connect(ui.keyboardBeep, &QAbstractButton::clicked, this, &KeyboardConfig::settingsChanged);
+  connect(ui.cursorFlashTime, QOverload<int>::of(&QSpinBox::valueChanged), this, &KeyboardConfig::settingsChanged);
+  connect(ui.keyboardNumLock, &QAbstractButton::clicked, this, &KeyboardConfig::settingsChanged);
 }
 
 KeyboardConfig::~KeyboardConfig() {
@@ -67,64 +70,80 @@ KeyboardConfig::~KeyboardConfig() {
 }
 
 void KeyboardConfig::initControls() {
+  ui.keyboardDelay->blockSignals(true);
   ui.keyboardDelay->setValue(delay);
+  ui.keyboardDelay->blockSignals(false);
+
+  ui.keyboardInterval->blockSignals(true);
   ui.keyboardInterval->setValue(interval);
+  ui.keyboardInterval->blockSignals(false);
+
   ui.keyboardBeep->setChecked(beep);
   ui.keyboardNumLock->setChecked(numlock);
 
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  int value = qtSettings->value(QLatin1String("cursorFlashTime"), 1000).toInt();
-  ui.cursorFlashTime->setValue(value);
-  qtSettings->endGroup();
+  ui.cursorFlashTime->blockSignals(true);
+  ui.cursorFlashTime->setValue(flashTime);
+  ui.cursorFlashTime->blockSignals(false);
 }
 
-void KeyboardConfig::onKeyboardSliderChanged(int value) {
-  QSlider* slider = static_cast<QSlider*>(sender());
-
-  if(slider == ui.keyboardDelay)
-    delay = value;
-  else if(slider == ui.keyboardInterval)
-    interval = value;
+void KeyboardConfig::applyConfig()
+{
+  bool acceptSetting = false;
+  bool applyX11 = false;
 
   /* apply keyboard values */
-  XkbSetAutoRepeatRate(QX11Info::display(), XkbUseCoreKbd, delay, interval);
+  if(delay != ui.keyboardDelay->value() || interval != ui.keyboardInterval->value())
+  {
+    delay = ui.keyboardDelay->value();
+    interval = ui.keyboardInterval->value();
+    XkbSetAutoRepeatRate(QX11Info::display(), XkbUseCoreKbd, delay, interval);
+    acceptSetting = true;
+  }
 
-  accept();
-}
+  if(beep != ui.keyboardBeep->isChecked())
+  {
+    beep = ui.keyboardBeep->isChecked();
+    XKeyboardControl values;
+    values.bell_percent = beep ? -1 : 0;
+    XChangeKeyboardControl(QX11Info::display(), KBBellPercent, &values);
+    acceptSetting = true;
+  }
 
-void KeyboardConfig::onKeyboardBeepToggled(bool checked) {
-  XKeyboardControl values;
-  beep = checked;
-  values.bell_percent = beep ? -1 : 0;
-  XChangeKeyboardControl(QX11Info::display(), KBBellPercent, &values);
+  if(flashTime != ui.cursorFlashTime->value())
+  {
+    flashTime = ui.cursorFlashTime->value();
+    acceptSetting = applyX11 = true;
+  }
 
-  accept();
-}
+  if(numlock != ui.keyboardNumLock->isChecked())
+  {
+    numlock = ui.keyboardNumLock->isChecked();
+    acceptSetting = true;
+  }
 
-void KeyboardConfig::onKeyboardNumLockToggled(bool checked) {
-  numlock = checked;
-  accept();
-}
+  if(acceptSetting)
+    accept();
 
-void KeyboardConfig::onCorsorFlashTimeChanged(int value)
-{
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  qtSettings->setValue(QLatin1String("cursorFlashTime"), value);
-  qtSettings->endGroup();
-  qtSettings->sync();
 #ifdef Q_WS_X11
-  qt_x11_apply_settings_in_all_apps();
+  if(applyX11)
+  {
+    qtSettings->sync();
+    qt_x11_apply_settings_in_all_apps();
+  }
 #endif
 }
-
 
 void KeyboardConfig::loadSettings() {
   settings->beginGroup("Keyboard");
   oldDelay = delay = settings->value("delay", 500).toInt();
   oldInterval = interval = settings->value("interval", 30).toInt();
   oldBeep = beep = settings->value("beep", true).toBool();
-  numlock = settings->value("numlock", false).toBool();
+  oldNumlock = numlock = settings->value("numlock", false).toBool();
   settings->endGroup();
+
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  oldFlashTime = flashTime = qtSettings->value(QLatin1String("cursorFlashTime"), 1000).toInt();
+  qtSettings->endGroup();
 }
 
 void KeyboardConfig::accept() {
@@ -134,6 +153,10 @@ void KeyboardConfig::accept() {
   settings->setValue("beep", beep);
   settings->setValue("numlock", numlock);
   settings->endGroup();
+
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  qtSettings->setValue(QLatin1String("cursorFlashTime"), flashTime);
+  qtSettings->endGroup();
 }
 
 void KeyboardConfig::reset() {
@@ -142,6 +165,8 @@ void KeyboardConfig::reset() {
   delay = oldDelay;
   interval = oldInterval;
   beep = oldBeep;
+  numlock = oldNumlock;
+  flashTime = oldFlashTime;
   XkbSetAutoRepeatRate(QX11Info::display(), XkbUseCoreKbd, delay, interval);
   /* FIXME: beep? */
 

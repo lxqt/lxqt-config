@@ -28,19 +28,20 @@
 
 KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent):
   QWidget(parent),
-  settings(_settings) {
+  settings(_settings),
+  applyConfig_(false) {
   ui.setupUi(this);
 
   loadLists();
   loadSettings();
   initControls();
 
-  connect(ui.addLayout, SIGNAL(clicked(bool)), SLOT(onAddLayout()));
-  connect(ui.removeLayout, SIGNAL(clicked(bool)), SLOT(onRemoveLayout()));
-  connect(ui.moveUp, SIGNAL(clicked(bool)), SLOT(onMoveUp()));
-  connect(ui.moveDown, SIGNAL(clicked(bool)), SLOT(onMoveDown()));
-  connect(ui.keyboardModel, SIGNAL(currentIndexChanged(int)), SLOT(accept()));
-  connect(ui.switchKey, SIGNAL(currentIndexChanged(int)), SLOT(accept()));
+  connect(ui.addLayout, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onAddLayout);
+  connect(ui.removeLayout, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onRemoveLayout);
+  connect(ui.moveUp, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onMoveUp);
+  connect(ui.moveDown, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onMoveDown);
+  connect(ui.keyboardModel, QOverload<int>::of(&QComboBox::activated), this, &KeyboardLayoutConfig::settingsChanged);
+  connect(ui.switchKey, QOverload<int>::of(&QComboBox::activated), this, &KeyboardLayoutConfig::settingsChanged);
 }
 
 KeyboardLayoutConfig::~KeyboardLayoutConfig() {
@@ -197,12 +198,17 @@ void KeyboardLayoutConfig::addLayout(QString name, QString variant) {
 }
 
 void KeyboardLayoutConfig::reset() {
+  applyConfig_ = true;
   ui.layouts->clear();
   initControls();
-  accept();
+  applyConfig();
 }
 
-void KeyboardLayoutConfig::accept() {
+void KeyboardLayoutConfig::applyConfig() {
+  if(!applyConfig_)
+    return;
+  applyConfig_ = false;
+
   // call setxkbmap to apply the changes
   QProcess setxkbmap;
   // clear existing options
@@ -279,7 +285,8 @@ void KeyboardLayoutConfig::onAddLayout() {
   SelectKeyboardLayoutDialog dlg(knownLayouts_, this);
   if(dlg.exec() == QDialog::Accepted) {
     addLayout(dlg.selectedLayout(), dlg.selectedVariant());
-    accept();
+    applyConfig_ = true;
+    Q_EMIT settingsChanged();
   }
 }
 
@@ -288,7 +295,8 @@ void KeyboardLayoutConfig::onRemoveLayout() {
     QTreeWidgetItem* item = ui.layouts->currentItem();
     if(item) {
       delete item;
-      accept();
+      applyConfig_ = true;
+      Q_EMIT settingsChanged();
     }
   }
 }
@@ -302,7 +310,8 @@ void KeyboardLayoutConfig::onMoveDown() {
     ui.layouts->takeTopLevelItem(pos);
     ui.layouts->insertTopLevelItem(pos + 1, item);
     ui.layouts->setCurrentItem(item);
-    accept();
+    applyConfig_ = true;
+    Q_EMIT settingsChanged();
   }
 }
 
@@ -315,7 +324,8 @@ void KeyboardLayoutConfig::onMoveUp() {
     ui.layouts->takeTopLevelItem(pos);
     ui.layouts->insertTopLevelItem(pos - 1, item);
     ui.layouts->setCurrentItem(item);
-    accept();
+    applyConfig_ = true;
+    Q_EMIT settingsChanged();
   }
 }
 

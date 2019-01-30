@@ -52,15 +52,15 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::
     ui->setupUi(this);
 
     initControls();
-    
-    connect(ui->gtk2ComboBox, SIGNAL(activated(const QString &)), this, SLOT(gtk2StyleSelected(const QString &)));
-    connect(ui->gtk3ComboBox, SIGNAL(activated(const QString &)), this, SLOT(gtk3StyleSelected(const QString &)));
-    connect(ui->qtComboBox, SIGNAL(activated(const QString &)), this, SLOT(qtStyleSelected(const QString &)));
-    
-    connect(ui->advancedOptionsGroupBox, SIGNAL(toggled(bool)), this, SLOT(showAdvancedOptions(bool)));
-    
-    connect(ui->toolButtonStyle, SIGNAL(currentIndexChanged(int)), SLOT(toolButtonStyleSelected(int)));
-    connect(ui->singleClickActivate, SIGNAL(toggled(bool)), SLOT(singleClickActivateToggled(bool)));
+
+    connect(ui->advancedOptionsGroupBox, &QGroupBox::toggled, this, &StyleConfig::showAdvancedOptions);
+
+    connect(ui->qtComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
+    connect(ui->advancedOptionsGroupBox, &QGroupBox::clicked, this, &StyleConfig::settingsChanged);
+    connect(ui->gtk2ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
+    connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
+    connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
+    connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
 }
 
 
@@ -77,11 +77,11 @@ void StyleConfig::initControls()
     QStringList qtThemes = QStyleFactory::keys();
     QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes("2.0");
     QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes("3.0");
-    
+
     if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
         mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
     bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
-    
+
     showAdvancedOptions(controlGTKThemeEnabled);
     ui->advancedOptionsGroupBox->setChecked(controlGTKThemeEnabled);
 
@@ -96,15 +96,16 @@ void StyleConfig::initControls()
 
     // activate item views with single click
     ui->singleClickActivate->setChecked( mSettings->value("single_click_activate", false).toBool());
-    
-    
+
+
     // Fill Qt themes
+    ui->qtComboBox->clear();
     ui->qtComboBox->addItems(qtThemes);
-    
+
     // Fill GTK themes
     ui->gtk2ComboBox->addItems(gtk2Themes);
     ui->gtk3ComboBox->addItems(gtk3Themes);
-    
+
     ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile("2.0"));
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile("3.0"));
     mSettings->beginGroup(QLatin1String("Qt"));
@@ -114,45 +115,51 @@ void StyleConfig::initControls()
     update();
 }
 
-void StyleConfig::toolButtonStyleSelected(int index)
+void StyleConfig::applyStyle()
 {
+    // Qt style
+    QString themeName = ui->qtComboBox->currentText();;
+    mQtSettings->beginGroup(QLatin1String("Qt"));
+    if(mQtSettings->value("style").toString() != themeName)
+        mQtSettings->setValue("style", themeName);
+    mQtSettings->endGroup();
+
+    // single click setting
+    if(mSettings->value("single_click_activate").toBool() !=  ui->singleClickActivate->isChecked()) {
+        mSettings->setValue("single_click_activate", ui->singleClickActivate->isChecked());
+    }
+
+   // tool button style
+   int index = ui->toolButtonStyle->currentIndex();
     // convert style value to string
     QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
     if(index == -1)
         index = Qt::ToolButtonTextBesideIcon;
     const char* str = me.valueToKey(index);
-    if(str)
+    if(str && mSettings->value("tool_button_style") != str)
     {
         mSettings->setValue("tool_button_style", str);
         mSettings->sync();
-        emit updateSettings();
+        mConfigOtherToolKits->setConfig();
     }
-}
 
-void StyleConfig::singleClickActivateToggled(bool toggled)
-{
-    mSettings->setValue("single_click_activate", toggled);
-    mSettings->sync();
-}
+    // GTK3
+    bool setXSettings = false;
+    themeName = ui->gtk3ComboBox->currentText();
+    if(themeName != mConfigOtherToolKits->getGTKThemeFromRCFile("3.0")) {
+        mConfigOtherToolKits->setGTKConfig("3.0", themeName);
+        setXSettings = true;
+    }
 
-void StyleConfig::qtStyleSelected(const QString &themeName)
-{
-    mQtSettings->beginGroup(QLatin1String("Qt"));
-    mQtSettings->setValue("style", themeName);
-    mQtSettings->endGroup();
-    mQtSettings->sync();
-}
+    // GTK2
+    themeName = ui->gtk2ComboBox->currentText();
+    if(themeName != mConfigOtherToolKits->getGTKThemeFromRCFile("2.0")) {
+        mConfigOtherToolKits->setGTKConfig("2.0", themeName);
+        setXSettings = true;
+    }
 
-void StyleConfig::gtk3StyleSelected(const QString &themeName)
-{
-    mConfigOtherToolKits->setGTKConfig("3.0", themeName);
-    mConfigOtherToolKits->setXSettingsConfig();
-}
-
-void StyleConfig::gtk2StyleSelected(const QString &themeName)
-{
-    mConfigOtherToolKits->setGTKConfig("2.0", themeName);
-    mConfigOtherToolKits->setXSettingsConfig();
+    if(setXSettings)
+        mConfigOtherToolKits->setXSettingsConfig();
 }
 
 void StyleConfig::showAdvancedOptions(bool on)

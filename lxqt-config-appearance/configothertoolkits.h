@@ -48,7 +48,7 @@ public slots:
     void setConfig();
     void setXSettingsConfig();
     void setGTKConfig(QString version, QString theme = QString());
-    
+
 private:
     struct Config {
         QString iconTheme;
@@ -63,7 +63,7 @@ private:
 
     LXQt::Settings *mSettings;
     LXQt::Settings *mConfigAppearanceSettings;
-    
+
     QProcess mXsettingsdProc;
     QTemporaryFile tempFile;
 };

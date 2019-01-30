@@ -44,6 +44,8 @@ public:
     IconThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
     ~IconThemeConfig();
 
+    void applyIconTheme();
+
 private:
     LXQt::Settings *m_settings;
     void initIconsThemes();
@@ -52,10 +54,8 @@ public slots:
     void initControls();
 
 signals:
-    void updateSettings();
-
-private slots:
-    void iconThemeSelected(QTreeWidgetItem *item, int column);
+    void settingsChanged();
+    void updateOtherSettings();
 };
 
 #endif

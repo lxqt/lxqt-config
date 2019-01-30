@@ -44,26 +44,21 @@ class StyleConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit StyleConfig(LXQt::Settings *settings, 
+    explicit StyleConfig(LXQt::Settings *settings,
         QSettings *qtSettings, LXQt::Settings *configAppearanceSettings,
         ConfigOtherToolKits *configOtherToolKits, QWidget *parent = 0);
     ~StyleConfig();
+
+    void applyStyle();
 
 public slots:
     void initControls();
 
 signals:
-    void updateSettings();
+    void settingsChanged();
 
 private slots:
-    void gtk2StyleSelected(const QString &themeName);
-    void gtk3StyleSelected(const QString &themeName);
-    void qtStyleSelected(const QString &themeName);
-    
     void showAdvancedOptions(bool on);
-    
-    void toolButtonStyleSelected(int index);
-    void singleClickActivateToggled(bool toggled);
 
 private:
     Ui::StyleConfig *ui;

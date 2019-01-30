@@ -79,14 +79,6 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
         ui->lxqtThemeList->setItemDelegate(new ThemeDecorator{this});
     }
 
-    connect(ui->lxqtThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
-            this, SLOT(lxqtThemeSelected(QTreeWidgetItem*,int)));
-    connect(ui->wallpaperOverride, &QAbstractButton::toggled, [this] (bool checked) {
-            if (checked)
-                lxqtThemeSelected(ui->lxqtThemeList->currentItem(), 0/*not used*/);
-    });
-
-
     const QList<LXQt::LXQtTheme> themes = LXQt::LXQtTheme::allThemes();
     for(const LXQt::LXQtTheme &theme : themes)
     {
@@ -103,6 +95,9 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     }
 
     initControls();
+
+    connect(ui->lxqtThemeList, &QTreeWidget::currentItemChanged, this, &LXQtThemeConfig::settingsChanged);
+    connect(ui->wallpaperOverride, &QAbstractButton::clicked, this, &LXQtThemeConfig::settingsChanged);
 }
 
 
@@ -129,24 +124,24 @@ void LXQtThemeConfig::initControls()
     update();
 }
 
-
-void LXQtThemeConfig::lxqtThemeSelected(QTreeWidgetItem* item, int column)
+void LXQtThemeConfig::applyLxqtTheme()
 {
-    Q_UNUSED(column);
+    QTreeWidgetItem* item = ui->lxqtThemeList->currentItem();
     if (!item)
         return;
 
     LXQt::LXQtTheme currentTheme{mSettings->value("theme").toString()};
     QVariant themeName = item->data(0, Qt::UserRole);
-    mSettings->setValue("theme", themeName);
+    if(mSettings->value("theme") != themeName)
+        mSettings->setValue("theme", themeName);
     LXQt::LXQtTheme theme(themeName.toString());
     if(theme.isValid()) {
-		QString wallpaper = theme.desktopBackground();
-		if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
-			// call pcmanfm-qt to update wallpaper
-			QStringList args;
-			args << "--set-wallpaper" << wallpaper;
-			QProcess::startDetached("pcmanfm-qt", args);
-		}
-	}
+        QString wallpaper = theme.desktopBackground();
+        if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
+            // call pcmanfm-qt to update wallpaper
+            QStringList args;
+            args << "--set-wallpaper" << wallpaper;
+            QProcess::startDetached("pcmanfm-qt", args);
+        }
+    }
 }

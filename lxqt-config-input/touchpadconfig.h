@@ -38,21 +38,22 @@ public:
     virtual ~TouchpadConfig();
 
     void accept();
+    void applyConfig();
+
 public Q_SLOTS:
     void reset();
-    void scrollingRadioButtonToggled();
+
+Q_SIGNALS:
+    void settingsChanged();
+
+private:
+    void initControls();
+    void initFeatureControl(QCheckBox* control, int featureEnabled);
 
 private:
     LXQt::Settings* settings;
     Ui::TouchpadConfig ui;
     QList<TouchpadDevice> devices;
-
-    void initControls();
-    void initFeatureControl(QCheckBox* control, int featureEnabled);
-    void setTappingEnabled();
-    void setNaturalScrollingEnabled();
-    void setTapToDragEnabled();
-    void setAccelSpeed(float speed);
 };
 
 #endif

@@ -127,7 +127,7 @@ static bool grep(QFile &file, QByteArray text)
     while (!file.atEnd()) {
         QByteArray line = file.readLine().trimmed();
         if(line.startsWith(text)) {
-            return true;   
+            return true;
         }
     }
     file.close();
@@ -172,7 +172,7 @@ void ConfigOtherToolKits::setXSettingsConfig()
     // then updateConfigFromSettings is not required.
     //updateConfigFromSettings();
     //mConfig.styleTheme = getGTKThemeFromRCFile(version);
-    
+
     // Reload settings. xsettingsd must be installed.
     // xsettingsd settings are written to stdin.
     if(QProcess::Running == mXsettingsdProc.state()) {
@@ -204,14 +204,14 @@ QString ConfigOtherToolKits::getConfig(const char *configString)
 {
     return QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
         mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
-        mConfig.toolButtonStyle 
+        mConfig.toolButtonStyle
         );
 }
 
 void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 {
     path = _get_config_path(path);
-    
+
     QFile file(path);
     if(! file.exists()) {
         QFileInfo fileInfo(file);
@@ -258,8 +258,8 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
                     QList<QByteArray> parts = line.split('=');
                     if(parts.size()>=2) {
                         file.close();
-                        return parts[1].replace('"', "").trimmed(); 
-                    }   
+                        return parts[1].replace('"', "").trimmed();
+                    }
                 }
             }
             file.close();
@@ -282,7 +282,7 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
                     if(parts.size()>=2) {
                         file.close();
                         return parts[1].trimmed();
-                    }   
+                    }
                 }
             }
             file.close();
@@ -316,16 +316,16 @@ void ConfigOtherToolKits::updateConfigFromSettings()
     QFont font;
     font.fromString(mSettings->value("font").toString());
     // Font name from: https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string
-    // FAMILY-LIST [SIZE]", where FAMILY-LIST is a comma separated list of families optionally terminated by a comma, 
-    // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and 
-    // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size. 
+    // FAMILY-LIST [SIZE]", where FAMILY-LIST is a comma separated list of families optionally terminated by a comma,
+    // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and
+    // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size.
     mConfig.fontName = QString("%1%2%3 %4")
         .arg(font.family())                                 //%1
         .arg(font.style()==QFont::StyleNormal?"":" Italic") //%2
         .arg(font.weight()==QFont::Normal?"":" Bold")       //%3
         .arg(font.pointSize());                             //%4
     mSettings->endGroup();
-    
+
     mConfig.iconTheme = mSettings->value("icon_theme").toString();
     {
         // Tool button style
