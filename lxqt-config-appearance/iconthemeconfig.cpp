@@ -40,11 +40,9 @@ IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
 
     initIconsThemes();
     initControls();
-    connect(iconThemeList, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
-            this, SLOT(iconThemeSelected(QTreeWidgetItem*,int)));
-    connect(iconFollowColorSchemeCB, &QAbstractButton::toggled, this, [this] (bool checked) {
-            m_settings->setValue("icon_follow_color_scheme", checked);
-    });
+
+    connect(iconThemeList, &QTreeWidget::currentItemChanged, this, &IconThemeConfig::settingsChanged);
+    connect(iconFollowColorSchemeCB, &QAbstractButton::clicked, this, &IconThemeConfig::settingsChanged);
 }
 
 
@@ -140,18 +138,21 @@ IconThemeConfig::~IconThemeConfig()
 }
 
 
-void IconThemeConfig::iconThemeSelected(QTreeWidgetItem *item, int column)
+void IconThemeConfig::applyIconTheme()
 {
-    Q_UNUSED(column);
-    const QString theme = item->data(0, Qt::UserRole).toString();
-    if (!theme.isEmpty())
-    {
-        // Ensure that this widget also updates it's own icons
-        QIcon::setThemeName(theme);
+    if(m_settings->value("icon_follow_color_scheme").toBool() != iconFollowColorSchemeCB->isChecked())
+        m_settings->setValue("icon_follow_color_scheme", iconFollowColorSchemeCB->isChecked());
 
-        m_settings->setValue("icon_theme",  theme);
-        m_settings->sync();
-        
-        emit updateSettings();
+    if(QTreeWidgetItem *item = iconThemeList->currentItem()) {
+        const QString theme = item->data(0, Qt::UserRole).toString();
+        if (!theme.isEmpty() && m_settings->value("icon_theme").toString() != theme) {
+            // Ensure that this widget also updates it's own icons
+            QIcon::setThemeName(theme);
+
+            m_settings->setValue("icon_theme",  theme);
+            m_settings->sync();
+
+            emit updateOtherSettings();
+        }
     }
 }

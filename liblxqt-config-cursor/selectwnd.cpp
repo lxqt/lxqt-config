@@ -55,8 +55,7 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     ui->lbThemes->setSelectionMode(QAbstractItemView::SingleSelection);
 
     // Make sure we find out about selection changes
-    connect(ui->lbThemes->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)),
-            SLOT(currentChanged(const QModelIndex &, const QModelIndex &)));
+    connect(ui->lbThemes->selectionModel(), &QItemSelectionModel::currentChanged, this, &SelectWnd::currentChanged);
     // display/hide warning label
     connect(mModel, SIGNAL(modelReset()),
                     this, SLOT(handleWarning()));
@@ -143,12 +142,11 @@ void SelectWnd::currentChanged(const QModelIndex &current, const QModelIndex &pr
             ui->preview->clearTheme();
         }
 
-        // directly apply the current settings
-        applyCurrent();
+        // don't apply the current settings here
     } else {
         ui->preview->clearTheme();
     }
-   //emit changed(mAppliedIndex != current);
+    emit settingsChanged();
 }
 
 void SelectWnd::on_btInstall_clicked()
@@ -156,11 +154,14 @@ void SelectWnd::on_btInstall_clicked()
     qDebug() << "'install' clicked";
 }
 
-void SelectWnd::applyCurrent()
+void SelectWnd::applyCusorTheme()
 {
-    //qDebug() << "'set' clicked";
-    const XCursorThemeData *theme = mModel->theme(ui->lbThemes->currentIndex());
-    if (!theme) return;
+    QModelIndex curIndex = ui->lbThemes->currentIndex();
+    if(!curIndex.isValid()) return;
+    const XCursorThemeData *theme = mModel->theme(curIndex);
+    if(!theme || mSettings->value("Mouse/cursor_theme") == theme->name()) {
+        return;
+    }
     applyTheme(*theme);
     fixXDefaults(theme->name());
 

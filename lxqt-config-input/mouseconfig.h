@@ -36,21 +36,18 @@ public:
   virtual ~MouseConfig();
 
   void accept();
+  void applyConfig();
+
 public Q_SLOTS:
   void reset();
+
+Q_SIGNALS:
+    void settingsChanged();
 
 private:
   void setLeftHandedMouse();
   void loadSettings();
   void initControls();
-
-private Q_SLOTS:
-  void onMouseAccelChanged(int value);
-  void onMouseThresholdChanged(int value);
-  void onMouseLeftHandedToggled(bool checked);
-  void onDoubleClickIntervalChanged(int value);
-  void onWheelScrollLinesChanged(int value);
-  void onSingleClickChanged(bool checked);
 
 private:
   Ui::MouseConfig ui;
@@ -60,6 +57,10 @@ private:
   int oldAccel;
   int threshold;
   int oldThreshold;
+  int doubleClickInterval;
+  int oldDoubleClickInterval;
+  int wheelScrollLines;
+  int oldWheelScrollLines;
   bool leftHanded;
   bool oldLeftHanded;
   bool singleClick;

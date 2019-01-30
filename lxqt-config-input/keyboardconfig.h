@@ -36,20 +36,18 @@ public:
   virtual ~KeyboardConfig();
 
   void accept();
+  void applyConfig();
 
 public Q_SLOTS:
   void reset();
+
+Q_SIGNALS:
+    void settingsChanged();
 
 private:
   void setLeftHandedMouse();
   void loadSettings();
   void initControls();
-
-private Q_SLOTS:
-  void onKeyboardSliderChanged(int value);
-  void onKeyboardBeepToggled(bool checked);
-  void onCorsorFlashTimeChanged(int value);
-  void onKeyboardNumLockToggled(bool checked);
 
 private:
   Ui::KeyboardConfig ui;
@@ -59,9 +57,12 @@ private:
   int oldDelay;
   int interval;
   int oldInterval;
+  int flashTime;
+  int oldFlashTime;
   bool beep;
   bool oldBeep;
   bool numlock;
+  bool oldNumlock;
 };
 
 #endif // KEYBOARDCONFIG_H

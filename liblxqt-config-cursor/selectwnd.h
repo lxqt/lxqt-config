@@ -36,8 +36,13 @@ public:
     SelectWnd (LXQt::Settings* settings, QWidget *parent=0);
     ~SelectWnd ();
 
+    void applyCusorTheme();
+
 public slots:
     void setCurrent ();
+
+signals:
+    void settingsChanged();
 
 protected:
     // void keyPressEvent (QKeyEvent *e);
@@ -46,7 +51,6 @@ private:
     bool iconsIsWritable () const;
     void selectRow (int) const;
     void selectRow (const QModelIndex &index) const { selectRow(index.row()); }
-    void applyCurrent ();
 
 private slots:
     void currentChanged (const QModelIndex &current, const QModelIndex &previous);

@@ -56,16 +56,15 @@ FontsConfig::FontsConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
 
     initControls();
 
-    connect(ui->fontName, SIGNAL(currentFontChanged(QFont)), SLOT(updateQtFont()));
-    connect(ui->fontStyle, SIGNAL(currentIndexChanged(int)), SLOT(updateQtFont()));
-    connect(ui->fontSize, SIGNAL(valueChanged(int)), SLOT(updateQtFont()));
-
-    connect(ui->antialias, SIGNAL(toggled(bool)), SLOT(antialiasToggled(bool)));
-    connect(ui->subpixel, SIGNAL(currentIndexChanged(int)), SLOT(subpixelChanged(int)));
-    connect(ui->hinting, SIGNAL(toggled(bool)), SLOT(hintingToggled(bool)));
-    connect(ui->hintStyle, SIGNAL(currentIndexChanged(int)), SLOT(hintStyleChanged(int)));
-    connect(ui->dpi, SIGNAL(valueChanged(int)), SLOT(dpiChanged(int)));
-    connect(ui->autohint, SIGNAL(toggled(bool)), SLOT(autohintToggled(bool)));
+    connect(ui->fontName, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
+    connect(ui->fontStyle, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
+    connect(ui->fontSize, QOverload<int>::of(&QSpinBox::valueChanged), this, &FontsConfig::settingsChanged);
+    connect(ui->antialias, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
+    connect(ui->subpixel, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
+    connect(ui->hinting, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
+    connect(ui->hintStyle, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
+    connect(ui->dpi, QOverload<int>::of(&QSpinBox::valueChanged), this, &FontsConfig::settingsChanged);
+    connect(ui->autohint, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
 }
 
 
@@ -84,7 +83,11 @@ void FontsConfig::initControls()
     QFont font;
     font.fromString(fontName);
     ui->fontName->setCurrentFont(font);
+
+    ui->fontSize->blockSignals(true);
     ui->fontSize->setValue(font.pointSize());
+    ui->fontSize->blockSignals(false);
+
     int fontStyle = 0;
     if(font.bold())
       fontStyle = font.italic() ? 3 : 1;
@@ -121,43 +124,35 @@ void FontsConfig::initControls()
         ui->hintStyle->setCurrentIndex(hintStyle);
 
     int dpi = mFontConfigFile.dpi();
+    ui->dpi->blockSignals(true);
     ui->dpi->setValue(dpi);
+    ui->dpi->blockSignals(false);
 
     update();
 }
 
-void FontsConfig::antialiasToggled(bool toggled)
-{
-    mFontConfigFile.setAntialias(toggled);
-}
-
-void FontsConfig::dpiChanged(int value)
-{
-    mFontConfigFile.setDpi(value);
-}
-
-void FontsConfig::hintingToggled(bool toggled)
-{
-    mFontConfigFile.setHinting(toggled);
-}
-
-void FontsConfig::subpixelChanged(int index)
-{
-    mFontConfigFile.setSubpixel(subpixelNames[index]);
-}
-
-void FontsConfig::hintStyleChanged(int index)
-{
-    mFontConfigFile.setHintStyle(hintStyleNames[index]);
-}
-
-void FontsConfig::autohintToggled(bool toggled)
-{
-    mFontConfigFile.setAutohint(toggled);
-}
-
 void FontsConfig::updateQtFont()
 {
+    if(mFontConfigFile.antialias() != ui->antialias->isChecked())
+        mFontConfigFile.setAntialias(ui->antialias->isChecked());
+
+    if(mFontConfigFile.dpi() != ui->dpi->value())
+        mFontConfigFile.setDpi(ui->dpi->value());
+
+    if(mFontConfigFile.hinting() != ui->hinting->isChecked())
+        mFontConfigFile.setHinting(ui->hinting->isChecked());
+
+    int index = ui->subpixel->currentIndex();
+    if(index >= 0 && index <= 4 && mFontConfigFile.subpixel() != subpixelNames[index])
+        mFontConfigFile.setSubpixel(subpixelNames[index]);
+
+    index = ui->hintStyle->currentIndex();
+    if(index >= 0 && index <= 3 && mFontConfigFile.hintStyle() != hintStyleNames[index])
+        mFontConfigFile.setHintStyle(hintStyleNames[index]);
+
+    if(mFontConfigFile.autohint() != ui->autohint->isChecked())
+        mFontConfigFile.setAutohint(ui->autohint->isChecked());
+
     // FIXME: the change does not apply to some currently running Qt programs.
     // FIXME: does not work with KDE apps
     // TODO: also write the config values to GTK+ config files (gtk-2.0.rc and gtk3/settings.ini)
@@ -183,16 +178,19 @@ void FontsConfig::updateQtFont()
     font.setBold(bold);
     font.setItalic(italic);
 
-    mQtSettings->beginGroup(QLatin1String("Qt"));
-    mQtSettings->setValue("font", font.toString());
-    mQtSettings->endGroup();
-    mQtSettings->sync();
-    
-    emit updateSettings();
+    const QString fontStr = font.toString();
+    if(mQtSettings->value(QLatin1String("Qt/font")).toString() != fontStr) {
+        mQtSettings->beginGroup(QLatin1String("Qt"));
+        mQtSettings->setValue("font", fontStr);
+        mQtSettings->endGroup();
+        mQtSettings->sync();
+
+        emit updateOtherSettings();
 
 #ifdef Q_WS_X11
-    qt_x11_apply_settings_in_all_apps();
+        qt_x11_apply_settings_in_all_apps();
 #endif
 
-    update();
+        update();
+    }
 }

@@ -47,13 +47,17 @@ public:
   KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent = 0);
   virtual ~KeyboardLayoutConfig();
 
+  void applyConfig();
+
 public Q_SLOTS:
-  void accept();
   void reset();
   void onAddLayout();
   void onRemoveLayout();
   void onMoveUp();
   void onMoveDown();
+
+Q_SIGNALS:
+    void settingsChanged();
 
 private:
   void loadSettings();
@@ -69,6 +73,7 @@ private:
   QList<QPair<QString, QString> > currentLayouts_;
   QMap<QString, KeyboardLayoutInfo> knownLayouts_;
   LXQt::Settings* settings;
+  bool applyConfig_;
 };
 
 #endif // KEYBOARDLAYOUTCONFIG_H

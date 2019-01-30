@@ -48,20 +48,14 @@ public:
     explicit FontsConfig(LXQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
     ~FontsConfig();
 
+    void updateQtFont();
+
 public Q_SLOTS:
     void initControls();
 
 signals:
-    void updateSettings();
-
-private Q_SLOTS:
-    void updateQtFont();
-    void antialiasToggled(bool toggled);
-    void hintingToggled(bool toggled);
-    void subpixelChanged(int index);
-    void hintStyleChanged(int index);
-    void dpiChanged(int value);
-    void autohintToggled(bool toggled);
+    void settingsChanged();
+    void updateOtherSettings();
 
 private:
     Ui::FontsConfig *ui;

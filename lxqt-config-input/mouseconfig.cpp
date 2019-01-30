@@ -44,6 +44,10 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   oldAccel(20),
   threshold(10),
   oldThreshold(10),
+  doubleClickInterval(400),
+  oldDoubleClickInterval(400),
+  wheelScrollLines(3),
+  oldWheelScrollLines(3),
   leftHanded(false),
   oldLeftHanded(false),
   singleClick(false),
@@ -56,49 +60,38 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   initControls();
 
   // set_range_stops(ui.mouseAccel, 10);
-  connect(ui.mouseAccel, SIGNAL(valueChanged(int)), SLOT(onMouseAccelChanged(int)));
+  connect(ui.mouseAccel, &QAbstractSlider::valueChanged, this, &MouseConfig::settingsChanged);
   // set_range_stops(ui.mouseThreshold, 10);
-  connect(ui.mouseThreshold, SIGNAL(valueChanged(int)), SLOT(onMouseThresholdChanged(int)));
-  connect(ui.mouseLeftHanded, SIGNAL(toggled(bool)), SLOT(onMouseLeftHandedToggled(bool)));
-
-  connect(ui.doubleClickInterval, SIGNAL(valueChanged(int)), SLOT(onDoubleClickIntervalChanged(int)));
-  connect(ui.wheelScrollLines, SIGNAL(valueChanged(int)), SLOT(onWheelScrollLinesChanged(int)));
-  connect(ui.singleClick, SIGNAL(toggled(bool)), SLOT(onSingleClickChanged(bool)));
+  connect(ui.mouseThreshold, &QAbstractSlider::valueChanged, this, &MouseConfig::settingsChanged);
+  connect(ui.mouseLeftHanded, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
+  connect(ui.doubleClickInterval, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
+  connect(ui.wheelScrollLines, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
+  connect(ui.singleClick, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
 }
 
 MouseConfig::~MouseConfig() {
 }
 
 void MouseConfig::initControls() {
+  ui.mouseAccel->blockSignals(true);
   ui.mouseAccel->setValue(accel);
+  ui.mouseAccel->blockSignals(false);
+
+  ui.mouseThreshold->blockSignals(true);
   ui.mouseThreshold->setValue(110 - threshold);
+  ui.mouseThreshold->blockSignals(false);
+
   ui.mouseLeftHanded->setChecked(leftHanded);
 
-  ui.singleClick->setChecked(qtSettings->value(QLatin1String("single_click_activate"), false).toBool());
+  ui.singleClick->setChecked(singleClick);
 
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  int value = qtSettings->value(QLatin1String("doubleClickInterval"), 400).toInt();
-  ui.doubleClickInterval->setValue(value);
+  ui.doubleClickInterval->blockSignals(true);
+  ui.doubleClickInterval->setValue(doubleClickInterval);
+  ui.doubleClickInterval->blockSignals(false);
 
-  value = qtSettings->value(QLatin1String("wheelScrollLines"), 3).toInt();
-  ui.wheelScrollLines->setValue(value);
-  qtSettings->endGroup();
-}
-
-
-void MouseConfig::onMouseAccelChanged(int value) {
-  accel = value;
-  XChangePointerControl(QX11Info::display(), True, False,
-                        accel, 10, 0);
-  accept();
-}
-
-void MouseConfig::onMouseThresholdChanged(int value) {
-  /* threshold = 110 - sensitivity. The lower the threshold, the higher the sensitivity */
-  threshold = 110 - value;
-  XChangePointerControl(QX11Info::display(), False, True,
-                        0, 10, threshold);
-  accept();
+  ui.wheelScrollLines->blockSignals(true);
+  ui.wheelScrollLines->setValue(wheelScrollLines);
+  ui.wheelScrollLines->blockSignals(false);
 }
 
 /* This function is taken from Gnome's control-center 2.6.0.3 (gnome-settings-mouse.c) and was modified*/
@@ -141,55 +134,87 @@ void MouseConfig::setLeftHandedMouse() {
   free(buttons);
 }
 
-void MouseConfig::onMouseLeftHandedToggled(bool checked) {
-  leftHanded = checked;
-  setLeftHandedMouse();
-  accept();
-}
-
-void MouseConfig::onDoubleClickIntervalChanged(int value)
+void MouseConfig::applyConfig()
 {
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  qtSettings->setValue(QLatin1String("doubleClickInterval"), value);
-  qtSettings->endGroup();
-  qtSettings->sync();
+  bool acceptSetting = false;
+  bool applyX11 = false;
+
+  if(accel != ui.mouseAccel->value())
+  {
+    accel = ui.mouseAccel->value();
+    XChangePointerControl(QX11Info::display(), True, False,
+                            accel, 10, 0);
+    acceptSetting = true;
+  }
+
+  /* threshold = 110 - sensitivity. The lower the threshold, the higher the sensitivity */
+  if(threshold != 110 - ui.mouseThreshold->value())
+  {
+    threshold = 110 - ui.mouseThreshold->value();
+    XChangePointerControl(QX11Info::display(), False, True,
+                            0, 10, threshold);
+    acceptSetting = true;
+  }
+
+  if(leftHanded != ui.mouseLeftHanded->isChecked())
+  {
+    leftHanded = ui.mouseLeftHanded->isChecked();
+    setLeftHandedMouse();
+    acceptSetting = true;
+  }
+
+  if(doubleClickInterval != ui.doubleClickInterval->value())
+  {
+    doubleClickInterval = ui.doubleClickInterval->value();
+    acceptSetting = applyX11 = true;
+  }
+
+  if(wheelScrollLines != ui.wheelScrollLines->value())
+  {
+    wheelScrollLines = ui.wheelScrollLines->value();
+    acceptSetting = applyX11 = true;
+  }
+
+  if(singleClick != ui.singleClick->isChecked())
+  {
+    singleClick = ui.singleClick->isChecked();
+    acceptSetting = applyX11 = true;
+  }
+
+  if(acceptSetting)
+    accept();
+
 #ifdef Q_WS_X11
-  qt_x11_apply_settings_in_all_apps();
-#endif
-}
-
-void MouseConfig::onWheelScrollLinesChanged(int value)
-{
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  qtSettings->setValue(QLatin1String("wheelScrollLines"), value);
-  qtSettings->endGroup();
-  qtSettings->sync();
-#ifdef Q_WS_X11
-  qt_x11_apply_settings_in_all_apps();
-#endif
-}
-
-void MouseConfig::onSingleClickChanged(bool checked)
-{
-    qtSettings->setValue(QLatin1String("single_click_activate"), checked);
+  if(applyX11)
+  {
     qtSettings->sync();
-#ifdef Q_WS_X11
-  qt_x11_apply_settings_in_all_apps();
+    qt_x11_apply_settings_in_all_apps();
+  }
 #endif
 }
 
 void MouseConfig::loadSettings() {
-  oldSingleClick = singleClick = qtSettings->value("single_click_activate", false).toBool();
+  oldSingleClick = singleClick = qtSettings->value(QLatin1String("single_click_activate"), false).toBool();
 
-  settings->beginGroup("Mouse");
-  oldAccel = accel = settings->value("accel_factor", 20).toInt();
-  oldThreshold = threshold = settings->value("accel_threshold", 10).toInt();
-  oldLeftHanded = leftHanded = settings->value("left_handed", false).toBool();
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  oldDoubleClickInterval = doubleClickInterval = qtSettings->value(QLatin1String("doubleClickInterval"), 400).toInt();
+  oldWheelScrollLines = wheelScrollLines = qtSettings->value(QLatin1String("wheelScrollLines"), 3).toInt();
+  qtSettings->endGroup();
+
+  settings->beginGroup(QLatin1String("Mouse"));
+  oldAccel = accel = settings->value(QLatin1String("accel_factor"), 20).toInt();
+  oldThreshold = threshold = settings->value(QLatin1String("accel_threshold"), 10).toInt();
+  oldLeftHanded = leftHanded = settings->value(QLatin1String("left_handed"), false).toBool();
   settings->endGroup();
 }
 
 void MouseConfig::accept() {
   qtSettings->setValue("single_click_activate", singleClick);
+
+  qtSettings->beginGroup(QLatin1String("Qt"));
+  qtSettings->setValue(QLatin1String("doubleClickInterval"), doubleClickInterval);
+  qtSettings->setValue(QLatin1String("wheelScrollLines"), wheelScrollLines);
+  qtSettings->endGroup();
 
   settings->beginGroup("Mouse");
   settings->setValue("accel_factor", accel);
@@ -205,6 +230,8 @@ void MouseConfig::reset() {
   threshold = oldThreshold;
   leftHanded = oldLeftHanded;
   singleClick = oldSingleClick;
+  doubleClickInterval = oldDoubleClickInterval;
+  wheelScrollLines = oldWheelScrollLines;
   XChangePointerControl(QX11Info::display(), True, True,
                         accel, 10, threshold);
   setLeftHandedMouse();
