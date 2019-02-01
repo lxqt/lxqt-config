@@ -26,12 +26,12 @@
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>Valuta:&amp;</translation>
+        <translation>&amp;Valuta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation>Måleenheter:&amp;</translation>
+        <translation>&amp;Måleenheter:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
