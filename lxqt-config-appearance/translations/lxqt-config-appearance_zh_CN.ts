@@ -6,7 +6,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK主题</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation></translation>
+        <translation>XDG图标主题的KDE扩展 - &gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -217,24 +217,24 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>设置GTK主题（GTK配置文件将被覆盖！）</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3主题</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2主题</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>要尝试统一主题，请在所有列表中选择相似的样式/主题（如果可用），或选择“gtk2”Qt样式（如果可用）来模仿GTK主题。确保安装“xsettingsd”以帮助GTK应用程序动态应用主题。</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -274,7 +274,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt风格</translation>
     </message>
 </context>
 </TS>
