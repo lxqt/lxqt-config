@@ -204,7 +204,7 @@
     <message>
         <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
-        <translation>Osoitin</translation>
+        <translation>Kursori</translation>
     </message>
 </context>
 <context>
