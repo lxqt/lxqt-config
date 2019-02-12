@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursorin vilkkumisaika:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished">Piippaa kun näppäimistön näppäilyssä tapahtuu virhe</translation>
+        <translation>Anna äänimerkki, kun näppäimistön syöte ei kelpaa</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -31,45 +31,45 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished">Merkin toisto</translation>
+        <translation>Merkin toistaminen</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished">Pitkä</translation>
+        <translation>Pitkä</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished">Toiston viive:</translation>
+        <translation>Toistoviive:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished">Lyhyt</translation>
+        <translation>Lyhyt</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation type="unfinished">Toistoväli:</translation>
+        <translation>Toistoviive:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation type="unfinished">Voit kokeilla näppäimistön asetuksia alla olevaan laatikkoon</translation>
+        <translation>Kirjoita allaolevaan kenttään kokeillaksesi asetuksia</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta NumLock päälle kirjautumisen jälkeen</translation>
     </message>
 </context>
 <context>
@@ -77,57 +77,57 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Näppäimistöasettelu&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Asettelu</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Variaatio</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lisää</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Poista</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylös</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alas</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"></translation>
+        <translation>Näppäimistötyyppi:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetteluvaihdon pikanäppäin:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei mitään</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Huomautus:&lt;/span&gt; Mikäli käytät toista &lt;span style=&quot; font-weight:600;&quot;&gt;syöttötapaa&lt;/span&gt;, kuten IBus, uim, fcitx, tai gcin, nämä asetukset &lt;span style=&quot; font-weight:600;&quot;&gt;eivät ehkä toimi&lt;/span&gt;, sillä muut syöttötavat ohittavat nämä asetukset.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -140,73 +140,73 @@
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hiiri&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation type="unfinished">Liike</translation>
+        <translation>Liike</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation type="unfinished">Suuri</translation>
+        <translation>Suuri</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation type="unfinished">Nopea</translation>
+        <translation>Nopea</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation type="unfinished">Herkkyys:</translation>
+        <translation>Herkkyys:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation type="unfinished">Vähäinen</translation>
+        <translation>Matala</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation type="unfinished">Kiihdytys:</translation>
+        <translation>Kiihtyvyys:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation type="unfinished">Hidas</translation>
+        <translation>Hidas</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="116"/>
         <location filename="../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaksoisnapautuksen viive:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation type="unfinished"> ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rullan rivimäärä:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished">Vasenkätinen (vaihda oikean ja vasemman hiiren napin paikkoja)</translation>
+        <translation>Vasenkätinen tila (vaihda vasen ja oikea painike)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksi napautus aktivoi kohteet</translation>
     </message>
 </context>
 <context>
@@ -214,27 +214,27 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Näppäimistön ja hiiren asetukset</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
         <source>Mouse</source>
-        <translation type="unfinished">Hiiri</translation>
+        <translation>Hiiri</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
         <source>Cursor</source>
-        <translation>Osoitin</translation>
+        <translation>Kursori</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
         <source>Keyboard</source>
-        <translation type="unfinished">Näppäimistö</translation>
+        <translation>Näppäimistö</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Näppäimistöasettelu</translation>
     </message>
 </context>
 <context>
@@ -242,17 +242,17 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse näppäimistöasettelu</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Näppäimistöasettelu</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Variaatio</translation>
     </message>
 </context>
 </TS>
