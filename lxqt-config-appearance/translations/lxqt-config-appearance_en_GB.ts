@@ -69,7 +69,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation></translation>
+        <translation>Use anti-alias fonts</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -110,12 +110,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation></translation>
+        <translation>Auto-hint</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation></translation>
+        <translation>Sub-pixel anti-aliasing:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation></translation>
+        <translation>Colourise icons based on widget style (palette)</translation>
     </message>
 </context>
 <context>
