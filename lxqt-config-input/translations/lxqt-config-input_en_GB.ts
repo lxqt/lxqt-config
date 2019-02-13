@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation></translation>
+        <translation>Beep when there is a keyboard input error</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
