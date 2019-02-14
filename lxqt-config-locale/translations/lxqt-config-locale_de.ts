@@ -104,7 +104,7 @@
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>Gebietsschema-Einstellungen</translation>
+        <translation>Spracheinstellungen</translation>
     </message>
 </context>
 </TS>
