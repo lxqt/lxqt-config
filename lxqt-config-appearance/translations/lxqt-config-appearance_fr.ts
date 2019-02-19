@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation>Thème GTK</translation>
+        <translation>Thèmes GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>p 1 été écrasé.Vous pouvez trouver une copie de vos anciens paramètres dans p 4</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; a été écrasé.&lt;/p&gt;&lt;p&gt;Vous pouvez trouver une copie de vos anciens paramètres dans &apos;% 2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19,17 +19,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation>Fonte</translation>
+        <translation>Police</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Fonte par défaut de l&apos;interface utilisateur</translation>
+        <translation>Police par défaut pour l&apos;interface utilisateur</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Nom de la fonte :</translation>
+        <translation>Nom de la police :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Taille (points) :</translation>
+        <translation>Taille du point :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -59,17 +59,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation>Gras et italique</translation>
+        <translation>Gras italique</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Les réglages suivants n&apos;affectent que les nouvelles applications</translation>
+        <translation>Les paramètres suivants ne concernent que les applications nouvellement lancées</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Utiliser des fontes anti-aliasées</translation>
+        <translation>Utiliser l&apos;anticrénelage des polices</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -105,7 +105,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Resolution (DPI) :</translation>
+        <translation>Résolution (DPI) :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
@@ -148,17 +148,17 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Thème d&apos;icones</translation>
+        <translation>Thème des icônes</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>L&apos;extension KDE du thème d’icône XDG -&gt; Suivez le schéma de couleur</translation>
+        <translation>L&apos;extension de KDE des thèmes d’icônes XDG  -&gt; Suivez le schéma de couleur</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Coloriser les icônes en fonction du style du widget (palette)</translation>
+        <translation>Colorier les icônes suivant le style des widgets (palette)</translation>
     </message>
 </context>
 <context>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../main.cpp" line="81"/>
         <source>Font</source>
-        <translation>Police de caractère</translation>
+        <translation>Police</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="87"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Définir les thèmes GTK (les fichiers de configuration GTK seront écrasés!)</translation>
+        <translation>Configurer les thèmes GTK (les fichiers de configuration de GTK seront écrasés!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
@@ -234,7 +234,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour tenter une thématisation uniforme, sélectionnez un style/thème similaire (si disponible) dans toutes les listes ou sélectionnez le style Qt &apos;gtk2&apos; (si disponible) pour imiter les thèmes GTK.
+
+Assurez-vous que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer des thèmes à la volée.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -269,7 +271,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Activer l&apos;item par simple clic</translation>
+        <translation>Activer l&apos;élément en un seul clic</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
