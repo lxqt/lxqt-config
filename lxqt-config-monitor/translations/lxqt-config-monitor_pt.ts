@@ -11,12 +11,12 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ Visão estendida</translation>
+        <translation> ❶ ❷ Vista expandida</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ Visão unificada</translation>
+        <translation> ❶ ❶ Vista unificada</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Configurações do Monitor</translation>
+        <translation>Definições do monitor</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation>Configurações salvas</translation>
+        <translation>Definições guardadas</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation>Excluir</translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
@@ -112,17 +112,17 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Configurações do Monitor</translation>
+        <translation>Definições do monitor</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
-        <translation>Configurações</translation>
+        <translation>Definições</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation>Menu Rápido</translation>
+        <translation>Menu rápido</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
-        <translation>Configurações avançadas</translation>
+        <translation>Definições avançadas</translation>
     </message>
 </context>
 <context>
@@ -160,17 +160,17 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation>Habilitar esta tela</translation>
+        <translation>Ativar este ecrã</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Esta é minha tela principal</translation>
+        <translation>Este é o ecrã principal</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Esta tela estende até outra tela</translation>
+        <translation>Este ecrã expande para outro</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>Informação da tela</translation>
+        <translation>Informação do ecrã</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
@@ -222,7 +222,7 @@
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Tamanho da tela: %1cm x %2cm
+        <translation>Tamanho do ecrã: %1 cm x %2 cm
 </translation>
     </message>
     <message>
@@ -236,7 +236,7 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>ID do dispositivo EISA: %1
+        <translation>ID EISA do dispositivo: %1
 </translation>
     </message>
     <message>
@@ -270,7 +270,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>Gerenciar Configurações Salvas</translation>
+        <translation>Gerir definições guardadas</translation>
     </message>
 </context>
 <context>
@@ -291,20 +291,18 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>Configurações são alteradas</translation>
+        <translation>Definições alteradas</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>As configurações atuais estão corretas para você?</translation>
+        <translation>Acha que as definições estão corretas?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation>
-            <numerusform>%n segundo(s) restante(s)</numerusform>
-            <numerusform>%n segundos restantes</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Falta %n segundo</numerusform>
+        <numerusform>Faltam %n segundos</numerusform>
+        </translation></message>
 </context>
 </TS>
