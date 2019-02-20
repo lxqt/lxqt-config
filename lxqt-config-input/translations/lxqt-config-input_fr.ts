@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Durée du clignotement du curseur:</translation>
+        <translation>Durée du clignotement du curseur :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Délai de répétition&#xa0;:</translation>
+        <translation>Délai de répétition :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Délai de répétition :</translation>
+        <translation>Intervalle de répétition :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
@@ -70,7 +70,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Activer  le verrouillage numérique au démarrage</translation>
+        <translation>Activer le verrouillage numérique au démarrage</translation>
     </message>
 </context>
 <context>
@@ -113,12 +113,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation>Modèle de clavier&#xa0;:</translation>
+        <translation>Modèle de clavier :</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Raccourcis pour changer de disposition:</translation>
+        <translation>Raccourcis pour changer de disposition :</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -151,7 +151,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation>Forte</translation>
+        <translation>Fort</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation>Sensibilité&#xa0;:</translation>
+        <translation>Sensibilité :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation>Accélération&#xa0;:</translation>
+        <translation>Accélération :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>Intervale d&apos;un double-clic:</translation>
+        <translation>Intervalle d&apos;un double-clic :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Vitesse de défilement de la molette (lignes):</translation>
+        <translation>Vitesse de défilement de la molette (lignes) :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
