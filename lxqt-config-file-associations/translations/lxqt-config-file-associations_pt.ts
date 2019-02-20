@@ -29,7 +29,7 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation>Novo Subitem</translation>
+        <translation>Novo sub-item</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Escolher...</translation>
+        <translation>Es&amp;colher...</translation>
     </message>
 </context>
 <context>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Associações de arquivo</translation>
+        <translation>Associação de ficheiros</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Escolher...</translation>
+        <translation>Es&amp;colher...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
