@@ -96,7 +96,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name:</source>
-        <translation>Nom:</translation>
+        <translation>Nom :</translation>
     </message>
 </context>
 <context>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
-        <translation>Définition:</translation>
+        <translation>Résolution :</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
@@ -180,12 +180,12 @@
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Fréquence de rafraîchissement:</translation>
+        <translation>Fréquence de rafraîchissement :</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation>Rotation:</translation>
+        <translation>Rotation :</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
