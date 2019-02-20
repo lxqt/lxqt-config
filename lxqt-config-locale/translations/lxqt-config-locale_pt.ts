@@ -11,7 +11,7 @@
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>Configurações de&amp;talhadas</translation>
+        <translation>Definições de&amp;talhadas</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation>&amp;Unidades de Medida:</translation>
+        <translation>&amp;Unidades de medida:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Co&amp;lação e Classificação:</translation>
+        <translation>Co&amp;lação e ordenação:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation>Configurações de Formato Alteradas</translation>
+        <translation>Definições alteradas</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Deseja salvar as alterações? Elas entrarão em vigor na próxima vez que você fizer login.</translation>
+        <translation>Deseja guardar as alterações? As alterações serão aplicadas na próxima sessão.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
         <source>Metric</source>
-        <translation>Métrica</translation>
+        <translation>Métrico</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>Configuração de Local do LXQt</translation>
+        <translation>Configuração do idioma LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>Configurações de Local</translation>
+        <translation>Definições de idioma</translation>
     </message>
 </context>
 </TS>
