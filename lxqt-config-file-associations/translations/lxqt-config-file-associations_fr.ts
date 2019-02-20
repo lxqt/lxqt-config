@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Applications traitant JPEG</translation>
+        <translation>Applications qui gèrent le JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -29,7 +29,7 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation>Nouveau sous-item</translation>
+        <translation>Nouveau sous-titre</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
@@ -40,12 +40,12 @@
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>Applications qui traitent %1</translation>
+        <translation>Applications prenant en charge %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>Aucune application n&apos;est trouvée</translation>
+        <translation>Aucune application trouvée</translation>
     </message>
 </context>
 <context>
@@ -87,12 +87,12 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation>Etiquette de texte</translation>
+        <translation>Étiquette de texte</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
         <source>None</source>
-        <translation>Aucune</translation>
+        <translation>Aucun</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
