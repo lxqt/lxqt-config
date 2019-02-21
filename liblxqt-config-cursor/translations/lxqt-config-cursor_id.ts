@@ -6,7 +6,7 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Konfigurasi Tema Tetikus LXQt</translation>
+        <translation>Konfigurasi Tema Mouse LXQt</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
