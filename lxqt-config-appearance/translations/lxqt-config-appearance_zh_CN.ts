@@ -11,7 +11,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; 已经被覆写。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;找到你的旧设定的拷贝。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
