@@ -1,3 +1,9 @@
+lxqt-config-0.14.1 / 2019-02-24
+===============================
+
+  * Apply button for appearance and input config dialogs
+  * Updated translations
+  * Note for packagers: lxqt-config now depends on liblxqt >= 0.14.1
 
 lxqt-config-0.14.0 / 2019-01-25
 ===============================
@@ -10,7 +16,7 @@ lxqt-config-0.14.0 / 2019-01-25
     - lxqt-config-appearance: Some GUI fixes
     - lxqt-config-appearance: mkpath if settings of GTK doesn't exists.
     - lxqt-config-brightness: Backlight control updated
-    - lxqt-config-brightness: 
+    - lxqt-config-brightness:
       XRandrBrightness::backlight_get_with_range return value
     - lxqt-config-monitor: Monitor name is added to output.
   * Improved cmake scripting
