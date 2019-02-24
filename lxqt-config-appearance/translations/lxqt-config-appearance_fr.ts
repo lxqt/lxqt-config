@@ -74,7 +74,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Style d&apos;optimisation de l&apos;affichage :</translation>
+        <translation>Style d&apos;optimisation pour la police d&apos;affichage :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Optimisation de l&apos;affichage</translation>
+        <translation>Optimisation de la police d&apos;affichage</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Auto optimisation</translation>
+        <translation>Auto-optimisation</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
@@ -120,22 +120,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation>RGB</translation>
+        <translation>RVB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation></translation>
+        <translation>BVR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation></translation>
+        <translation>VRVB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation>VBGR</translation>
+        <translation>VBVR</translation>
     </message>
 </context>
 <context>
