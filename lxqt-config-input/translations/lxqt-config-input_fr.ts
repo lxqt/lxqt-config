@@ -37,7 +37,7 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Long</translation>
+        <translation>Long(s)</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
