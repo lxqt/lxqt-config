@@ -16,7 +16,7 @@
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>&amp;Nombre :</translation>
+        <translation>&amp;Nombre(s) :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>&amp;Monnaie :</translation>
+        <translation>&amp;Devise :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation>Monnaie :</translation>
+        <translation>Devise :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
@@ -81,12 +81,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation>Imperial UK</translation>
+        <translation>Impérial UK</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation>Imperial US</translation>
+        <translation>Impérial US</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
