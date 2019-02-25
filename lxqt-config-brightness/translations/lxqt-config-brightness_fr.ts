@@ -16,17 +16,17 @@
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
         <source>Require confirmation after settings change</source>
-        <translation>Demander confirmation après modification du paramétrage</translation>
+        <translation>Demander confirmation après modification des réglages</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
         <source>Brightness settings changed</source>
-        <translation>Paramétrage de brillance modifié</translation>
+        <translation>Paramètres de luminosité modifiés</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Une confirmation est demandée. Les réglages sont-ils corrects ?</translation>
+        <translation>Confirmation requise. Les réglages sont-ils corrects ?</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation>Click droit pour réinitialiser</translation>
+        <translation>Clic droit pour réinitialiser</translation>
     </message>
 </context>
 </TS>
