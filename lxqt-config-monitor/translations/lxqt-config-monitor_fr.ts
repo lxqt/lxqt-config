@@ -74,7 +74,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Right</source>
-        <translation>Droite</translation>
+        <translation>Droit</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
@@ -160,17 +160,17 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation>Aciver ce moniteur</translation>
+        <translation>Activer cet affichage</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Ceci est mon écran principal</translation>
+        <translation>Ceci est mon affichage principal</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Ceci est un écran secndaire</translation>
+        <translation>Cet écran étend un autre affichage</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -296,15 +296,13 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Est-ce que les paramètres actuels sont correctes ?</translation>
+        <translation>Les paramètres actuels vous conviennent-ils ?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation>
-            <numerusform>%n seconde(s) restante(s)</numerusform>
-            <numerusform>%n secondes restantes</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n seconde restante</numerusform>
+        <numerusform>%n secondes restantes</numerusform>
+        </translation></message>
 </context>
 </TS>
