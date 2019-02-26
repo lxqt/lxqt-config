@@ -16,7 +16,7 @@
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>&amp;Nombre(s) :</translation>
+        <translation>&amp;Nombres :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
