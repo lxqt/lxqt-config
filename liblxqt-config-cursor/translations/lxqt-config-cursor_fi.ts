@@ -44,7 +44,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished">LXQt ei löytänyt yhtäkään osoitinteemaa. Käytössä on nyt X11:n oletus osoitinteema. LXQt etsi osoitinteemoja seuraavista hakemistoista:</translation>
+        <translation>LXQt ei löytänyt yhtäkään osoitinteemaa. Käytössä on nyt X11:n oletusosoitinteema. LXQt etsi osoitinteemoja seuraavista hakemistoista:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
