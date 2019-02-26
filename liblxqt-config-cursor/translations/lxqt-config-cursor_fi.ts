@@ -39,7 +39,7 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Lomake</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä...</translation>
     </message>
 </context>
 <context>
