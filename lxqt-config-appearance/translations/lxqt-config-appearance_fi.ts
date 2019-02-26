@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-teemat</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; on korvattu.&lt;/p&gt;&lt;p&gt;Voit etsiä vanhan asetuksesi kopion sijainnista: &apos;% 2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished">Seuraavat asetukset vaikuttavat vain myöhemmin avattuihin ohjelmiin</translation>
+        <translation>Seuraavat asetukset vaikuttavat vain muutoksen jälkeen käynnistettäviin ohjelmiin</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjasintyypin vihjeistystyyli:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjasintyypin vihjeistys</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -110,12 +110,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattinen vihjeistys</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Osapikselireunanpehmennys:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -153,12 +153,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>XDG-kuvaketeemojen KDE-laajennus -&gt; Noudata väriteemaa</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Väritä kuvakkeet pienoisohjelmatyylin (paletti) mukaan</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished">Ohita käyttäjän määrittelemä taustakuva</translation>
+        <translation>Ohita käyttäjän määrittelemä taustakuva</translation>
     </message>
 </context>
 <context>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Pienoisohjelmatyyli</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
@@ -212,29 +212,31 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Pienoisohjelmatyyli</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta GTK-teemat (GTK-asetustiedostot ylikirjoitetaan!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 -teema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 -teema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yrittääksesi yhtenäistää teemoitusta, voit valita joko samankaltaisen tyylin/teeman (jos saatavilla) joka listalta tai &apos;gtk2&apos; Qt-tyylin (jos saatavilla)  jäljitelläksesi GTK-teemoja.
+
+Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien teemoitusta lennosta.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -269,12 +271,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivoi kohde yhdellä napsautuksella</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt-tyyli</translation>
     </message>
 </context>
 </TS>
