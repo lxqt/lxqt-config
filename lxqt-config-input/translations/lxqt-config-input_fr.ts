@@ -37,7 +37,7 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Long(s)</translation>
+        <translation>Long</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
@@ -59,7 +59,7 @@
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
         <translatorcomment>Tapez dans le champ ci-dessous pour tester vos paramètres clavier</translatorcomment>
-        <translation>Saisissez une phrase pour tester les réglages</translation>
+        <translation>Saisir une phrase pour tester les réglages</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
