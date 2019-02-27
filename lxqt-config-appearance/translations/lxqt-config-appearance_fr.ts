@@ -153,12 +153,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>L&apos;extension de KDE des thèmes d’icônes XDG  -&gt; Suivez le schéma de couleur</translation>
+        <translation>L&apos;extension de KDE des thèmes d’icônes XDG  -&gt; Suivre le schéma de couleur</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Colorier les icônes suivant le style des widgets (palette)</translation>
+        <translation>Colorier les icônes sur la base du style des widgets (palette)</translation>
     </message>
 </context>
 <context>
