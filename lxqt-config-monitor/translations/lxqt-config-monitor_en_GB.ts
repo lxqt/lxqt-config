@@ -6,27 +6,27 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation type="unfinished"></translation>
+        <translation>Fast options</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❷ Extended view</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❶ Unified view</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶     Only first</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation type="unfinished"></translation>
+        <translation>     ❷ Only second</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor Settings</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Saved settings</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
