@@ -6,7 +6,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK Temas</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
