@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>قالب های GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; تغییر کرده است.&lt;/p&gt;&lt;p&gt; شما می‌توانید  یک کپی از تنظیمات گذشته خود را در  &apos;%2&apos; مشاهده نمایید&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19,17 +19,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>قلم</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>قلم پیش فرض برای رابط کاربری</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">نام قلم:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -44,32 +44,32 @@
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">عادی</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>ضخیم</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>مورب</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>ضخیم و مورب</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">تنظیمات زیر فقط بر روی برنامه های جدید اعمال می‌شوند</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">استفاده از قلم های antialias</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
