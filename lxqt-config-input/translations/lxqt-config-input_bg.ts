@@ -48,7 +48,7 @@
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished">Кратко</translation>
+        <translation>Кратко</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
