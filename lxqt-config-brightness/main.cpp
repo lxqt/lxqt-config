@@ -34,7 +34,7 @@ int main(int argn, char* argv[])
                                            "\nliblxqt   " LXQT_VERSION
                                            "\nQt        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
-    QCommandLineOption increaseOption(QStringList() << "i" << "icrease",
+    QCommandLineOption increaseOption(QStringList() << "i" << "increase",
             app.tr("Increase brightness."));
     QCommandLineOption decreaseOption(QStringList() << "d" << "decrease",
             app.tr("Decrease brightness."));
