@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK テーマ</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; は上書きされました。&lt;/p&gt;&lt;p&gt;&apos;%2&apos; の古い設定からコピーをすることができます。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -217,17 +217,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK テーマの設定（GTK の設定ファイルが上書きされます!）</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK3 テーマ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK2 テーマ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -274,7 +274,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt スタイル</translation>
     </message>
 </context>
 </TS>
