@@ -6,27 +6,27 @@
     <message>
         <location filename="../brightnesssettings.ui" line="14"/>
         <source>Brightness Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações de Brilho</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use arrow keys to change settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configurações de brilho e luz de fundo:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Utilize as setas direcionais para alterar os ajustes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Requer confirmação após as alterações</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>As configurações de brilho foram alteradas</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmação necessária. As alterações estão corretas?</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Saída:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique com botão direito para redefinir</translation>
     </message>
 </context>
 </TS>
