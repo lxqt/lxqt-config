@@ -74,7 +74,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Hintning-Stil:</translation>
+        <translation>Hinting-Stil:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
