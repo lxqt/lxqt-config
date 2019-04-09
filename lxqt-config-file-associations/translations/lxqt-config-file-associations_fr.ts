@@ -72,7 +72,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Association de fichiers</translation>
+        <translation>Associations de fichiers</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
