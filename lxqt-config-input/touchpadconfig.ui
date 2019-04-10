@@ -34,7 +34,7 @@
    <item row="4" column="0" colspan="2">
     <widget class="QCheckBox" name="tappingEnabledCheckBox">
      <property name="text">
-      <string>Single click to activate items</string>
+      <string>Tap to click</string>
      </property>
     </widget>
    </item>
@@ -48,7 +48,7 @@
    <item row="8" column="0" colspan="2">
     <widget class="QCheckBox" name="tapToDragEnabledCheckBox">
      <property name="text">
-      <string>Tap to drag</string>
+      <string>Tap and drag</string>
      </property>
     </widget>
    </item>
