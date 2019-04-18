@@ -76,7 +76,7 @@ void StyleConfig::initControls()
     // Fill global themes
     QStringList qtThemes = QStyleFactory::keys();
     QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes("2.0");
-    QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes("3.0");
+    QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes("3.*");
 
     if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
         mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
