@@ -229,16 +229,24 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 {
     QStringList themeList;
-    QString configFile = version=="2.0" ? "gtk-2.0/gtkrc" : QString("gtk-%1/gtk.css").arg(version);
+    QString configFile = version=="2.0" ? "gtkrc" : "gtk.css";
 
     QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
     for(QString dataPath : dataPaths) {
         QDir themesPath(dataPath + "/themes");
         QStringList themes = themesPath.entryList(QDir::Dirs);
         for(QString theme : themes) {
-            QFileInfo themePath(QString("%1/themes/%2/%3").arg(dataPath, theme, configFile));
-            if(themePath.exists())
-                themeList.append(theme);
+            QDir dirsInTheme(QString("%1/themes/%2").arg(dataPath, theme));
+            QStringList dirs = dirsInTheme.entryList(QDir::Dirs);
+            for(QString dir : dirs) {
+                if(dir.startsWith("gtk-")) {
+                    if(!version.endsWith("*") && dir != QString("gtk-%1").arg(version))
+                         continue;
+                    QFileInfo themePath(QString("%1/themes/%2/%3/%4").arg(dataPath, theme, dir, configFile));
+                    if(themePath.exists() && !themeList.contains(theme))
+                         themeList.append(theme);
+                }
+            }
         }
     }
     return themeList;
