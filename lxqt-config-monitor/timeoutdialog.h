@@ -30,7 +30,7 @@ class TimeoutDialog : public QDialog
     Q_OBJECT
 
 public:
-    TimeoutDialog(QWidget* parent = 0, Qt::WindowFlags f = 0);
+    TimeoutDialog(QWidget* parent = nullptr, Qt::WindowFlags f = 0);
     virtual ~TimeoutDialog();
 
 protected:

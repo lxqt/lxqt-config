@@ -86,7 +86,7 @@ public:
         bool res = xdgMenu.read(menuFile);
         if (!res)
         {
-            QMessageBox::warning(0, "Parse error", xdgMenu.errorString());
+            QMessageBox::warning(nullptr, "Parse error", xdgMenu.errorString());
             return;
         }
 

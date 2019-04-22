@@ -90,7 +90,7 @@ class KDEUI_EXPORT QCategorizedView
     Q_PROPERTY(bool collapsibleBlocks READ collapsibleBlocks WRITE setCollapsibleBlocks)
 
 public:
-    QCategorizedView(QWidget *parent = 0);
+    QCategorizedView(QWidget *parent = nullptr);
 
     ~QCategorizedView();
 

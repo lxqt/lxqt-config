@@ -31,7 +31,7 @@ class ManageSavedSettings : public QDialog {
   Q_OBJECT
 
 public:
-  ManageSavedSettings(LXQt::Settings *applicationSettings, KScreen::ConfigPtr config, QWidget* parent = 0);
+  ManageSavedSettings(LXQt::Settings *applicationSettings, KScreen::ConfigPtr config, QWidget* parent = nullptr);
 
   Ui::ManageSavedSettings ui;
 

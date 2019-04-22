@@ -121,7 +121,7 @@ class KDEUI_EXPORT QCategoryDrawerV2
     Q_OBJECT
 
 public:
-    KDE_DEPRECATED QCategoryDrawerV2(QObject *parent = 0);
+    KDE_DEPRECATED QCategoryDrawerV2(QObject *parent = nullptr);
     virtual ~QCategoryDrawerV2();
 
     KDE_DEPRECATED virtual void mouseButtonPressed(const QModelIndex &index, QMouseEvent *event);

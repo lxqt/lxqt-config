@@ -107,10 +107,10 @@ struct QCategorizedView::Private::Block
 
 QCategorizedView::Private::Private(QCategorizedView *q)
     : q(q)
-    , proxyModel(0)
-    , categoryDrawer(0)
-    , categoryDrawerV2(0)
-    , categoryDrawerV3(0)
+    , proxyModel(nullptr)
+    , categoryDrawer(nullptr)
+    , categoryDrawerV2(nullptr)
+    , categoryDrawerV3(nullptr)
     , categorySpacing(5)
     , alternatingBlockColors(false)
     , collapsibleBlocks(false)
@@ -833,7 +833,7 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
         int indexToCheckIfBlockCollapsed = i;
         QModelIndex categoryIndex;
         QString category;
-        Private::Block *block = 0;
+        Private::Block *block = nullptr;
         while (i <= intersecting.second.row()) {
             //BEGIN: first check if the block is collapsed. if so, we have to skip the item painting
             if (i == indexToCheckIfBlockCollapsed) {

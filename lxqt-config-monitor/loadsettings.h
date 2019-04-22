@@ -29,7 +29,7 @@ class LoadSettings : public QObject
     Q_OBJECT
 
 public:
-    LoadSettings(QObject *parent = 0);
+    LoadSettings(QObject *parent = nullptr);
 
 private Q_SLOTS:
     void loadConfiguration(KScreen::ConfigPtr config);
