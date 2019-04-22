@@ -40,7 +40,7 @@
 #include <lxqtautostartentry.h>
 
 MonitorSettingsDialog::MonitorSettingsDialog() :
-    QDialog(nullptr, 0)
+    QDialog(nullptr, nullptr)
 {
     ui.setupUi(this);
 

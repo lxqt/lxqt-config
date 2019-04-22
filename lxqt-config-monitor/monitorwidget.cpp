@@ -47,7 +47,7 @@ KScreen::ModePtr getModeById(QString id, KScreen::ModeList modes)
         if (mode->id() == id)
             return mode;
 
-    return KScreen::ModePtr(NULL);
+    return KScreen::ModePtr(nullptr);
 }
 
 static bool sizeBiggerThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr &modeB)

@@ -35,7 +35,7 @@ class FastMenu : public QGroupBox
 
 
 public:
-    FastMenu(KScreen::ConfigPtr config, QWidget* parent = 0);
+    FastMenu(KScreen::ConfigPtr config, QWidget* parent = nullptr);
     ~FastMenu();
 
 private Q_SLOTS:

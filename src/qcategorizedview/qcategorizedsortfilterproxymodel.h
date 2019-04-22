@@ -62,7 +62,7 @@ public:
                                            ///< CategoryDisplayRole.
     };
 
-    QCategorizedSortFilterProxyModel(QObject *parent = 0);
+    QCategorizedSortFilterProxyModel(QObject *parent = nullptr);
     virtual ~QCategorizedSortFilterProxyModel();
 
     /**

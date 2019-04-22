@@ -109,7 +109,7 @@ bool ManageSavedSettings::isHardwareCompatible(const MonitorSavedSettings &setti
 
 void ManageSavedSettings::onDeleteItem()
 {
-    if (ui.allConfigs->currentItem() == NULL)
+    if (ui.allConfigs->currentItem() == nullptr)
         return;
     MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
 
@@ -133,7 +133,7 @@ void ManageSavedSettings::onDeleteItem()
 
 void ManageSavedSettings::onRenameItem()
 {
-    if (ui.allConfigs->currentItem() == NULL)
+    if (ui.allConfigs->currentItem() == nullptr)
         return;
     MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
     bool ok;
@@ -165,7 +165,7 @@ void ManageSavedSettings::onRenameItem()
 
 void ManageSavedSettings::onApplyItem()
 {
-    if (ui.allConfigs->currentItem() == NULL)
+    if (ui.allConfigs->currentItem() == nullptr)
         return;
     MonitorSavedSettings settings = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
     applySettings(config, settings.monitors);
