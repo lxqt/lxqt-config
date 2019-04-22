@@ -122,7 +122,7 @@ class KDEUI_EXPORT QCategoryDrawerV2
 
 public:
     KDE_DEPRECATED QCategoryDrawerV2(QObject *parent = nullptr);
-    virtual ~QCategoryDrawerV2();
+    ~QCategoryDrawerV2() override;
 
     KDE_DEPRECATED virtual void mouseButtonPressed(const QModelIndex &index, QMouseEvent *event);
 
@@ -158,7 +158,7 @@ class KDEUI_EXPORT QCategoryDrawerV3
 
 public:
     QCategoryDrawerV3(QCategorizedView *view);
-    virtual ~QCategoryDrawerV3();
+    ~QCategoryDrawerV3() override;
 
     /**
       * @return The view this category drawer is associated with.

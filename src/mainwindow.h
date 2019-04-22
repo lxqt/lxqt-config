@@ -51,8 +51,8 @@ public:
     MainWindow();
 
 protected:
-    virtual bool event(QEvent * event) override;
-    virtual bool eventFilter(QObject * watched, QEvent * event) override;
+    bool event(QEvent * event) override;
+    bool eventFilter(QObject * watched, QEvent * event) override;
 
 private:
     QCategorizedSortFilterProxyModel *proxyModel;

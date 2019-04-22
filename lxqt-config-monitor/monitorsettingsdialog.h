@@ -34,10 +34,10 @@ class MonitorSettingsDialog : public QDialog
 
 public:
     MonitorSettingsDialog();
-    virtual ~MonitorSettingsDialog();
+    ~MonitorSettingsDialog() override;
 
-    virtual void accept();
-    virtual void reject();
+    void accept() override;
+    void reject() override;
 
 private:
     void applyConfiguration(bool saveConfigOk);

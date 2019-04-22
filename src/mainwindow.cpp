@@ -128,19 +128,19 @@ public:
         m_list[index.row()].xdg().startDetached();
     }
 
-    ~ConfigPaneModel() { }
+    ~ConfigPaneModel() override { }
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         return m_list.count();
     }
 
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
     {
         return false;
     }
 
-    QVariant data(const QModelIndex &index, int role) const
+    QVariant data(const QModelIndex &index, int role) const override
     {
         if (role == Qt::DisplayRole || role == Qt::ToolTipRole)
             return m_list[index.row()].xdg().name();
@@ -168,9 +168,9 @@ class ConfigItemDelegate : public QStyledItemDelegate
 {
 public:
     ConfigItemDelegate(QCategorizedView* view) : mView(view) { }
-    ~ConfigItemDelegate() { }
+    ~ConfigItemDelegate() override { }
 
-    QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index) const
+    QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index) const override
     {
         /* We let Qt calculate the real cell size but consider the 4-px margin
            around each cell and try to add a 2-px margin around the selection
@@ -185,7 +185,7 @@ public:
     }
 
 protected:
-    void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
+    void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const override
     {
         if(!index.isValid())
             return;

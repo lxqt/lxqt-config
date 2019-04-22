@@ -43,7 +43,7 @@ public:
     void updateScene();
 
 protected:
-    virtual void showEvent(QShowEvent * event);
+    void showEvent(QShowEvent * event) override;
 
 private:
     Ui::MonitorPictureDialog ui;
@@ -75,8 +75,8 @@ private:
 
 
 protected:
-    QVariant itemChange(GraphicsItemChange change, const QVariant & value);
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent * event);
+    QVariant itemChange(GraphicsItemChange change, const QVariant & value) override;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent * event) override;
 };
 
 class MonitorPictureProxy: public QObject
