@@ -47,7 +47,7 @@ class MonitorWidget : public QGroupBox
 
 public:
     MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent = nullptr);
-    ~MonitorWidget();
+    ~MonitorWidget() override;
 
     void updateRefreshRates();
 

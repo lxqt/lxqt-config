@@ -63,13 +63,13 @@ public:
     };
 
     QCategorizedSortFilterProxyModel(QObject *parent = nullptr);
-    virtual ~QCategorizedSortFilterProxyModel();
+    ~QCategorizedSortFilterProxyModel() override;
 
     /**
       * Overridden from QSortFilterProxyModel. Sorts the source model using
       * @p column for the given @p order.
       */
-    virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder);
+    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
     /**
       * @return whether the model is categorized or not. Disabled by default.
@@ -121,7 +121,7 @@ protected:
       * @warning You usually won't need to reimplement this method when subclassing
       *          from QCategorizedSortFilterProxyModel.
       */
-    virtual bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
     /**
       * This method has a similar purpose as lessThan() has on QSortFilterProxyModel.

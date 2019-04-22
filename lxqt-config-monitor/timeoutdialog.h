@@ -31,10 +31,10 @@ class TimeoutDialog : public QDialog
 
 public:
     TimeoutDialog(QWidget* parent = nullptr, Qt::WindowFlags f = 0);
-    virtual ~TimeoutDialog();
+    ~TimeoutDialog() override;
 
 protected:
-    virtual void showEvent(QShowEvent* e);
+    void showEvent(QShowEvent* e) override;
 
 private Q_SLOTS:
     void onTimeout();

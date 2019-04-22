@@ -36,7 +36,7 @@ class FastMenu : public QGroupBox
 
 public:
     FastMenu(KScreen::ConfigPtr config, QWidget* parent = nullptr);
-    ~FastMenu();
+    ~FastMenu() override;
 
 private Q_SLOTS:
     void onSeleccionChanged(int index);
