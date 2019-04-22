@@ -22,7 +22,7 @@
 #include "qcategorizedsortfilterproxymodel.h"
 #include "qcategorizedsortfilterproxymodel_p.h"
 
-#include <limits.h>
+#include <climits>
 
 #include <QItemSelection>
 #include <QStringList>
