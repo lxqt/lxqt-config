@@ -230,6 +230,11 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 {
     QStringList themeList;
     QString configFile = version=="2.0" ? "gtkrc" : "gtk.css";
+    
+    if(version != "2.0") {
+        // Insert default GTK3 themes:
+        themeList << "Adwaita" << "HighContrast" << "HighContrastInverse";
+    }
 
     QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
     for(QString dataPath : dataPaths) {
