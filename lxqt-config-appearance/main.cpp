@@ -112,11 +112,11 @@ int main (int argc, char **argv)
     QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton btn) {
         if (btn == QDialogButtonBox::Apply)
         {
-            stylePage->applyStyle();
             iconPage->applyIconTheme();
             themePage->applyLxqtTheme();
             fontsPage->updateQtFont();
             cursorPage->applyCusorTheme();
+            stylePage->applyStyle(); // Cursor and font have to be set before style
             // disable Apply button after changes are applied
             dialog->enableButton(btn, false);
         }

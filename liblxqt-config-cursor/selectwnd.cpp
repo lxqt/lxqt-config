@@ -181,7 +181,7 @@ void SelectWnd::applyCusorTheme()
     mSettings->setValue("cursor_theme", theme->name());
     mSettings->endGroup();
 
-    // The XCURSOR_THEME environment varialbe does not work sometimes.
+    // The XCURSOR_THEME environment variable does not work sometimes.
     // Besides, XDefaults values are not used by Qt.
     // So, let's write the new theme name to ~/.icons/default/index.theme.
     // This is the most reliable way.
