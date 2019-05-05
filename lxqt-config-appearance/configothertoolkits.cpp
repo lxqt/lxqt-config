@@ -47,6 +47,7 @@ gtk-font-name = "%3"
 gtk-button-images = %4
 gtk-menu-images = %4
 gtk-toolbar-style = %5
+gtk-cursor-theme-name = %6
 )GTK2_CONFIG";
 
 static const char *GTK3_CONFIG = R"GTK3_CONFIG(
@@ -59,6 +60,7 @@ gtk-font-name = %3
 gtk-menu-images = %4
 gtk-button-images = %4
 gtk-toolbar-style = %5
+gtk-cursor-theme-name = %6
 )GTK3_CONFIG";
 
 static const char *XSETTINGS_CONFIG = R"XSETTINGS_CONFIG(
@@ -69,6 +71,7 @@ Gtk/FontName "%3"
 Gtk/MenuImages %4
 Gtk/ButtonImages %4
 Gtk/ToolbarStyle "%5"
+Gtk/CursorThemeName "%6"
 )XSETTINGS_CONFIG";
 
 ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
@@ -202,9 +205,12 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
 
 QString ConfigOtherToolKits::getConfig(const char *configString)
 {
+    LXQt::Settings* sessionSettings = new LXQt::Settings("session");
+    QString mouseStyle = sessionSettings->value("Mouse/cursor_theme").toString();
+    delete sessionSettings;
     return QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
         mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
-        mConfig.toolButtonStyle
+        mConfig.toolButtonStyle, mouseStyle
         );
 }
 

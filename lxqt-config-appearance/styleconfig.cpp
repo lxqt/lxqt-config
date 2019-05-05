@@ -144,22 +144,15 @@ void StyleConfig::applyStyle()
     }
 
     // GTK3
-    bool setXSettings = false;
     themeName = ui->gtk3ComboBox->currentText();
-    if(themeName != mConfigOtherToolKits->getGTKThemeFromRCFile("3.0")) {
-        mConfigOtherToolKits->setGTKConfig("3.0", themeName);
-        setXSettings = true;
-    }
+    mConfigOtherToolKits->setGTKConfig("3.0", themeName);
 
     // GTK2
     themeName = ui->gtk2ComboBox->currentText();
-    if(themeName != mConfigOtherToolKits->getGTKThemeFromRCFile("2.0")) {
-        mConfigOtherToolKits->setGTKConfig("2.0", themeName);
-        setXSettings = true;
-    }
-
-    if(setXSettings)
-        mConfigOtherToolKits->setXSettingsConfig();
+    mConfigOtherToolKits->setGTKConfig("2.0", themeName);
+    
+    // Update xsettingsd
+    mConfigOtherToolKits->setXSettingsConfig();
 }
 
 void StyleConfig::showAdvancedOptions(bool on)
