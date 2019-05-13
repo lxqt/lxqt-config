@@ -80,17 +80,17 @@ class ConfigPaneModel: public QAbstractListModel
 public:
     ConfigPaneModel(): QAbstractListModel()
     {
-        QString menuFile = XdgMenu::getMenuFileName("config.menu");
+        QString menuFile = XdgMenu::getMenuFileName(QStringLiteral("config.menu"));
         XdgMenu xdgMenu;
-        xdgMenu.setEnvironments(QStringList() << "X-LXQT" << "LXQt" << "LXDE");
+        xdgMenu.setEnvironments(QStringList() << QStringLiteral("X-LXQT") << QStringLiteral("LXQt") << QStringLiteral("LXDE"));
         bool res = xdgMenu.read(menuFile);
         if (!res)
         {
-            QMessageBox::warning(nullptr, "Parse error", xdgMenu.errorString());
+            QMessageBox::warning(nullptr, QStringLiteral("Parse error"), xdgMenu.errorString());
             return;
         }
 
-        DomElementIterator it(xdgMenu.xml().documentElement() , "Menu");
+        DomElementIterator it(xdgMenu.xml().documentElement() , QStringLiteral("Menu"));
         while(it.hasNext())
         {
             this->buildGroup(it.next());
@@ -100,21 +100,21 @@ public:
     void buildGroup(const QDomElement& xml)
     {
         QString category;
-        if (! xml.attribute("title").isEmpty())
-            category = xml.attribute("title");
+        if (! xml.attribute(QStringLiteral("title")).isEmpty())
+            category = xml.attribute(QStringLiteral("title"));
         else
-            category = xml.attribute("name");
+            category = xml.attribute(QStringLiteral("name"));
 
-        DomElementIterator it(xml , "AppLink");
+        DomElementIterator it(xml , QStringLiteral("AppLink"));
         while(it.hasNext())
         {
             QDomElement x = it.next();
 
             XdgDesktopFile xdg;
-            xdg.load(x.attribute("desktopFile"));
+            xdg.load(x.attribute(QStringLiteral("desktopFile")));
 
             ConfigPane pane;
-            pane.id() = xdg.value("Icon").toString();
+            pane.id() = xdg.value(QStringLiteral("Icon")).toString();
             pane.category() = category;
             pane.setXdg(xdg);
             m_list.append(pane);

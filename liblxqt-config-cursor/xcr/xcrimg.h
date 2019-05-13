@@ -61,7 +61,7 @@ protected:
 
 class XCursorImages {
 public:
-  XCursorImages (const QString &aName, const QString &aPath="");
+  XCursorImages (const QString &aName, const QString &aPath=QLatin1String(""));
   virtual ~XCursorImages ();
 
   inline const QString &name () const { return mName; }

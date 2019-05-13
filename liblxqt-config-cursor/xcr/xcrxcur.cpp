@@ -119,12 +119,12 @@ XCursorImagesXCur::XCursorImagesXCur (const QDir &aDir, const QString &aName) : 
 }
 
 
-XCursorImagesXCur::XCursorImagesXCur (const QString &aFileName) : XCursorImages("", "") {
+XCursorImagesXCur::XCursorImagesXCur (const QString &aFileName) : XCursorImages(QLatin1String(""), QLatin1String("")) {
   QString name(aFileName);
   if (name.isEmpty() || name.endsWith('/')) return;
   int i = name.lastIndexOf('/');
   QString dir;
-  if (i < 0) dir = "./"; else dir = name.left(i);
+  if (i < 0) dir = QLatin1String("./"); else dir = name.left(i);
   name = name.mid(i+1);
   setName(name); setPath(dir);
   parseCursorFile(aFileName);

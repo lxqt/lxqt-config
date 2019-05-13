@@ -53,22 +53,22 @@ int main (int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    LXQt::Settings* settings = new LXQt::Settings("lxqt");
-    LXQt::Settings* sessionSettings = new LXQt::Settings("session");
+    LXQt::Settings* settings = new LXQt::Settings(QStringLiteral("lxqt"));
+    LXQt::Settings* sessionSettings = new LXQt::Settings(QStringLiteral("session"));
     LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Appearance Configuration"), settings);
     dialog->setButtons(QDialogButtonBox::Apply|QDialogButtonBox::Close|QDialogButtonBox::Reset);
     dialog->enableButton(QDialogButtonBox::Apply, false); // disable Apply button in the beginning
 
     app.setActivationWindow(dialog);
 
-    LXQt::Settings mConfigAppearanceSettings("lxqt-config-appearance");
+    LXQt::Settings mConfigAppearanceSettings(QStringLiteral("lxqt-config-appearance"));
     ConfigOtherToolKits *configOtherToolKits = new ConfigOtherToolKits(settings, &mConfigAppearanceSettings, dialog);
 
     QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
 
     /*** Widget Style ***/
     StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, &mConfigAppearanceSettings, configOtherToolKits, dialog);
-    dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << "preferences-desktop-theme" << "preferences-desktop");
+    dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << QStringLiteral("preferences-desktop-theme") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, stylePage, &StyleConfig::initControls);
     QObject::connect(stylePage, &StyleConfig::settingsChanged, dialog, [dialog] {
         dialog->enableButton(QDialogButtonBox::Apply, true); // enable Apply button when something is changed
@@ -76,7 +76,7 @@ int main (int argc, char **argv)
 
     /*** Icon Theme ***/
     IconThemeConfig* iconPage = new IconThemeConfig(settings, dialog);
-    dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << "preferences-desktop-icons" << "preferences-desktop");
+    dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << QStringLiteral("preferences-desktop-icons") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, iconPage, &IconThemeConfig::initControls);
     QObject::connect(iconPage, &IconThemeConfig::settingsChanged, dialog, [dialog] {
         dialog->enableButton(QDialogButtonBox::Apply, true);
@@ -85,7 +85,7 @@ int main (int argc, char **argv)
 
     /*** LXQt Theme ***/
     LXQtThemeConfig* themePage = new LXQtThemeConfig(settings, dialog);
-    dialog->addPage(themePage, QObject::tr("LXQt Theme"), QStringList() << "preferences-desktop-color" << "preferences-desktop");
+    dialog->addPage(themePage, QObject::tr("LXQt Theme"), QStringList() << QStringLiteral("preferences-desktop-color") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, themePage, &LXQtThemeConfig::initControls);
     QObject::connect(themePage, &LXQtThemeConfig::settingsChanged, dialog, [dialog] {
         dialog->enableButton(QDialogButtonBox::Apply, true);
@@ -93,7 +93,7 @@ int main (int argc, char **argv)
 
     /*** Font ***/
     FontsConfig* fontsPage = new FontsConfig(settings, &qtSettings, dialog);
-    dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << "preferences-desktop-font" << "preferences-desktop");
+    dialog->addPage(fontsPage, QObject::tr("Font"), QStringList() << QStringLiteral("preferences-desktop-font") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, fontsPage, &FontsConfig::initControls);
     QObject::connect(fontsPage, &FontsConfig::updateOtherSettings, configOtherToolKits, &ConfigOtherToolKits::setConfig);
     QObject::connect(fontsPage, &FontsConfig::settingsChanged, dialog, [dialog] {
@@ -103,7 +103,7 @@ int main (int argc, char **argv)
     /*** Cursor Theme ***/
     SelectWnd* cursorPage = new SelectWnd(sessionSettings, dialog);
     cursorPage->setCurrent();
-    dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << "input-mouse" << "preferences-desktop");
+    dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
     QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog] {
         dialog->enableButton(QDialogButtonBox::Apply, true);
     });
@@ -125,7 +125,7 @@ int main (int argc, char **argv)
     });
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->setWindowIcon(QIcon::fromTheme("preferences-desktop-theme"));
+    dialog->setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-theme")));
     dialog->show();
 
     return app.exec();

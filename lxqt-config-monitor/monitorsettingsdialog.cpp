@@ -207,13 +207,13 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
         currentSettings.append(monitor);
     }
     
-    LXQt::Settings settings("lxqt-config-monitor");
-    settings.beginGroup("currentConfig");
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+    settings.beginGroup(QStringLiteral("currentConfig"));
     saveMonitorSettings(settings, currentSettings);
     settings.endGroup();
     
     QList<MonitorSavedSettings> monitors;
-    settings.beginGroup("SavedConfigs");
+    settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);
     qDebug() << "[ MonitorSettingsDialog::saveConfiguration] # monitors Read:" << monitors.size();
     MonitorSavedSettings monitor;
@@ -225,11 +225,11 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     qDebug() << "[ MonitorSettingsDialog::saveConfiguration] # monitors Write:" << monitors.size();
     settings.endGroup();
 
-    LXQt::AutostartEntry autoStart("lxqt-config-monitor-autostart.desktop");
-    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, "lxqt-config-monitor-autostart", "lxqt-config-monitor -l");
+    LXQt::AutostartEntry autoStart(QStringLiteral("lxqt-config-monitor-autostart.desktop"));
+    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, QStringLiteral("lxqt-config-monitor-autostart"), QStringLiteral("lxqt-config-monitor -l"));
     //desktopFile.setValue("OnlyShowIn", QString(qgetenv("XDG_CURRENT_DESKTOP")));
-    desktopFile.setValue("OnlyShowIn", "LXQt");
-    desktopFile.setValue("Comment", "Autostart monitor settings for LXQt-config-monitor");
+    desktopFile.setValue(QStringLiteral("OnlyShowIn"), "LXQt");
+    desktopFile.setValue(QStringLiteral("Comment"), "Autostart monitor settings for LXQt-config-monitor");
     autoStart.setFile(desktopFile);
     autoStart.commit();
 }

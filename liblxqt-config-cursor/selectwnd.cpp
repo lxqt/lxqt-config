@@ -159,7 +159,7 @@ void SelectWnd::applyCusorTheme()
     QModelIndex curIndex = ui->lbThemes->currentIndex();
     if(!curIndex.isValid()) return;
     const XCursorThemeData *theme = mModel->theme(curIndex);
-    if(!theme || mSettings->value("Mouse/cursor_theme") == theme->name()) {
+    if(!theme || mSettings->value(QStringLiteral("Mouse/cursor_theme")) == theme->name()) {
         return;
     }
     applyTheme(*theme);
@@ -173,12 +173,12 @@ void SelectWnd::applyCusorTheme()
 
     // old razor-qt and lxqt versions use $XCURSOR_THEME environment variable
     // for this, but it's less flexible and more problematic. Let's deprecate its use.
-    mSettings->beginGroup("Environment");
-    mSettings->remove("XCURSOR_THEME"); // ensure that we're not using XCURSOR_THEME
+    mSettings->beginGroup(QStringLiteral("Environment"));
+    mSettings->remove(QStringLiteral("XCURSOR_THEME")); // ensure that we're not using XCURSOR_THEME
     mSettings->endGroup();
     // save to Mouse/cursor_theme instead
-    mSettings->beginGroup("Mouse");
-    mSettings->setValue("cursor_theme", theme->name());
+    mSettings->beginGroup(QStringLiteral("Mouse"));
+    mSettings->setValue(QStringLiteral("cursor_theme"), theme->name());
     mSettings->endGroup();
 
     // The XCURSOR_THEME environment variable does not work sometimes.
@@ -230,5 +230,5 @@ void SelectWnd::handleWarning()
 
 void SelectWnd::showDirInfo()
 {
-        QToolTip::showText(mapToGlobal(ui->warningLabel->buttonPos()), mModel->searchPaths().join("\n"));
+        QToolTip::showText(mapToGlobal(ui->warningLabel->buttonPos()), mModel->searchPaths().join(QStringLiteral("\n")));
 }

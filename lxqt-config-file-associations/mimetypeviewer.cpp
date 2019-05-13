@@ -194,8 +194,8 @@ void MimetypeViewer::currentMimetypeChanged()
     XdgDesktopFile* defaultApp = XdgDesktopFileCache::getDefaultApp(m_CurrentMime.name());
     if (defaultApp && defaultApp->isValid())
     {
-        QString nonLocalizedName = defaultApp->value("Name").toString();
-        QString localizedName = defaultApp->localizedValue("Name", nonLocalizedName).toString();
+        QString nonLocalizedName = defaultApp->value(QStringLiteral("Name")).toString();
+        QString localizedName = defaultApp->localizedValue(QStringLiteral("Name"), nonLocalizedName).toString();
         QIcon appIcon = defaultApp->icon();
         widget.appIcon->setPixmap(appIcon.pixmap(widget.iconLabel->size()));
         widget.appIcon->show();
@@ -245,7 +245,7 @@ void MimetypeViewer::chooseApplication()
     if (applicationChooser.exec() == QDialog::Accepted && applicationChooser.DefaultApplication())
     {
         QString fileNameNoPath = QFileInfo(applicationChooser.DefaultApplication()->fileName()).fileName();
-        mDefaultsList->beginGroup("Default Applications");
+        mDefaultsList->beginGroup(QStringLiteral("Default Applications"));
         mDefaultsList->setValue(m_CurrentMime.name(), fileNameNoPath);
         mDefaultsList->endGroup();
         currentMimetypeChanged();

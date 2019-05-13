@@ -209,17 +209,17 @@ void MouseConfig::loadSettings() {
 }
 
 void MouseConfig::accept() {
-  qtSettings->setValue("single_click_activate", singleClick);
+  qtSettings->setValue(QStringLiteral("single_click_activate"), singleClick);
 
   qtSettings->beginGroup(QLatin1String("Qt"));
   qtSettings->setValue(QLatin1String("doubleClickInterval"), doubleClickInterval);
   qtSettings->setValue(QLatin1String("wheelScrollLines"), wheelScrollLines);
   qtSettings->endGroup();
 
-  settings->beginGroup("Mouse");
-  settings->setValue("accel_factor", accel);
-  settings->setValue("accel_threshold", threshold);
-  settings->setValue("left_handed", leftHanded);
+  settings->beginGroup(QStringLiteral("Mouse"));
+  settings->setValue(QStringLiteral("accel_factor"), accel);
+  settings->setValue(QStringLiteral("accel_threshold"), threshold);
+  settings->setValue(QStringLiteral("left_handed"), leftHanded);
   settings->endGroup();
 }
 

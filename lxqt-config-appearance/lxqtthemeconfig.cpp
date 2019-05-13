@@ -109,7 +109,7 @@ LXQtThemeConfig::~LXQtThemeConfig()
 
 void LXQtThemeConfig::initControls()
 {
-    QString currentTheme = mSettings->value("theme").toString();
+    QString currentTheme = mSettings->value(QStringLiteral("theme")).toString();
 
     QTreeWidgetItemIterator it(ui->lxqtThemeList);
     while (*it) {
@@ -130,18 +130,18 @@ void LXQtThemeConfig::applyLxqtTheme()
     if (!item)
         return;
 
-    LXQt::LXQtTheme currentTheme{mSettings->value("theme").toString()};
+    LXQt::LXQtTheme currentTheme{mSettings->value(QStringLiteral("theme")).toString()};
     QVariant themeName = item->data(0, Qt::UserRole);
-    if(mSettings->value("theme") != themeName)
-        mSettings->setValue("theme", themeName);
+    if(mSettings->value(QStringLiteral("theme")) != themeName)
+        mSettings->setValue(QStringLiteral("theme"), themeName);
     LXQt::LXQtTheme theme(themeName.toString());
     if(theme.isValid()) {
         QString wallpaper = theme.desktopBackground();
         if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
             // call pcmanfm-qt to update wallpaper
             QStringList args;
-            args << "--set-wallpaper" << wallpaper;
-            QProcess::startDetached("pcmanfm-qt", args);
+            args << QStringLiteral("--set-wallpaper") << wallpaper;
+            QProcess::startDetached(QStringLiteral("pcmanfm-qt"), args);
         }
     }
 }

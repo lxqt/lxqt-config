@@ -56,7 +56,7 @@ int main (int argc, char **argv)
 
     MimetypeViewer mimetypeViewer;
     app.setActivationWindow(&mimetypeViewer);
-    mimetypeViewer.setWindowIcon(QIcon::fromTheme("preferences-desktop-filetype-association"));
+    mimetypeViewer.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-filetype-association")));
     mimetypeViewer.show();
 
     return app.exec();

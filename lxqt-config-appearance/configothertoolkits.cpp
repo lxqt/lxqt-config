@@ -80,7 +80,7 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settin
     mConfigAppearanceSettings = configAppearanceSettings;
     if(tempFile.open()) {
         mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
-        mXsettingsdProc.start("xsettingsd", QStringList() << "-c" << tempFile.fileName());
+        mXsettingsdProc.start(QStringLiteral("xsettingsd"), QStringList() << QStringLiteral("-c") << tempFile.fileName());
         if(!mXsettingsdProc.waitForStarted())
             return;
         tempFile.close();
@@ -99,7 +99,7 @@ static QString get_environment_var(const char *envvar, const char *defaultValue)
     if(mDirPath.isEmpty())
         mDirPath = homeDir + defaultValue;
     else {
-        for(QString path : mDirPath.split(":") ) {
+        for(QString path : mDirPath.split(QStringLiteral(":")) ) {
             mDirPath = path;
             break;
         }
@@ -110,17 +110,17 @@ static QString get_environment_var(const char *envvar, const char *defaultValue)
 static QString _get_config_path(QString path)
 {
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
-    path.replace("$XDG_CONFIG_HOME", get_environment_var("XDG_CONFIG_HOME", "/.config"));
-    path.replace("$GTK2_RC_FILES",   get_environment_var("GTK2_RC_FILES", "/.gtkrc-2.0")); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
-    path.replace("~", homeDir);
+    path.replace(QLatin1String("$XDG_CONFIG_HOME"), get_environment_var("XDG_CONFIG_HOME", "/.config"));
+    path.replace(QLatin1String("$GTK2_RC_FILES"),   get_environment_var("GTK2_RC_FILES", "/.gtkrc-2.0")); // If $GTK2_RC_FILES is undefined, "~/.gtkrc-2.0" will be used.
+    path.replace(QLatin1String("~"), homeDir);
     return path;
 }
 
 QString ConfigOtherToolKits::getGTKConfigPath(QString version)
 {
-    if(version == "2.0")
-        return _get_config_path("$GTK2_RC_FILES");
-    return _get_config_path(QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
+    if(version == QLatin1String("2.0"))
+        return _get_config_path(QStringLiteral("$GTK2_RC_FILES"));
+    return _get_config_path(QStringLiteral("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
 }
 
 static bool grep(QFile &file, QByteArray text)
@@ -156,16 +156,16 @@ bool ConfigOtherToolKits::backupGTKSettings(QString version)
 
 void ConfigOtherToolKits::setConfig()
 {
-    if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
-        mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
-    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
+    if(!mConfigAppearanceSettings->contains(QStringLiteral("ControlGTKThemeEnabled")))
+        mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), false);
+    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value(QStringLiteral("ControlGTKThemeEnabled")).toBool();
     if(! controlGTKThemeEnabled)
         return;
     updateConfigFromSettings();
-    mConfig.styleTheme = getGTKThemeFromRCFile("3.0");
-    setGTKConfig("3.0");
-    mConfig.styleTheme = getGTKThemeFromRCFile("2.0");
-    setGTKConfig("2.0");
+    mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("3.0"));
+    setGTKConfig(QStringLiteral("3.0"));
+    mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("2.0"));
+    setGTKConfig(QStringLiteral("2.0"));
     setXSettingsConfig();
 }
 
@@ -197,7 +197,7 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
         mConfig.styleTheme = theme;
     backupGTKSettings(version);
     QString gtkrcPath = getGTKConfigPath(version);
-    if(version == "2.0")
+    if(version == QLatin1String("2.0"))
         writeConfig(gtkrcPath, GTK2_CONFIG);
     else
         writeConfig(gtkrcPath, GTK3_CONFIG);
@@ -205,8 +205,8 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
 
 QString ConfigOtherToolKits::getConfig(const char *configString)
 {
-    LXQt::Settings* sessionSettings = new LXQt::Settings("session");
-    QString mouseStyle = sessionSettings->value("Mouse/cursor_theme").toString();
+    LXQt::Settings* sessionSettings = new LXQt::Settings(QStringLiteral("session"));
+    QString mouseStyle = sessionSettings->value(QStringLiteral("Mouse/cursor_theme")).toString();
     delete sessionSettings;
     return QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
         mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
@@ -235,11 +235,11 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 {
     QStringList themeList;
-    QString configFile = version=="2.0" ? "gtkrc" : "gtk.css";
+    QString configFile = version==QLatin1String("2.0") ? "gtkrc" : "gtk.css";
     
-    if(version != "2.0") {
+    if(version != QLatin1String("2.0")) {
         // Insert default GTK3 themes:
-        themeList << "Adwaita" << "HighContrast" << "HighContrastInverse";
+        themeList << QStringLiteral("Adwaita") << QStringLiteral("HighContrast") << QStringLiteral("HighContrastInverse");
     }
 
     QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
@@ -247,13 +247,13 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
         QDir themesPath(dataPath + "/themes");
         QStringList themes = themesPath.entryList(QDir::Dirs);
         for(QString theme : themes) {
-            QDir dirsInTheme(QString("%1/themes/%2").arg(dataPath, theme));
+            QDir dirsInTheme(QStringLiteral("%1/themes/%2").arg(dataPath, theme));
             QStringList dirs = dirsInTheme.entryList(QDir::Dirs);
             for(QString dir : dirs) {
-                if(dir.startsWith("gtk-")) {
-                    if(!version.endsWith("*") && dir != QString("gtk-%1").arg(version))
+                if(dir.startsWith(QLatin1String("gtk-"))) {
+                    if(!version.endsWith(QLatin1String("*")) && dir != QStringLiteral("gtk-%1").arg(version))
                          continue;
-                    QFileInfo themePath(QString("%1/themes/%2/%3/%4").arg(dataPath, theme, dir, configFile));
+                    QFileInfo themePath(QStringLiteral("%1/themes/%2/%3/%4").arg(dataPath, theme, dir, configFile));
                     if(themePath.exists() && !themeList.contains(theme))
                          themeList.append(theme);
                 }
@@ -265,8 +265,8 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 
 QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
 {
-    if(version == "2.0") {
-        QString gtkrcPath = _get_config_path("$GTK2_RC_FILES");
+    if(version == QLatin1String("2.0")) {
+        QString gtkrcPath = _get_config_path(QStringLiteral("$GTK2_RC_FILES"));
         QFile file(gtkrcPath);
         if(file.exists()) {
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -284,7 +284,7 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
             file.close();
         }
     } else {
-        QString gtkrcPath = _get_config_path(QString("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
+        QString gtkrcPath = _get_config_path(QStringLiteral("$XDG_CONFIG_HOME/gtk-%1/settings.ini").arg(version));
         QFile file(gtkrcPath);
         if(file.exists()) {
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -316,8 +316,8 @@ QString ConfigOtherToolKits::getDefaultGTKTheme()
     // $ gsettings get org.gnome.desktop.interface gtk-theme
     QProcess gsettings;
     QStringList args;
-    args << "get" << "org.gnome.desktop.interface" << "gtk-theme";
-    gsettings.start("gsettings", args);
+    args << QStringLiteral("get") << QStringLiteral("org.gnome.desktop.interface") << QStringLiteral("gtk-theme");
+    gsettings.start(QStringLiteral("gsettings"), args);
     if(! gsettings.waitForFinished())
         return QString();
     QByteArray defaultTheme = gsettings.readAll().trimmed();
@@ -333,39 +333,39 @@ void ConfigOtherToolKits::updateConfigFromSettings()
 {
     mSettings->beginGroup(QLatin1String("Qt"));
     QFont font;
-    font.fromString(mSettings->value("font").toString());
+    font.fromString(mSettings->value(QStringLiteral("font")).toString());
     // Font name from: https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string
     // FAMILY-LIST [SIZE]", where FAMILY-LIST is a comma separated list of families optionally terminated by a comma,
     // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and
     // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size.
-    mConfig.fontName = QString("%1%2%3 %4")
+    mConfig.fontName = QStringLiteral("%1%2%3 %4")
         .arg(font.family())                                 //%1
         .arg(font.style()==QFont::StyleNormal?"":" Italic") //%2
         .arg(font.weight()==QFont::Normal?"":" Bold")       //%3
         .arg(font.pointSize());                             //%4
     mSettings->endGroup();
 
-    mConfig.iconTheme = mSettings->value("icon_theme").toString();
+    mConfig.iconTheme = mSettings->value(QStringLiteral("icon_theme")).toString();
     {
         // Tool button style
-        QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
+        QByteArray tb_style = mSettings->value(QStringLiteral("tool_button_style")).toByteArray();
         // convert toolbar style name to value
         QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
         int val = me.keyToValue(tb_style.constData());
         mConfig.buttonStyle = 1;
         switch(val) {
             case Qt::ToolButtonIconOnly:
-                mConfig.toolButtonStyle = "GTK_TOOLBAR_ICONS";
+                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_ICONS");
                 break;
             case Qt::ToolButtonTextOnly:
-                mConfig.toolButtonStyle = "GTK_TOOLBAR_TEXT";
+                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_TEXT");
                 mConfig.buttonStyle = 0;
                 break;
             case Qt::ToolButtonTextUnderIcon:
-                mConfig.toolButtonStyle = "GTK_TOOLBAR_BOTH";
+                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_BOTH");
                 break;
             default:
-                mConfig.toolButtonStyle = "GTK_TOOLBAR_BOTH_HORIZ";
+                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_BOTH_HORIZ");
         }
     }
 }

@@ -75,18 +75,18 @@ void StyleConfig::initControls()
 
     // Fill global themes
     QStringList qtThemes = QStyleFactory::keys();
-    QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes("2.0");
-    QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes("3.*");
+    QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("2.0"));
+    QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("3.*"));
 
-    if(!mConfigAppearanceSettings->contains("ControlGTKThemeEnabled"))
-        mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", false);
-    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value("ControlGTKThemeEnabled").toBool();
+    if(!mConfigAppearanceSettings->contains(QStringLiteral("ControlGTKThemeEnabled")))
+        mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), false);
+    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value(QStringLiteral("ControlGTKThemeEnabled")).toBool();
 
     showAdvancedOptions(controlGTKThemeEnabled);
     ui->advancedOptionsGroupBox->setChecked(controlGTKThemeEnabled);
 
     // read other widget related settings from LXQt settings.
-    QByteArray tb_style = mSettings->value("tool_button_style").toByteArray();
+    QByteArray tb_style = mSettings->value(QStringLiteral("tool_button_style")).toByteArray();
     // convert toolbar style name to value
     QMetaEnum me = QToolBar::staticMetaObject.property(QToolBar::staticMetaObject.indexOfProperty("toolButtonStyle")).enumerator();
     int val = me.keyToValue(tb_style.constData());
@@ -95,7 +95,7 @@ void StyleConfig::initControls()
     ui->toolButtonStyle->setCurrentIndex(val);
 
     // activate item views with single click
-    ui->singleClickActivate->setChecked( mSettings->value("single_click_activate", false).toBool());
+    ui->singleClickActivate->setChecked( mSettings->value(QStringLiteral("single_click_activate"), false).toBool());
 
 
     // Fill Qt themes
@@ -106,10 +106,10 @@ void StyleConfig::initControls()
     ui->gtk2ComboBox->addItems(gtk2Themes);
     ui->gtk3ComboBox->addItems(gtk3Themes);
 
-    ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile("2.0"));
-    ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile("3.0"));
+    ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("2.0")));
+    ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
     mSettings->beginGroup(QLatin1String("Qt"));
-    ui->qtComboBox->setCurrentText(mSettings->value("style").toString());
+    ui->qtComboBox->setCurrentText(mSettings->value(QStringLiteral("style")).toString());
     mSettings->endGroup();
 
     update();
@@ -120,13 +120,13 @@ void StyleConfig::applyStyle()
     // Qt style
     QString themeName = ui->qtComboBox->currentText();;
     mQtSettings->beginGroup(QLatin1String("Qt"));
-    if(mQtSettings->value("style").toString() != themeName)
-        mQtSettings->setValue("style", themeName);
+    if(mQtSettings->value(QStringLiteral("style")).toString() != themeName)
+        mQtSettings->setValue(QStringLiteral("style"), themeName);
     mQtSettings->endGroup();
 
     // single click setting
-    if(mSettings->value("single_click_activate").toBool() !=  ui->singleClickActivate->isChecked()) {
-        mSettings->setValue("single_click_activate", ui->singleClickActivate->isChecked());
+    if(mSettings->value(QStringLiteral("single_click_activate")).toBool() !=  ui->singleClickActivate->isChecked()) {
+        mSettings->setValue(QStringLiteral("single_click_activate"), ui->singleClickActivate->isChecked());
     }
 
    // tool button style
@@ -136,20 +136,20 @@ void StyleConfig::applyStyle()
     if(index == -1)
         index = Qt::ToolButtonTextBesideIcon;
     const char* str = me.valueToKey(index);
-    if(str && mSettings->value("tool_button_style") != str)
+    if(str && mSettings->value(QStringLiteral("tool_button_style")) != str)
     {
-        mSettings->setValue("tool_button_style", str);
+        mSettings->setValue(QStringLiteral("tool_button_style"), str);
         mSettings->sync();
         mConfigOtherToolKits->setConfig();
     }
 
     // GTK3
     themeName = ui->gtk3ComboBox->currentText();
-    mConfigOtherToolKits->setGTKConfig("3.0", themeName);
+    mConfigOtherToolKits->setGTKConfig(QStringLiteral("3.0"), themeName);
 
     // GTK2
     themeName = ui->gtk2ComboBox->currentText();
-    mConfigOtherToolKits->setGTKConfig("2.0", themeName);
+    mConfigOtherToolKits->setGTKConfig(QStringLiteral("2.0"), themeName);
     
     // Update xsettingsd
     mConfigOtherToolKits->setXSettingsConfig();
@@ -158,5 +158,5 @@ void StyleConfig::applyStyle()
 void StyleConfig::showAdvancedOptions(bool on)
 {
     ui->uniformThemeLabel->setVisible(on);
-    mConfigAppearanceSettings->setValue("ControlGTKThemeEnabled", on);
+    mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), on);
 }

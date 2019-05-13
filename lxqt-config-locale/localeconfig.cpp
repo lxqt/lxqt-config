@@ -167,7 +167,7 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     }
 
     QString itemResult;
-    itemResult = QString("%1 - %2 (%3)")
+    itemResult = QStringLiteral("%1 - %2 (%3)")
                         .arg(clabel)
                         .arg(locale.nativeLanguageName())
                         .arg(locale.name());
@@ -186,9 +186,9 @@ void setCombo(QComboBox *combo, const QString &key)
 
 void LocaleConfig::readConfig()
 {
-    mSettings->beginGroup("Formats");
+    mSettings->beginGroup(QStringLiteral("Formats"));
 
-    bool useDetailed = mSettings->value("useDetailed", false).toBool();
+    bool useDetailed = mSettings->value(QStringLiteral("useDetailed"), false).toBool();
     m_ui->checkDetailed->setChecked(useDetailed);
 
     setCombo(m_ui->comboGlobal, mSettings->value(lcLang, qgetenv(lcLang.toLatin1())).toString());
@@ -206,7 +206,7 @@ void LocaleConfig::readConfig()
 
 void LocaleConfig::writeConfig()
 {
-    mSettings->beginGroup("Formats");
+    mSettings->beginGroup(QStringLiteral("Formats"));
 
     // global ends up empty here when OK button is clicked from kcmshell5,
     // apparently the data in the combo is gone by the time save() is called.
@@ -223,7 +223,7 @@ void LocaleConfig::writeConfig()
     if (!m_ui->checkDetailed->isChecked())
     {
         // Global setting, clean up config
-        mSettings->remove("useDetailed");
+        mSettings->remove(QStringLiteral("useDetailed"));
         if (global.isEmpty())
         {
             mSettings->remove(lcLang);
@@ -242,7 +242,7 @@ void LocaleConfig::writeConfig()
     else
     {
         // Save detailed settings
-        mSettings->setValue("useDetailed", true);
+        mSettings->setValue(QStringLiteral("useDetailed"), true);
 
         if (global.isEmpty())
         {
@@ -328,13 +328,13 @@ void LocaleConfig::saveSettings()
 
 void LocaleConfig::writeExports()
 {
-    sSettings->beginGroup("Environment");
-    mSettings->beginGroup("Formats");
+    sSettings->beginGroup(QStringLiteral("Environment"));
+    mSettings->beginGroup(QStringLiteral("Formats"));
     if (!mSettings->value(lcLang).toString().isNull())
     {
         sSettings->setValue(lcLang, mSettings->value(lcLang).toString());
 
-        if (mSettings->value("useDetailed").toBool())
+        if (mSettings->value(QStringLiteral("useDetailed")).toBool())
         {
             if (!mSettings->value(lcNumeric).toString().isNull())
             {

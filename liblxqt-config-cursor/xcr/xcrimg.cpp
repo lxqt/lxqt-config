@@ -162,8 +162,8 @@ void XCursorImage::genXCursorImg (QByteArray &res) const {
 
 ///////////////////////////////////////////////////////////////////////////////
 XCursorImages::XCursorImages (const QString &aName, const QString &aPath) :
-  mName(aName), mPath(aPath), mTitle(""), mAuthor(""), mLicense(""),
-  mEMail(""), mSite(""), mDescr(""), mIM("")
+  mName(aName), mPath(aPath), mTitle(QLatin1String("")), mAuthor(QLatin1String("")), mLicense(QLatin1String("")),
+  mEMail(QLatin1String("")), mSite(QLatin1String("")), mDescr(QLatin1String("")), mIM(QLatin1String(""))
 {
 }
 

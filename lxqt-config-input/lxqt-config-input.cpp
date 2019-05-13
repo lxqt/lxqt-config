@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
 
     dlgOptions.setCommandLine(&parser);
 #ifdef WITH_TOUCHPAD
-    QCommandLineOption loadOption("load-touchpad",
+    QCommandLineOption loadOption(QStringLiteral("load-touchpad"),
             app.tr("Load last touchpad settings."));
     parser.addOption(loadOption);
 #endif
@@ -72,11 +72,11 @@ int main(int argc, char** argv) {
     dlg.enableButton(QDialogButtonBox::Apply, false); // disable Apply button in the beginning
     app.setActivationWindow(&dlg);
 
-    LXQt::Settings qtSettings("lxqt");
+    LXQt::Settings qtSettings(QStringLiteral("lxqt"));
 
     /*** Mouse Config ***/
     MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
-    dlg.addPage(mouseConfig, QObject::tr("Mouse"), "input-mouse");
+    dlg.addPage(mouseConfig, QObject::tr("Mouse"), QStringLiteral("input-mouse"));
     QObject::connect(&dlg, &LXQt::ConfigDialog::reset, mouseConfig, &MouseConfig::reset);
     QObject::connect(mouseConfig, &MouseConfig::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true); // enable Apply button when something is changed
@@ -85,14 +85,14 @@ int main(int argc, char** argv) {
     /*** Cursor Theme ***/
     SelectWnd* cursorConfig = new SelectWnd(&settings, &dlg);
     cursorConfig->setCurrent();
-    dlg.addPage(cursorConfig, QObject::tr("Cursor"), "preferences-desktop-theme");
+    dlg.addPage(cursorConfig, QObject::tr("Cursor"), QStringLiteral("preferences-desktop-theme"));
     QObject::connect(cursorConfig, &SelectWnd::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true);
     });
 
     /*** Keyboard Config ***/
     KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
-    dlg.addPage(keyboardConfig, QObject::tr("Keyboard"), "input-keyboard");
+    dlg.addPage(keyboardConfig, QObject::tr("Keyboard"), QStringLiteral("input-keyboard"));
     QObject::connect(&dlg, &LXQt::ConfigDialog::reset, keyboardConfig, &KeyboardConfig::reset);
     QObject::connect(keyboardConfig, &KeyboardConfig::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true);
@@ -100,7 +100,7 @@ int main(int argc, char** argv) {
 
     /*** Keyboard Layout ***/
     KeyboardLayoutConfig* keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
-    dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), "input-keyboard");
+    dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), QStringLiteral("input-keyboard"));
     QObject::connect(&dlg, &LXQt::ConfigDialog::reset, keyboardLayoutConfig, &KeyboardLayoutConfig::reset);
     QObject::connect(keyboardLayoutConfig, &KeyboardLayoutConfig::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true);
@@ -109,7 +109,7 @@ int main(int argc, char** argv) {
 #ifdef WITH_TOUCHPAD
     /*** Touchpad Config ***/
     TouchpadConfig* touchpadConfig = new TouchpadConfig(&settings, &dlg);
-    dlg.addPage(touchpadConfig, QObject::tr("Mouse and Touchpad"), "input-tablet");
+    dlg.addPage(touchpadConfig, QObject::tr("Mouse and Touchpad"), QStringLiteral("input-tablet"));
     QObject::connect(&dlg, &LXQt::ConfigDialog::reset, touchpadConfig, &TouchpadConfig::reset);
     QObject::connect(touchpadConfig, &TouchpadConfig::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true);
@@ -134,7 +134,7 @@ int main(int argc, char** argv) {
             dlg.enableButton(QDialogButtonBox::Apply, false); // disable Apply button on resetting too
     });
 
-    dlg.setWindowIcon(QIcon::fromTheme("input-keyboard"));
+    dlg.setWindowIcon(QIcon::fromTheme(QStringLiteral("input-keyboard")));
 
     const QString initialPage = dlgOptions.page();
     if (!initialPage.isEmpty())

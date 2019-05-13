@@ -158,12 +158,12 @@ bool XCursorThemeModel::isCursorTheme(const QString &theme, const int depth)
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme)) continue;
         // If there's a cursors subdir, we'll assume this is a cursor theme
-        if (dir.exists("cursors")) return true;
+        if (dir.exists(QStringLiteral("cursors"))) return true;
         // If the theme doesn't have an index.theme file, it can't inherit any themes
-        if (!dir.exists("index.theme")) continue;
+        if (!dir.exists(QStringLiteral("index.theme"))) continue;
         // Open the index.theme file, so we can get the list of inherited themes
         QMultiMap<QString, QString> cfg = loadCfgFile(dir.path()+"/index.theme", true);
-        QStringList inherits = cfg.values("icon theme/inherits");
+        QStringList inherits = cfg.values(QStringLiteral("icon theme/inherits"));
         // Recurse through the list of inherited themes, to check if one of them is a cursor theme
         // note that items are reversed
         for (int f = inherits.size()-1; f >= 0; --f)
@@ -188,11 +188,11 @@ bool XCursorThemeModel::handleDefault(const QDir &themeDir)
         return true;
     }
     // If there's no cursors subdir, or if it's empty
-    if (!themeDir.exists("cursors") ||
+    if (!themeDir.exists(QStringLiteral("cursors")) ||
         QDir(themeDir.path() + "/cursors").entryList(QDir::Files |
         QDir::NoDotAndDotDot).isEmpty())
     {
-        if (themeDir.exists("index.theme"))
+        if (themeDir.exists(QStringLiteral("index.theme")))
         {
             XCursorThemeData theme(themeDir);
             if (!theme.inherits().isEmpty()) mDefaultName = theme.inherits().at(0);
@@ -209,16 +209,16 @@ void XCursorThemeModel::processThemeDir(const QDir &themeDir)
 #ifdef DUMP_FOUND_THEMES
     qDebug() << "looking at:" << themeDir.path();
 #endif
-    bool haveCursors = themeDir.exists("cursors");
+    bool haveCursors = themeDir.exists(QStringLiteral("cursors"));
     // Special case handling of "default", since it's usually either a
     // symlink to another theme, or an empty theme that inherits another theme
-    if (mDefaultName.isNull() && themeDir.dirName() == "default")
+    if (mDefaultName.isNull() && themeDir.dirName() == QLatin1String("default"))
     {
         if (handleDefault(themeDir)) return;
     }
     // If the directory doesn't have a cursors subdir and lacks an
     // index.theme file it can't be a cursor theme.
-    if (!themeDir.exists("index.theme") && !haveCursors)
+    if (!themeDir.exists(QStringLiteral("index.theme")) && !haveCursors)
     {
         //qDebug() << "IS NOT THEME" << themeDir;
         return;

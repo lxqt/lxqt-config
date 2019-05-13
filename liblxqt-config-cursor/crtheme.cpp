@@ -42,28 +42,28 @@ XCursorThemeData::XCursorThemeData(const QDir &aDir)
     // parse configs, etc
     mPath = aDir.path();
     setName(aDir.dirName());
-    if (aDir.exists("index.theme")) parseIndexFile();
-    if (mDescription.isEmpty()) mDescription = "no description";
+    if (aDir.exists(QStringLiteral("index.theme"))) parseIndexFile();
+    if (mDescription.isEmpty()) mDescription = QLatin1String("no description");
     if (mTitle.isEmpty()) mTitle = mName;
 }
 
 void XCursorThemeData::parseIndexFile()
 {
     QMultiMap<QString, QString> cfg = loadCfgFile(mPath+"/index.theme", true);
-    if (cfg.contains("icon theme/name")) mTitle = cfg.values("icon theme/name").at(0).trimmed();
-    if (cfg.contains("icon theme/comment")) mDescription = cfg.values("icon theme/comment").at(0).trimmed();
-    if (cfg.contains("icon theme/example")) mSample = cfg.values("icon theme/example").at(0).trimmed();
-    if (cfg.contains("icon theme/hidden"))
+    if (cfg.contains(QStringLiteral("icon theme/name"))) mTitle = cfg.values(QStringLiteral("icon theme/name")).at(0).trimmed();
+    if (cfg.contains(QStringLiteral("icon theme/comment"))) mDescription = cfg.values(QStringLiteral("icon theme/comment")).at(0).trimmed();
+    if (cfg.contains(QStringLiteral("icon theme/example"))) mSample = cfg.values(QStringLiteral("icon theme/example")).at(0).trimmed();
+    if (cfg.contains(QStringLiteral("icon theme/hidden")))
     {
-        QString hiddenValue = cfg.values("icon theme/hidden").at(0).toLower();
-        mHidden = hiddenValue=="false" ? false : true;
+        QString hiddenValue = cfg.values(QStringLiteral("icon theme/hidden")).at(0).toLower();
+        mHidden = hiddenValue==QLatin1String("false") ? false : true;
     }
-    if (cfg.contains("icon theme/inherits"))
+    if (cfg.contains(QStringLiteral("icon theme/inherits")))
     {
-        QStringList i = cfg.values("icon theme/inherits"), res;
+        QStringList i = cfg.values(QStringLiteral("icon theme/inherits")), res;
         for (int f = i.size()-1; f >= 0; f--) res << i.at(f).trimmed();
     }
-    if (mDescription.startsWith("- Converted by")) mDescription.remove(0, 2);
+    if (mDescription.startsWith(QLatin1String("- Converted by"))) mDescription.remove(0, 2);
 }
 
 QString XCursorThemeData::findAlternative(const QString &name) const
@@ -76,27 +76,27 @@ QString XCursorThemeData::findAlternative(const QString &name) const
         // If Xcursor fails to load the cursor, Qt creates it with the correct name using the
         // core protcol instead (which in turn calls Xcursor). We emulate that process here.
         // Note that there's a core cursor called cross, but it's not the one Qt expects.
-        alternatives.insert("cross",         "crosshair");
-        alternatives.insert("up_arrow",      "center_ptr");
-        alternatives.insert("wait",          "watch");
-        alternatives.insert("ibeam",         "xterm");
-        alternatives.insert("size_all",      "fleur");
-        alternatives.insert("pointing_hand", "hand2");
+        alternatives.insert(QStringLiteral("cross"),         QStringLiteral("crosshair"));
+        alternatives.insert(QStringLiteral("up_arrow"),      QStringLiteral("center_ptr"));
+        alternatives.insert(QStringLiteral("wait"),          QStringLiteral("watch"));
+        alternatives.insert(QStringLiteral("ibeam"),         QStringLiteral("xterm"));
+        alternatives.insert(QStringLiteral("size_all"),      QStringLiteral("fleur"));
+        alternatives.insert(QStringLiteral("pointing_hand"), QStringLiteral("hand2"));
 
         // Precomputed MD5 hashes for the hardcoded bitmap cursors in Qt and KDE.
         // Note that the MD5 hash for left_ptr_watch is for the KDE version of that cursor.
-        alternatives.insert("size_ver",       "00008160000006810000408080010102");
-        alternatives.insert("size_hor",       "028006030e0e7ebffc7f7070c0600140");
-        alternatives.insert("size_bdiag",     "c7088f0f3e6c8088236ef8e1e3e70000");
-        alternatives.insert("size_fdiag",     "fcf1c3c7cd4491d801f1e1c78f100000");
-        alternatives.insert("whats_this",     "d9ce0ab605698f320427677b458ad60b");
-        alternatives.insert("split_h",        "14fef782d02440884392942c11205230");
-        alternatives.insert("split_v",        "2870a09082c103050810ffdffffe0204");
-        alternatives.insert("forbidden",      "03b6e0fcb3499374a867c041f52298f0");
-        alternatives.insert("left_ptr_watch", "3ecb610c1bf2410f44200f48c40d3599");
-        alternatives.insert("hand2",          "e29285e634086352946a0e7090d73106");
-        alternatives.insert("openhand",       "9141b49c8149039304290b508d208c40");
-        alternatives.insert("closedhand",     "05e88622050804100c20044008402080");
+        alternatives.insert(QStringLiteral("size_ver"),       QStringLiteral("00008160000006810000408080010102"));
+        alternatives.insert(QStringLiteral("size_hor"),       QStringLiteral("028006030e0e7ebffc7f7070c0600140"));
+        alternatives.insert(QStringLiteral("size_bdiag"),     QStringLiteral("c7088f0f3e6c8088236ef8e1e3e70000"));
+        alternatives.insert(QStringLiteral("size_fdiag"),     QStringLiteral("fcf1c3c7cd4491d801f1e1c78f100000"));
+        alternatives.insert(QStringLiteral("whats_this"),     QStringLiteral("d9ce0ab605698f320427677b458ad60b"));
+        alternatives.insert(QStringLiteral("split_h"),        QStringLiteral("14fef782d02440884392942c11205230"));
+        alternatives.insert(QStringLiteral("split_v"),        QStringLiteral("2870a09082c103050810ffdffffe0204"));
+        alternatives.insert(QStringLiteral("forbidden"),      QStringLiteral("03b6e0fcb3499374a867c041f52298f0"));
+        alternatives.insert(QStringLiteral("left_ptr_watch"), QStringLiteral("3ecb610c1bf2410f44200f48c40d3599"));
+        alternatives.insert(QStringLiteral("hand2"),          QStringLiteral("e29285e634086352946a0e7090d73106"));
+        alternatives.insert(QStringLiteral("openhand"),       QStringLiteral("9141b49c8149039304290b508d208c40"));
+        alternatives.insert(QStringLiteral("closedhand"),     QStringLiteral("05e88622050804100c20044008402080"));
     }
 
     return alternatives.value(name, QString());
@@ -148,7 +148,7 @@ QPixmap XCursorThemeData::createIcon() const
 
     QPixmap pixmap;
     QImage image = loadImage(sample(), cursorSize);
-    if (image.isNull() && sample() != "left_ptr") image = loadImage("left_ptr", cursorSize);
+    if (image.isNull() && sample() != QLatin1String("left_ptr")) image = loadImage(QStringLiteral("left_ptr"), cursorSize);
     if (!image.isNull())
     {
         // Scale the image if it's larger than the preferred icon size
@@ -245,20 +245,20 @@ bool applyTheme(const XCursorThemeData &theme)
     // Reload the standard cursors
     QStringList names;
     // Qt cursors
-    names << "left_ptr"       << "up_arrow"      << "cross"      << "wait"
-          << "left_ptr_watch" << "ibeam"         << "size_ver"   << "size_hor"
-          << "size_bdiag"     << "size_fdiag"    << "size_all"   << "split_v"
-          << "split_h"        << "pointing_hand" << "openhand"
-          << "closedhand"     << "forbidden"     << "whats_this";
+    names << QStringLiteral("left_ptr")       << QStringLiteral("up_arrow")      << QStringLiteral("cross")      << QStringLiteral("wait")
+          << QStringLiteral("left_ptr_watch") << QStringLiteral("ibeam")         << QStringLiteral("size_ver")   << QStringLiteral("size_hor")
+          << QStringLiteral("size_bdiag")     << QStringLiteral("size_fdiag")    << QStringLiteral("size_all")   << QStringLiteral("split_v")
+          << QStringLiteral("split_h")        << QStringLiteral("pointing_hand") << QStringLiteral("openhand")
+          << QStringLiteral("closedhand")     << QStringLiteral("forbidden")     << QStringLiteral("whats_this");
     // X core cursors
-    names << "X_cursor"            << "right_ptr"           << "hand1"
-          << "hand2"               << "watch"               << "xterm"
-          << "crosshair"           << "left_ptr_watch"      << "center_ptr"
-          << "sb_h_double_arrow"   << "sb_v_double_arrow"   << "fleur"
-          << "top_left_corner"     << "top_side"            << "top_right_corner"
-          << "right_side"          << "bottom_right_corner" << "bottom_side"
-          << "bottom_left_corner"  << "left_side"           << "question_arrow"
-          << "pirate";
+    names << QStringLiteral("X_cursor")            << QStringLiteral("right_ptr")           << QStringLiteral("hand1")
+          << QStringLiteral("hand2")               << QStringLiteral("watch")               << QStringLiteral("xterm")
+          << QStringLiteral("crosshair")           << QStringLiteral("left_ptr_watch")      << QStringLiteral("center_ptr")
+          << QStringLiteral("sb_h_double_arrow")   << QStringLiteral("sb_v_double_arrow")   << QStringLiteral("fleur")
+          << QStringLiteral("top_left_corner")     << QStringLiteral("top_side")            << QStringLiteral("top_right_corner")
+          << QStringLiteral("right_side")          << QStringLiteral("bottom_right_corner") << QStringLiteral("bottom_side")
+          << QStringLiteral("bottom_left_corner")  << QStringLiteral("left_side")           << QStringLiteral("question_arrow")
+          << QStringLiteral("pirate");
 
     //QX11Info x11Info;
     for (const QString &name : qAsConst(names))

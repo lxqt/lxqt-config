@@ -121,10 +121,10 @@ void TouchpadConfig::accept()
         device.saveSettings(settings);
     }
 
-    LXQt::AutostartEntry autoStart("lxqt-config-touchpad-autostart.desktop");
-    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, "lxqt-config-touchpad-autostart", "lxqt-config-input --load-touchpad");
-    desktopFile.setValue("OnlyShowIn", "LXQt");
-    desktopFile.setValue("Comment", "Autostart touchpad settings for lxqt-config-input");
+    LXQt::AutostartEntry autoStart(QStringLiteral("lxqt-config-touchpad-autostart.desktop"));
+    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, QStringLiteral("lxqt-config-touchpad-autostart"), QStringLiteral("lxqt-config-input --load-touchpad"));
+    desktopFile.setValue(QStringLiteral("OnlyShowIn"), "LXQt");
+    desktopFile.setValue(QStringLiteral("Comment"), "Autostart touchpad settings for lxqt-config-input");
     autoStart.setFile(desktopFile);
     autoStart.commit();
 }

@@ -44,7 +44,7 @@ FontConfigFile::FontConfigFile(QObject* parent):
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     if(mDirPath.isEmpty())
         mDirPath = homeDir % "/.config";
-    mDirPath += "/fontconfig";
+    mDirPath += QLatin1String("/fontconfig");
     mFilePath = mDirPath + "/fonts.conf";
 
     load();
@@ -110,39 +110,39 @@ void FontConfigFile::load()
             doc.setContent(&file);
             file.close();
             QDomElement docElem = doc.documentElement();
-            QDomNodeList editNodes = docElem.elementsByTagName("edit");
+            QDomNodeList editNodes = docElem.elementsByTagName(QStringLiteral("edit"));
             for(int i = 0; i < editNodes.count(); ++i)
             {
                 QDomElement editElem = editNodes.at(i).toElement();
-                QByteArray name = editElem.attribute("name").toLatin1();
+                QByteArray name = editElem.attribute(QStringLiteral("name")).toLatin1();
                 if(name == "antialias")
                 {
-                    QString value = editElem.firstChildElement("bool").text();
+                    QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
                     mAntialias = value[0] == 't' ? true : false;
                 }
                 else if(name == "rgba")
                 {
-                    QString value = editElem.firstChildElement("const").text();
+                    QString value = editElem.firstChildElement(QStringLiteral("const")).text();
                     mSubpixel = value.toLatin1();
                 }
                 else if(name == "hinting")
                 {
-                    QString value = editElem.firstChildElement("bool").text();
+                    QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
                     mHinting = value[0] == 't' ? true : false;
                 }
                 else if(name == "hintstyle")
                 {
-                    QString value = editElem.firstChildElement("const").text();
+                    QString value = editElem.firstChildElement(QStringLiteral("const")).text();
                     mHintStyle = value.toLatin1();
                 }
                 else if(name == "dpi")
                 {
-                    QString value = editElem.firstChildElement("double").text();
+                    QString value = editElem.firstChildElement(QStringLiteral("double")).text();
                     mDpi = value.toInt();
                 }
                 else if(name == "autohint")
                 {
-                    QString value = editElem.firstChildElement("bool").text();
+                    QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
                     mAutohint = value[0] == 't' ? true : false;
                 }
             }

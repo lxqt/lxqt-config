@@ -29,7 +29,7 @@
 QString modeToString(KScreen::ModePtr mode)
 {
     // mode->name() can be anything, not just widthxheight. eg if added with cvt.
-    return QString("%1x%2").arg(mode->size().width()).arg(mode->size().height());
+    return QStringLiteral("%1x%2").arg(mode->size().width()).arg(mode->size().height());
 }
 
 KScreen::OutputPtr getOutputById(int id, KScreen::OutputList outputs)
