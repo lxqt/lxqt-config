@@ -134,11 +134,11 @@ void KeyboardConfig::applyConfig()
 }
 
 void KeyboardConfig::loadSettings() {
-  settings->beginGroup("Keyboard");
-  oldDelay = delay = settings->value("delay", 500).toInt();
-  oldInterval = interval = settings->value("interval", 30).toInt();
-  oldBeep = beep = settings->value("beep", true).toBool();
-  oldNumlock = numlock = settings->value("numlock", false).toBool();
+  settings->beginGroup(QStringLiteral("Keyboard"));
+  oldDelay = delay = settings->value(QStringLiteral("delay"), 500).toInt();
+  oldInterval = interval = settings->value(QStringLiteral("interval"), 30).toInt();
+  oldBeep = beep = settings->value(QStringLiteral("beep"), true).toBool();
+  oldNumlock = numlock = settings->value(QStringLiteral("numlock"), false).toBool();
   settings->endGroup();
 
   qtSettings->beginGroup(QLatin1String("Qt"));
@@ -147,11 +147,11 @@ void KeyboardConfig::loadSettings() {
 }
 
 void KeyboardConfig::accept() {
-  settings->beginGroup("Keyboard");
-  settings->setValue("delay", delay);
-  settings->setValue("interval", interval);
-  settings->setValue("beep", beep);
-  settings->setValue("numlock", numlock);
+  settings->beginGroup(QStringLiteral("Keyboard"));
+  settings->setValue(QStringLiteral("delay"), delay);
+  settings->setValue(QStringLiteral("interval"), interval);
+  settings->setValue(QStringLiteral("beep"), beep);
+  settings->setValue(QStringLiteral("numlock"), numlock);
   settings->endGroup();
 
   qtSettings->beginGroup(QLatin1String("Qt"));

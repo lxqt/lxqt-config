@@ -55,29 +55,29 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
         MonitorSettings setting = o.monitors[i];
         if(! setting.connected )
             continue;
-        text += QString("<b>%1:</b><br/>").arg(setting.name);
-        text += QString("&nbsp;Mode: %1x%2<br/>").arg(setting.currentModeWidth).arg(setting.currentModeHeight);
-        text += QString("&nbsp;Rate: %1 Hz<br/>").arg(setting.currentModeRate);
+        text += QStringLiteral("<b>%1:</b><br/>").arg(setting.name);
+        text += QStringLiteral("&nbsp;Mode: %1x%2<br/>").arg(setting.currentModeWidth).arg(setting.currentModeHeight);
+        text += QStringLiteral("&nbsp;Rate: %1 Hz<br/>").arg(setting.currentModeRate);
         switch(setting.rotation)
         {
             case KScreen::Output::Rotation::None:
-                text += QString("&nbsp;Rotation: %1<br/>").arg(tr("None"));
+                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("None"));
                 break;
             case KScreen::Output::Rotation::Left:
-                text += QString("&nbsp;Rotation: %1<br/>").arg(tr("Left"));
+                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Left"));
                 break;
             case KScreen::Output::Rotation::Inverted:
-                text += QString("&nbsp;Rotation: %1<br/>").arg(tr("Inverted"));
+                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Inverted"));
                 break;
             case KScreen::Output::Rotation::Right:
-                text += QString("&nbsp;Rotation: %1<br/>").arg(tr("Right"));
+                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Right"));
                 break;
         }
-        text += QString("&nbsp;Position: %1x%2<br/>").arg(setting.xPos).arg(setting.yPos);
-        text += QString("&nbsp;Primary: %1<br/>").arg(setting.primary?tr("True"):tr("False"));
-        text += QString("&nbsp;Enabled: %1<br/>").arg(setting.enabled?tr("True"):tr("False"));
+        text += QStringLiteral("&nbsp;Position: %1x%2<br/>").arg(setting.xPos).arg(setting.yPos);
+        text += QStringLiteral("&nbsp;Primary: %1<br/>").arg(setting.primary?tr("True"):tr("False"));
+        text += QStringLiteral("&nbsp;Enabled: %1<br/>").arg(setting.enabled?tr("True"):tr("False"));
     }
-    text += "<br/>";
+    text += QLatin1String("<br/>");
     ui.selectedSettingsTextEdit->setText(text);
     ui.applyPushButton->setEnabled(isHardwareCompatible(o));
 }
@@ -113,9 +113,9 @@ void ManageSavedSettings::onDeleteItem()
         return;
     MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
 
-    LXQt::Settings settings("lxqt-config-monitor");
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     QList<MonitorSavedSettings> monitors;
-    settings.beginGroup("SavedConfigs");
+    settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);
     for (int i = 0; i < monitors.size(); i++) {
         MonitorSavedSettings o = monitors[i];
@@ -143,9 +143,9 @@ void ManageSavedSettings::onRenameItem()
     if (!ok || configName.isEmpty())
         return;
 
-    LXQt::Settings settings("lxqt-config-monitor");
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     QList<MonitorSavedSettings> monitors;
-    settings.beginGroup("SavedConfigs");
+    settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);
     for (int i = 0; i < monitors.size(); i++) {
         MonitorSavedSettings o = monitors[i];
@@ -177,9 +177,9 @@ void ManageSavedSettings::loadSettings()
 {
     ui.allConfigs->clear();
     //ui.hardwareCompatibleConfigs->clear();
-    LXQt::Settings settings("lxqt-config-monitor");
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     QList<MonitorSavedSettings> monitors;
-    settings.beginGroup("SavedConfigs");
+    settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
     for(const MonitorSavedSettings& o : qAsConst(monitors)) {

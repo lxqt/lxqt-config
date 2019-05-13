@@ -36,7 +36,7 @@ MimeTypeData::MimeTypeData()
 MimeTypeData::MimeTypeData(const XdgMimeType& mime)
 {
     mName = mime.name();
-    mPatterns = mime.globPatterns().join(" ");
+    mPatterns = mime.globPatterns().join(QStringLiteral(" "));
     mComment = mime.comment();
 }
 

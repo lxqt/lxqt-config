@@ -53,14 +53,14 @@ int main(int argc, char **argv)
 
     LXQtConfig::MainWindow w;
     app.setActivationWindow(&w);
-    QSize s = QSettings{}.value("size").toSize();
+    QSize s = QSettings{}.value(QStringLiteral("size")).toSize();
     if (!s.isEmpty())
         w.resize(s);
     w.show();
 
     int ret = app.exec();
 
-    QSettings{}.setValue("size", w.size());
+    QSettings{}.setValue(QStringLiteral("size"), w.size());
 
     return ret;
 }

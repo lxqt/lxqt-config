@@ -31,7 +31,7 @@ static bool loadSettingsOk(int argc, char** argv)
 {
     for(int i=0; i<argc; i++)
     {
-        if(QString(argv[i]) == "-l")
+        if(QString(argv[i]) == QLatin1String("-l"))
             return true;
     }
     return false;
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
                                            "\nliblxqt   " LXQT_VERSION
                                            "\nQt        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
-    QCommandLineOption loadOption(QStringList() << "l" << "loadlast",
+    QCommandLineOption loadOption(QStringList() << QStringLiteral("l") << QStringLiteral("loadlast"),
             app.tr("Load last settings."));
     parser.addOption(loadOption);
     QCommandLineOption helpOption = parser.addHelpOption();
@@ -70,7 +70,7 @@ int main(int argc, char** argv)
 
     MonitorSettingsDialog dlg;
     app.setActivationWindow(&dlg);
-    dlg.setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
+    dlg.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-display")));
     dlg.show();
 
     int ok = app.exec();

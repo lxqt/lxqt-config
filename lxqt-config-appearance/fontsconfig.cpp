@@ -79,7 +79,7 @@ void FontsConfig::initControls()
     // read Qt style settings from Qt Trolltech.conf config
     mQtSettings->beginGroup(QLatin1String("Qt"));
 
-    QString fontName = mQtSettings->value("font").toString();
+    QString fontName = mQtSettings->value(QStringLiteral("font")).toString();
     QFont font;
     font.fromString(fontName);
     ui->fontName->setCurrentFont(font);
@@ -181,7 +181,7 @@ void FontsConfig::updateQtFont()
     const QString fontStr = font.toString();
     if(mQtSettings->value(QLatin1String("Qt/font")).toString() != fontStr) {
         mQtSettings->beginGroup(QLatin1String("Qt"));
-        mQtSettings->setValue("font", fontStr);
+        mQtSettings->setValue(QStringLiteral("font"), fontStr);
         mQtSettings->endGroup();
         mQtSettings->sync();
 

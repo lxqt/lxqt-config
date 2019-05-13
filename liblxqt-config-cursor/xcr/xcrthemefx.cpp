@@ -65,7 +65,7 @@ bool XCursorThemeFX::str2num (const QString &s, quint32 &res) {
 
 QList<XCursorThemeFX::tAnimSeq> XCursorThemeFX::parseScript (const QString &script, quint32 maxFrame) {
   QList<tAnimSeq> res;
-  QString scp = script; scp.replace("\r", "\n");
+  QString scp = script; scp.replace(QLatin1String("\r"), QLatin1String("\n"));
   const QStringList scpL = scp.split('\n', QString::SkipEmptyParts);
   for (const QString &ss : scpL) {
     const QString s = ss.simplified();
@@ -374,7 +374,7 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
         // copy frame
         QImage frame(img.copy(fNo*frameWdt, 0, frameWdt, img.height()));
         //frame.save(QString("_png/%1_%2.png").arg(cim->name()).arg(QString::number(f)));
-        XCursorImage *i = new XCursorImage(QString("%1%2").arg(cim->name()).arg(QString::number(fCnt)),
+        XCursorImage *i = new XCursorImage(QStringLiteral("%1%2").arg(cim->name()).arg(QString::number(fCnt)),
           frame, imgXHot, imgYHot, a.delay, 1
         );
         cim->append(i);

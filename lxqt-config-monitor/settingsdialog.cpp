@@ -24,11 +24,11 @@ SettingsDialog::SettingsDialog(const QString &title, LXQt::Settings *settings, K
     : LXQt::ConfigDialog(title, settings, parent)
 {
     setButtons(QDialogButtonBox::QDialogButtonBox::Apply | QDialogButtonBox::Close);
-    setWindowIcon(QIcon::fromTheme("preferences-desktop-display"));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-display")));
 
     //DaemonSettings *daemon = new DaemonSettings(settings, this);
     //addPage(daemon, QObject::tr("Daemon"), "system-run");
     
     ManageSavedSettings * savedSettings = new ManageSavedSettings(settings, config, this);
-    addPage(savedSettings, QObject::tr("Manage Saved Settings"), "system-run");
+    addPage(savedSettings, QObject::tr("Manage Saved Settings"), QStringLiteral("system-run"));
 }

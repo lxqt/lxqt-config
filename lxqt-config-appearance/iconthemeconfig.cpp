@@ -127,7 +127,7 @@ void IconThemeConfig::initControls()
         ++it;
     }
 
-    iconFollowColorSchemeCB->setChecked(m_settings->value("icon_follow_color_scheme", true).toBool());
+    iconFollowColorSchemeCB->setChecked(m_settings->value(QStringLiteral("icon_follow_color_scheme"), true).toBool());
 
     update();
 }
@@ -140,16 +140,16 @@ IconThemeConfig::~IconThemeConfig()
 
 void IconThemeConfig::applyIconTheme()
 {
-    if(m_settings->value("icon_follow_color_scheme").toBool() != iconFollowColorSchemeCB->isChecked())
-        m_settings->setValue("icon_follow_color_scheme", iconFollowColorSchemeCB->isChecked());
+    if(m_settings->value(QStringLiteral("icon_follow_color_scheme")).toBool() != iconFollowColorSchemeCB->isChecked())
+        m_settings->setValue(QStringLiteral("icon_follow_color_scheme"), iconFollowColorSchemeCB->isChecked());
 
     if(QTreeWidgetItem *item = iconThemeList->currentItem()) {
         const QString theme = item->data(0, Qt::UserRole).toString();
-        if (!theme.isEmpty() && m_settings->value("icon_theme").toString() != theme) {
+        if (!theme.isEmpty() && m_settings->value(QStringLiteral("icon_theme")).toString() != theme) {
             // Ensure that this widget also updates it's own icons
             QIcon::setThemeName(theme);
 
-            m_settings->setValue("icon_theme",  theme);
+            m_settings->setValue(QStringLiteral("icon_theme"),  theme);
             m_settings->sync();
 
             emit updateOtherSettings();

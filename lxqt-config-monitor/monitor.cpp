@@ -30,8 +30,8 @@ bool MonitorSavedSettings::operator==(const MonitorSavedSettings &obj) const
 
 void saveMonitorSettings(QSettings & settings, const QList<MonitorSettings> monitors)
 {
-    settings.remove("settings");
-    settings.beginWriteArray("settings");
+    settings.remove(QStringLiteral("settings"));
+    settings.beginWriteArray(QStringLiteral("settings"));
     int i = 0;
     for(const MonitorSettings& monitor : monitors)
     {
@@ -43,26 +43,26 @@ void saveMonitorSettings(QSettings & settings, const QList<MonitorSettings> moni
 
 void saveMonitorSettings(QSettings &settings, const MonitorSettings &monitor)
 {
-    settings.setValue("name", monitor.name);
-    settings.setValue("hash", monitor.hash);
-    settings.setValue("connected", monitor.connected);
+    settings.setValue(QStringLiteral("name"), monitor.name);
+    settings.setValue(QStringLiteral("hash"), monitor.hash);
+    settings.setValue(QStringLiteral("connected"), monitor.connected);
     if(monitor.connected)
     {
-        settings.setValue("enabled", monitor.enabled);
-        settings.setValue("primary", monitor.primary);
-        settings.setValue("xPos", monitor.xPos);
-        settings.setValue("yPos", monitor.yPos);
-        settings.setValue("currentMode", monitor.currentMode);
-        settings.setValue("currentModeWidth", monitor.currentModeWidth);
-        settings.setValue("currentModeHeight", monitor.currentModeHeight);
-        settings.setValue("currentModeRate", monitor.currentModeRate);
-        settings.setValue("rotation", monitor.rotation);
+        settings.setValue(QStringLiteral("enabled"), monitor.enabled);
+        settings.setValue(QStringLiteral("primary"), monitor.primary);
+        settings.setValue(QStringLiteral("xPos"), monitor.xPos);
+        settings.setValue(QStringLiteral("yPos"), monitor.yPos);
+        settings.setValue(QStringLiteral("currentMode"), monitor.currentMode);
+        settings.setValue(QStringLiteral("currentModeWidth"), monitor.currentModeWidth);
+        settings.setValue(QStringLiteral("currentModeHeight"), monitor.currentModeHeight);
+        settings.setValue(QStringLiteral("currentModeRate"), monitor.currentModeRate);
+        settings.setValue(QStringLiteral("rotation"), monitor.rotation);
     }
 }
 
 void loadMonitorSettings(QSettings & settings, QList<MonitorSettings> &monitors)
 {
-    int size = settings.beginReadArray("settings");
+    int size = settings.beginReadArray(QStringLiteral("settings"));
     for(int i=0; i<size; i++)
     {
         settings.setArrayIndex(i);
@@ -75,27 +75,27 @@ void loadMonitorSettings(QSettings & settings, QList<MonitorSettings> &monitors)
 
 void loadMonitorSettings(QSettings &settings, MonitorSettings &monitor)
 {
-    monitor.name = settings.value("name").toString();
-    monitor.hash = settings.value("hash").toString();
-    monitor.connected = settings.value("connected").toBool();
+    monitor.name = settings.value(QStringLiteral("name")).toString();
+    monitor.hash = settings.value(QStringLiteral("hash")).toString();
+    monitor.connected = settings.value(QStringLiteral("connected")).toBool();
     if(monitor.connected)
     {
-        monitor.enabled = settings.value("enabled").toBool();
-        monitor.primary = settings.value("primary").toBool();
-        monitor.xPos = settings.value("xPos").toInt();
-        monitor.yPos = settings.value("yPos").toInt();
-        monitor.currentMode = settings.value("currentMode").toString();
-        monitor.currentModeWidth = settings.value("currentModeWidth").toInt();
-        monitor.currentModeHeight = settings.value("currentModeHeight").toInt();
-        monitor.currentModeRate = settings.value("currentModeRate").toFloat();
-        monitor.rotation = settings.value("rotation").toInt();
+        monitor.enabled = settings.value(QStringLiteral("enabled")).toBool();
+        monitor.primary = settings.value(QStringLiteral("primary")).toBool();
+        monitor.xPos = settings.value(QStringLiteral("xPos")).toInt();
+        monitor.yPos = settings.value(QStringLiteral("yPos")).toInt();
+        monitor.currentMode = settings.value(QStringLiteral("currentMode")).toString();
+        monitor.currentModeWidth = settings.value(QStringLiteral("currentModeWidth")).toInt();
+        monitor.currentModeHeight = settings.value(QStringLiteral("currentModeHeight")).toInt();
+        monitor.currentModeRate = settings.value(QStringLiteral("currentModeRate")).toFloat();
+        monitor.rotation = settings.value(QStringLiteral("rotation")).toInt();
     }
 }
 
 void saveMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> monitors)
 {
-    settings.remove("SavedSettings");
-    settings.beginWriteArray("SavedSettings");
+    settings.remove(QStringLiteral("SavedSettings"));
+    settings.beginWriteArray(QStringLiteral("SavedSettings"));
     int i = 0;
     for(MonitorSavedSettings& monitor : monitors)
     {
@@ -107,14 +107,14 @@ void saveMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> monit
 
 void saveMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor)
 {
-    settings.setValue("name", monitor.name);
-    settings.setValue("date", monitor.date);
+    settings.setValue(QStringLiteral("name"), monitor.name);
+    settings.setValue(QStringLiteral("date"), monitor.date);
     saveMonitorSettings(settings, monitor.monitors);
 }
 
 void loadMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> &monitors)
 {
-    int size = settings.beginReadArray("SavedSettings");
+    int size = settings.beginReadArray(QStringLiteral("SavedSettings"));
     for(int i=0; i<size; i++)
     {
         settings.setArrayIndex(i);
@@ -127,7 +127,7 @@ void loadMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> &moni
 
 void loadMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor)
 {
-    monitor.name = settings.value("name").toString();
-    monitor.date = settings.value("date").toString();
+    monitor.name = settings.value(QStringLiteral("name")).toString();
+    monitor.date = settings.value(QStringLiteral("date")).toString();
     loadMonitorSettings(settings, monitor.monitors);
 }

@@ -34,13 +34,13 @@ int main(int argn, char* argv[])
                                            "\nliblxqt   " LXQT_VERSION
                                            "\nQt        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
-    QCommandLineOption increaseOption(QStringList() << "i" << "increase",
+    QCommandLineOption increaseOption(QStringList() << QStringLiteral("i") << QStringLiteral("increase"),
             app.tr("Increase brightness."));
-    QCommandLineOption decreaseOption(QStringList() << "d" << "decrease",
+    QCommandLineOption decreaseOption(QStringList() << QStringLiteral("d") << QStringLiteral("decrease"),
             app.tr("Decrease brightness."));
-    QCommandLineOption setOption(QStringList() << "s" << "set",
-            app.tr("Set brightness from 1 to 100."), "brightness");
-    QCommandLineOption resetGammaOption(QStringList() << "r" << "reset",
+    QCommandLineOption setOption(QStringList() << QStringLiteral("s") << QStringLiteral("set"),
+            app.tr("Set brightness from 1 to 100."), QStringLiteral("brightness"));
+    QCommandLineOption resetGammaOption(QStringList() << QStringLiteral("r") << QStringLiteral("reset"),
             app.tr("Reset gamma to default value."));
     QCommandLineOption helpOption = parser.addHelpOption();
     parser.addOption(increaseOption);

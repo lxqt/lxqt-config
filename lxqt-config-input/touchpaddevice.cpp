@@ -253,7 +253,7 @@ QString TouchpadDevice::escapedName() const
 void TouchpadDevice::loadSettings(LXQt::Settings* settings)
 {
     QList<TouchpadDevice> devices = enumerate_from_udev();
-    settings->beginGroup("Touchpad");
+    settings->beginGroup(QStringLiteral("Touchpad"));
     for (const TouchpadDevice& device : devices) {
         qDebug() << "Load settings for" << device.name();
 
@@ -281,7 +281,7 @@ void TouchpadDevice::loadSettings(LXQt::Settings* settings)
 
 void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
 {
-    settings->beginGroup("Touchpad");
+    settings->beginGroup(QStringLiteral("Touchpad"));
 
     settings->beginGroup(escapedName());
     settings->setValue(TAPPING_ENABLED, tappingEnabled());

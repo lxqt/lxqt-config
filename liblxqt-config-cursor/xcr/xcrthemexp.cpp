@@ -144,29 +144,29 @@ static bool readNextSection (QTextStream &stream, CursorInfo &info) {
     quint32 num = 0;
     bool numOk = XCursorThemeFX::str2num(nv[1].trimmed(), num);
     if (!numOk) num = 0;
-    if (name == "frames") {
+    if (name == QLatin1String("frames")) {
       info.frameCnt = qMax(num, (quint32)1);
       info.wasFrameCnt = true;
-    } else if (name == "interval") {
+    } else if (name == QLatin1String("interval")) {
       info.delay = qMax(qMin(num, (quint32)0x7fffffffL), (quint32)10);
       info.wasDelay = true;
-    } else if (name == "animation style") {
+    } else if (name == QLatin1String("animation style")) {
       info.isLooped = true;
       info.is2way = (num != 0);
       info.wasAStyle = true;
-    } else if (name == "hot spot x") {
+    } else if (name == QLatin1String("hot spot x")) {
       info.xhot = num;
       info.wasXHot = true;
-    } else if (name == "hot spot y") {
+    } else if (name == QLatin1String("hot spot y")) {
       info.yhot = num;
       info.wasYHot = true;
-    } else if (name == "framescript") {
+    } else if (name == QLatin1String("framescript")) {
       // 1 or 0
-    } else if (name == "stdcursor") {
+    } else if (name == QLatin1String("stdcursor")) {
       info.isStdCursor = (num!=0);
       info.wasStdCur = true;
-    } else if (name == "hot spot x2" || name == "hot spot y2") {
-    } else if (name == "stdcursor" || name == "hot spot x2" || name == "hot spot y2") {
+    } else if (name == QLatin1String("hot spot x2") || name == QLatin1String("hot spot y2")) {
+    } else if (name == QLatin1String("stdcursor") || name == QLatin1String("hot spot x2") || name == QLatin1String("hot spot y2")) {
       // nothing
     } else {
      qDebug() << "unknown param:" << name << nv[1];
@@ -190,7 +190,7 @@ static void removeFilesAndDirs (QDir &dir) {
   for (const QFileInfo &fi : qAsConst(lst)) {
     dir.cd(fi.fileName());
     removeFilesAndDirs(dir);
-    dir.cd("..");
+    dir.cd(QStringLiteral(".."));
     //qDebug() << "removing dir" << fi.fileName();
     dir.rmdir(fi.fileName());
   }
@@ -210,19 +210,19 @@ static QString unzipFile (const QString &zipFile) {
 
   QDir dir(td);
 
-  args << "-b"; // all files are binary
-  args << "-D"; // skip timestamps
-  args << "-n"; // never overwrite (just in case)
-  args << "-qq"; // be very quiet
+  args << QStringLiteral("-b"); // all files are binary
+  args << QStringLiteral("-D"); // skip timestamps
+  args << QStringLiteral("-n"); // never overwrite (just in case)
+  args << QStringLiteral("-qq"); // be very quiet
   args << zipFile;
-  args << "-d" << dir.absolutePath(); // dest dir
+  args << QStringLiteral("-d") << dir.absolutePath(); // dest dir
 
   QProcess pr;
-  pr.setStandardInputFile("/dev/null");
-  pr.setStandardOutputFile("/dev/null");
-  pr.setStandardErrorFile("/dev/null");
+  pr.setStandardInputFile(QStringLiteral("/dev/null"));
+  pr.setStandardOutputFile(QStringLiteral("/dev/null"));
+  pr.setStandardErrorFile(QStringLiteral("/dev/null"));
 
-  pr.start("unzip", args);
+  pr.start(QStringLiteral("unzip"), args);
 
   if (pr.waitForStarted()) {
     if (pr.waitForFinished()) return QLatin1String(td);
@@ -230,7 +230,7 @@ static QString unzipFile (const QString &zipFile) {
 
   // cleanup
   removeFilesAndDirs(dir);
-  dir.cd("..");
+  dir.cd(QStringLiteral(".."));
   QString s = QLatin1String(strchr(td+1, '/')+1);
   //qDebug() << s;
   dir.rmdir(s);
@@ -253,7 +253,7 @@ XCursorThemeXP::XCursorThemeXP (const QString &aFileName) : XCursorTheme() {
       qDebug() << "doing cleanup...";
       dst.remove(0, dst.indexOf('/', 1)+1);
       removeFilesAndDirs(d);
-      d.cd("..");
+      d.cd(QStringLiteral(".."));
       qDebug() << dst;
       d.rmdir(dst);
     }
@@ -263,7 +263,7 @@ XCursorThemeXP::XCursorThemeXP (const QString &aFileName) : XCursorTheme() {
 
 bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
  qDebug() << "loading" << thDir.path();
-  QString ifn = findFile(thDir, "scheme.ini", true);
+  QString ifn = findFile(thDir, QStringLiteral("scheme.ini"), true);
   if (ifn.isEmpty()) return false;
   qDebug() << "reading scheme:" << ifn;
   //
@@ -324,7 +324,7 @@ bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
             // copy frame
             QImage frame(img.copy(fNo*frameWdt, 0, frameWdt, img.height()));
             //frame.save(QString("_png/%1_%2.png").arg(cim->name()).arg(QString::number(f)));
-            XCursorImage *i = new XCursorImage(QString("%1%2").arg(cim->name()).arg(QString::number(fCnt)),
+            XCursorImage *i = new XCursorImage(QStringLiteral("%1%2").arg(cim->name()).arg(QString::number(fCnt)),
               frame, info.xhot, info.yhot, a.delay, 1
             );
             cim->append(i);

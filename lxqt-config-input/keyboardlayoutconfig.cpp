@@ -138,7 +138,7 @@ void KeyboardLayoutConfig::loadLists() {
             break;
           case VariantSection: {
             // the descriptions of variants are prefixed by their language ids
-            sep = description.indexOf(": ");
+            sep = description.indexOf(QLatin1String(": "));
             if(sep >= 0) {
               QString lang = description.left(sep);
               QMap<QString, KeyboardLayoutInfo>::iterator it = knownLayouts_.find(lang);
@@ -218,17 +218,17 @@ void KeyboardLayoutConfig::applyConfig() {
   // call setxkbmap to apply the changes
   QProcess setxkbmap;
   // clear existing options
-  setxkbmap.start("setxkbmap -option");
+  setxkbmap.start(QStringLiteral("setxkbmap -option"));
   setxkbmap.waitForFinished();
   setxkbmap.close();
 
-  QString command = "setxkbmap";
+  QString command = QStringLiteral("setxkbmap");
   // set keyboard model
   QString model;
   int cur_model = ui.keyboardModel->currentIndex();
   if(cur_model >= 0) {
     model = ui.keyboardModel->itemData(cur_model, Qt::UserRole).toString();
-    command += " -model ";
+    command += QLatin1String(" -model ");
     command += model;
   }
 
@@ -245,18 +245,18 @@ void KeyboardLayoutConfig::applyConfig() {
         variants += ',';
       }
     }
-    command += " -layout ";
+    command += QLatin1String(" -layout ");
     command += layouts;
 
     if (variants.indexOf(',') > -1 || !variants.isEmpty()) {
-      command += " -variant ";
+      command += QLatin1String(" -variant ");
       command += variants;
     }
   }
 
   for(const QString& option : qAsConst(currentOptions_)) {
-    if (!option.startsWith("grp:")) {
-      command += " -option ";
+    if (!option.startsWith(QLatin1String("grp:"))) {
+      command += QLatin1String(" -option ");
       command += option;
     }
   }
@@ -265,7 +265,7 @@ void KeyboardLayoutConfig::applyConfig() {
   int cur_switch_key = ui.switchKey->currentIndex();
   if(cur_switch_key > 0) { // index 0 is "None"
     switchKey = ui.switchKey->itemData(cur_switch_key, Qt::UserRole).toString();
-    command += " -option ";
+    command += QLatin1String(" -option ");
     command += switchKey;
   }
 
@@ -276,14 +276,14 @@ void KeyboardLayoutConfig::applyConfig() {
   setxkbmap.waitForFinished();
 
   // save to lxqt-session config file.
-  settings->beginGroup("Keyboard");
-  settings->setValue("layout", layouts);
-  settings->setValue("variant", variants);
-  settings->setValue("model", model);
+  settings->beginGroup(QStringLiteral("Keyboard"));
+  settings->setValue(QStringLiteral("layout"), layouts);
+  settings->setValue(QStringLiteral("variant"), variants);
+  settings->setValue(QStringLiteral("model"), model);
   if(switchKey.isEmpty() && currentOptions_ .isEmpty())
-    settings->remove("options");
+    settings->remove(QStringLiteral("options"));
   else
-    settings->setValue("options", switchKey.isEmpty() ? currentOptions_ : (currentOptions_ << switchKey));
+    settings->setValue(QStringLiteral("options"), switchKey.isEmpty() ? currentOptions_ : (currentOptions_ << switchKey));
   settings->endGroup();
 }
 

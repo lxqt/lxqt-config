@@ -46,7 +46,7 @@ void SelectKeyboardLayoutDialog::onLayoutChanged() {
   QListWidgetItem* item = ui.layouts->currentItem();
   ui.variants->clear();
 
-  ui.variants->addItem("None");
+  ui.variants->addItem(QStringLiteral("None"));
   ui.variants->setCurrentItem(ui.variants->item(0));
   if(item) { // add variants of this layout to the list view
     QString name = item->data(Qt::UserRole).toString();

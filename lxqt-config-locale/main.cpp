@@ -45,19 +45,19 @@ int main (int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    LXQt::Settings settings("lxqt-config-locale");
-    LXQt::Settings session_settings("session");
+    LXQt::Settings settings(QStringLiteral("lxqt-config-locale"));
+    LXQt::Settings session_settings(QStringLiteral("session"));
     LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Locale Configuration"), &settings);
 
     app.setActivationWindow(dialog);
 
     LocaleConfig* localePage = new LocaleConfig(&settings, &session_settings, dialog);
-    dialog->addPage(localePage, QObject::tr("Locale Settings"), QStringList() << "preferences-desktop-locale" << "preferences-desktop");
+    dialog->addPage(localePage, QObject::tr("Locale Settings"), QStringList() << QStringLiteral("preferences-desktop-locale") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, SIGNAL(reset()), localePage, SLOT(initControls()));
     QObject::connect(dialog, SIGNAL(save()), localePage, SLOT(saveSettings()));
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->setWindowIcon(QIcon::fromTheme("preferences-desktop-locale"));
+    dialog->setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
     dialog->show();
 
     return app.exec();

@@ -23,7 +23,7 @@ QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
         QTextStream stream;
         stream.setDevice(&fl);
         stream.setCodec("UTF-8");
-        QString curPath = "/";
+        QString curPath = QStringLiteral("/");
         while (1)
         {
             QString s = stream.readLine();
@@ -100,7 +100,7 @@ void fixXDefaults(const QString &themeName)
 
 const QString findDefaultTheme()
 {
-    QString res = "default";
+    QString res = QStringLiteral("default");
     QFile fl(QDir::home().path()+"/.Xdefaults");
     if (fl.open(QIODevice::ReadOnly))
     {
@@ -110,10 +110,10 @@ const QString findDefaultTheme()
         {
             QString s = stream.readLine();
             if (s.isNull()) break;
-            if (!s.startsWith("Xcursor.theme:")) continue;
+            if (!s.startsWith(QLatin1String("Xcursor.theme:"))) continue;
             s.remove(0, 14);
             s = s.trimmed();
-            if (s.isEmpty()) s = "default";
+            if (s.isEmpty()) s = QLatin1String("default");
             res = s;
         }
         fl.close();

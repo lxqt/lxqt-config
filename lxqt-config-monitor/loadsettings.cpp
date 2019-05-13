@@ -44,9 +44,9 @@ LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 
 void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
 {
-    LXQt::Settings settings("lxqt-config-monitor");
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     QList<MonitorSettings> monitors;
-    settings.beginGroup("currentConfig");
+    settings.beginGroup(QStringLiteral("currentConfig"));
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
 
