@@ -43,9 +43,9 @@ FontConfigFile::FontConfigFile(QObject* parent):
     mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     if(mDirPath.isEmpty())
-        mDirPath = homeDir % "/.config";
+        mDirPath = homeDir + QStringLiteral("/.config");
     mDirPath += QLatin1String("/fontconfig");
-    mFilePath = mDirPath + "/fonts.conf";
+    mFilePath = mDirPath + QStringLiteral("/fonts.conf");
 
     load();
 }
@@ -118,7 +118,7 @@ void FontConfigFile::load()
                 if(name == "antialias")
                 {
                     QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
-                    mAntialias = value[0] == 't' ? true : false;
+                    mAntialias = value[0] == QLatin1Char('t') ? true : false;
                 }
                 else if(name == "rgba")
                 {
@@ -128,7 +128,7 @@ void FontConfigFile::load()
                 else if(name == "hinting")
                 {
                     QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
-                    mHinting = value[0] == 't' ? true : false;
+                    mHinting = value[0] == QLatin1Char('t') ? true : false;
                 }
                 else if(name == "hintstyle")
                 {
@@ -143,13 +143,13 @@ void FontConfigFile::load()
                 else if(name == "autohint")
                 {
                     QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
-                    mAutohint = value[0] == 't' ? true : false;
+                    mAutohint = value[0] == QLatin1Char('t') ? true : false;
                 }
             }
         }
         else // the config file is created by others => make a backup and write our config
         {
-            QFile backup(mFilePath + ".bak");
+            QFile backup(mFilePath + QStringLiteral(".bak"));
             if(backup.open(QIODevice::WriteOnly))
             {
                 backup.write(buffer);
