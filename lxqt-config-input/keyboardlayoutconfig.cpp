@@ -84,7 +84,7 @@ void KeyboardLayoutConfig::loadSettings() {
 
     const int size = layouts.size(), variantsSize = variants.size();
     for(int i = 0; i < size; ++i) {
-      currentLayouts_.append(QPair<QString, QString>(layouts.at(i), variantsSize > 0 ? variants.at(i) : QString()));
+      currentLayouts_.append(QPair<QString, QString>(QString::fromUtf8(layouts.at(i)), variantsSize > 0 ? QString::fromUtf8(variants.at(i)) : QString()));
     }
 
     setxkbmap.close();
@@ -123,8 +123,8 @@ void KeyboardLayoutConfig::loadLists() {
           continue;
         }
         int sep = line.indexOf(' ');
-        QString name = QString::fromLatin1(line, sep);
-        while(line[sep] == ' ') // skip spaces
+        QString name = QString::fromLatin1(line.constData(), sep);
+        while(line[sep] ==' ') // skip spaces
           ++sep;
         QString description = QString::fromUtf8(line.constData() + sep);
 
@@ -241,14 +241,14 @@ void KeyboardLayoutConfig::applyConfig() {
       layouts += item->data(0, Qt::UserRole).toString();
       variants += item->data(1, Qt::UserRole).toString();
       if(row < n - 1) { // not the last row
-        layouts += ',';
-        variants += ',';
+        layouts += QLatin1Char(',');
+        variants += QLatin1Char(',');
       }
     }
     command += QLatin1String(" -layout ");
     command += layouts;
 
-    if (variants.indexOf(',') > -1 || !variants.isEmpty()) {
+    if (variants.indexOf(QLatin1Char(',')) > -1 || !variants.isEmpty()) {
       command += QLatin1String(" -variant ");
       command += variants;
     }

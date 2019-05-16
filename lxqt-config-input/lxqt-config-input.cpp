@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
     QByteArray configName = qgetenv("LXQT_SESSION_CONFIG");
     if(configName.isEmpty())
       configName = "session";
-    LXQt::Settings settings(configName);
+    LXQt::Settings settings(QString::fromUtf8(configName));
 
 #ifdef WITH_TOUCHPAD
     bool loadLastTouchpadSettings = parser.isSet(loadOption);

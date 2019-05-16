@@ -65,7 +65,7 @@ static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
         case XA_STRING:
         {
             Q_ASSERT(act_format == 8);
-            QString s(reinterpret_cast<char*>(ptr));
+            QString s(QString::fromUtf8(reinterpret_cast<char*>(ptr)));
             ptr += s.size() + 1; // including '\0'
             ret << s;
             break;
@@ -196,7 +196,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
         if (devnode)
         {
             TouchpadDevice dev;
-            dev.devnode = devnode;
+            dev.devnode = QString::fromUtf8(devnode);
             if(dev.find_xi2_device())
             {
                 qDebug() << "Detected" << dev.m_name << "on" << dev.devnode;
@@ -231,7 +231,7 @@ bool TouchpadDevice::find_xi2_device()
         QList<QVariant> devnode_prop = xi2_get_device_property(info[i].deviceid, "Device Node");
         if (devnode_prop.size() && devnode_prop[0].toString() == devnode)
         {
-            m_name = info[i].name;
+            m_name = QString::fromUtf8(info[i].name);
             deviceid = info[i].deviceid;
             found = true;
             break;
@@ -247,7 +247,7 @@ QString TouchpadDevice::escapedName() const
 {
     // device names may contain '/' or '\\' so it should be escaped first
     // XXX: special characters are double escaped (see writeIniFile in qsettings.cpp)
-    return QUrl::toPercentEncoding(name(), QByteArray(), QByteArray("/\\"));
+    return QString::fromUtf8(QUrl::toPercentEncoding(name(), QByteArray(), QByteArray("/\\")));
 }
 
 void TouchpadDevice::loadSettings(LXQt::Settings* settings)
@@ -258,21 +258,21 @@ void TouchpadDevice::loadSettings(LXQt::Settings* settings)
         qDebug() << "Load settings for" << device.name();
 
         settings->beginGroup(device.escapedName());
-        if (settings->contains(TAPPING_ENABLED)) {
-            device.setTappingEnabled(settings->value(TAPPING_ENABLED).toBool());
+        if (settings->contains(QLatin1String(TAPPING_ENABLED))) {
+            device.setTappingEnabled(settings->value(QLatin1String(TAPPING_ENABLED)).toBool());
         }
-        if (settings->contains(NATURAL_SCROLLING_ENABLED)) {
-            device.setNaturalScrollingEnabled(settings->value(NATURAL_SCROLLING_ENABLED).toBool());
+        if (settings->contains(QLatin1String(NATURAL_SCROLLING_ENABLED))) {
+            device.setNaturalScrollingEnabled(settings->value(QLatin1String(NATURAL_SCROLLING_ENABLED)).toBool());
         }
-        if (settings->contains(TAP_TO_DRAG_ENABLED)) {
-            device.setTapToDragEnabled(settings->value(TAP_TO_DRAG_ENABLED).toBool());
+        if (settings->contains(QLatin1String(TAP_TO_DRAG_ENABLED))) {
+            device.setTapToDragEnabled(settings->value(QLatin1String(TAP_TO_DRAG_ENABLED)).toBool());
         }
-        if (settings->contains(ACCELERATION_SPEED)) {
-            device.setAccelSpeed(settings->value(ACCELERATION_SPEED).toFloat());
+        if (settings->contains(QLatin1String(ACCELERATION_SPEED))) {
+            device.setAccelSpeed(settings->value(QLatin1String(ACCELERATION_SPEED)).toFloat());
         }
-        if (settings->contains(SCROLLING_METHOD_ENABLED)) {
+        if (settings->contains(QLatin1String(SCROLLING_METHOD_ENABLED))) {
             device.setScrollingMethodEnabled(
-                static_cast<ScrollingMethod>(settings->value(SCROLLING_METHOD_ENABLED).toInt()));
+                static_cast<ScrollingMethod>(settings->value(QLatin1String(SCROLLING_METHOD_ENABLED)).toInt()));
         }
         settings->endGroup();
     }
@@ -284,11 +284,11 @@ void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
     settings->beginGroup(QStringLiteral("Touchpad"));
 
     settings->beginGroup(escapedName());
-    settings->setValue(TAPPING_ENABLED, tappingEnabled());
-    settings->setValue(NATURAL_SCROLLING_ENABLED, naturalScrollingEnabled());
-    settings->setValue(TAP_TO_DRAG_ENABLED, tapToDragEnabled());
-    settings->setValue(ACCELERATION_SPEED, accelSpeed());
-    settings->setValue(SCROLLING_METHOD_ENABLED, scrollingMethodEnabled());
+    settings->setValue(QLatin1String(TAPPING_ENABLED), tappingEnabled());
+    settings->setValue(QLatin1String(NATURAL_SCROLLING_ENABLED), naturalScrollingEnabled());
+    settings->setValue(QLatin1String(TAP_TO_DRAG_ENABLED), tapToDragEnabled());
+    settings->setValue(QLatin1String(ACCELERATION_SPEED), accelSpeed());
+    settings->setValue(QLatin1String(SCROLLING_METHOD_ENABLED), scrollingMethodEnabled());
     settings->endGroup(); // device name
 
     settings->endGroup(); // "Touchpad"
