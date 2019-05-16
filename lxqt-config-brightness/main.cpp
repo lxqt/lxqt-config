@@ -95,9 +95,8 @@ int main(int argn, char* argv[])
     }
 
     BrightnessSettings *brightnessSettings = new BrightnessSettings();
-    brightnessSettings->setWindowIcon(QIcon(ICON_DIR "/brightnesssettings.svg"));
+    brightnessSettings->setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
     brightnessSettings->show();
-
     return app.exec();
 }
 
