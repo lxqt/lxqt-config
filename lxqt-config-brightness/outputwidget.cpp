@@ -23,7 +23,7 @@ OutputWidget::OutputWidget(MonitorInfo monitor, QWidget *parent):QWidget(parent)
     ui = new Ui::OutputWidget();
     ui->setupUi(this);
 
-    ui->label->setText("<b>"+monitor.name()+":</b>");
+    ui->label->setText(QStringLiteral("<b>")+monitor.name()+QStringLiteral(":</b>"));
     if ( monitor.isBacklightSupported() )
     {
         ui->backlightSlider->setMinimum(0);
