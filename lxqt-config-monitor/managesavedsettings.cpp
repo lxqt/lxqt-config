@@ -183,7 +183,7 @@ void ManageSavedSettings::loadSettings()
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
     for(const MonitorSavedSettings& o : qAsConst(monitors)) {
-        QListWidgetItem *item = new QListWidgetItem(o.name+" - "+o.date, ui.allConfigs);
+        QListWidgetItem *item = new QListWidgetItem(o.name+QStringLiteral(" - ")+o.date, ui.allConfigs);
         QVariant var;
         var.setValue(o);
         item->setData(Qt::UserRole, var);
