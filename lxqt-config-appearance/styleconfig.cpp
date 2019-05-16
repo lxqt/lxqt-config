@@ -136,9 +136,9 @@ void StyleConfig::applyStyle()
     if(index == -1)
         index = Qt::ToolButtonTextBesideIcon;
     const char* str = me.valueToKey(index);
-    if(str && mSettings->value(QStringLiteral("tool_button_style")) != str)
+    if(str && mSettings->value(QStringLiteral("tool_button_style")) != QString::fromUtf8(str))
     {
-        mSettings->setValue(QStringLiteral("tool_button_style"), str);
+        mSettings->setValue(QStringLiteral("tool_button_style"), QString::fromUtf8(str));
         mSettings->sync();
         mConfigOtherToolKits->setConfig();
     }

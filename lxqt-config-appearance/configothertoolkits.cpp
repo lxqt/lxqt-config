@@ -97,7 +97,7 @@ static QString get_environment_var(const char *envvar, const char *defaultValue)
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     QString mDirPath = QString::fromLocal8Bit(qgetenv(envvar));
     if(mDirPath.isEmpty())
-        mDirPath = homeDir + defaultValue;
+        mDirPath = homeDir + QLatin1String(defaultValue);
     else {
         for(QString path : mDirPath.split(QStringLiteral(":")) ) {
             mDirPath = path;
@@ -142,7 +142,7 @@ bool ConfigOtherToolKits::backupGTKSettings(QString version)
         QString gtkrcPath = getGTKConfigPath(version);
         QFile file(gtkrcPath);
         if(file.exists() && !grep(file, "# Created by lxqt-config-appearance (DO NOT EDIT!)")) {
-            QString backupPath = gtkrcPath + "-" + QString::number(QDateTime::currentSecsSinceEpoch()) + "~";
+            QString backupPath = gtkrcPath + QStringLiteral("-") + QString::number(QDateTime::currentSecsSinceEpoch()) + QStringLiteral("~");
             file.copy(backupPath);
             QMessageBox::warning(nullptr, tr("GTK themes"),
                 tr("<p>'%1' has been overwritten.</p><p>You can find a copy of your old settings in '%2'</p>")
@@ -208,8 +208,8 @@ QString ConfigOtherToolKits::getConfig(const char *configString)
     LXQt::Settings* sessionSettings = new LXQt::Settings(QStringLiteral("session"));
     QString mouseStyle = sessionSettings->value(QStringLiteral("Mouse/cursor_theme")).toString();
     delete sessionSettings;
-    return QString(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
-        mConfig.fontName, mConfig.buttonStyle==0 ? "0":"1",
+    return QString::fromUtf8(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
+        mConfig.fontName, mConfig.buttonStyle==0 ? QStringLiteral("0"):QStringLiteral("1"),
         mConfig.toolButtonStyle, mouseStyle
         );
 }
@@ -235,7 +235,7 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
 QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 {
     QStringList themeList;
-    QString configFile = version==QLatin1String("2.0") ? "gtkrc" : "gtk.css";
+    QString configFile = version==QLatin1String("2.0") ? QStringLiteral("gtkrc") : QStringLiteral("gtk.css");
     
     if(version != QLatin1String("2.0")) {
         // Insert default GTK3 themes:
@@ -244,7 +244,7 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 
     QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
     for(QString dataPath : dataPaths) {
-        QDir themesPath(dataPath + "/themes");
+        QDir themesPath(dataPath + QStringLiteral("/themes"));
         QStringList themes = themesPath.entryList(QDir::Dirs);
         for(QString theme : themes) {
             QDir dirsInTheme(QStringLiteral("%1/themes/%2").arg(dataPath, theme));
@@ -277,7 +277,7 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
                     QList<QByteArray> parts = line.split('=');
                     if(parts.size()>=2) {
                         file.close();
-                        return parts[1].replace('"', "").trimmed();
+                        return QString::fromUtf8(parts[1].replace('"', "").trimmed());
                     }
                 }
             }
@@ -300,7 +300,7 @@ QString ConfigOtherToolKits::getGTKThemeFromRCFile(QString version)
                     QList<QByteArray> parts = line.split('=');
                     if(parts.size()>=2) {
                         file.close();
-                        return parts[1].trimmed();
+                        return QString::fromUtf8(parts[1].trimmed());
                     }
                 }
             }
@@ -326,7 +326,7 @@ QString ConfigOtherToolKits::getDefaultGTKTheme()
         return QString();
     // The theme has got quotation marks. Remove it:
     defaultTheme.replace("'","");
-    return QString(defaultTheme);
+    return QString::fromUtf8(defaultTheme);
 }
 
 void ConfigOtherToolKits::updateConfigFromSettings()
@@ -340,8 +340,8 @@ void ConfigOtherToolKits::updateConfigFromSettings()
     // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size.
     mConfig.fontName = QStringLiteral("%1%2%3 %4")
         .arg(font.family())                                 //%1
-        .arg(font.style()==QFont::StyleNormal?"":" Italic") //%2
-        .arg(font.weight()==QFont::Normal?"":" Bold")       //%3
+        .arg(font.style()==QFont::StyleNormal?QString():QStringLiteral(" Italic")) //%2
+        .arg(font.weight()==QFont::Normal?QString():QStringLiteral(" Bold"))       //%3
         .arg(font.pointSize());                             //%4
     mSettings->endGroup();
 
