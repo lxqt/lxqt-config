@@ -143,7 +143,7 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
                                                                 QList<XdgDesktopFile*> applications,
                                                                 QSet<XdgDesktopFile*>& alreadyAdded)
 {
-    QIcon placeHolderIcon = QIcon::fromTheme("application-x-executable");
+    QIcon placeHolderIcon = QIcon::fromTheme(QStringLiteral("application-x-executable"));
 
         if (applications.isEmpty())
         {
