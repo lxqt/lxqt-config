@@ -107,7 +107,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     connect(widget.chooseApplicationsButton, SIGNAL(clicked()), this, SLOT(chooseApplication()));
     connect(widget.dialogButtonBox, SIGNAL(clicked(QAbstractButton*)), this, SLOT(dialogButtonBoxClicked(QAbstractButton*)));
 
-    QString mimeappsListPath(XdgDirs::configHome(true) + "/mimeapps.list");
+    QString mimeappsListPath(XdgDirs::configHome(true) + QStringLiteral("/mimeapps.list"));
     mDefaultsList = new QSettings(mimeappsListPath, XdgDesktopFileCache::desktopFileSettingsFormat(), this);
     mSettingsCache = new LXQt::SettingsCache(mDefaultsList);
     mSettingsCache->loadFromSettings();
@@ -125,7 +125,7 @@ MimetypeViewer::~MimetypeViewer()
 
 void MimetypeViewer::addSearchIcon()
 {
-    QIcon searchIcon = QIcon::fromTheme("system-search");
+    QIcon searchIcon = QIcon::fromTheme(QStringLiteral("system-search"));
     if (searchIcon.isNull())
         return;
 
