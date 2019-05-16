@@ -31,7 +31,7 @@ static bool loadSettingsOk(int argc, char** argv)
 {
     for(int i=0; i<argc; i++)
     {
-        if(QString(argv[i]) == QLatin1String("-l"))
+        if(QString::fromUtf8(argv[i]) == QLatin1String("-l"))
             return true;
     }
     return false;

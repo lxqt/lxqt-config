@@ -32,7 +32,7 @@ static QSize sizeFromString(QString str)
 {
     int width = 0;
     int height = 0;
-    int x = str.indexOf('x');
+    int x = str.indexOf(QLatin1Char('x'));
     if (x > 0)
     {
         width = str.leftRef(x).toInt();

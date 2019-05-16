@@ -125,10 +125,10 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         if (output->isConnected())
         {
             MonitorWidget *monitor = new MonitorWidget(output, mConfig, this);
-            QString monitorName = output->edid()->name() + " " + output->edid()->vendor();
+            QString monitorName = output->edid()->name() + QStringLiteral(" ") + output->edid()->vendor();
             if(monitorName.trimmed().size() > 0)
-                monitorName = "(" + monitorName + ")";
-            ui.monitorList->addItem(output->name() + " " + monitorName);
+                monitorName = QStringLiteral("(") + monitorName + QStringLiteral(")");
+            ui.monitorList->addItem(output->name() + QStringLiteral(" ") + monitorName);
             ui.stackedWidget->addWidget(monitor);
             monitors.append(monitor);
         }
@@ -228,8 +228,8 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     LXQt::AutostartEntry autoStart(QStringLiteral("lxqt-config-monitor-autostart.desktop"));
     XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, QStringLiteral("lxqt-config-monitor-autostart"), QStringLiteral("lxqt-config-monitor -l"));
     //desktopFile.setValue("OnlyShowIn", QString(qgetenv("XDG_CURRENT_DESKTOP")));
-    desktopFile.setValue(QStringLiteral("OnlyShowIn"), "LXQt");
-    desktopFile.setValue(QStringLiteral("Comment"), "Autostart monitor settings for LXQt-config-monitor");
+    desktopFile.setValue(QStringLiteral("OnlyShowIn"), QStringLiteral("LXQt"));
+    desktopFile.setValue(QStringLiteral("Comment"), QStringLiteral("Autostart monitor settings for LXQt-config-monitor"));
     autoStart.setFile(desktopFile);
     autoStart.commit();
 }
@@ -242,7 +242,7 @@ void MonitorSettingsDialog::showSettingsDialog()
     if (configName.isEmpty())
         configName = "MonitorSettings";
 
-    LXQt::Settings settings(configName);
+    LXQt::Settings settings(QString::fromLocal8Bit(configName));
 
     SettingsDialog settingsDialog(tr("Advanced settings"), &settings, mConfig);
     settingsDialog.exec();
