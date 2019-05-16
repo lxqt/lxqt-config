@@ -161,7 +161,7 @@ void PreviewWidget::setTheme(const XCursorThemeData &theme)
 {
     qDeleteAll(mList);
     mList.clear();
-    for (int i = 0; i < numCursors; ++i) mList << new PreviewCursor(theme, cursorNames[i]);
+    for (int i = 0; i < numCursors; ++i) mList << new PreviewCursor(theme, QString::fromUtf8(cursorNames[i]));
     mNeedLayout = true;
     updateGeometry();
     mCurrent = NULL;

@@ -188,7 +188,7 @@ static void removeCursorFiles (QDir &dir) {
   while (*nlst) {
     nlst += 2; // skip non-files
     while (*nlst) {
-      QString n(*nlst);
+      QString n = QString::fromUtf8(*nlst);
       QFile fl(pt+n);
       qDebug() << "removing" << fl.fileName();
       fl.remove();
@@ -257,7 +257,7 @@ QString XCursorTheme::findCursorFile (const QDir &dir, const char *name) {
       //qDebug() << "found" << *nx << "(" << *nlst << ")";
       nx = nlst;
       while (*nx) {
-        QString s(*nx);
+        QString s = QString::fromUtf8(*nx);
         //qDebug() << "checking" << s;
         QFileInfo fl(d+s);
         if (fl.exists() && fl.isReadable()) {
@@ -309,7 +309,7 @@ bool XCursorTheme::writeToDir (const QDir &destDir) {
     qDebug() << "writing" << *nlst;
     {
       QByteArray ba(ci->genXCursor());
-      QFile fo(dir.path()+"/"+ci->name());
+      QFile fo(dir.path()+QStringLiteral("/")+ci->name());
       if (fo.open(QIODevice::WriteOnly)) {
         fo.write(ba);
         fo.close();
@@ -323,7 +323,7 @@ bool XCursorTheme::writeToDir (const QDir &destDir) {
     nlst++;
     while (*nlst) {
       qDebug() << "symlinking to" << orig << "as" << *nlst;
-      QByteArray newName(QFile::encodeName(dir.path()+"/"+(*nlst)));
+      QByteArray newName(QFile::encodeName(dir.path()+QStringLiteral("/")+QString::fromUtf8(*nlst)));
       qDebug() << "old" << orig << "new" << newName.constData();
       if (symlink(orig, newName.constData())) {
         res = false;
@@ -361,18 +361,18 @@ void XCursorTheme::parseThemeIndex (const QDir &dir) {
       if (s.isNull()) break;
       QString orig(s);
       s = s.trimmed();
-      if (s.isEmpty() || s[0] == '#' || s[0] == ';') continue;
-      if (s[0] == '[') {
+      if (s.isEmpty() || s[0] == QLatin1Char('#') || s[0] == QLatin1Char(';')) continue;
+      if (s[0] == QLatin1Char('[')) {
         // new path
         int len = s.length()-1;
-        if (s[len] == ']') len--;
+        if (s[len] == QLatin1Char(']')) len--;
         s = s.mid(1, len).simplified();
         curPath = s.toLower();
         inIconTheme = (curPath == QLatin1String("icon theme"));
         continue;
       }
       if (!inIconTheme) continue;
-      int eqp = s.indexOf('=');
+      int eqp = s.indexOf(QLatin1Char('='));
       if (eqp < 0) continue; // invalid entry
       QString name = s.left(eqp).simplified().toLower();
       QString value = s.mid(eqp+1).simplified();
@@ -485,14 +485,14 @@ bool XCursorTheme::writeIndexTheme (const QDir &destDir) {
       if (s.isNull()) break;
       QString orig(s);
       s = s.trimmed();
-      if (s.isEmpty() || s[0] == '#' || s[0] == ';') {
+      if (s.isEmpty() || s[0] == QLatin1Char('#') || s[0] == QLatin1Char(';')) {
         if (curPath != QLatin1String("icon theme")) cfg << orig;
         continue;
       }
-      if (s[0] == '[') {
+      if (s[0] == QLatin1Char('[')) {
         // new path
         int len = s.length()-1;
-        if (s[len] == ']') len--;
+        if (s[len] == QLatin1Char(']')) len--;
         s = s.mid(1, len).simplified();
         curPath = s.toLower();
         if (curPath != QLatin1String("icon theme")) cfg << orig;
@@ -500,7 +500,7 @@ bool XCursorTheme::writeIndexTheme (const QDir &destDir) {
       }
       if (curPath != QLatin1String("icon theme")) cfg << orig;
       else {
-        int eqp = s.indexOf('=');
+        int eqp = s.indexOf(QLatin1Char('='));
         if (eqp < 0) {
           // invalid entry
           iconOther << orig;
@@ -628,8 +628,8 @@ bool removeXCursorTheme (const QString &name) {
 
 bool removeXCursorTheme (const QDir &thDir) {
   QString name(thDir.path());
-  while (!name.isEmpty() && name.endsWith('/')) name.chop(1);
-  int i = name.lastIndexOf('/');
+  while (!name.isEmpty() && name.endsWith(QLatin1Char('/'))) name.chop(1);
+  int i = name.lastIndexOf(QLatin1Char('/'));
   if (i < 1) return false;
   name = name.mid(i+1);
   QDir d(thDir);
@@ -658,7 +658,7 @@ static bool tarDir (const QString &destFName, const QDir &pth, const QString &di
   args << QStringLiteral("-f"); // to file
   args << destFName;
   QString s(dir);
-  if (!s.endsWith('/')) s += '/';
+  if (!s.endsWith(QLatin1Char('/'))) s += QLatin1Char('/');
   args << s;
 
   QProcess pr;
@@ -696,9 +696,9 @@ bool packXCursorTheme (const QString &destFName, const QDir &thDir, const QStrin
 
 bool XCursorTheme::writeXPTheme (const QDir &destDir) {
   QString ifn = destDir.path();
-  if (!ifn.isEmpty() && ifn != QLatin1String("/")) ifn += '/';
+  if (!ifn.isEmpty() && ifn != QLatin1String("/")) ifn += QLatin1Char('/');
 
-  QFile fl(ifn+"Scheme.ini");
+  QFile fl(ifn+QStringLiteral("Scheme.ini"));
   if (fl.open(QIODevice::WriteOnly)) {
     QTextStream stream;
     stream.setDevice(&fl);
@@ -711,8 +711,8 @@ bool XCursorTheme::writeXPTheme (const QDir &destDir) {
       if (!nlst) continue; // unknown cursor, skip it
       qDebug() << "image:" << *(nlst-1);
       QImage img(ci->buildImage());
-      if (!img.save(ifn+(*(nlst-1))+".png")) return false;
-      stream << "["+QString(*(nlst-1))+"]\r\n";
+      if (!img.save(ifn+QString::fromUtf8(*(nlst-1))+QStringLiteral(".png"))) return false;
+      stream << QStringLiteral("[")+QString::fromUtf8(*(nlst-1))+QStringLiteral("]\r\n");
       stream << "StdCursor=0\r\n";
       stream << "Frames=" << ci->count() << "\r\n";
       stream << "Hot spot x=" << ci->at(0)->xhot() << "\r\n";

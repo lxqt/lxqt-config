@@ -66,18 +66,18 @@ bool XCursorThemeFX::str2num (const QString &s, quint32 &res) {
 QList<XCursorThemeFX::tAnimSeq> XCursorThemeFX::parseScript (const QString &script, quint32 maxFrame) {
   QList<tAnimSeq> res;
   QString scp = script; scp.replace(QLatin1String("\r"), QLatin1String("\n"));
-  const QStringList scpL = scp.split('\n', QString::SkipEmptyParts);
+  const QStringList scpL = scp.split(QLatin1Char('\n'), QString::SkipEmptyParts);
   for (const QString &ss : scpL) {
     const QString s = ss.simplified();
     //qDebug() << s;
-    QStringList fld = s.split(',', QString::SkipEmptyParts); //BUG!BUG!BUG!
+    QStringList fld = s.split(QLatin1Char(','), QString::SkipEmptyParts); //BUG!BUG!BUG!
     if (fld.size() != 2) {
      qDebug() << "script error:" << s;
       qWarning() << "script error:" << s;
       continue;
     }
     // frame[s]
-    int hyph = fld[0].indexOf('-');
+    int hyph = fld[0].indexOf(QLatin1Char('-'));
     tAnimSeq a;
     if (hyph == -1) {
       // just a number
@@ -357,7 +357,7 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
     QImage img((const uchar *)unp.constData()+ipos+realHdrSize, imgWdt, imgHgt, QImage::Format_ARGB32);
     img = img.mirrored(false, true);
     //
-    XCursorImages *cim = new XCursorImages(*nlst);
+    XCursorImages *cim = new XCursorImages(QString::fromUtf8(*nlst));
     cim->setScript(script);
     //!!!
     //!!!img.save(QString("_png/%1.png").arg(cim->name()));

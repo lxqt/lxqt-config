@@ -49,7 +49,7 @@ XCursorThemeData::XCursorThemeData(const QDir &aDir)
 
 void XCursorThemeData::parseIndexFile()
 {
-    QMultiMap<QString, QString> cfg = loadCfgFile(mPath+"/index.theme", true);
+    QMultiMap<QString, QString> cfg = loadCfgFile(mPath + QString::fromUtf8("/index.theme"), true);
     if (cfg.contains(QStringLiteral("icon theme/name"))) mTitle = cfg.values(QStringLiteral("icon theme/name")).at(0).trimmed();
     if (cfg.contains(QStringLiteral("icon theme/comment"))) mDescription = cfg.values(QStringLiteral("icon theme/comment")).at(0).trimmed();
     if (cfg.contains(QStringLiteral("icon theme/example"))) mSample = cfg.values(QStringLiteral("icon theme/example")).at(0).trimmed();
@@ -165,14 +165,14 @@ XcursorImage *XCursorThemeData::xcLoadImage(const QString &image, int size) cons
 {
     QByteArray cursorName = QFile::encodeName(image);
     QByteArray themeName  = QFile::encodeName(name());
-    return XcursorLibraryLoadImage(cursorName, themeName, size);
+    return XcursorLibraryLoadImage(cursorName.constData(), themeName.constData(), size);
 }
 
 XcursorImages *XCursorThemeData::xcLoadImages(const QString &image, int size) const
 {
     QByteArray cursorName = QFile::encodeName(image);
     QByteArray themeName  = QFile::encodeName(name());
-    return XcursorLibraryLoadImages(cursorName, themeName, size);
+    return XcursorLibraryLoadImages(cursorName.constData(), themeName.constData(), size);
 }
 
 unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) const
@@ -264,7 +264,7 @@ bool applyTheme(const XCursorThemeData &theme)
     for (const QString &name : qAsConst(names))
     {
         Cursor cursor = (Cursor)theme.loadCursorHandle(name);
-        XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name));
+        XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
         // FIXME: do we need to free the cursor?
     }
     return true;
@@ -272,5 +272,5 @@ bool applyTheme(const XCursorThemeData &theme)
 
 QString getCurrentTheme()
 {
-    return XcursorGetTheme(QX11Info::display());
+    return QString::fromUtf8(XcursorGetTheme(QX11Info::display()));
 }
