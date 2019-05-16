@@ -147,13 +147,13 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     // "it_IT")
     // TODO: Properly handle scripts (@foo)
     QString cvalue = locale.name();
-    if (!cvalue.contains('.'))
+    if (!cvalue.contains(QLatin1Char('.')))
     { // explicitely add the encoding, otherwise Qt doesn't accept dead keys and garbles the output as well
-        cvalue.append(QLatin1Char('.') + QTextCodec::codecForLocale()->name());
+        cvalue.append(QLatin1Char('.') + QString::fromUtf8(QTextCodec::codecForLocale()->name()));
     }
 
     QString flagcode;
-    const QStringList split = locale.name().split('_');
+    const QStringList split = locale.name().split(QLatin1Char('_'));
     if (split.count() > 1)
     {
         flagcode = split[1].toLower();
@@ -191,13 +191,13 @@ void LocaleConfig::readConfig()
     bool useDetailed = mSettings->value(QStringLiteral("useDetailed"), false).toBool();
     m_ui->checkDetailed->setChecked(useDetailed);
 
-    setCombo(m_ui->comboGlobal, mSettings->value(lcLang, qgetenv(lcLang.toLatin1())).toString());
+    setCombo(m_ui->comboGlobal, mSettings->value(lcLang, QString::fromLocal8Bit(qgetenv(lcLang.toLatin1().constData()))).toString());
 
-    setCombo(m_ui->comboNumbers, mSettings->value(lcNumeric, qgetenv(lcNumeric.toLatin1())).toString());
-    setCombo(m_ui->comboTime, mSettings->value(lcTime, qgetenv(lcTime.toLatin1())).toString());
-    setCombo(m_ui->comboCollate, mSettings->value(lcCollate, qgetenv(lcCollate.toLatin1())).toString());
-    setCombo(m_ui->comboCurrency, mSettings->value(lcMonetary, qgetenv(lcMonetary.toLatin1())).toString());
-    setCombo(m_ui->comboMeasurement, mSettings->value(lcMeasurement, qgetenv(lcMeasurement.toLatin1())).toString());
+    setCombo(m_ui->comboNumbers, mSettings->value(lcNumeric, QString::fromLocal8Bit(qgetenv(lcNumeric.toLatin1().constData()))).toString());
+    setCombo(m_ui->comboTime, mSettings->value(lcTime, QString::fromLocal8Bit(qgetenv(lcTime.toLatin1().constData()))).toString());
+    setCombo(m_ui->comboCollate, mSettings->value(lcCollate, QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData()))).toString());
+    setCombo(m_ui->comboCurrency, mSettings->value(lcMonetary, QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData()))).toString());
+    setCombo(m_ui->comboMeasurement, mSettings->value(lcMeasurement, QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData()))).toString());
 
     updateEnabled();
 
@@ -376,12 +376,12 @@ void LocaleConfig::defaults()
     m_ui->checkDetailed->setChecked(false);
 
     // restore user defaults from env vars
-    setCombo(m_ui->comboGlobal, qgetenv(lcLang.toLatin1()));
-    setCombo(m_ui->comboNumbers, qgetenv(lcNumeric.toLatin1()));
-    setCombo(m_ui->comboTime, qgetenv(lcTime.toLatin1()));
-    setCombo(m_ui->comboCollate, qgetenv(lcCollate.toLatin1()));
-    setCombo(m_ui->comboCurrency, qgetenv(lcMonetary.toLatin1()));
-    setCombo(m_ui->comboMeasurement, qgetenv(lcMeasurement.toLatin1()));
+    setCombo(m_ui->comboGlobal, QString::fromLocal8Bit(qgetenv(lcLang.toLatin1().constData())));
+    setCombo(m_ui->comboNumbers, QString::fromLocal8Bit(qgetenv(lcNumeric.toLatin1().constData())));
+    setCombo(m_ui->comboTime, QString::fromLocal8Bit(qgetenv(lcTime.toLatin1().constData())));
+    setCombo(m_ui->comboCollate, QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData())));
+    setCombo(m_ui->comboCurrency, QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData())));
+    setCombo(m_ui->comboMeasurement, QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData())));
 
     updateEnabled();
 }
