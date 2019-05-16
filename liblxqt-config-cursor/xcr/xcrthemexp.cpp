@@ -107,16 +107,16 @@ static bool readNextSection (QTextStream &stream, CursorInfo &info) {
         if (s.isNull()) return true;
         s = s.trimmed();
        //qDebug() << "*" << s;
-        if (s.isEmpty() || s[0] == '#' || s[0] == ';') continue;
-        if (s[0] == '[') break;
+        if (s.isEmpty() || s[0] == QLatin1Char('#') || s[0] == QLatin1Char(';')) continue;
+        if (s[0] == QLatin1Char('[')) break;
       }
       int len = s.length()-1;
-      if (s[len] == ']') len--;
+      if (s[len] == QLatin1Char(']')) len--;
       s = s.mid(1, len);
       const char *csn = findCurShapeName(s);
       if (!csn) continue;
       // section found
-      info.curSection = csn;
+      info.curSection = QString::fromUtf8(csn);
       break;
     }
   } else {
@@ -129,16 +129,16 @@ static bool readNextSection (QTextStream &stream, CursorInfo &info) {
     if (s.isNull()) return true;
     s = s.trimmed();
    //qDebug() << "+" << s;
-    if (s.isEmpty() || s[0] == '#' || s[0] == ';') continue;
-    if (s[0] == '[') {
+    if (s.isEmpty() || s[0] == QLatin1Char('#') || s[0] == QLatin1Char(';')) continue;
+    if (s[0] == QLatin1Char('[')) {
       int len = s.length()-1;
-      if (s[len] == ']') len--;
+      if (s[len] == QLatin1Char(']')) len--;
       s = s.mid(1, len);
       const char *csn = findCurShapeName(s);
-      if (csn) info.nextSection = csn; else info.nextSection.clear();
+      if (csn) info.nextSection = QString::fromUtf8(csn); else info.nextSection.clear();
       break;
     }
-    QStringList nv(s.split('='));
+    QStringList nv(s.split(QLatin1Char('=')));
     if (nv.size() != 2) continue; // invalid
     QString name = nv[0].simplified().toLower();
     quint32 num = 0;
@@ -208,7 +208,7 @@ static QString unzipFile (const QString &zipFile) {
   char *td = mkdtemp(tmpDirName);
   if (!td) return QString();
 
-  QDir dir(td);
+  QDir dir(QString::fromUtf8(td));
 
   args << QStringLiteral("-b"); // all files are binary
   args << QStringLiteral("-D"); // skip timestamps
@@ -251,7 +251,7 @@ XCursorThemeXP::XCursorThemeXP (const QString &aFileName) : XCursorTheme() {
         mList.clear();
       }
       qDebug() << "doing cleanup...";
-      dst.remove(0, dst.indexOf('/', 1)+1);
+      dst.remove(0, dst.indexOf(QLatin1Char('/'), 1)+1);
       removeFilesAndDirs(d);
       d.cd(QStringLiteral(".."));
       qDebug() << dst;
@@ -291,7 +291,7 @@ bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
    ;
 */
     const char ** nlst = XCursorTheme::findCursorRecord(info.curSection, 0);
-    QString imgFile = findFile(thDir, info.curSection+".png", true);
+    QString imgFile = findFile(thDir, info.curSection+QStringLiteral(".png"), true);
     if (!sectionsSeen.contains(info.curSection) && nlst && !imgFile.isEmpty()) {
      qDebug() << "section" << info.curSection << "file:" << imgFile;
       sectionsSeen << info.curSection;
@@ -311,7 +311,7 @@ bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
       // load image
       QImage img(imgFile);
       if (!img.isNull()) {
-        XCursorImages *cim = new XCursorImages(*nlst);
+        XCursorImages *cim = new XCursorImages(QString::fromUtf8(*nlst));
         quint32 frameWdt = img.width()/info.frameCnt;
        qDebug() << "frameWdt:" << frameWdt << "left:" << img.width()%(frameWdt*info.frameCnt);
         // now build animation sequence

@@ -36,7 +36,7 @@
 #include <QTextStream>
 #include <QProcess>
 
-#define HOME_ICON_DIR QDir::homePath() + "/.icons"
+const QString HOME_ICON_DIR(QDir::homePath() + QStringLiteral("/.icons"));
 
 SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     : QWidget(parent),
@@ -168,7 +168,7 @@ void SelectWnd::applyCusorTheme()
     // call xrdb to merge the new settings in ~/.Xdefaults
     // FIXME: need to check if we're running in X?
     QProcess xrdb;
-    xrdb.start("xrdb -merge " + QDir::home().path() + "/.Xdefaults");
+    xrdb.start(QStringLiteral("xrdb -merge ") + QDir::home().path() + QStringLiteral("/.Xdefaults"));
     xrdb.waitForFinished();
 
     // old razor-qt and lxqt versions use $XCURSOR_THEME environment variable
@@ -187,9 +187,9 @@ void SelectWnd::applyCusorTheme()
     // This is the most reliable way.
     // QSettings will encode the group name "Icon Theme" to "Icon%20Theme" and there is no way to turn it off.
     // So let's not use it here. :-(
-    QString dirPath = HOME_ICON_DIR + "/default";
+    QString dirPath = HOME_ICON_DIR + QStringLiteral("/default");
     QDir().mkpath(dirPath); // ensure the existence of the ~/.icons/default dir
-    QFile indexTheme(dirPath + "/index.theme");
+    QFile indexTheme(dirPath + QStringLiteral("/index.theme"));
     if(indexTheme.open(QIODevice::WriteOnly|QIODevice::Truncate))
     {
         QTextStream(&indexTheme) <<

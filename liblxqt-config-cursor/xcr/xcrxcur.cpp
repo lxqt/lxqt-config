@@ -115,14 +115,14 @@ void XCursorImageXCur::parseImgData (const void *aImgData) {
 
 ///////////////////////////////////////////////////////////////////////////////
 XCursorImagesXCur::XCursorImagesXCur (const QDir &aDir, const QString &aName) : XCursorImages(aName, aDir.path()) {
-  parseCursorFile(aDir.path()+"/"+aName);
+  parseCursorFile(aDir.path()+QStringLiteral("/")+aName);
 }
 
 
 XCursorImagesXCur::XCursorImagesXCur (const QString &aFileName) : XCursorImages(QLatin1String(""), QLatin1String("")) {
   QString name(aFileName);
-  if (name.isEmpty() || name.endsWith('/')) return;
-  int i = name.lastIndexOf('/');
+  if (name.isEmpty() || name.endsWith(QLatin1Char('/'))) return;
+  int i = name.lastIndexOf(QLatin1Char('/'));
   QString dir;
   if (i < 0) dir = QLatin1String("./"); else dir = name.left(i);
   name = name.mid(i+1);
@@ -241,7 +241,7 @@ bool XCursorImagesXCur::parseCursorFile (const QString &fname) {
     // load image
     const uchar *dta = (const uchar *)ba.constData();
     dta += dataOfs;
-    XCursorImage *img = new XCursorImageXCur(mName+"_"+QString::number(cnt), dta);
+    XCursorImage *img = new XCursorImageXCur(mName+QStringLiteral("_")+QString::number(cnt), dta);
     if (img->isValid()) mList << img; else delete img;
   }
   return true;

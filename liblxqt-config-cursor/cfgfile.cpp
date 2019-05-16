@@ -29,18 +29,18 @@ QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
             QString s = stream.readLine();
             if (s.isNull()) break;
             s = s.trimmed();
-            if (s.isEmpty() || s[0] == '#' || s[0] == ';') continue;
-            if (s[0] == '[')
+            if (s.isEmpty() || s[0] == QLatin1Char('#') || s[0] == QLatin1Char(';')) continue;
+            if (s[0] == QLatin1Char('['))
             {
                 // new path
                 int len = s.length()-1;
-                if (s[len] == ']') len--;
+                if (s[len] == QLatin1Char(']')) len--;
                 s = s.mid(1, len).simplified();
-                s += '/';
+                s += QLatin1Char('/');
                 curPath = s;
                 continue;
             }
-            int eqp = s.indexOf('=');
+            int eqp = s.indexOf(QLatin1Char('='));
             if (eqp < 0) continue; // invalid entry
             QString name = s.left(eqp).simplified();
             QString value = s.mid(eqp+1).simplified();
@@ -58,7 +58,7 @@ void fixXDefaults(const QString &themeName)
 {
     QStringList lst;
     {
-        QFile fl(QDir::home().path()+"/.Xdefaults");
+        QFile fl(QDir::home().path()+QStringLiteral("/.Xdefaults"));
         if (fl.open(QIODevice::ReadOnly))
         {
             QTextStream stream;
@@ -83,7 +83,7 @@ void fixXDefaults(const QString &themeName)
     }
     {
         //QByteArray ba(themeName.toUtf8());
-        QFile fl(QDir::home().path()+"/.Xdefaults");
+        QFile fl(QDir::home().path()+QStringLiteral("/.Xdefaults"));
         if (fl.open(QIODevice::WriteOnly))
         {
             QTextStream stream;
@@ -101,7 +101,7 @@ void fixXDefaults(const QString &themeName)
 const QString findDefaultTheme()
 {
     QString res = QStringLiteral("default");
-    QFile fl(QDir::home().path()+"/.Xdefaults");
+    QFile fl(QDir::home().path()+QStringLiteral("/.Xdefaults"));
     if (fl.open(QIODevice::ReadOnly))
     {
         QTextStream stream;

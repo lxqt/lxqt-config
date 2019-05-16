@@ -124,9 +124,9 @@ const QStringList XCursorThemeModel::searchPaths()
 {
     if (!mBaseDirs.isEmpty()) return mBaseDirs;
     // Get the search path from Xcursor
-    QString path = XcursorLibraryPath();
+    QString path = QString::fromUtf8(XcursorLibraryPath());
     // Separate the paths
-    mBaseDirs = path.split(':', QString::SkipEmptyParts);
+    mBaseDirs = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
     // Remove duplicates
     QMutableStringListIterator i(mBaseDirs);
     while (i.hasNext())
@@ -136,7 +136,7 @@ const QStringList XCursorThemeModel::searchPaths()
         while (j.hasNext()) if (j.next() == path) j.remove();
     }
     // Expand all occurrences of ~/ to the home dir
-    mBaseDirs.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
+    mBaseDirs.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
     return mBaseDirs;
 }
 
@@ -162,7 +162,7 @@ bool XCursorThemeModel::isCursorTheme(const QString &theme, const int depth)
         // If the theme doesn't have an index.theme file, it can't inherit any themes
         if (!dir.exists(QStringLiteral("index.theme"))) continue;
         // Open the index.theme file, so we can get the list of inherited themes
-        QMultiMap<QString, QString> cfg = loadCfgFile(dir.path()+"/index.theme", true);
+        QMultiMap<QString, QString> cfg = loadCfgFile(dir.path()+QStringLiteral("/index.theme"), true);
         QStringList inherits = cfg.values(QStringLiteral("icon theme/inherits"));
         // Recurse through the list of inherited themes, to check if one of them is a cursor theme
         // note that items are reversed
@@ -189,7 +189,7 @@ bool XCursorThemeModel::handleDefault(const QDir &themeDir)
     }
     // If there's no cursors subdir, or if it's empty
     if (!themeDir.exists(QStringLiteral("cursors")) ||
-        QDir(themeDir.path() + "/cursors").entryList(QDir::Files |
+        QDir(themeDir.path() + QStringLiteral("/cursors")).entryList(QDir::Files |
         QDir::NoDotAndDotDot).isEmpty())
     {
         if (themeDir.exists(QStringLiteral("index.theme")))
