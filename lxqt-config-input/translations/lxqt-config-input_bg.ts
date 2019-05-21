@@ -31,7 +31,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished">Повторение на знаци</translation>
+        <translation>Повторение на знаци</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished">Задържане на повторението:</translation>
+        <translation>Повторно закъснение:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation type="unfinished">Интервал на повторение:</translation>
+        <translation>Повтори интервал:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
@@ -64,7 +64,7 @@
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished">Няма</translation>
+        <translation>Няма</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
@@ -145,43 +145,43 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation type="unfinished">Движение</translation>
+        <translation>Движение</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation type="unfinished">Високо</translation>
+        <translation>Високо</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation type="unfinished">Бързо</translation>
+        <translation>Бързо</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation type="unfinished">Чувствителност:</translation>
+        <translation>Чувствителност:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation type="unfinished">Ниско</translation>
+        <translation>Ниско</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation type="unfinished">Ускорение:</translation>
+        <translation>Ускорение:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation type="unfinished">Бавно</translation>
+        <translation>Бавно</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="116"/>
         <location filename="../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished">Лява ръка (смяна на ляв и десен бутони на мишката)</translation>
+        <translation>Лява ръка (смяна на ляв и десен бутони на мишката)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
         <source>Mouse</source>
-        <translation type="unfinished">Мишка</translation>
+        <translation>Мишка</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
         <source>Keyboard</source>
-        <translation type="unfinished">Клавиатура</translation>
+        <translation>Клавиатура</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
