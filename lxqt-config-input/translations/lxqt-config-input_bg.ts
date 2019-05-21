@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished">Звуков сигнал, когато има грешка при набирането</translation>
+        <translation>Звуков сигнал, когато има грешка при въвеждане на клавиатурата</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -37,7 +37,7 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished">Дълго</translation>
+        <translation>Дълго</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Включване на NumLock при вход в системата</translation>
+        <translation>Включване на Num Lock след вход в системата</translation>
     </message>
 </context>
 <context>
