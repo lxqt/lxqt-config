@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Забавяне на повторението:</translation>
+        <translation>Повторно закъснение:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Размер на скрола:</translation>
+        <translation>Линии на скрола за превъртане:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
