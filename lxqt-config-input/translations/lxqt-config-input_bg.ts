@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Повторно закъснение:</translation>
+        <translation>Забавяне на повторението:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
