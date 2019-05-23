@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Честота на примигване на показалеца:</translation>
+        <translation>Честота на примигване на курсора:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
