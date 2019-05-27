@@ -6,92 +6,92 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Región:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Podrobné nastavenie</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Čísla:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Čas:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mena:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Jednotky merania:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zrovnanie  a radenie:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>&lt;b&gt;Examples&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Príklady&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Číslo:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Čas:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mena:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednotky merania:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation type="unfinished"></translation>
+        <translation>Bez zmeny</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavenie formátu zmenené</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chcete uložiť zmeny? Prejavia sa po následujúcom prihlásení.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Anglické, Veľká Británia</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>Anglické, Spojené štáty</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metrické</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Miestne nastavenia LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Miestne nastavenia</translation>
     </message>
 </context>
 </TS>
