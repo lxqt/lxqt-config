@@ -6,22 +6,22 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation type="unfinished"></translation>
+        <translation>Voľba aplikácie</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať aplikáciu pre:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikácie spracovávajú JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -29,23 +29,23 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation type="unfinished"></translation>
+        <translation>Nový podbod</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostatné aplikácie</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikácie spracovavajúce %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenájdené žiadne aplikácie</translation>
     </message>
 </context>
 <context>
@@ -54,17 +54,17 @@
         <location filename="../mimetypeviewer.cpp" line="156"/>
         <location filename="../mimetypeviewer.cpp" line="207"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zmeniť...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
         <source>&amp;Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vybrať...</translation>
     </message>
 </context>
 <context>
@@ -72,52 +72,52 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Priradenie súborov</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation type="unfinished"></translation>
+        <translation>Preddefinované aplikácie</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
         <source>&amp;Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vybrať...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Textový štítok</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiaden</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
         <source>Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzor</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
         <source>*.txt *.xml</source>
-        <translation type="unfinished"></translation>
+        <translation>*.txt *.xml</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
         <source>MIME type</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ MIME</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="191"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikona</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="198"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis</translation>
     </message>
 </context>
 </TS>
