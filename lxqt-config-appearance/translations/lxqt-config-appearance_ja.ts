@@ -153,12 +153,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEの拡張機能 アイコンテーマXDG  -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェットのスタイル（パレット）に基づいてアイコンを色付けする</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>テーマを統一するには、すべてのリストで類似のスタイル・テーマを(可能ならば)選択するか、GTKテーマを模倣するために Qtスタイルで &apos;gtk2&apos; を(可能ならば)選択します。
+
+すぐに GTKアプリケーションのテーマに適用されるように、&apos;xsettingsd&apos; がインストールされていることを確認してください。</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
