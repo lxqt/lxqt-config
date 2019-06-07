@@ -261,7 +261,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
 </context>
 <context>
