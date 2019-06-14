@@ -132,7 +132,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細な設定</translation>
     </message>
 </context>
 <context>
@@ -256,7 +256,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>反転</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
