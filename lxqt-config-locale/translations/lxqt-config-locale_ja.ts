@@ -6,12 +6,12 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation>地域(&amp;g):</translation>
+        <translation>地域(&amp;G):</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>詳細設定(&amp;t)</translation>
+        <translation>詳細設定(&amp;T)</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>通貨(&amp;y):</translation>
+        <translation>通貨(&amp;Y):</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>照合及びソート(&amp;l):</translation>
+        <translation>照合及びソート(&amp;L):</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -71,12 +71,13 @@
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation>書式設定の変更</translation>
+        <translation>書式設定が変更されました</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>変更を保存しますか? 変更は次回のログイン時から有効になります。</translation>
+        <translation>変更は次回のログイン時から有効になります。
+変更を保存しますか？</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
