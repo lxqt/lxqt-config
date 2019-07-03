@@ -6,27 +6,27 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation type="unfinished"></translation>
+        <translation>簡易設定</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❷ 拡張表示</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❶ 同時表示</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶     第１のみ</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation type="unfinished"></translation>
+        <translation>     ❷ 第２のみ</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation>設定の保存</translation>
+        <translation>保存した設定</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
@@ -80,13 +80,13 @@
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>True</source>
-        <translation type="unfinished"></translation>
+        <translation>はい</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>False</source>
-        <translation type="unfinished"></translation>
+        <translation>いいえ</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation>ファストメニュー</translation>
+        <translation>簡易メニュー</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
-        <translation>詳細な設定</translation>
+        <translation>詳細設定</translation>
     </message>
 </context>
 <context>
@@ -140,17 +140,17 @@
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation type="unfinished"></translation>
+        <translation>構成</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="29"/>
         <source> (x)</source>
-        <translation type="unfinished"></translation>
+        <translation> (X)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="45"/>
         <source> (y)</source>
-        <translation type="unfinished"></translation>
+        <translation> (Y)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="78"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>他のディスプレイにこのスクリーンを拡張する</translation>
+        <translation>他のディスプレイにこの画面を拡張する</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -215,7 +215,7 @@
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation>シリアル番号: %1
+        <translation>シリアル: %1
 </translation>
     </message>
     <message>
@@ -236,7 +236,7 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>EISA デバイス ID: %1</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
@@ -277,12 +277,12 @@
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="unfinished">名前</translation>
+        <translation>名前</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="unfinished">名前:</translation>
+        <translation>名前:</translation>
     </message>
 </context>
 <context>
