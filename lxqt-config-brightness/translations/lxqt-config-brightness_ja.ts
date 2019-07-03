@@ -26,7 +26,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>確認します。この設定でよろしいですか？</translation>
+        <translation>確認です。この設定でよろしいですか？</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation>右クリックでリセット</translation>
+        <translation>右クリックでリセットします</translation>
     </message>
 </context>
 </TS>
