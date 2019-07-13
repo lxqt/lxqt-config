@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;注意&lt;/span&gt;: &lt;span style=&quot; font-weight:600;&quot;&gt;入力メソッド&lt;/span&gt;(例: IBus や uim、fcitx、gcin)を使用している場合には, この設定は&lt;span style=&quot; font-weight:600;&quot;&gt;機能しないことがあります&lt;/span&gt;。入力メソッドが設定を上書きしてしまうためです。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;注意&lt;/span&gt;: &lt;span style=&quot; font-weight:600;&quot;&gt;入力メソッド&lt;/span&gt;(IBus, uim, fcitx, gcin など)を使用している場合には、この設定は&lt;span style=&quot; font-weight:600;&quot;&gt;機能しないことがあります&lt;/span&gt;。入力メソッドが設定を上書きしてしまうためです。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
