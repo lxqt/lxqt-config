@@ -104,7 +104,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation type="unfinished"></translation>
+        <translation>モニター同士が離れないようにする</translation>
     </message>
 </context>
 <context>
@@ -236,7 +236,8 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA デバイス ID: %1</translation>
+        <translation>EISA デバイス ID: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
