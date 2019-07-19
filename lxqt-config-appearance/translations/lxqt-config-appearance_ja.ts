@@ -64,7 +64,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>以下の設定は、これから新たに実行されたアプリケーションに適用されます</translation>
+        <translation>以下の設定は、これから新たに実行するアプリケーションに適用されます</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt外観の設定</translation>
+        <translation>LXQt 外観の設定</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>KDEの拡張機能 アイコンテーマXDG  -&gt; FollowsColorScheme</translation>
+        <translation>KDE の拡張機能 アイコンテーマ XDG -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -166,12 +166,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQtテーマ</translation>
+        <translation>LXQt テーマ</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>ユーザー定義の壁紙を上書き</translation>
+        <translation>壁紙のユーザー定義を上書きする</translation>
     </message>
 </context>
 <context>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt外観の設定</translation>
+        <translation>LXQt 外観の設定</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
-        <translation>LXQtテーマ</translation>
+        <translation>LXQt テーマ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="81"/>
@@ -234,9 +234,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>テーマを統一するには、すべてのリストで類似のスタイル・テーマを(可能ならば)選択するか、GTKテーマを模倣するために Qtスタイルで &apos;gtk2&apos; を(可能ならば)選択します。
+        <translation>テーマを統一するには、すべてのリストで類似のスタイルやテーマを(可能ならば)選択するか、GTK テーマを再現するために Qt スタイルで &apos;gtk2&apos; を(可能ならば)選択します。
 
-すぐに GTKアプリケーションのテーマに適用されるように、&apos;xsettingsd&apos; がインストールされていることを確認してください。</translation>
+すぐに GTK アプリケーションのテーマに適用されるように、&apos;xsettingsd&apos; がインストールされていることを確認してください。</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
