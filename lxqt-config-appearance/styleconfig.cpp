@@ -143,16 +143,17 @@ void StyleConfig::applyStyle()
         mConfigOtherToolKits->setConfig();
     }
 
-    // GTK3
-    themeName = ui->gtk3ComboBox->currentText();
-    mConfigOtherToolKits->setGTKConfig(QStringLiteral("3.0"), themeName);
-
-    // GTK2
-    themeName = ui->gtk2ComboBox->currentText();
-    mConfigOtherToolKits->setGTKConfig(QStringLiteral("2.0"), themeName);
-    
-    // Update xsettingsd
-    mConfigOtherToolKits->setXSettingsConfig();
+    if (ui->advancedOptionsGroupBox->isChecked())
+    {
+        // GTK3
+        themeName = ui->gtk3ComboBox->currentText();
+        mConfigOtherToolKits->setGTKConfig(QStringLiteral("3.0"), themeName);
+        // GTK2
+        themeName = ui->gtk2ComboBox->currentText();
+        mConfigOtherToolKits->setGTKConfig(QStringLiteral("2.0"), themeName);
+        // Update xsettingsd
+        mConfigOtherToolKits->setXSettingsConfig();
+    }
 }
 
 void StyleConfig::showAdvancedOptions(bool on)
