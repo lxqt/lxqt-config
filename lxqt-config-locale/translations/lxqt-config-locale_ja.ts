@@ -16,7 +16,7 @@
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>番号(&amp;N):</translation>
+        <translation>数字(&amp;N):</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation>番号:</translation>
+        <translation>数字:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
@@ -100,12 +100,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt ロケールの設定</translation>
+        <translation>LXQt 地域の設定</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>ロケールの設定</translation>
+        <translation>地域の設定</translation>
     </message>
 </context>
 </TS>
