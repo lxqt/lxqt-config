@@ -11,7 +11,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Use arrow keys to change settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;バックライトと輝度の設定:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;矢印キーで設定を変更できます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;バックライトと明るさの設定:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;矢印キーで設定を変更できます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
         <source>Brightness settings changed</source>
-        <translation>輝度の設定が変更されました</translation>
+        <translation>明るさの設定が変更されました</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>確認です。この設定でよろしいですか？</translation>
+        <translation>確認です。設定しますか？</translation>
     </message>
 </context>
 <context>
