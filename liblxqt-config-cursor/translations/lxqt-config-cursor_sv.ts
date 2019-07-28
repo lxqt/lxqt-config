@@ -6,7 +6,7 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Mouse Theme Configuration</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
