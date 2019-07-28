@@ -6,70 +6,70 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulär</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Markörens blinktid:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Tangentbord&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished">Avge ett pip när ett fel uppstår vid tangentbordsinmatning</translation>
+        <translation>Avge ett pip när ett fel uppstår vid tangentbordsinmatning</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished">Teckenupprepning</translation>
+        <translation>Teckenupprepning</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished">Lång</translation>
+        <translation>Lång</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished">Tid innan upprepning:</translation>
+        <translation>Tid före upprepning:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished">Kort</translation>
+        <translation>Kort</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation type="unfinished">Tid mellan upprepningar:</translation>
+        <translation>Tid mellan upprepningar:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation type="unfinished">För att pröva dina inställningar kan du skriva i följande ruta</translation>
+        <translation>För att prova dina inställningar kan du skriva i följande ruta</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera NumLock efter inloggning</translation>
     </message>
 </context>
 <context>
@@ -77,57 +77,57 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Tangentbordslayout&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Layout</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Variant</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lägg till</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta &amp;bort</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Upp</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ner</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangentbordsmodell:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangent(er) för att byta layout:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; &lt;span style=&quot; font-weight:600;&quot;&gt;Obs&lt;/span&gt; : Om du använder en &lt;span style=&quot; font-weight:600;&quot;&gt;inmatningsmetod&lt;/span&gt; , till exempel IBus, uim, fcitx eller gcin, &lt;span style=&quot; font-weight:600;&quot;&gt;kanske&lt;/span&gt; inställningarna här &lt;span style=&quot; font-weight:600;&quot;&gt;inte fungerar&lt;/span&gt; eftersom de åsidosätts av inmatningsmetoderna. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -135,63 +135,63 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulär</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mus&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation type="unfinished">Rörelse</translation>
+        <translation>Rörelse</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation type="unfinished">Hög</translation>
+        <translation>Hög</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation type="unfinished">Snabb</translation>
+        <translation>Snabb</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation type="unfinished">Känslighet:</translation>
+        <translation>Känslighet:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation type="unfinished">Låg</translation>
+        <translation>Låg</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation type="unfinished">Acceleration:</translation>
+        <translation>Acceleration:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation type="unfinished">Långsam</translation>
+        <translation>Långsam</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="116"/>
         <location filename="../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervall för dubbelklick:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
@@ -201,12 +201,12 @@
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished">Vänsterhänt (byt funktioner för vänster och höger musknapp)</translation>
+        <translation>Vänsterhänt (byt funktioner för vänster och höger musknapp)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkelklicka för att aktivera objekt</translation>
     </message>
 </context>
 <context>
@@ -214,27 +214,27 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="51"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar för tangentbord och mus</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="56"/>
         <source>Mouse</source>
-        <translation type="unfinished">Mus</translation>
+        <translation>Mus</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="61"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Markör</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="64"/>
         <source>Keyboard</source>
-        <translation type="unfinished">Tangentbord</translation>
+        <translation>Tangentbord</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="68"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangentbordslayout</translation>
     </message>
 </context>
 <context>
@@ -242,17 +242,17 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj en tangentbordslayout</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangentbordslayout</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Variant</translation>
     </message>
 </context>
 </TS>
