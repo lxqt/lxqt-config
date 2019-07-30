@@ -1,4 +1,4 @@
 # Translations
-Comment[ja]=LXQtデスクトップの外観を設定
-GenericName[ja]=LXQt外観の設定
-Name[ja]=LXQt外観の設定
+Name[ja]=外観
+GenericName[ja]=外観
+Comment[ja]=LXQt 外観(テーマ、フォント、アイコン等)を設定します
