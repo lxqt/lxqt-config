@@ -1,4 +1,4 @@
 # Translations
-Comment[ja]=LXQtモジュールを設定
-GenericName[ja]=LXQtの設定
-Name[ja]=LXQtコンフィグレーションセンター
+Name[ja]=LXQt コンフィグレーションセンター
+GenericName[ja]=システムの設定
+Comment[ja]=LXQt システムに関する様々な設定をします
