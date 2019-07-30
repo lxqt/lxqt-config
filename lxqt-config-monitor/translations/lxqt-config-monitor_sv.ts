@@ -6,27 +6,27 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation type="unfinished"></translation>
+        <translation>Snabbinställningar</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❷ Utökad vy</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ ❶ Enhetlig vy</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation type="unfinished"></translation>
+        <translation> ❶ Bara först</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation type="unfinished"></translation>
+        <translation>     ❷ Endast andra</translation>
     </message>
 </context>
 <context>
@@ -34,69 +34,69 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildskärmsinställningar</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Sparade inställningar</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Byt namn</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="67"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vänster</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Omvänd</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Höger</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>True</source>
-        <translation type="unfinished"></translation>
+        <translation>Sant</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="77"/>
         <location filename="../managesavedsettings.cpp" line="78"/>
         <source>False</source>
-        <translation type="unfinished"></translation>
+        <translation>Falskt</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Namn</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="140"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Namn:</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation type="unfinished"></translation>
+        <translation>Håll bildskärmarna anslutna</translation>
     </message>
 </context>
 <context>
@@ -112,27 +112,27 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildskärmsinställningar</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Snabbmeny</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange position</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Avancerade inställningar</translation>
     </message>
 </context>
 <context>
@@ -140,123 +140,129 @@
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguration</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="29"/>
         <source> (x)</source>
-        <translation type="unfinished"></translation>
+        <translation> (x)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="45"/>
         <source> (y)</source>
-        <translation type="unfinished"></translation>
+        <translation> (y)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="78"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Upplösning:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera den här skärmen</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation type="unfinished"></translation>
+        <translation>Det här är min primära skärm</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation type="unfinished"></translation>
+        <translation>Den här skärmen utökar en annan skärm</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Avancerat</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppdateringsfrekvens:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation type="unfinished"></translation>
+        <translation>Skärminformation</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
         <source>Name: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Namn: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="136"/>
         <source>Vendor: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Leverantör: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Serienummer: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Skärmstorlek: %1 cm x%2 cm
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="139"/>
         <source>Serial number: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Serienummer: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>EISA-enhetens ID: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="162"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vänster</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="163"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Höger</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="164"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Omvänd</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Hz</translation>
     </message>
 </context>
 <context>
@@ -264,7 +270,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Hantera sparade inställningar</translation>
     </message>
 </context>
 <context>
@@ -272,12 +278,12 @@
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Namn</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Namn:</translation>
     </message>
 </context>
 <context>
@@ -285,19 +291,18 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningarna ändras</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation type="unfinished"></translation>
+        <translation>Är de aktuella inställningarna OK för dig?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n sekund återstår</numerusform>
+        <numerusform>%n sekunder återstår</numerusform>
+        </translation></message>
 </context>
 </TS>
