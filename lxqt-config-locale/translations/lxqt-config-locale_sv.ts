@@ -6,92 +6,92 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation type="unfinished"></translation>
+        <translation>Om&amp;råde:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>D&amp;etaljerade inställningar</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nummer:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tid:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Valuta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Måtten&amp;heter:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jämföre&amp;lser och sortering:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>&lt;b&gt;Examples&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;exempel&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummer:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tid:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valuta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Måttenheter:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen ändring</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Formatinställningar har ändrats</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vill du spara dina ändringar? De träder i kraft nästa gång du loggar in.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Brittiska måttenheter</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>Amerikanska måttenheter</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metersystem</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-landskonfiguration</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Landsinställningar</translation>
     </message>
 </context>
 </TS>
