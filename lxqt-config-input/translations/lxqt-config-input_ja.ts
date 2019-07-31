@@ -21,17 +21,17 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>キーボード入力にエラーがあるときはビープ音を出す</translation>
+        <translation>キーボード入力にエラーがある時はビープ音を出す</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation> ms</translation>
+        <translation> ミリ秒</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation>文字リピート</translation>
+        <translation>文字のリピート</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>下のボックスにタイプして、キーボード設定のテストをしてください</translation>
+        <translation>キーボード設定を確認するには、下のボックスで入力して下さい</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>ログイン後にNumlockを有効にする</translation>
+        <translation>ログイン後に Numlock をロックにする</translation>
     </message>
 </context>
 <context>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation> ms</translation>
+        <translation> ミリ秒</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
