@@ -117,7 +117,7 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
-        <translation>設定</translation>
+        <translation>保存した設定</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
         <source>Advanced settings</source>
-        <translation>詳細設定</translation>
+        <translation>設定</translation>
     </message>
 </context>
 <context>
