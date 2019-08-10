@@ -112,7 +112,7 @@ protected:
 };
 
 bool haveXfixes();
-bool applyTheme(const XCursorThemeData &theme);
+bool applyTheme(const XCursorThemeData &theme, int cursorSize);
 
 QString getCurrentTheme();
 

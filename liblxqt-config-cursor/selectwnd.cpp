@@ -36,6 +36,9 @@
 #include <QTextStream>
 #include <QProcess>
 
+#include <QX11Info>
+#include <X11/Xcursor/Xcursor.h>
+
 const QString HOME_ICON_DIR(QDir::homePath() + QStringLiteral("/.icons"));
 
 SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
@@ -45,6 +48,8 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
 {
     ui->setupUi(this);
     ui->warningLabel->hide();
+    ui->preview->setCurrentCursorSize(XcursorGetDefaultSize(QX11Info::display()));
+    ui->preview->setCursorSize(ui->preview->getCurrentCursorSize());
 
     mModel = new XCursorThemeModel(this);
 
@@ -66,6 +71,12 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
 
     connect(ui->warningLabel, SIGNAL(showDirInfo()),
                     this, SLOT(showDirInfo()));
+    
+    // Set actual cursor size
+    ui->cursorSizeSpinBox->setValue(XcursorGetDefaultSize(QX11Info::display()));
+    
+    connect(ui->cursorSizeSpinBox, SIGNAL(	valueChanged(int)),
+                    this, SLOT(cursorSizeChaged(int)));
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there
@@ -102,7 +113,7 @@ void SelectWnd::setCurrent()
         selectRow(mAppliedIndex);
         ui->lbThemes->scrollTo(mAppliedIndex, QListView::PositionAtCenter);
         // Update the preview widget as well
-        if (theme) ui->preview->setTheme(*theme);// else ui->preview->clearTheme();
+        if (theme) ui->preview->setTheme(theme);// else ui->preview->clearTheme();
     }
 }
 
@@ -136,7 +147,7 @@ void SelectWnd::currentChanged(const QModelIndex &current, const QModelIndex &pr
     if (current.isValid()) {
         const XCursorThemeData *theme = mModel->theme(current);
         if (theme) {
-            ui->preview->setTheme(*theme);
+            ui->preview->setTheme(theme);
             ui->btRemove->setEnabled(theme->isWritable());
         } else {
             ui->preview->clearTheme();
@@ -159,11 +170,18 @@ void SelectWnd::applyCusorTheme()
     QModelIndex curIndex = ui->lbThemes->currentIndex();
     if(!curIndex.isValid()) return;
     const XCursorThemeData *theme = mModel->theme(curIndex);
-    if(!theme || mSettings->value(QStringLiteral("Mouse/cursor_theme")) == theme->name()) {
+    
+    if(!theme ||
+        (
+            mSettings->value(QStringLiteral("Mouse/cursor_theme")) == theme->name()
+            && mSettings->value(QStringLiteral("Mouse/cursor_size")) == ui->cursorSizeSpinBox->value()
+        )
+    ) {
         return;
     }
-    applyTheme(*theme);
-    fixXDefaults(theme->name());
+    
+    applyTheme(*theme, ui->cursorSizeSpinBox->value());
+    fixXDefaults(theme->name(), ui->cursorSizeSpinBox->value());
 
     // call xrdb to merge the new settings in ~/.Xdefaults
     // FIXME: need to check if we're running in X?
@@ -179,6 +197,7 @@ void SelectWnd::applyCusorTheme()
     // save to Mouse/cursor_theme instead
     mSettings->beginGroup(QStringLiteral("Mouse"));
     mSettings->setValue(QStringLiteral("cursor_theme"), theme->name());
+    mSettings->setValue(QStringLiteral("cursor_size"), ui->cursorSizeSpinBox->value());
     mSettings->endGroup();
 
     // The XCURSOR_THEME environment variable does not work sometimes.
@@ -197,7 +216,8 @@ void SelectWnd::applyCusorTheme()
         "[Icon Theme]\n" <<
         "Name=Default\n" <<
         "Comment=Default cursor theme\n" <<
-        "Inherits=" << theme->name() << "\n";
+        "Inherits=" << theme->name() << "\n" <<
+        "Size=" << ui->cursorSizeSpinBox->value() << "\n";
         indexTheme.close();
     }
 }
@@ -222,13 +242,19 @@ void SelectWnd::on_btRemove_clicked()
 
 void SelectWnd::handleWarning()
 {
-        bool empty = mModel->rowCount();
-        ui->warningLabel->setVisible(!empty);
-        ui->preview->setVisible(empty);
-        ui->infoLabel->setVisible(empty);
+    bool empty = mModel->rowCount();
+    ui->warningLabel->setVisible(!empty);
+    ui->preview->setVisible(empty);
+    ui->infoLabel->setVisible(empty);
 }
 
 void SelectWnd::showDirInfo()
 {
-        QToolTip::showText(mapToGlobal(ui->warningLabel->buttonPos()), mModel->searchPaths().join(QStringLiteral("\n")));
+    QToolTip::showText(mapToGlobal(ui->warningLabel->buttonPos()), mModel->searchPaths().join(QStringLiteral("\n")));
+}
+
+void SelectWnd::cursorSizeChaged(int size)
+{
+    ui->preview->setCursorSize(size);
+    emit settingsChanged();
 }
