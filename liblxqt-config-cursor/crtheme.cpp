@@ -227,12 +227,15 @@ bool haveXfixes()
     return result;
 }
 
-bool applyTheme(const XCursorThemeData &theme)
+bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 {
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
     if (!haveXfixes()) return false;
+    
+    // Sets default cursor size
+    XcursorSetDefaultSize(QX11Info::display(), cursorSize);
 
     QByteArray themeName = QFile::encodeName(theme.name());
 

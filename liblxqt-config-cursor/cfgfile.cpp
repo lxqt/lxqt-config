@@ -54,7 +54,7 @@ QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
     return res;
 }
 
-void fixXDefaults(const QString &themeName)
+void fixXDefaults(const QString &themeName, int cursorSize)
 {
     QStringList lst;
     {
@@ -68,7 +68,7 @@ void fixXDefaults(const QString &themeName)
                 QString s = stream.readLine();
                 if (s.isNull())
                     break;
-                // if the line does not contain Xcursor?theme, save it to a list
+                // if the line does not contain Xcursor.theme, save it to a list
                 if (!(s.startsWith(QLatin1String("Xcursor")) && s.midRef(8).startsWith(QLatin1String("theme"))))
                     lst << s;
             }
@@ -93,6 +93,7 @@ void fixXDefaults(const QString &themeName)
                 stream << s << "\n";
             }
             stream << "\nXcursor.theme: " << themeName << "\n";
+            stream << "\nXcursor.size: " << cursorSize << "\n";
             fl.close();
         }
     }

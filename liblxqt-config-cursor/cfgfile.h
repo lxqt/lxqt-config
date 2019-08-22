@@ -14,7 +14,7 @@
 #include <QString>
 
 QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase=false);
-void fixXDefaults(const QString &themeName);
+void fixXDefaults(const QString &themeName, int cursorSize);
 const QString findDefaultTheme();
 
 #endif

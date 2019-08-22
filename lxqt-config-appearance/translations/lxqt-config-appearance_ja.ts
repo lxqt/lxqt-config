@@ -204,7 +204,7 @@
     <message>
         <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
-        <translation>カーソル</translation>
+        <translation>マウスカーソル</translation>
     </message>
 </context>
 <context>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>GTK テーマの設定（GTK の設定ファイルが上書きされます!）</translation>
+        <translation>GTK テーマの設定(GTK の設定ファイルが上書きされます！)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>

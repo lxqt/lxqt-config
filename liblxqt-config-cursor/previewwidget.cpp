@@ -76,11 +76,13 @@ class PreviewCursor
     QPoint position () const { return mPos; }
     operator const xcb_cursor_t& () const { return mCursorHandle; }
     operator const QPixmap& () const { return pixmap(); }
+    const QString &getName() const { return mName; }
 
     private:
     QPixmap mPixmap;
     xcb_cursor_t mCursorHandle;
     QPoint mPos;
+    QString mName;
 };
 
 
@@ -96,6 +98,7 @@ PreviewCursor::PreviewCursor(const XCursorThemeData &theme, const QString &name)
     mPixmap = QPixmap::fromImage(image);
     // load the cursor
     mCursorHandle = theme.loadCursorHandle(name, previewSize);
+    mName = name;
 }
 
 QRect PreviewCursor::rect() const
@@ -109,6 +112,8 @@ PreviewWidget::PreviewWidget(QWidget *parent) : QWidget(parent)
 {
     setMouseTracking(true);
     mCurrent = NULL;
+    mCursorSize = 16; // It usually is the default cursor size
+    mCurrentCursorSize = 16;
 }
 
 PreviewWidget::~PreviewWidget()
@@ -120,6 +125,7 @@ PreviewWidget::~PreviewWidget()
 
 // Since Qt5, wrapping a Cursor handle with QCursor is no longer supported.
 // So we have to do it ourselves. I really hate Qt 5!
+// Update: Qt 5.12 setCursor works properly
 void PreviewWidget::setCursorHandle(xcb_cursor_t cursorHandle)
 {
     WId wid = nativeParentWidget()->windowHandle()->winId();
@@ -157,11 +163,12 @@ void PreviewWidget::layoutItems()
     mNeedLayout = false;
 }
 
-void PreviewWidget::setTheme(const XCursorThemeData &theme)
+void PreviewWidget::setTheme(const XCursorThemeData *theme)
 {
+    mTheme = theme;
     qDeleteAll(mList);
     mList.clear();
-    for (int i = 0; i < numCursors; ++i) mList << new PreviewCursor(theme, QString::fromUtf8(cursorNames[i]));
+    for (int i = 0; i < numCursors; ++i) mList << new PreviewCursor(*theme, QString::fromUtf8(cursorNames[i]));
     mNeedLayout = true;
     updateGeometry();
     mCurrent = NULL;
@@ -174,6 +181,7 @@ void PreviewWidget::clearTheme()
     qDeleteAll(mList);
     mList.clear();
     mCurrent = NULL;
+    mTheme = nullptr;
     update();
 }
 
@@ -204,7 +212,11 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
                 // cheat Qt so it knows that the current cursor is not Qt::ArrowCursor.
                 // This is a dirty hack, but without this, Qt cannot restore Qt::ArrowCursor later.
                 setCursor(Qt::BlankCursor);
-                setCursorHandle(*c);
+                //setCursorHandle(*c); // Use default Qt5 setCursor:
+                if(mTheme != nullptr) {
+                    QImage image = mTheme->loadImage(c->getName(), mCursorSize);
+                    if (! image.isNull()) setCursor(QPixmap::fromImage(image));
+                }
                 mCurrent = c;
             }
             return;
@@ -214,8 +226,27 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
     mCurrent = NULL;
 }
 
-
 void PreviewWidget::resizeEvent(QResizeEvent *)
 {
     if (!mList.isEmpty()) mNeedLayout = true;
+}
+
+void PreviewWidget::setCursorSize(int size)
+{
+    mCursorSize = size;
+}
+
+int PreviewWidget::getCursorSize()
+{
+    return mCursorSize;
+}
+
+void PreviewWidget::setCurrentCursorSize(int size)
+{
+    mCurrentCursorSize = size;
+}
+
+int PreviewWidget::getCurrentCursorSize()
+{
+    return mCurrentCursorSize;
 }

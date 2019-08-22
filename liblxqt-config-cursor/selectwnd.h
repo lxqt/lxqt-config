@@ -58,6 +58,7 @@ private slots:
     void on_btRemove_clicked ();
     void handleWarning();
     void showDirInfo();
+    void cursorSizeChaged(int size);
 
 private:
     XCursorThemeModel *mModel;

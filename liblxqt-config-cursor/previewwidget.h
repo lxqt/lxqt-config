@@ -37,12 +37,16 @@ public:
     PreviewWidget (QWidget *parent=0);
     ~PreviewWidget ();
 
-    void setTheme (const XCursorThemeData &theme);
+    void setTheme (const XCursorThemeData *theme);
     void clearTheme ();
 
     QSize sizeHint () const;
 
     void setCursorHandle(xcb_cursor_t cursorHandle);
+    void setCursorSize(int size);
+    int getCursorSize();
+    void setCurrentCursorSize(int size);
+    int getCurrentCursorSize();
 
 protected:
     void paintEvent (QPaintEvent *e);
@@ -55,6 +59,9 @@ private:
     QList<PreviewCursor *> mList;
     const PreviewCursor *mCurrent;
     bool mNeedLayout;
+    int mCursorSize;
+    int mCurrentCursorSize;
+    const XCursorThemeData *mTheme;
 };
 
 #endif
