@@ -23,6 +23,7 @@
 #include <QPen>
 #include <QDebug>
 #include <QVector2D>
+#include <QRectF>
 #include <QScrollBar>
 
 #include "configure.h"
@@ -260,46 +261,12 @@ void MonitorPicture::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 
 //////////////////////////////////////////////////////////////////////////////////
 // Move picture to nearest picture procedure.
-// Read magnetic_attraction.html for more info about the algorithm used.
 //////////////////////////////////////////////////////////////////////////////////
-
-struct Parameters {
-    float t1, t2;
-    QVector2D cutPoint;
-};
-
-static Parameters segmentsCut(QVector2D p0, QVector2D p1, QVector2D s0, QVector2D s1)
-{
-    Parameters result;
-    QVector2D v0 = p1 - p0;
-    QVector2D v1 = s1 - s0;
-    QVector2D P = s0 - p0;
-
-    float det = v0.y() * v1.x() - v0.x() * v1.y();
-    if (det == 0.0)
-        result.t1 = result.t2 = -1.0;
-
-    result.t1 = 1 / det * (-v1.y() * P.x() + v1.x() * P.y());
-    result.t2 = 1 / det * (-v0.y() * P.x() + v0.x() * P.y());
-    result.cutPoint = v0 * result.t1 + p0;
-    return result;
-}
-
-static QVector2D computeCenter(MonitorPicture* monitorPicture)
-{
-    float x0 = monitorPicture->x() + monitorPicture->originX;
-    float y0 = monitorPicture->y() + monitorPicture->originY;
-    float x1 = x0 + monitorPicture->rect().width();
-    float y1 = y0 + monitorPicture->rect().height();
-    QVector2D p0(x0, y0);
-    QVector2D p1(x1, y1);
-    QVector2D center = p0 + (p1 - p0) * 0.5;
-    return center;
-}
 
 struct Result_moveMonitorPictureToNearest
 {
     bool ok;
+    bool outside;
     QVector2D vector;
 };
 
@@ -307,107 +274,124 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
                                                              MonitorPicture* monitorPicture2)
 {
     Result_moveMonitorPictureToNearest result;
-    QVector2D center1 = computeCenter(monitorPicture1);
-    QVector2D center2 = computeCenter(monitorPicture2);
-    float x0 = monitorPicture2->x() + monitorPicture2->originX;
-    float y0 = monitorPicture2->y() + monitorPicture2->originY;
-    float x1 = x0 + monitorPicture2->rect().width();
-    float y1 = y0 + monitorPicture2->rect().height();
-
-    QVector2D p0(x0, y0);
-    QVector2D p1(x1, y1);
-    QVector2D P1, P2;
-    float t1 = -1.0, t2 = -1.0;
-
-    Parameters params = segmentsCut(center1, center2, QVector2D(x0, y0), QVector2D(x1, y0));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t1 < 0)
-    {
-        t1 = params.t1;
-        P1 = params.cutPoint;
-    }
-
-    params = segmentsCut(center1, center2, QVector2D(x0, y0), QVector2D(x0, y1));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t1 < 0)
-    {
-        t1 = params.t1;
-        P1 = params.cutPoint;
-    }
-
-    params = segmentsCut(center1, center2, QVector2D(x1, y1), QVector2D(x1, y0));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t1 < 0)
-    {
-        t1 = params.t1;
-        P1 = params.cutPoint;
-    }
-
-    params = segmentsCut(center1, center2, QVector2D(x1, y1), QVector2D(x0, y1));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t1 < 0)
-    {
-        t1 = params.t1;
-        P1 = params.cutPoint;
-    }
-
-    x0 = monitorPicture1->x() + monitorPicture1->originX;
-    y0 = monitorPicture1->y() + monitorPicture1->originY;
-    x1 = x0 + monitorPicture1->rect().width();
-    y1 = y0 + monitorPicture1->rect().height();
-    p0 = QVector2D(x0, y0);
-    p1 = QVector2D(x1, y1);
-
-    params = segmentsCut(center1, center2, QVector2D(x0, y0), QVector2D(x1, y0));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t2 < 0)
-    {
-        t2 = params.t1;
-        P2 = params.cutPoint;
-    }
-
-    params = segmentsCut(center1, center2, QVector2D(x0, y0), QVector2D(x0, y1));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t2 < 0)
-    {
-        t2 = params.t1;
-        P2 = params.cutPoint;
-    }
-
-    params = segmentsCut(center1, center2, QVector2D(x1, y1), QVector2D(x1, y0));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t2 < 0)
-    {
-        t2 = params.t1;
-        P2 = params.cutPoint;
-    }
-
-    params = segmentsCut(center1, center2, QVector2D(x1, y1), QVector2D(x0, y1));
-    if (params.t1 >= 0.0 && params.t1 <= 1.0 && params.t2 >= 0.0 && params.t2 <= 1.0 && t2 < 0)
-    {
-        t2 = params.t1;
-        P2 = params.cutPoint;
-    }
-
-    // Monitor outside
-    if (t1 > t2)
-    {
-        result.vector = P1 - P2;
-        result.ok = false;
-    } else
+    QVector2D offsetVector(0, 0);
+    QRectF extendedAreaRect;
+    QRectF monitorPicture1Rect(
+        monitorPicture1->x() + monitorPicture1->originX,
+        monitorPicture1->y() + monitorPicture1->originY,
+        monitorPicture1->rect().width(),
+        monitorPicture1->rect().height());
+    QRectF monitorPicture2Rect(
+        monitorPicture2->x() + monitorPicture2->originX,
+        monitorPicture2->y() + monitorPicture2->originY,
+        monitorPicture2->rect().width(),
+        monitorPicture2->rect().height());
+    
+    if(monitorPicture1Rect.intersects(monitorPicture2Rect)) {
         result.ok = true;
-
+        return result;
+    }
+    
+    result.outside = true;
+    result.ok = false;
+    
+    extendedAreaRect = QRectF(
+        qMin(monitorPicture2Rect.x(), monitorPicture1Rect.x()) - monitorPicture2Rect.width(),
+        monitorPicture2Rect.y(),
+        qMax(monitorPicture2Rect.x(), monitorPicture1Rect.x()) + 2*monitorPicture2Rect.width(),
+        monitorPicture2Rect.height());
+    
+    //qDebug() << "\nextendedAreaRect: " << extendedAreaRect;
+    //qDebug() << "monitorPicture1Rect: " << monitorPicture1Rect << monitorPicture1->rect().width() << monitorPicture1->rect().height();
+    //qDebug() << "monitorPicture2Rect: " << monitorPicture2Rect;
+    
+    if(extendedAreaRect.intersects(monitorPicture1Rect)) {
+        // monitorPicture1 left
+        offsetVector = QVector2D(monitorPicture2Rect.right() - monitorPicture1Rect.left(), 0);
+        result.vector = offsetVector;
+        
+        // monitorPicture1 right
+        offsetVector = QVector2D(monitorPicture2Rect.left() - monitorPicture1Rect.right(), 0);
+        if(result.vector.length() > offsetVector.length())
+            result.vector = offsetVector;
+        
+        float y2 = monitorPicture2Rect.top();
+        float y1 = monitorPicture1Rect.top();
+        float delta = monitorPicture2Rect.height() * 0.1;
+        if(y2 < y1 && y1 < (y2+delta))
+            result.vector.setY(y2 - y1);
+        else {
+            y2 = monitorPicture2Rect.bottom();
+            y1 = monitorPicture1Rect.bottom();
+            if((y2 - delta) < y1 && y1 < y2)
+                result.vector.setY(y2 - y1);
+        }
+        
+        result.outside = false;
+    }
+    
+    extendedAreaRect = QRectF(
+        monitorPicture2Rect.x(),
+        qMin(monitorPicture2Rect.y(), monitorPicture1Rect.y()) - monitorPicture2Rect.height(),
+        monitorPicture2Rect.width(),
+        qMax(monitorPicture2Rect.y(), monitorPicture1Rect.y()) + 2*monitorPicture2Rect.height()
+        );
+    
+    if(extendedAreaRect.intersects(monitorPicture1Rect)) {
+        // monitorPicture1 top
+        offsetVector = QVector2D(0, monitorPicture2Rect.bottom() - monitorPicture1Rect.top());
+        result.vector = offsetVector;
+        
+        // monitorPicture1 bottom
+        offsetVector = QVector2D(0, monitorPicture2Rect.top() - monitorPicture1Rect.bottom());
+        if(result.vector.length() > offsetVector.length())
+            result.vector = offsetVector;
+        
+        float x2 = monitorPicture2Rect.left();
+        float x1 = monitorPicture1Rect.left();
+        float delta = monitorPicture2Rect.width() * 0.1;
+        if(x2 < x1 && x1 < (x2+delta))
+            result.vector.setX(x2 - x1);
+        else {
+            x2 = monitorPicture2Rect.right();
+            x1 = monitorPicture1Rect.right();
+            if((x2 - delta) < x1 && x1 < x2)
+                result.vector.setX(x2 - x1);
+        }
+        
+        result.outside = false;
+    }
+    
     return result;
 }
+
 
 void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPicture)
 {
     if (!ui.magneticCheckBox->isChecked())
         return;
+    
+    // Float to int
+    monitorPicture->setX((int)monitorPicture->x());
+    monitorPicture->setY((int)monitorPicture->y());
+    
 
     QVector2D vector(0, 0);
     for (MonitorPicture *picture : qAsConst(pictures))
     {
         if (picture == monitorPicture)
             continue;
+        
+        // Float to int. The positions of the Monitors must be set with pixels.
+        // QGraphicsView uses float to store x and y. Then, positions as (800.5, 600.3) are stored.
+        // x and y have to be translated from float to int in order to store pixels position: 
+        picture->setX((int)picture->x());
+        picture->setY((int)picture->y());
 
         Result_moveMonitorPictureToNearest result = compareTwoMonitors(monitorPicture, picture);
         if (result.ok)
             return;
-        else if (result.vector.length() < vector.length() || vector.length() == 0.0)
+        else if (! result.outside && (result.vector.length() < vector.length() || vector.length() == 0.0))
             vector = result.vector;
     }
 
