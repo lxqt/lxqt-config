@@ -372,8 +372,8 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
         return;
     
     // Float to int
-    monitorPicture->setX((int)monitorPicture->x());
-    monitorPicture->setY((int)monitorPicture->y());
+    monitorPicture->setX(static_cast<qreal>(qRound(monitorPicture->x())));
+    monitorPicture->setY(static_cast<qreal>(qRound(monitorPicture->y())));
     
 
     QVector2D vector(0, 0);
@@ -385,8 +385,8 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
         // Float to int. The positions of the Monitors must be set with pixels.
         // QGraphicsView uses float to store x and y. Then, positions as (800.5, 600.3) are stored.
         // x and y have to be translated from float to int in order to store pixels position: 
-        picture->setX((int)picture->x());
-        picture->setY((int)picture->y());
+        picture->setX(static_cast<qreal>(qRound(picture->x())));
+        picture->setY(static_cast<qreal>(qRound(picture->y())));
 
         Result_moveMonitorPictureToNearest result = compareTwoMonitors(monitorPicture, picture);
         if (result.ok)
