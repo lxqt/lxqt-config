@@ -204,7 +204,7 @@
     <message>
         <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurtsorea</translation>
     </message>
 </context>
 <context>
