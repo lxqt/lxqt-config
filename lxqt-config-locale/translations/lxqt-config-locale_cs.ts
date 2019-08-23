@@ -6,37 +6,37 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation>&amp;Oblast:</translation>
+        <translation>Oblast:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>Podrobná nas&amp;tavení</translation>
+        <translation>Podrobná nastavení</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>&amp;Čísla:</translation>
+        <translation>Čísla:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>&amp;Čas:</translation>
+        <translation>Čas:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>&amp;Měna:</translation>
+        <translation>Měna:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation>&amp;Jednotky měření:</translation>
+        <translation>Jednotky měření:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Srovnávání a řazení:</translation>
+        <translation>Srovnávání a řazení:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -81,12 +81,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation>Anglické Velká Británie</translation>
+        <translation>Království Velká Británie</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation>Anglické Spojené státy</translation>
+        <translation>Spojené státy americké</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
