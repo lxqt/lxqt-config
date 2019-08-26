@@ -11,12 +11,12 @@
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>選擇你想使用的游標主題 (來回移動來測試游標). &lt;b&gt;改變後需重新啟動LXQt會話&lt;/b&gt;：</translation>
+        <translation>選擇你想使用的游標主題 (來回移動來測試游標)。&lt;b&gt;改變後需重新啟動LXQt會話&lt;/b&gt;：</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
         <source>&amp;Install New Theme...</source>
-        <translation>安裝新主題 (&amp;I)...</translation>
+        <translation>安裝新主題(&amp;I)...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="88"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>您無法移除正在套用的主題!</translation>
+        <translation>無法移除正在套用的主題！</translation>
     </message>
 </context>
 <context>
