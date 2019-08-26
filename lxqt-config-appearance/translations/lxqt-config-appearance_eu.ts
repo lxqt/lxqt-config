@@ -166,7 +166,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt gaia</translation>
+        <translation>LXQt Gaia</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -189,12 +189,12 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
-        <translation>Ikonoen gaia</translation>
+        <translation>Ikonoen Gaia</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
-        <translation>LXQt gaia</translation>
+        <translation>LXQt Gaia</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="81"/>
