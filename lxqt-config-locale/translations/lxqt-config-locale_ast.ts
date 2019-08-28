@@ -6,92 +6,92 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation type="unfinished"></translation>
+        <translation>Re&amp;xón:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Axustes de&amp;tallaos</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Númberos:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Data:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Di&amp;visa:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Unidaes de midida:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;lasificación y ordenación:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>&lt;b&gt;Examples&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Exemplos&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Númberos:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Data:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Divisa:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Unidaes de midida:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensin cambeos</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Camudaron los axustes del formatu</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Quies guardar los cambeos? Esto va facer efeutu la próxima vegada qu&apos;anicies sesión.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema de Reinu Xuníu</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema d&apos;Estaos Xuníos</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema internacional</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración de la locale de LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Axustes de la locale</translation>
     </message>
 </context>
 </TS>
