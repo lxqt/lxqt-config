@@ -31,18 +31,10 @@
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 {
-    KScreen::GetConfigOperation *operation  = new KScreen::GetConfigOperation();
-    connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
-        KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
-        if (configOp)
-        {
-            loadConfiguration(configOp->config());
-            operation->deleteLater();
-        }
-    });
+    
 }
 
-void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
+QList<MonitorSettings> LoadSettings::loadCurrentConfiguration()
 {
     LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     QList<MonitorSettings> monitors;
@@ -50,30 +42,82 @@ void LoadSettings::loadConfiguration(KScreen::ConfigPtr config)
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
 
-    applySettings(config, monitors);
+    return monitors;
+}
+
+QList<MonitorSettings> LoadSettings::loadConfiguration(QString scope)
+{
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+    QList<MonitorSettings> monitors;
+    settings.beginGroup(scope);
+    loadMonitorSettings(settings, monitors);
+    settings.endGroup();
+
+    return monitors;
+}
+
+void LoadSettings::applyBestSettings()
+{
+    KScreen::GetConfigOperation *operation  = new KScreen::GetConfigOperation();
+    connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
+        KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
+        if (configOp)
+        {
+            bool ok = false;
+            if(!ok) {
+                qDebug() << "lxqt-config-monitor: Applying current settings...";
+                QList<MonitorSettings> monitors = loadConfiguration(QStringLiteral("currentConfig"));
+                ok = applySettings(configOp->config(), monitors);
+            }
+            if(!ok) {
+                qDebug() << "lxqt-config-monitor: Searching in saved settings...";
+                // Load configs
+                LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+                QList<MonitorSavedSettings> monitorsSavedSettings;
+                settings.beginGroup(QStringLiteral("SavedConfigs"));
+                loadMonitorSettings(settings, monitorsSavedSettings);
+                settings.endGroup();
+                for(const MonitorSavedSettings& o : qAsConst(monitorsSavedSettings)) {
+                    ok = applySettings(configOp->config(), o.monitors);
+                    if(ok) break;
+                }
+                if(!ok) {
+                    // Saved configs can not be applied
+                    // Do nothing
+                    qDebug() << "lxqt-config-monitor: No saved settings has been found";
+                }
+            }
+            if(ok)
+                qDebug() << "lxqt-config-monitor: Settings applied.";
+            operation->deleteLater();
+            QCoreApplication::instance()->exit(0);
+        }
+    });
 }
 
 
-void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
+bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 {
     KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs)
     {
         qDebug() << "Output: " << output->name();
-        for(int i=0;i<monitors.size();i++)
+        bool outputFound = false;
+        for(int i=0;i<monitors.size() && !outputFound;i++)
         {
             MonitorSettings monitor = monitors[i];
             if( monitor.name == output->name() )
             {
+                outputFound = true;
                 KScreen::Edid* edid = output->edid();
                 if (edid && edid->isValid())
                     if( monitor.hash != edid->hash() )
                     {
                         qDebug() << "Hash: " << monitor.hash << "==" << edid->hash();
-                        return QCoreApplication::instance()->exit(1); // Saved settings are from other monitor
+                        return false; // Saved settings are from other monitor
                     }
                 if( monitor.connected != output->isConnected() )
-                    return QCoreApplication::instance()->exit(2); // Saved settings are from other monitor
+                    return false; // Saved settings are from other monitor
                 if( !output->isConnected() )
                     continue;
                 output->setEnabled( monitor.enabled );
@@ -102,11 +146,15 @@ void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 
             }
         }
+        if(!outputFound)
+            return false;
     }
 
     if (KScreen::Config::canBeApplied(config))
         KScreen::SetConfigOperation(config).exec();
-
-    QCoreApplication::instance()->exit(0);
+    else 
+        return false;
+    
+    return true;
 }
 

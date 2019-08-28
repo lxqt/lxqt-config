@@ -44,6 +44,9 @@ int main(int argc, char** argv)
         // If -l option is provided, settings are loaded and app is closed.
         QGuiApplication app(argc, argv);
         LoadSettings load;
+        load.applyBestSettings();
+        qDebug() << "[load.applyBestSettings()] Finished";
+        //QCoreApplication::instance()->exit(0);
         return app.exec();
     }
 

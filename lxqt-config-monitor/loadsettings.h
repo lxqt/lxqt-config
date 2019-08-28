@@ -30,11 +30,12 @@ class LoadSettings : public QObject
 
 public:
     LoadSettings(QObject *parent = nullptr);
-
-private Q_SLOTS:
-    void loadConfiguration(KScreen::ConfigPtr config);
+    
+    void applyBestSettings();
 
 private:
+    QList<MonitorSettings> loadCurrentConfiguration();
+    QList<MonitorSettings> loadConfiguration(QString scope);
 
     // Configutarions
     KScreen::ConfigPtr mConfig;
@@ -42,7 +43,7 @@ private:
 
 /*! Apply settings.
  */
-void applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors);
+bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors);
 
 
 #endif // __LOADSETTINGS_H__
