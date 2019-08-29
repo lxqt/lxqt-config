@@ -34,7 +34,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Gaya:</translation>
+        <translation>Model:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Autohint</translation>
+        <translation>Hint otomatis</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
