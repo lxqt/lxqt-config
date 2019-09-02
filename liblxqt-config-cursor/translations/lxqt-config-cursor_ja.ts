@@ -6,7 +6,7 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQtマウステーマの設定</translation>
+        <translation>LXQt マウステーマの設定</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="213"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>アクティブなテーマは削除できません!</translation>
+        <translation>アクティブなテーマは削除できません！</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>カーソルテーマを見つけられませんでした。代わりに、デフォルトのX11カーソルテーマが使われます。LXQtは以下のディレクトリーを検索しました:</translation>
+        <translation>カーソルテーマを見つけられませんでした。代わりに、デフォルトの X11 カーソルテーマが使われます。次のディレクトリを探しました:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
