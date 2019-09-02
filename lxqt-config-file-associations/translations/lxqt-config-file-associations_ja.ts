@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>JPEGを扱うアプリケーション</translation>
+        <translation>JPEG を扱うアプリケーション</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
         <source>MIME type</source>
-        <translation>MIMEタイプ</translation>
+        <translation>MIME タイプ</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="191"/>
