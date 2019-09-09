@@ -6,7 +6,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Configuration Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Trung tâm cấu hình</translation>
     </message>
 </context>
 </TS>
