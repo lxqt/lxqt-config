@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; đã được ghi đè.&lt;/p&gt;&lt;p&gt;Bạn có thể tìm thấy bản cài đặt cũ tại &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19,57 +19,57 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông chữ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông chữ mặc định cho giao diện người dùng</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông chữ:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Bình thường</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Đậm</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Nghiêng</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Nghiêng đậm</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Những cài đặt sau đây chỉ ảnh hưởng tới những ứng dụng mới khởi động</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Sử dụng phông khử răng cưa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -80,22 +80,22 @@
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có gì</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhẹ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Trung bình</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Đầy đủ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
@@ -105,7 +105,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ phân giải (DPI)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
@@ -120,22 +120,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -143,12 +143,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Cài đặt hiển thị LXQT</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu tượng</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -166,12 +166,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề cho LXQT</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè hình nền mà người dùng đã chỉ định</translation>
     </message>
 </context>
 <context>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Cài đặt hiển thị LXQT</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
@@ -189,22 +189,22 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu tượng</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="77"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề cho LXQT</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="81"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông chữ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="87"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Con trỏ</translation>
     </message>
 </context>
 <context>
@@ -217,17 +217,17 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt chủ đề GTK (tệp cấu hình GTK sẽ bị ghi đè!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
