@@ -6,12 +6,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="144"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK gaiak</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="145"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt; 1 &apos;% 1&apos; gainidatzi da. &lt;/p&gt; 2 &lt;p&gt; 3 Zure ezarpen zaharren kopia aurki dezakezu &apos;% 2&apos; &lt;/p&gt; 4</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estiloa:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
@@ -64,23 +64,23 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Hurrengo ezarpenek hasierako aplikazioei bakarrik eragiten diete</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabili antialias letra-tipoak</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Letra tipoak iradokizun estiloa:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Bat ere ez</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
