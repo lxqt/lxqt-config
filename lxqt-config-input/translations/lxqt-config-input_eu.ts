@@ -16,7 +16,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;B&gt;Teklatua&lt;/ b&gt;</translation>
+        <translation>&lt;b&gt;Teklatua&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
