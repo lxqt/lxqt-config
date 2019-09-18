@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Hautatu erabili nahi duzun kurtsore-gaia (nabarmendu aurrebista kurtsorea probatzeko). &lt;b&gt;LXQt saioa berrabiarazi behar da aldaketa honen ondoren&lt;/b&gt;:</translation>
+        <translation>Aukeratu erabili nahi duzun kurtsorearen gaia (aurrebista pasatzailea kurtsorea probatzeko). &lt;b&gt; 1LXQt saioak aldaketa honen ondoren berrabiarazi behar ditu &lt;/b&gt; 2:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="81"/>
@@ -39,17 +39,17 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>inprimakia</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-k ezin izan du kurtsorerik aurkitu. Horren ordez X11 kurtsorearen gaia lehenetsiko da. LXQt-ek direktorio hauek begiratu ditu:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Erakutsi ...</translation>
     </message>
 </context>
 <context>
