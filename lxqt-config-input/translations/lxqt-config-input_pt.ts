@@ -212,29 +212,34 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="51"/>
+        <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Definições de teclado e de rato</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="56"/>
+        <location filename="../lxqt-config-input.cpp" line="79"/>
         <source>Mouse</source>
         <translation>Rato</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="61"/>
+        <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="64"/>
+        <location filename="../lxqt-config-input.cpp" line="95"/>
         <source>Keyboard</source>
         <translation>Teclado</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="68"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
         <translation>Disposição do teclado</translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <source>Mouse and Touchpad</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -253,6 +258,64 @@
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
         <translation>Variante</translation>
+    </message>
+</context>
+<context>
+    <name>TouchpadConfig</name>
+    <message>
+        <location filename="../touchpadconfig.ui" line="14"/>
+        <source>TouchpadConfig </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>Device:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="30"/>
+        <source>Acceleration speed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="37"/>
+        <source>Tap to click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="44"/>
+        <source>Natural Scrolling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="51"/>
+        <source>Tap and drag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="79"/>
+        <source>Scrolling:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="102"/>
+        <source>&amp;Disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="109"/>
+        <source>&amp;Two-Finger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="116"/>
+        <source>Ed&amp;ge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="123"/>
+        <source>B&amp;utton</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

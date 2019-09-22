@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation>Temes de GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;«%1» ha estat sobreescrit.&lt;/p&gt;&lt;p&gt;Podeu trobar una còpia dels vostres ajusts antics a «%2»&lt;/p&gt;</translation>
     </message>
@@ -182,27 +182,27 @@
         <translation>Configuració de l&apos;aparença de LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>Estil dels estris</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>Tema de les icones</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>Tema de LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>Lletra</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>

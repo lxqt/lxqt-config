@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation>GTK主题</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; 已经被覆写。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;找到你的旧设定的拷贝。&lt;/p&gt;</translation>
     </message>
@@ -182,27 +182,27 @@
         <translation>LXQt 外观配置</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>小部件样式</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>图标主题</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>LXQt 主题</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>指针</translation>
     </message>

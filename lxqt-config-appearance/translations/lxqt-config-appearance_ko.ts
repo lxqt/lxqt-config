@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation>GTK 테마</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; 덮어 써졌습니다.&lt;/p&gt;&lt;p&gt;&apos;%2&apos;에서 이전 설정의 복사본을 찾으실 수 있습니다&lt;/p&gt;</translation>
     </message>
@@ -182,27 +182,27 @@
         <translation>LXQt 꾸미기 설정</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>위젯 스타일</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>아이콘 테마</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>LXQt 테마</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>글꼴</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>커서</translation>
     </message>

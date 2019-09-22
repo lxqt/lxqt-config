@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation>ערכות עיצוב GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;‚%1’ שוכתב.&lt;/p&gt;&lt;p&gt;ניתן למצוא עותק של ההגדרות הישנות שלך תחת ‚%2’&lt;/p&gt;</translation>
     </message>
@@ -182,27 +182,27 @@
         <translation>הגדרות מראה של LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>סגנון וידג׳טים</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>ערכת סמלים</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>ערכת עיצוב של LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>גופן</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>סמן</translation>
     </message>

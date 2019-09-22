@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -182,27 +182,27 @@
         <translation>Налаштування вигляду LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>Стиль віджетів</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>Тема значків</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>Тема LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>Шрифт</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>Курсор</translation>
     </message>

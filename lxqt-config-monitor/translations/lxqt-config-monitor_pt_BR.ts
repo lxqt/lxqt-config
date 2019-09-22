@@ -301,8 +301,10 @@
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
-        <translation><numerusform>Restando %n segundo(s)</numerusform>
-        <numerusform>Restando %n segundos</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Restando %n segundo(s)</numerusform>
+            <numerusform>Restando %n segundos</numerusform>
+        </translation>
+    </message>
 </context>
 </TS>
