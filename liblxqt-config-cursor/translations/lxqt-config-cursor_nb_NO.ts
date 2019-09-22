@@ -9,27 +9,37 @@
         <translation>LXQt Mustemakonfigurasjon</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Velg pekertemaet du ønsker å bruke (hold musa over forhåndsvisning for å teste pekeren). &lt;b&gt;LXQt-sesjonen må omstartes etter denne forandringen&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Installer nytt tema...</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="72"/>
+        <source>LXQt session needs restart to view this change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Fjern tema</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="212"/>
+        <location filename="../selectwnd.ui" line="111"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme-feil</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="213"/>
+        <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Du kan ikke fjerne det aktive temaet!</translation>
     </message>

@@ -9,27 +9,37 @@
         <translation>LXQT Fare Teması Yapılandırma</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Kullanmak istediğiniz temayı seçin (önizleme yapmak için fareyi simgelerin üzerinde tutun). &lt;b&gt;LXQT oturumu bu değişiklikten sonra yeniden başlatılmalı&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Yeni Tema Yükle...</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="72"/>
+        <source>LXQt session needs restart to view this change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
         <translation>Temayı &amp;Kaldır</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="212"/>
+        <location filename="../selectwnd.ui" line="111"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme hatası</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="213"/>
+        <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Etkin temayı kaldıramazsınız!</translation>
     </message>
