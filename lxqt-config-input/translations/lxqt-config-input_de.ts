@@ -239,7 +239,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Maus und Touchpad</translation>
     </message>
 </context>
 <context>
