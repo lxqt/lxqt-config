@@ -81,12 +81,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation></translation>
+        <translation>Britiske måleenheter</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation></translation>
+        <translation>Amerikanske måleenheter</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt Stedstilpasninger</translation>
+        <translation>LXQt språk- og stedsinnstilling</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>Stedstilpasninger</translation>
+        <translation>Språk- og stedsinnstilllinger</translation>
     </message>
 </context>
 </TS>
