@@ -29,7 +29,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Skriftsnavn:</translation>
+        <translation>Skriftnavn:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Skriftshinting stil:</translation>
+        <translation>Skrifthinting stil:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Skriftshinting</translation>
+        <translation>Skrifthinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt Tema</translation>
+        <translation>LXQt-tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
-        <translation>LXQt tema</translation>
+        <translation>LXQt-tema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="96"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Widget stil</translation>
+        <translation>Widgetstil</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
@@ -222,12 +222,12 @@
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation>GTK 3 tema</translation>
+        <translation>GTK 3-tema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation>GTK 2 tema</translation>
+        <translation>GTK 2-tema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
@@ -236,7 +236,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>For å oppnå likhet mellom temaene, velg enten lignende stil/tema (hvis tilgjengelig) på tvers av listene eller velg &apos;gtk2&apos; Qt stil (hvis tilgjengelige) for å herme GTK temaer.
 
-Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å bruke temaer der og da.</translation>
+Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å bruke temaer med en gang.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -266,7 +266,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="127"/>
         <source>Default</source>
-        <translation>Forvalgt</translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="135"/>
@@ -276,7 +276,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation>Qt stil</translation>
+        <translation>Qt-stil</translation>
     </message>
 </context>
 </TS>
