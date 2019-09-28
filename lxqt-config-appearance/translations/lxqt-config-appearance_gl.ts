@@ -64,7 +64,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Os seguintes axustes só afectan aos aplicativos iniciados a partires de agora</translation>
+        <translation>Os seguintes axustes só afectan ás aplicacións iniciadas a partires de agora</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -236,7 +236,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>Para tentar uniformar os temas, seleccione un estilo/tema similar (se está dispoñíbel) en todas as listas ou seleccione o estilo Qt «gtk2» (se está dispoñíbel) para imitar os temas GTK.
 
-Asegúrese de que «xsettingsd» está instalado para axudar aos aplicativos GTK a aplicar temas ao voo.</translation>
+Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GTK a aplicar temas ao voo.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
