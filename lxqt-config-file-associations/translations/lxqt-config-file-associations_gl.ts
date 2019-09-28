@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation>Selector de aplicativos</translation>
+        <translation>Selector de aplicacións</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Escolla un aplicativo para:</translation>
+        <translation>Escolla unha aplicación para:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Aplicativos para manexar JPEG</translation>
+        <translation>Aplicacións para manexar JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -35,17 +35,17 @@
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="113"/>
         <source>Other applications</source>
-        <translation>Outros aplicativos</translation>
+        <translation>Outras aplicacións</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="114"/>
         <source>Applications that handle %1</source>
-        <translation>Aplicativos para manexar %1</translation>
+        <translation>Aplicacións para manexar %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="151"/>
         <source>No applications found</source>
-        <translation>Non se atoparon aplicativos</translation>
+        <translation>Non se atoparon aplicacións</translation>
     </message>
 </context>
 <context>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
         <source>Default application</source>
-        <translation>Aplicativo predeterminado</translation>
+        <translation>Aplicación predeterminada</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="68"/>
