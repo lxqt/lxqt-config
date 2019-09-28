@@ -6,7 +6,7 @@
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation>Raske valg</translation>
+        <translation>Hurtigvalg</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>Hold skjermer sammenknyttet</translation>
+        <translation>Hold skjermene tilkoblet</translation>
     </message>
 </context>
 <context>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="111"/>
         <source>Fast Menu</source>
-        <translation>Rask meny</translation>
+        <translation>Hurtigmeny</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation>Bestem posisjon</translation>
+        <translation>Velg plassering</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
@@ -236,7 +236,7 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA dings ID: %1
+        <translation>EISA enhets-ID: %1
 </translation>
     </message>
     <message>
@@ -270,7 +270,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>Behandl lagrede innstillinger</translation>
+        <translation>Behandle lagrede innstillinger</translation>
     </message>
 </context>
 <context>
