@@ -6,12 +6,12 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt Mustemakonfigurasjon</translation>
+        <translation>LXQt Mustemainnstillinger</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Velg pekertemaet du ønsker å bruke (hold musa over forhåndsvisning for å teste pekeren). &lt;b&gt;LXQt-sesjonen må omstartes etter denne forandringen&lt;/b&gt;:</translation>
+        <translation>Velg pekertemaet du ønsker å bruke (hold musa over forhåndsvisning for å teste pekeren). &lt;b&gt;LXQt må omstartes etter denne forandringen&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQT trenger å omstarte for å vise denne forandringen.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../selectwnd.ui" line="111"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Størrelse</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="233"/>
