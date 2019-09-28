@@ -59,7 +59,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation>&amp;Forandr..</translation>
+        <translation>&amp;Endre...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Filassosiasjoner</translation>
+        <translation>Filtilknytninger</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="56"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="117"/>
         <source>TextLabel</source>
-        <translation>Tekstmerkelapp</translation>
+        <translation>Tekstetikett</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="124"/>
