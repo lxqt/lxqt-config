@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Pekeblinketid:</translation>
+        <translation>Pekerens blinketid:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Pause ved repetisjon:</translation>
+        <translation>Forsinkelse ved repetisjon:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
