@@ -143,7 +143,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuração de aparência do LXQt</translation>
+        <translation>Configuração da Aparência do LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>A extensão do KDE de temas de ícones do XDG -&gt; Segue o Esquema de Cores</translation>
+        <translation>A Extensão do XDG para temas de ícones KDE-&gt; Segue o Esquema de Cores</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -179,12 +179,12 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuração de aparência do LXQt</translation>
+        <translation>Configuração da Aparência do LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation>Estilo de Widgets</translation>
+        <translation>Estilo do Widget</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Estilo dos Widgets</translation>
+        <translation>Estilo do Widget</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
@@ -271,7 +271,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Ativar item com um clique único</translation>
+        <translation>Ativar item com clique único</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>
