@@ -280,12 +280,12 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished">Dar toques para hacer clic</translation>
+        <translation>Toque para hacer clic</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished">Desplazamiento natural</translation>
+        <translation>Desplazamiento natural</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
@@ -305,12 +305,12 @@
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished">&amp;Dos dedos</translation>
+        <translation>&amp;Dos dedos</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished">&amp;Borde</translation>
+        <translation>&amp;Borde</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
