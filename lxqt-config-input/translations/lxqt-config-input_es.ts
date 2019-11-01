@@ -275,7 +275,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Velocidad de aceleración:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
