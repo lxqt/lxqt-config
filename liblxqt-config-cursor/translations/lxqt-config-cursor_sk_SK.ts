@@ -9,27 +9,37 @@
         <translation>Nastavenie vzhľadu kurzora</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Vyberte vzhľad kurzora, ktorý chcete používať (vyskúšate prechodom myši na náhľad). &lt;b&gt;Po vykonaní zmeny je potrebné reštartovať sedenie LXQt&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Nainštalovať novú tému...</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="72"/>
+        <source>LXQt session needs restart to view this change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Odstrániť tému</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="212"/>
+        <location filename="../selectwnd.ui" line="111"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
         <translation>Chyba témy XCur</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="213"/>
+        <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Nie je možné odstrániť práve používanú tému!</translation>
     </message>

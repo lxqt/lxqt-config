@@ -212,29 +212,34 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="51"/>
+        <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>キーボードとマウスの設定</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="56"/>
+        <location filename="../lxqt-config-input.cpp" line="79"/>
         <source>Mouse</source>
         <translation>マウス</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="61"/>
+        <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
         <translation>カーソル</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="64"/>
+        <location filename="../lxqt-config-input.cpp" line="95"/>
         <source>Keyboard</source>
         <translation>キーボード</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="68"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
         <translation>キーボードレイアウト</translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <source>Mouse and Touchpad</source>
+        <translation>マウスとタッチパッド</translation>
     </message>
 </context>
 <context>
@@ -253,6 +258,64 @@
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
         <translation>バリアント</translation>
+    </message>
+</context>
+<context>
+    <name>TouchpadConfig</name>
+    <message>
+        <location filename="../touchpadconfig.ui" line="14"/>
+        <source>TouchpadConfig </source>
+        <translation>タッチパッドの構成 </translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>Device:</source>
+        <translation>デバイス:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="30"/>
+        <source>Acceleration speed:</source>
+        <translation>加速度:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="37"/>
+        <source>Tap to click</source>
+        <translation>タップでクリックする</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="44"/>
+        <source>Natural Scrolling</source>
+        <translation>ナチュラルスクロール</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="51"/>
+        <source>Tap and drag</source>
+        <translation>タップとドラッグ</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="79"/>
+        <source>Scrolling:</source>
+        <translation>スクロール:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="102"/>
+        <source>&amp;Disabled</source>
+        <translation>無効(&amp;D)</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="109"/>
+        <source>&amp;Two-Finger</source>
+        <translation>２本指(&amp;T)</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="116"/>
+        <source>Ed&amp;ge</source>
+        <translation>端(&amp;G)</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="123"/>
+        <source>B&amp;utton</source>
+        <translation>ボタン(&amp;B)</translation>
     </message>
 </context>
 </TS>

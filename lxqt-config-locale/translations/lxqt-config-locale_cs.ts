@@ -16,12 +16,12 @@
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>&amp;Čísla:</translation>
+        <translation>Čí&amp;sla:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>&amp;Čas:</translation>
+        <translation>Č&amp;as:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Srovnávání a řazení:</translation>
+        <translation>Sr&amp;ovnávání a řazení:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -81,12 +81,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
         <source>Imperial UK</source>
-        <translation>Anglické Velká Británie</translation>
+        <translation>Imperiální UK</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="440"/>
         <source>Imperial US</source>
-        <translation>Anglické Spojené státy</translation>
+        <translation>Imperiální US</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="444"/>

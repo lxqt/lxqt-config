@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Pekeblinketid:</translation>
+        <translation>Pekerens blinketid:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Pause ved repetisjon:</translation>
+        <translation>Forsinkelse ved repetisjon:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -212,29 +212,34 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="51"/>
+        <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Tastatur- og musinnstillinger</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="56"/>
+        <location filename="../lxqt-config-input.cpp" line="79"/>
         <source>Mouse</source>
         <translation>Mus</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="61"/>
+        <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
         <translation>Peker</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="64"/>
+        <location filename="../lxqt-config-input.cpp" line="95"/>
         <source>Keyboard</source>
         <translation>Tastatur</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="68"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
         <translation>Tastaturlayout</translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <source>Mouse and Touchpad</source>
+        <translation>Mus og styreplate</translation>
     </message>
 </context>
 <context>
@@ -253,6 +258,64 @@
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>TouchpadConfig</name>
+    <message>
+        <location filename="../touchpadconfig.ui" line="14"/>
+        <source>TouchpadConfig </source>
+        <translation>Styreplateinnstillinger </translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>Device:</source>
+        <translation>Enhet:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="30"/>
+        <source>Acceleration speed:</source>
+        <translation>Aksellereringshastighet:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="37"/>
+        <source>Tap to click</source>
+        <translation>Berør for å klikke</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="44"/>
+        <source>Natural Scrolling</source>
+        <translation>Naturlig rulling</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="51"/>
+        <source>Tap and drag</source>
+        <translation>Berør og dra</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="79"/>
+        <source>Scrolling:</source>
+        <translation>Rulling:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="102"/>
+        <source>&amp;Disabled</source>
+        <translation>&amp;Avskrudd</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="109"/>
+        <source>&amp;Two-Finger</source>
+        <translation>&amp;Tofingret</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="116"/>
+        <source>Ed&amp;ge</source>
+        <translation>&amp;Kant</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="123"/>
+        <source>B&amp;utton</source>
+        <translation>K&amp;napp</translation>
     </message>
 </context>
 </TS>

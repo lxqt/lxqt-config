@@ -212,29 +212,34 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="51"/>
+        <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Klaviatūros ir pelės nustatymai</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="56"/>
+        <location filename="../lxqt-config-input.cpp" line="79"/>
         <source>Mouse</source>
         <translation>Pelė</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="61"/>
+        <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
         <translation>Žymeklis</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="64"/>
+        <location filename="../lxqt-config-input.cpp" line="95"/>
         <source>Keyboard</source>
         <translation>Klaviatūra</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="68"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
         <translation>Klaviatūros išdėstymas</translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <source>Mouse and Touchpad</source>
+        <translation>Pelė ir jutiklinis kilimėlis</translation>
     </message>
 </context>
 <context>
@@ -253,6 +258,64 @@
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
         <translation>Variantas</translation>
+    </message>
+</context>
+<context>
+    <name>TouchpadConfig</name>
+    <message>
+        <location filename="../touchpadconfig.ui" line="14"/>
+        <source>TouchpadConfig </source>
+        <translation>Jutiklinio kilimėlio konfigūracija </translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>Device:</source>
+        <translation>Įrenginys:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="30"/>
+        <source>Acceleration speed:</source>
+        <translation>Pagreičio greitis:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="37"/>
+        <source>Tap to click</source>
+        <translation>Bakstelėti, norint spustelėti</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="44"/>
+        <source>Natural Scrolling</source>
+        <translation>Natūralus slinkimas</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="51"/>
+        <source>Tap and drag</source>
+        <translation>Bakstelėti ir tempti</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="79"/>
+        <source>Scrolling:</source>
+        <translation>Slinkimas:</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="102"/>
+        <source>&amp;Disabled</source>
+        <translation>&amp;Išjungta</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="109"/>
+        <source>&amp;Two-Finger</source>
+        <translation>&amp;Dviem pirštais</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="116"/>
+        <source>Ed&amp;ge</source>
+        <translation>&amp;Krašte</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="123"/>
+        <source>B&amp;utton</source>
+        <translation>M&amp;ygtuku</translation>
     </message>
 </context>
 </TS>

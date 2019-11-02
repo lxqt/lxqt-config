@@ -9,27 +9,37 @@
         <translation>Configurare temă maus LXQt</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Selectați tema de cursor pe care doriți să o utilizați (treceți peste cu mausul pentru a testa cursorul)&lt;b&gt;Sesiunea LXQt necesită o repornire după această modificare&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Instalează temă nouă...</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="72"/>
+        <source>LXQt session needs restart to view this change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
         <translation>Elimină tema</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="212"/>
+        <location filename="../selectwnd.ui" line="111"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
         <translation>Eroare XCurTheme</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="213"/>
+        <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Nu se poate elimina tema activă!</translation>
     </message>

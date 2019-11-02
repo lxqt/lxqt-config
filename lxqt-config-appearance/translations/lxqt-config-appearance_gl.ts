@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation>Temas de GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;«%1» foi sobrescrito.&lt;/p&gt;&lt;p&gt;Pode atopar unha copia da configuración antiga en «%2»&lt;/p&gt;</translation>
     </message>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Os seguintes axustes só afectan aos aplicativos iniciados a partires de agora</translation>
+        <translation>Os seguintes axustes só afectan ás aplicacións iniciadas a partires de agora</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -182,27 +182,27 @@
         <translation>Configuración da aparencia do LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>Estilo dos trebellos</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>Tema de iconas</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>Tema do LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>Tipo de letra</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation></translation>
     </message>
@@ -236,7 +236,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>Para tentar uniformar os temas, seleccione un estilo/tema similar (se está dispoñíbel) en todas as listas ou seleccione o estilo Qt «gtk2» (se está dispoñíbel) para imitar os temas GTK.
 
-Asegúrese de que «xsettingsd» está instalado para axudar aos aplicativos GTK a aplicar temas ao voo.</translation>
+Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GTK a aplicar temas ao voo.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>

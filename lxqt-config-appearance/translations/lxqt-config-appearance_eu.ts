@@ -4,14 +4,14 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK gaiak</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt; 1 &apos;% 1&apos; gainidatzi da. &lt;/p&gt; 2 &lt;p&gt; 3 Zure ezarpen zaharren kopia aurki dezakezu &apos;% 2&apos; &lt;/p&gt; 4</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estiloa:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
@@ -64,23 +64,23 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Hurrengo ezarpenek hasierako aplikazioei bakarrik eragiten diete</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabili antialias letra-tipoak</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Letra tipoak iradokizun estiloa:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Bat ere ez</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt gaia</translation>
+        <translation>LXQt Gaia</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -182,29 +182,29 @@
         <translation>LXQt itxuraren konfigurazioa</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
-        <translation>Ikonoen gaia</translation>
+        <translation>Ikonoen Gaia</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
-        <translation>LXQt gaia</translation>
+        <translation>LXQt Gaia</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurtsorea</translation>
     </message>
 </context>
 <context>

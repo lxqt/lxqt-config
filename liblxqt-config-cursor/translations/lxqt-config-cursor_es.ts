@@ -9,27 +9,37 @@
         <translation>Configuración del tema del ratón de LXQt</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="20"/>
+        <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Seleccione el tema del cursor que desea utilizar (pase el cursor por encima para una vista previa). &lt;b&gt;LXQt necesita reiniciar la sesión después de este cambio &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="81"/>
+        <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Instalar un tema nuevo...</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="88"/>
+        <location filename="../selectwnd.ui" line="72"/>
+        <source>LXQt session needs restart to view this change.</source>
+        <translation>La sesión de LXQt necesita reiniciarse para ver este cambio.</translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Eliminar el tema</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="212"/>
+        <location filename="../selectwnd.ui" line="111"/>
+        <source>Size</source>
+        <translation>Tamaño</translation>
+    </message>
+    <message>
+        <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
         <translation>Error de XCurTheme</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="213"/>
+        <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>¡No puede eliminar el tema activo!</translation>
     </message>

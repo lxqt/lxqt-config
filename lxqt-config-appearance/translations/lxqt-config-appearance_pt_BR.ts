@@ -4,12 +4,12 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
         <translation>Temas GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode encontrar uma cópia de suas configurações anteriores em &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuração de aparência do LXQt</translation>
+        <translation>Configuração da Aparência do LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>A extensão do KDE de temas de ícones do XDG -&gt; Segue o Esquema de Cores</translation>
+        <translation>A Extensão do XDG para temas de ícones KDE-&gt; Segue o Esquema de Cores</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -179,30 +179,30 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuração de aparência do LXQt</translation>
+        <translation>Configuração da Aparência do LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation>Estilo de Widgets</translation>
+        <translation>Estilo do Widget</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>Tema de ícones</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>Tema do LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>Fonte</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../styleconfig.ui" line="23"/>
         <source>Widget Style</source>
-        <translation>Estilo dos Widgets</translation>
+        <translation>Estilo do Widget</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="42"/>
@@ -271,7 +271,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../styleconfig.ui" line="135"/>
         <source>Activate item on single click</source>
-        <translation>Ativar item com um clique único</translation>
+        <translation>Ativar item com clique único</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="145"/>

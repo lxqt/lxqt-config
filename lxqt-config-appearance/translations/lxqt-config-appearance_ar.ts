@@ -4,14 +4,14 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="144"/>
+        <location filename="../configothertoolkits.cpp" line="147"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>سمات جتك</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="145"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;كُتب فوق ”%1“.&lt;/p&gt;&lt;p&gt;ستجد نسخة عن الإعدادات القديمة في ”%2“&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -182,27 +182,27 @@
         <translation>ضبط لكسكيوت للمظهر</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="67"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
         <translation>نمط الودجات</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
         <translation>سمة الأيقونات</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="77"/>
+        <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
         <translation>سمة لكسكيوت</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="81"/>
+        <location filename="../main.cpp" line="96"/>
         <source>Font</source>
         <translation>الخط</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="87"/>
+        <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
         <translation>المؤشّر</translation>
     </message>
@@ -217,24 +217,26 @@
     <message>
         <location filename="../styleconfig.ui" line="42"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>اضبط سمات جتك (سيُكتب فوق ملفات ضبط جتك!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="62"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>سمة جتك ٣</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="72"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>سمة جتك ٢</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="82"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>إن أردت توحيد السمات فاختر إما سمة أو نمطًا متشابهًا في كل القوائم (إن توفّر)، أو اختر نمط كيوت ”gtk2“ (إن توفّر) لمحاكاة سمات جتك.
+
+تثبّت أن ”xsettingsd“ مثبّت لتُطبّق تطبيقات جتك السمات فورًا.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
@@ -274,7 +276,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="145"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>نمط كيوت</translation>
     </message>
 </context>
 </TS>
