@@ -83,8 +83,51 @@ void LoadSettings::applyBestSettings()
                 }
                 if(!ok) {
                     // Saved configs can not be applied
-                    // Do nothing
+                    // Extended mode will be applied
                     qDebug() << "lxqt-config-monitor: No saved settings has been found";
+                    int width = 0;
+                    int height = 0;
+                    KScreen::ConfigPtr config = configOp->config();
+                    KScreen::OutputList outputs = config->outputs();
+                    for (const KScreen::OutputPtr &output : outputs)
+                    {
+                        if( !output->isConnected() )
+                            continue;
+                        qDebug() << " Output:" << output->name();
+                        QPoint pos = output->pos();
+                        pos.setX(width);
+                        pos.setY(0);
+                        output->setPos(pos);
+                        output->setEnabled(true);
+                        //first left one as primary
+                        output->setPrimary(width == 0);
+                        KScreen::ModePtr mode(output->currentMode());
+                        //if (!mode)
+                        { // Set the biggest mode
+                            mode = output->modes().first();
+                            int modeArea = mode->size().width() * mode->size().height();
+                            for(KScreen::ModePtr modeAux : output->modes()) {
+                                int modeAuxArea = modeAux->size().width() * modeAux->size().height();
+                                if(modeArea < modeAuxArea) {
+                                    mode = modeAux;
+                                    modeArea = modeAuxArea;
+                                }
+                            }
+                            if (mode)
+                            {
+                                output->setCurrentModeId(mode->id());
+                                qDebug() << "  Set mode for output:" << mode->size();
+                            }
+                        }
+                        if (mode) {
+                            width += mode->size().width();
+                            height = qMax(mode->size().height(), height);
+                        }
+                    }
+                    config->screen()->setCurrentSize(QSize(width, height));
+                    if (KScreen::Config::canBeApplied(config))
+                        KScreen::SetConfigOperation(config).exec();
+                    qDebug() << "lxqt-config-monitor: Extended mode has been applied";
                 }
             }
             if(ok)
@@ -150,9 +193,10 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
             return false;
     }
 
-    if (KScreen::Config::canBeApplied(config))
+    if (KScreen::Config::canBeApplied(config)) {
         KScreen::SetConfigOperation(config).exec();
-    else 
+        //config.screen()
+    } else 
         return false;
     
     return true;

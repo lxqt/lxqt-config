@@ -152,6 +152,7 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
 void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
 {
+    qDebug() << "Tamaño de la pantalla" << mConfig->screen()->currentSize();
     if (mConfig && KScreen::Config::canBeApplied(mConfig))
     {
         KScreen::SetConfigOperation(mConfig).exec();
