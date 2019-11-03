@@ -143,7 +143,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Erscheinungsbild-Konfiguration</translation>
+        <translation>LXQt Erscheinungsbild Einrichtung</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Erscheinungsbild-Konfiguration</translation>
+        <translation>LXQt Erscheinungsbild Einrichtung</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
