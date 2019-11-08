@@ -29,12 +29,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished">نام قلم:</translation>
+        <translation>نام قلم:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>سبک:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation type="unfinished">عادی</translation>
+        <translation>عادی</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
@@ -80,22 +80,22 @@
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>هیچ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>اندک</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>متوسط</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>کامل</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
@@ -120,22 +120,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -143,12 +143,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>پیکربندی ظاهر LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>پوسته نمادها</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>پوسته LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -189,17 +189,17 @@
     <message>
         <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>پوسته نمادها</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>پوسته LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="96"/>
         <source>Font</source>
-        <translation type="unfinished">قلم</translation>
+        <translation>قلم</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="106"/>
