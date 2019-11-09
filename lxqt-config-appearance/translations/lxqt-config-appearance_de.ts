@@ -171,7 +171,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Benutzerdefinierten Schreibtischhintergrund überschreiben</translation>
+        <translation>Benutzerdefiniertes Hintergrundbild überschreiben</translation>
     </message>
 </context>
 <context>
