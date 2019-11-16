@@ -51,61 +51,63 @@ int main(int argn, char* argv[])
     parser.addVersionOption();
 
     parser.process(app);
-    if( parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) || parser.isSet(resetGammaOption) )
-    {
-        float sign = parser.isSet(decreaseOption)?-1.0:1.0;
-        double brightness_value = parser.value(setOption).toFloat();
-        brightness_value = qMin( qMax(brightness_value, 0.0), 100.0 ) / 100.0;
-        if(!parser.value(setOption).isEmpty())
-            sign = 0.0;
-        // Checks if backlight driver is available
-        LXQt::Backlight *mBacklight = new LXQt::Backlight();
-        if(mBacklight->isBacklightAvailable() && (parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption)) ) {
-            // Use backlight driver
-            long backlight = ( mBacklight->getBacklight() + sign*(mBacklight->getMaxBacklight()/50 + 1) )*qAbs(sign) + brightness_value*mBacklight->getMaxBacklight();
-            mBacklight->setBacklight(backlight);
-        } else {
-            // Use XRandr driver
-            XRandrBrightness *brightness = new XRandrBrightness();
-            const QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
-            QList<MonitorInfo> monitorsChanged;
-            for(MonitorInfo monitor : monitors)
-            {
-                if(parser.isSet(resetGammaOption))
-                {
-                    monitor.setBrightness(1.0);
-                    monitorsChanged.append(monitor);
-                    continue;
-                }
-    
-                if(monitor.isBacklightSupported() )
-                {
-                    long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
-                    if(backlight<monitor.backlightMax() && backlight>0)
-                    {
-                        monitor.setBacklight(backlight);
-                        monitorsChanged.append(monitor);
-                    }
-                }
-                else
-                {
-                    float brightness = (monitor.brightness() + 0.1*sign)*qAbs(sign) + brightness_value*2.0;
-                    if(brightness<2.0 && brightness>0.0)
-                    {
-                        monitor.setBrightness(brightness);
-                        monitorsChanged.append(monitor);
-                    }
-                }
-            }
-            brightness->setMonitorsSettings(monitorsChanged);
-        }
-        delete mBacklight;
-        return 0;
+    bool runCmdLine = false;
+
+    runCmdLine = parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption) || parser.isSet(resetGammaOption);
+
+    if (!runCmdLine) { //  GUI
+        BrightnessSettings *brightnessSettings = new BrightnessSettings();
+        brightnessSettings->setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
+        brightnessSettings->show();
+        return app.exec();
     }
 
-    BrightnessSettings *brightnessSettings = new BrightnessSettings();
-    brightnessSettings->setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
-    brightnessSettings->show();
-    return app.exec();
-}
+    float sign = parser.isSet(decreaseOption)?-1.0:1.0;
+    double brightness_value = parser.value(setOption).toFloat();
+    brightness_value = qMin( qMax(brightness_value, 0.0), 100.0 ) / 100.0;
+    if(!parser.value(setOption).isEmpty())
+        sign = 0.0;
+    // Checks if backlight driver is available
+    LXQt::Backlight *mBacklight = new LXQt::Backlight();
+    if(mBacklight->isBacklightAvailable() && (parser.isSet(increaseOption) || parser.isSet(decreaseOption) || parser.isSet(setOption)) ) {
+        // Use backlight driver
+        long backlight = ( mBacklight->getBacklight() + sign*(mBacklight->getMaxBacklight()/50 + 1) )*qAbs(sign) + brightness_value*mBacklight->getMaxBacklight();
+        mBacklight->setBacklight(backlight);
+    } else {
+        // Use XRandr driver
+        XRandrBrightness *brightness = new XRandrBrightness();
+        const QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
+        QList<MonitorInfo> monitorsChanged;
+        for(MonitorInfo monitor : monitors)
+        {
+            if(parser.isSet(resetGammaOption))
+            {
+                monitor.setBrightness(1.0);
+                monitorsChanged.append(monitor);
+                continue;
+            }
 
+            if(monitor.isBacklightSupported() )
+            {
+                long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightness_value*monitor.backlightMax();
+                if(backlight<monitor.backlightMax() && backlight>0)
+                {
+                    monitor.setBacklight(backlight);
+                    monitorsChanged.append(monitor);
+                }
+            }
+            else
+            {
+                float brightness = (monitor.brightness() + 0.1*sign)*qAbs(sign) + brightness_value*2.0;
+                if(brightness<2.0 && brightness>0.0)
+                {
+                    monitor.setBrightness(brightness);
+                    monitorsChanged.append(monitor);
+                }
+            }
+        }
+        brightness->setMonitorsSettings(monitorsChanged);
+    }
+    delete mBacklight;
+    return 0;
+}
