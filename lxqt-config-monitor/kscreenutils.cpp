@@ -52,6 +52,7 @@ void KScreenUtils::extended(KScreen::ConfigPtr &config)
     for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
+        qDebug() << "Output: " << output->name();
         QPoint pos = output->pos();
         pos.setX(width);
         pos.setY(0);

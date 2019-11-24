@@ -65,12 +65,13 @@ void LoadSettings::applyBestSettings()
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
         if (configOp) {
             bool ok = false;
-            if(!ok) {
+            //if(!ok) {
                 qDebug() << "lxqt-config-monitor: Applying current settings...";
                 QList<MonitorSettings> monitors = loadConfiguration(QStringLiteral("currentConfig"));
                 ok = applySettings(configOp->config(), monitors);
-            }
+            //}
             if(!ok) {
+                qDebug() << "lxqt-config-monitor: Current settings can not be applied.";
                 qDebug() << "lxqt-config-monitor: Searching in saved settings...";
                 // Load configs
                 LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
@@ -111,6 +112,8 @@ void LoadSettings::applyBestSettings()
 bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 {
     KScreen::OutputList outputs = config->outputs();
+    if(outputs.size() != monitors.size())
+        return false;
     for (const KScreen::OutputPtr &output : outputs) {
         qDebug() << "Output: " << output->name();
         bool outputFound = false;
