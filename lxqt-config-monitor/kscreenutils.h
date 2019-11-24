@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2016  P.L. Lucas <selairi@gmail.com>
+    Copyright (C) 2019  P.L. Lucas <selairi@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,39 +16,25 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef _FASTMENU_H_
-#define _FASTMENU_H_
+#ifndef _KSCREEN_UTILS_H_
+#define _KSCREEN_UTILS_H_
 
-#include "ui_fastmenu.h"
-
-#include <QGroupBox>
-#include <QStringList>
-#include <QHash>
-#include <QList>
 #include <KScreen/Config>
 
-
-
-class FastMenu : public QGroupBox
-{
-  Q_OBJECT
-
-
+class KScreenUtils {
 public:
-    FastMenu(KScreen::ConfigPtr config, QWidget* parent = nullptr);
-    ~FastMenu() override;
-
-private Q_SLOTS:
-    void onSeleccionChanged(int index);
-
-private:
-    Ui::FastMenu ui;
-    KScreen::ConfigPtr mConfig;
-    KScreen::ConfigPtr mOldConfig;
+    /** Virtual screen size is updated.
+     * If all monitors are allocated over a big rectangle, the size of this rectangle is the virtual screen size.
+     */
+    static void updateScreenSize(KScreen::ConfigPtr &config);
     
-    void unified();
-    void onlyFirst();
-    void onlySecond();
+    /** This method applies config and it shows a TimeoutDialog to undo the changes.
+     */
+    static bool applyConfig(KScreen::ConfigPtr &config, KScreen::ConfigPtr &oldConfig);
+    
+    /** Sets the monitors aligned side by side.
+     */
+    static void extended(KScreen::ConfigPtr &config);
 };
 
-#endif // _FASTMENU_H_
+#endif // _KSCREEN_UTILS_H_

@@ -25,6 +25,7 @@
 #include "monitorpicture.h"
 #include "settingsdialog.h"
 #include "fastmenu.h"
+#include "kscreenutils.h"
 
 #include <KScreen/Output>
 #include <QJsonObject>
@@ -48,24 +49,20 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
     connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
         qDebug() << "Connecting to KScreen...";
-        if (configOp && configOp->config() && configOp->config()->screen())
-        {
+        if (configOp && configOp->config() && configOp->config()->screen()) {
             mOldConfig = configOp->config()->clone();
             loadConfiguration(configOp->config());
             operation->deleteLater();
         }
-        else if(configOp && !configOp->config())
-        {
+        else if(configOp && !configOp->config()) {
             qDebug() << "Error: Config is invalid, probably backend couldn't load";
             exit(1);
         }
-        else if(configOp && configOp->config() && !configOp->config()->screen())
-        {
+        else if(configOp && configOp->config() && !configOp->config()->screen()) {
             qDebug() << "Error: No screen in the configuration, broken backend";
             exit(2);
         }
-        else
-        {
+        else {
             qDebug() << "Error: Connect to KScreen is not possible";
             exit(3);
         }
@@ -74,8 +71,7 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
     connect(ui.buttonBox, &QDialogButtonBox::clicked, [&] (QAbstractButton *button) {
         if (ui.buttonBox->standardButton(button) == QDialogButtonBox::Apply)
             applyConfiguration(false);
-        if (ui.buttonBox->standardButton(button) == QDialogButtonBox::Save)
-        {
+        if (ui.buttonBox->standardButton(button) == QDialogButtonBox::Save) {
             applyConfiguration(true);
         }
 
@@ -100,17 +96,15 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     KScreen::OutputList outputs = mConfig->outputs();
 
     int nMonitors = 0;
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         if (output->isConnected())
             nMonitors++;
 
-        if (nMonitors > 1)
-        {
+        if (nMonitors > 1) {
             fastMenu = new FastMenu(config, this);
             ui.monitorList->addItem(tr("Fast Menu"));
             ui.stackedWidget->addWidget(fastMenu);
-            
+
             monitorPicture = new MonitorPictureDialog(config, this);
             ui.monitorList->addItem(tr("Set position"));
             ui.stackedWidget->addWidget(monitorPicture);
@@ -120,10 +114,8 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
     QList<MonitorWidget*> monitors;
 
-    for (const KScreen::OutputPtr &output : outputs)
-    {
-        if (output->isConnected())
-        {
+    for (const KScreen::OutputPtr &output : outputs) {
+        if (output->isConnected()) {
             MonitorWidget *monitor = new MonitorWidget(output, mConfig, this);
             QString monitorName = output->edid()->name() + QStringLiteral(" ") + output->edid()->vendor();
             if(monitorName.trimmed().size() > 0)
@@ -133,11 +125,9 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
             monitors.append(monitor);
         }
     }
-    
-    for(const MonitorWidget *monitor1 : qAsConst(monitors))
-    {
-        for(const MonitorWidget *monitor : qAsConst(monitors))
-        {
+
+    for(const MonitorWidget *monitor1 : qAsConst(monitors)) {
+        for(const MonitorWidget *monitor : qAsConst(monitors)) {
             if(monitor != monitor1)
                 connect(monitor, SIGNAL(primaryOutputChanged(MonitorWidget *)), monitor1, SLOT(onPrimaryOutputChanged(MonitorWidget *)));
         }
@@ -152,20 +142,10 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
 void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
 {
-    qDebug() << "Tamaño de la pantalla" << mConfig->screen()->currentSize();
-    if (mConfig && KScreen::Config::canBeApplied(mConfig))
-    {
-        KScreen::SetConfigOperation(mConfig).exec();
-
-        TimeoutDialog mTimeoutDialog;
-        if (mTimeoutDialog.exec() == QDialog::Rejected)
-            KScreen::SetConfigOperation(mOldConfig).exec();
-        else
-        {
-            mOldConfig = mConfig->clone();
-            if (saveConfigOk)
-                saveConfiguration(mConfig);
-        }
+    if( KScreenUtils::applyConfig(mConfig, mOldConfig) ) {
+        mOldConfig = mConfig->clone();
+        if (saveConfigOk)
+            saveConfiguration(mConfig);
     }
 }
 
@@ -182,19 +162,17 @@ void MonitorSettingsDialog::reject()
 
 void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
 {
-    
+
     QList<MonitorSettings> currentSettings;
     KScreen::OutputList outputs = config->outputs();
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         MonitorSettings monitor;
         monitor.name = output->name();
         KScreen::Edid* edid = output->edid();
         if (edid && edid->isValid())
             monitor.hash = edid->hash();
         monitor.connected = output->isConnected();
-        if ( output->isConnected() )
-        {
+        if ( output->isConnected() ) {
             monitor.enabled = output->isEnabled();
             monitor.primary = output->isPrimary();
             monitor.xPos = output->pos().x();
@@ -207,12 +185,12 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
         }
         currentSettings.append(monitor);
     }
-    
+
     LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     settings.beginGroup(QStringLiteral("currentConfig"));
     saveMonitorSettings(settings, currentSettings);
     settings.endGroup();
-    
+
     QList<MonitorSavedSettings> monitors;
     settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);

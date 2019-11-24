@@ -22,6 +22,7 @@
 
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
+#include <LXQt/Notification>
 #include "monitor.h"
 
 class LoadSettings : public QObject
@@ -36,8 +37,9 @@ public:
 private:
     QList<MonitorSettings> loadCurrentConfiguration();
     QList<MonitorSettings> loadConfiguration(QString scope);
+    LXQt::Notification *mNotification;
 
-    // Configutarions
+    // Configurations
     KScreen::ConfigPtr mConfig;
 };
 

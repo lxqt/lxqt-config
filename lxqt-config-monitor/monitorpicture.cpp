@@ -34,8 +34,7 @@ static QSize sizeFromString(QString str)
     int width = 0;
     int height = 0;
     int x = str.indexOf(QLatin1Char('x'));
-    if (x > 0)
-    {
+    if (x > 0) {
         width = str.leftRef(x).toInt();
         height = str.midRef(x + 1).toInt();
     }
@@ -78,8 +77,7 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
     int monitorsWidth =0;
     int monitorsHeight = 0;
     QGraphicsScene *scene = new QGraphicsScene();
-    for (MonitorWidget *monitor : monitors)
-    {
+    for (MonitorWidget *monitor : monitors) {
         MonitorPicture *monitorPicture = new MonitorPicture(nullptr, monitor, this);
         pictures.append(monitorPicture);
         scene->addItem(monitorPicture);
@@ -98,8 +96,7 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
 void MonitorPictureDialog::showEvent(QShowEvent * event)
 {
     QWidget::showEvent(event);
-    if( ! firstShownOk )
-    {
+    if( ! firstShownOk ) {
         // Update scale and set scrollbar position.
         // Real widget size is not set, until widget is shown.
         firstShownOk = true;
@@ -129,21 +126,17 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
     int x0, y0;
     x0 = y0 = 0;
 
-    for (MonitorPicture *picture : qAsConst(pictures))
-    {
+    for (MonitorPicture *picture : qAsConst(pictures)) {
         if (picture->monitorWidget->output->name() == primaryMonitor
-            || primaryMonitor == QStringLiteral(""))
-        {
+                || primaryMonitor == QStringLiteral("")) {
             x0 = picture->originX + picture->pos().x();
             y0 = picture->originY + picture->pos().y();
             break;
         }
     }
 
-    if( primaryMonitor == QStringLiteral("") )
-    {
-        for(MonitorPicture *picture : qAsConst(pictures))
-        {
+    if( primaryMonitor == QStringLiteral("") ) {
+        for(MonitorPicture *picture : qAsConst(pictures)) {
             int x1 = picture->originX + picture->pos().x();
             int y1 = picture->originY + picture->pos().y();
             x0 = qMin(x0, x1);
@@ -151,8 +144,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
         }
     }
 
-    for (MonitorPicture *picture : qAsConst(pictures))
-    {
+    for (MonitorPicture *picture : qAsConst(pictures)) {
         int x = picture->originX + picture->pos().x() - x0;
         int y = picture->originY + picture->pos().y() - y0;
         if( x != picture->monitorWidget->ui.xPosSpinBox->value() )
@@ -184,14 +176,14 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemSendsGeometryChanges);
     originX = x;
     originY = y;
-    
+
     setRect(x, y, currentSize.width(), currentSize.height());
     // setPen(QPen(Qt::black, 20));
     // textItem = new QGraphicsTextItem(monitorWidget->output->name(), this);
     // textItem->setX(x);
     // textItem->setY(y);
     // textItem->setParentItem(this);
-    
+
     QSvgRenderer *renderer = new QSvgRenderer(QLatin1String(ICON_PATH "monitor.svg"));
     svgItem = new QGraphicsSvgItem();
     svgItem->setSharedRenderer(renderer);
@@ -199,15 +191,15 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
     svgItem->setY(y);
     svgItem->setOpacity(0.7);
     svgItem->setParentItem(this);
-  
-  
+
+
     textItem = new QGraphicsTextItem(monitorWidget->output->name(), this);
     textItem->setDefaultTextColor(Qt::white);
     textItem->setX(x);
     textItem->setY(y);
     textItem->setParentItem(this);
     setPen(QPen(Qt::black, 20));
-    
+
 
     adjustNameSize();
 }
@@ -237,9 +229,9 @@ QVariant MonitorPicture::itemChange(GraphicsItemChange change, const QVariant & 
 {
     //qDebug() << "[MonitorPicture::itemChange]: ";
     //if ( change == ItemPositionChange && scene()) {
-          // value is the new position.
-          //QPointF newPos = value.toPointF();
-          //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]: " << newPos.x() << "x" << newPos.y();
+    // value is the new position.
+    //QPointF newPos = value.toPointF();
+    //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]: " << newPos.x() << "x" << newPos.y();
     //}
     QVariant v = QGraphicsItem::itemChange(change, value);
     //monitorPictureDialog->updateMonitorWidgets(QString());
@@ -263,15 +255,14 @@ void MonitorPicture::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 // Move picture to nearest picture procedure.
 //////////////////////////////////////////////////////////////////////////////////
 
-struct Result_moveMonitorPictureToNearest
-{
+struct Result_moveMonitorPictureToNearest {
     bool ok;
     bool outside;
     QVector2D vector;
 };
 
 static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* monitorPicture1,
-                                                             MonitorPicture* monitorPicture2)
+        MonitorPicture* monitorPicture2)
 {
     Result_moveMonitorPictureToNearest result;
     QVector2D offsetVector(0, 0);
@@ -286,35 +277,35 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
         monitorPicture2->y() + monitorPicture2->originY,
         monitorPicture2->rect().width(),
         monitorPicture2->rect().height());
-    
+
     if(monitorPicture1Rect.intersects(monitorPicture2Rect)) {
         result.ok = true;
         return result;
     }
-    
+
     result.outside = true;
     result.ok = false;
-    
+
     extendedAreaRect = QRectF(
-        qMin(monitorPicture2Rect.x(), monitorPicture1Rect.x()) - monitorPicture2Rect.width(),
-        monitorPicture2Rect.y(),
-        qMax(monitorPicture2Rect.x(), monitorPicture1Rect.x()) + 2*monitorPicture2Rect.width(),
-        monitorPicture2Rect.height());
-    
+                           qMin(monitorPicture2Rect.x(), monitorPicture1Rect.x()) - monitorPicture2Rect.width(),
+                           monitorPicture2Rect.y(),
+                           qMax(monitorPicture2Rect.x(), monitorPicture1Rect.x()) + 2*monitorPicture2Rect.width(),
+                           monitorPicture2Rect.height());
+
     //qDebug() << "\nextendedAreaRect: " << extendedAreaRect;
     //qDebug() << "monitorPicture1Rect: " << monitorPicture1Rect << monitorPicture1->rect().width() << monitorPicture1->rect().height();
     //qDebug() << "monitorPicture2Rect: " << monitorPicture2Rect;
-    
+
     if(extendedAreaRect.intersects(monitorPicture1Rect)) {
         // monitorPicture1 left
         offsetVector = QVector2D(monitorPicture2Rect.right() - monitorPicture1Rect.left(), 0);
         result.vector = offsetVector;
-        
+
         // monitorPicture1 right
         offsetVector = QVector2D(monitorPicture2Rect.left() - monitorPicture1Rect.right(), 0);
         if(result.vector.length() > offsetVector.length())
             result.vector = offsetVector;
-        
+
         float y2 = monitorPicture2Rect.top();
         float y1 = monitorPicture1Rect.top();
         float delta = monitorPicture2Rect.height() * 0.1;
@@ -326,27 +317,27 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
             if((y2 - delta) < y1 && y1 < y2)
                 result.vector.setY(y2 - y1);
         }
-        
+
         result.outside = false;
     }
-    
+
     extendedAreaRect = QRectF(
-        monitorPicture2Rect.x(),
-        qMin(monitorPicture2Rect.y(), monitorPicture1Rect.y()) - monitorPicture2Rect.height(),
-        monitorPicture2Rect.width(),
-        qMax(monitorPicture2Rect.y(), monitorPicture1Rect.y()) + 2*monitorPicture2Rect.height()
-        );
-    
+                           monitorPicture2Rect.x(),
+                           qMin(monitorPicture2Rect.y(), monitorPicture1Rect.y()) - monitorPicture2Rect.height(),
+                           monitorPicture2Rect.width(),
+                           qMax(monitorPicture2Rect.y(), monitorPicture1Rect.y()) + 2*monitorPicture2Rect.height()
+                       );
+
     if(extendedAreaRect.intersects(monitorPicture1Rect)) {
         // monitorPicture1 top
         offsetVector = QVector2D(0, monitorPicture2Rect.bottom() - monitorPicture1Rect.top());
         result.vector = offsetVector;
-        
+
         // monitorPicture1 bottom
         offsetVector = QVector2D(0, monitorPicture2Rect.top() - monitorPicture1Rect.bottom());
         if(result.vector.length() > offsetVector.length())
             result.vector = offsetVector;
-        
+
         float x2 = monitorPicture2Rect.left();
         float x1 = monitorPicture1Rect.left();
         float delta = monitorPicture2Rect.width() * 0.1;
@@ -358,10 +349,10 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
             if((x2 - delta) < x1 && x1 < x2)
                 result.vector.setX(x2 - x1);
         }
-        
+
         result.outside = false;
     }
-    
+
     return result;
 }
 
@@ -370,21 +361,20 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
 {
     if (!ui.magneticCheckBox->isChecked())
         return;
-    
+
     // Float to int
     monitorPicture->setX(static_cast<qreal>(qRound(monitorPicture->x())));
     monitorPicture->setY(static_cast<qreal>(qRound(monitorPicture->y())));
-    
+
 
     QVector2D vector(0, 0);
-    for (MonitorPicture *picture : qAsConst(pictures))
-    {
+    for (MonitorPicture *picture : qAsConst(pictures)) {
         if (picture == monitorPicture)
             continue;
-        
+
         // Float to int. The positions of the Monitors must be set with pixels.
         // QGraphicsView uses float to store x and y. Then, positions as (800.5, 600.3) are stored.
-        // x and y have to be translated from float to int in order to store pixels position: 
+        // x and y have to be translated from float to int in order to store pixels position:
         picture->setX(static_cast<qreal>(qRound(picture->x())));
         picture->setY(static_cast<qreal>(qRound(picture->y())));
 

@@ -26,92 +26,98 @@
 #include <QInputDialog>
 
 SaveSettings::SaveSettings(LXQt::Settings*applicationSettings, QWidget* parent):
-  QDialog(parent) {
+    QDialog(parent)
+{
 
-  this->applicationSettings = applicationSettings;
+    this->applicationSettings = applicationSettings;
 
-  ui.setupUi(this);
+    ui.setupUi(this);
 
-  QSize size(128,64);
-  ui.save->setIcon(QIcon::fromTheme("document-save"));
-  ui.save->setIconSize(size);
+    QSize size(128,64);
+    ui.save->setIcon(QIcon::fromTheme("document-save"));
+    ui.save->setIconSize(size);
 
-  connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
-  connect(ui.deletePushButton, SIGNAL(clicked()), SLOT(onDeleteItem()));
-  connect(ui.renamePushButton, SIGNAL(clicked()), SLOT(onRenameItem()));
+    connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
+    connect(ui.deletePushButton, SIGNAL(clicked()), SLOT(onDeleteItem()));
+    connect(ui.renamePushButton, SIGNAL(clicked()), SLOT(onRenameItem()));
 
-  loadSettings();
+    loadSettings();
 }
 
-void SaveSettings::setHardwareIdentifier(QString hardwareIdentifier) {
-  this->hardwareIdentifier = hardwareIdentifier;
-  loadSettings();
+void SaveSettings::setHardwareIdentifier(QString hardwareIdentifier)
+{
+    this->hardwareIdentifier = hardwareIdentifier;
+    loadSettings();
 }
 
-void SaveSettings::setSavedSettings(QListWidgetItem * item) {
-  QJsonObject o = item->data(Qt::UserRole).toJsonObject();
-  QString cmd = o["command"].toString();
-  qDebug() << "[SaveSettings::setSavedSettings]: " << cmd;
-  QProcess::execute(cmd);
+void SaveSettings::setSavedSettings(QListWidgetItem * item)
+{
+    QJsonObject o = item->data(Qt::UserRole).toJsonObject();
+    QString cmd = o["command"].toString();
+    qDebug() << "[SaveSettings::setSavedSettings]: " << cmd;
+    QProcess::execute(cmd);
 }
 
-void SaveSettings::onDeleteItem() {
-  if( ui.allConfigs->currentItem() == NULL )
-    return;
-  QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
-  applicationSettings->beginGroup("configMonitor");
-  QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
-  for(int i=0;i<savedConfigs.size();i++) {
-    const QJsonValue & v = savedConfigs[i];
-    QJsonObject o = v.toObject();
-    if( o["name"].toString() == obj["name"].toString() ) {
-      savedConfigs.removeAt(i);
-      break;
+void SaveSettings::onDeleteItem()
+{
+    if( ui.allConfigs->currentItem() == NULL )
+        return;
+    QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+    applicationSettings->beginGroup("configMonitor");
+    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+    for(int i=0; i<savedConfigs.size(); i++) {
+        const QJsonValue & v = savedConfigs[i];
+        QJsonObject o = v.toObject();
+        if( o["name"].toString() == obj["name"].toString() ) {
+            savedConfigs.removeAt(i);
+            break;
+        }
     }
-  }
-  applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
-  applicationSettings->endGroup();
-  loadSettings();
+    applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
+    applicationSettings->endGroup();
+    loadSettings();
 }
 
-void SaveSettings::onRenameItem() {
-  if( ui.allConfigs->currentItem() == NULL )
-    return;
-  QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
-  bool ok;
-  QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"), QLineEdit::Normal, obj["name"].toString(), &ok);
-  if (!ok || configName.isEmpty())
-    return;
-  applicationSettings->beginGroup("configMonitor");
-  QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
-  for(int i=0;i<savedConfigs.size();i++) {
-    const QJsonValue & v = savedConfigs[i];
-    QJsonObject o = v.toObject();
-    if( o["name"].toString() == obj["name"].toString() ) {
-      savedConfigs.removeAt(i);
-      obj["name"] = configName;
-      savedConfigs.append(obj);
-      break;
+void SaveSettings::onRenameItem()
+{
+    if( ui.allConfigs->currentItem() == NULL )
+        return;
+    QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+    bool ok;
+    QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"), QLineEdit::Normal, obj["name"].toString(), &ok);
+    if (!ok || configName.isEmpty())
+        return;
+    applicationSettings->beginGroup("configMonitor");
+    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+    for(int i=0; i<savedConfigs.size(); i++) {
+        const QJsonValue & v = savedConfigs[i];
+        QJsonObject o = v.toObject();
+        if( o["name"].toString() == obj["name"].toString() ) {
+            savedConfigs.removeAt(i);
+            obj["name"] = configName;
+            savedConfigs.append(obj);
+            break;
+        }
     }
-  }
-  applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
-  applicationSettings->endGroup();
-  loadSettings();
+    applicationSettings->setValue("saved", QVariant(QJsonDocument(savedConfigs).toJson()));
+    applicationSettings->endGroup();
+    loadSettings();
 }
 
-void SaveSettings::loadSettings() {
-  ui.allConfigs->clear();
-  ui.hardwareCompatibleConfigs->clear();
-  applicationSettings->beginGroup("configMonitor");
-  QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
-  foreach (const QJsonValue & v, savedConfigs) {
-    QJsonObject o = v.toObject();
-    QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.allConfigs);
-    item->setData(Qt::UserRole, QVariant(o));
-    if(o["hardwareIdentifier"].toString() == hardwareIdentifier) {
-      QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.hardwareCompatibleConfigs);
-      item->setData(Qt::UserRole, QVariant(o));
+void SaveSettings::loadSettings()
+{
+    ui.allConfigs->clear();
+    ui.hardwareCompatibleConfigs->clear();
+    applicationSettings->beginGroup("configMonitor");
+    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+    foreach (const QJsonValue & v, savedConfigs) {
+        QJsonObject o = v.toObject();
+        QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.allConfigs);
+        item->setData(Qt::UserRole, QVariant(o));
+        if(o["hardwareIdentifier"].toString() == hardwareIdentifier) {
+            QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.hardwareCompatibleConfigs);
+            item->setData(Qt::UserRole, QVariant(o));
+        }
     }
-  }
-  applicationSettings->endGroup();
+    applicationSettings->endGroup();
 }

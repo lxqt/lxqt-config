@@ -54,7 +54,8 @@ static bool sizeBiggerThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr
 {
     QSize sizeA = modeA->size();
     QSize sizeB = modeB->size();
-    return sizeA.width() * sizeA.height() > sizeB.width() * sizeB.height();
+    //return sizeA.width() * sizeA.height() > sizeB.width() * sizeB.height();
+    return sizeA.width() > sizeB.width() || (sizeA.width() == sizeB.width() && sizeA.height() > sizeB.height());
 }
 
 
@@ -72,10 +73,8 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     // Remove duplicate sizes
     QMap<QString, KScreen::ModePtr> noDuplicateModes;
-    for(const KScreen::ModePtr &mode : qAsConst(modeList))
-    {
-        if( noDuplicateModes.keys().contains(modeToString(mode)) )
-        {
+    for(const KScreen::ModePtr &mode : qAsConst(modeList)) {
+        if( noDuplicateModes.keys().contains(modeToString(mode)) ) {
             KScreen::ModePtr actual = noDuplicateModes[modeToString(mode)];
             bool isActualPreferred = output->preferredModes().contains(actual->id());
             bool isModePreferred = output->preferredModes().contains(mode->id());
@@ -91,29 +90,24 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     qSort(modeList.begin(), modeList.end(), sizeBiggerThan);
 
     // Add each mode to the list
-    for (const KScreen::ModePtr &mode : qAsConst(modeList))
-    {
+    for (const KScreen::ModePtr &mode : qAsConst(modeList)) {
         ui.resolutionCombo->addItem(modeToString(mode), mode->id());
-        if(output->preferredModes().contains(mode->id()))
-        {
-             // Make bold preferredModes
-             QFont font = ui.resolutionCombo->font();
-             font.setBold(true);
-             ui.resolutionCombo->setItemData(ui.resolutionCombo->count()-1, font, Qt::FontRole);
+        if(output->preferredModes().contains(mode->id())) {
+            // Make bold preferredModes
+            QFont font = ui.resolutionCombo->font();
+            font.setBold(true);
+            ui.resolutionCombo->setItemData(ui.resolutionCombo->count()-1, font, Qt::FontRole);
         }
     }
     connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
 
     // Select actual mode in list
-    if (output->currentMode())
-    {
+    if (output->currentMode()) {
         // Set the current mode in dropdown
         int idx = ui.resolutionCombo->findData(output->currentMode()->id());
-        if (idx < 0)
-        {
+        if (idx < 0) {
             // Select mode with same size
-            for (const KScreen::ModePtr &mode : qAsConst(modeList))
-            {
+            for (const KScreen::ModePtr &mode : qAsConst(modeList)) {
                 if( mode->size() == output->currentMode()->size() )
                     idx = ui.resolutionCombo->findData(output->currentMode()->id());
             }
@@ -129,8 +123,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     // Update EDID information
     // KScreen doesn't make much public but that's ok...
     KScreen::Edid* edid = output->edid();
-    if (edid && edid->isValid())
-    {
+    if (edid && edid->isValid()) {
         ui.outputInfoLabel->setText(
             tr("Name: %1\n").arg(edid->name()) %
             tr("Vendor: %1\n").arg(edid->vendor()) %
@@ -141,8 +134,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         );
     }
 
-    if (config->connectedOutputs().count() == 1)
-    {
+    if (config->connectedOutputs().count() == 1) {
         setOnlyMonitor(true);
         // There isn't always a primary output. Gross.
         output->setPrimary(true);
@@ -162,16 +154,15 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     ui.orientationCombo->addItem(tr("Left"), KScreen::Output::Left);
     ui.orientationCombo->addItem(tr("Right"), KScreen::Output::Right);
     ui.orientationCombo->addItem(tr("Inverted"), KScreen::Output::Inverted);
-    switch(output->rotation())
-    {
+    switch(output->rotation()) {
     case KScreen::Output::None:
-            ui.orientationCombo->setCurrentIndex(0);
+        ui.orientationCombo->setCurrentIndex(0);
         break;
     case KScreen::Output::Left:
         ui.orientationCombo->setCurrentIndex(1);
         break;
     case KScreen::Output::Right:
-            ui.orientationCombo->setCurrentIndex(2);
+        ui.orientationCombo->setCurrentIndex(2);
         break;
     case KScreen::Output::Inverted:
         ui.orientationCombo->setCurrentIndex(3);
@@ -197,8 +188,7 @@ void MonitorWidget::onEnabledChanged(bool enabled)
     output->setEnabled(enabled);
 
     // If we're enabling a disabled output for the first time
-    if (enabled && !output->currentMode())
-    {
+    if (enabled && !output->currentMode()) {
         // order here matters
         onResolutionChanged(ui.resolutionCombo->currentIndex());
         onOrientationChanged(ui.orientationCombo->currentIndex());
@@ -247,8 +237,7 @@ void MonitorWidget::updateRefreshRates()
         return;
 
     KScreen::ModePtr selectedMode = output->currentMode();
-    if (selectedMode)
-    {
+    if (selectedMode) {
         const auto modes = output->modes();
         for (const KScreen::ModePtr &mode : modes)
             if (mode->size() == selectedMode->size())
@@ -268,8 +257,7 @@ void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor)
     ui.behaviorCombo->setEnabled(!isOnlyMonitor);
     ui.xPosSpinBox->setVisible(!isOnlyMonitor);
     ui.yPosSpinBox->setVisible(!isOnlyMonitor);
-    if(isOnlyMonitor)
-    {
+    if(isOnlyMonitor) {
         ui.xPosSpinBox->setValue(0);
         ui.yPosSpinBox->setValue(0);
     }

@@ -33,8 +33,7 @@ void saveMonitorSettings(QSettings & settings, const QList<MonitorSettings> moni
     settings.remove(QStringLiteral("settings"));
     settings.beginWriteArray(QStringLiteral("settings"));
     int i = 0;
-    for(const MonitorSettings& monitor : monitors)
-    {
+    for(const MonitorSettings& monitor : monitors) {
         settings.setArrayIndex(i++);
         saveMonitorSettings(settings, monitor);
     }
@@ -46,8 +45,7 @@ void saveMonitorSettings(QSettings &settings, const MonitorSettings &monitor)
     settings.setValue(QStringLiteral("name"), monitor.name);
     settings.setValue(QStringLiteral("hash"), monitor.hash);
     settings.setValue(QStringLiteral("connected"), monitor.connected);
-    if(monitor.connected)
-    {
+    if(monitor.connected) {
         settings.setValue(QStringLiteral("enabled"), monitor.enabled);
         settings.setValue(QStringLiteral("primary"), monitor.primary);
         settings.setValue(QStringLiteral("xPos"), monitor.xPos);
@@ -63,8 +61,7 @@ void saveMonitorSettings(QSettings &settings, const MonitorSettings &monitor)
 void loadMonitorSettings(QSettings & settings, QList<MonitorSettings> &monitors)
 {
     int size = settings.beginReadArray(QStringLiteral("settings"));
-    for(int i=0; i<size; i++)
-    {
+    for(int i=0; i<size; i++) {
         settings.setArrayIndex(i);
         MonitorSettings monitor;
         loadMonitorSettings(settings, monitor);
@@ -78,8 +75,7 @@ void loadMonitorSettings(QSettings &settings, MonitorSettings &monitor)
     monitor.name = settings.value(QStringLiteral("name")).toString();
     monitor.hash = settings.value(QStringLiteral("hash")).toString();
     monitor.connected = settings.value(QStringLiteral("connected")).toBool();
-    if(monitor.connected)
-    {
+    if(monitor.connected) {
         monitor.enabled = settings.value(QStringLiteral("enabled")).toBool();
         monitor.primary = settings.value(QStringLiteral("primary")).toBool();
         monitor.xPos = settings.value(QStringLiteral("xPos")).toInt();
@@ -97,8 +93,7 @@ void saveMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> monit
     settings.remove(QStringLiteral("SavedSettings"));
     settings.beginWriteArray(QStringLiteral("SavedSettings"));
     int i = 0;
-    for(MonitorSavedSettings& monitor : monitors)
-    {
+    for(MonitorSavedSettings& monitor : monitors) {
         settings.setArrayIndex(i++);
         saveMonitorSettings(settings, monitor);
     }
@@ -115,8 +110,7 @@ void saveMonitorSettings(QSettings &settings, MonitorSavedSettings &monitor)
 void loadMonitorSettings(QSettings & settings, QList<MonitorSavedSettings> &monitors)
 {
     int size = settings.beginReadArray(QStringLiteral("SavedSettings"));
-    for(int i=0; i<size; i++)
-    {
+    for(int i=0; i<size; i++) {
         settings.setArrayIndex(i);
         MonitorSavedSettings monitor;
         loadMonitorSettings(settings, monitor);

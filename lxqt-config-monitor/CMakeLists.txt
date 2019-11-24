@@ -12,6 +12,7 @@ set(HEADERS
     settingsdialog.h
     managesavedsettings.h
     fastmenu.h
+    kscreenutils.h
 )
 
 set(SOURCES
@@ -25,6 +26,7 @@ set(SOURCES
     settingsdialog.cpp
     managesavedsettings.cpp
     fastmenu.cpp
+    kscreenutils.cpp
 )
 
 set(UIS

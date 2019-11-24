@@ -20,18 +20,20 @@
 
 
 #include "loadsettings.h"
+#include "kscreenutils.h"
 #include <KScreen/Output>
 #include <KScreen/Config>
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
 #include <LXQt/Settings>
+#include <LXQt/Notification>
 #include <KScreen/EDID>
 #include <QCoreApplication>
 
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 {
-    
+    mNotification = new LXQt::Notification(QLatin1String(""), this);
 }
 
 QList<MonitorSettings> LoadSettings::loadCurrentConfiguration()
@@ -61,8 +63,7 @@ void LoadSettings::applyBestSettings()
     KScreen::GetConfigOperation *operation  = new KScreen::GetConfigOperation();
     connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
-        if (configOp)
-        {
+        if (configOp) {
             bool ok = false;
             if(!ok) {
                 qDebug() << "lxqt-config-monitor: Applying current settings...";
@@ -85,49 +86,17 @@ void LoadSettings::applyBestSettings()
                     // Saved configs can not be applied
                     // Extended mode will be applied
                     qDebug() << "lxqt-config-monitor: No saved settings has been found";
-                    int width = 0;
-                    int height = 0;
                     KScreen::ConfigPtr config = configOp->config();
-                    KScreen::OutputList outputs = config->outputs();
-                    for (const KScreen::OutputPtr &output : outputs)
-                    {
-                        if( !output->isConnected() )
-                            continue;
-                        qDebug() << " Output:" << output->name();
-                        QPoint pos = output->pos();
-                        pos.setX(width);
-                        pos.setY(0);
-                        output->setPos(pos);
-                        output->setEnabled(true);
-                        //first left one as primary
-                        output->setPrimary(width == 0);
-                        KScreen::ModePtr mode(output->currentMode());
-                        //if (!mode)
-                        { // Set the biggest mode
-                            mode = output->modes().first();
-                            int modeArea = mode->size().width() * mode->size().height();
-                            for(KScreen::ModePtr modeAux : output->modes()) {
-                                int modeAuxArea = modeAux->size().width() * modeAux->size().height();
-                                if(modeArea < modeAuxArea) {
-                                    mode = modeAux;
-                                    modeArea = modeAuxArea;
-                                }
-                            }
-                            if (mode)
-                            {
-                                output->setCurrentModeId(mode->id());
-                                qDebug() << "  Set mode for output:" << mode->size();
-                            }
-                        }
-                        if (mode) {
-                            width += mode->size().width();
-                            height = qMax(mode->size().height(), height);
-                        }
-                    }
-                    config->screen()->setCurrentSize(QSize(width, height));
+                    KScreenUtils::extended(config);
+                    KScreenUtils::updateScreenSize(config);
                     if (KScreen::Config::canBeApplied(config))
                         KScreen::SetConfigOperation(config).exec();
                     qDebug() << "lxqt-config-monitor: Extended mode has been applied";
+                    
+                    mNotification->setSummary(tr("Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor."));
+                    mNotification->update();
+                    mNotification->setTimeout(1000);
+                    mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
                 }
             }
             if(ok)
@@ -142,20 +111,16 @@ void LoadSettings::applyBestSettings()
 bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 {
     KScreen::OutputList outputs = config->outputs();
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         qDebug() << "Output: " << output->name();
         bool outputFound = false;
-        for(int i=0;i<monitors.size() && !outputFound;i++)
-        {
+        for(int i=0; i<monitors.size() && !outputFound; i++) {
             MonitorSettings monitor = monitors[i];
-            if( monitor.name == output->name() )
-            {
+            if( monitor.name == output->name() ) {
                 outputFound = true;
                 KScreen::Edid* edid = output->edid();
                 if (edid && edid->isValid())
-                    if( monitor.hash != edid->hash() )
-                    {
+                    if( monitor.hash != edid->hash() ) {
                         qDebug() << "Hash: " << monitor.hash << "==" << edid->hash();
                         return false; // Saved settings are from other monitor
                     }
@@ -169,19 +134,17 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
                 // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
                 KScreen::ModeList modeList = output->modes();
-                for(const KScreen::ModePtr &mode : qAsConst(modeList))
-                {
-                    if( mode->id() == QString(monitor.currentMode) 
+                for(const KScreen::ModePtr &mode : qAsConst(modeList)) {
+                    if( mode->id() == QString(monitor.currentMode)
                             ||
                             (
                                 mode->size().width() == monitor.currentModeWidth
-                                    &&
-                                mode->size().height() == monitor.currentModeHeight 
-                                    && 
-                                mode->refreshRate() == monitor.currentModeRate 
+                                &&
+                                mode->size().height() == monitor.currentModeHeight
+                                &&
+                                mode->refreshRate() == monitor.currentModeRate
                             )
-                      )
-                    {
+                      ) {
                         output->setCurrentModeId( mode->id() );
                         break;
                     }
@@ -193,12 +156,12 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
             return false;
     }
 
-    if (KScreen::Config::canBeApplied(config)) {
+    KScreenUtils::updateScreenSize(config);
+    if (KScreen::Config::canBeApplied(config))
         KScreen::SetConfigOperation(config).exec();
-        //config.screen()
-    } else 
+    else
         return false;
-    
+
     return true;
 }
 

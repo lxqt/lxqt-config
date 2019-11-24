@@ -54,13 +54,11 @@ void TimeoutDialog::onTimeout()
     int time = ui.progressBar->value() + maximum / TIMER_DURATION;
 
     // if time is finished, settings are restored.
-    if (time >= maximum)
-    {
+    if (time >= maximum) {
         timer.stop();
         reject();
     }
-    else
-    {
+    else {
         int remaining = maximum / TIMER_DURATION - TIMER_DURATION * time / maximum;
         ui.remainingTime->setText(tr("%n second(s) remaining", nullptr, remaining).arg(remaining));
         ui.progressBar->setValue(time);
