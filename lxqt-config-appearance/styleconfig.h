@@ -46,7 +46,8 @@ class StyleConfig : public QWidget
 public:
     explicit StyleConfig(LXQt::Settings *settings,
         QSettings *qtSettings, LXQt::Settings *configAppearanceSettings,
-        ConfigOtherToolKits *configOtherToolKits, QWidget *parent = 0);
+        ConfigOtherToolKits *configOtherToolKits,
+        LXQt::Settings *sessionSettings, QWidget *parent = 0);
     ~StyleConfig();
 
     void applyStyle();
@@ -65,7 +66,9 @@ private:
     QSettings *mQtSettings;
     LXQt::Settings *mSettings;
     LXQt::Settings *mConfigAppearanceSettings;
+    LXQt::Settings *mSessionSettings;
     ConfigOtherToolKits *mConfigOtherToolKits;
+    bool mScaleVariablesSetBefore;
 };
 
 #endif // STYLECONFIG_H
