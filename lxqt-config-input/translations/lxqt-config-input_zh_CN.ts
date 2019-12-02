@@ -6,12 +6,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation>形式</translation>
+        <translation>表单</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>光标刷新间隔:</translation>
+        <translation>光标闪烁间隔:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation></translation>
+        <translation> 毫秒</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
@@ -87,12 +87,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation>变种</translation>
+        <translation>变形</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation>新增(&amp;A)</translation>
+        <translation>添加(&amp;A)</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>切换键盘布局的快捷键:</translation>
+        <translation>切换键盘布局的快捷键：</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;备注&lt;/span&gt;：如果您正在使用&lt;span style=&quot; font-weight:600;&quot;&gt;输入法&lt;/span&gt;，例如 IBus、uim、fcitx、或 gcin，此处的设置&lt;span style=&quot; font-weight:600;&quot;&gt;可能不会生效&lt;/span&gt;，因为这些快捷键已被输入法覆盖。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;备注&lt;/span&gt;：如果您正在使用&lt;span style=&quot; font-weight:600;&quot;&gt;输入法&lt;/span&gt;，例如 IBus、uim、fcitx 或 gcin，此处的设置&lt;span style=&quot; font-weight:600;&quot;&gt;可能不会生效&lt;/span&gt;，因为这些快捷键已被输入法覆盖。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>双击间隔:</translation>
+        <translation>双击间隔：</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>滚轮滚动行数:</translation>
+        <translation>滚轮滚动行数：</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>鼠标和触控板</translation>
     </message>
 </context>
 <context>
@@ -265,57 +265,57 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>触控板配置 </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>设备：</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>加速度：</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>点按</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>自然滚动</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>点按拖拽</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>滚动：</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用(&amp;D)</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>双指(&amp;T)</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>边缘(&amp;G)</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>按键(&amp;U)</translation>
     </message>
 </context>
 </TS>
