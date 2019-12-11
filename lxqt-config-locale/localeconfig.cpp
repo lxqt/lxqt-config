@@ -41,6 +41,8 @@
 #include <QDateTime>
 #include <QMessageBox>
 
+#include <algorithm>
+
 const static QString lcLang = QStringLiteral("LANG");
 
 const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
@@ -94,7 +96,7 @@ bool countryLessThan(const QLocale & c1, const QLocale & c2)
 void LocaleConfig::load()
 {
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
-    qSort(allLocales.begin(), allLocales.end(), countryLessThan);
+    std::sort(allLocales.begin(), allLocales.end(), countryLessThan);
     for(QComboBox * combo : qAsConst(m_combos))
     {
         initCombo(combo, allLocales);

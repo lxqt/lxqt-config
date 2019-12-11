@@ -38,6 +38,7 @@
 #include <XdgDirs>
 #include <LXQt/Settings>
 
+#include <algorithm>
 
 #include "mimetypeviewer.h"
 #include "ui_mimetypeviewer.h"
@@ -65,7 +66,7 @@ void MimetypeViewer::loadAllMimeTypes()
     QMimeDatabase db;
     QList<QMimeType> mimetypes = db.allMimeTypes();
 
-    qSort(mimetypes.begin(), mimetypes.end(), mimeTypeLessThan);
+    std::sort(mimetypes.begin(), mimetypes.end(), mimeTypeLessThan);
     for (const QMimeType &mt : qAsConst(mimetypes)) {
         const QString mimetype = mt.name();
         const int i = mimetype.indexOf(QLatin1Char('/'));
