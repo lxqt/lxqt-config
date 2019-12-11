@@ -24,7 +24,7 @@
 #include <QDialogButtonBox>
 #include <KScreen/EDID>
 
-
+#include <algorithm>
 
 QString modeToString(KScreen::ModePtr mode)
 {
@@ -88,7 +88,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     // Sort modes by size
     modeList = noDuplicateModes.values();
-    qSort(modeList.begin(), modeList.end(), sizeBiggerThan);
+    std::sort(modeList.begin(), modeList.end(), sizeBiggerThan);
 
     // Add each mode to the list
     for (const KScreen::ModePtr &mode : qAsConst(modeList))

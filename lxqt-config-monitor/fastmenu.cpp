@@ -25,6 +25,8 @@
 #include <KScreen/Mode>
 #include <KScreen/SetConfigOperation>
 
+#include <algorithm>
+
 enum Options
 {
 	None=0, Extended=1, Unified=2, OnlyFirst=3, OnlySecond=4
@@ -111,7 +113,7 @@ void FastMenu::unified()
         commonSizes = sizes;
     }
     // Select the bigest common size
-    qSort(commonSizes.begin(), commonSizes.end(), sizeBiggerThan);
+    std::sort(commonSizes.begin(), commonSizes.end(), sizeBiggerThan);
     if(commonSizes.isEmpty())
         return;
     QSize commonSize = commonSizes[0];
