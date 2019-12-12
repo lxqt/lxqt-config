@@ -206,7 +206,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>Aktivovat prvky jedním kliknutím</translation>
+        <translation>Aktivovat prvky jedním klepnutím</translation>
     </message>
 </context>
 <context>
@@ -280,7 +280,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Kliknout klepnutím</translation>
+        <translation>Zvolit klepnutím</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
