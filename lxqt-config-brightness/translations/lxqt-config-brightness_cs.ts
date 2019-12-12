@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation>Do výchozích hodnot vrátíte kliknutím pravým tlačítkem</translation>
+        <translation>Do výchozích hodnot vrátíte klepnutím pravým tlačítkem</translation>
     </message>
 </context>
 </TS>
