@@ -316,7 +316,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished">Bouton</translation>
+        <translation>Bo&amp;uton</translation>
     </message>
 </context>
 </TS>
