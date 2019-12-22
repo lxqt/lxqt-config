@@ -143,8 +143,7 @@ Make sure 'xsettingsd' is installed to help GTK applications apply themes on the
 · Window titles need to be scaled separately under &lt;strong&gt;Font &amp;gt; Resolution (DPI)&lt;/strong&gt;&lt;br/&gt;
 · This scaling option does not currently support GTK2 applications, or applications run as the super user (root)&lt;br/&gt;
 · Enabling this options will set environment variables under &lt;strong&gt;Session Settings &amp;gt; Environment (Advanced)&lt;/strong&gt;&lt;br/&gt;
-· Controls at the top-right of a window can be set with custom themes under &lt;strong&gt;Openbox Settings &amp;gt; Theme&lt;/strong&gt;
-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+· Window controls (e.g. minimise, maximise and close) can be customised in your window manager</string>
      </property>
      <property name="text">
       <string>Scale to double size, for high DPI screens (hover for notes)</string>
