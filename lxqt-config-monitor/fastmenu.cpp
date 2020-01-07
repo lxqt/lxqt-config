@@ -26,6 +26,8 @@
 #include <KScreen/Mode>
 #include <KScreen/SetConfigOperation>
 
+#include <algorithm>
+
 enum Options {
     None=0, Extended=1, Unified=2, OnlyFirst=3, OnlySecond=4
 };
