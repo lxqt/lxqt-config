@@ -26,7 +26,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Megerősítés kell. Jó a beállítás?</translation>
+        <translation>Megerősítés szükséges. Jó a beállítás?</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../outputwidget.ui" line="67"/>
         <source>Right click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Jobb kattintás a visszaállításhoz</translation>
     </message>
 </context>
 </TS>
