@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Változtatások mentése? Ez a legközelebbi bejelentkezéskor lesz hatásos.</translation>
+        <translation>Változtatások mentése? Ez a legközelebbi bejelentkezéskor lép érvénybe.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
