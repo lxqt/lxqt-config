@@ -102,12 +102,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Le</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Egér és érintőtábla</translation>
     </message>
 </context>
 <context>
@@ -265,22 +265,22 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>Érintőtábla konfiguráció </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eszköz:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gyorsítás:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Koppintson a kattintáshoz</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -290,22 +290,22 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Érintse meg és húzza</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Görgetés:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;letiltva</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Kétujjas</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
@@ -315,7 +315,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Go&amp;mb</translation>
     </message>
 </context>
 </TS>
