@@ -34,7 +34,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Monitor beállítás</translation>
+        <translation>Monitor beállítások</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
@@ -44,12 +44,12 @@
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation>Átnevez</translation>
+        <translation>Átnevezés</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation>Töröl</translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Monitor beállítás</translation>
+        <translation>Monitor beállítások</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
@@ -180,7 +180,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Frissítési ütem:</translation>
+        <translation>Frissítési gyakoriság:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
@@ -190,12 +190,12 @@
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation>Infó</translation>
+        <translation>Információ</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>Megjelenítő infó</translation>
+        <translation>Megjelenítő információ</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
@@ -236,7 +236,8 @@
         <location filename="../monitorwidget.cpp" line="140"/>
         <source>EISA device ID: %1
 </source>
-        <translation></translation>
+        <translation>EISA eszköz ID: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
@@ -277,12 +278,12 @@
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name</source>
-        <translation type="unfinished">Név</translation>
+        <translation>Név</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="82"/>
         <source>Name:</source>
-        <translation type="unfinished">Név:</translation>
+        <translation>Név:</translation>
     </message>
 </context>
 <context>
@@ -290,19 +291,20 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>A beállítások változtak</translation>
+        <translation>A beállítások megváltoztak</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Jók a beállítások?</translation>
+        <translation>Megfelelőek a beállítások?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="65"/>
         <source>%n second(s) remaining</source>
         <translatorcomment>%n másodperc van hátra</translatorcomment>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n másodperc van hátra</numerusform>
+            <numerusform>%n másodperc van hátra</numerusform>
         </translation>
     </message>
 </context>
