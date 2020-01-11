@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Az aktuális téma eltávolíthatatlan!</translation>
+        <translation>Az aktuális témát nem lehet eltávolítani!</translation>
     </message>
 </context>
 <context>
