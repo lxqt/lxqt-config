@@ -270,7 +270,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Устройство:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
