@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Kurzos villogási idő:</translation>
+        <translation>Kurzor villogási idő:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -37,7 +37,7 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Sok</translation>
+        <translation>Hosszú</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Írj ide valamit tesztelésre</translation>
+        <translation>Írjon ide valamit tesztelésre</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Numlok bekapcsolása bejelenkezéskor</translation>
+        <translation>Numlock bekapcsolása bejelenkezéskor</translation>
     </message>
 </context>
 <context>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation>Hozzá&amp;ad</translation>
+        <translation>Hozzá&amp;adás</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation>Tö&amp;röl</translation>
+        <translation>Tö&amp;rlés</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Kiosztásváltoztató billentyű:</translation>
+        <translation type="unfinished">Kiosztásváltoztató billentyű:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation>Kicsi</translation>
+        <translation>Alacsony</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>Duplakattintás:</translation>
+        <translation>Dupla kattintás időköz:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation>Gördítő sorok:</translation>
+        <translation>Sorok egy görgetésnél:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
-        <translation>Billentyűkiosztás</translation>
+        <translation>Billentyűzetkiosztás</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
@@ -247,12 +247,12 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>Billentyűzetkiosztás választása</translation>
+        <translation>Billentyűzetkiosztás kiválasztása</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>Billentyűkiosztás</translation>
+        <translation>Billentyűzetkiosztás</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>Természetes görgetés</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
@@ -300,7 +300,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation>&amp;letiltva</translation>
+        <translation>&amp;Kikapcsolva</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
@@ -310,7 +310,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Széle</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
