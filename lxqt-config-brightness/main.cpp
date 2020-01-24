@@ -17,7 +17,10 @@
 */
 
 #include "xrandrbrightness.h"
+#include "brightnesswatcher.h"
+
 #include <QDebug>
+#include <QTimer>
 #include <LXQt/SingleApplication>
 #include <QCommandLineParser>
 #include "brightnesssettings.h"
@@ -170,6 +173,12 @@ int main(int argn, char* argv[])
     // Checks if backlight driver is available
     LXQt::Backlight *mBacklight = new LXQt::Backlight(&app);
     if (mBacklight->isBacklightAvailable() && !config.resetGamma) { // Use backlight driver
+        BrightnessWatcher *brightnessWatcher = new BrightnessWatcher(&app);
+
+        // Qt::QueuedConnection needed. The event loop isn't running, yet.
+        QObject::connect(mBacklight, &LXQt::Backlight::backlightChanged,
+            brightnessWatcher, &BrightnessWatcher::changed, Qt::QueuedConnection);
+
         if (config.setBrightness)
             sign = 0.0f;
 
@@ -178,6 +187,16 @@ int main(int argn, char* argv[])
         int backlight = ( currentBacklight + sign*(maxBacklight/50 + 1) )*qAbs(sign) + brightnessValue*maxBacklight;
 
         mBacklight->setBacklight(backlight);
+
+        // Timeout for situations where LXQtBacklight::setBacklight() doesn't
+        // produce a changed signal.
+        // QTimer::singleShot() doesn't allow to choose the type of connection.
+        // Qt::QueuedConnection needed. The event loop isn't running, yet.
+        QTimer *timeout = new QTimer(&app);
+        QObject::connect(timeout, &QTimer::timeout, &app, LXQt::SingleApplication::quit, Qt::QueuedConnection);
+        timeout->setSingleShot(true);
+        timeout->setInterval(2000);
+        timeout->start();
     } else { // Use XRandr driver
         XRandrBrightness *brightness = new XRandrBrightness();
         const QList<MonitorInfo> monitors = brightness->getMonitorsInfo();
@@ -213,4 +232,8 @@ int main(int argn, char* argv[])
         brightness->setMonitorsSettings(monitorsChanged);
         return 0;
     }
+
+    // We need to start the event loop. Otherwise the signal/slot mechanism
+    // won't work.
+    return app.exec();
 }

@@ -12,6 +12,7 @@ include_directories (
 )
 
 set(H_FILES
+    brightnesswatcher.h
     brightnesssettings.h
 	xrandrbrightness.h
     monitorinfo.h
@@ -20,6 +21,7 @@ set(H_FILES
 
 set(CPP_FILES
     main.cpp
+    brightnesswatcher.cpp
     brightnesssettings.cpp
     xrandrbrightness.cpp
     monitorinfo.cpp
