@@ -265,7 +265,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>TouchpadConfig </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -315,7 +315,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>По к&amp;нопке</translation>
     </message>
 </context>
 </TS>
