@@ -16,7 +16,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
         <source>Require confirmation after settings change</source>
-        <translation>A változtatáshoz megerősítés kell</translation>
+        <translation>A változtatáshoz megerősítés szükséges</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
