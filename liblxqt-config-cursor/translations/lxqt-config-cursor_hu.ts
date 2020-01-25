@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished">Az LXQt munkamenetet újra kell indítani a változás érvénybelépéséhez.</translation>
+        <translation type="unfinished">Az LXQt munkamenetet újra kell indítani a változás érvényesítéséhez.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>Mutat...</translation>
+        <translation>Megjelenítés...</translation>
     </message>
 </context>
 <context>
