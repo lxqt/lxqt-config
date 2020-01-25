@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Egy&amp;bevetés és sorrend:</translation>
+        <translation type="unfinished">Egy&amp;bevetés és sorrend:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="315"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Változtatások mentése? Ez a legközelebbi bejelentkezéskor lép érvénybe.</translation>
+        <translation>Menti a változtatásokat? Ez a legközelebbi bejelentkezéskor lép érvénybe.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="436"/>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt nemzeti beállítások</translation>
+        <translation>LXQt területi beállítások</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>Nemzeti beállítások</translation>
+        <translation>Területi beállítások</translation>
     </message>
 </context>
 </TS>
