@@ -110,7 +110,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished">Automata hinting</translation>
+        <translation type="unfinished">Automatikus hinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt megjelenésbeállító</translation>
+        <translation>LXQt megjelenés</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
@@ -236,7 +236,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation type="unfinished">Az egységes témához válasszon hasonló stílust/témát (ha rendelkezésre áll) az összes listán, vagy válassza a &apos;gtk2&apos; Qt stílust (ha rendelkezésre áll) a GTK téma utánzásához.
 
-Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy segítse a GTK alkalmazásokat a témák menet közbeni alkalmazásában.</translation>
+Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a GTK alkalmazások a témák menet közben tudjanak témát váltani.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
