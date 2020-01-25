@@ -6,7 +6,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Configuration Center</source>
-        <translation>Beállító központ</translation>
+        <translation>Beállítóközpont</translation>
     </message>
 </context>
 </TS>
