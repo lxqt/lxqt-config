@@ -170,7 +170,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Kiterjesztődik más megjelenítőre is</translation>
+        <translation>Kiterjesztés más megjelenítőre is</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
