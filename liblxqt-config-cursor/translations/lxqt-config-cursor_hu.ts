@@ -6,12 +6,12 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt egértéma</translation>
+        <translation>LXQt egértéma beállítása</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>A kívánt kurzortéma (előzetesen látható). &lt;b&gt;Érvénybeléptetéshez az LXQt munkamenetet újra kell indítani&lt;/b&gt;:</translation>
+        <translation>A kívánt kurzortéma (előzetesen látható). &lt;b&gt;Érvényesítéshez az LXQt munkamenet újraindíttandó&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
