@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Blankett</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Blankett</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation>Naturlig rulling</translation>
+        <translation>Omvendt rulling</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
