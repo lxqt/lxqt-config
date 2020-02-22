@@ -74,7 +74,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished">A hinting módja:</translation>
+        <translation>A hinting módja:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished">Betű hinting</translation>
+        <translation>Betű hinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished">Automatikus hinting</translation>
+        <translation>Automatikus hinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
@@ -234,14 +234,14 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished">Az egységes témához válasszon hasonló stílust/témát (ha rendelkezésre áll) az összes listán, vagy válassza a &apos;gtk2&apos; Qt stílust (ha rendelkezésre áll) a GTK téma utánzásához.
+        <translation>Az egységes témához válasszon hasonló stílust/témát (ha rendelkezésre áll) az összes listán, vagy válassza a &apos;gtk2&apos; Qt stílust (ha rendelkezésre áll) a GTK téma utánzásához.
 
-Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a GTK alkalmazások a témák menet közben tudjanak témát váltani.</translation>
+Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a GTK alkalmazások a menet közben tudjanak témát váltani.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="99"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished">Eszköztárgombok stílusa:</translation>
+        <translation>Eszköztárgombok stílusa:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="107"/>
