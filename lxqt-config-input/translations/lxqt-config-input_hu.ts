@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Numlock bekapcsolása bejelenkezéskor</translation>
+        <translation>Numlock bekapcsolása bejelentkezéskor</translation>
     </message>
 </context>
 <context>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished">Kiosztásváltoztató billentyű:</translation>
+        <translation>Kiosztásváltoztató billentyű:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Megjegyzés&lt;/span&gt;: Ha bevitelként &lt;span style=&quot; font-weight:600;&quot;&gt;például&lt;/span&gt;, IBus, uim, fcitx, or gcin, szolgálnak, ezek a beállítások &lt;span style=&quot; font-weight:600;&quot;&gt;nem működnek&lt;/span&gt; mert a beviteli módok ezt felülírják.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Megjegyzés&lt;/span&gt;: Ha &lt;span style=&quot; font-weight:600;&quot;&gt;bevitelként&lt;/span&gt; például IBus-t, uim-et, fcitx-et, vagy gcin-t, használ, ezek a beállítások &lt;span style=&quot; font-weight:600;&quot;&gt;nem fognak működni&lt;/span&gt; mert a beviteli módok ezt felülírják.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation>Nagy</translation>
+        <translation>Magas</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>Dupla kattintás időköz:</translation>
+        <translation>Duplakattintás időköze:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation>Egykattintásos aktiválás</translation>
+        <translation>Egykattintásos mód</translation>
     </message>
 </context>
 <context>
