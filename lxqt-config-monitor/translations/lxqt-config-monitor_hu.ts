@@ -59,7 +59,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="64"/>
         <source>None</source>
-        <translation>Semmi</translation>
+        <translation>Nincs</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="67"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="115"/>
         <source>Set position</source>
-        <translation>Pozícionálás</translation>
+        <translation>Pozicionálás</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="247"/>
@@ -215,7 +215,7 @@
         <location filename="../monitorwidget.cpp" line="137"/>
         <source>Serial: %1
 </source>
-        <translation>Sorszám: %1
+        <translation>Sorozatszám: %1
 </translation>
     </message>
     <message>
@@ -242,7 +242,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="161"/>
         <source>None</source>
-        <translation>semmi</translation>
+        <translation>Nincs</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="162"/>
