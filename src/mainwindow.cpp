@@ -194,16 +194,9 @@ protected:
         initStyleOption(&opt, index);
 
         const QSize & iconSize = option.decorationSize;
-        QSize size(mView->gridSize().width() - 8, // 4-px margin around each cell
-                   iconSize.height());
-        // for having sharp non-scalable icons with HDPI
-        int dpr = qApp->devicePixelRatio();
-        if (dpr < 1) dpr = 1;
-        QPixmap pixmap = opt.icon.pixmap(iconSize / dpr); // -> Qt doc -> QIcon::pixmap()
-        if (dpr > 1 && pixmap.size() == iconSize) // exceptional (scalable or not from icon set)
-            pixmap = opt.icon.pixmap(iconSize);
-        opt.icon = QIcon(pixmap.copy(QRect(QPoint(0, 0), size * dpr)));
-        opt.decorationSize = size;
+        int size = qMin(mView->gridSize().width() - 8, // 4-px margin around each cell
+                        iconSize.height());
+        opt.decorationSize = QSize(size, size);
 
         const QWidget* widget = opt.widget;
         QStyle* style = widget ? widget->style() : QApplication::style();
@@ -305,11 +298,6 @@ void LXQtConfig::MainWindow::setSizing()
 {
     // consult the style to know the icon size
     int iconSize = qBound(16, view->decorationSize().height(), 256);
-    // DPR is automatically taken into account in setIconSize()
-    // but wee need to consider it explicitly below
-    int dpr = qApp->devicePixelRatio();
-    if (dpr < 1) dpr = 1;
-    iconSize *= dpr;
     /* To have an appropriate grid size, we suppose that
      *
      * (1) The text has 3 lines and each line has 16 chars (for languages like German), at most;
