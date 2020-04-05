@@ -61,8 +61,6 @@ int main(int argc, char** argv)
     QCommandLineOption loadOption(QStringList() << QStringLiteral("l") << QStringLiteral("loadlast"),
                                   app.tr("Load last settings."));
     parser.addOption(loadOption);
-    QCommandLineOption helpOption = parser.addHelpOption();
-    parser.addOption(loadOption);
     parser.addVersionOption();
     parser.addHelpOption();
 

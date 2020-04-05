@@ -143,7 +143,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Erscheinungsbild-Konfiguration</translation>
+        <translation>LXQt Erscheinungsbild Einrichtung</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Benutzerdefinierten Schreibtischhintergrund überschreiben</translation>
+        <translation>Benutzerdefiniertes Hintergrundbild überschreiben</translation>
     </message>
 </context>
 <context>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt Erscheinungsbild-Konfiguration</translation>
+        <translation>LXQt Erscheinungsbild Einrichtung</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>

@@ -60,7 +60,7 @@ void TimeoutDialog::onTimeout()
     }
     else {
         int remaining = maximum / TIMER_DURATION - TIMER_DURATION * time / maximum;
-        ui.remainingTime->setText(tr("%n second(s) remaining", nullptr, remaining).arg(remaining));
+        ui.remainingTime->setText(tr("%n second(s) remaining", nullptr, remaining));
         ui.progressBar->setValue(time);
     }
 }

@@ -23,7 +23,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>La sessione LXQt deve essere riavviata per visualizzare questa modifica.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
@@ -33,7 +33,7 @@
     <message>
         <location filename="../selectwnd.ui" line="111"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="233"/>

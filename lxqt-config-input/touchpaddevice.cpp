@@ -21,6 +21,7 @@
 #include <cmath>
 #include <QDebug>
 #include <QX11Info>
+#include <QUrl>
 #include <libudev.h>
 #include <LXQt/Settings>
 #include <X11/Xatom.h>

@@ -29,7 +29,7 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation>ÚJ alelem</translation>
+        <translation>Új alelem</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>

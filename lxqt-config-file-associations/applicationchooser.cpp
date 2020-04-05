@@ -32,6 +32,9 @@
 #include <QTimer>
 
 #include <XdgDesktopFile>
+
+#include <algorithm>
+
 #include "applicationchooser.h"
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)
@@ -118,7 +121,7 @@ void ApplicationChooser::fillApplicationListWidget()
             XdgDesktopFileCache::getAllFiles() :
             XdgDesktopFileCache::getApps(mt.name());
 
-        qSort(applications.begin(), applications.end(), lessThan);
+        std::sort(applications.begin(), applications.end(), lessThan);
 
         QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
         headingItem->setExpanded(true);

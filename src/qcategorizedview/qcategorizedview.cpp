@@ -40,6 +40,8 @@
 #include <QScrollBar>
 #include <QPaintEvent>
 
+#include <algorithm>
+
 #include "qcategorydrawer.h"
 #include "qcategorizedsortfilterproxymodel.h"
 
@@ -328,7 +330,7 @@ void QCategorizedView::Private::rowsInserted(const QModelIndex &parent, int star
         const QModelIndex firstAffectedCategory = blocks[category].firstIndex;
         //BEGIN: order for marking as alternate those blocks that are alternate
         QList<Block> blockList = blocks.values();
-        qSort(blockList.begin(), blockList.end(), Block::lessThan);
+        std::sort(blockList.begin(), blockList.end(), Block::lessThan);
         QList<int> firstIndexesRows;
         for (const Block &block : qAsConst(blockList)) {
             firstIndexesRows << block.firstIndex.row();
@@ -1335,7 +1337,7 @@ void QCategorizedView::rowsAboutToBeRemoved(const QModelIndex &parent,
     {
         //BEGIN: order for marking as alternate those blocks that are alternate
         QList<Private::Block> blockList = d->blocks.values();
-        qSort(blockList.begin(), blockList.end(), Private::Block::lessThan);
+        std::sort(blockList.begin(), blockList.end(), Private::Block::lessThan);
         QList<int> firstIndexesRows;
         for (const Private::Block &block : qAsConst(blockList)) {
             firstIndexesRows << block.firstIndex.row();
