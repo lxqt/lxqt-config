@@ -18,6 +18,7 @@
 
 #include "fastmenu.h"
 #include "timeoutdialog.h"
+#include "kscreenutils.h"
 
 #include <QComboBox>
 #include <QPoint>
@@ -47,36 +48,6 @@ FastMenu::~FastMenu()
 {
 }
 
-void FastMenu::extended()
-{
-    int width = 0;
-    KScreen::OutputList outputs = mConfig->outputs();
-    for (const KScreen::OutputPtr &output : outputs)
-    {
-        if( !output->isConnected() )
-            continue;
-        QPoint pos = output->pos();
-        pos.setX(width);
-        pos.setY(0);
-        output->setPos(pos);
-        output->setEnabled(true);
-        //first left one as primary
-        output->setPrimary(width == 0);
-        KScreen::ModePtr mode(output->currentMode());
-        if (!mode)
-        { // set first mode
-            mode = output->modes().first();
-            if (mode)
-            {
-                output->setCurrentModeId(mode->id());
-            }
-        }
-        if (mode) {
-            width += mode->size().width();
-        }
-    }
-}
-
 static bool sizeBiggerThan(const QSize &sizeA, const QSize &sizeB)
 {
     return sizeA.width() * sizeA.height() > sizeB.width() * sizeB.height();
@@ -87,26 +58,22 @@ void FastMenu::unified()
     const KScreen::OutputList outputs = mConfig->outputs();
     // Look for common size
     QList<QSize> commonSizes;
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
 
         const auto modes = output->modes();
-        for(const KScreen::ModePtr &mode : modes)
-        {
+        for(const KScreen::ModePtr &mode : modes) {
             commonSizes.append(mode->size());
         }
         break;
     }
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
         QList<QSize> sizes;
         const auto modes = output->modes();
-        for(const KScreen::ModePtr &mode : modes)
-        {
+        for(const KScreen::ModePtr &mode : modes) {
             if( commonSizes.contains(mode->size()) )
                 sizes.append(mode->size());
         }
@@ -118,8 +85,7 @@ void FastMenu::unified()
         return;
     QSize commonSize = commonSizes[0];
     // Put all monitors in (0,0) position and set size
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
         QPoint pos = output->pos();
@@ -130,10 +96,8 @@ void FastMenu::unified()
         // Select mode with the biggest refresh rate
         float maxRefreshRate = 0.0;
         const auto outputs = output->modes();
-        for(const KScreen::ModePtr &mode : outputs)
-        {
-            if(mode->size() == commonSize && maxRefreshRate < mode->refreshRate())
-            {
+        for(const KScreen::ModePtr &mode : outputs) {
+            if(mode->size() == commonSize && maxRefreshRate < mode->refreshRate()) {
                 output->setCurrentModeId(mode->id());
                 maxRefreshRate = mode->refreshRate();
             }
@@ -145,8 +109,7 @@ void FastMenu::onlyFirst()
 {
     bool foundOk = false;
     const KScreen::OutputList outputs = mConfig->outputs();
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
         QPoint pos = output->pos();
@@ -162,8 +125,7 @@ void FastMenu::onlySecond()
 {
     bool foundOk = true;
     const KScreen::OutputList outputs = mConfig->outputs();
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
         QPoint pos = output->pos();
@@ -177,33 +139,24 @@ void FastMenu::onlySecond()
 
 void FastMenu::onSeleccionChanged(int index)
 {
-    switch((Options) index)
-    {
-        case Extended:
-            extended();
+    switch((Options) index) {
+    case Extended:
+        KScreenUtils::extended(mConfig);
         break;
-        case Unified:
-            unified();
+    case Unified:
+        unified();
         break;
-        case OnlyFirst:
-            onlyFirst();
+    case OnlyFirst:
+        onlyFirst();
         break;
-        case OnlySecond:
-            onlySecond();
+    case OnlySecond:
+        onlySecond();
         break;
-        case None:
-            return;
+    case None:
+        return;
         break;
     };
-    
-    if (mConfig && KScreen::Config::canBeApplied(mConfig))
-    {
-        KScreen::SetConfigOperation(mConfig).exec();
 
-        TimeoutDialog mTimeoutDialog;
-        if (mTimeoutDialog.exec() == QDialog::Rejected)
-            KScreen::SetConfigOperation(mOldConfig).exec();
-        else
-            mOldConfig = mConfig->clone();
-    }
+    if( KScreenUtils::applyConfig(mConfig, mOldConfig) )
+        mOldConfig = mConfig->clone();
 }

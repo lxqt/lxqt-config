@@ -29,8 +29,7 @@
 
 static bool loadSettingsOk(int argc, char** argv)
 {
-    for(int i=0; i<argc; i++)
-    {
+    for(int i=0; i<argc; i++) {
         if(QString::fromUtf8(argv[i]) == QLatin1String("-l"))
             return true;
     }
@@ -39,11 +38,13 @@ static bool loadSettingsOk(int argc, char** argv)
 
 int main(int argc, char** argv)
 {
-    if( loadSettingsOk(argc, argv) )
-    {
+    if( loadSettingsOk(argc, argv) ) {
         // If -l option is provided, settings are loaded and app is closed.
         QGuiApplication app(argc, argv);
         LoadSettings load;
+        load.applyBestSettings();
+        qDebug() << "[load.applyBestSettings()] Finished";
+        //QCoreApplication::instance()->exit(0);
         return app.exec();
     }
 
@@ -58,7 +59,7 @@ int main(int argc, char** argv)
                                            "\nQt        " QT_VERSION_STR);
     app.setApplicationVersion(VERINFO);
     QCommandLineOption loadOption(QStringList() << QStringLiteral("l") << QStringLiteral("loadlast"),
-            app.tr("Load last settings."));
+                                  app.tr("Load last settings."));
     parser.addOption(loadOption);
     parser.addVersionOption();
     parser.addHelpOption();
@@ -72,10 +73,10 @@ int main(int argc, char** argv)
     dlg.show();
 
     int ok = app.exec();
-    
+
     // FIXME: kscreen backend doesn't close properly.
     //system("killall kscreen_backend_launcher");
-    
+
     return ok;
 
 }

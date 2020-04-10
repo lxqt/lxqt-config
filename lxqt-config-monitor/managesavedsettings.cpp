@@ -29,7 +29,7 @@ Q_DECLARE_METATYPE(MonitorSavedSettings)
 
 
 ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  KScreen::ConfigPtr config, QWidget * parent):
-QDialog(parent)
+    QDialog(parent)
 {
 
     this->applicationSettings = applicationSettings;
@@ -50,28 +50,26 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
 {
     MonitorSavedSettings o = item->data(Qt::UserRole).value<MonitorSavedSettings>();
     QString text;
-    for(int i=0; i < o.monitors.size(); i++)
-    {
+    for(int i=0; i < o.monitors.size(); i++) {
         MonitorSettings setting = o.monitors[i];
         if(! setting.connected )
             continue;
         text += QStringLiteral("<b>%1:</b><br/>").arg(setting.name);
         text += QStringLiteral("&nbsp;Mode: %1x%2<br/>").arg(setting.currentModeWidth).arg(setting.currentModeHeight);
         text += QStringLiteral("&nbsp;Rate: %1 Hz<br/>").arg(setting.currentModeRate);
-        switch(setting.rotation)
-        {
-            case KScreen::Output::Rotation::None:
-                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("None"));
-                break;
-            case KScreen::Output::Rotation::Left:
-                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Left"));
-                break;
-            case KScreen::Output::Rotation::Inverted:
-                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Inverted"));
-                break;
-            case KScreen::Output::Rotation::Right:
-                text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Right"));
-                break;
+        switch(setting.rotation) {
+        case KScreen::Output::Rotation::None:
+            text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("None"));
+            break;
+        case KScreen::Output::Rotation::Left:
+            text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Left"));
+            break;
+        case KScreen::Output::Rotation::Inverted:
+            text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Inverted"));
+            break;
+        case KScreen::Output::Rotation::Right:
+            text += QStringLiteral("&nbsp;Rotation: %1<br/>").arg(tr("Right"));
+            break;
         }
         text += QStringLiteral("&nbsp;Position: %1x%2<br/>").arg(setting.xPos).arg(setting.yPos);
         text += QStringLiteral("&nbsp;Primary: %1<br/>").arg(setting.primary?tr("True"):tr("False"));
@@ -86,11 +84,9 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
 bool ManageSavedSettings::isHardwareCompatible(const MonitorSavedSettings &settings)
 {
     KScreen::OutputList outputs = config->outputs();
-    for (const KScreen::OutputPtr &output : outputs)
-    {
+    for (const KScreen::OutputPtr &output : outputs) {
         bool ok = false;
-        for (int i=0; i < settings.monitors.size(); i++)
-        {
+        for (int i=0; i < settings.monitors.size(); i++) {
             MonitorSettings o = settings.monitors[i];
             if(o.name != output->name())
                 continue;
@@ -138,8 +134,8 @@ void ManageSavedSettings::onRenameItem()
     MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
     bool ok;
     QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"),
-                                               QLineEdit::Normal,
-                                               obj.name, &ok);
+                         QLineEdit::Normal,
+                         obj.name, &ok);
     if (!ok || configName.isEmpty())
         return;
 

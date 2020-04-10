@@ -28,7 +28,7 @@ SettingsDialog::SettingsDialog(const QString &title, LXQt::Settings *settings, K
 
     //DaemonSettings *daemon = new DaemonSettings(settings, this);
     //addPage(daemon, QObject::tr("Daemon"), "system-run");
-    
+
     ManageSavedSettings * savedSettings = new ManageSavedSettings(settings, config, this);
     addPage(savedSettings, QObject::tr("Manage Saved Settings"), QStringLiteral("system-run"));
 }
