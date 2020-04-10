@@ -29,8 +29,11 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mBrightness = new XRandrBrightness();
     mMonitors = mBrightness->getMonitorsInfo();
     mBacklight = new LXQt::Backlight(this);
+    
+    ui->headIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("display-brightness-symbolic")).pixmap(32, 32));
 
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
+    ui->backlightGroupBox->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     if(mBacklight->isBacklightAvailable()) {
         ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
         // set the minimum to 5% of the maximum to prevent a black screen

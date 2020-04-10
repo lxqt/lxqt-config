@@ -34,7 +34,6 @@ signals:
     void changed(MonitorInfo info);
 
 public slots:
-    void backlightChanged(int value);
     void brightnessChanged(int value);
     void setRevertedValues(const MonitorInfo & monitor);
 protected:

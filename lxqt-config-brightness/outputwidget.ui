@@ -43,37 +43,24 @@
        </widget>
       </item>
       <item>
-       <widget class="QSlider" name="backlightSlider">
+       <widget class="QSlider" name="brightnessSlider">
+        <property name="maximum">
+         <number>200</number>
+        </property>
+        <property name="singleStep">
+         <number>5</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDial" name="brightnessSlider">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>48</width>
-          <height>48</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Right click to reset</string>
-        </property>
-        <property name="wrapping">
-         <bool>false</bool>
-        </property>
-        <property name="notchTarget">
-         <double>10.000000000000000</double>
-        </property>
-        <property name="notchesVisible">
-         <bool>true</bool>
+        <property name="tickInterval">
+         <number>100</number>
         </property>
        </widget>
       </item>
