@@ -30,6 +30,10 @@ OutputWidget::OutputWidget(MonitorInfo monitor, QWidget *parent):QWidget(parent)
     ui->brightnessSlider->setValue(monitor.brightness()*100);
 
     connect(ui->brightnessSlider, SIGNAL(valueChanged(int)), this, SLOT(brightnessChanged(int)));
+    connect(ui->brightnessDownButton, &QToolButton::clicked, 
+        [this](bool){ ui->brightnessSlider->setValue(ui->brightnessSlider->value()-1); });
+    connect(ui->brightnessUpButton, &QToolButton::clicked,
+        [this](bool){ ui->brightnessSlider->setValue(ui->brightnessSlider->value()+1); });
 }
 
 void OutputWidget::mouseReleaseEvent(QMouseEvent *event)

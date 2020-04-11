@@ -23,6 +23,7 @@
 #include <QTimer>
 #include <LXQt/SingleApplication>
 #include <QCommandLineParser>
+#include <QMessageBox>
 #include "brightnesssettings.h"
 
 #include <iostream>
@@ -163,7 +164,10 @@ int main(int argn, char* argv[])
         BrightnessSettings *brightnessSettings = new BrightnessSettings();
         brightnessSettings->setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
         brightnessSettings->show();
-        return app.exec();
+        int appOutput = app.exec();
+        if(brightnessSettings->result() == QMessageBox::Reset)
+            brightnessSettings->revertValues();
+        return appOutput;
     }
 
     // TUi mode

@@ -43,6 +43,16 @@
        </widget>
       </item>
       <item>
+       <widget class="QToolButton" name="brightnessDownButton">
+        <property name="text">
+         <string>☀</string>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QSlider" name="brightnessSlider">
         <property name="maximum">
          <number>200</number>
@@ -61,6 +71,16 @@
         </property>
         <property name="tickInterval">
          <number>100</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="brightnessUpButton">
+        <property name="text">
+         <string>☼</string>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

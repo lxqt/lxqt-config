@@ -32,6 +32,8 @@ Q_OBJECT
 
 public:
     BrightnessSettings(QWidget *parent =0);
+    
+    void revertValues();
 
 signals:
     void monitorReverted(const MonitorInfo & monitor);
@@ -44,11 +46,13 @@ public slots:
 private:
     XRandrBrightness *mBrightness;
     QList<MonitorInfo> mMonitors;
+    QList<MonitorInfo> mMonitorsInitial;
     QTimer mConfirmRequestTimer;
     QTimer mBacklightTimer;
     Ui::BrightnessSettings *ui;
     LXQt::Backlight *mBacklight;
     int mLastBacklightValue;
+    int mInitialBacklightValue;
 
 };
 

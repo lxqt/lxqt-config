@@ -28,6 +28,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
 
     mBrightness = new XRandrBrightness();
     mMonitors = mBrightness->getMonitorsInfo();
+    mMonitorsInitial = mBrightness->getMonitorsInfo();
     mBacklight = new LXQt::Backlight(this);
     
     ui->headIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("display-brightness-symbolic")).pixmap(32, 32));
@@ -38,9 +39,15 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
         // set the minimum to 5% of the maximum to prevent a black screen
         ui->backlightSlider->setMinimum(qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1));
-        ui->backlightSlider->setValue(mLastBacklightValue = mBacklight->getBacklight());
+        mInitialBacklightValue = mLastBacklightValue = mBacklight->getBacklight();
+        ui->backlightSlider->setValue(mInitialBacklightValue);
         // Don't change the backlight too quickly
         connect(ui->backlightSlider, &QSlider::valueChanged, [this] {mBacklightTimer.start();});
+        
+        connect(ui->backlightDownButton, &QToolButton::clicked, 
+            [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()-1); });
+        connect(ui->backlightUpButton, &QToolButton::clicked, 
+            [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()+1); });
     }
 
     for(const MonitorInfo &monitor: qAsConst(mMonitors))
@@ -59,7 +66,14 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mConfirmRequestTimer.setSingleShot(true);
     mConfirmRequestTimer.setInterval(1000);
     connect(&mConfirmRequestTimer, &QTimer::timeout, this, &BrightnessSettings::requestConfirmation);
-
+    
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, 
+        [this](QAbstractButton *button) {
+            if(ui->buttonBox->button(QDialogButtonBox::Reset) == button) {
+                revertValues();
+                reject();
+            }
+        } );
 }
 
 void BrightnessSettings::setBacklight()
@@ -131,4 +145,12 @@ void BrightnessSettings::requestConfirmation()
         for (const auto & monitor : qAsConst(mMonitors))
             emit monitorReverted(monitor);
     }
+}
+
+void BrightnessSettings::revertValues()
+{
+    if(mBacklight->isBacklightAvailable())
+        mBacklight->setBacklight(mInitialBacklightValue);
+    
+    mBrightness->setMonitorsSettings(mMonitorsInitial);
 }
