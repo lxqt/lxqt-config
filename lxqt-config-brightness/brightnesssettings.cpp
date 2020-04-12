@@ -71,7 +71,6 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         [this](QAbstractButton *button) {
             if(ui->buttonBox->button(QDialogButtonBox::Reset) == button) {
                 revertValues();
-                reject();
             }
         } );
 }
@@ -136,8 +135,8 @@ void BrightnessSettings::requestConfirmation()
         // revert the changes
         if(mBacklight->isBacklightAvailable()) {
             disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
-            mBacklight->setBacklight(mLastBacklightValue);
-            ui->backlightSlider->setValue(mLastBacklightValue);
+                mBacklight->setBacklight(mLastBacklightValue);
+                ui->backlightSlider->setValue(mLastBacklightValue);
             connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
         }
 
@@ -149,8 +148,14 @@ void BrightnessSettings::requestConfirmation()
 
 void BrightnessSettings::revertValues()
 {
-    if(mBacklight->isBacklightAvailable())
-        mBacklight->setBacklight(mInitialBacklightValue);
+    if(mBacklight->isBacklightAvailable()) {
+        disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
+            mBacklight->setBacklight(mInitialBacklightValue);
+            ui->backlightSlider->setValue(mInitialBacklightValue);
+        connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
+    }
     
     mBrightness->setMonitorsSettings(mMonitorsInitial);
+    for (const auto & monitor : qAsConst(mMonitorsInitial))
+            emit monitorReverted(monitor);
 }
