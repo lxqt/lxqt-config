@@ -36,20 +36,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     ui->backlightGroupBox->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     if(mBacklight->isBacklightAvailable()) {
-        // Set the minimum to 5% of the maximum to prevent a black screen
-        int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
-        int maxBacklight = mBacklight->getMaxBacklight();
-        int interval = maxBacklight - minBacklight;
-        if(interval <= 100) {
-            ui->backlightSlider->setMaximum(maxBacklight);
-            ui->backlightSlider->setMinimum(minBacklight);
-            ui->backlightSlider->setValue(mBacklight->getBacklight());
-        } else {
-            ui->backlightSlider->setMaximum(100);
-            // Set the minimum to 5% of the maximum to prevent a black screen
-            ui->backlightSlider->setMinimum(5);
-            ui->backlightSlider->setValue( (mBacklight->getBacklight() * 100) / maxBacklight);
-        }
+        setBacklightSliderValue(mBacklight->getBacklight());
 
         mInitialBacklightValue = mLastBacklightValue = mBacklight->getBacklight();
         // Don't change the backlight too quickly
@@ -169,24 +156,30 @@ void BrightnessSettings::revertValues()
     if(mBacklight->isBacklightAvailable()) {
         disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
             mBacklight->setBacklight(mInitialBacklightValue);
-            // Set the minimum to 5% of the maximum to prevent a black screen
-            int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
-            int maxBacklight = mBacklight->getMaxBacklight();
-            int interval = maxBacklight - minBacklight;
-            if(interval <= 100) {
-                ui->backlightSlider->setMaximum(maxBacklight);
-                ui->backlightSlider->setMinimum(minBacklight);
-                ui->backlightSlider->setValue(mInitialBacklightValue);
-            } else {
-                ui->backlightSlider->setMaximum(100);
-                // Set the minimum to 5% of the maximum to prevent a black screen
-                ui->backlightSlider->setMinimum(5);
-                ui->backlightSlider->setValue( (mInitialBacklightValue * 100) / maxBacklight);
-            }
+            setBacklightSliderValue(mInitialBacklightValue);
         connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
     }
 
     mBrightness->setMonitorsSettings(mMonitorsInitial);
     for (const auto & monitor : qAsConst(mMonitorsInitial))
             emit monitorReverted(monitor);
+}
+
+
+void BrightnessSettings::setBacklightSliderValue(int value)
+{
+    // Set the minimum to 5% of the maximum to prevent a black screen
+    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    int maxBacklight = mBacklight->getMaxBacklight();
+    int interval = maxBacklight - minBacklight;
+    if(interval <= 100) {
+        ui->backlightSlider->setMaximum(maxBacklight);
+        ui->backlightSlider->setMinimum(minBacklight);
+        ui->backlightSlider->setValue(value);
+    } else {
+        ui->backlightSlider->setMaximum(100);
+        // Set the minimum to 5% of the maximum to prevent a black screen
+        ui->backlightSlider->setMinimum(5);
+        ui->backlightSlider->setValue( (value * 100) / maxBacklight);
+    }
 }
