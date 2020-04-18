@@ -54,7 +54,7 @@
       <item>
        <widget class="QToolButton" name="backlightDownButton">
         <property name="text">
-         <string>☀</string>
+         <string>☼</string>
         </property>
         <property name="autoRaise">
          <bool>true</bool>
@@ -71,7 +71,7 @@
       <item>
        <widget class="QToolButton" name="backlightUpButton">
         <property name="text">
-         <string>☼</string>
+         <string>☀</string>
         </property>
         <property name="autoRaise">
          <bool>true</bool>
