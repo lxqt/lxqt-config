@@ -16,7 +16,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="41"/>
         <source>Require confirmation after settings change</source>
-        <translation>Requer confirmação após as alterações</translation>
+        <translation>Exigir confirmação após a alteração das configurações</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="88"/>
