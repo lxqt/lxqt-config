@@ -222,7 +222,7 @@
         <location filename="../monitorwidget.cpp" line="138"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Velikost obrazovky: %1  x %2 cm
+        <translation>Velikost obrazovky: %1 x %2 cm
 </translation>
     </message>
     <message>
