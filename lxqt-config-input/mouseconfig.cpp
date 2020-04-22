@@ -59,10 +59,6 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   loadSettings();
   initControls();
 
-  // set_range_stops(ui.mouseAccel, 10);
-  connect(ui.mouseAccel, &QAbstractSlider::valueChanged, this, &MouseConfig::settingsChanged);
-  // set_range_stops(ui.mouseThreshold, 10);
-  connect(ui.mouseThreshold, &QAbstractSlider::valueChanged, this, &MouseConfig::settingsChanged);
   connect(ui.mouseLeftHanded, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
   connect(ui.doubleClickInterval, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
   connect(ui.wheelScrollLines, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
@@ -73,14 +69,6 @@ MouseConfig::~MouseConfig() {
 }
 
 void MouseConfig::initControls() {
-  ui.mouseAccel->blockSignals(true);
-  ui.mouseAccel->setValue(accel);
-  ui.mouseAccel->blockSignals(false);
-
-  ui.mouseThreshold->blockSignals(true);
-  ui.mouseThreshold->setValue(110 - threshold);
-  ui.mouseThreshold->blockSignals(false);
-
   ui.mouseLeftHanded->setChecked(leftHanded);
 
   ui.singleClick->setChecked(singleClick);
@@ -138,23 +126,6 @@ void MouseConfig::applyConfig()
 {
   bool acceptSetting = false;
   bool applyX11 = false;
-
-  if(accel != ui.mouseAccel->value())
-  {
-    accel = ui.mouseAccel->value();
-    XChangePointerControl(QX11Info::display(), True, False,
-                            accel, 10, 0);
-    acceptSetting = true;
-  }
-
-  /* threshold = 110 - sensitivity. The lower the threshold, the higher the sensitivity */
-  if(threshold != 110 - ui.mouseThreshold->value())
-  {
-    threshold = 110 - ui.mouseThreshold->value();
-    XChangePointerControl(QX11Info::display(), False, True,
-                            0, 10, threshold);
-    acceptSetting = true;
-  }
 
   if(leftHanded != ui.mouseLeftHanded->isChecked())
   {
