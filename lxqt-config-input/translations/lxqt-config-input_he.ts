@@ -265,7 +265,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished">הגדרות משטח מגע </translation>
+        <translation>הגדרות משטח מגע </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
