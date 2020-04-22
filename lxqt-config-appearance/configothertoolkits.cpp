@@ -99,7 +99,8 @@ static QString get_environment_var(const char *envvar, const char *defaultValue)
     if(mDirPath.isEmpty())
         mDirPath = homeDir + QLatin1String(defaultValue);
     else {
-        for(QString path : mDirPath.split(QStringLiteral(":")) ) {
+        const auto paths = mDirPath.split(QLatin1Char(':'));
+        for(const QString &path : paths) {
             mDirPath = path;
             break;
         }
@@ -242,14 +243,14 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
         themeList << QStringLiteral("Adwaita") << QStringLiteral("HighContrast") << QStringLiteral("HighContrastInverse");
     }
 
-    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-    for(QString dataPath : dataPaths) {
+    const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for(const QString &dataPath : dataPaths) {
         QDir themesPath(dataPath + QStringLiteral("/themes"));
-        QStringList themes = themesPath.entryList(QDir::Dirs);
-        for(QString theme : themes) {
+        const QStringList themes = themesPath.entryList(QDir::Dirs);
+        for(const QString &theme : themes) {
             QDir dirsInTheme(QStringLiteral("%1/themes/%2").arg(dataPath, theme));
-            QStringList dirs = dirsInTheme.entryList(QDir::Dirs);
-            for(QString dir : dirs) {
+            const QStringList dirs = dirsInTheme.entryList(QDir::Dirs);
+            for(const QString &dir : dirs) {
                 if(dir.startsWith(QLatin1String("gtk-"))) {
                     if(!version.endsWith(QLatin1String("*")) && dir != QStringLiteral("gtk-%1").arg(version))
                          continue;
