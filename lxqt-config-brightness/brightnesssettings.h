@@ -50,7 +50,6 @@ private:
     QList<MonitorInfo> mMonitors;
     QList<MonitorInfo> mMonitorsInitial;
     QTimer mConfirmRequestTimer;
-    QTimer mBacklightTimer;
     Ui::BrightnessSettings *ui;
     LXQt::Backlight *mBacklight;
     int mLastBacklightValue;

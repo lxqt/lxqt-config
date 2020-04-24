@@ -39,8 +39,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         setBacklightSliderValue(mBacklight->getBacklight());
 
         mInitialBacklightValue = mLastBacklightValue = mBacklight->getBacklight();
-        // Don't change the backlight too quickly
-        connect(ui->backlightSlider, &QSlider::valueChanged, [this] {mBacklightTimer.start();});
+        connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
 
         connect(ui->backlightDownButton, &QToolButton::clicked,
             [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()-1); });
@@ -56,10 +55,6 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         connect(output, SIGNAL(changed(MonitorInfo)), this, SLOT(monitorSettingsChanged(MonitorInfo)));
         connect(this, &BrightnessSettings::monitorReverted, output, &OutputWidget::setRevertedValues);
     }
-
-    mBacklightTimer.setSingleShot(true);
-    mBacklightTimer.setInterval(250);
-    connect(&mBacklightTimer, &QTimer::timeout, this, &BrightnessSettings::setBacklight);
 
     mConfirmRequestTimer.setSingleShot(true);
     mConfirmRequestTimer.setInterval(1000);
@@ -83,20 +78,19 @@ void BrightnessSettings::setBacklight()
     if(interval > 100)
         value = (value * maxBacklight) / 100;
     mBacklight->setBacklight(value);
+    
+    if (ui->confirmCB->isChecked())
+        mConfirmRequestTimer.start();
 }
 
 void BrightnessSettings::monitorSettingsChanged(MonitorInfo monitor)
 {
     mBrightness->setMonitorsSettings(QList<MonitorInfo>{}  << monitor);
     if (ui->confirmCB->isChecked())
-    {
         mConfirmRequestTimer.start();
-    } else
-    {
-        for (auto & m : mMonitors)
-        {
-            if (m.id() == monitor.id() && m.name() == monitor.name())
-            {
+    else {
+        for (auto & m : mMonitors) {
+            if (m.id() == monitor.id() && m.name() == monitor.name()) {
                 m.setBacklight(monitor.backlight());
                 m.setBrightness(monitor.brightness());
             }
@@ -141,7 +135,7 @@ void BrightnessSettings::requestConfirmation()
         if(mBacklight->isBacklightAvailable()) {
             disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
                 mBacklight->setBacklight(mLastBacklightValue);
-                ui->backlightSlider->setValue(mLastBacklightValue);
+                setBacklightSliderValue(mLastBacklightValue);
             connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
         }
 
