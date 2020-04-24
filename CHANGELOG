@@ -10,7 +10,6 @@ lxqt-config-0.15.0 / 2020-04-22
   * Fixed warnings on applying settings in lxqt-config-monitor.
   * Fixed forgetting of lxqt-config-monitor's config.
   * Removed old mouse accel/sensitivity options.
-  * A better GUI for lxqt-config-brightness.
 
 lxqt-config-0.14.1 / 2019-02-24
 ===============================
