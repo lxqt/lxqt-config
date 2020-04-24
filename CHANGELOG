@@ -1,3 +1,16 @@
+lxqt-config-0.15.0 / 2020-04-22
+===============================
+  * Fixed changing of shortcut for switching keyboard layout.
+  * Inserted default GTK3 themes in lxqt-config-appearance.
+  * Set cursor style in GTK2, GTK3 and xsettingsd.
+  * Don't use automatic string conversions.
+  * C++11 code updates.
+  * A better method to drag and drop monitors in lxqt-config-monitor.
+  * Removed old mouse accel/sensitivity options.
+  * Fixed warnings on applying settings in lxqt-config-monitor.
+  * Fixed forgetting of lxqt-config-monitor's config.
+  * Removed old mouse accel/sensitivity options.
+
 lxqt-config-0.14.1 / 2019-02-24
 ===============================
 
