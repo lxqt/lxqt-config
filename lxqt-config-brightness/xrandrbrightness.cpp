@@ -1,21 +1,21 @@
 /*  This file is part of the KDE project
  *    Copyright (C) 2010 Lukas Tinkl <ltinkl@redhat.com>
  *    Copyright (C) 2015 Kai Uwe Broulik <kde@privat.broulik.de>
- * 
+ *
  *    This library is free software; you can redistribute it and/or
  *    modify it under the terms of the GNU Library General Public
  *    License version 2 as published by the Free Software Foundation.
- * 
+ *
  *    This library is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  *    Library General Public License for more details.
- * 
+ *
  *    You should have received a copy of the GNU Library General Public License
  *    along with this library; see the file COPYING.LIB.  If not, write to
  *    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  *    Boston, MA 02110-1301, USA.
- * 
+ *
  */
 
 
@@ -170,7 +170,7 @@ float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
         return -1;
     }
     int red_length = xcb_randr_get_crtc_gamma_red_length(gamma_reply);
-    
+
     // uint16_t *green = xcb_randr_get_crtc_gamma_green (gamma_reply);
     // if(green == NULL)
     // {
@@ -276,7 +276,7 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
 
         QString name = QString::fromUtf8((const char *) xcb_randr_get_output_info_name(output_info), output_info->name_len);
 
-    
+
         qDebug() << "Found output:" << name;
 
 
@@ -311,7 +311,7 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
             continue;
         }
 
-        // Output is connected and enabled. Get data: 
+        // Output is connected and enabled. Get data:
         bool backlightIsSuported = false;
         long cur, min, max, backlight_max = -1;
         if (backlight_get(output) != -1)
@@ -319,20 +319,20 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
             if (backlight_get_with_range(output, cur, min, max))
             {
                 backlightIsSuported = true;
-                backlight_max = max - min; 
+                backlight_max = max - min;
             }
         }
-        
+
         MonitorInfo monitor((int)output, name, backlight_max);
 
         if(backlightIsSuported)
             monitor.setBacklight(cur-min);
-        
+
         monitor.setBrightness(gamma_brightness_get(output));
-       
+
         qDebug() << "Output:" << name << "added";
-        monitors.append(monitor); 
-        
+        monitors.append(monitor);
+
     }
 
     return monitors;
@@ -379,7 +379,7 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
 
         QString name = QString::fromUtf8((const char *) xcb_randr_get_output_info_name(output_info), output_info->name_len);
 
-        // Output is connected and enabled. Get data: 
+        // Output is connected and enabled. Get data:
         bool backlightIsSuported = false;
         long cur, min, max, backlight_value = 0;
         if (backlight_get(output) != -1)
@@ -395,7 +395,9 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
         // Compare output info with settings and set it.
         for(const MonitorInfo &monitor: monitors)
         {
-            if(monitor.id() == (int)output && monitor.name() == name)
+            //qDebug() << "[XRandrBrightness::setMonitorsSettings]" << monitor.id() << (int)output << monitor.name() << name ;
+            //if(monitor.id() == (int)output && monitor.name() == name)
+            if(monitor.id() == (int)output)
             {
                 // Set settings
                 if(backlightIsSuported && monitor.backlight() != backlight_value)
