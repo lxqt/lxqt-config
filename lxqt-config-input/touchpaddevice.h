@@ -34,6 +34,7 @@ enum ScrollingMethod
     BUTTON = 4
 };
 
+const char DEVICE_ENABLED[] = "deviceEnabled";
 const char TAPPING_ENABLED[] = "tappingEnabled";
 const char NATURAL_SCROLLING_ENABLED[] = "naturalScrollingEnabled";
 const char TAP_TO_DRAG_ENABLED[] = "tapToDragEnabled";
@@ -50,14 +51,17 @@ public:
     const QString& name() const { return m_name; }
     QString escapedName() const;
 
+    int deviceEnabled() const;
     int tappingEnabled() const;
     int naturalScrollingEnabled() const;
     int tapToDragEnabled() const;
     float accelSpeed() const;
+    bool setDeviceEnabled(bool enabled) const;
     bool setTappingEnabled(bool enabled) const;
     bool setNaturalScrollingEnabled(bool enabled) const;
     bool setTapToDragEnabled(bool enabled) const;
     bool setAccelSpeed(float speed) const;
+    bool oldDeviceEnabled() const { return m_oldDeviceEnabled; }
     bool oldTappingEnabled() const { return m_oldTappingEnabled; }
     bool oldNaturalScrollingEnabled() const { return m_oldNaturalScrollingEnabled; }
     bool oldTapToDragEnabled() const { return m_oldTapToDragEnabled; }
@@ -75,6 +79,7 @@ private:
     QString devnode;
     int deviceid;
 
+    bool m_oldDeviceEnabled;
     bool m_oldTappingEnabled;
     bool m_oldNaturalScrollingEnabled;
     bool m_oldTapToDragEnabled;
