@@ -23,6 +23,7 @@
 #include <QTimer>
 #include <LXQt/SingleApplication>
 #include <QCommandLineParser>
+#include <QMessageBox>
 #include "brightnesssettings.h"
 
 #include <iostream>

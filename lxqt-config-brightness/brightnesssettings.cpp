@@ -28,16 +28,23 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
 
     mBrightness = new XRandrBrightness();
     mMonitors = mBrightness->getMonitorsInfo();
+    mMonitorsInitial = mBrightness->getMonitorsInfo();
     mBacklight = new LXQt::Backlight(this);
 
+    ui->headIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("display-brightness-symbolic")).pixmap(32, 32));
+
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
+    ui->backlightGroupBox->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     if(mBacklight->isBacklightAvailable()) {
-        ui->backlightSlider->setMaximum(mBacklight->getMaxBacklight());
-        // set the minimum to 5% of the maximum to prevent a black screen
-        ui->backlightSlider->setMinimum(qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1));
-        ui->backlightSlider->setValue(mLastBacklightValue = mBacklight->getBacklight());
-        // Don't change the backlight too quickly
-        connect(ui->backlightSlider, &QSlider::valueChanged, [this] {mBacklightTimer.start();});
+        setBacklightSliderValue(mBacklight->getBacklight());
+
+        mInitialBacklightValue = mLastBacklightValue = mBacklight->getBacklight();
+        connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
+
+        connect(ui->backlightDownButton, &QToolButton::clicked,
+            [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()-1); });
+        connect(ui->backlightUpButton, &QToolButton::clicked,
+            [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()+1); });
     }
 
     for(const MonitorInfo &monitor: qAsConst(mMonitors))
@@ -49,33 +56,41 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         connect(this, &BrightnessSettings::monitorReverted, output, &OutputWidget::setRevertedValues);
     }
 
-    mBacklightTimer.setSingleShot(true);
-    mBacklightTimer.setInterval(250);
-    connect(&mBacklightTimer, &QTimer::timeout, this, &BrightnessSettings::setBacklight);
-
     mConfirmRequestTimer.setSingleShot(true);
     mConfirmRequestTimer.setInterval(1000);
     connect(&mConfirmRequestTimer, &QTimer::timeout, this, &BrightnessSettings::requestConfirmation);
 
+    connect(ui->buttonBox, &QDialogButtonBox::clicked,
+        [this](QAbstractButton *button) {
+            if(ui->buttonBox->button(QDialogButtonBox::Reset) == button) {
+                revertValues();
+            }
+        } );
 }
 
 void BrightnessSettings::setBacklight()
 {
-    mBacklight->setBacklight(ui->backlightSlider->value());
+    int value = ui->backlightSlider->value();
+    // Set the minimum to 5% of the maximum to prevent a black screen
+    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    int maxBacklight = mBacklight->getMaxBacklight();
+    int interval = maxBacklight - minBacklight;
+    if(interval > 100)
+        value = (value * maxBacklight) / 100;
+    mBacklight->setBacklight(value);
+    
+    if (ui->confirmCB->isChecked())
+        mConfirmRequestTimer.start();
 }
 
 void BrightnessSettings::monitorSettingsChanged(MonitorInfo monitor)
 {
     mBrightness->setMonitorsSettings(QList<MonitorInfo>{}  << monitor);
     if (ui->confirmCB->isChecked())
-    {
         mConfirmRequestTimer.start();
-    } else
-    {
-        for (auto & m : mMonitors)
-        {
-            if (m.id() == monitor.id() && m.name() == monitor.name())
-            {
+    else {
+        for (auto & m : mMonitors) {
+            if (m.id() == monitor.id() && m.name() == monitor.name()) {
                 m.setBacklight(monitor.backlight());
                 m.setBrightness(monitor.brightness());
             }
@@ -119,13 +134,46 @@ void BrightnessSettings::requestConfirmation()
         // revert the changes
         if(mBacklight->isBacklightAvailable()) {
             disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
-            mBacklight->setBacklight(mLastBacklightValue);
-            ui->backlightSlider->setValue(mLastBacklightValue);
+                mBacklight->setBacklight(mLastBacklightValue);
+                setBacklightSliderValue(mLastBacklightValue);
             connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
         }
 
         mBrightness->setMonitorsSettings(mMonitors);
         for (const auto & monitor : qAsConst(mMonitors))
             emit monitorReverted(monitor);
+    }
+}
+
+void BrightnessSettings::revertValues()
+{
+    if(mBacklight->isBacklightAvailable()) {
+        disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
+            mBacklight->setBacklight(mInitialBacklightValue);
+            setBacklightSliderValue(mInitialBacklightValue);
+        connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
+    }
+
+    mBrightness->setMonitorsSettings(mMonitorsInitial);
+    for (const auto & monitor : qAsConst(mMonitorsInitial))
+            emit monitorReverted(monitor);
+}
+
+
+void BrightnessSettings::setBacklightSliderValue(int value)
+{
+    // Set the minimum to 5% of the maximum to prevent a black screen
+    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    int maxBacklight = mBacklight->getMaxBacklight();
+    int interval = maxBacklight - minBacklight;
+    if(interval <= 100) {
+        ui->backlightSlider->setMaximum(maxBacklight);
+        ui->backlightSlider->setMinimum(minBacklight);
+        ui->backlightSlider->setValue(value);
+    } else {
+        ui->backlightSlider->setMaximum(100);
+        // Set the minimum to 5% of the maximum to prevent a black screen
+        ui->backlightSlider->setMinimum(5);
+        ui->backlightSlider->setValue( (value * 100) / maxBacklight);
     }
 }

@@ -24,36 +24,25 @@ OutputWidget::OutputWidget(MonitorInfo monitor, QWidget *parent):QWidget(parent)
     ui->setupUi(this);
 
     ui->label->setText(QStringLiteral("<b>")+monitor.name()+QStringLiteral(":</b>"));
-    if ( monitor.isBacklightSupported() )
-    {
-        ui->backlightSlider->setMinimum(0);
-        ui->backlightSlider->setMaximum(monitor.backlightMax());
-        ui->backlightSlider->setValue(monitor.backlight());
-        ui->backlightSlider->setFocus(Qt::OtherFocusReason);
-    }
-    else
-        ui->backlightSlider->hide();
+    
     ui->brightnessSlider->setMinimum(0);
     ui->brightnessSlider->setMaximum(200);
     ui->brightnessSlider->setValue(monitor.brightness()*100);
 
-    connect(ui->backlightSlider, SIGNAL(valueChanged(int)), this, SLOT(backlightChanged(int)));
     connect(ui->brightnessSlider, SIGNAL(valueChanged(int)), this, SLOT(brightnessChanged(int)));
+    connect(ui->brightnessDownButton, &QToolButton::clicked, 
+        [this](bool){ ui->brightnessSlider->setValue(ui->brightnessSlider->value()-1); });
+    connect(ui->brightnessUpButton, &QToolButton::clicked,
+        [this](bool){ ui->brightnessSlider->setValue(ui->brightnessSlider->value()+1); });
 }
 
 void OutputWidget::mouseReleaseEvent(QMouseEvent *event)
 {
-    if ( event->button() == Qt::RightButton && ui->brightnessSlider->underMouse() )
-    {
+    if ( event->button() == Qt::RightButton && ui->brightnessSlider->underMouse() ) {
         ui->brightnessSlider->setValue(100);
     }
 }
 
-void OutputWidget::backlightChanged(int value)
-{
-    mMonitor.setBacklight(value);
-    emit changed(mMonitor);
-}
 
 
 void OutputWidget::brightnessChanged(int value)
@@ -64,11 +53,7 @@ void OutputWidget::brightnessChanged(int value)
 
 void OutputWidget::setRevertedValues(const MonitorInfo & monitor)
 {
-    if (mMonitor.id() == monitor.id() && mMonitor.name() == monitor.name())
-    {
-        ui->backlightSlider->blockSignals(true);
-        ui->backlightSlider->setValue(monitor.backlight());
-        ui->backlightSlider->blockSignals(false);
+    if (mMonitor.id() == monitor.id() && mMonitor.name() == monitor.name()) {
         ui->brightnessSlider->blockSignals(true);
         ui->brightnessSlider->setValue(monitor.brightness()*100);
         ui->brightnessSlider->blockSignals(false);
