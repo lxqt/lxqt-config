@@ -396,8 +396,7 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
         for(const MonitorInfo &monitor: monitors)
         {
             //qDebug() << "[XRandrBrightness::setMonitorsSettings]" << monitor.id() << (int)output << monitor.name() << name ;
-            //if(monitor.id() == (int)output && monitor.name() == name)
-            if(monitor.id() == (int)output)
+            if(monitor.id() == (int)output && monitor.name() == name)
             {
                 // Set settings
                 if(backlightIsSuported && monitor.backlight() != backlight_value)
