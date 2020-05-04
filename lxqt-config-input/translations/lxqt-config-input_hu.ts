@@ -64,7 +64,7 @@
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Billentyűkiosztás&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Billentyűzetkiosztás&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation>Duplakattintás időköze:</translation>
+        <translation>Dupla kattintás időköze:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation>Billentyű és egérbeállítás</translation>
+        <translation>Billentyűzet és egér beállítása</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="79"/>
@@ -265,7 +265,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation>Érintőtábla konfiguráció </translation>
+        <translation>Érintőtábla beállítása </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -280,7 +280,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Koppintson a kattintáshoz</translation>
+        <translation>Koppintás a kattintáshoz</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -290,7 +290,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation>Érintse meg és húzza</translation>
+        <translation>Érintés és húzás</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
@@ -300,22 +300,22 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation>&amp;Kikapcsolva</translation>
+        <translation>K&amp;ikapcsolva</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished">&amp;Kétujjas</translation>
+        <translation>&amp;Kétujjas</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished">&amp;Széle</translation>
+        <translation>&amp;Széle</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished">Go&amp;mb</translation>
+        <translation>&amp;Gomb</translation>
     </message>
 </context>
 </TS>
