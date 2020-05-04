@@ -165,12 +165,12 @@
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
         <source>This is my primary display</source>
-        <translation>Ez az elsődleges megjelenítő</translation>
+        <translation>Ez az elsődleges kijelző</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="103"/>
         <source>This screen extends another display</source>
-        <translation>Kiterjesztés más megjelenítőre is</translation>
+        <translation>Kiterjesztés más kijelzőre is</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -190,12 +190,12 @@
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation>Információ</translation>
+        <translation>Információk</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>Megjelenítő információ</translation>
+        <translation>Kijelző információ</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="135"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../monitorwidget.cpp" line="255"/>
         <source>%1 Hz</source>
-        <translation></translation>
+        <translation>%1 Hz</translation>
     </message>
 </context>
 <context>
@@ -303,7 +303,6 @@
         <source>%n second(s) remaining</source>
         <translatorcomment>%n másodperc van hátra</translatorcomment>
         <translation>
-            <numerusform>%n másodperc van hátra</numerusform>
             <numerusform>%n másodperc van hátra</numerusform>
         </translation>
     </message>
