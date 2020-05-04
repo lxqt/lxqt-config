@@ -11,7 +11,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Válassz alkalmazást ehhez:</translation>
+        <translation>Válasszon alkalmazást ehhez:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="203"/>
         <source>&amp;Change...</source>
-        <translation>&amp;Változtat...</translation>
+        <translation>&amp;Változtatás...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="208"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="144"/>
         <source>Patterns</source>
-        <translation>Szűrők</translation>
+        <translation>Minták</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
