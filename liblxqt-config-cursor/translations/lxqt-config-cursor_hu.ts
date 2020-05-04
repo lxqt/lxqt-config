@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>A kívánt kurzortéma (előzetesen látható). &lt;b&gt;Érvényesítéshez az LXQt munkamenet újraindíttandó&lt;/b&gt;:</translation>
+        <translation>Válassza ki a kurzor témát amit szeretne használni. &lt;b&gt;Érvényesítéshez az LXQt munkamenetet újra kell&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>Az LXQt nem talált kurzor témát, az alapértelmezett lesz használva. Ezekben a mappákban kereste:</translation>
+        <translation>Az LXQt nem talált kurzor témát, ezért az alapértelmezett X11 téma lesz használva. Ezekben a mappákban kereste:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
