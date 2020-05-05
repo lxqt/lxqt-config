@@ -120,22 +120,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt megjelenésbeállítás</translation>
+        <translation>LXQt megjelenés beállítása</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -179,12 +179,12 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt megjelenés</translation>
+        <translation>LXQt megjelenés beállítása</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation>Elemtéma</translation>
+        <translation>Elemstílus</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>

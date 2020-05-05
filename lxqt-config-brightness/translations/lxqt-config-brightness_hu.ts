@@ -26,7 +26,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="89"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Megerősítés szükséges. Jó a beállítás?</translation>
+        <translation>Megerősítés szükséges. Megfelelő a beállítás?</translation>
     </message>
 </context>
 <context>
