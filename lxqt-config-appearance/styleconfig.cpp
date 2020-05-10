@@ -41,11 +41,12 @@
 extern void qt_x11_apply_settings_in_all_apps();
 #endif
 
-StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent) :
+StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, LXQt::Settings* sessionSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),
     mQtSettings(qtSettings),
-    mSettings(settings)
+    mSettings(settings),
+    mSessionSettings(sessionSettings)
 {
     mConfigAppearanceSettings = configAppearanceSettings;
     mConfigOtherToolKits = configOtherToolKits;
@@ -61,6 +62,7 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::
     connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
+    connect(ui->scaleCheckBox, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
 }
 
 
@@ -112,6 +114,15 @@ void StyleConfig::initControls()
     ui->qtComboBox->setCurrentText(mSettings->value(QStringLiteral("style")).toString());
     mSettings->endGroup();
 
+    // Scale widgets setting
+    mSessionSettings->beginGroup(QLatin1String("Environment"));
+    mScaleVariablesSetBefore = mSessionSettings->value(QStringLiteral("QT_SCALE_FACTOR")).toFloat() == 2.0 &&
+            mSessionSettings->value(QStringLiteral("GDK_SCALE")).toFloat() == 2.0 &&
+            mSessionSettings->value(QStringLiteral("XCURSOR_SIZE")).toInt() == 32 &&
+            mSessionSettings->value(QStringLiteral("QT_AUTO_SCREEN_SCALE_FACTOR")).toInt() == 0;
+    mSessionSettings->endGroup();
+    ui->scaleCheckBox->setChecked(mScaleVariablesSetBefore);
+
     update();
 }
 
@@ -154,6 +165,29 @@ void StyleConfig::applyStyle()
         // Update xsettingsd
         mConfigOtherToolKits->setXSettingsConfig();
     }
+
+    // Scale Widgets setting
+    mSessionSettings->beginGroup(QLatin1String("Environment"));
+    if (ui->scaleCheckBox->isChecked())
+    {
+        mSessionSettings->setValue(QStringLiteral("QT_SCALE_FACTOR"), QStringLiteral("2"));
+        mSessionSettings->setValue(QStringLiteral("GDK_SCALE"), QStringLiteral("2"));
+        mSessionSettings->setValue(QStringLiteral("XCURSOR_SIZE"), QStringLiteral("32"));
+        mSessionSettings->setValue(QStringLiteral("QT_AUTO_SCREEN_SCALE_FACTOR"), QStringLiteral("0"));
+    }
+    else
+    {
+        if (mScaleVariablesSetBefore)
+        {
+            // Clean up these variables if this checkbox had set them before
+            mSessionSettings->remove(QStringLiteral("QT_SCALE_FACTOR"));
+            mSessionSettings->remove(QStringLiteral("GDK_SCALE"));
+            mSessionSettings->remove(QStringLiteral("XCURSOR_SIZE"));
+            mSessionSettings->remove(QStringLiteral("QT_AUTO_SCREEN_SCALE_FACTOR"));
+        }
+        // If this checkbox didn't set these variables, just leave them alone
+    }
+    mSessionSettings->endGroup();
 }
 
 void StyleConfig::showAdvancedOptions(bool on)

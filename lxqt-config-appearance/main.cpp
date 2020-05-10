@@ -67,7 +67,7 @@ int main (int argc, char **argv)
     QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
 
     /*** Widget Style ***/
-    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, &mConfigAppearanceSettings, configOtherToolKits, dialog);
+    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, &mConfigAppearanceSettings, configOtherToolKits, sessionSettings, dialog);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << QStringLiteral("preferences-desktop-theme") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, stylePage, &StyleConfig::initControls);
     QObject::connect(stylePage, &StyleConfig::settingsChanged, dialog, [dialog] {
