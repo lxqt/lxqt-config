@@ -10,7 +10,7 @@
 
 void KScreenUtils::updateScreenSize(KScreen::ConfigPtr &config)
 {
-    KScreen::OutputList outputs = config->outputs();
+    const KScreen::OutputList outputs = config->outputs();
     int width, height;
     width = height = 0;
     for (const KScreen::OutputPtr &output : outputs) {
@@ -48,7 +48,7 @@ bool KScreenUtils::applyConfig(KScreen::ConfigPtr &config, KScreen::ConfigPtr &o
 void KScreenUtils::extended(KScreen::ConfigPtr &config)
 {
     int width = 0;
-    KScreen::OutputList outputs = config->outputs();
+    const KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
@@ -66,7 +66,8 @@ void KScreenUtils::extended(KScreen::ConfigPtr &config)
             // Set the biggest mode between preferred modes and the first mode.
             mode = output->modes().first();
             int modeArea = mode->size().width() * mode->size().height();
-            for(KScreen::ModePtr modeAux : output->modes()) {
+            const auto modes = output->modes();
+            for(KScreen::ModePtr modeAux : modes) {
                 if(output->preferredModes().contains(modeAux->id())) {
                     int modeAuxArea = modeAux->size().width() * modeAux->size().height();
                     if(modeArea < modeAuxArea) {
