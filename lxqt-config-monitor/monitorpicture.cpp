@@ -128,14 +128,14 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
 
     for (MonitorPicture *picture : qAsConst(pictures)) {
         if (picture->monitorWidget->output->name() == primaryMonitor
-                || primaryMonitor == QStringLiteral("")) {
+                || primaryMonitor == QLatin1String()) {
             x0 = picture->originX + picture->pos().x();
             y0 = picture->originY + picture->pos().y();
             break;
         }
     }
 
-    if( primaryMonitor == QStringLiteral("") ) {
+    if( primaryMonitor == QLatin1String() ) {
         for(MonitorPicture *picture : qAsConst(pictures)) {
             int x1 = picture->originX + picture->pos().x();
             int y1 = picture->originY + picture->pos().y();
