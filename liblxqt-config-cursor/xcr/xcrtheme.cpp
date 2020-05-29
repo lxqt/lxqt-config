@@ -359,7 +359,6 @@ void XCursorTheme::parseThemeIndex (const QDir &dir) {
     while (1) {
       QString s = stream.readLine();
       if (s.isNull()) break;
-      QString orig(s);
       s = s.trimmed();
       if (s.isEmpty() || s[0] == QLatin1Char('#') || s[0] == QLatin1Char(';')) continue;
       if (s[0] == QLatin1Char('[')) {

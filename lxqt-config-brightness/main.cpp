@@ -100,7 +100,6 @@ static CommandLineParseResult parseCommandLine(QCommandLineParser *parser, Brigh
 
     const bool isIncreaseSet = parser->isSet(increaseOption);
     const bool isDecreaseSet = parser->isSet(decreaseOption);
-    const QString increase_value = parser->value(increaseOption);
 
     const bool isSetBrightnessSet = parser->isSet(setOption);
     float brightnessValue = 0.0f;

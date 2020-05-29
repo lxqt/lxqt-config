@@ -237,8 +237,6 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
     // Sets default cursor size
     XcursorSetDefaultSize(QX11Info::display(), cursorSize);
 
-    QByteArray themeName = QFile::encodeName(theme.name());
-
     // Set up the proper launch environment for newly started apps
     //k8:!!!:KToolInvocation::klauncher()->setLaunchEnv("XCURSOR_THEME", themeName);
 
