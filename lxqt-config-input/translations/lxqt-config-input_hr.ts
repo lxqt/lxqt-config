@@ -6,70 +6,70 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrazac</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Brzina treperenja pokazivača:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Tipkovnica&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvučni signal pri greški unosa tipkovnicom</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished">Ponavljanje znaka</translation>
+        <translation>Ponavljanje znaka</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished">Dugačko</translation>
+        <translation>Dugo</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished">Odgoda ponavljanja:</translation>
+        <translation>Odgoda ponavljanja:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished">Kratko</translation>
+        <translation>Kratko</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation type="unfinished">Interval ponavljanja:</translation>
+        <translation>Interval ponavljanja:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation type="unfinished">Tipkajte u slijedeće polje da biste testirali postavke tipkovnice</translation>
+        <translation>Tipkaj u sljedeće polje za testiranje postavki tipkovnice</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>Uključi numeričku tipkovnicu nakon prijave</translation>
     </message>
 </context>
 <context>
@@ -77,57 +77,57 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Raspored tipkovnice&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Raspored</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Varijanta</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dodaj</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ukloni</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Gore</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolje</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"></translation>
+        <translation>Model tipkovnice:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipke za mijenjanje rasporeda:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Napomena&lt;/span&gt;: Ako se koriste &lt;span style=&quot; font-weight:600;&quot;&gt;metode unosa&lt;/span&gt; poput IBus, uim, fcitx ili gcin, ove postavke &lt;span style=&quot; font-weight:600;&quot;&gt;možda neće raditi&lt;/span&gt;, jer ih metode unosa nadjačavaju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -135,78 +135,78 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrazac</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Miš&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Motion</source>
-        <translation type="unfinished">Pokret:</translation>
+        <translation>Pokret</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="36"/>
         <source>High</source>
-        <translation type="unfinished">Visok</translation>
+        <translation>Visoka</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="43"/>
         <source>Fast</source>
-        <translation type="unfinished">Brzo</translation>
+        <translation>Brzo</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="50"/>
         <source>Sensitivity:</source>
-        <translation type="unfinished">Osijetljivost:</translation>
+        <translation>Osjetljivost:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Low</source>
-        <translation type="unfinished">Nisko</translation>
+        <translation>Niska</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="83"/>
         <source>Acceleration:</source>
-        <translation type="unfinished">Ubrzanje:</translation>
+        <translation>Ubrzanje:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="109"/>
         <source>Slow</source>
-        <translation type="unfinished">Sporo</translation>
+        <translation>Sporo</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="116"/>
         <location filename="../mouseconfig.ui" line="123"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Interval dvostrukog pritiska:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="140"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="150"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Broj redaka za klizanje kotačićem:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="160"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished">Ljevoruki (premješta lijevo i desno dugme miša)</translation>
+        <translation>Ljevoruki (zamjena lijevog i desnog gumba miša)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="167"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednostruki pritisak za aktiviranje objekata</translation>
     </message>
 </context>
 <context>
@@ -214,32 +214,32 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke tipkovnice i miša</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="79"/>
         <source>Mouse</source>
-        <translation type="unfinished">Miš</translation>
+        <translation>Miš</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokazivač</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="95"/>
         <source>Keyboard</source>
-        <translation type="unfinished">Tipkovnica</translation>
+        <translation>Tipkovnica</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Raspored tipkovnice</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Miš i dodirna ploča</translation>
     </message>
 </context>
 <context>
@@ -247,17 +247,17 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi raspored tipkovnice</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Raspored tipkovnice</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Varijanta</translation>
     </message>
 </context>
 <context>
@@ -265,57 +265,57 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguracija dodirne ploče</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uređaj:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Brzina ubrzanja:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodir za pritiskanje</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>Prirodno klizanje</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodirni i povuci</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Klizanje:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Deaktivirano</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>D&amp;va prsta</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rub</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>G&amp;umb</translation>
     </message>
 </context>
 </TS>
