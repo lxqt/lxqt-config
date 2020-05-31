@@ -61,6 +61,7 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::
     connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
+    connect(ui->winColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
 }
 
 
@@ -97,7 +98,6 @@ void StyleConfig::initControls()
     // activate item views with single click
     ui->singleClickActivate->setChecked( mSettings->value(QStringLiteral("single_click_activate"), false).toBool());
 
-
     // Fill Qt themes
     ui->qtComboBox->clear();
     ui->qtComboBox->addItems(qtThemes);
@@ -108,8 +108,16 @@ void StyleConfig::initControls()
 
     ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("2.0")));
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
+
     mSettings->beginGroup(QLatin1String("Qt"));
+    // Qt style
     ui->qtComboBox->setCurrentText(mSettings->value(QStringLiteral("style")).toString());
+    // Qt window color
+    QColor color;
+    color.setNamedColor(mSettings->value(QStringLiteral("window_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
+    ui->winColorLabel->setColor(color);
     mSettings->endGroup();
 
     update();
@@ -122,6 +130,12 @@ void StyleConfig::applyStyle()
     mQtSettings->beginGroup(QLatin1String("Qt"));
     if(mQtSettings->value(QStringLiteral("style")).toString() != themeName)
         mQtSettings->setValue(QStringLiteral("style"), themeName);
+    // Qt window color
+    QColor winColor = ui->winColorLabel->getColor();
+    QColor oldWinColor;
+    oldWinColor.setNamedColor(mQtSettings->value(QStringLiteral("window_color")).toString());
+    if (winColor != oldWinColor)
+        mQtSettings->setValue(QStringLiteral("window_color"), winColor.name());
     mQtSettings->endGroup();
 
     // single click setting

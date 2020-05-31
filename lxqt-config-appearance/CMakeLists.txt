@@ -27,6 +27,7 @@ set(CPP_FILES
     styleconfig.cpp
     fontconfigfile.cpp
     configothertoolkits.cpp
+    colorLabel.cpp
 )
 
 set(UI_FILES
