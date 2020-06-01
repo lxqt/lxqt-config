@@ -253,7 +253,7 @@ QString TouchpadDevice::escapedName() const
 
 void TouchpadDevice::loadSettings(LXQt::Settings* settings)
 {
-    QList<TouchpadDevice> devices = enumerate_from_udev();
+    const QList<TouchpadDevice> devices = enumerate_from_udev();
     settings->beginGroup(QStringLiteral("Touchpad"));
     for (const TouchpadDevice& device : devices) {
         qDebug() << "Load settings for" << device.name();

@@ -93,7 +93,7 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
     MonitorPictureDialog *monitorPicture = nullptr;
     FastMenu *fastMenu = nullptr;
-    KScreen::OutputList outputs = mConfig->outputs();
+    const KScreen::OutputList outputs = mConfig->outputs();
 
     int nMonitors = 0;
     for (const KScreen::OutputPtr &output : outputs) {
@@ -164,7 +164,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
 {
 
     QList<MonitorSettings> currentSettings;
-    KScreen::OutputList outputs = config->outputs();
+    const KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs) {
         MonitorSettings monitor;
         monitor.name = output->name();

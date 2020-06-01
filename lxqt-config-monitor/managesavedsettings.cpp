@@ -83,7 +83,7 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
 
 bool ManageSavedSettings::isHardwareCompatible(const MonitorSavedSettings &settings)
 {
-    KScreen::OutputList outputs = config->outputs();
+    const KScreen::OutputList outputs = config->outputs();
     for (const KScreen::OutputPtr &output : outputs) {
         bool ok = false;
         for (int i=0; i < settings.monitors.size(); i++) {

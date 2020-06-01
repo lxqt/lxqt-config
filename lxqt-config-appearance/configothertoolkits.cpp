@@ -147,9 +147,7 @@ bool ConfigOtherToolKits::backupGTKSettings(QString version)
             file.copy(backupPath);
             QMessageBox::warning(nullptr, tr("GTK themes"),
                 tr("<p>'%1' has been overwritten.</p><p>You can find a copy of your old settings in '%2'</p>")
-                .arg(getGTKConfigPath(version))
-                .arg(backupPath)
-                , QMessageBox::Ok);
+                .arg(getGTKConfigPath(version), backupPath), QMessageBox::Ok);
             return true;
         }
         return false;
@@ -340,10 +338,10 @@ void ConfigOtherToolKits::updateConfigFromSettings()
     // STYLE_OPTIONS is a whitespace separated list of words where each word describes one of style, variant, weight, stretch, or gravity, and
     // SIZE is a decimal number (size in points) or optionally followed by the unit modifier "px" for absolute size.
     mConfig.fontName = QStringLiteral("%1%2%3 %4")
-        .arg(font.family())                                 //%1
-        .arg(font.style()==QFont::StyleNormal?QString():QStringLiteral(" Italic")) //%2
-        .arg(font.weight()==QFont::Normal?QString():QStringLiteral(" Bold"))       //%3
-        .arg(font.pointSize());                             //%4
+        .arg(font.family(),                                 //%1
+        font.style()==QFont::StyleNormal?QString():QStringLiteral(" Italic"), //%2
+        font.weight()==QFont::Normal?QString():QStringLiteral(" Bold"),       //%3
+        QString::number(font.pointSize()));                             //%4
     mSettings->endGroup();
 
     mConfig.iconTheme = mSettings->value(QStringLiteral("icon_theme")).toString();

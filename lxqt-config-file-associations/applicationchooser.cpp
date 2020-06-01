@@ -100,7 +100,6 @@ void ApplicationChooser::fillApplicationListWidget()
 
     QSet<XdgDesktopFile*> addedApps;
     QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = XdgDesktopFileCache::getApps(m_MimeInfo.name());
-    QList<XdgDesktopFile*> otherApplications;
 
     QStringList mimetypes;
     mimetypes << m_MimeInfo.name() << m_MimeInfo.allAncestors();

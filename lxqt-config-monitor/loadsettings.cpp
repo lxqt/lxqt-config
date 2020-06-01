@@ -111,7 +111,7 @@ void LoadSettings::applyBestSettings()
 
 bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
 {
-    KScreen::OutputList outputs = config->outputs();
+    const KScreen::OutputList outputs = config->outputs();
     if(outputs.size() != monitors.size())
         return false;
     for (const KScreen::OutputPtr &output : outputs) {

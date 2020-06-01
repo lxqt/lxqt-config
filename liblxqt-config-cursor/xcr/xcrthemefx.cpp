@@ -374,7 +374,7 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
         // copy frame
         QImage frame(img.copy(fNo*frameWdt, 0, frameWdt, img.height()));
         //frame.save(QString("_png/%1_%2.png").arg(cim->name()).arg(QString::number(f)));
-        XCursorImage *i = new XCursorImage(QStringLiteral("%1%2").arg(cim->name()).arg(QString::number(fCnt)),
+        XCursorImage *i = new XCursorImage(QStringLiteral("%1%2").arg(cim->name(), QString::number(fCnt)),
           frame, imgXHot, imgYHot, a.delay, 1
         );
         cim->append(i);

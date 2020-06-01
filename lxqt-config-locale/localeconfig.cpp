@@ -170,9 +170,9 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 
     QString itemResult;
     itemResult = QStringLiteral("%1 - %2 (%3)")
-                        .arg(clabel)
-                        .arg(locale.nativeLanguageName())
-                        .arg(locale.name());
+                        .arg(clabel,
+                        locale.nativeLanguageName(),
+                        locale.name());
 
     combo->addItem(flagIcon, itemResult, cvalue);
 }
