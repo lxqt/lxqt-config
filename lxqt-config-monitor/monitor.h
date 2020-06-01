@@ -25,6 +25,22 @@
 
 //Settings to be stored or read from settings file.
 struct MonitorSettings {
+    MonitorSettings()
+        : name(),
+          hash(),
+          connected(false),
+          enabled(false),
+          primary(false),
+          currentMode(),
+          currentModeWidth(-1),
+          currentModeHeight(-1),
+          currentModeRate(0.0f),
+          xPos(-1),
+          yPos(-1),
+          rotation(-1)
+    {
+    }
+
     QString name;
     QString hash;
     bool connected;
