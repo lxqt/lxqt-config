@@ -43,8 +43,10 @@ void ColorLabel::setColor(const QColor& color)
     stylesheetColor_ = color;
     // ignore translucency
     stylesheetColor_.setAlpha(255);
-    setStyleSheet(QStringLiteral("QLabel{background-color: rgb(%1, %2, %3);}")
-                  .arg(color.red()).arg(color.green()).arg(color.blue()));
+    QString borderColor = qGray(stylesheetColor_.rgb()) < 255 / 2
+                            ? QStringLiteral("white") : QStringLiteral("black");
+    setStyleSheet(QStringLiteral("QLabel{background-color: rgb(%1, %2, %3); border: 1px solid %4;}}")
+                  .arg(color.red()).arg(color.green()).arg(color.blue()).arg(borderColor));
 }
 
 QColor ColorLabel::getColor() const
