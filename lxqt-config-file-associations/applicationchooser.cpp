@@ -151,7 +151,7 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
         {
             QTreeWidgetItem* noAppsFoundItem = new QTreeWidgetItem(parent);
             noAppsFoundItem->setText(0, tr("No applications found"));
-            noAppsFoundItem->setFlags(0);
+            noAppsFoundItem->setFlags(Qt::ItemFlags());
             QFont font = noAppsFoundItem->font(0);
             font.setStyle(QFont::StyleItalic);
             noAppsFoundItem->setFont(0, font);
