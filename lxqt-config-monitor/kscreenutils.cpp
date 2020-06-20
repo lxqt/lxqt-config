@@ -17,11 +17,14 @@ void KScreenUtils::updateScreenSize(KScreen::ConfigPtr &config)
         if( !output->isConnected() )
             continue;
         QPoint pos = output->pos();
-        KScreen::ModePtr mode(output->currentMode());
-        width = qMax(pos.x() + mode->size().width(), width);
-        height = qMax(pos.y() + mode->size().height(), height);
+        if (output->currentMode()) {
+            KScreen::ModePtr mode(output->currentMode());
+            width = qMax(pos.x() + mode->size().width(), width);
+            height = qMax(pos.y() + mode->size().height(), height);
+        }
     }
-    config->screen()->setCurrentSize(QSize(width, height));
+    if (width != 0 && height != 0)
+        config->screen()->setCurrentSize(QSize(width, height));
 }
 
 
