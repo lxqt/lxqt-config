@@ -32,6 +32,7 @@
 #include <QTimer>
 
 #include <XdgDesktopFile>
+#include <XdgMimeApps>
 
 #include <algorithm>
 
@@ -39,20 +40,33 @@
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)
 
-ApplicationChooser::ApplicationChooser(const XdgMimeType& mimeInfo, bool showUseAlwaysCheckBox)
+ApplicationChooser::ApplicationChooser(const QString& type, bool showUseAlwaysCheckBox)
 {
-    m_MimeInfo = mimeInfo;
-    m_CurrentDefaultApplication = XdgDesktopFileCache::getDefaultApp(m_MimeInfo.name());
     widget.setupUi(this);
+    m_Type = type;
 
-    widget.mimetypeIconLabel->setPixmap(m_MimeInfo.icon().pixmap(widget.mimetypeIconLabel->size()));
-    widget.mimetypeLabel->setText(m_MimeInfo.comment());
+    XdgMimeApps appsDb;
+    m_CurrentDefaultApplication = appsDb.defaultApp(m_Type);
+    QMimeDatabase db;
+    XdgMimeType mimeInfo(db.mimeTypeForName(m_Type));
+    if (mimeInfo.isValid())
+    {
+        widget.mimetypeIconLabel->setPixmap(mimeInfo.icon().pixmap(widget.mimetypeIconLabel->size()));
+        widget.mimetypeLabel->setText(mimeInfo.comment());
+    }
+    else
+    {
+        widget.mimetypeIconLabel->setText(m_Type);
+        widget.mimetypeLabel->hide();
+    }
+
     widget.alwaysUseCheckBox->setVisible(showUseAlwaysCheckBox);
     widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 }
 
 ApplicationChooser::~ApplicationChooser()
 {
+    qDeleteAll(allApps);
 }
 
 int ApplicationChooser::exec()
@@ -98,47 +112,78 @@ void ApplicationChooser::fillApplicationListWidget()
 {
     widget.applicationTreeWidget->clear();
 
-    QSet<XdgDesktopFile*> addedApps;
-    QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = XdgDesktopFileCache::getApps(m_MimeInfo.name());
 
-    QStringList mimetypes;
-    mimetypes << m_MimeInfo.name() << m_MimeInfo.allAncestors();
+    QSet<XdgDesktopFile*> addedApps;
+    XdgMimeApps appsDb;
+    QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = appsDb.apps(m_Type);
 
     // Adding all apps takes some time. Make the user aware by setting the
     // cursor to Wait.
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+
     QMimeDatabase db;
-    for(const QString& mts : qAsConst(mimetypes)) {
-        QMimeType mt = db.mimeTypeForName(mts);
-        QString heading;
-        heading = mt.name() == QLatin1String("application/octet-stream") ?
-            tr("Other applications") :
-            tr("Applications that handle %1").arg(mt.comment());
+    XdgMimeType mimeInfo(db.mimeTypeForName(m_Type));
+    if (mimeInfo.isValid())
+    {
+        QStringList mimetypes;
+        mimetypes << m_Type << mimeInfo.allAncestors();
 
-        QList<XdgDesktopFile*> applications;
-        applications = mt.name() == QLatin1String("application/octet-stream") ?
-            XdgDesktopFileCache::getAllFiles() :
-            XdgDesktopFileCache::getApps(mt.name());
+        for(const QString& mts : qAsConst(mimetypes)) {
+            QMimeType mt = db.mimeTypeForName(mts);
+            QString heading = mt.name() == QLatin1String("application/octet-stream") ?
+                tr("Other applications") :
+                tr("Applications that handle %1").arg(mt.comment());
 
-        std::sort(applications.begin(), applications.end(), lessThan);
+            QList<XdgDesktopFile*> applications = mt.name() == QLatin1String("application/octet-stream") ?
+                appsDb.allApps() :
+                appsDb.recommendedApps(mt.name());
 
-        QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
-        headingItem->setExpanded(true);
-        headingItem->setFlags(Qt::ItemIsEnabled);
-        headingItem->setText(0, heading);
-        headingItem->setSizeHint(0, QSize(0, 25));
+            std::sort(applications.begin(), applications.end(), lessThan);
 
-        addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
+            QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
+            headingItem->setExpanded(true);
+            headingItem->setFlags(Qt::ItemIsEnabled);
+            headingItem->setText(0, heading);
+            headingItem->setSizeHint(0, QSize(0, 25));
+
+            addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
+        }
     }
-    connect(widget.applicationTreeWidget, SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT(selectionChanged()));
+    else // schemes
+    {
+        QStringList types;
+        types << m_Type << QString();
+        for(const QString& type : qAsConst(types)) {
+            QString heading = type.isEmpty() ?
+                tr("Other applications") :
+                tr("Applications that handle %1").arg(type);
+            QList<XdgDesktopFile*> applications = type.isEmpty() ?
+                appsDb.allApps() :
+                appsDb.recommendedApps(type);
+
+            std::sort(applications.begin(), applications.end(), lessThan);
+
+            QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
+            headingItem->setExpanded(true);
+            headingItem->setFlags(Qt::ItemIsEnabled);
+            headingItem->setText(0, heading);
+            headingItem->setSizeHint(0, QSize(0, 25));
+
+            addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
+        }
+    }
+    connect(widget.applicationTreeWidget, &QTreeWidget::currentItemChanged,
+            this, &ApplicationChooser::selectionChanged);
     widget.applicationTreeWidget->setFocus();
 
     if (!applicationsThatHandleThisMimetype.isEmpty()) {
         widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+        qDeleteAll(applicationsThatHandleThisMimetype);
+        applicationsThatHandleThisMimetype.clear();
     }
 
     // delay icon update for faster loading
-    QTimer::singleShot(0, this, SLOT(updateAllIcons()));
+    QTimer::singleShot(0, this, &ApplicationChooser::updateAllIcons);
 }
 
 void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
@@ -146,41 +191,73 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
                                                                 QSet<XdgDesktopFile*>& alreadyAdded)
 {
     QIcon placeHolderIcon = QIcon::fromTheme(QStringLiteral("application-x-executable"));
+    bool noApplication = applications.isEmpty();
+    bool inserted = false;
 
-        if (applications.isEmpty())
+    // Insert applications in the listwidget, skipping already added applications
+    // as well as desktop files that aren't applications
+    while (!applications.isEmpty())
+    {
+        XdgDesktopFile* desktopFile = applications.first();
+
+        // Only applications
+        if (desktopFile->type() != XdgDesktopFile::ApplicationType)
         {
-            QTreeWidgetItem* noAppsFoundItem = new QTreeWidgetItem(parent);
-            noAppsFoundItem->setText(0, tr("No applications found"));
-            noAppsFoundItem->setFlags(Qt::ItemFlags());
-            QFont font = noAppsFoundItem->font(0);
-            font.setStyle(QFont::StyleItalic);
-            noAppsFoundItem->setFont(0, font);
+            delete applications.takeFirst();
+            continue;
         }
-        else
+
+        // WARNING: We cannot use QSet::contains() here because different addresses
+        // can have the same value. Also, see libqtxdg -> XdgDesktopFile::operator==().
+        bool wasAdded = false;
+        for (XdgDesktopFile* added : qAsConst(alreadyAdded))
         {
-            // Insert applications in the listwidget, skipping already added applications
-            for (XdgDesktopFile* desktopFile : qAsConst(applications))
+            if (*added == *desktopFile)
             {
-                if (alreadyAdded.contains(desktopFile))
-                    continue;
-
-                // Only applications
-                if (desktopFile->type() != XdgDesktopFile::ApplicationType)
-                    continue;
-
-                QTreeWidgetItem *item = new QTreeWidgetItem(parent);
-                item->setIcon(0, placeHolderIcon);
-                item->setText(0, desktopFile->name());
-                item->setData(0, 32, QVariant::fromValue<XdgDesktopFile*>(desktopFile));
-
-                if (desktopFile == m_CurrentDefaultApplication)
-                {
-                    widget.applicationTreeWidget->setCurrentItem(item);
-                }
-
-                alreadyAdded.insert(desktopFile);
+                wasAdded = true;
+                break;
             }
         }
+        if (wasAdded) {
+            delete applications.takeFirst();
+            continue;
+        }
+
+        QTreeWidgetItem *item = new QTreeWidgetItem(parent);
+        item->setIcon(0, placeHolderIcon);
+        item->setText(0, desktopFile->name());
+        item->setData(0, 32, QVariant::fromValue<XdgDesktopFile*>(desktopFile));
+
+        if (widget.applicationTreeWidget->selectedItems().isEmpty()
+            && m_CurrentDefaultApplication
+            && *desktopFile == *m_CurrentDefaultApplication)
+        {
+            widget.applicationTreeWidget->setCurrentItem(item);
+        }
+
+        inserted = true;
+        alreadyAdded.insert(desktopFile);
+
+        allApps.insert(desktopFile);
+        applications.removeFirst();
+    }
+
+    if (!inserted)
+    {
+        QTreeWidgetItem* noAppsFoundItem = new QTreeWidgetItem(parent);
+        if (noApplication || alreadyAdded.isEmpty())
+            noAppsFoundItem->setText(0, tr("No applications found"));
+        else
+        {
+            // in this case, applications are found but were already added;
+            // so, the text should be a little different
+            noAppsFoundItem->setText(0, tr("No more applications found"));
+        }
+        noAppsFoundItem->setFlags(Qt::NoItemFlags);
+        QFont font = noAppsFoundItem->font(0);
+        font.setStyle(QFont::StyleItalic);
+        noAppsFoundItem->setFont(0, font);
+    }
 }
 
 void ApplicationChooser::selectionChanged()
@@ -191,6 +268,11 @@ void ApplicationChooser::selectionChanged()
     if (newItem && newItem->data(0, 32).value<XdgDesktopFile*>())
     {
         widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+
+        // in d-tor, we delete all app pointers except for m_CurrentDefaultApplication
+        // because it needs to be returned (and deleted by the caller)
+        allApps.insert(m_CurrentDefaultApplication);
         m_CurrentDefaultApplication = newItem->data(0, 32).value<XdgDesktopFile*>();
+        allApps.remove(m_CurrentDefaultApplication);
     }
 }

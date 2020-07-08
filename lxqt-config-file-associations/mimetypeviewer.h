@@ -29,6 +29,7 @@
 
 #include <QDialog>
 #include <QStringList>
+#include <QTemporaryFile>
 
 #include <XdgMimeType>
 
@@ -48,20 +49,21 @@ public:
     virtual ~MimetypeViewer();
 
 private slots:
-    void initializeMimetypeTreeView();
     void currentMimetypeChanged();
     void filter(const QString&);
     void chooseApplication();
     void dialogButtonBoxClicked(QAbstractButton *button);
 
 private:
+    XdgDesktopFile* chooseApp(const QString& type);
+    void initializeMimetypeTreeView();
+    void updateDefaultApplications();
     void addSearchIcon();
     void loadAllMimeTypes();
-    XdgMimeType m_CurrentMime;
-    QSettings* mDefaultsList;
-    LXQt::SettingsCache *mSettingsCache;
+    QString m_CurrentType;
     Ui::mimetypeviewer widget;
     QStringList mediaTypes;
+    QTemporaryFile mMimeappsTemp, mDEMimeappsTemp; // for resetting all settings
     QList <QTreeWidgetItem*> mItemList;
     QMap<QString, QTreeWidgetItem *> mGroupItems;
 };

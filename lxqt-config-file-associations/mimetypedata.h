@@ -42,6 +42,10 @@ public:
     QString inline patterns() const { return mPatterns; };
     QString inline comment() const { return mComment; };
 
+    void setName(const QString name) {
+        mName = name;
+    }
+
     bool matches(const QString& filter) const;
 
 private:
