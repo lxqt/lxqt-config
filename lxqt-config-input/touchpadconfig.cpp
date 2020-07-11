@@ -40,6 +40,7 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
 
     connect(ui.devicesComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
             this, [this] (int/* index*/) { initControls(); }); // update GUI on device change
+    connect(ui.deviceEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.tappingEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.naturalScrollingEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.tapToDragEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
@@ -75,6 +76,7 @@ void TouchpadConfig::initControls()
     }
 
     const TouchpadDevice& device = devices[curDevice];
+    initFeatureControl(ui.deviceEnabledCheckBox, device.deviceEnabled());
     initFeatureControl(ui.tappingEnabledCheckBox, device.tappingEnabled());
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
     initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
@@ -133,6 +135,7 @@ void TouchpadConfig::reset()
 {
     for (const TouchpadDevice& device : qAsConst(devices))
     {
+        device.setDeviceEnabled(device.oldDeviceEnabled());
         device.setTappingEnabled(device.oldTappingEnabled());
         device.setNaturalScrollingEnabled(device.oldNaturalScrollingEnabled());
         device.setTapToDragEnabled(device.oldTapToDragEnabled());
@@ -153,7 +156,14 @@ void TouchpadConfig::applyConfig()
     bool acceptSetting = false;
     TouchpadDevice& device = devices[curDevice];
 
-    bool enable = ui.tappingEnabledCheckBox->checkState() == Qt::Checked;
+    bool enable = ui.deviceEnabledCheckBox->checkState() == Qt::Checked;
+    if (enable != (device.deviceEnabled() > 0))
+    {
+        device.setDeviceEnabled(enable);
+        acceptSetting = true;
+    }
+
+    enable = ui.tappingEnabledCheckBox->checkState() == Qt::Checked;
     if (enable != (device.tappingEnabled() > 0))
     {
         device.setTappingEnabled(enable);

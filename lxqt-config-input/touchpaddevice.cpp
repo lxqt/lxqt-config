@@ -28,6 +28,9 @@
 #include <X11/extensions/XInput2.h>
 #include <libinput-properties.h>
 
+// somehow libinput does not define this property
+#define PROP_DEVICE_ENABLED "Device Enabled"
+
 static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
 {
     QList<QVariant> ret;
@@ -201,6 +204,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
             if(dev.find_xi2_device())
             {
                 qDebug() << "Detected" << dev.m_name << "on" << dev.devnode;
+                dev.m_oldDeviceEnabled = dev.deviceEnabled();
                 dev.m_oldTappingEnabled = dev.tappingEnabled();
                 dev.m_oldNaturalScrollingEnabled = dev.naturalScrollingEnabled();
                 dev.m_oldTapToDragEnabled = dev.tapToDragEnabled();
@@ -259,6 +263,9 @@ void TouchpadDevice::loadSettings(LXQt::Settings* settings)
         qDebug() << "Load settings for" << device.name();
 
         settings->beginGroup(device.escapedName());
+        if (settings->contains(QLatin1String(DEVICE_ENABLED))) {
+            device.setDeviceEnabled(settings->value(QLatin1String(DEVICE_ENABLED)).toBool());
+        }
         if (settings->contains(QLatin1String(TAPPING_ENABLED))) {
             device.setTappingEnabled(settings->value(QLatin1String(TAPPING_ENABLED)).toBool());
         }
@@ -285,6 +292,7 @@ void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
     settings->beginGroup(QStringLiteral("Touchpad"));
 
     settings->beginGroup(escapedName());
+    settings->setValue(QLatin1String(DEVICE_ENABLED), deviceEnabled());
     settings->setValue(QLatin1String(TAPPING_ENABLED), tappingEnabled());
     settings->setValue(QLatin1String(NATURAL_SCROLLING_ENABLED), naturalScrollingEnabled());
     settings->setValue(QLatin1String(TAP_TO_DRAG_ENABLED), tapToDragEnabled());
@@ -306,6 +314,11 @@ int TouchpadDevice::featureEnabled(const char* prop) const
     {
         return -1;
     }
+}
+
+int TouchpadDevice::deviceEnabled() const
+{
+    return featureEnabled(PROP_DEVICE_ENABLED);
 }
 
 int TouchpadDevice::tappingEnabled() const
@@ -334,6 +347,11 @@ float TouchpadDevice::accelSpeed() const
     {
         return std::nanf("");
     }
+}
+
+bool TouchpadDevice::setDeviceEnabled(bool enabled) const
+{
+    return set_xi2_property(PROP_DEVICE_ENABLED, QList<QVariant>({enabled ? 1 : 0}));
 }
 
 bool TouchpadDevice::setTappingEnabled(bool enabled) const

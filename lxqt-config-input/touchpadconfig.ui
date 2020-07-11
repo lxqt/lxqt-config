@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
+    <width>534</width>
     <height>300</height>
    </rect>
   </property>
@@ -138,6 +138,13 @@
       </spacer>
      </item>
     </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="deviceEnabledCheckBox">
+     <property name="text">
+      <string>Enable this device</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
