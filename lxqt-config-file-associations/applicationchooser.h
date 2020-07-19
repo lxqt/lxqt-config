@@ -36,10 +36,13 @@ class ApplicationChooser : public QDialog
 {
     Q_OBJECT
 public:
-    ApplicationChooser(const XdgMimeType& mimeInfo, bool showUseAlwaysCheckBox = false);
+    ApplicationChooser(const QString& type, bool showUseAlwaysCheckBox = false);
 
     virtual ~ApplicationChooser();
-    XdgDesktopFile* DefaultApplication() const { return m_CurrentDefaultApplication; }
+
+    XdgDesktopFile* DefaultApplication() const {
+        return m_CurrentDefaultApplication; // should be deleted by the caller
+    }
 
     virtual int exec();
 
@@ -53,9 +56,10 @@ private:
     void addApplicationsToApplicationListWidget(QTreeWidgetItem* parent,
                                                 QList<XdgDesktopFile*> applications,
                                                 QSet<XdgDesktopFile*> & alreadyAdded);
-    XdgMimeType m_MimeInfo;
+    QString m_Type;
     Ui::ApplicationChooser widget;
     XdgDesktopFile* m_CurrentDefaultApplication;
+    QSet<XdgDesktopFile*> allApps; // all app pointers that should be deleted in d-tor
 };
 
 #endif	/* _APPLICATIONCHOOSER_H */
