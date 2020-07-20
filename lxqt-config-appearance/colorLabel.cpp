@@ -25,13 +25,17 @@
 
 #include "colorLabel.h"
 #include <QColorDialog>
+#include <QStyleOptionFrame>
+#include <QPainter>
 
 ColorLabel::ColorLabel(QWidget* parent, Qt::WindowFlags f)
     : QLabel(parent, f)
 {
     setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    setLineWidth(1);
     setFixedWidth(100);
     setToolTip(tr("Click to change color."));
+    color_ = palette().color(QPalette::Window);
 }
 
 ColorLabel::~ColorLabel() {}
@@ -40,23 +44,17 @@ void ColorLabel::setColor(const QColor& color)
 {
     if (!color.isValid())
         return;
-    stylesheetColor_ = color;
-    // ignore translucency
-    stylesheetColor_.setAlpha(255);
-    QString borderColor = qGray(stylesheetColor_.rgb()) < 255 / 2
-                            ? QStringLiteral("white") : QStringLiteral("black");
-    setStyleSheet(QStringLiteral("QLabel{background-color: rgb(%1, %2, %3); border: 1px solid %4;}")
-                  .arg(QString::number(color.red()), QString::number(color.green()), QString::number(color.blue()), borderColor));
+    color_ = color;
+    color_.setAlpha(255); // ignore translucency
 }
 
 QColor ColorLabel::getColor() const
 {
-    if (stylesheetColor_.isValid())
-        return stylesheetColor_; // the window color may be different from the stylesheet color
-    return palette().color(QPalette::Window);
+    return color_;
 }
 
-void ColorLabel::mousePressEvent(QMouseEvent* /*event*/) {
+void ColorLabel::mousePressEvent(QMouseEvent* /*event*/)
+{
     QColor prevColor = getColor();
     QColor color = QColorDialog::getColor(prevColor, window(), tr("Select Color"));
     if (color.isValid() && color != prevColor)
@@ -65,3 +63,13 @@ void ColorLabel::mousePressEvent(QMouseEvent* /*event*/) {
         setColor(color);
     }
 }
+
+void ColorLabel::paintEvent (QPaintEvent* /*event*/)
+{
+    QPainter p(this);
+    p.fillRect(contentsRect(), color_);
+    QStyleOptionFrame opt;
+    initStyleOption(&opt);
+    style()->drawControl(QStyle::CE_ShapedFrame, &opt, &p, this);
+}
+
