@@ -44,10 +44,11 @@ signals:
     void colorChanged();
 
 protected:
-    void mousePressEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event) override;
+    void paintEvent (QPaintEvent* event) override;
 
 private:
-    QColor stylesheetColor_;
+    QColor color_;
 };
 
 #endif // COLORLABEL_H
