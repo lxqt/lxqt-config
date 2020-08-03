@@ -19,10 +19,12 @@
 #include "monitorinfo.h"
 
 MonitorInfo::MonitorInfo(int id, QString name, long backlightMax)
+    : mBacklightMax(backlightMax),
+      mBacklight(-1),
+      mBrightness(-1.0f),
+      mName(name),
+      mId(id)
 {
-    mId = id;
-    mName = name;
-    mBacklightMax = backlightMax;
 }
 
 MonitorInfo::MonitorInfo(const MonitorInfo &monitor)
