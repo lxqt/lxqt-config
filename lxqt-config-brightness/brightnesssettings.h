@@ -32,6 +32,7 @@ Q_OBJECT
 
 public:
     BrightnessSettings(QWidget *parent =0);
+    ~BrightnessSettings();
 
     void revertValues();
 

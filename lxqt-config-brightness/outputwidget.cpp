@@ -36,6 +36,12 @@ OutputWidget::OutputWidget(MonitorInfo monitor, QWidget *parent):QWidget(parent)
         [this](bool){ ui->brightnessSlider->setValue(ui->brightnessSlider->value()+1); });
 }
 
+OutputWidget::~OutputWidget()
+{
+    delete ui;
+    ui = nullptr;
+}
+
 void OutputWidget::mouseReleaseEvent(QMouseEvent *event)
 {
     if ( event->button() == Qt::RightButton && ui->brightnessSlider->underMouse() ) {

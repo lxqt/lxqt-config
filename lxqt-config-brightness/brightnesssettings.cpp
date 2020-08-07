@@ -68,6 +68,15 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         } );
 }
 
+BrightnessSettings::~BrightnessSettings()
+{
+    delete ui;
+    ui = nullptr;
+
+    delete mBrightness;
+    mBrightness = nullptr;
+}
+
 void BrightnessSettings::setBacklight()
 {
     int value = ui->backlightSlider->value();
