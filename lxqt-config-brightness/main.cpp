@@ -160,9 +160,9 @@ int main(int argn, char* argv[])
     }
 
     if (config.mode == UiMode::GUI) {
-        BrightnessSettings *brightnessSettings = new BrightnessSettings();
-        brightnessSettings->setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
-        brightnessSettings->show();
+        BrightnessSettings brightnessSettings;
+        brightnessSettings.setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
+        brightnessSettings.show();
         return app.exec();
     }
 
@@ -230,6 +230,7 @@ int main(int argn, char* argv[])
             }
         }
         brightness->setMonitorsSettings(monitorsChanged);
+        delete brightness;
         return 0;
     }
 
