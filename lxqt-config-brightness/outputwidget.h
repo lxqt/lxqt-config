@@ -29,6 +29,7 @@ class OutputWidget: public QWidget
 Q_OBJECT
 public:
     OutputWidget(MonitorInfo monitor, QWidget *parent);
+    ~OutputWidget();
 
 signals:
     void changed(MonitorInfo info);
