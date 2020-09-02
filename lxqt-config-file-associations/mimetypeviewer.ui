@@ -494,7 +494,7 @@
            <item>
             <widget class="QGroupBox" name="fileManagerGroupBox">
              <property name="title">
-              <string>GroupBox</string>
+              <string>File Manager</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_4">
               <item row="0" column="0">
