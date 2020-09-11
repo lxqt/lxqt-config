@@ -11,12 +11,12 @@
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Selecciona el cursor del raton que tu desees usar (colocalo encima para ver una previsualizacion) &lt;b&gt;La sesion de LXQt necesita reinicializarse despues de un cambio&lt;/b&gt;</translation>
+        <translation>Selecciona el cursor del raton que tu desees usar (colocalo encima para ver una previsualizacion) &lt;b&gt;La sesion de LXQt necesita reinicializarse despues de un cambio&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Instalar nuevo tema</translation>
+        <translation>&amp;Instalar nuevo tema...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
