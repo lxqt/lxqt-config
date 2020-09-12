@@ -102,7 +102,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="156"/>
         <source>*.txt *.xml</source>
-        <translation>*.txxt *.xml</translation>
+        <translation>*.txt *.xml</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="173"/>
