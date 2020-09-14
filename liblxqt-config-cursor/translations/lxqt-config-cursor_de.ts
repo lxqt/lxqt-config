@@ -11,8 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Wähle das gewünschte Mauszeigerdesign aus (zum Test Maus über Vorschau bewegen)
-&lt;b&gt;Die LXQt-Sitzung muss nach dieser Veränderung neu gestartet werden&lt;/b&gt;:</translation>
+        <translation>Wähle das gewünschte Mauszeigerdesign aus (zum Test Maus über Vorschau bewegen) &lt;b&gt;Die LXQt-Sitzung muss nach dieser Veränderung neu gestartet werden&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
