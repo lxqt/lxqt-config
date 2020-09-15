@@ -49,6 +49,7 @@ public:
 
     const QString& name() const { return m_name; }
     QString escapedName() const;
+    QString xinputDriver() const { return m_xinputDriver; }
 
     int tappingEnabled() const;
     int naturalScrollingEnabled() const;
@@ -72,6 +73,7 @@ public:
     void saveSettings(LXQt::Settings* settings) const;
 private:
     QString m_name;
+    QString m_xinputDriver;
     QString devnode;
     int deviceid;
 
