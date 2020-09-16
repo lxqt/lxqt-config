@@ -49,7 +49,8 @@ public:
 
     const QString& name() const { return m_name; }
     QString escapedName() const;
-    QString xinputDriver() const { return m_xinputDriver; }
+    auto xinputDriver() const { return m_xinputDriver; }
+    auto xinputDriverSupported() const { return m_xinputDriver == QStringLiteral("libinput"); }
 
     int tappingEnabled() const;
     int naturalScrollingEnabled() const;
