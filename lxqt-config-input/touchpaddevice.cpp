@@ -133,7 +133,7 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
             }
         }
         break;
-    case QMetaType::Float:
+    case QVariant::Double:
         Q_ASSERT(act_type == XInternAtom(dpy, "FLOAT", False));
         Q_ASSERT(act_format == 32);
         float_data = new float[values.size()];
