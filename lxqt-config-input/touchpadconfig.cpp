@@ -83,11 +83,11 @@ void TouchpadConfig::initControls()
     if (!ok) {
       ui.deviceInfoLabel->setText(
             tr(
-              "LXQT only supports \"libinput\" as xinput driver.\n"
+              "LXQt only supports \"libinput\" as xinput driver.\n"
               "(current value: %1)\n"
               "\n"
-              "Check your xinput device configuration (/etc/X11/xorg.conf.d).\n"
-              "If not needed, also remove the xf86-input-synatics package.")
+              "Check your xinput configuration (/etc/X11/xorg.conf.d).\n"
+              "If not needed, also remove the xf86-input-synaptics package.")
             .arg(device.xinputDriver()));
       ui.deviceInfoLabel->setStyleSheet(QStringLiteral("background-color: #f88; border-color: #f33; border-size: 1px"));
     };
