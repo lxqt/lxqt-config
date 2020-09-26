@@ -37,7 +37,7 @@ public:
     explicit ColorLabel(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
     ~ColorLabel();
 
-    void setColor(const QColor& color);
+    void setColor(const QColor& color, bool announceChange = false);
     QColor getColor() const;
 
 signals:
