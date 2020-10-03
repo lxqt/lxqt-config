@@ -133,7 +133,7 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
             }
         }
         break;
-    case QMetaType::Float:
+    case QVariant::Double:
         Q_ASSERT(act_type == XInternAtom(dpy, "FLOAT", False));
         Q_ASSERT(act_format == 32);
         float_data = new float[values.size()];
@@ -201,6 +201,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
             if(dev.find_xi2_device())
             {
                 qDebug() << "Detected" << dev.m_name << "on" << dev.devnode;
+                qDebug() << "xinput driver:" << dev.xinputDriver();
                 dev.m_oldTappingEnabled = dev.tappingEnabled();
                 dev.m_oldNaturalScrollingEnabled = dev.naturalScrollingEnabled();
                 dev.m_oldTapToDragEnabled = dev.tapToDragEnabled();
@@ -234,6 +235,17 @@ bool TouchpadDevice::find_xi2_device()
         {
             m_name = QString::fromUtf8(info[i].name);
             deviceid = info[i].deviceid;
+
+            // init xinput driver name
+            auto xi_driver_prop = xi2_get_device_property(deviceid, "Synaptics Capabilities");
+            if (xi_driver_prop.size()) {
+              // lxqt does not support xf86-input-synaptics properties
+              m_xinputDriver = QStringLiteral("synaptics");
+            } else {
+              // otherweise we assumge libinput and don't test on libinput properties
+              m_xinputDriver = QStringLiteral("libinput");
+            }
+
             found = true;
             break;
         }

@@ -79,6 +79,21 @@ void TouchpadConfig::initControls()
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
     initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
 
+    auto ok = device.xinputDriverSupported();
+    if (!ok) {
+      ui.deviceInfoLabel->setText(
+            tr(
+              "LXQt only supports \"libinput\" as xinput driver.\n"
+              "(current value: %1)\n"
+              "\n"
+              "If this is intended, please configure xinput manually.\n"
+              "Otherwise you can get rid of this message by changing xinput driver to \"libinput\".\n")
+            .arg(device.xinputDriver()));
+      ui.deviceInfoLabel->setStyleSheet(QStringLiteral("background-color: #f88; border-color: #f33; border-size: 1px"));
+    };
+    ui.deviceInfoLabel->setVisible(!ok);
+    ui.deviceInfoLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
     float accelSpeed = device.accelSpeed();
     if (!std::isnan(accelSpeed)) {
         ui.accelSpeedDoubleSpinBox->setEnabled(true);

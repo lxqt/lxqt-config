@@ -139,6 +139,13 @@
      </item>
     </layout>
    </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="deviceInfoLabel">
+     <property name="text">
+      <string>DeviceInfoLabel</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
