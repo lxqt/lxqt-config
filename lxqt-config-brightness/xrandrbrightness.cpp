@@ -374,7 +374,7 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
         ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (QX11Info::connection(), crtc_info_cookie, &error));
         if(error != NULL)
             continue;
-        if(crtc_info == NULL && crtc_info->mode == XCB_NONE )
+        if(crtc_info == NULL || crtc_info->mode == XCB_NONE )
             continue;
 
         QString name = QString::fromUtf8((const char *) xcb_randr_get_output_info_name(output_info.data()), output_info->name_len);
