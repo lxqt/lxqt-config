@@ -44,8 +44,6 @@
 #include "mimetypeviewer.h"
 #include "ui_mimetypeviewer.h"
 
-#include "applicationchooser.h"
-
 
 enum ItemTypeEntries {
     GroupType = 1001,
@@ -180,7 +178,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     // "Default Applications" tab
     updateDefaultApplications();
     connect(widget.chooseBrowserButton, &QAbstractButton::clicked, [this]() {
-        if (XdgDesktopFile *app = chooseApp(QStringLiteral("x-scheme-handler/http")))
+        if (XdgDesktopFile *app = chooseApp(QString(), ApplicationChooser::category::webBrowser))
         {
             XdgDesktopFile *defaultBrowser = XdgDefaultApps::webBrowser();
             if (!defaultBrowser || !defaultBrowser->isValid() || *defaultBrowser != *app)
@@ -193,7 +191,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
         }
     });
     connect(widget.chooseEmailClientButton, &QAbstractButton::clicked, [this]() {
-        if (XdgDesktopFile *app = chooseApp(QStringLiteral("x-scheme-handler/mailto")))
+        if (XdgDesktopFile *app = chooseApp(QString(), ApplicationChooser::category::emailClient))
         {
             XdgDesktopFile *defaultEmailClient = XdgDefaultApps::emailClient();
             if (!defaultEmailClient || !defaultEmailClient->isValid() || *defaultEmailClient != *app)
@@ -206,7 +204,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
         }
     });
     connect(widget.chooseFileManagerButton, &QAbstractButton::clicked, [this]() {
-        if (XdgDesktopFile *app = chooseApp(QStringLiteral("inode/directory")))
+        if (XdgDesktopFile *app = chooseApp(QString(), ApplicationChooser::category::fileManager))
         {
             XdgDesktopFile *defaultFileManager = XdgDefaultApps::fileManager();
             if (!defaultFileManager || !defaultFileManager->isValid() || *defaultFileManager != *app)
@@ -427,24 +425,27 @@ void MimetypeViewer::chooseApplication()
         delete app;
 }
 
-XdgDesktopFile* MimetypeViewer::chooseApp(const QString& type)
+XdgDesktopFile* MimetypeViewer::chooseApp(const QString& type, int cat)
 {
     XdgDesktopFile *app = nullptr;
-    ApplicationChooser applicationChooser(type);
+    ApplicationChooser applicationChooser(type, cat);
     int dialogCode = applicationChooser.exec();
     app = applicationChooser.DefaultApplication();
     if (app)
     {
         if (dialogCode == QDialog::Accepted)
         {
-            XdgMimeApps appsDb;
-            XdgDesktopFile *defaultApp = appsDb.defaultApp(type);
-            if (!defaultApp || !defaultApp->isValid() || *defaultApp != *app)
+            if (cat == ApplicationChooser::category::none)
             {
-                appsDb.setDefaultApp(type, *app);
-                currentMimetypeChanged();
+                XdgMimeApps appsDb;
+                XdgDesktopFile *defaultApp = appsDb.defaultApp(type);
+                if (!defaultApp || !defaultApp->isValid() || *defaultApp != *app)
+                {
+                    appsDb.setDefaultApp(type, *app);
+                    currentMimetypeChanged();
+                }
+                delete defaultApp; // no memory leak
             }
-            delete defaultApp; // no memory leak
         }
         else
         {

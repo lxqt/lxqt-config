@@ -35,6 +35,7 @@
 
 #include "mimetypedata.h"
 #include "ui_mimetypeviewer.h"
+#include "applicationchooser.h"
 
 class QSettings;
 
@@ -55,7 +56,7 @@ private slots:
     void dialogButtonBoxClicked(QAbstractButton *button);
 
 private:
-    XdgDesktopFile* chooseApp(const QString& type);
+    XdgDesktopFile* chooseApp(const QString& type, int cat = ApplicationChooser::category::none);
     void initializeMimetypeTreeView();
     void updateDefaultApplications();
     void addSearchIcon();
