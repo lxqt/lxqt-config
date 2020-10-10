@@ -110,8 +110,10 @@ can be launched from the latter, too.
 
 
 
-### Translation (Weblate)
+###Translations
 
-<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-config/">
-<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-config/multi-auto.svg" alt="Translation status" />
+Translations can be done in [LXQt-Weblate](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-config/)
+
+<a href="https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-config/">
+<img src="https://translate.lxqt-project.org/widgets/lxqt-configuration/-/lxqt-config/multi-auto.svg" alt="Translation status" />
 </a>
