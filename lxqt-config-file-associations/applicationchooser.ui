@@ -148,13 +148,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="alwaysUseCheckBox">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="layoutDirection">
       <enum>Qt::LeftToRight</enum>

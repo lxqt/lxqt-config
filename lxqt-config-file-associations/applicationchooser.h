@@ -36,7 +36,14 @@ class ApplicationChooser : public QDialog
 {
     Q_OBJECT
 public:
-    ApplicationChooser(const QString& type, bool showUseAlwaysCheckBox = false);
+    enum category {
+        none,
+        webBrowser,
+        emailClient,
+        fileManager
+    };
+
+    ApplicationChooser(const QString& type, int cat = category::none);
 
     virtual ~ApplicationChooser();
 
@@ -57,6 +64,7 @@ private:
                                                 QList<XdgDesktopFile*> applications,
                                                 QSet<XdgDesktopFile*> & alreadyAdded);
     QString m_Type;
+    int m_Cat;
     Ui::ApplicationChooser widget;
     XdgDesktopFile* m_CurrentDefaultApplication;
     QSet<XdgDesktopFile*> allApps; // all app pointers that should be deleted in d-tor

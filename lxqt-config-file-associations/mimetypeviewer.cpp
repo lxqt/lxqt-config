@@ -35,6 +35,7 @@
 #include <QFileInfo>
 
 #include <XdgDesktopFile>
+#include <XdgDefaultApps>
 #include <XdgMimeApps>
 #include <XdgDirs>
 
@@ -42,8 +43,6 @@
 
 #include "mimetypeviewer.h"
 #include "ui_mimetypeviewer.h"
-
-#include "applicationchooser.h"
 
 
 enum ItemTypeEntries {
@@ -179,32 +178,43 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     // "Default Applications" tab
     updateDefaultApplications();
     connect(widget.chooseBrowserButton, &QAbstractButton::clicked, [this]() {
-        if (XdgDesktopFile *app = chooseApp(QStringLiteral("x-scheme-handler/http")))
-        { // also asign https and "text/html"
-            XdgMimeApps appsDb;
-            XdgDesktopFile *defaultApp = appsDb.defaultApp(QStringLiteral("x-scheme-handler/https"));
-            bool typeChanged = false;
-            if (!defaultApp || !defaultApp->isValid() || *defaultApp != *app)
+        if (XdgDesktopFile *app = chooseApp(QString(), ApplicationChooser::category::webBrowser))
+        {
+            XdgDesktopFile *defaultBrowser = XdgDefaultApps::webBrowser();
+            if (!defaultBrowser || !defaultBrowser->isValid() || *defaultBrowser != *app)
             {
-                appsDb.setDefaultApp(QStringLiteral("x-scheme-handler/https"), *app);
-                typeChanged = true;
-            }
-            delete defaultApp;
-            defaultApp = appsDb.defaultApp(QStringLiteral("text/html"));
-            if (!defaultApp || !defaultApp->isValid() || *defaultApp != *app)
-            {
-                appsDb.setDefaultApp(QStringLiteral("text/html"), *app);
-                typeChanged = true;
-            }
-            delete defaultApp;
-            if (typeChanged)
+                XdgDefaultApps::setWebBrowser(*app);
                 currentMimetypeChanged();
+            }
+            delete defaultBrowser;
             delete app;
         }
     });
     connect(widget.chooseEmailClientButton, &QAbstractButton::clicked, [this]() {
-        if (XdgDesktopFile *app = chooseApp(QStringLiteral("x-scheme-handler/mailto")))
+        if (XdgDesktopFile *app = chooseApp(QString(), ApplicationChooser::category::emailClient))
+        {
+            XdgDesktopFile *defaultEmailClient = XdgDefaultApps::emailClient();
+            if (!defaultEmailClient || !defaultEmailClient->isValid() || *defaultEmailClient != *app)
+            {
+                XdgDefaultApps::setEmailClient(*app);
+                currentMimetypeChanged();
+            }
+            delete defaultEmailClient;
             delete app;
+        }
+    });
+    connect(widget.chooseFileManagerButton, &QAbstractButton::clicked, [this]() {
+        if (XdgDesktopFile *app = chooseApp(QString(), ApplicationChooser::category::fileManager))
+        {
+            XdgDesktopFile *defaultFileManager = XdgDefaultApps::fileManager();
+            if (!defaultFileManager || !defaultFileManager->isValid() || *defaultFileManager != *app)
+            {
+                XdgDefaultApps::setFileManager(*app);
+                currentMimetypeChanged();
+            }
+            delete defaultFileManager;
+            delete app;
+        }
     });
 }
 
@@ -245,26 +255,12 @@ void MimetypeViewer::updateDefaultApplications()
     widget.browserIcon->hide();
     widget.emailClientIcon->clear();
     widget.emailClientIcon->hide();
+    widget.fileManagerIcon->clear();
+    widget.fileManagerIcon->hide();
 
-    XdgMimeApps appsDb;
-    bool defaultBrowserExists = false;
-    XdgDesktopFile *defaultApp = nullptr;
-
-    // for the default browser, check http and https scheme handlers as well as "text/html"
-    defaultApp = appsDb.defaultApp(QStringLiteral("x-scheme-handler/http"));
+    // the default browser
+    XdgDesktopFile *defaultApp = XdgDefaultApps::webBrowser();
     if (defaultApp && defaultApp->isValid())
-    {
-        XdgDesktopFile *df = appsDb.defaultApp(QStringLiteral("x-scheme-handler/https"));
-        if (df && df->isValid() && *defaultApp == *df)
-        {
-            delete df;
-            df = appsDb.defaultApp(QStringLiteral("text/html"));
-            if (df && df->isValid() && *defaultApp == *df)
-                defaultBrowserExists = true;
-        }
-        delete df;
-    }
-    if (defaultBrowserExists)
     {
         QString nonLocalizedName = defaultApp->value(QStringLiteral("Name")).toString();
         QString localizedName = defaultApp->localizedValue(QStringLiteral("Name"), nonLocalizedName).toString();
@@ -272,17 +268,17 @@ void MimetypeViewer::updateDefaultApplications()
         widget.browserIcon->setPixmap(appIcon.pixmap(widget.browserIcon->size()));
         widget.browserIcon->show();
         widget.browserLabel->setText(localizedName);
-        widget.chooseBrowserButton->setText(tr("&Change..."));
+        widget.chooseBrowserButton->setText(tr("Change..."));
     }
     else
     {
         widget.browserLabel->setText(tr("None"));
-        widget.chooseBrowserButton->setText(tr("&Choose..."));
+        widget.chooseBrowserButton->setText(tr("Choose..."));
     }
     delete defaultApp;
 
     // the default email client
-    defaultApp = appsDb.defaultApp(QStringLiteral("x-scheme-handler/mailto"));
+    defaultApp = XdgDefaultApps::emailClient();
     if (defaultApp && defaultApp->isValid())
     {
         QString nonLocalizedName = defaultApp->value(QStringLiteral("Name")).toString();
@@ -291,12 +287,31 @@ void MimetypeViewer::updateDefaultApplications()
         widget.emailClientIcon->setPixmap(appIcon.pixmap(widget.emailClientIcon->size()));
         widget.emailClientIcon->show();
         widget.emailClientLabel->setText(localizedName);
-        widget.chooseEmailClientButton->setText(tr("&Change..."));
+        widget.chooseEmailClientButton->setText(tr("Change..."));
     }
     else
     {
         widget.emailClientLabel->setText(tr("None"));
-        widget.chooseEmailClientButton->setText(tr("&Choose..."));
+        widget.chooseEmailClientButton->setText(tr("Choose..."));
+    }
+    delete defaultApp;
+
+    // the default file manager
+    defaultApp = XdgDefaultApps::fileManager();
+    if (defaultApp && defaultApp->isValid())
+    {
+        QString nonLocalizedName = defaultApp->value(QStringLiteral("Name")).toString();
+        QString localizedName = defaultApp->localizedValue(QStringLiteral("Name"), nonLocalizedName).toString();
+        QIcon appIcon = defaultApp->icon();
+        widget.fileManagerIcon->setPixmap(appIcon.pixmap(widget.fileManagerIcon->size()));
+        widget.fileManagerIcon->show();
+        widget.fileManagerLabel->setText(localizedName);
+        widget.chooseFileManagerButton->setText(tr("Change..."));
+    }
+    else
+    {
+        widget.fileManagerLabel->setText(tr("None"));
+        widget.chooseFileManagerButton->setText(tr("Choose..."));
     }
     delete defaultApp;
 }
@@ -410,29 +425,27 @@ void MimetypeViewer::chooseApplication()
         delete app;
 }
 
-XdgDesktopFile* MimetypeViewer::chooseApp(const QString& type)
+XdgDesktopFile* MimetypeViewer::chooseApp(const QString& type, int cat)
 {
     XdgDesktopFile *app = nullptr;
-    ApplicationChooser applicationChooser(type);
+    ApplicationChooser applicationChooser(type, cat);
     int dialogCode = applicationChooser.exec();
     app = applicationChooser.DefaultApplication();
     if (app)
     {
         if (dialogCode == QDialog::Accepted)
         {
-            XdgMimeApps appsDb;
-            XdgDesktopFile *defaultApp = appsDb.defaultApp(type);
-            if (!defaultApp || !defaultApp->isValid() || *defaultApp != *app)
+            if (cat == ApplicationChooser::category::none)
             {
-                appsDb.setDefaultApp(type, *app);
-                currentMimetypeChanged();
+                XdgMimeApps appsDb;
+                XdgDesktopFile *defaultApp = appsDb.defaultApp(type);
+                if (!defaultApp || !defaultApp->isValid() || *defaultApp != *app)
+                {
+                    appsDb.setDefaultApp(type, *app);
+                    currentMimetypeChanged();
+                }
+                delete defaultApp; // no memory leak
             }
-            else
-            {
-                delete app; // no memory leak
-                app = nullptr;
-            }
-            delete defaultApp; // no memory leak
         }
         else
         {

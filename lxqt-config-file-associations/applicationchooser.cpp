@@ -33,6 +33,7 @@
 
 #include <XdgDesktopFile>
 #include <XdgMimeApps>
+#include <XdgDefaultApps>
 
 #include <algorithm>
 
@@ -40,10 +41,29 @@
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)
 
-ApplicationChooser::ApplicationChooser(const QString& type, bool showUseAlwaysCheckBox)
+ApplicationChooser::ApplicationChooser(const QString& type, int cat)
 {
     widget.setupUi(this);
-    m_Type = type;
+
+    m_Cat = cat;
+    switch (cat)
+    {
+        case category::webBrowser :
+            m_Type = QStringLiteral("x-scheme-handler/http");
+            break;
+        case category::emailClient :
+            m_Type = QStringLiteral("x-scheme-handler/mailto");
+            break;
+        case category::fileManager :
+            m_Type = QStringLiteral("inode/directory");
+            break;
+        default :
+            m_Cat = category::none;
+            break;
+    }
+
+    if (m_Type.isEmpty())
+        m_Type = type;
 
     XdgMimeApps appsDb;
     m_CurrentDefaultApplication = appsDb.defaultApp(m_Type);
@@ -60,7 +80,6 @@ ApplicationChooser::ApplicationChooser(const QString& type, bool showUseAlwaysCh
         widget.mimetypeLabel->hide();
     }
 
-    widget.alwaysUseCheckBox->setVisible(showUseAlwaysCheckBox);
     widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 }
 
@@ -112,14 +131,52 @@ void ApplicationChooser::fillApplicationListWidget()
 {
     widget.applicationTreeWidget->clear();
 
-
-    QSet<XdgDesktopFile*> addedApps;
-    XdgMimeApps appsDb;
-    QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = appsDb.apps(m_Type);
-
     // Adding all apps takes some time. Make the user aware by setting the
     // cursor to Wait.
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+
+    QSet<XdgDesktopFile*> addedApps;
+    XdgMimeApps appsDb;
+
+    if (m_Cat != category::none)
+    {
+        QList<XdgDesktopFile*> applications;
+        QString heading;
+        if (m_Cat == category::webBrowser)
+        {
+            heading = tr("Web browsers");
+            applications = XdgDefaultApps::webBrowsers();
+        }
+        else if (m_Cat == category::emailClient)
+        {
+            heading = tr("Email clients");
+            applications = XdgDefaultApps::emailClients();
+        }
+        else// if (m_Cat == category::fileManager)
+        {
+            heading = tr("File managers");
+            applications = XdgDefaultApps::fileManagers();
+        }
+        std::sort(applications.begin(), applications.end(), lessThan);
+        if (!applications.isEmpty())
+            widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+        QTreeWidgetItem* headingItem = new QTreeWidgetItem(widget.applicationTreeWidget);
+        headingItem->setExpanded(true);
+        headingItem->setFlags(Qt::ItemIsEnabled);
+        headingItem->setText(0, heading);
+        headingItem->setSizeHint(0, QSize(0, 25));
+        addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
+    }
+    else
+    {
+        QList<XdgDesktopFile*> applicationsThatHandleThisMimetype = appsDb.apps(m_Type);
+        if (!applicationsThatHandleThisMimetype.isEmpty())
+        {
+            widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+            qDeleteAll(applicationsThatHandleThisMimetype);
+            applicationsThatHandleThisMimetype.clear();
+        }
+    }
 
     QMimeDatabase db;
     XdgMimeType mimeInfo(db.mimeTypeForName(m_Type));
@@ -132,6 +189,8 @@ void ApplicationChooser::fillApplicationListWidget()
             QMimeType mt = db.mimeTypeForName(mts);
             QString heading = mt.name() == QLatin1String("application/octet-stream") ?
                 tr("Other applications") :
+                m_Cat != category::none ?
+                tr("Other applications that handle %1").arg(mt.comment()) :
                 tr("Applications that handle %1").arg(mt.comment());
 
             QList<XdgDesktopFile*> applications = mt.name() == QLatin1String("application/octet-stream") ?
@@ -156,6 +215,8 @@ void ApplicationChooser::fillApplicationListWidget()
         for(const QString& type : qAsConst(types)) {
             QString heading = type.isEmpty() ?
                 tr("Other applications") :
+                m_Cat != category::none ?
+                tr("Other applications that handle %1").arg(type) :
                 tr("Applications that handle %1").arg(type);
             QList<XdgDesktopFile*> applications = type.isEmpty() ?
                 appsDb.allApps() :
@@ -172,15 +233,10 @@ void ApplicationChooser::fillApplicationListWidget()
             addApplicationsToApplicationListWidget(headingItem, applications, addedApps);
         }
     }
+
     connect(widget.applicationTreeWidget, &QTreeWidget::currentItemChanged,
             this, &ApplicationChooser::selectionChanged);
     widget.applicationTreeWidget->setFocus();
-
-    if (!applicationsThatHandleThisMimetype.isEmpty()) {
-        widget.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
-        qDeleteAll(applicationsThatHandleThisMimetype);
-        applicationsThatHandleThisMimetype.clear();
-    }
 
     // delay icon update for faster loading
     QTimer::singleShot(0, this, &ApplicationChooser::updateAllIcons);
