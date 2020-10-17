@@ -2,14 +2,27 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="nb_NO">
 <context>
+    <name>ColorLabel</name>
+    <message>
+        <location filename="../colorLabel.cpp" line="37"/>
+        <source>Click to change color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../colorLabel.cpp" line="61"/>
+        <source>Select Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="147"/>
+        <location filename="../configothertoolkits.cpp" line="148"/>
         <source>GTK themes</source>
         <translation>GTK temaer</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="148"/>
+        <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; har blitt overskrevet.&lt;/p&gt;&lt;p&gt;Du kan finne en kopi av dine gamle innstillinger i &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
@@ -210,27 +223,82 @@
 <context>
     <name>StyleConfig</name>
     <message>
-        <location filename="../styleconfig.ui" line="23"/>
+        <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
         <translation>Widgetstil</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="42"/>
+        <location filename="../styleconfig.ui" line="63"/>
+        <source>Qt Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="77"/>
+        <source>Some Qt styles may ignore these colors.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="102"/>
+        <source>Window:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="112"/>
+        <source>View:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="122"/>
+        <source>Selection:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="132"/>
+        <source>Link:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="152"/>
+        <source>Window Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="162"/>
+        <source>View Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="172"/>
+        <source>Selected Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="182"/>
+        <source>Visited Link:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="227"/>
+        <source>&amp;Default Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="254"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>Velg GTK tema (GTK-innstillingsfiler blir overskrevet!)</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="62"/>
+        <location filename="../styleconfig.ui" line="274"/>
         <source>GTK 3 Theme</source>
         <translation>GTK 3-tema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="72"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>GTK 2 Theme</source>
         <translation>GTK 2-tema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="82"/>
+        <location filename="../styleconfig.ui" line="294"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
@@ -239,42 +307,42 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
 Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å bruke temaer med en gang.</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="99"/>
+        <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
         <translation>Knappstil for verktøylinje:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="107"/>
+        <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
         <translation>Bare vis symbolet</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="112"/>
+        <location filename="../styleconfig.ui" line="324"/>
         <source>Only display the text</source>
         <translation>Bare vis teksten</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="117"/>
+        <location filename="../styleconfig.ui" line="329"/>
         <source>The text appears beside the icon</source>
         <translation>Tekst vises ved siden av symbolet</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="122"/>
+        <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
         <translation>Tekst vises under symbolet</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="127"/>
+        <location filename="../styleconfig.ui" line="339"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="135"/>
+        <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
         <translation>Aktiver ved enkeltklikk</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="145"/>
+        <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
         <translation>Qt-stil</translation>
     </message>
