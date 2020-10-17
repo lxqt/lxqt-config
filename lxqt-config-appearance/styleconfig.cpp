@@ -61,7 +61,29 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::
     connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
+
     connect(ui->winColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->baseColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->highlightColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->windowTextColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->viewTextColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->highlightedTextColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->linkColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+    connect(ui->linkVisitedColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
+
+    connect(ui->defaultPaletteBtn, &QAbstractButton::clicked, [this] {
+        QColor winColor(239, 239, 239);
+        QPalette defaultPalette(winColor);
+        ui->winColorLabel->setColor(winColor, true);
+        ui->baseColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Base), true);
+        // Qt's default highlight color may be different from that of Fusion
+        ui->highlightColorLabel->setColor(QColor(60, 140, 230), true);
+        ui->windowTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::WindowText), true);
+        ui->viewTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Text), true);
+        ui->highlightedTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::HighlightedText), true);
+        ui->linkColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Link), true);
+        ui->linkVisitedColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::LinkVisited), true);
+    });
 }
 
 
@@ -109,15 +131,54 @@ void StyleConfig::initControls()
     ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("2.0")));
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
 
-    mSettings->beginGroup(QLatin1String("Qt"));
     // Qt style
+    mSettings->beginGroup(QLatin1String("Qt"));
     ui->qtComboBox->setCurrentText(mSettings->value(QStringLiteral("style")).toString());
-    // Qt window color
+    mSettings->endGroup();
+
+    // palette
+    mSettings->beginGroup(QLatin1String("Palette"));
     QColor color;
     color.setNamedColor(mSettings->value(QStringLiteral("window_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
     ui->winColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("base_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Base);
+    ui->baseColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("highlight_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Highlight);
+    ui->highlightColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("window_text_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::WindowText);
+    ui->windowTextColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("text_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Text);
+    ui->viewTextColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::HighlightedText);
+    ui->highlightedTextColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("link_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Link);
+    ui->linkColorLabel->setColor(color);
+
+    color.setNamedColor(mSettings->value(QStringLiteral("link_visited_color")).toString());
+    if (!color.isValid())
+        color = QGuiApplication::palette().color(QPalette::Active,QPalette::LinkVisited);
+    ui->linkVisitedColorLabel->setColor(color);
+
     mSettings->endGroup();
 
     update();
@@ -130,12 +191,51 @@ void StyleConfig::applyStyle()
     mQtSettings->beginGroup(QLatin1String("Qt"));
     if(mQtSettings->value(QStringLiteral("style")).toString() != themeName)
         mQtSettings->setValue(QStringLiteral("style"), themeName);
-    // Qt window color
-    QColor winColor = ui->winColorLabel->getColor();
-    QColor oldWinColor;
-    oldWinColor.setNamedColor(mQtSettings->value(QStringLiteral("window_color")).toString());
-    if (winColor != oldWinColor)
-        mQtSettings->setValue(QStringLiteral("window_color"), winColor.name());
+    mQtSettings->endGroup();
+
+    // palette
+    mSettings->beginGroup(QLatin1String("Palette"));
+    QColor color = ui->winColorLabel->getColor();
+    QColor oldColor;
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("window_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("window_color"), color.name());
+
+    color = ui->baseColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("base_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("base_color"), color.name());
+
+    color = ui->highlightColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("highlight_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("highlight_color"), color.name());
+
+    color = ui->windowTextColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("window_text_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("window_text_color"), color.name());
+
+    color = ui->viewTextColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("text_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("text_color"), color.name());
+
+    color = ui->highlightedTextColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("highlighted_text_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("highlighted_text_color"), color.name());
+
+    color = ui->linkColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("link_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("link_color"), color.name());
+
+    color = ui->linkVisitedColorLabel->getColor();
+    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("link_visited_color")).toString());
+    if (color != oldColor)
+        mQtSettings->setValue(QStringLiteral("link_visited_color"), color.name());
+
     mQtSettings->endGroup();
 
     // single click setting

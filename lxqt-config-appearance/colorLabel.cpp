@@ -40,12 +40,15 @@ ColorLabel::ColorLabel(QWidget* parent, Qt::WindowFlags f)
 
 ColorLabel::~ColorLabel() {}
 
-void ColorLabel::setColor(const QColor& color)
+void ColorLabel::setColor(const QColor& color, bool announceChange)
 {
-    if (!color.isValid())
+    if (!color.isValid() || color == color_)
         return;
     color_ = color;
     color_.setAlpha(255); // ignore translucency
+    update();
+    if (announceChange)
+        emit colorChanged();
 }
 
 QColor ColorLabel::getColor() const
@@ -55,13 +58,8 @@ QColor ColorLabel::getColor() const
 
 void ColorLabel::mousePressEvent(QMouseEvent* /*event*/)
 {
-    QColor prevColor = getColor();
-    QColor color = QColorDialog::getColor(prevColor, window(), tr("Select Color"));
-    if (color.isValid() && color != prevColor)
-    {
-        emit colorChanged();
-        setColor(color);
-    }
+    QColor color = QColorDialog::getColor(color_, window(), tr("Select Color"));
+    setColor(color, true);
 }
 
 void ColorLabel::paintEvent (QPaintEvent* /*event*/)
