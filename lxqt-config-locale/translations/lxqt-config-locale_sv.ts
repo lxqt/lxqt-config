@@ -64,32 +64,32 @@
         <translation>Måttenheter:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="125"/>
+        <location filename="../localeconfig.cpp" line="127"/>
         <source>No change</source>
         <translation>Ingen ändring</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
         <translation>Formatinställningar har ändrats</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="315"/>
+        <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>Vill du spara dina ändringar? De träder i kraft nästa gång du loggar in.</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="436"/>
+        <location filename="../localeconfig.cpp" line="438"/>
         <source>Imperial UK</source>
         <translation>Brittiska måttenheter</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="440"/>
+        <location filename="../localeconfig.cpp" line="442"/>
         <source>Imperial US</source>
         <translation>Amerikanska måttenheter</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="444"/>
+        <location filename="../localeconfig.cpp" line="446"/>
         <source>Metric</source>
         <translation>Metersystem</translation>
     </message>

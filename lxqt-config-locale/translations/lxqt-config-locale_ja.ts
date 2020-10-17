@@ -64,33 +64,33 @@
         <translation>単位:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="125"/>
+        <location filename="../localeconfig.cpp" line="127"/>
         <source>No change</source>
         <translation>変更なし</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
         <translation>書式設定が変更されました</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="315"/>
+        <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>変更は次回のログイン時から有効になります。
 変更を保存しますか？</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="436"/>
+        <location filename="../localeconfig.cpp" line="438"/>
         <source>Imperial UK</source>
         <translation>ヤード・ポンド法(UK)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="440"/>
+        <location filename="../localeconfig.cpp" line="442"/>
         <source>Imperial US</source>
         <translation>ヤード・ポンド法(US)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="444"/>
+        <location filename="../localeconfig.cpp" line="446"/>
         <source>Metric</source>
         <translation>メートル法</translation>
     </message>

@@ -30,6 +30,14 @@
     </message>
 </context>
 <context>
+    <name>LoadSettings</name>
+    <message>
+        <location filename="../loadsettings.cpp" line="97"/>
+        <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ManageSavedSettings</name>
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
@@ -57,44 +65,44 @@
         <translation>החלה</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="64"/>
+        <location filename="../managesavedsettings.cpp" line="62"/>
         <source>None</source>
         <translation>ללא</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="67"/>
+        <location filename="../managesavedsettings.cpp" line="65"/>
         <source>Left</source>
         <translation>שמאל</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="70"/>
+        <location filename="../managesavedsettings.cpp" line="68"/>
         <source>Inverted</source>
         <translation>הפוך</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="73"/>
+        <location filename="../managesavedsettings.cpp" line="71"/>
         <source>Right</source>
         <translation>ימין</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="77"/>
-        <location filename="../managesavedsettings.cpp" line="78"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>True</source>
         <translation>אמת</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="77"/>
-        <location filename="../managesavedsettings.cpp" line="78"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>False</source>
         <translation>שקר</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="140"/>
+        <location filename="../managesavedsettings.cpp" line="136"/>
         <source>Name</source>
         <translation>שם</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="140"/>
+        <location filename="../managesavedsettings.cpp" line="136"/>
         <source>Name:</source>
         <translation>שם:</translation>
     </message>
@@ -120,17 +128,17 @@
         <translation>הגדרות</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="111"/>
+        <location filename="../monitorsettingsdialog.cpp" line="105"/>
         <source>Fast Menu</source>
         <translation>תפריט מהיר</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="115"/>
+        <location filename="../monitorsettingsdialog.cpp" line="109"/>
         <source>Set position</source>
         <translation>הגדרת מיקום</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="247"/>
+        <location filename="../monitorsettingsdialog.cpp" line="228"/>
         <source>Advanced settings</source>
         <translation>הגדרות מתקדמות</translation>
     </message>
@@ -198,69 +206,69 @@
         <translation>פרטי התצוגה</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="135"/>
+        <location filename="../monitorwidget.cpp" line="128"/>
         <source>Name: %1
 </source>
         <translation>שם: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="136"/>
+        <location filename="../monitorwidget.cpp" line="129"/>
         <source>Vendor: %1
 </source>
         <translation>יצרן: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="137"/>
+        <location filename="../monitorwidget.cpp" line="130"/>
         <source>Serial: %1
 </source>
         <translation>מס׳ סידורי: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="138"/>
+        <location filename="../monitorwidget.cpp" line="131"/>
         <source>Display size: %1cm x %2cm
 </source>
         <translation>גודל תצוגה: %1 ס״מ × %2 ס״מ
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="139"/>
+        <location filename="../monitorwidget.cpp" line="132"/>
         <source>Serial number: %1
 </source>
         <translation>מספר סידורי: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="140"/>
+        <location filename="../monitorwidget.cpp" line="133"/>
         <source>EISA device ID: %1
 </source>
         <translation>מזהה התקן EISA:‏ %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="161"/>
+        <location filename="../monitorwidget.cpp" line="153"/>
         <source>None</source>
         <translation>אין</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="162"/>
+        <location filename="../monitorwidget.cpp" line="154"/>
         <source>Left</source>
         <translation>שמאל</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="163"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>Right</source>
         <translation>ימין</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="164"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Inverted</source>
         <translation>הפוך</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="255"/>
+        <location filename="../monitorwidget.cpp" line="244"/>
         <source>%1 Hz</source>
         <translation>%1 הרץ</translation>
     </message>
@@ -276,12 +284,12 @@
 <context>
     <name>SaveSettings</name>
     <message>
-        <location filename="../savesettings.cpp" line="82"/>
+        <location filename="../savesettings.cpp" line="87"/>
         <source>Name</source>
         <translation>שם</translation>
     </message>
     <message>
-        <location filename="../savesettings.cpp" line="82"/>
+        <location filename="../savesettings.cpp" line="87"/>
         <source>Name:</source>
         <translation>שם:</translation>
     </message>
@@ -299,7 +307,7 @@
         <translation>ההגדרות הנוכחיות מתאימות לך?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../timeoutdialog.cpp" line="65"/>
+        <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
             <numerusform>נותרה שנייה אחת</numerusform>

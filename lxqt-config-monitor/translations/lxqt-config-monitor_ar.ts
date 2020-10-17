@@ -30,6 +30,14 @@
     </message>
 </context>
 <context>
+    <name>LoadSettings</name>
+    <message>
+        <location filename="../loadsettings.cpp" line="97"/>
+        <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ManageSavedSettings</name>
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
@@ -57,46 +65,46 @@
         <translation>طبّق</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="64"/>
+        <location filename="../managesavedsettings.cpp" line="62"/>
         <source>None</source>
         <translation>بلا</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="67"/>
+        <location filename="../managesavedsettings.cpp" line="65"/>
         <source>Left</source>
         <translation>لليسار</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="70"/>
+        <location filename="../managesavedsettings.cpp" line="68"/>
         <source>Inverted</source>
         <translation>معكوس</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="73"/>
+        <location filename="../managesavedsettings.cpp" line="71"/>
         <source>Right</source>
         <translation>لليمين</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="77"/>
-        <location filename="../managesavedsettings.cpp" line="78"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>True</source>
         <translatorcomment>جواب &quot;Primary؟&quot; و&quot;Enabled؟&quot;</translatorcomment>
         <translation>نعم</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="77"/>
-        <location filename="../managesavedsettings.cpp" line="78"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>False</source>
         <translatorcomment>جواب &quot;Primary؟&quot; و&quot;Enabled؟&quot;</translatorcomment>
         <translation>لا</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="140"/>
+        <location filename="../managesavedsettings.cpp" line="136"/>
         <source>Name</source>
         <translation>الاسم</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="140"/>
+        <location filename="../managesavedsettings.cpp" line="136"/>
         <source>Name:</source>
         <translation>الاسم:</translation>
     </message>
@@ -122,17 +130,17 @@
         <translation>الإعدادات</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="111"/>
+        <location filename="../monitorsettingsdialog.cpp" line="105"/>
         <source>Fast Menu</source>
         <translation>القائمة السريعة</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="115"/>
+        <location filename="../monitorsettingsdialog.cpp" line="109"/>
         <source>Set position</source>
         <translation>ضبط المكان</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="247"/>
+        <location filename="../monitorsettingsdialog.cpp" line="228"/>
         <source>Advanced settings</source>
         <translation>الإعدادات المتقدمة</translation>
     </message>
@@ -200,69 +208,69 @@
         <translation>معلومات العرض</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="135"/>
+        <location filename="../monitorwidget.cpp" line="128"/>
         <source>Name: %1
 </source>
         <translation>الاسم: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="136"/>
+        <location filename="../monitorwidget.cpp" line="129"/>
         <source>Vendor: %1
 </source>
         <translation>البائع: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="137"/>
+        <location filename="../monitorwidget.cpp" line="130"/>
         <source>Serial: %1
 </source>
         <translation>التسلسلي: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="138"/>
+        <location filename="../monitorwidget.cpp" line="131"/>
         <source>Display size: %1cm x %2cm
 </source>
         <translation>مقاس العرض: %1سم × %2سم
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="139"/>
+        <location filename="../monitorwidget.cpp" line="132"/>
         <source>Serial number: %1
 </source>
         <translation>الرقم التسلسلي: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="140"/>
+        <location filename="../monitorwidget.cpp" line="133"/>
         <source>EISA device ID: %1
 </source>
         <translation>معرّف EISA للجهاز: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="161"/>
+        <location filename="../monitorwidget.cpp" line="153"/>
         <source>None</source>
         <translation>بلا</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="162"/>
+        <location filename="../monitorwidget.cpp" line="154"/>
         <source>Left</source>
         <translation>لليسار</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="163"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>Right</source>
         <translation>لليمين</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="164"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Inverted</source>
         <translation>معكوس</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="255"/>
+        <location filename="../monitorwidget.cpp" line="244"/>
         <source>%1 Hz</source>
         <translation>%1 هرتز</translation>
     </message>
@@ -278,12 +286,12 @@
 <context>
     <name>SaveSettings</name>
     <message>
-        <location filename="../savesettings.cpp" line="82"/>
+        <location filename="../savesettings.cpp" line="87"/>
         <source>Name</source>
         <translation>الاسم</translation>
     </message>
     <message>
-        <location filename="../savesettings.cpp" line="82"/>
+        <location filename="../savesettings.cpp" line="87"/>
         <source>Name:</source>
         <translation>الاسم:</translation>
     </message>
@@ -301,7 +309,7 @@
         <translation>أتناسبك الإعدادات الحالية هذه؟</translation>
     </message>
     <message numerus="yes">
-        <location filename="../timeoutdialog.cpp" line="65"/>
+        <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
             <numerusform>بقي أقل من دقيقة</numerusform>

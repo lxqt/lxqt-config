@@ -144,67 +144,26 @@
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
-        <source>Motion</source>
-        <translation>תנועה</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="36"/>
-        <source>High</source>
-        <translation>מהירה</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="43"/>
-        <source>Fast</source>
-        <translation>אטית</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="50"/>
-        <source>Sensitivity:</source>
-        <translation>רגישות:</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="57"/>
-        <source>Low</source>
-        <translation>נמוכה</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="83"/>
-        <source>Acceleration:</source>
-        <translation>תאוצה:</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="109"/>
-        <source>Slow</source>
-        <translation>אטית</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="116"/>
-        <location filename="../mouseconfig.ui" line="123"/>
-        <source>0</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
         <translation>הפרש בלחיצות כפולות:</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="140"/>
+        <location filename="../mouseconfig.ui" line="37"/>
         <source> ms</source>
         <translation> מ״ש</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="150"/>
+        <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
         <translation>שורות לגלילה עם גלגלת:</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="160"/>
+        <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
         <translation>יד שמאלית (להחליף בין הכפתור השמאלי לימני)</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="167"/>
+        <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
         <translation>לחיצה בודדת להפעלת פריטים</translation>
     </message>
@@ -316,6 +275,21 @@
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
         <translation>כ&amp;פתור</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="145"/>
+        <source>DeviceInfoLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.cpp" line="85"/>
+        <source>LXQt only supports &quot;libinput&quot; as xinput driver.
+(current value: %1)
+
+If this is intended, please configure xinput manually.
+Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

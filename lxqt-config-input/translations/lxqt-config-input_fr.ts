@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Délai de répétition :</translation>
+        <translation>Délai de répétition&#xa0;:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation>Modèle de clavier :</translation>
+        <translation>Modèle de clavier&#xa0;:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
@@ -145,67 +145,26 @@
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
-        <source>Motion</source>
-        <translation>Mouvement</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="36"/>
-        <source>High</source>
-        <translation>Fort</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="43"/>
-        <source>Fast</source>
-        <translation>Rapide</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="50"/>
-        <source>Sensitivity:</source>
-        <translation>Sensibilité :</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="57"/>
-        <source>Low</source>
-        <translation>Faible</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="83"/>
-        <source>Acceleration:</source>
-        <translation>Accélération :</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="109"/>
-        <source>Slow</source>
-        <translation>Lente</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="116"/>
-        <location filename="../mouseconfig.ui" line="123"/>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
         <translation>Intervalle d&apos;un double-clic :</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="140"/>
+        <location filename="../mouseconfig.ui" line="37"/>
         <source> ms</source>
         <translation> ms</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="150"/>
+        <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
         <translation>Vitesse de défilement de la molette (lignes) :</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="160"/>
+        <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
         <translation>Gaucher (inverse les boutons droit et gauche de la souris)</translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="167"/>
+        <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
         <translation>Clic simple pour activer des éléments</translation>
     </message>
@@ -317,6 +276,21 @@
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
         <translation>Bo&amp;uton</translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="145"/>
+        <source>DeviceInfoLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.cpp" line="85"/>
+        <source>LXQt only supports &quot;libinput&quot; as xinput driver.
+(current value: %1)
+
+If this is intended, please configure xinput manually.
+Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

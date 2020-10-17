@@ -144,67 +144,26 @@
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
-        <source>Motion</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="36"/>
-        <source>High</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="43"/>
-        <source>Fast</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="50"/>
-        <source>Sensitivity:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="57"/>
-        <source>Low</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="83"/>
-        <source>Acceleration:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="109"/>
-        <source>Slow</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="116"/>
-        <location filename="../mouseconfig.ui" line="123"/>
-        <source>0</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mouseconfig.ui" line="133"/>
         <source>Double click interval:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="140"/>
+        <location filename="../mouseconfig.ui" line="37"/>
         <source> ms</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="150"/>
+        <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="160"/>
+        <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mouseconfig.ui" line="167"/>
+        <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
         <translation></translation>
     </message>
@@ -315,6 +274,21 @@
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="145"/>
+        <source>DeviceInfoLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.cpp" line="85"/>
+        <source>LXQt only supports &quot;libinput&quot; as xinput driver.
+(current value: %1)
+
+If this is intended, please configure xinput manually.
+Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
+</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -64,32 +64,32 @@
         <translation>Система мер:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="125"/>
+        <location filename="../localeconfig.cpp" line="127"/>
         <source>No change</source>
         <translation>Без изменений</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
         <translation>Настройки формата изменены</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="315"/>
+        <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>Вы хотите сохранить изменения? Они будут применены при следующем входе в систему.</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="436"/>
+        <location filename="../localeconfig.cpp" line="438"/>
         <source>Imperial UK</source>
         <translation>Имперская (Великобритания)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="440"/>
+        <location filename="../localeconfig.cpp" line="442"/>
         <source>Imperial US</source>
         <translation>Имперская (США)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="444"/>
+        <location filename="../localeconfig.cpp" line="446"/>
         <source>Metric</source>
         <translation>Метрическая</translation>
     </message>
