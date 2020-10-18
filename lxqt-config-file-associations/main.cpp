@@ -57,9 +57,13 @@ int main (int argc, char **argv)
     MimetypeViewer mimetypeViewer;
     app.setActivationWindow(&mimetypeViewer);
     mimetypeViewer.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-filetype-association")));
+    QSettings settings(QStringLiteral("lxqt"), QStringLiteral("lxqt-config-file-associations"));
+    mimetypeViewer.resize(settings.value(QStringLiteral("size")).toSize().expandedTo(QSize(600, 400)));
     mimetypeViewer.show();
 
-    return app.exec();
-    qDebug() << "Efter exec";
+    int ret = app.exec();
+    //qDebug() << "Efter exec";
+    settings.setValue(QStringLiteral("size"), mimetypeViewer.size());
+    return ret;
 }
 

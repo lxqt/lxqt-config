@@ -126,8 +126,11 @@ int main (int argc, char **argv)
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-theme")));
+    dialog->resize(mConfigAppearanceSettings.value(QStringLiteral("size")).toSize().expandedTo(QSize(600, 400)));
     dialog->show();
 
-    return app.exec();
+    int ret = app.exec();
+    mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
+    return ret;
 }
 
