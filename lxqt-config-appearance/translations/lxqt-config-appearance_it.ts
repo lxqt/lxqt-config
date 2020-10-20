@@ -246,7 +246,7 @@
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Vista:</translation>
+        <translation type="unfinished">Riquadro:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
@@ -266,7 +266,7 @@
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished">Testo visto:</translation>
+        <translation type="unfinished">Riquadro testo:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished">&amp;Default Palette</translation>
+        <translation>&amp;Ripristina</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
