@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished">Cambia...</translation>
+        <translation>Cambia...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>

@@ -88,17 +88,17 @@
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetiraj gamut na standardnu vrijednost.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Nije moguće koristiti povećavanje/smanjivanje i postavljanje zajedno</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Nije moguće koristiti opcije povećavanja i smanjivanja zajedno</translation>
     </message>
 </context>
 </TS>

@@ -41,23 +41,23 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>İnternet tarayıcıları</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation type="unfinished"></translation>
+        <translation>E-posta istemcileri</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya yöneticileri</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 işleyen diğer uygulamalar</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Başka uygulama bulunamadı</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştir...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,7 +99,7 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seç...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>İlişkiler</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
@@ -137,29 +137,29 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Varsayılan Uygulamalar</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>İnternet Tarayıcı</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
         <location filename="../mimetypeviewer.ui" line="487"/>
         <location filename="../mimetypeviewer.ui" line="562"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seç...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
         <source>Email Client</source>
-        <translation type="unfinished"></translation>
+        <translation>E-posta İstemcisi</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>
         <source>File Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Yöneticisi</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
