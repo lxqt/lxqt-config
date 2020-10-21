@@ -36,7 +36,7 @@ class ConfigOtherToolKits : public QObject
     Q_OBJECT
 
 public:
-    ConfigOtherToolKits(LXQt::Settings *settings, LXQt::Settings *configAppearanceSettings, QObject *parent = 0);
+    ConfigOtherToolKits(LXQt::Settings *settings, LXQt::Settings *configAppearanceSettings, QObject *parent = nullptr);
     ~ConfigOtherToolKits();
     QStringList getGTKThemes(QString version);
     QString getGTKThemeFromRCFile(QString version);

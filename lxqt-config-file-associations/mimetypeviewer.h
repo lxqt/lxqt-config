@@ -46,7 +46,7 @@ class SettingsCache;
 class MimetypeViewer : public QDialog {
     Q_OBJECT
 public:
-    MimetypeViewer(QWidget *parent = 0);
+    MimetypeViewer(QWidget *parent = nullptr);
     virtual ~MimetypeViewer();
 
 private slots:

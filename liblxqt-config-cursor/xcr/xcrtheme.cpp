@@ -51,87 +51,87 @@ static const char *nameTransTbl[] = {
   "Arrow",
   "left_ptr", "X_cursor", "right_ptr", "top_left_arrow", "move",
    "4498f0e0c1937ffe01fd06f973665830",
-  0,
+  nullptr,
   //
   "\x04", // precision select
   "Cross",
   "tcross", "cross", "crosshair", "cross_reverse",
    "draped_box",
-  0,
+  nullptr,
   //
   "\x12", // hand
   "Hand",
   "hand", "hand1", "hand2", "9d800788f1b08800ae810202380a0822",
    "e29285e634086352946a0e7090d73106",
-  0,
+  nullptr,
   //
   "\x05", // text select
   "IBeam",
    "xterm",
-  0,
+  nullptr,
   //
   "\x11", // alternate select
   "UpArrow",
    "center_ptr",
-  0,
+  nullptr,
   //
   "\x0c",
   "SizeNWSE", // north-west resize
   "bottom_right_corner", "top_left_corner", "bd_double_arrow", "lr_angle",
    "c7088f0f3e6c8088236ef8e1e3e70000",
-  0,
+  nullptr,
   //
   "\x0e", // north-east resize
   "SizeNESW",
   "bottom_left_corner", "top_right_corner", "fd_double_arrow", "ll_angle",
    "fcf1c3c7cd4491d801f1e1c78f100000",
-  0,
+  nullptr,
   //
   "\x0a", // west resize
   "SizeWE",
   "sb_h_double_arrow", "left_side", "right_side", "h_double_arrow", "028006030e0e7ebffc7f7070c0600140",
    "14fef782d02440884392942c11205230",
-  0,
+  nullptr,
   //
   "\x08", // north resize
   "SizeNS",
   "double_arrow", "bottom_side", "top_side", "v_double_arrow", "sb_v_double_arrow", "00008160000006810000408080010102",
    "2870a09082c103050810ffdffffe0204",
-  0,
+  nullptr,
   //
   "\x01", // help arrow
   "Help",
   "question_arrow",
    "d9ce0ab605698f320427677b458ad60b",
-  0,
+  nullptr,
   //
   "\x06", // handwriting
   "Handwriting",
    "pencil",
-  0,
+  nullptr,
   //
   "\x02", // working arrow
   "AppStarting",
   "left_ptr_watch", "08e8e1c95fe2fc01f976f1e063a24ccd",
    "3ecb610c1bf2410f44200f48c40d3599",
-  0,
+  nullptr,
   //
   "\x10", // move (???)
   "SizeAll",
    "fleur",
-  0,
+  nullptr,
   //
   "\x03", // busy cursor
   "Wait",
    "watch",
-  0,
+  nullptr,
   //
   "\x07", // unavailable
   "NO",
    "crossed_circle",
    "03b6e0fcb3499374a867c041f52298f0",
-  0,
-  0
+  nullptr,
+  nullptr
 };
 
 
@@ -201,7 +201,7 @@ static void removeCursorFiles (QDir &dir) {
 
 ///////////////////////////////////////////////////////////////////////////////
 const char **XCursorTheme::findCursorByFXId (int id) {
-  if (id < 0 || id > 19) return 0; // invalid id
+  if (id < 0 || id > 19) return nullptr; // invalid id
   const char **nlst = nameTransTbl;
   while (*nlst) {
     int lid = (**nlst)&0xff;
@@ -209,7 +209,7 @@ const char **XCursorTheme::findCursorByFXId (int id) {
     if (lid == id) return nlst;
     while (nlst[-1]) nlst++ ; // skip
   }
-  return 0; // none found
+  return nullptr; // none found
 }
 
 
@@ -238,7 +238,7 @@ const char **XCursorTheme::findCursorRecord (const QString &cname, int type) {
     }
     while (nlst[-1]) nlst++ ; // skip
   }
-  return 0; // none found
+  return nullptr; // none found
 }
 
 

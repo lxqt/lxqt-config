@@ -45,7 +45,7 @@ struct KeyboardLayoutInfo {
           return &vinfo;
       }
     }
-    return NULL;
+    return nullptr;
   }
 };
 

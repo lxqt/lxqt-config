@@ -85,7 +85,7 @@ XCursorImageXCur::~XCursorImageXCur () {
 void XCursorImageXCur::parseImgData (const void *aImgData) {
   mIsValid = false;
   delete mImage; // It's fine to delete a null pointer
-  mImage = 0;
+  mImage = nullptr;
   const quint32 *data = (const quint32 *)aImgData;
   if (getDW(data) != 36) return; // header size
   if (getDW(data+1) != 0xfffd0002L) return; // magic

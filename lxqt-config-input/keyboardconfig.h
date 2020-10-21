@@ -32,7 +32,7 @@ class KeyboardConfig : public QWidget {
   Q_OBJECT
 
 public:
-  KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent = 0);
+  KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent = nullptr);
   virtual ~KeyboardConfig();
 
   void accept();

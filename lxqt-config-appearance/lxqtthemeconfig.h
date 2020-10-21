@@ -42,7 +42,7 @@ class LXQtThemeConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
+    explicit LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent = nullptr);
     ~LXQtThemeConfig();
 
     void applyLxqtTheme();

@@ -31,7 +31,7 @@ class FontConfigFile: public QObject
 {
     Q_OBJECT
 public:
-    explicit FontConfigFile(QObject* parent = 0);
+    explicit FontConfigFile(QObject* parent = nullptr);
     virtual ~FontConfigFile();
 
     bool antialias() const {

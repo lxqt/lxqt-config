@@ -77,7 +77,7 @@ void XCursorImage::convertARGB2PreMul (QImage &img) {
 
 ///////////////////////////////////////////////////////////////////////////////
 XCursorImage::XCursorImage (const QString &aName, const QImage &aImg, int aXHot, int aYHot, quint32 aDelay, quint32 aCSize) :
-  mIsValid(true), mName(aName), mImage(0), mDelay(aDelay), mXHot(aXHot), mYHot(aYHot), mCSize(aCSize)
+  mIsValid(true), mName(aName), mImage(nullptr), mDelay(aDelay), mXHot(aXHot), mYHot(aYHot), mCSize(aCSize)
 {
   mImage = new QImage(aImg.copy());
   convertARGB2PreMul(*mImage);
@@ -85,7 +85,7 @@ XCursorImage::XCursorImage (const QString &aName, const QImage &aImg, int aXHot,
 
 
 XCursorImage::XCursorImage (const QString &aName) :
-  mIsValid(false), mName(aName), mImage(0), mDelay(50), mXHot(0), mYHot(0)
+  mIsValid(false), mName(aName), mImage(nullptr), mDelay(50), mXHot(0), mYHot(0)
 {
 }
 

@@ -28,7 +28,7 @@
 class SelectKeyboardLayoutDialog : public QDialog {
   Q_OBJECT
 public:
-  SelectKeyboardLayoutDialog(QMap< QString, KeyboardLayoutInfo >& knownLayouts, QWidget* parent = 0);
+  SelectKeyboardLayoutDialog(QMap< QString, KeyboardLayoutInfo >& knownLayouts, QWidget* parent = nullptr);
   virtual ~SelectKeyboardLayoutDialog();
 
   QString selectedLayout();

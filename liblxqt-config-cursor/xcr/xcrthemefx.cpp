@@ -126,8 +126,8 @@ static QByteArray zlibInflate (const void *buf, int bufSz, int destSz) {
   res.resize(destSz+1);
   stream.next_in = (Bytef *)buf;
   stream.avail_in = bufSz;
-  stream.zalloc = (alloc_func)0;
-  stream.zfree = (free_func)0;
+  stream.zalloc = (alloc_func)nullptr;
+  stream.zfree = (free_func)nullptr;
   stream.next_out = (Bytef *)res.data();
   stream.avail_out = destSz;
 

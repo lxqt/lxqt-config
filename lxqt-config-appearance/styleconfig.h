@@ -46,7 +46,7 @@ class StyleConfig : public QWidget
 public:
     explicit StyleConfig(LXQt::Settings *settings,
         QSettings *qtSettings, LXQt::Settings *configAppearanceSettings,
-        ConfigOtherToolKits *configOtherToolKits, QWidget *parent = 0);
+        ConfigOtherToolKits *configOtherToolKits, QWidget *parent = nullptr);
     ~StyleConfig();
 
     void applyStyle();

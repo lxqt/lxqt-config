@@ -45,7 +45,7 @@ class FontsConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit FontsConfig(LXQt::Settings *settings, QSettings *qtSettings, QWidget *parent = 0);
+    explicit FontsConfig(LXQt::Settings *settings, QSettings *qtSettings, QWidget *parent = nullptr);
     ~FontsConfig();
 
     void updateQtFont();

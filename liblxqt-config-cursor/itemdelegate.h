@@ -32,7 +32,7 @@ class ItemDelegate : public QAbstractItemDelegate
     Q_OBJECT
 
 public:
-    ItemDelegate(QObject *parent = 0);
+    ItemDelegate(QObject *parent = nullptr);
     ~ItemDelegate();
 
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;

@@ -76,7 +76,7 @@ void IconThemeConfig::initIconsThemes()
                 IconThemeInfo theme(QDir(dir.canonicalFilePath()));
                 if (theme.isValid() && (!theme.isHidden()))
                 {
-                    QTreeWidgetItem *item = new QTreeWidgetItem((QTreeWidget*)0);
+                    QTreeWidgetItem *item = new QTreeWidgetItem((QTreeWidget*)nullptr);
                     item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
                     item->setData(0, Qt::UserRole, theme.name());
 
