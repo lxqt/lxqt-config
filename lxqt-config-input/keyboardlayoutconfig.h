@@ -44,7 +44,7 @@ namespace LXQt {
 class KeyboardLayoutConfig : public QWidget {
   Q_OBJECT
 public:
-  KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent = 0);
+  KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent = nullptr);
   virtual ~KeyboardLayoutConfig();
 
   void applyConfig();

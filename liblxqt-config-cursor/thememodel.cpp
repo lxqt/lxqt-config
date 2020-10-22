@@ -99,8 +99,8 @@ void XCursorThemeModel::sort(int column, Qt::SortOrder order)
 
 const XCursorThemeData *XCursorThemeModel::theme(const QModelIndex &index)
 {
-    if (!index.isValid()) return NULL;
-    if (index.row() < 0 || index.row() >= mList.count()) return NULL;
+    if (!index.isValid()) return nullptr;
+    if (index.row() < 0 || index.row() >= mList.count()) return nullptr;
     return mList.at(index.row());
 }
 

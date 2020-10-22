@@ -115,7 +115,7 @@ void ApplicationChooser::updateAllIcons() {
         for(int i = 0; i < n; ++i) {
             QTreeWidgetItem* item = parent->child(i);
             XdgDesktopFile* desktopFile = item->data(0, 32).value<XdgDesktopFile*>();
-            if(Q_LIKELY(desktopFile != NULL && !desktopFile->icon().isNull())) {
+            if(Q_LIKELY(desktopFile != nullptr && !desktopFile->icon().isNull())) {
                 item->setIcon(0, desktopFile->icon());
                 ++updated;
                 if(updated % 8 == 0) // update the UI in batch is more efficient

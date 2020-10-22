@@ -63,7 +63,7 @@ class XCursorThemeModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    XCursorThemeModel (QObject *parent = 0);
+    XCursorThemeModel (QObject *parent = nullptr);
     ~XCursorThemeModel ();
 
     inline int columnCount (const QModelIndex &parent = QModelIndex()) const;

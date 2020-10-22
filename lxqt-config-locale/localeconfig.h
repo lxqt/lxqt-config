@@ -46,7 +46,7 @@ class LocaleConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit LocaleConfig(LXQt::Settings *settings, LXQt::Settings *session_settings, QWidget *parent = 0);
+    explicit LocaleConfig(LXQt::Settings *settings, LXQt::Settings *session_settings, QWidget *parent = nullptr);
     ~LocaleConfig();
 
     void load();

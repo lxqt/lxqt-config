@@ -41,7 +41,7 @@ class IconThemeConfig : public QWidget, public Ui::IconThemeConfig
     Q_OBJECT
 
 public:
-    IconThemeConfig(LXQt::Settings *settings, QWidget *parent = 0);
+    IconThemeConfig(LXQt::Settings *settings, QWidget *parent = nullptr);
     ~IconThemeConfig();
 
     void applyIconTheme();

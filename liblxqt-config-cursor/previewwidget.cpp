@@ -111,7 +111,7 @@ QRect PreviewCursor::rect() const
 PreviewWidget::PreviewWidget(QWidget *parent) : QWidget(parent)
 {
     setMouseTracking(true);
-    mCurrent = NULL;
+    mCurrent = nullptr;
     mCursorSize = 16; // It usually is the default cursor size
     mCurrentCursorSize = 16;
 }
@@ -171,7 +171,7 @@ void PreviewWidget::setTheme(const XCursorThemeData *theme)
     for (int i = 0; i < numCursors; ++i) mList << new PreviewCursor(*theme, QString::fromUtf8(cursorNames[i]));
     mNeedLayout = true;
     updateGeometry();
-    mCurrent = NULL;
+    mCurrent = nullptr;
     update();
 }
 
@@ -180,7 +180,7 @@ void PreviewWidget::clearTheme()
 {
     qDeleteAll(mList);
     mList.clear();
-    mCurrent = NULL;
+    mCurrent = nullptr;
     mTheme = nullptr;
     update();
 }
@@ -223,7 +223,7 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
         }
     }
     setCursor(Qt::ArrowCursor);
-    mCurrent = NULL;
+    mCurrent = nullptr;
 }
 
 void PreviewWidget::resizeEvent(QResizeEvent *)

@@ -31,7 +31,7 @@ class BrightnessSettings: public QDialog
 Q_OBJECT
 
 public:
-    BrightnessSettings(QWidget *parent =0);
+    BrightnessSettings(QWidget *parent =nullptr);
     ~BrightnessSettings();
 
     void revertValues();

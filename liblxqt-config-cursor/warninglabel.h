@@ -36,7 +36,7 @@ class WarningLabel : public QWidget, public Ui::WarningLabel
     Q_OBJECT
 
 public:
-    WarningLabel (QWidget *parent=0);
+    WarningLabel (QWidget *parent=nullptr);
 
     QPoint buttonPos() { return showDirButton->pos(); }
 

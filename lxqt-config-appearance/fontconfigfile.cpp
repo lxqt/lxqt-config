@@ -38,7 +38,7 @@ FontConfigFile::FontConfigFile(QObject* parent):
     mHintStyle("hintslight"),
     mDpi(96),
     mAutohint(false),
-    mSaveTimer(NULL)
+    mSaveTimer(nullptr)
 {
     mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
@@ -55,7 +55,7 @@ FontConfigFile::~FontConfigFile()
     if(mSaveTimer) // has pending save request
     {
         delete mSaveTimer;
-        mSaveTimer = NULL;
+        mSaveTimer = nullptr;
         save();
     }
 }
@@ -165,7 +165,7 @@ void FontConfigFile::save()
     if(mSaveTimer)
     {
         mSaveTimer->deleteLater();
-        mSaveTimer = NULL;
+        mSaveTimer = nullptr;
     }
 
     QFile file(mFilePath);

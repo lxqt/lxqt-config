@@ -41,7 +41,7 @@ static const char *curShapeName[] = {
   "SizeAll",
   "Wait",
   "NO",
-  0
+  nullptr
 };
 
 
@@ -53,7 +53,7 @@ static const char *findCurShapeName (const QString &s) {
     if (!strcasecmp(name, *nlst)) return *nlst;
     nlst++;
   }
-  return 0;
+  return nullptr;
 }
 
 

@@ -140,12 +140,12 @@ float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
 
     xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
     ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
-    if(error != NULL)
+    if(error != nullptr)
     {
         qDebug() << "Error getting output_info";
         return -1;
     }
-    if(output_info == NULL)
+    if(output_info == nullptr)
     {
         qDebug() << "Error: output_info is null";
         return -1;
@@ -153,18 +153,18 @@ float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
     // xcb_randr_get_output_info_reply_t tiene como elemento crtc
     xcb_randr_get_crtc_gamma_cookie_t gamma_cookie = xcb_randr_get_crtc_gamma_unchecked (QX11Info::connection(), output_info->crtc);
     ScopedCPointer<xcb_randr_get_crtc_gamma_reply_t> gamma_reply(xcb_randr_get_crtc_gamma_reply (QX11Info::connection(), gamma_cookie, &error));
-    if(error != NULL)
+    if(error != nullptr)
     {
         qDebug() << "Error getting gamma_reply";
         return -1;
     }
-    if(gamma_reply == NULL)
+    if(gamma_reply == nullptr)
     {
         qDebug() << "Error: gamma_reply is null";
         return -1;
     }
     uint16_t * red = xcb_randr_get_crtc_gamma_red (gamma_reply.data());
-    if(red == NULL)
+    if(red == nullptr)
     {
         qDebug() << "Error: red is null";
         return -1;
@@ -194,12 +194,12 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
 
     xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
     ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
-    if(error != NULL)
+    if(error != nullptr)
     {
         qDebug() << "Error getting output_info";
         return;
     }
-    if(output_info == NULL)
+    if(output_info == nullptr)
     {
         qDebug() << "Error: output_info is null";
         return;
@@ -207,31 +207,31 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
     // xcb_randr_get_output_info_reply_t tiene como elemento crtc
     xcb_randr_get_crtc_gamma_cookie_t gamma_cookie = xcb_randr_get_crtc_gamma_unchecked (QX11Info::connection(), output_info->crtc);
     ScopedCPointer<xcb_randr_get_crtc_gamma_reply_t> gamma_reply(xcb_randr_get_crtc_gamma_reply (QX11Info::connection(), gamma_cookie, &error));
-    if(error != NULL)
+    if(error != nullptr)
     {
         qDebug() << "Error getting gamma_reply";
         return;
     }
-    if(gamma_reply == NULL)
+    if(gamma_reply == nullptr)
     {
         qDebug() << "Error: gamma_reply is null";
         return;
     }
     uint16_t *red = xcb_randr_get_crtc_gamma_red (gamma_reply.data());
-    if(red == NULL)
+    if(red == nullptr)
     {
         qDebug() << "Error: red is null";
         return;
     }
     int red_length = xcb_randr_get_crtc_gamma_red_length(gamma_reply.data());
     uint16_t *green = xcb_randr_get_crtc_gamma_green (gamma_reply.data());
-    if(green == NULL)
+    if(green == nullptr)
     {
         qDebug() << "Error: green is null";
         return;
     }
     uint16_t *blue = xcb_randr_get_crtc_gamma_blue (gamma_reply.data());
-    if(blue == NULL)
+    if(blue == nullptr)
     {
         qDebug() << "Error: blue is null";
         return;
@@ -263,12 +263,12 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
 
         xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
         ScopedCPointer <xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
-        if(error != NULL)
+        if(error != nullptr)
         {
             qDebug() << "Error getting output_info";
             continue;
         }
-        if(output_info == NULL)
+        if(output_info == nullptr)
         {
             qDebug() << "Error: output_info is null";
             continue;
@@ -295,12 +295,12 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
         }
         xcb_randr_get_crtc_info_cookie_t crtc_info_cookie = xcb_randr_get_crtc_info_unchecked (QX11Info::connection(), output_info->crtc, 0);
         ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (QX11Info::connection(), crtc_info_cookie, &error));
-        if(error != NULL)
+        if(error != nullptr)
         {
             qDebug() << "Error getting output_info";
             continue;
         }
-        if(crtc_info == NULL)
+        if(crtc_info == nullptr)
         {
             qDebug() << "Error: output_info is null";
             continue;
@@ -352,12 +352,12 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
 
         xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
         ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
-        if(error != NULL)
+        if(error != nullptr)
         {
             qDebug() << "Error getting output_info";
             continue;
         }
-        if(output_info == NULL)
+        if(output_info == nullptr)
         {
             qDebug() << "Error: output_info is null";
             continue;
@@ -372,9 +372,9 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
             continue;
         xcb_randr_get_crtc_info_cookie_t crtc_info_cookie = xcb_randr_get_crtc_info_unchecked (QX11Info::connection(), output_info->crtc, 0);
         ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (QX11Info::connection(), crtc_info_cookie, &error));
-        if(error != NULL)
+        if(error != nullptr)
             continue;
-        if(crtc_info == NULL || crtc_info->mode == XCB_NONE )
+        if(crtc_info == nullptr || crtc_info->mode == XCB_NONE )
             continue;
 
         QString name = QString::fromUtf8((const char *) xcb_randr_get_output_info_name(output_info.data()), output_info->name_len);

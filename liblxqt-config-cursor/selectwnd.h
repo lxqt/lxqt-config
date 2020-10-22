@@ -33,7 +33,7 @@ class LXQT_API SelectWnd : public QWidget
     Q_OBJECT
 
 public:
-    SelectWnd (LXQt::Settings* settings, QWidget *parent=0);
+    SelectWnd (LXQt::Settings* settings, QWidget *parent=nullptr);
     ~SelectWnd ();
 
     void applyCusorTheme();
