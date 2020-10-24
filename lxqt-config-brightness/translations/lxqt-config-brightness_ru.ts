@@ -17,12 +17,12 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Параметры подсветки и яркости:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Яркость</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
@@ -73,17 +73,17 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>Поднять яркость.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>Убавить яркость.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>Установить яркость от 1 до 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Невозможно использовать увеличение и уменьшение одновременно</translation>
     </message>
 </context>
 </TS>

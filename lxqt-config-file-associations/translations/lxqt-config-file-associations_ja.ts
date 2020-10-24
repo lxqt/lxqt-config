@@ -11,7 +11,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>このファイルを開くアプリケーション:</translation>
+        <translation>アプリケーションを選択して下さい:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>JPEG を扱うアプリケーション</translation>
+        <translation>JPEG を処理するアプリケーション</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -41,39 +41,39 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Web ブラウザー</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation type="unfinished"></translation>
+        <translation>Eメールクライアント</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルマネージャー</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 を処理する別のアプリケーション</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
         <location filename="../applicationchooser.cpp" line="220"/>
         <source>Applications that handle %1</source>
-        <translation>%1 を扱うアプリケーション</translation>
+        <translation>%1 を処理するアプリケーション</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="305"/>
         <source>No applications found</source>
-        <translation>アプリケーションが見つかりませんでした</translation>
+        <translation>アプリケーションが見つかりません</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>アプリケーションがこれ以上見つかりません</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>変更...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,7 +99,7 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>選択...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>関連付け</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
         <source>Default application</source>
-        <translation>デフォルトのアプリケーション</translation>
+        <translation>既定のアプリケーション</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
@@ -137,29 +137,29 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>既定のアプリケーション</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Web ブラウザ</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
         <location filename="../mimetypeviewer.ui" line="487"/>
         <location filename="../mimetypeviewer.ui" line="562"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>選択...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
         <source>Email Client</source>
-        <translation type="unfinished"></translation>
+        <translation>Eメールクライアント</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>
         <source>File Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルマネージャー</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
