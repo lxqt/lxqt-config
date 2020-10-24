@@ -17,7 +17,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;バックライトと明るさの設定:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>明るさ</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
@@ -73,32 +73,32 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>明るさを上げる。</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>明るさを下げる。</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>明るさを 1 から 100 に設定する。</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>ガンマを既定値にリセットする。</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: increase/decrease と set を組み合わせて使用できません</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: increase と decrease オプションを組み合わせて使用できません</translation>
     </message>
 </context>
 </TS>

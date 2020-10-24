@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation type="unfinished"></translation>
+        <translation>既定のモニタ設定が適用しました。モニタ設定を変更したい場合は、lxqt-config-monitor を使用して下さい。</translation>
     </message>
 </context>
 <context>
