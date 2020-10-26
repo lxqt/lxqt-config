@@ -12,7 +12,7 @@
         <location filename="../brightnesssettings.ui" line="35"/>
         <location filename="../brightnesssettings.ui" line="74"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation>☀</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
@@ -27,12 +27,12 @@
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>בהירות</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../outputwidget.ui" line="48"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="80"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation>☀</translation>
     </message>
 </context>
 <context>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>הגברת הבהירות.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>הנמכת הבהירות.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
