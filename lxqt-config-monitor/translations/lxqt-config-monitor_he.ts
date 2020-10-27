@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation type="unfinished"></translation>
+        <translation>הגדרות ברירת המחדל לצגים הוחלו. אם ברצונך לשנות את ההגדרות לצגים, נא להשתמש ב־lxqt-config-monitor.</translation>
     </message>
 </context>
 <context>
@@ -310,7 +310,9 @@
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
-            <numerusform>נותרה שנייה אחת</numerusform>
+            <numerusform>נותרה שניה אחת</numerusform>
+            <numerusform>נותרו %n שניות</numerusform>
+            <numerusform>נותרו %n שניות</numerusform>
             <numerusform>נותרו %n שניות</numerusform>
         </translation>
     </message>
