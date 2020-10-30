@@ -1,3 +1,15 @@
+lxqt-config-0.16.0 / 2020-11-01
+===============================
+  * Better UI for lxqt-config-brightness.
+  * ￼Avoid C++11 range for possible container detachment.
+  * ￼Only use QStringLiteral where it avoids allocations.
+  * ￼Initialize monitor settings config in "lxqt-config-monitor/monitor.h".
+  * ￼Use QFlags default constructor.
+  * ￼Fixed a crash in lxqt-config-monitor.
+  * ￼￼Fixed type associations and added "Default Application".
+  * ￼￼Detailed palette customization in lxqt-config-appearance.
+  * ￼￼Remember sizes of appearance and file associations dialogs.
+
 lxqt-config-0.15.0 / 2020-04-22
 ===============================
   * Fixed changing of shortcut for switching keyboard layout.
