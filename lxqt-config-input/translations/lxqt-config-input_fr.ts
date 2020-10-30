@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Délai de répétition :</translation>
+        <translation>Délai de répétition :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation>Modèle de clavier :</translation>
+        <translation>Modèle de clavier :</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
@@ -291,7 +291,7 @@ If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
         <translation>LXQt supporte uniquement &quot;libinput&quot; comme pilote xinput.
-(valeur actuelle : %1)
+(valeur actuelle : %1)
 
 Si cela est prévu, veuillez configurer xinput manuellement.
 Sinon, vous pouvez vous débarrasser de ce message en changeant le pilote xinput en &quot;libinput&quot;.
