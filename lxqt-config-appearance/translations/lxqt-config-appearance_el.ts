@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλικ για να αλλάξετε χρώμα.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή χρώματος</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Ύφος:</translation>
+        <translation>Τεχνοτροπία:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Ύφος υπόδειξης των γραμματοσειρών:</translation>
+        <translation>Τεχνοτροπία υπόδειξης των γραμματοσειρών:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -230,57 +230,57 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρωματοπυξίδα Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Μερικές τεχνοτροπίες Qt μπορεί να αγνοούν αυτά τα χρώματα.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Παράθυρο:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Προβολή:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύνδεσμος:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Κείμενο παραθύρου:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Προβολή κειμένου:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλεγμένο κείμενο:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Επισκεφθέν δεσμός:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Προκαθορισμένη χρωματοπυξίδα</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
@@ -302,14 +302,14 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Για να καταφέρετε μια ομοιόμορφη θεματοποίηση, μπορείτε είτε να επιλέξετε ένα παρεμφερές θέμα/ύφος (αν είναι διαθέσιμο) από τα κατάστιχα, είτε να επιλέξετε το ύφος Qt &apos;gtk&apos; (αν είναι διαθέσιμο) για την μίμηση των θεμάτων GTK.
+        <translation>Για να καταφέρετε μια ομοιόμορφη θεματοποίηση, μπορείτε είτε να επιλέξετε ένα παρεμφερές θέμα/τεχνοτροπία (αν είναι διαθέσιμο) από τα κατάστιχα, είτε να επιλέξετε την τεχνοτροπία Qt &apos;gtk&apos; (αν είναι διαθέσιμη) για την μίμηση των θεμάτων GTK.
 
 Σιγουρευτείτε ότι το &apos;xsettingsd&apos; είναι εγκατεστημένο ούτως ώστε να βοηθήσετε τις εφαρμογές GTK να εφαρμόζουν τα θέματα σε πραγματικό χρόνο.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
-        <translation>Ύφος των κουμπιών της γραμμής εργαλείων:</translation>
+        <translation>Τεχνοτροπία των κουμπιών της γραμμής εργαλείων:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="319"/>
@@ -344,7 +344,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation>Ύφος Qt</translation>
+        <translation>Τεχνοτροπία Qt</translation>
     </message>
 </context>
 </TS>
