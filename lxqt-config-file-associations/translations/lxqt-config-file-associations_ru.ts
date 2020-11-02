@@ -122,7 +122,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Ассоциации </translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
