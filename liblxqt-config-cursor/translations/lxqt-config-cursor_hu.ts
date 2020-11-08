@@ -11,12 +11,12 @@
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Válassza ki a kurzor témát amit szeretne használni. &lt;b&gt;Érvényesítéshez az LXQt munkamenetet újra kell&lt;/b&gt;:</translation>
+        <translation>Válassza ki a kurzor témát amit szeretne használni. &lt;b&gt;Érvényesítéshez az LXQt munkamenetet újra kell indítani&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Új téma telepítése...</translation>
+        <translation>Ú&amp;j téma telepítése...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Az aktuális témát nem lehet eltávolítani!</translation>
+        <translation>Az aktív témát nem lehet eltávolítani!</translation>
     </message>
 </context>
 <context>

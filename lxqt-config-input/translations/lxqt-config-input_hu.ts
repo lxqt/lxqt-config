@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation>Egér és érintőtábla</translation>
+        <translation>Egér és érintőpad</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation>Érintőtábla beállítása </translation>
+        <translation>Érintőpad beállítása </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Az LXQt csak a &quot;libinput&quot;-ot támogatja xinput driverként.
+(jelenlegi érték: %1)
+
+Ha ez szándékos, állítsa be manuálisan az xinput-ot.
+Ellenkező esetben megszabadulhat ettől az üzenettől, ha az xinput drivert &quot;libinput&quot;-ra változtatja.
+</translation>
     </message>
 </context>
 </TS>

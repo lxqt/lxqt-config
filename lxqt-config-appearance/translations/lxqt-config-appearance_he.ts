@@ -230,12 +230,12 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>ערכת צבעים של Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>חלק מהסגנונות של Qt עשויים להתעלם מהצבעים האלו.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
@@ -260,12 +260,12 @@
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>טקסט החלון:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>טקסט התצוגה:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
@@ -275,12 +275,12 @@
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>קישור בו ביקרת:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ערכת צבעים כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
