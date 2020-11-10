@@ -108,10 +108,10 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
 
     XFree(data);
 
-    auto dataType = values[0].type();
+    auto dataType = static_cast<QMetaType::Type>(values[0].type());
     switch (dataType)
     {
-    case QVariant::Int:
+    case QMetaType::Int:
         Q_ASSERT(act_type == XA_INTEGER);
 
         data = new unsigned char[values.size() * act_format / 8];
@@ -133,7 +133,7 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
             }
         }
         break;
-    case QVariant::Double:
+    case QMetaType::Float:
         Q_ASSERT(act_type == XInternAtom(dpy, "FLOAT", False));
         Q_ASSERT(act_format == 32);
         float_data = new float[values.size()];
