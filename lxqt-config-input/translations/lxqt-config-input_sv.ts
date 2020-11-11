@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Mus och pekplatta</translation>
     </message>
 </context>
 <context>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Enhet:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Inaktiverad</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
@@ -274,7 +274,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;napp</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
