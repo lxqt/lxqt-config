@@ -16,7 +16,7 @@
     <message>
         <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Installera nytt tema...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ta bort tema</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="111"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Storlek</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="233"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="234"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan inte ta bort aktivt tema!</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa...</translation>
     </message>
 </context>
 <context>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../thememodel.cpp" line="61"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Namn</translation>
     </message>
     <message>
         <location filename="../thememodel.cpp" line="62"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Beskrivning</translation>
     </message>
 </context>
 </TS>
