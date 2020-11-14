@@ -1,3 +1,7 @@
+lxqt-config-0.16.1 / 2020-11-14
+===============================
+  * Fixed a regression in setting the acceleration speed of mouse/touchpad.
+
 lxqt-config-0.16.0 / 2020-11-01
 ===============================
   * Better UI for lxqt-config-brightness.
