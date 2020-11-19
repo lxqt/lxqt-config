@@ -1,8 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=LXQt Configuration Center
-GenericName=System Settings
-Comment=Configure your system
 Exec=lxqt-config
 Icon=preferences-system
 Categories=Settings;DesktopSettings;Qt;LXQt;

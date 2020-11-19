@@ -49,7 +49,7 @@ lxqt_translate_ts(QM_FILES
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/${PROJECT_NAME}.desktop.in")
+lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/${PROJECT_NAME}.desktop.in" USE_YAML)
 
 
 add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DESKTOP_FILES} ${QM_LOADER})

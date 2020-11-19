@@ -58,7 +58,7 @@ lxqt_translate_ts(QM_FILES
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/${PROJECT_NAME}.desktop.in")
+lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/${PROJECT_NAME}.desktop.in" USE_YAML)
 
 #************************************************
 

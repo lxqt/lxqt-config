@@ -1,8 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=Keyboard and Mouse
-GenericName=Input settings
-Comment=Configure keyboard, mouse, and other input devices
 Exec=lxqt-config-input
 Icon=preferences-desktop-peripherals
 Categories=Qt;Settings;HardwareSettings;DesktopSettings;LXQt;
