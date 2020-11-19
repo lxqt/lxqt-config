@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klicken um die Farbe zu ändern.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Farbe wählen</translation>
     </message>
 </context>
 <context>
@@ -230,32 +230,32 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qt Palette</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Einige Qt-Stile könnten diese Farben ignorieren.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenster:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswahl:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Link:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
