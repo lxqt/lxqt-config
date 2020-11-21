@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustelėkite norėdami pakeisti spalvą.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti spalvą</translation>
     </message>
 </context>
 <context>
@@ -230,57 +230,57 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt paletė</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kai kurie Qt stiliai gali nepaisyti šių spalvų.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Langas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodinys:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Žymėjimas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuoroda:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lango tekstas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodinio tekstas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pažymėtas tekstas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplankyta nuoroda:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Numatytoji paletė</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
