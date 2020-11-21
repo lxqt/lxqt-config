@@ -41,23 +41,23 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Saityno naršyklės</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation type="unfinished"></translation>
+        <translation>El. pašto kliento programos</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation type="unfinished"></translation>
+        <translation>Failų tvarkytuvės</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kitos programos, kurios apdoroja %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Daugiau nerasta jokių programų</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>Keisti...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,7 +99,7 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Susiejimai</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
@@ -137,29 +137,29 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Numatytosios programos</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Saityno naršyklė</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
         <location filename="../mimetypeviewer.ui" line="487"/>
         <location filename="../mimetypeviewer.ui" line="562"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
         <source>Email Client</source>
-        <translation type="unfinished"></translation>
+        <translation>El. pašto kliento programa</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>
         <source>File Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Failų tvarkytuvė</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
