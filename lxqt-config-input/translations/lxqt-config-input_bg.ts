@@ -279,7 +279,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Инфоетикет Устройство</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt поддържа само &quot;libinput&quot; като xinput драйвер.
+(текуща стойност:% 1)
+
+Ако това е необходимо, моля, конфигурирайте xinput ръчно.
+В противен случай можете да премахнете това съобщение, като промените драйвера на xinput на &quot;libinput&quot;.
+</translation>
     </message>
 </context>
 </TS>
