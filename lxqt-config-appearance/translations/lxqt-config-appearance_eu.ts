@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klik egin kolorea aldatzeko.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -32,12 +32,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Letra-tipoa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaile interfazearen letra-tipo lehenetsia</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Ertaina</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaileak definitutako horma papera gainidatzi</translation>
     </message>
 </context>
 <context>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgeten estiloa</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>
@@ -225,12 +225,12 @@
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgeten estiloa</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
@@ -240,42 +240,42 @@
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Leihoa:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikusi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aukeraketa:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Esteka:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Leihoaren Testua:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikusi Testua:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aukeratutako Testua:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bisitatutako Esteka:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
