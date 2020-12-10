@@ -19,12 +19,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="148"/>
         <source>GTK themes</source>
-        <translation>GTK témy</translation>
+        <translation>GTK motívy vzhľadu</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; bol prepísaný.&lt;/p&gt;&lt;p&gt;Kópiu predošlých nastavení nájdete v &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;„%1“ bolo nahradené.&lt;/p&gt;&lt;p&gt;Kópia pôvodných nastavení je k dispozícii v „%2“&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -37,12 +37,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Predvolené písmo pre používateľské rozhranie</translation>
+        <translation>Východzie písmo užívateľského rozhrania</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Názov prísma:</translation>
+        <translation>Názov písma:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Veľkosť bodu:</translation>
+        <translation>Veľkosť v bodoch:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation>Hrubé</translation>
+        <translation>Tučné</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
@@ -72,38 +72,38 @@
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation>Hrubé kurzíva</translation>
+        <translation>Tučná kurzíva</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Nasledujúce nastavenia ovplyvnia iba novo spustené aplikácie</translation>
+        <translation>Následujúce nastavenie ovplyvní iba novo spustené aplikácie</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Použiť vyhladzovanie písma</translation>
+        <translation>Vyhladzovať hrany písmen</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Vyhladzovanie písma:</translation>
+        <translation>Štýl doladenia zobrazenia písma:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation>Žiaden</translation>
+        <translation>Žiadne</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation>Ľahký</translation>
+        <translation>Ľahké</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation>Stredný</translation>
+        <translation>Stredné</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
@@ -113,17 +113,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Vyhladzovanie písma</translation>
+        <translation>Doladenie zobrazenia písma (hinting)</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Rozlíšenie (DPI):</translation>
+        <translation>Rozlíšenie v palcoch (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Automatické vyhladzovanie písma</translation>
+        <translation>Automatické doladenie zobrazenia písma</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Nastavenie vzhľadu prostredia LXQt</translation>
+        <translation>Nastavenie vzhľadu LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -166,12 +166,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>Rozšírenie KDE pre XDG témy ikon -&gt; Nasledujte schému farieb</translation>
+        <translation>KDE rozšírenie témy ikon XDG  -&gt; Nasleduje farebná schéma</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Farebné symboly používajúce štýl ovládacích prvkov (paleta)</translation>
+        <translation>Zafarbiť ikony na základe štýlu prvku (paleta)</translation>
     </message>
 </context>
 <context>
@@ -179,12 +179,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>Téma LXQt</translation>
+        <translation>Téma vzhľadu LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Užívateľská zmena pozadia</translation>
+        <translation>Prepísať užívateľom určené pozadie plochy</translation>
     </message>
 </context>
 <context>
@@ -192,17 +192,17 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Nastavenie vzhľadu prostredia LXQt</translation>
+        <translation>Nastavenie vzhľadu LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation>Štýl widegtov</translation>
+        <translation>Štýl widgetu</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
-        <translation>Téma ikon</translation>
+        <translation>Vzhľad ikôn</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="88"/>
@@ -225,7 +225,7 @@
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation>Štýl widgetov</translation>
+        <translation>Štýl widgetu</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../styleconfig.ui" line="254"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Nastavenie témy GTK (Konfiguračný súbor GTK bude prepísaný!)</translation>
+        <translation>Nastaviť tému GTK (konfiguračný súbor GTK bude prepísaný!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
@@ -302,19 +302,19 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Ak sa pokúšate nastaviť GTK motív, buď vyberte zo zoznamu podobný štýl / tému (ak je k dispozícii), alebo vyberte štýl gtk2 Qt (ak je k dispozícii).
+        <translation>Pokiaľ sa pokúšate o jednotnú tému, buď vyberte zo zoznamu podobný štýl / tému vzhľadu (ak je k dispozícii), alebo vyberte gtk2 Qt tému vzhľadu (ak je k dispozícii).
 
-Uistite sa, že &apos;xsettingsd&apos; je nainštalovaný.</translation>
+Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
-        <translation>Štýl tlačidiel panela:</translation>
+        <translation>Štýl tlačidiel v nástrojovom panely:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
-        <translation>Zobraziť iba ikony</translation>
+        <translation>Zobraziť iba ikonu</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="324"/>
@@ -324,22 +324,22 @@ Uistite sa, že &apos;xsettingsd&apos; je nainštalovaný.</translation>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>The text appears beside the icon</source>
-        <translation>Text vedľa ikôn</translation>
+        <translation>Text vedľa ikony</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
-        <translation>Text pod ikonami</translation>
+        <translation>Text pod ikonou</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="339"/>
         <source>Default</source>
-        <translation>Štandardné</translation>
+        <translation>Preddefinované</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
-        <translation>Aktivovať jednoduchým kliknutím</translation>
+        <translation>Aktivovať prvok jednoduchým kliknutím</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
