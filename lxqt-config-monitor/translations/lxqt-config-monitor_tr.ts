@@ -311,6 +311,7 @@
         <source>%n second(s) remaining</source>
         <translation>
             <numerusform>%n saniye kaldı</numerusform>
+            <numerusform>%n saniye kaldı</numerusform>
         </translation>
     </message>
 </context>
