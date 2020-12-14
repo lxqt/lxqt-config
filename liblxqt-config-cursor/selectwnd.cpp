@@ -186,7 +186,7 @@ void SelectWnd::applyCusorTheme()
     // call xrdb to merge the new settings in ~/.Xdefaults
     // FIXME: need to check if we're running in X?
     QProcess xrdb;
-    xrdb.start(QStringLiteral("xrdb -merge ") + QDir::home().path() + QStringLiteral("/.Xdefaults"));
+    xrdb.start(QStringLiteral("xrdb"), QStringList() << QStringLiteral("-merge") << QDir::home().path() + QStringLiteral("/.Xdefaults"));
     xrdb.waitForFinished();
 
     // old razor-qt and lxqt versions use $XCURSOR_THEME environment variable
