@@ -17,7 +17,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Háttérvilágítás- és fényerő-beállítások:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Háttérvilágítás- és fényerő-beállítások:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
@@ -42,12 +42,12 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="112"/>
         <source>Brightness settings changed</source>
-        <translation>Fényerő beállítás megváltozott</translation>
+        <translation>A fényerő beállítások megváltoztak</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="113"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Megerősítés szükséges. Megfelelő a beállítás?</translation>
+        <translation>Megerősítés szükséges. Megfelelőek a beállítások?</translation>
     </message>
 </context>
 <context>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished">Fényerő növelése.</translation>
+        <translation>Fényerő növelése.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished">Fényerő csökkentése.</translation>
+        <translation>Fényerő csökkentése.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
@@ -93,12 +93,12 @@
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Nem lehet használni a növelést/csökkentést egyszerre</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Nem lehet használni a növelés/csökkentés opciót egyszerre</translation>
     </message>
 </context>
 </TS>

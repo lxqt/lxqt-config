@@ -6,12 +6,12 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation>Orszá&amp;g:</translation>
+        <translation>Ré&amp;gió:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>&amp;Részletes beállítás</translation>
+        <translation>&amp;Részletes beállítások</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
-        <translation>Formátum változott</translation>
+        <translation>Formátumbeállítások megváltoztak</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="317"/>

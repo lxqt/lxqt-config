@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation>A monitor alapértelmezett beállítása lettek alkalmazva. Ha módosítani szeretné a monitorok beállításait, használja az lxqt-config-monitor alkalmazást.</translation>
+        <translation>Az alapértelmezett monitorbeállítások lettek alkalmazva. Ha módosítani szeretné a monitorok beállításait, használja az lxqt-config-monitor alkalmazást.</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>Monitorok csatlakozva maradnak</translation>
+        <translation>Monitorok csatlakozva tartása</translation>
     </message>
 </context>
 <context>
