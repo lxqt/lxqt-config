@@ -56,7 +56,8 @@ KeyboardLayoutConfig::~KeyboardLayoutConfig() {
 void KeyboardLayoutConfig::loadSettings() {
   // load current settings from the output of setxkbmap command
   QProcess setxkbmap;
-  setxkbmap.start(QLatin1String("setxkbmap -query -verbose 5"));
+  setxkbmap.start(QLatin1String("setxkbmap"), QStringList() << QLatin1String("-query")
+    << QLatin1String("-verbose") << QLatin1String("5"));
   setxkbmap.waitForFinished();
   if(setxkbmap.exitStatus() == QProcess::NormalExit) {
     QList<QByteArray> layouts, variants;
@@ -218,18 +219,19 @@ void KeyboardLayoutConfig::applyConfig() {
   // call setxkbmap to apply the changes
   QProcess setxkbmap;
   // clear existing options
-  setxkbmap.start(QStringLiteral("setxkbmap -option"));
+  setxkbmap.start(QStringLiteral("setxkbmap"), QStringList() << QStringLiteral("-option"));
   setxkbmap.waitForFinished();
   setxkbmap.close();
 
-  QString command = QStringLiteral("setxkbmap");
+  const QString program = QStringLiteral("setxkbmap");
+  QStringList args;
   // set keyboard model
   QString model;
   int cur_model = ui.keyboardModel->currentIndex();
   if(cur_model >= 0) {
     model = ui.keyboardModel->itemData(cur_model, Qt::UserRole).toString();
-    command += QLatin1String(" -model ");
-    command += model;
+    args += QLatin1String("-model");
+    args += model;
   }
 
   // set keyboard layout
@@ -245,19 +247,19 @@ void KeyboardLayoutConfig::applyConfig() {
         variants += QLatin1Char(',');
       }
     }
-    command += QLatin1String(" -layout ");
-    command += layouts;
+    args += QLatin1String("-layout");
+    args += layouts;
 
     if (variants.indexOf(QLatin1Char(',')) > -1 || !variants.isEmpty()) {
-      command += QLatin1String(" -variant ");
-      command += variants;
+      args += QLatin1String("-variant");
+      args += variants;
     }
   }
 
   for(const QString& option : qAsConst(currentOptions_)) {
     if (!option.startsWith(QLatin1String("grp:"))) {
-      command += QLatin1String(" -option ");
-      command += option;
+      args += QLatin1String("-option");
+      args += option;
     }
   }
 
@@ -265,14 +267,14 @@ void KeyboardLayoutConfig::applyConfig() {
   int cur_switch_key = ui.switchKey->currentIndex();
   if(cur_switch_key > 0) { // index 0 is "None"
     switchKey = ui.switchKey->itemData(cur_switch_key, Qt::UserRole).toString();
-    command += QLatin1String(" -option ");
-    command += switchKey;
+    args += QLatin1String("-option");
+    args += switchKey;
   }
 
-  qDebug() << command;
+  qDebug() << program << args;
 
   // execute the command line
-  setxkbmap.start(command);
+  setxkbmap.start(program, args);
   setxkbmap.waitForFinished();
 
   // save to lxqt-session config file.
