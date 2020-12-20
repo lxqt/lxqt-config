@@ -36,7 +36,7 @@
         <location filename="../applicationchooser.cpp" line="191"/>
         <location filename="../applicationchooser.cpp" line="217"/>
         <source>Other applications</source>
-        <translation>Más alkalmazás</translation>
+        <translation>Más alkalmazások</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
@@ -57,7 +57,7 @@
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished">Más alkalmazások amelyek kezelik ezt: %1</translation>
+        <translation>Más alkalmazások amelyek kezelik ezt: %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="389"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Választás...</translation>
+        <translation>&amp;Kiválasztás...</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Választás...</translation>
+        <translation>&amp;Kiválasztás...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>

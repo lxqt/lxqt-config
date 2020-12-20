@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Billentyű hibánál csipog</translation>
+        <translation>Pittyegés, ha hiba történt a billentyűzetbevitelben</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation>Ismétlés</translation>
+        <translation>Karakterismétlés</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Numlock bekapcsolása bejelentkezéskor</translation>
+        <translation>NumLock bekapcsolása bejelentkezéskor</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Megjegyzés&lt;/span&gt;: Ha &lt;span style=&quot; font-weight:600;&quot;&gt;bevitelként&lt;/span&gt; például IBus-t, uim-et, fcitx-et, vagy gcin-t, használ, ezek a beállítások &lt;span style=&quot; font-weight:600;&quot;&gt;nem fognak működni&lt;/span&gt; mert a beviteli módok ezt felülírják.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Megjegyzés&lt;/span&gt;: Ha &lt;span style=&quot; font-weight:600;&quot;&gt;beviteli módot, &lt;/span&gt;például IBus-t, uim-et, fcitx-et, vagy gcin-t, használ, ezek a beállítások &lt;span style=&quot; font-weight:600;&quot;&gt;nem fognak működni&lt;/span&gt; mert a beviteli módok ezt felülírják.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -160,12 +160,12 @@
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Balkezes (Bal és jobb gombok cseréje)</translation>
+        <translation>Balkezes (Bal és jobb egérgombok cseréje)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>Egykattintásos mód</translation>
+        <translation>Elemek aktiválása egy kattintással</translation>
     </message>
 </context>
 <context>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation>Billentyűzet és egér beállítása</translation>
+        <translation>Billentyűzet és egér beállítások</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="79"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation>K&amp;ikapcsolva</translation>
+        <translation>L&amp;etiltva</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Eszközcímke</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -289,7 +289,7 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished">Az LXQt csak a &quot;libinput&quot;-ot támogatja xinput driverként.
+        <translation>Az LXQt csak a &quot;libinput&quot;-ot támogatja xinput driverként.
 (jelenlegi érték: %1)
 
 Ha ez szándékos, állítsa be manuálisan az xinput-ot.
