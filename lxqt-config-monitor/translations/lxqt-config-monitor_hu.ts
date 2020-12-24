@@ -72,7 +72,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="65"/>
         <source>Left</source>
-        <translation>Bal</translation>
+        <translation>Balra</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="68"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="71"/>
         <source>Right</source>
-        <translation>Jobb</translation>
+        <translation>Jobbra</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="75"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation>Információk</translation>
+        <translation>Információ</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
@@ -260,12 +260,12 @@
     <message>
         <location filename="../monitorwidget.cpp" line="155"/>
         <source>Right</source>
-        <translation>Jobb</translation>
+        <translation>Jobbra</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="156"/>
         <source>Inverted</source>
-        <translation>Inverz</translation>
+        <translation>Megfordítva</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="244"/>
@@ -304,13 +304,14 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Megfelelőek a beállítások?</translation>
+        <translation>Megfelelőek a jelenlegi beállítások?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translatorcomment>%n másodperc van hátra</translatorcomment>
         <translation>
+            <numerusform>%n másodperc van hátra</numerusform>
             <numerusform>%n másodperc van hátra</numerusform>
         </translation>
     </message>

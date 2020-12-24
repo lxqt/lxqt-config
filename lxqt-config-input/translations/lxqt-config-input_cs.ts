@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Interval dvojkliku:</translation>
+        <translation>Interval dvojklepnutí:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
