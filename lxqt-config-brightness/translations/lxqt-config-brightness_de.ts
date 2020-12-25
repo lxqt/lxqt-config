@@ -83,7 +83,7 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>Helligkeit von 1 bis 100 einstellen.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>

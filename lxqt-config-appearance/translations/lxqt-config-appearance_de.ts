@@ -260,7 +260,7 @@
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenstertext:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
@@ -270,17 +270,17 @@
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgewählter Text:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Besuchter Link:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Stan&amp;dardpalette</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
