@@ -161,7 +161,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Тема значків</translation>
+        <translation>Тема піктограм</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -202,7 +202,7 @@
     <message>
         <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
-        <translation>Тема значків</translation>
+        <translation>Тема піктограм</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="88"/>
@@ -312,7 +312,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
-        <translation>Показувати тільки значок</translation>
+        <translation>Показувати лише піктограму</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="324"/>
@@ -322,12 +322,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>The text appears beside the icon</source>
-        <translation>Текс появляється поруч зі значком</translation>
+        <translation>Текст з&apos;являється поруч з піктограмою</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
-        <translation>Текст появляється під значком</translation>
+        <translation>Текст під піктограмою</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="339"/>
