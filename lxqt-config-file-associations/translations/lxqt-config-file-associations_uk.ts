@@ -191,7 +191,7 @@
         <location filename="../mimetypeviewer.ui" line="464"/>
         <location filename="../mimetypeviewer.ui" line="539"/>
         <source>Icon</source>
-        <translation>Значок</translation>
+        <translation>Піктограма</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="171"/>
