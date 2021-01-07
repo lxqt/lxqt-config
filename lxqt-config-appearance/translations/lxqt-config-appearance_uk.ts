@@ -171,7 +171,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Забарвлювати піктограми на основі стилю віджета (палітра)</translation>
     </message>
 </context>
 <context>
