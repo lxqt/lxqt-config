@@ -19,7 +19,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="148"/>
         <source>GTK themes</source>
-        <translation>GTK temos</translation>
+        <translation>GTK apipavidalinimai</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
@@ -161,12 +161,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Piktogramų tema</translation>
+        <translation>Piktogramų apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>XDG piktogramų temos KDE plėtinys -&gt; FollowsColorScheme</translation>
+        <translation>XDG piktogramų apipavidalinimo KDE plėtinys -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt tema</translation>
+        <translation>LXQt apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -202,12 +202,12 @@
     <message>
         <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
-        <translation>Piktogramų tema</translation>
+        <translation>Piktogramų apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
-        <translation>LXQt tema</translation>
+        <translation>LXQt apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="96"/>
@@ -285,26 +285,26 @@
     <message>
         <location filename="../styleconfig.ui" line="254"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Nustatyti GTK temas (GTK konfigūracijos failai bus nustelbti!)</translation>
+        <translation>Nustatyti GTK apipavidalinimus (GTK konfigūracijos failai bus nustelbti!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>GTK 3 Theme</source>
-        <translation>GTK 3 tema</translation>
+        <translation>GTK 3 apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>GTK 2 Theme</source>
-        <translation>GTK 2 tema</translation>
+        <translation>GTK 2 apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="294"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Norėdami pabandyti suvienodintą apipavidalinimą, visuose sąrašuose pasirinkite panašų stilių/temą (jei prieinama), arba pasirinkite &quot;gtk2&quot; Qt stilių (jei prieinama), kuris mėgdžiotų GTK temas.
+        <translation>Norėdami pabandyti suvienodintą apipavidalinimą, visuose sąrašuose pasirinkite panašų stilių/apipavidalinimų (jei prieinama), arba pasirinkite &quot;gtk2&quot; Qt stilių (jei prieinama), kuris mėgdžiotų GTK apipavidalinimus.
 
-Įsitikinkite, kad yra įdiegtas paketas &quot;xsettingsd&quot;, kuris padėtų GTK programoms iš karto taikyti temas.</translation>
+Įsitikinkite, kad yra įdiegtas paketas &quot;xsettingsd&quot;, kuris padėtų GTK programoms iš karto taikyti apipavidalinimus.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
