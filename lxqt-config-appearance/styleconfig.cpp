@@ -72,12 +72,11 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::
     connect(ui->linkVisitedColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
 
     connect(ui->defaultPaletteBtn, &QAbstractButton::clicked, [this] {
-        QColor winColor(239, 239, 239);
-        QPalette defaultPalette(winColor);
-        ui->winColorLabel->setColor(winColor, true);
+        //auto defaultPalette = this->defaultPalette();
+        auto defaultPalette = loadPalette(QStringLiteral("%1/lxqt-palette.conf").arg(LXQt::LXQtTheme::currentTheme().path()));
+        ui->winColorLabel->setColor(defaultPalette.color(QPalette::Window), true);
         ui->baseColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Base), true);
-        // Qt's default highlight color may be different from that of Fusion
-        ui->highlightColorLabel->setColor(QColor(60, 140, 230), true);
+        ui->highlightColorLabel->setColor(defaultPalette.color(QPalette::Highlight), true);
         ui->windowTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::WindowText), true);
         ui->viewTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Text), true);
         ui->highlightedTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::HighlightedText), true);
@@ -267,6 +266,77 @@ void StyleConfig::applyStyle()
         mConfigOtherToolKits->setGTKConfig(QStringLiteral("2.0"), themeName);
         // Update xsettingsd
         mConfigOtherToolKits->setXSettingsConfig();
+    }
+}
+
+QPalette StyleConfig::defaultPalette() const
+{
+  // note: This is the "current behavior" of LXQt appearance
+  //       which always implies a "light" theme (which may be a false assumption)!
+  //       However it doesn't make things worse as this resembles the behavior as of 0.16!
+  QColor highlightColor( 60, 140, 230); // #3c8ce6
+  QColor winColor      (239, 239, 239); // #efefef
+  QPalette palette(winColor);
+  // Qt's default highlight color may be different from that of Fusion
+  palette.setColor(QPalette::Highlight, highlightColor);
+  return palette;
+}
+
+QPalette StyleConfig::loadPalette(const QString& paletteFile) const
+{
+    QFile f(paletteFile);
+    if (f.exists()) {
+        QPalette palette;
+        QSettings paletteConfig(paletteFile, QSettings::IniFormat);
+        QColor namedColor; // color from string (e.g. #ffffff)
+
+        paletteConfig.beginGroup(QStringLiteral("Palette"));
+
+        namedColor = paletteConfig.value(QStringLiteral("base_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::Base, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("highlight_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::Highlight, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("highlighted_text_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::HighlightedText, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("link_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::Link, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("link_visited_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::LinkVisited, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("text_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::Text, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("window_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::Window, namedColor);
+        }
+
+        namedColor = paletteConfig.value(QStringLiteral("window_text_color")).toString();
+        if (namedColor.isValid()) {
+          palette.setColor(QPalette::WindowText, namedColor);
+        }
+
+        // TODO: some colors are not taken into account yet (e.g. QPalette::AlternateBase for table views)
+        paletteConfig.endGroup();
+        return palette;
+    } else {
+        return defaultPalette();
     }
 }
 

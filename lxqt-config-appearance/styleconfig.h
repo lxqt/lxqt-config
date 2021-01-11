@@ -50,6 +50,8 @@ public:
     ~StyleConfig();
 
     void applyStyle();
+    QPalette defaultPalette() const;
+    QPalette loadPalette(const QString& paletteFile) const;
 
 public slots:
     void initControls();
