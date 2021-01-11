@@ -21,7 +21,7 @@
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>時間(&amp;T):</translation>
+        <translation>時刻(&amp;T):</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation>時間:</translation>
+        <translation>時刻:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>

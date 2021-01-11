@@ -183,7 +183,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation>高度</translation>
+        <translation>詳細</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
@@ -304,7 +304,7 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>この設定で問題ないですか？</translation>
+        <translation>この設定で大丈夫ですか？</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
