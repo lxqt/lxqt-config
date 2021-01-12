@@ -32,12 +32,11 @@
 
 
 WarningLabel::WarningLabel(QWidget *parent)
-	: QWidget(parent)
+    : QWidget(parent)
 {
-	setupUi(this);
+    setupUi(this);
 
-	iconLabel->setPixmap(XdgIcon::fromTheme(QStringLiteral("dialog-warning")).pixmap(64, 64));
+    iconLabel->setPixmap(XdgIcon::fromTheme(QStringLiteral("dialog-warning")).pixmap(64, 64));
 
-	connect(showDirButton, SIGNAL(pressed()),
-			this, SIGNAL(showDirInfo()));
+    connect(showDirButton, &QPushButton::pressed, this, &WarningLabel::showDirInfo);
 }

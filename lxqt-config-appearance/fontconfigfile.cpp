@@ -229,7 +229,7 @@ void FontConfigFile::queueSave()
     {
         mSaveTimer = new QTimer();
         mSaveTimer->setSingleShot(true);
-        connect(mSaveTimer, SIGNAL(timeout()), this, SLOT(save()));
+        connect(mSaveTimer, &QTimer::timeout, this, &FontConfigFile::save);
         mSaveTimer->start(1500);
     }
 }

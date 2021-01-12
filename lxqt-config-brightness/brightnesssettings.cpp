@@ -52,7 +52,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         OutputWidget *output = new OutputWidget(monitor, this);
         ui->layout->addWidget(output);
         output->show();
-        connect(output, SIGNAL(changed(MonitorInfo)), this, SLOT(monitorSettingsChanged(MonitorInfo)));
+        connect(output, &OutputWidget::changed, this, &BrightnessSettings::monitorSettingsChanged);
         connect(this, &BrightnessSettings::monitorReverted, output, &OutputWidget::setRevertedValues);
     }
 

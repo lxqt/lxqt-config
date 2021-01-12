@@ -77,7 +77,7 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
 
     });
 
-    connect(ui.settingsButton, SIGNAL(clicked()), this, SLOT(showSettingsDialog()));
+    connect(ui.settingsButton, &QToolButton::clicked, this, &MonitorSettingsDialog::showSettingsDialog);
 }
 
 MonitorSettingsDialog::~MonitorSettingsDialog()
@@ -129,7 +129,7 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     for(const MonitorWidget *monitor1 : qAsConst(monitors)) {
         for(const MonitorWidget *monitor : qAsConst(monitors)) {
             if(monitor != monitor1)
-                connect(monitor, SIGNAL(primaryOutputChanged(MonitorWidget *)), monitor1, SLOT(onPrimaryOutputChanged(MonitorWidget *)));
+                connect(monitor, &MonitorWidget::primaryOutputChanged, monitor1, &MonitorWidget::onPrimaryOutputChanged);
         }
     }
 
