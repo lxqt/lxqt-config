@@ -88,12 +88,12 @@
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбросить гамму в значения по умолчанию.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: нельзя использовать параметры increase/decrease совместно с set</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
