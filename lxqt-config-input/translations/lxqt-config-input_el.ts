@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation>Διαμόρφωση επιφάνειας αφής</translation>
+        <translation>Διαμόρφωση επιφάνειας αφής </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation>Φυσική κύλιση:</translation>
+        <translation>Φυσική κύλιση</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
