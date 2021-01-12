@@ -196,7 +196,7 @@ void MonitorWidget::onEnabledChanged(bool enabled)
     }
 }
 
-void MonitorWidget::onOrientationChanged(int idx)
+void MonitorWidget::onOrientationChanged(int /* idx */)
 {
     output->setRotation((KScreen::Output::Rotation) ui.orientationCombo->currentData().toInt(0));
 }
@@ -212,18 +212,18 @@ void MonitorWidget::onBehaviorChanged(int idx)
         emit primaryOutputChanged(this);
 }
 
-void MonitorWidget::onPositionChanged(int value)
+void MonitorWidget::onPositionChanged(int /* value */)
 {
     output->setPos(QPoint(ui.xPosSpinBox->value(), ui.yPosSpinBox->value()));
 }
 
-void MonitorWidget::onResolutionChanged(int index)
+void MonitorWidget::onResolutionChanged(int /* index */)
 {
     output->setCurrentModeId(ui.resolutionCombo->currentData().toString());
     updateRefreshRates();
 }
 
-void MonitorWidget::onRateChanged(int index)
+void MonitorWidget::onRateChanged(int /* index */)
 {
     output->setCurrentModeId(ui.rateCombo->currentData().toString());
 }
