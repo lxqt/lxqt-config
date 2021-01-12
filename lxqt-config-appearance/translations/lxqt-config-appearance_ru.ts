@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажмите для изменения цвета.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -240,47 +240,47 @@
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Окно:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Обычный фон:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделение:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ссылка:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст окна:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Обычный текст:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделенный текст:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Посещённая ссылка:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Палитра по &amp;умолчанию</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
