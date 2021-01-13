@@ -209,37 +209,43 @@
         <location filename="../monitorwidget.cpp" line="128"/>
         <source>Name: %1
 </source>
-        <translation>Назва: %1</translation>
+        <translation>Назва: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="129"/>
         <source>Vendor: %1
 </source>
-        <translation>Виробник: %1</translation>
+        <translation>Виробник: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="130"/>
         <source>Serial: %1
 </source>
-        <translation>Серія: %1</translation>
+        <translation>Серійний номер: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="131"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Розмір дисплею: %1см x %2см</translation>
+        <translation>Розмір дисплея: %1см x %2см
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="132"/>
         <source>Serial number: %1
 </source>
-        <translation>Серійний номер: %1</translation>
+        <translation>Серійний номер: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="133"/>
         <source>EISA device ID: %1
 </source>
-        <translation>ID пристрою EISA: %1</translation>
+        <translation>ID пристрою EISA: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="153"/>
@@ -280,12 +286,12 @@
     <message>
         <location filename="../savesettings.cpp" line="87"/>
         <source>Name</source>
-        <translation type="unfinished">Назва</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="87"/>
         <source>Name:</source>
-        <translation type="unfinished">Назва:</translation>
+        <translation>Назва:</translation>
     </message>
 </context>
 <context>
