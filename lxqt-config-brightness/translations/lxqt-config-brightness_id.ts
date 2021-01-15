@@ -12,27 +12,27 @@
         <location filename="../brightnesssettings.ui" line="35"/>
         <location filename="../brightnesssettings.ui" line="74"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation>☀</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pengatur lampu latar dan kecerahan:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Lampu latar</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Kecerahan</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../outputwidget.ui" line="48"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="80"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation>☀</translation>
     </message>
 </context>
 <context>
@@ -73,32 +73,32 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>Meningkatkan kecerahan.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>Menurunkan kecerahan.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengatur kecerahan dari 1 sampai 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Setel ulang gamma ke nilai awal.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Tidak dapat menaikkan/menurunkan dan set dalam hubungannya</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Tidak dapat menggunakan opsi menaikkan dan menurunkan bersamaan</translation>
     </message>
 </context>
 </TS>
