@@ -39,7 +39,7 @@ set(UIS
 )
 
 set(ICONS
-	icons/monitor.svg
+    icons/monitor.svg
 )
 
 # Config file

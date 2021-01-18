@@ -41,7 +41,7 @@ public:
     QPoint buttonPos() { return showDirButton->pos(); }
 
 signals:
-	void showDirInfo();
+    void showDirInfo();
 };
 
 #endif

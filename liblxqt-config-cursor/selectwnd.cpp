@@ -62,21 +62,16 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     // Make sure we find out about selection changes
     connect(ui->lbThemes->selectionModel(), &QItemSelectionModel::currentChanged, this, &SelectWnd::currentChanged);
     // display/hide warning label
-    connect(mModel, SIGNAL(modelReset()),
-                    this, SLOT(handleWarning()));
-    connect(mModel, SIGNAL(rowsInserted(const QModelIndex&, int, int)),
-                    this, SLOT(handleWarning()));
-    connect(mModel, SIGNAL(rowsRemoved(const QModelIndex&, int, int)),
-                    this, SLOT(handleWarning()));
+    connect(mModel, &XCursorThemeModel::modelReset, this, &SelectWnd::handleWarning);
+    connect(mModel, &XCursorThemeModel::rowsInserted, this, &SelectWnd::handleWarning);
+    connect(mModel, &XCursorThemeModel::rowsRemoved, this, &SelectWnd::handleWarning);
 
-    connect(ui->warningLabel, SIGNAL(showDirInfo()),
-                    this, SLOT(showDirInfo()));
+    connect(ui->warningLabel, &WarningLabel::showDirInfo, this, &SelectWnd::showDirInfo);
     
     // Set actual cursor size
     ui->cursorSizeSpinBox->setValue(XcursorGetDefaultSize(QX11Info::display()));
     
-    connect(ui->cursorSizeSpinBox, SIGNAL(	valueChanged(int)),
-                    this, SLOT(cursorSizeChaged(int)));
+    connect(ui->cursorSizeSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &SelectWnd::cursorSizeChaged);
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there

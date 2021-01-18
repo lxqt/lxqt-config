@@ -59,6 +59,7 @@ signals:
 
 public Q_SLOTS:
     void setOnlyMonitor(bool isOnlyMonitor);
+    void onPrimaryOutputChanged(MonitorWidget *widget);
 
 private Q_SLOTS:
     void onEnabledChanged(bool);
@@ -67,7 +68,6 @@ private Q_SLOTS:
     void onResolutionChanged(int);
     void onRateChanged(int);
     void onOrientationChanged(int);
-    void onPrimaryOutputChanged(MonitorWidget *widget);
 
 private:
     Ui::MonitorWidget ui;

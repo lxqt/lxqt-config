@@ -29,7 +29,7 @@ OutputWidget::OutputWidget(MonitorInfo monitor, QWidget *parent):QWidget(parent)
     ui->brightnessSlider->setMaximum(200);
     ui->brightnessSlider->setValue(monitor.brightness()*100);
 
-    connect(ui->brightnessSlider, SIGNAL(valueChanged(int)), this, SLOT(brightnessChanged(int)));
+    connect(ui->brightnessSlider, &QSlider::valueChanged, this, &OutputWidget::brightnessChanged);
     connect(ui->brightnessDownButton, &QToolButton::clicked, 
         [this](bool){ ui->brightnessSlider->setValue(ui->brightnessSlider->value()-1); });
     connect(ui->brightnessUpButton, &QToolButton::clicked,

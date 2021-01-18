@@ -535,13 +535,13 @@ void QCategorizedView::setModel(QAbstractItemModel *model)
     d->blocks.clear();
 
     if (d->proxyModel) {
-        disconnect(d->proxyModel, SIGNAL(layoutChanged()), this, SLOT(slotLayoutChanged()));
+        disconnect(d->proxyModel, &QCategorizedSortFilterProxyModel::layoutChanged, this, &QCategorizedView::slotLayoutChanged);
     }
 
     d->proxyModel = dynamic_cast<QCategorizedSortFilterProxyModel*>(model);
 
     if (d->proxyModel) {
-        connect(d->proxyModel, SIGNAL(layoutChanged()), this, SLOT(slotLayoutChanged()));
+        connect(d->proxyModel, &QCategorizedSortFilterProxyModel::layoutChanged, this, &QCategorizedView::slotLayoutChanged);
     }
 
     QListView::setModel(model);
@@ -652,8 +652,7 @@ QCategoryDrawer *QCategorizedView::categoryDrawer() const
 void QCategorizedView::setCategoryDrawer(QCategoryDrawer *categoryDrawer)
 {
     if (d->categoryDrawerV2) {
-        disconnect(d->categoryDrawerV2, SIGNAL(collapseOrExpandClicked(QModelIndex)),
-                   this, SLOT(_k_slotCollapseOrExpandClicked(QModelIndex)));
+        disconnect(d->categoryDrawerV2, SIGNAL(collapseOrExpandClicked(QModelIndex)), this, SLOT(_k_slotCollapseOrExpandClicked(QModelIndex)));
     }
 
     d->categoryDrawer = categoryDrawer;
@@ -661,8 +660,7 @@ void QCategorizedView::setCategoryDrawer(QCategoryDrawer *categoryDrawer)
     d->categoryDrawerV3 = dynamic_cast<QCategoryDrawerV3*>(categoryDrawer);
 
     if (d->categoryDrawerV2) {
-        connect(d->categoryDrawerV2, SIGNAL(collapseOrExpandClicked(QModelIndex)),
-                this, SLOT(_k_slotCollapseOrExpandClicked(QModelIndex)));
+        connect(d->categoryDrawerV2, SIGNAL(collapseOrExpandClicked(QModelIndex)), this, SLOT(_k_slotCollapseOrExpandClicked(QModelIndex)));
     }
 }
 
@@ -1457,7 +1455,7 @@ void QCategorizedView::currentChanged(const QModelIndex &current,
 
 void QCategorizedView::dataChanged(const QModelIndex &topLeft,
                                    const QModelIndex &bottomRight,
-                                   const QVector<int> & roles)
+                                   const QVector<int> & /* roles */)
 {
     QListView::dataChanged(topLeft, bottomRight);
     if (!d->isCategorized()) {

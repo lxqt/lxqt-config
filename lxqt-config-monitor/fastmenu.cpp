@@ -30,7 +30,7 @@
 
 enum Options
 {
-	None=0, Extended=1, Unified=2, OnlyFirst=3, OnlySecond=4
+    None=0, Extended=1, Unified=2, OnlyFirst=3, OnlySecond=4
 };
 
 FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
@@ -41,7 +41,7 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
 
     ui.setupUi(this);
 
-    connect(ui.comboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(onSeleccionChanged(int)));
+    connect(ui.comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &FastMenu::onSeleccionChanged);
 }
 
 FastMenu::~FastMenu()

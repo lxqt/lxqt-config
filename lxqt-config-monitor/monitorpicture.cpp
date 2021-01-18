@@ -84,8 +84,8 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
         monitorsWidth += monitorPicture->rect().width();
         monitorsHeight += monitorPicture->rect().height();
         MonitorPictureProxy *proxy = new MonitorPictureProxy(this, monitorPicture);
-        proxy->connect(monitor->output.data(), SIGNAL(currentModeIdChanged()), SLOT(updateSize()));
-        proxy->connect(monitor->output.data(), SIGNAL(posChanged()), SLOT(updatePosition()));
+        proxy->connect(monitor->output.data(), &KScreen::Output::currentModeIdChanged, proxy, &MonitorPictureProxy::updateSize);
+        proxy->connect(monitor->output.data(), &KScreen::Output::posChanged, proxy, &MonitorPictureProxy::updatePosition);
     }
     // The blue rectangle is maximum size of virtual screen (framebuffer)
     scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
