@@ -37,10 +37,10 @@ ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  
 
     ui.setupUi(this);
 
-    connect(ui.allConfigs, SIGNAL(itemActivated(QListWidgetItem *)), SLOT(showSelectedConfig(QListWidgetItem *)));
-    connect(ui.deletePushButton, SIGNAL(clicked()), SLOT(onDeleteItem()));
-    connect(ui.renamePushButton, SIGNAL(clicked()), SLOT(onRenameItem()));
-    connect(ui.applyPushButton, SIGNAL(clicked()), SLOT(onApplyItem()));
+    connect(ui.allConfigs,       &QListWidget::itemActivated, this, &ManageSavedSettings::showSelectedConfig);
+    connect(ui.deletePushButton, &QPushButton::clicked,       this, &ManageSavedSettings::onDeleteItem);
+    connect(ui.renamePushButton, &QPushButton::clicked,       this, &ManageSavedSettings::onRenameItem);
+    connect(ui.applyPushButton,  &QPushButton::clicked,       this, &ManageSavedSettings::onApplyItem);
 
     loadSettings();
 }

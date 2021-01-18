@@ -99,7 +99,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
             ui.resolutionCombo->setItemData(ui.resolutionCombo->count()-1, font, Qt::FontRole);
         }
     }
-    connect(ui.resolutionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onResolutionChanged(int)));
+    connect(ui.resolutionCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MonitorWidget::onResolutionChanged);
 
     // Select actual mode in list
     if (output->currentMode()) {
@@ -169,11 +169,11 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         break;
     }
 
-    connect(ui.enabledCheckbox, SIGNAL(toggled(bool)), this, SLOT(onEnabledChanged(bool)));
-    connect(ui.behaviorCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onBehaviorChanged(int)));
-    connect(ui.xPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
-    connect(ui.yPosSpinBox, SIGNAL(valueChanged(int)), this, SLOT(onPositionChanged(int)));
-    connect(ui.orientationCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onOrientationChanged(int)));
+    connect(ui.enabledCheckbox,  &QCheckBox::toggled,                                 this, &MonitorWidget::onEnabledChanged);
+    connect(ui.behaviorCombo,    QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MonitorWidget::onBehaviorChanged);
+    connect(ui.xPosSpinBox,      QOverload<int>::of(&QSpinBox::valueChanged),         this, &MonitorWidget::onPositionChanged);
+    connect(ui.yPosSpinBox,      QOverload<int>::of(&QSpinBox::valueChanged),         this, &MonitorWidget::onPositionChanged);
+    connect(ui.orientationCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MonitorWidget::onOrientationChanged);
 
     // Force update behavior visibility
     onBehaviorChanged(ui.behaviorCombo->currentIndex());
@@ -196,7 +196,7 @@ void MonitorWidget::onEnabledChanged(bool enabled)
     }
 }
 
-void MonitorWidget::onOrientationChanged(int idx)
+void MonitorWidget::onOrientationChanged(int /* idx */)
 {
     output->setRotation((KScreen::Output::Rotation) ui.orientationCombo->currentData().toInt(0));
 }
@@ -212,25 +212,25 @@ void MonitorWidget::onBehaviorChanged(int idx)
         emit primaryOutputChanged(this);
 }
 
-void MonitorWidget::onPositionChanged(int value)
+void MonitorWidget::onPositionChanged(int /* value */)
 {
     output->setPos(QPoint(ui.xPosSpinBox->value(), ui.yPosSpinBox->value()));
 }
 
-void MonitorWidget::onResolutionChanged(int index)
+void MonitorWidget::onResolutionChanged(int /* index */)
 {
     output->setCurrentModeId(ui.resolutionCombo->currentData().toString());
     updateRefreshRates();
 }
 
-void MonitorWidget::onRateChanged(int index)
+void MonitorWidget::onRateChanged(int /* index */)
 {
     output->setCurrentModeId(ui.rateCombo->currentData().toString());
 }
 
 void MonitorWidget::updateRefreshRates()
 {
-    disconnect(ui.rateCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onRateChanged(int)));
+    disconnect(ui.rateCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MonitorWidget::onRateChanged);
     ui.rateCombo->clear();
 
     if (output->modes().size() < 0)
@@ -248,7 +248,7 @@ void MonitorWidget::updateRefreshRates()
             ui.rateCombo->setCurrentIndex(idx);
     }
 
-    connect(ui.rateCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(onRateChanged(int)));
+    connect(ui.rateCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MonitorWidget::onRateChanged);
 }
 
 void MonitorWidget::setOnlyMonitor(bool isOnlyMonitor)

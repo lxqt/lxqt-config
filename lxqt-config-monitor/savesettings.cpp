@@ -37,9 +37,9 @@ SaveSettings::SaveSettings(LXQt::Settings*applicationSettings, QWidget* parent):
     ui.save->setIcon(QIcon::fromTheme("document-save"));
     ui.save->setIconSize(size);
 
-    connect(ui.hardwareCompatibleConfigs, SIGNAL(itemDoubleClicked(QListWidgetItem *)), SLOT(setSavedSettings(QListWidgetItem *)));
-    connect(ui.deletePushButton, SIGNAL(clicked()), SLOT(onDeleteItem()));
-    connect(ui.renamePushButton, SIGNAL(clicked()), SLOT(onRenameItem()));
+    connect(ui.hardwareCompatibleConfigs, &QListWidget::itemDoubleClicked, this, &SaveSettings::setSavedSettings);
+    connect(ui.deletePushButton, &QPushButton::clicked, this, &SaveSettings::onDeleteItem);
+    connect(ui.renamePushButton, &QPushButton::clicked, this, &SaveSettings::onRenameItem);
 
     loadSettings();
 }
