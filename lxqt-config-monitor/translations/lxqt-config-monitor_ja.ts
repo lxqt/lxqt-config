@@ -299,7 +299,7 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>設定は変更されました</translation>
+        <translation>設定が変更されました</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
