@@ -280,7 +280,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished">Étiquette d&apos;informations sur l&apos;appareil</translation>
+        <translation>Étiquette d&apos;informations sur l&apos;appareil</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
