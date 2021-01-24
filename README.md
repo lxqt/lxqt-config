@@ -107,7 +107,7 @@ can be launched from the latter, too.
 
 
 
-###Translations
+### Translations
 
 Translations can be done in [LXQt-Weblate](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-config/)
 
