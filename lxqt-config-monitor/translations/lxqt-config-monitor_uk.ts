@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Застосовано типові налаштування монітора. Якщо ви хочете змінити налаштування моніторів, використовуйте lxqt-config-monitor.</translation>
     </message>
 </context>
 <context>
@@ -309,10 +309,10 @@
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Залишилась %n секунда</numerusform>
+            <numerusform>Залишилось %n секунди</numerusform>
+            <numerusform>Залишилось %n секунд</numerusform>
         </translation>
     </message>
 </context>
