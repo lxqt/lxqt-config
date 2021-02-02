@@ -230,7 +230,7 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation>Qt väripaletti</translation>
+        <translation>Qt-väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>

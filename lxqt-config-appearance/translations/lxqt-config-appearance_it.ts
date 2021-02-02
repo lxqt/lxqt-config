@@ -266,7 +266,7 @@
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished">Riquadro testo:</translation>
+        <translation>Testo riquadro:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>

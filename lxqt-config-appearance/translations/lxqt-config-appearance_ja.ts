@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; は上書きされました。&lt;/p&gt;&lt;p&gt;&apos;%2&apos; の古い設定からコピーをすることができます。&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; が上書きされました。&lt;/p&gt;&lt;p&gt;&apos;%2&apos; に古い設定のコピーがあります。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
