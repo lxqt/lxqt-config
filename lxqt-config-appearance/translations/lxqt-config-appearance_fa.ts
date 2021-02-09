@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>برای تغییر رنگ کلیک کنید.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; تغییر کرده است.&lt;/p&gt;&lt;p&gt; شما می‌توانید  یک کپی از تنظیمات گذشته خود را در  &apos;%2&apos; مشاهده نمایید&lt;/p&gt;</translation>
+        <translation>&lt;p&gt; &quot;٪ 1&quot; بازنویسی شد. &lt;/ p&gt; &lt;p&gt; شما می‌توانید یک نسخه از تنظیمات قدیمی خود را در &quot;٪ 2&quot; پیدا کنید &lt;/ p&gt;</translation>
     </message>
 </context>
 <context>
