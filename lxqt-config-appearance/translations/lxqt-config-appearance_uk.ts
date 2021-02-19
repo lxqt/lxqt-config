@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>Натисни, щоб змінити колір.</translation>
+        <translation>Клацніть, щоб змінити колір.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; був перезаписаний.&lt;/p&gt;&lt;p&gt;Ви можете знайти копію старих налаштувань у &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; було перевизначено.&lt;/p&gt;&lt;p&gt;Ви можете знайти копію старих налаштувань у &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Типовий шрифт для інтерфейсу користувача</translation>
+        <translation>Типовий шрифт інтерфейсу користувача</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Розширення KDE теми піктограм XDG -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -265,7 +265,7 @@
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст пергляду:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
@@ -275,34 +275,36 @@
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Відвідане посилання:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation>&amp;Палітра за замовчуванням</translation>
+        <translation>&amp;Типова палітра</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Встановити теми GTK (файли налаштувань GTK буде замінено)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема GTK 3</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема GTK 2</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="294"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Щоб спробувати уніфікувати вигляд, виберіть або схожий стиль/тему (якщо доступні) в усіх списках, або виберіть стиль «gtk2» для Qt (якщо доступний), щоб імітувати теми GTK.
+
+Переконайтеся, що встановлено &apos;xsettingsd&apos;, щоб допомогти програмам GTK застосовувати теми «на льоту».</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
@@ -317,7 +319,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="324"/>
         <source>Only display the text</source>
-        <translation>Показувати тільки текст</translation>
+        <translation>Показувати лише текст</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
@@ -342,7 +344,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль Qt</translation>
     </message>
 </context>
 </TS>
