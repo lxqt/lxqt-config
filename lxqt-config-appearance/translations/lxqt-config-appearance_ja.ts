@@ -302,9 +302,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>テーマを統一するには、すべてのリストで類似のスタイルやテーマを(可能ならば)選択するか、GTK テーマを再現するために Qt スタイルで &apos;gtk2&apos; を(可能ならば)選択します。
+        <translation>テーマを統一するには、すべてのリストで類似のスタイルやテーマを (可能ならば) 選択するか、GTK テーマを再現するために Qt スタイルで &apos;gtk2&apos; を (可能ならば) 選択して下さい。
 
-すぐに GTK アプリケーションのテーマに適用されるように、&apos;xsettingsd&apos; がインストールされていることを確認してください。</translation>
+すぐに GTK アプリケーションのテーマに適用されるように、&apos;xsettingsd&apos; がインストールされていることを確認して下さい。</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
