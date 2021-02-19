@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Натисни, щоб змінити колір.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Вибрати колір</translation>
     </message>
 </context>
 <context>
@@ -19,12 +19,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="148"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Теми GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; був перезаписаний.&lt;/p&gt;&lt;p&gt;Ви можете знайти копію старих налаштувань у &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Типовий шрифт для інтрфейсу користувача</translation>
+        <translation>Типовий шрифт для інтерфейсу користувача</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Замінити користувацькі шпалери</translation>
     </message>
 </context>
 <context>
@@ -230,37 +230,37 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Палітра Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Деякі стилі Qt можуть ігнорувати ці кольори.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вікно:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вигляд:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вибір:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Посилання:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст вікна:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
@@ -270,7 +270,7 @@
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Виділений текст:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
@@ -280,7 +280,7 @@
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Палітра за замовчуванням</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
