@@ -77,7 +77,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>以下の設定は、これから新たに実行するアプリケーションに適用されます</translation>
+        <translation>以下の設定は、これから新たに起動するアプリケーションに適用されます</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>

@@ -31,12 +31,12 @@
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Unitats de mesura :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tria e règlas de classament :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Unitats de mesura :</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="127"/>
@@ -71,22 +71,22 @@
     <message>
         <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres del format modificats</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Volètz enregistrar las modificacions ? S’aplicaràn a la connexion venenta.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="438"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Imperial Reialme-Unit</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="442"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>Imperial Estats-Units</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="446"/>
