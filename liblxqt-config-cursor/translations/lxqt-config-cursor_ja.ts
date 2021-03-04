@@ -54,7 +54,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>カーソルテーマを見つけられませんでした。代わりに、デフォルトの X11 カーソルテーマが使われます。次のディレクトリを探しました:</translation>
+        <translation>カーソルテーマを見つけられませんでした。代わりに、既定の X11 カーソルテーマが使われます。次のディレクトリを探しました:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>

@@ -17,7 +17,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de rétroéclairage et de luminosité:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de rétroéclairage et de luminosité :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Sortie:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Sortie :&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="48"/>
@@ -93,12 +93,12 @@
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation>%1: Impossible d&apos;utiliser l&apos;augmentation /la diminution et de les définir conjointement</translation>
+        <translation>%1 : Impossible d&apos;utiliser increase/decrease et set conjointement</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation>%1: Impossible d&apos;utiliser les options d&apos;augmentation et de diminution conjointement</translation>
+        <translation>%1 : Impossible d&apos;utiliser les options increase et decrease conjointement</translation>
     </message>
 </context>
 </TS>
