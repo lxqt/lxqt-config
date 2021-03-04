@@ -37,7 +37,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>ユーザーインターフェースのデフォルトのフォント</translation>
+        <translation>ユーザーインターフェースの既定のフォント</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -334,7 +334,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="339"/>
         <source>Default</source>
-        <translation>デフォルト</translation>
+        <translation>既定値</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="347"/>
