@@ -6,12 +6,12 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>Nastavení vzhledu ukazatele myši</translation>
+        <translation>Nastavení vzhledu ukazovátka myši</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Vyberte vzhled ukazatele, který chcete používat (vyzkoušíte najetím myší na náhled). &lt;b&gt;Po provedení změny je třeba restartovat sezení LXQt&lt;/b&gt;:</translation>
+        <translation>Vyberte vzhled ukazovátka, který chcete používat (vyzkoušíte najetím myší na náhled). &lt;b&gt;Po provedení změny je třeba restartovat sezení LXQt&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt se nepodařilo najít žádný vzhled ukazatele. Bude se používat výchozí vzhled graf. serveru X11. LXQt hledalo v následujících složkách:</translation>
+        <translation>LXQt se nepodařilo najít žádný vzhled ukazovátka. Bude se používat výchozí vzhled graf. serveru X11. LXQt hledalo v následujících složkách:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>

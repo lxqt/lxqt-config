@@ -217,7 +217,7 @@
     <message>
         <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
-        <translation>Ukazatel</translation>
+        <translation>Ukazovátko</translation>
     </message>
 </context>
 <context>
@@ -302,9 +302,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Pokud se chcete pokusit o jednotný motiv vzhledu, buď vyberte podobný styl / motiv vzhledu (pokud je k dispozici) napříč všemi seznamy, nebo vyberte Qt motiv vzhledu „gtk2“ (pokud je k dispozici) a napodobte tak GTK motivy vzhledu.
+        <translation>Pokud se chcete pokusit o jednotný motiv vzhledu, buď vyberte podobný styl / motiv vzhledu (pokud je dostupný) napříč všemi seznamy, nebo vyberte Qt motiv vzhledu „gtk2“ (pokud je dostupný) a napodobte tak GTK motivy vzhledu.
 
-Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že je nainstalované „xsettingsd“.</translation>
+Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že je nainstalován „xsettingsd“.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
@@ -339,7 +339,7 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
     <message>
         <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
-        <translation>Aktivovat prvek jedním kliknutím</translation>
+        <translation>Aktivovat prvek jedním klepnutím</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
