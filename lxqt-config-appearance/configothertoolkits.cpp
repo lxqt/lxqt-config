@@ -35,6 +35,8 @@
 #include <QDateTime>
 #include <QMessageBox>
 #include <QProcess>
+#include <LXQt/lxqtplatform.h>
+#include <QDebug>
 
 #include <sys/types.h>
 #include <signal.h>
@@ -74,7 +76,23 @@ Gtk/ToolbarStyle "%5"
 Gtk/CursorThemeName "%6"
 )XSETTINGS_CONFIG";
 
-ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
+static const char *GTK3_GSETTINGS = R"GTK3_GSETTINGS(
+set org.gnome.desktop.interface icon-theme "%2"
+set org.gnome.desktop.interface gtk-theme "%1"
+set org.gnome.desktop.interface font-name "%3"
+set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ButtonImages': <%4>, 'Gtk/MenuImages': <%4>}"
+set org.gnome.desktop.interface toolbar-style "%5"
+set org.gnome.desktop.interface cursor-theme "%6" 
+)GTK3_GSETTINGS";
+
+/*
+ * Button and menu images are deprecated in GTK 3.10:
+ *    https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-menu-images
+ * Toolbar-style is also deprecated.
+ * GTK just doesn't intend to support image menu items. They're considered bad practice in modern UI. 
+ */
+
+ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QWidget *parent) : QObject(parent)
 {
     mSettings = settings;
     mConfigAppearanceSettings = configAppearanceSettings;
@@ -161,11 +179,26 @@ void ConfigOtherToolKits::setConfig()
     if(! controlGTKThemeEnabled)
         return;
     updateConfigFromSettings();
-    mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("3.0"));
-    setGTKConfig(QStringLiteral("3.0"));
+
+    // Write GTK x config files
     mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("2.0"));
     setGTKConfig(QStringLiteral("2.0"));
-    setXSettingsConfig();
+    mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("3.0"));
+    setGTKConfig(QStringLiteral("3.0"));
+
+    LXQt::Platform::PLATFORM platform = LXQt::Platform::getPlatform();
+    switch(platform) {
+        case LXQt::Platform::X11:
+            // Call to xsettings to update config
+            setXSettingsConfig();
+            break;
+        case LXQt::Platform::WAYLAND:
+            setGsettingsConfig(QStringLiteral("3.0"));
+            break;
+        default:
+            qDebug() << "[lxqt-config-appearance]: Unknown platform";
+            break;
+    }
 }
 
 void ConfigOtherToolKits::setXSettingsConfig()
@@ -180,12 +213,31 @@ void ConfigOtherToolKits::setXSettingsConfig()
     if(QProcess::Running == mXsettingsdProc.state()) {
         QFile file(tempFile.fileName());
         if(file.open(QIODevice::WriteOnly)) {
-            file.write( getConfig(XSETTINGS_CONFIG).toLocal8Bit() );
+            file.write( getConfig(XSETTINGS_CONFIG, ConfigOtherToolKits::GTK3).toLocal8Bit());
             file.flush();
             file.close();
         }
         int pid = mXsettingsdProc.processId();
         kill(pid, SIGHUP);
+    }
+}
+
+void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
+{
+    updateConfigFromSettings();
+    if(!theme.isEmpty())
+        mConfig.styleTheme = theme;
+    QString commands;
+    if(version == QLatin1String("3.0"))
+        commands = getConfig(GTK3_GSETTINGS, ConfigOtherToolKits::GTK3GSETTINGS);
+    // GTK 4 config is set by gsettings
+    for(QString command : commands.split(QStringLiteral("\n"))) {
+        if(command.isEmpty())
+            continue;
+        QStringList args = QProcess::splitCommand(QStringView(command));
+        bool ok = QProcess::startDetached(QStringLiteral("gsettings"), args);
+        if(!ok)
+            QMessageBox::critical((QWidget*) parent(), tr("Error"), tr("Error: gsettings can not be run"));
     }
 }
 
@@ -197,23 +249,46 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
     backupGTKSettings(version);
     QString gtkrcPath = getGTKConfigPath(version);
     if(version == QLatin1String("2.0"))
-        writeConfig(gtkrcPath, GTK2_CONFIG);
+        writeConfig(gtkrcPath, GTK2_CONFIG, ConfigOtherToolKits::GTK2);
     else
-        writeConfig(gtkrcPath, GTK3_CONFIG);
+        writeConfig(gtkrcPath, GTK3_CONFIG, ConfigOtherToolKits::GTK3);
 }
 
-QString ConfigOtherToolKits::getConfig(const char *configString)
+QString ConfigOtherToolKits::getConfig(const char *configString, ConfigOtherToolKits::Version version)
 {
     LXQt::Settings* sessionSettings = new LXQt::Settings(QStringLiteral("session"));
     QString mouseStyle = sessionSettings->value(QStringLiteral("Mouse/cursor_theme")).toString();
     delete sessionSettings;
-    return QString::fromUtf8(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
-        mConfig.fontName, mConfig.buttonStyle==0 ? QStringLiteral("0"):QStringLiteral("1"),
-        mConfig.toolButtonStyle, mouseStyle
-        );
+    switch(version) {
+        case ConfigOtherToolKits::GTK3GSETTINGS:
+            {
+                QString toolBar;
+                if(mConfig.toolButtonStyle == QLatin1String("GTK_TOOLBAR_ICONS"))
+                    toolBar = QStringLiteral("icons");
+                else if(mConfig.toolButtonStyle == QLatin1String("GTK_TOOLBAR_TEXT"))
+                    toolBar = QStringLiteral("text");
+                else if(mConfig.toolButtonStyle == QLatin1String("GTK_TOOLBAR_BOTH"))
+                    toolBar = QStringLiteral("both");
+                else if(mConfig.toolButtonStyle == QLatin1String("GTK_TOOLBAR_BOTH_HORIZ"))
+                    toolBar = QStringLiteral("both-horiz");
+                return QString::fromUtf8(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
+                        mConfig.fontName, mConfig.buttonStyle==0 ? QStringLiteral("0"):QStringLiteral("1"),
+                        toolBar, mouseStyle
+                        );
+            }
+            break;
+        case ConfigOtherToolKits::GTK3:
+        case ConfigOtherToolKits::GTK2:
+            return QString::fromUtf8(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
+            mConfig.fontName, mConfig.buttonStyle==0 ? QStringLiteral("0"):QStringLiteral("1"),
+            mConfig.toolButtonStyle, mouseStyle
+            );
+    };
+
+    return QString();
 }
 
-void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
+void ConfigOtherToolKits::writeConfig(QString path, const char *configString, Version version)
 {
     path = _get_config_path(path);
 
@@ -226,7 +301,7 @@ void ConfigOtherToolKits::writeConfig(QString path, const char *configString)
         return;
     }
     QTextStream out(&file);
-    out << getConfig(configString);
+    out << getConfig(configString, version);
     out.flush();
     file.close();
 }

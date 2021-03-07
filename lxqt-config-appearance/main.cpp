@@ -30,6 +30,8 @@
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include <QCommandLineParser>
+#include <LXQt/lxqtplatform.h>
+
 #include "iconthemeconfig.h"
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
@@ -101,12 +103,16 @@ int main (int argc, char **argv)
     });
 
     /*** Cursor Theme ***/
-    SelectWnd* cursorPage = new SelectWnd(sessionSettings, dialog);
-    cursorPage->setCurrent();
-    dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
-    QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog] {
-        dialog->enableButton(QDialogButtonBox::Apply, true);
-    });
+    SelectWnd* cursorPage = nullptr; 
+    LXQt::Platform::PLATFORM platform = LXQt::Platform::getPlatform();
+    if(platform == LXQt::Platform::X11) {
+        cursorPage = new SelectWnd(sessionSettings, dialog);
+        cursorPage->setCurrent();
+        dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
+        QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog] {
+                dialog->enableButton(QDialogButtonBox::Apply, true);
+                });
+    }
 
     // apply all changes on clicking Apply
     QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton btn) {
@@ -115,7 +121,8 @@ int main (int argc, char **argv)
             iconPage->applyIconTheme();
             themePage->applyLxqtTheme();
             fontsPage->updateQtFont();
-            cursorPage->applyCusorTheme();
+            if(cursorPage != nullptr)
+                cursorPage->applyCusorTheme();
             stylePage->applyStyle(); // Cursor and font have to be set before style
             // disable Apply button after changes are applied
             dialog->enableButton(btn, false);
