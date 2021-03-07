@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="si">
 <context>
     <name>ColorLabel</name>
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>Klepněte pro změnu barvy.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation>Vybrat barvu</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -19,12 +19,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="148"/>
         <source>GTK themes</source>
-        <translation>GTK motivy vzhledu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="149"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;„%1“ bylo přepsáno.&lt;/p&gt;&lt;p&gt;Kopie původních nastavení je k dispozici v „%2“&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32,123 +32,123 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation>Písmo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Výchozí písmo uživatelského rozhraní</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Název písma:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Styl:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Velikost v bodech:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation>Normální</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation>Tučné</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation>Kurzíva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation>Tučná kurzíva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Následující nastavení ovlivní pouze nově spuštěné aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Vyhlazovat hrany písmen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Styl doladění zobrazení písma:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation>Žádné</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation>Lehké</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation>Střední</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation>Plné</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Doladění zobrazení písma (hinting)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Rozlišení na palec (DPI):</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Automatické doladění zobrazení písma</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Vyhlazování na úrovni dílčích segmentů bodů obrazovky:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation>RGB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation>BGR</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation>VRGB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation>VBGR</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -156,22 +156,22 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Nastavení vzhledu LXQt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Téma ikon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>KDE rozšíření témat XDG ikon -&gt; Následuje barevné schéma</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Obarvovat ikony na základě stylu prvku (paleta)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -179,12 +179,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>Téma vzhledu LXQt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Přepsat uživatelem určené pozadí plochy</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -192,32 +192,32 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Nastavení vzhledu LXQt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation>Styl obslužného prvku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>
         <source>Icons Theme</source>
-        <translation>Vzhled ikon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="88"/>
         <source>LXQt Theme</source>
-        <translation>Vzhled LXQt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="96"/>
         <source>Font</source>
-        <translation>Písmo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -225,126 +225,124 @@
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation>Styl obslužného prvku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation>Paleta Qt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation>Některé styly Qt mohou přehlížet tyto barvy.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation>Okno:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Zobrazení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation>Výběr:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation>Odkaz:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation>Text okna:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation>Text zobrazení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation>Vybraný text:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation>Navštívený odkaz:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation>&amp;Výchozí paleta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Nastavit GTK motivy vzhledu (soubory s nastaveními GTK budou přepsány!)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>GTK 3 Theme</source>
-        <translation>GTK 3 motiv vzhledu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>GTK 2 Theme</source>
-        <translation>GTK 2 motiv vzhledu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="294"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Pokud se chcete pokusit o jednotný motiv vzhledu, buď vyberte podobný styl / motiv vzhledu (pokud je dostupný) napříč všemi seznamy, nebo vyberte Qt motiv vzhledu „gtk2“ (pokud je dostupný) a napodobte tak GTK motivy vzhledu.
-
-Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že je nainstalován „xsettingsd“.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
-        <translation>Styl tlačítek v nástrojovém pruhu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
-        <translation>Zobrazovat pouze ikonu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="324"/>
         <source>Only display the text</source>
-        <translation>Zobrazovat pouze text</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>The text appears beside the icon</source>
-        <translation>Text vedle ikony</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
-        <translation>Text pod ikonou</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="339"/>
         <source>Default</source>
-        <translation>Výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
-        <translation>Aktivovat prvek jedním klepnutím</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation>Qt styl</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

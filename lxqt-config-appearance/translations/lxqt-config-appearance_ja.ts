@@ -82,7 +82,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>アンチエイリアスされたフォントを用いる</translation>
+        <translation>アンチエイリアスのフォントを使用する</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>フォントのヒンティング</translation>
+        <translation>フォントヒンティング</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>サブピクセルアンチエイリアス:</translation>
+        <translation>サブピクセル アンチエイリアス:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
