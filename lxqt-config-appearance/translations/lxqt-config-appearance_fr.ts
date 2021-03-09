@@ -245,7 +245,7 @@
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Voir :</translation>
+        <translation>Vue :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
