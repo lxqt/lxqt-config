@@ -206,7 +206,7 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>キーボードレイアウトを選択</translation>
+        <translation>キーボードレイアウトの選択</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
