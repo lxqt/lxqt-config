@@ -104,8 +104,7 @@ int main (int argc, char **argv)
 
     /*** Cursor Theme ***/
     SelectWnd* cursorPage = nullptr; 
-    LXQt::Platform::PLATFORM platform = LXQt::Platform::getPlatform();
-    if(platform == LXQt::Platform::X11) {
+    if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
         cursorPage = new SelectWnd(sessionSettings, dialog);
         cursorPage->setCurrent();
         dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));

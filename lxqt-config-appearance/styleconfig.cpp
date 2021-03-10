@@ -36,7 +36,7 @@
 #include <QMetaProperty>
 #include <QMetaEnum>
 #include <QToolBar>
-#include <LXQt/lxqtplatform.h>
+#include <QGuiApplication>
 
 
 #ifdef Q_WS_X11
@@ -264,8 +264,7 @@ void StyleConfig::applyStyle()
         // GTK3
         themeName = ui->gtk3ComboBox->currentText();
         mConfigOtherToolKits->setGTKConfig(QStringLiteral("3.0"), themeName);
-        LXQt::Platform::PLATFORM platform = LXQt::Platform::getPlatform();
-        if(platform == LXQt::Platform::WAYLAND)
+        if(QGuiApplication::platformName() == QStringLiteral("wayland"))
             mConfigOtherToolKits->setGsettingsConfig(QStringLiteral("3.0"), themeName);
         // GTK2
         themeName = ui->gtk2ComboBox->currentText();

@@ -35,7 +35,7 @@
 #include <QDateTime>
 #include <QMessageBox>
 #include <QProcess>
-#include <LXQt/lxqtplatform.h>
+#include <QGuiApplication>
 #include <QDebug>
 
 #include <sys/types.h>
@@ -70,9 +70,9 @@ static const char *XSETTINGS_CONFIG = R"XSETTINGS_CONFIG(
 Net/IconThemeName "%2"
 Net/ThemeName "%1"
 Gtk/FontName "%3"
-Gtk/MenuImages %4
-Gtk/ButtonImages %4
-Gtk/ToolbarStyle "%5"
+# Gtk/MenuImages %4
+# Gtk/ButtonImages %4
+# Gtk/ToolbarStyle "%5"
 Gtk/CursorThemeName "%6"
 )XSETTINGS_CONFIG";
 
@@ -80,8 +80,8 @@ static const char *GTK3_GSETTINGS = R"GTK3_GSETTINGS(
 set org.gnome.desktop.interface icon-theme "%2"
 set org.gnome.desktop.interface gtk-theme "%1"
 set org.gnome.desktop.interface font-name "%3"
-set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ButtonImages': <%4>, 'Gtk/MenuImages': <%4>}"
-set org.gnome.desktop.interface toolbar-style "%5"
+# set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ButtonImages': <%4>, 'Gtk/MenuImages': <%4>}"
+# set org.gnome.desktop.interface toolbar-style "%5"
 set org.gnome.desktop.interface cursor-theme "%6" 
 )GTK3_GSETTINGS";
 
@@ -186,18 +186,13 @@ void ConfigOtherToolKits::setConfig()
     mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("3.0"));
     setGTKConfig(QStringLiteral("3.0"));
 
-    LXQt::Platform::PLATFORM platform = LXQt::Platform::getPlatform();
-    switch(platform) {
-        case LXQt::Platform::X11:
-            // Call to xsettings to update config
-            setXSettingsConfig();
-            break;
-        case LXQt::Platform::WAYLAND:
-            setGsettingsConfig(QStringLiteral("3.0"));
-            break;
-        default:
-            qDebug() << "[lxqt-config-appearance]: Unknown platform";
-            break;
+    if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
+        // Call to xsettings to update config
+        setXSettingsConfig();
+    } else if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        setGsettingsConfig(QStringLiteral("3.0"));
+    } else {
+        qDebug() << "[lxqt-config-appearance]: Unknown platform";
     }
 }
 
@@ -230,9 +225,8 @@ void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
     QString commands;
     if(version == QLatin1String("3.0"))
         commands = getConfig(GTK3_GSETTINGS, ConfigOtherToolKits::GTK3GSETTINGS);
-    // GTK 4 config is set by gsettings
     for(QString command : commands.split(QStringLiteral("\n"))) {
-        if(command.isEmpty())
+        if(command.isEmpty() or command.startsWith(QStringLiteral("#")))
             continue;
         QStringList args = QProcess::splitCommand(QStringView(command));
         bool ok = QProcess::startDetached(QStringLiteral("gsettings"), args);
