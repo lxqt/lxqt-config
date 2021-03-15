@@ -57,7 +57,7 @@
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation>Autres applications de gestion %1</translation>
+        <translation>Autres applications de gestion de %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="187"/>
         <source>Patterns</source>
-        <translation>Motifs</translation>
+        <translation>Extension</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="193"/>
