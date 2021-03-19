@@ -18,8 +18,9 @@
 #include <QTextCodec>
 #include <QTextStream>
 
+#include <QProcess>
 #include <QX11Info>
-
+#include <QString>
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
@@ -107,7 +108,7 @@ QCursor XCursorImage::cursor () const {
 
 
 QImage XCursorImage::image (int size) const {
-  if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
+  if (size == -1) size = getDefaultCursorSize();
   if (!mImage) return QImage();
   return mImage->copy();
 }
@@ -259,4 +260,26 @@ QImage XCursorImages::buildImage () const {
     }
   }
   return res;
+}
+
+
+int getDefaultCursorSize()
+{
+    int size = 24; // Default size
+    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        size = XcursorGetDefaultSize(QX11Info::display());
+    else {
+        // Wayland: get default cursor size
+        QProcess proc;
+        proc.start(QStringLiteral("gsettings"), QProcess::splitCommand(QStringLiteral("get org.gnome.desktop.interface cursor-size")), QIODevice::ReadOnly);
+        if(proc.waitForStarted()) {
+            proc.waitForFinished();
+            QByteArray buff = proc.readAll();
+            bool ok;
+            size = buff.toInt(&ok);
+            if(! ok) size = 24;
+        }
+    }
+
+    return size;
 }

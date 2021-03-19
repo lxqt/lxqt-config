@@ -31,6 +31,8 @@
 #include <LXQt/ConfigDialog>
 #include <QCommandLineParser>
 #include <LXQt/lxqtplatform.h>
+#include <QMessageBox>
+#include <QGuiApplication>
 
 #include "iconthemeconfig.h"
 #include "lxqtthemeconfig.h"
@@ -103,28 +105,30 @@ int main (int argc, char **argv)
     });
 
     /*** Cursor Theme ***/
-    SelectWnd* cursorPage = nullptr; 
-    if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
-        cursorPage = new SelectWnd(sessionSettings, dialog);
-        cursorPage->setCurrent();
-        dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
-        QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog] {
-                dialog->enableButton(QDialogButtonBox::Apply, true);
-                });
-    }
+    SelectWnd* cursorPage = new SelectWnd(sessionSettings, dialog);
+    cursorPage->setCurrent();
+    dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
+    std::shared_ptr<bool> cursorChanged = std::make_shared<bool>(false);
+    QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog, cursorChanged] {
+            dialog->enableButton(QDialogButtonBox::Apply, true);
+            *cursorChanged = true;
+            });
 
     // apply all changes on clicking Apply
     QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton btn) {
         if (btn == QDialogButtonBox::Apply)
         {
+            // FIXME: Update cursor style on Qt apps on wayland and GTK on X11. 
+            if(*cursorChanged)
+                QMessageBox::information(dialog, QDialog::tr("Information"), QDialog::tr("LXQT session needs restart after this changes.")); 
             iconPage->applyIconTheme();
             themePage->applyLxqtTheme();
             fontsPage->updateQtFont();
-            if(cursorPage != nullptr)
-                cursorPage->applyCusorTheme();
+            cursorPage->applyCusorTheme();
             stylePage->applyStyle(); // Cursor and font have to be set before style
             // disable Apply button after changes are applied
             dialog->enableButton(btn, false);
+            *cursorChanged = false;
         }
         else if (btn == QDialogButtonBox::Reset)
             dialog->enableButton(QDialogButtonBox::Apply, false); // disable Apply button on resetting too

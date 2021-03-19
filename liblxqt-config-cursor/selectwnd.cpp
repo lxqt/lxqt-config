@@ -39,6 +39,8 @@
 #include <QX11Info>
 #include <X11/Xcursor/Xcursor.h>
 
+#include <QGuiApplication>
+
 const QString HOME_ICON_DIR(QDir::homePath() + QStringLiteral("/.icons"));
 
 SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
@@ -48,7 +50,7 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
 {
     ui->setupUi(this);
     ui->warningLabel->hide();
-    ui->preview->setCurrentCursorSize(XcursorGetDefaultSize(QX11Info::display()));
+    ui->preview->setCurrentCursorSize(getDefaultCursorSize());
     ui->preview->setCursorSize(ui->preview->getCurrentCursorSize());
 
     mModel = new XCursorThemeModel(this);
@@ -69,7 +71,8 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     connect(ui->warningLabel, &WarningLabel::showDirInfo, this, &SelectWnd::showDirInfo);
     
     // Set actual cursor size
-    ui->cursorSizeSpinBox->setValue(XcursorGetDefaultSize(QX11Info::display()));
+    ui->cursorSizeSpinBox->setValue(getDefaultCursorSize());
+
     
     connect(ui->cursorSizeSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &SelectWnd::cursorSizeChaged);
 

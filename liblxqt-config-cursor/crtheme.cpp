@@ -22,6 +22,7 @@
 #include <QDebug>
 
 #include "crtheme.h"
+#include "xcr/xcrimg.h"
 
 #include <QStyle>
 #include <QX11Info>
@@ -177,7 +178,8 @@ XcursorImages *XCursorThemeData::xcLoadImages(const QString &image, int size) co
 
 unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) const
 {
-    if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
+    if (size == -1) size = getDefaultCursorSize();
+
     // Load the cursor images
     XcursorImages *images = xcLoadImages(name, size);
     if (!images) images = xcLoadImages(findAlternative(name), size);
@@ -185,7 +187,10 @@ unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) 
     //if (!images) return LegacyTheme::loadCursor(name);
     if (!images) return 0;
     // Create the cursor
-    unsigned long handle = (unsigned long)XcursorImagesLoadCursor(QX11Info::display(), images);
+
+    unsigned long handle = 0;
+    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        handle = (unsigned long)XcursorImagesLoadCursor(QX11Info::display(), images);
     XcursorImagesDestroy(images);
     //setCursorName(cursor, name);
     return handle;
@@ -193,7 +198,8 @@ unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) 
 
 QImage XCursorThemeData::loadImage(const QString &name, int size) const
 {
-    if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
+    if (size == -1) size = getDefaultCursorSize();
+
     // Load the image
     XcursorImage *xcimage = xcLoadImage(name, size);
     if (!xcimage) xcimage = xcLoadImage(findAlternative(name), size);
@@ -218,12 +224,15 @@ bool haveXfixes()
 {
     bool result = false;
     int event_base, error_base;
-    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
-    {
-        int major, minor;
-        XFixesQueryVersion(QX11Info::display(), &major, &minor);
-        result = (major >= 2);
-    }
+
+
+    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
+        {
+            int major, minor;
+            XFixesQueryVersion(QX11Info::display(), &major, &minor);
+            result = (major >= 2);
+        }
     return result;
 }
 
@@ -235,7 +244,8 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
     if (!haveXfixes()) return false;
     
     // Sets default cursor size
-    XcursorSetDefaultSize(QX11Info::display(), cursorSize);
+    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        XcursorSetDefaultSize(QX11Info::display(), cursorSize);
 
     // Set up the proper launch environment for newly started apps
     //k8:!!!:KToolInvocation::klauncher()->setLaunchEnv("XCURSOR_THEME", themeName);
@@ -265,7 +275,9 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
     for (const QString &name : qAsConst(names))
     {
         Cursor cursor = (Cursor)theme.loadCursorHandle(name);
-        XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
+
+        if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+            XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
         // FIXME: do we need to free the cursor?
     }
     return true;
@@ -273,5 +285,21 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 
 QString getCurrentTheme()
 {
+    if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        QProcess proc;
+        QString theme(QStringLiteral("Adwaita"));
+        proc.start(QStringLiteral("gsettings"), QProcess::splitCommand(QStringLiteral("get org.gnome.desktop.interface cursor-theme")), QIODevice::ReadOnly);
+        if(proc.waitForStarted()) {
+            proc.waitForFinished();
+            QByteArray buff = proc.readAll().trimmed();
+            if(!buff.isEmpty()) {
+                // Remove the "'" symbol
+                buff.remove(0, 1); buff.chop(1);
+                theme = QString::fromLocal8Bit(buff);
+            }
+        }
+        qDebug() << theme;
+        return theme;
+    }
     return QString::fromUtf8(XcursorGetTheme(QX11Info::display()));
 }

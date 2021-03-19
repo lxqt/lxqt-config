@@ -32,6 +32,7 @@
 
 #include <QX11Info>
 #include <QWindow>
+#include <QGuiApplication>
 
 namespace {
     // Preview cursors
@@ -129,8 +130,10 @@ PreviewWidget::~PreviewWidget()
 void PreviewWidget::setCursorHandle(xcb_cursor_t cursorHandle)
 {
     WId wid = nativeParentWidget()->windowHandle()->winId();
-    xcb_change_window_attributes(QX11Info::connection(), wid, XCB_CW_CURSOR, &cursorHandle);
-    xcb_flush(QX11Info::connection());
+    if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
+        xcb_change_window_attributes(QX11Info::connection(), wid, XCB_CW_CURSOR, &cursorHandle);
+        xcb_flush(QX11Info::connection());
+    }
 }
 
 
