@@ -304,7 +304,7 @@
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Чи теперішні налаштування Вас влаштовують?</translation>
+        <translation>Чи влаштовують вас поточні налаштування?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
