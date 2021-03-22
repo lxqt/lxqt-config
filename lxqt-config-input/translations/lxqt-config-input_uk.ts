@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Зауваження&lt;/span&gt;: якщо Ви використовуєте такі &lt;span style=&quot; font-weight:600;&quot;&gt;методи введення&lt;/span&gt;, як IBus, uim, fcitx, або gcin, тоді налаштування тут &lt;span style=&quot; font-weight:600;&quot;&gt;можуть не спрацювати&lt;/span&gt;, тому що вони будуть перезаписані власними налаштуваннями методів вводу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Примітка&lt;/span&gt;: якщо ви користуєтеся такими &lt;span style=&quot; font-weight:600;&quot;&gt;методами введення&lt;/span&gt;, як IBus, uim, fcitx, або gcin, тоді налаштування тут &lt;span style=&quot; font-weight:600;&quot;&gt;можуть не спрацювати&lt;/span&gt;, тому що вони будуть перезаписані власними налаштуваннями методів введення.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
