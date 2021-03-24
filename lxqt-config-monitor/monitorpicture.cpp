@@ -207,7 +207,7 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
 void MonitorPicture::adjustNameSize()
 {
     prepareGeometryChange();
-    qreal fontWidth = QFontMetrics(textItem->font()).width(monitorWidget->output->name() + QStringLiteral("  "));
+    qreal fontWidth = QFontMetrics(textItem->font()).horizontalAdvance(monitorWidget->output->name() + QStringLiteral("  "));
     textItem->setScale((qreal) this->rect().width() / fontWidth);
     QTransform transform;
     qreal width = qAbs(this->rect().width()/svgItem->boundingRect().width());
