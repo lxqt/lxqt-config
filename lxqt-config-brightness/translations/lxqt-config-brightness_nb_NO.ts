@@ -73,12 +73,12 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished">Lysere.</translation>
+        <translation>Lysere.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished">Mørkere.</translation>
+        <translation>Mørkere.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
@@ -88,17 +88,17 @@
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished">Tilbakestill gamma til forvalgt verdi.</translation>
+        <translation>Tilbakestill gamma til forvalgt verdi.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished">%1: Kan bruke increase/decrease og set sammen</translation>
+        <translation>%1: Kan ikke bruke lysere/mørkere og innstill sammen</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished">%1: Kan ikke bruke increase og decrese -innstillinger sammen</translation>
+        <translation>%1: Kan ikke bruke lysere og mørkere -innstillinger sammen</translation>
     </message>
 </context>
 </TS>
