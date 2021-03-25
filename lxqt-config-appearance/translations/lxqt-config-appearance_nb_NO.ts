@@ -250,7 +250,7 @@
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished">Markering:</translation>
+        <translation>Markering:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>

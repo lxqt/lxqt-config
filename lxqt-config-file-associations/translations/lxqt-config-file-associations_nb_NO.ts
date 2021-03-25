@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished">Endre …</translation>
+        <translation>Endre …</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,7 +99,7 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation type="unfinished">Velg …</translation>
+        <translation>Velg …</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
