@@ -16,7 +16,7 @@
     <message>
         <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Installer le nouveau thème...</translation>
+        <translation>&amp;Installer un nouveau thème...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>

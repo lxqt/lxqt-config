@@ -11,7 +11,7 @@
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>Dé&amp;tails des réglages</translation>
+        <translation>Réglages dé&amp;taillés</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>

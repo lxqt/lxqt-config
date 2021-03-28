@@ -37,7 +37,7 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Très Long</translation>
+        <translation>Long</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
@@ -70,7 +70,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Activer le verrouillage numérique au démarrage</translation>
+        <translation>Activer le verrouillage numérique après la connexion</translation>
     </message>
 </context>
 <context>
@@ -270,7 +270,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation>Bords</translation>
+        <translation>Bo&amp;rds</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
