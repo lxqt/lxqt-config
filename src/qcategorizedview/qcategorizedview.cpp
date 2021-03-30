@@ -1192,6 +1192,7 @@ QModelIndex QCategorizedView::moveCursor(CursorAction cursorAction,
 
                     return QModelIndex();
                 }
+                break;
             }
         case MoveUp: {
                 if (d->hasGrid() || uniformItemSizes()) {
@@ -1226,6 +1227,7 @@ QModelIndex QCategorizedView::moveCursor(CursorAction cursorAction,
 
                     return QModelIndex();
                 }
+                break;
             }
         default:
             break;

@@ -76,8 +76,8 @@ QSize ItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInd
     int height = fm1.lineSpacing() + fm2.lineSpacing();
     height = qMax(height, option.decorationSize.height());
     // Compute the text width
-    int width = fm1.width(firstRow);
-    width = qMax(width, fm2.width(secondRow));
+    int width = fm1.horizontalAdvance(firstRow);
+    width = qMax(width, fm2.horizontalAdvance(secondRow));
     // Add decoration width + margin
     width += option.decorationSize.width()+decorationMargin;
     return QSize(width, height+16);
@@ -125,8 +125,8 @@ void ItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     x = option.rect.left()+option.decorationSize.width()+decorationMargin;
     int y1 = option.rect.top()+(option.rect.height()-textAreaHeight)/2;
     int y2 = y1+fm1.lineSpacing();
-    QRect firstRowRect = QStyle::visualRect(option.direction, option.rect, QRect(x, y1, fm1.width(firstRow), fm1.lineSpacing()));
-    QRect secondRowRect = QStyle::visualRect(option.direction, option.rect, QRect(x, y2, fm2.width(secondRow), fm2.lineSpacing()));
+    QRect firstRowRect = QStyle::visualRect(option.direction, option.rect, QRect(x, y1, fm1.horizontalAdvance(firstRow), fm1.lineSpacing()));
+    QRect secondRowRect = QStyle::visualRect(option.direction, option.rect, QRect(x, y2, fm2.horizontalAdvance(secondRow), fm2.lineSpacing()));
     painter->setPen(textcol);
 
     // First line

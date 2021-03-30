@@ -132,11 +132,13 @@ public:
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
+        Q_UNUSED(parent)
         return m_list.count();
     }
 
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
+    bool setData(const QModelIndex &, const QVariant &, int role = Qt::EditRole) override
     {
+        Q_UNUSED(role)
         return false;
     }
 
