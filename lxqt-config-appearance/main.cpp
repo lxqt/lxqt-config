@@ -30,7 +30,6 @@
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include <QCommandLineParser>
-#include <LXQt/lxqtplatform.h>
 #include <QMessageBox>
 #include <QGuiApplication>
 
