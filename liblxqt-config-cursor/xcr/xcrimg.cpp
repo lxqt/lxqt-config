@@ -17,10 +17,10 @@
 #include <QStyle>
 #include <QTextCodec>
 #include <QTextStream>
-
-#include <QProcess>
+#include <QSettings>
 #include <QX11Info>
 #include <QString>
+
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
@@ -270,15 +270,13 @@ int getDefaultCursorSize()
         size = XcursorGetDefaultSize(QX11Info::display());
     else {
         // Wayland: get default cursor size
-        QProcess proc;
-        proc.start(QStringLiteral("gsettings"), QProcess::splitCommand(QStringLiteral("get org.gnome.desktop.interface cursor-size")), QIODevice::ReadOnly);
-        if(proc.waitForStarted()) {
-            proc.waitForFinished();
-            QByteArray buff = proc.readAll();
-            bool ok;
-            size = buff.toInt(&ok);
-            if(! ok) size = 24;
-        }
+        QString path = QDir::home().absolutePath() + QStringLiteral("/.icons/default/index.theme");
+        if(! QFile::exists(path))
+            path = QStringLiteral("/usr/share/icons/default/index.theme");
+        if(! QFile::exists(path))
+            return size;
+        QSettings cursorTheme(path, QSettings::IniFormat);
+        size = cursorTheme.value(QStringLiteral("Icon Theme/Size"), size).toInt();
     }
 
     return size;

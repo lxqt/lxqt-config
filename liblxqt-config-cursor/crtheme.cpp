@@ -26,7 +26,7 @@
 
 #include <QStyle>
 #include <QX11Info>
-
+#include <QSettings>
 #include "cfgfile.h"
 
 #include <X11/Xlib.h>
@@ -285,21 +285,23 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 
 QString getCurrentTheme()
 {
+    // Wayland cursor theme
     if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
-        QProcess proc;
-        QString theme(QStringLiteral("Adwaita"));
-        proc.start(QStringLiteral("gsettings"), QProcess::splitCommand(QStringLiteral("get org.gnome.desktop.interface cursor-theme")), QIODevice::ReadOnly);
-        if(proc.waitForStarted()) {
-            proc.waitForFinished();
-            QByteArray buff = proc.readAll().trimmed();
-            if(!buff.isEmpty()) {
-                // Remove the "'" symbol
-                buff.remove(0, 1); buff.chop(1);
-                theme = QString::fromLocal8Bit(buff);
-            }
-        }
-        qDebug() << theme;
-        return theme;
+        QString name, inherits; 
+        QString path = QDir::home().absolutePath() + QStringLiteral("/.icons/default/index.theme");
+        if(! QFile::exists(path))
+            path = QStringLiteral("/usr/share/icons/default/index.theme");
+        if(! QFile::exists(path))
+            return QString();
+        QSettings cursorTheme(path, QSettings::IniFormat);
+        name = cursorTheme.value(QStringLiteral("Icon Theme/Name")).toString();
+        inherits = cursorTheme.value(QStringLiteral("Icon Theme/Inherits")).toString();
+
+        if(name == QStringLiteral("Default") || name.isEmpty())
+            return inherits;
+        else
+            return name;
     }
+    // X11 cursor theme
     return QString::fromUtf8(XcursorGetTheme(QX11Info::display()));
 }
