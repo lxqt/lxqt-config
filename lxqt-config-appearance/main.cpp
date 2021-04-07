@@ -107,10 +107,8 @@ int main (int argc, char **argv)
     SelectWnd* cursorPage = new SelectWnd(sessionSettings, dialog);
     cursorPage->setCurrent();
     dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
-    std::shared_ptr<bool> cursorChanged = std::make_shared<bool>(false);
-    QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog, cursorChanged] {
+    QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog] {
             dialog->enableButton(QDialogButtonBox::Apply, true);
-            *cursorChanged = true;
             });
 
     // apply all changes on clicking Apply
@@ -118,8 +116,6 @@ int main (int argc, char **argv)
         if (btn == QDialogButtonBox::Apply)
         {
             // FIXME: Update cursor style on Qt apps on wayland and GTK on X11. 
-            if(*cursorChanged)
-                QMessageBox::information(dialog, QDialog::tr("Information"), QDialog::tr("LXQT session needs restart after this changes.")); 
             iconPage->applyIconTheme();
             themePage->applyLxqtTheme();
             fontsPage->updateQtFont();
@@ -127,7 +123,6 @@ int main (int argc, char **argv)
             stylePage->applyStyle(); // Cursor and font have to be set before style
             // disable Apply button after changes are applied
             dialog->enableButton(btn, false);
-            *cursorChanged = false;
         }
         else if (btn == QDialogButtonBox::Reset)
             dialog->enableButton(QDialogButtonBox::Apply, false); // disable Apply button on resetting too

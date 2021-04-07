@@ -225,28 +225,28 @@ bool haveXfixes()
     bool result = false;
     int event_base, error_base;
 
-
-    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
-        if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
-        {
-            int major, minor;
-            XFixesQueryVersion(QX11Info::display(), &major, &minor);
-            result = (major >= 2);
-        }
+    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
+    {
+        int major, minor;
+        XFixesQueryVersion(QX11Info::display(), &major, &minor);
+        result = (major >= 2);
+    }
     return result;
 }
 
 bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 {
-    // Require the Xcursor version that shipped with X11R6.9 or greater, since
-    // in previous versions the Xfixes code wasn't enabled due to a bug in the
-    // build system (freedesktop bug #975).
-    if (!haveXfixes()) return false;
-    
-    // Sets default cursor size
-    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
-        XcursorSetDefaultSize(QX11Info::display(), cursorSize);
+    bool isX11 = QGuiApplication::platformName() == QStringLiteral("xcb"); 
+    if(isX11)
+    {
+        // Require the Xcursor version that shipped with X11R6.9 or greater, since
+        // in previous versions the Xfixes code wasn't enabled due to a bug in the
+        // build system (freedesktop bug #975).
+        if (!haveXfixes()) return false;
 
+        // Sets default cursor size
+        XcursorSetDefaultSize(QX11Info::display(), cursorSize);
+    }
     // Set up the proper launch environment for newly started apps
     //k8:!!!:KToolInvocation::klauncher()->setLaunchEnv("XCURSOR_THEME", themeName);
 
@@ -275,8 +275,7 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
     for (const QString &name : qAsConst(names))
     {
         Cursor cursor = (Cursor)theme.loadCursorHandle(name);
-
-        if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        if(isX11)
             XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
         // FIXME: do we need to free the cursor?
     }
