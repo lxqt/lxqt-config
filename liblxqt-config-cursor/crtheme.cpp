@@ -22,10 +22,11 @@
 #include <QDebug>
 
 #include "crtheme.h"
+#include "xcr/xcrimg.h"
 
 #include <QStyle>
 #include <QX11Info>
-
+#include <QSettings>
 #include "cfgfile.h"
 
 #include <X11/Xlib.h>
@@ -177,7 +178,8 @@ XcursorImages *XCursorThemeData::xcLoadImages(const QString &image, int size) co
 
 unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) const
 {
-    if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
+    if (size == -1) size = getDefaultCursorSize();
+
     // Load the cursor images
     XcursorImages *images = xcLoadImages(name, size);
     if (!images) images = xcLoadImages(findAlternative(name), size);
@@ -185,7 +187,10 @@ unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) 
     //if (!images) return LegacyTheme::loadCursor(name);
     if (!images) return 0;
     // Create the cursor
-    unsigned long handle = (unsigned long)XcursorImagesLoadCursor(QX11Info::display(), images);
+
+    unsigned long handle = 0;
+    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        handle = (unsigned long)XcursorImagesLoadCursor(QX11Info::display(), images);
     XcursorImagesDestroy(images);
     //setCursorName(cursor, name);
     return handle;
@@ -193,7 +198,8 @@ unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) 
 
 QImage XCursorThemeData::loadImage(const QString &name, int size) const
 {
-    if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
+    if (size == -1) size = getDefaultCursorSize();
+
     // Load the image
     XcursorImage *xcimage = xcLoadImage(name, size);
     if (!xcimage) xcimage = xcLoadImage(findAlternative(name), size);
@@ -218,6 +224,7 @@ bool haveXfixes()
 {
     bool result = false;
     int event_base, error_base;
+
     if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
     {
         int major, minor;
@@ -229,14 +236,17 @@ bool haveXfixes()
 
 bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 {
-    // Require the Xcursor version that shipped with X11R6.9 or greater, since
-    // in previous versions the Xfixes code wasn't enabled due to a bug in the
-    // build system (freedesktop bug #975).
-    if (!haveXfixes()) return false;
-    
-    // Sets default cursor size
-    XcursorSetDefaultSize(QX11Info::display(), cursorSize);
+    bool isX11 = QGuiApplication::platformName() == QStringLiteral("xcb"); 
+    if(isX11)
+    {
+        // Require the Xcursor version that shipped with X11R6.9 or greater, since
+        // in previous versions the Xfixes code wasn't enabled due to a bug in the
+        // build system (freedesktop bug #975).
+        if (!haveXfixes()) return false;
 
+        // Sets default cursor size
+        XcursorSetDefaultSize(QX11Info::display(), cursorSize);
+    }
     // Set up the proper launch environment for newly started apps
     //k8:!!!:KToolInvocation::klauncher()->setLaunchEnv("XCURSOR_THEME", themeName);
 
@@ -265,7 +275,8 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
     for (const QString &name : qAsConst(names))
     {
         Cursor cursor = (Cursor)theme.loadCursorHandle(name);
-        XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
+        if(isX11)
+            XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
         // FIXME: do we need to free the cursor?
     }
     return true;
@@ -273,5 +284,23 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 
 QString getCurrentTheme()
 {
+    // Wayland cursor theme
+    if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        QString name, inherits; 
+        QString path = QDir::home().absolutePath() + QStringLiteral("/.icons/default/index.theme");
+        if(! QFile::exists(path))
+            path = QStringLiteral("/usr/share/icons/default/index.theme");
+        if(! QFile::exists(path))
+            return QString();
+        QSettings cursorTheme(path, QSettings::IniFormat);
+        name = cursorTheme.value(QStringLiteral("Icon Theme/Name")).toString();
+        inherits = cursorTheme.value(QStringLiteral("Icon Theme/Inherits")).toString();
+
+        if(name == QStringLiteral("Default") || name.isEmpty())
+            return inherits;
+        else
+            return name;
+    }
+    // X11 cursor theme
     return QString::fromUtf8(XcursorGetTheme(QX11Info::display()));
 }

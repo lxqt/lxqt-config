@@ -31,8 +31,8 @@
 #include <QString>
 #include <QStringList>
 
-#include <xcb/xcb.h>
-#include <xcb/xproto.h>
+//#include <xcb/xcb.h>
+//#include <xcb/xproto.h>
 
 ///////////////////////////////////////////////////////////////////////////////
 // X11 is SHIT!

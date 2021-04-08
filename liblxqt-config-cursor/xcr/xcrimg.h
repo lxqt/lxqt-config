@@ -112,5 +112,6 @@ protected:
   QList<XCursorImage *> mList;
 };
 
+int getDefaultCursorSize();
 
 #endif

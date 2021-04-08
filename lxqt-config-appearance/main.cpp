@@ -30,6 +30,9 @@
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
 #include <QCommandLineParser>
+#include <QMessageBox>
+#include <QGuiApplication>
+
 #include "iconthemeconfig.h"
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
@@ -105,13 +108,14 @@ int main (int argc, char **argv)
     cursorPage->setCurrent();
     dialog->addPage(cursorPage, QObject::tr("Cursor"), QStringList() << QStringLiteral("input-mouse") << QStringLiteral("preferences-desktop"));
     QObject::connect(cursorPage, &SelectWnd::settingsChanged, dialog, [dialog] {
-        dialog->enableButton(QDialogButtonBox::Apply, true);
-    });
+            dialog->enableButton(QDialogButtonBox::Apply, true);
+            });
 
     // apply all changes on clicking Apply
     QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton btn) {
         if (btn == QDialogButtonBox::Apply)
         {
+            // FIXME: Update cursor style on Qt apps on wayland and GTK on X11. 
             iconPage->applyIconTheme();
             themePage->applyLxqtTheme();
             fontsPage->updateQtFont();

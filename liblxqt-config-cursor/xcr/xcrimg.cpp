@@ -17,8 +17,9 @@
 #include <QStyle>
 #include <QTextCodec>
 #include <QTextStream>
-
+#include <QSettings>
 #include <QX11Info>
+#include <QString>
 
 
 #include <X11/Xlib.h>
@@ -107,7 +108,7 @@ QCursor XCursorImage::cursor () const {
 
 
 QImage XCursorImage::image (int size) const {
-  if (size == -1) size = XcursorGetDefaultSize(QX11Info::display());
+  if (size == -1) size = getDefaultCursorSize();
   if (!mImage) return QImage();
   return mImage->copy();
 }
@@ -259,4 +260,24 @@ QImage XCursorImages::buildImage () const {
     }
   }
   return res;
+}
+
+
+int getDefaultCursorSize()
+{
+    int size = 24; // Default size
+    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
+        size = XcursorGetDefaultSize(QX11Info::display());
+    else {
+        // Wayland: get default cursor size
+        QString path = QDir::home().absolutePath() + QStringLiteral("/.icons/default/index.theme");
+        if(! QFile::exists(path))
+            path = QStringLiteral("/usr/share/icons/default/index.theme");
+        if(! QFile::exists(path))
+            return size;
+        QSettings cursorTheme(path, QSettings::IniFormat);
+        size = cursorTheme.value(QStringLiteral("Icon Theme/Size"), size).toInt();
+    }
+
+    return size;
 }

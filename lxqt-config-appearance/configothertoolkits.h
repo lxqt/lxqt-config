@@ -48,6 +48,7 @@ public slots:
     void setConfig();
     void setXSettingsConfig();
     void setGTKConfig(QString version, QString theme = QString());
+    void setGsettingsConfig(QString version, QString theme = QString());
 
 private:
     struct Config {
@@ -57,8 +58,12 @@ private:
         QString toolButtonStyle;
         int buttonStyle;
     } mConfig;
-    void writeConfig(QString path, const char *configString);
-    QString getConfig(const char *configString);
+
+    enum Version {
+        GTK2, GTK3, GTK3GSETTINGS
+    };
+    void writeConfig(QString path, const char *configString, Version version);
+    QString getConfig(const char *configString, Version version);
     void updateConfigFromSettings();
 
     LXQt::Settings *mSettings;
