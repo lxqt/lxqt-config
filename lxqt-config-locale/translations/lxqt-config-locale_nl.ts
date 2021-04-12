@@ -11,12 +11,12 @@
     <message>
         <location filename="../localeconfig.ui" line="76"/>
         <source>De&amp;tailed Settings</source>
-        <translation>Gede&amp;tailleerde instellingen</translation>
+        <translation>Ui&amp;tgebreide instellingen</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>Ge&amp;tallen:</translation>
+        <translation>Getalle&amp;n:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
@@ -66,27 +66,27 @@
     <message>
         <location filename="../localeconfig.cpp" line="127"/>
         <source>No change</source>
-        <translation>Geen verandering</translation>
+        <translation>Niets aangepast</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
-        <translation>De instellingen zijn veranderd</translation>
+        <translation>De instellingen zijn aangepast</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Wilt u uw wijzigingen opslaan? Ze zullen van kracht worden nadat u zich opnieuw hebt aangemeld.</translation>
+        <translation>Wilt u uw aanpassingen opslaan? Ze zullen worden toegepast zodra u zich opnieuw aanmeldt.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="438"/>
         <source>Imperial UK</source>
-        <translation>Imperial GB</translation>
+        <translation>Imperiaal (VK)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="442"/>
         <source>Imperial US</source>
-        <translation>Imperial US</translation>
+        <translation>Imperiaal (VS)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="446"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt regionale instellingen</translation>
+        <translation>LXQt-regio-instellingen</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>ApplicationChooser</source>
-        <translation>Toepassingenkiezer</translation>
+        <translation>Programmakiezer</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Kies een toepassing voor:</translation>
+        <translation>Kies een programma voor:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Toepassingen die kunnen omgaan met JPEG</translation>
+        <translation>Programma&apos;s die overweg kunnen met jpeg</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -29,51 +29,51 @@
         <location filename="../applicationchooser.ui" line="139"/>
         <location filename="../applicationchooser.ui" line="144"/>
         <source>New Subitem</source>
-        <translation>Nieuw subelement</translation>
+        <translation>Nieuw onderliggend item</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="135"/>
         <location filename="../applicationchooser.cpp" line="191"/>
         <location filename="../applicationchooser.cpp" line="217"/>
         <source>Other applications</source>
-        <translation>Andere toepassingen</translation>
+        <translation>Andere programma&apos;s</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Webbrowsers</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mailprogramma&apos;s</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsbeheerders</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Andere programma&apos;s die overweg kunnen met %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
         <location filename="../applicationchooser.cpp" line="220"/>
         <source>Applications that handle %1</source>
-        <translation>Toepassingen die kunnen omgaan met %1</translation>
+        <translation>Programma&apos;s die overweg kunnen met %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="305"/>
         <source>No applications found</source>
-        <translation>Geen toepassingen gevonden</translation>
+        <translation>Geen programma&apos;s aangetroffen</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen verdere programma&apos;s aangetroffen</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wijzigen…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,17 +99,17 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiezen…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
         <source>&amp;Change...</source>
-        <translation>&amp;Veranderen...</translation>
+        <translation>&amp;Wijzigen…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="389"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Kiezen...</translation>
+        <translation>&amp;Kiezen…</translation>
     </message>
 </context>
 <context>
@@ -117,49 +117,49 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Bestandassociaties</translation>
+        <translation>Bestandstoewijzingen</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Toewijzingen</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
         <source>Default application</source>
-        <translation>Standaardtoepassing</translation>
+        <translation>Standaardprogramma</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Kiezen...</translation>
+        <translation>&amp;Kiezen…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardprogramma&apos;s</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Webbrowser</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
         <location filename="../mimetypeviewer.ui" line="487"/>
         <location filename="../mimetypeviewer.ui" line="562"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiezen…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
         <source>Email Client</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mailprogramma</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>
         <source>File Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsbeheerder</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>

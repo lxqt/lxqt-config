@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation type="unfinished"></translation>
+        <translation>De standaard beeldscherminstellingen zijn toegepast. Als u deze wilt aanpassen, kunt u lxqt-config-monitor gebruiken.</translation>
     </message>
 </context>
 <context>
@@ -52,12 +52,12 @@
     <message>
         <location filename="../managesavedsettings.ui" line="38"/>
         <source>Rename</source>
-        <translation>Hernoemen</translation>
+        <translation>Naam wijzigen</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Delete</source>
-        <translation>Wissen</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>Houd beeldschermen aangesloten</translation>
+        <translation>Beeldschermen aangesloten houden</translation>
     </message>
 </context>
 <context>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="90"/>
         <source>Enable this display</source>
-        <translation>Schakel dit scherm in</translation>
+        <translation>Scherm inschakelen</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="98"/>
@@ -188,22 +188,22 @@
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Beeldherhalingsfrequentie:</translation>
+        <translation>Ververssnelheid:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation>Draaiing:</translation>
+        <translation>Draaien:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation>Informatie</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>Informatie over beeldscherm</translation>
+        <translation>Beeldscherminformatie</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="128"/>
@@ -244,7 +244,7 @@
         <location filename="../monitorwidget.cpp" line="133"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA apparaat-ID: %1
+        <translation>EISA-apparaatid: %1
 </translation>
     </message>
     <message>
@@ -255,17 +255,17 @@
     <message>
         <location filename="../monitorwidget.cpp" line="154"/>
         <source>Left</source>
-        <translation>Links</translation>
+        <translation>Naar links</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="155"/>
         <source>Right</source>
-        <translation>Rechts</translation>
+        <translation>Naar rechts</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="156"/>
         <source>Inverted</source>
-        <translation>Omgedraaid</translation>
+        <translation>Omdraaien</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="244"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>Beheer opgeslagen instellingen</translation>
+        <translation>Opgeslagen instellingen beheren</translation>
     </message>
 </context>
 <context>
@@ -299,19 +299,19 @@
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>Instellingen zijn veranderd</translation>
+        <translation>De instellingen zijn aangepast</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Zijn de huidige instellingen goed voor u?</translation>
+        <translation>Zijn de huidige instellingen goed?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
-            <numerusform>%n second(en) te gaan</numerusform>
-            <numerusform>%n seconden te gaan</numerusform>
+            <numerusform>Nog %n seconde</numerusform>
+            <numerusform>Nog %n seconden</numerusform>
         </translation>
     </message>
 </context>
