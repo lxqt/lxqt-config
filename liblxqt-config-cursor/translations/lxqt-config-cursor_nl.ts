@@ -6,27 +6,27 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt instellingen voor muisthema</translation>
+        <translation>LXQt-cursorthema-instellingen</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Kies het muisthema dat u wilt gebruiken (zweef-voorbeeldweergave om de aanwijzer uit te proberen). &lt;b&gt;De LXQt-sessie moet na deze verandering worden herstart&lt;/b&gt;:</translation>
+        <translation>Kies het cursorthema dat u wilt gebruiken (ga met de muis naar de voorvertoning om uit te proberen). &lt;b&gt;Herstart de LXQt-sessie om de wijziging toe te passen&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Installeer nieuw thema...</translation>
+        <translation>Thema &amp;installeren…</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation>LXQt-session moet worden herstart om deze wijziging te zien.</translation>
+        <translation>Herstart de LXQt-sessie om de wijziging toe te passen.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
-        <translation>V&amp;ijder thema</translation>
+        <translation>Thema ve&amp;rwijderen</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="111"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
-        <translation>Fout van XcurTheme</translation>
+        <translation>XcurTheme-fout</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="234"/>
@@ -54,12 +54,12 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt kon geen aanwijzerthema vinden. In plaats daarvan zal het standaardthema van X11 worden gebruikt. LXQt zocht in de volgende mappen:</translation>
+        <translation>Er is geen cursorthema aangetroffen. In plaats daarvan zal het standaardthema van X11 worden gebruikt. LXQt heeft de volgende mappen doorzocht:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>Tonen...</translation>
+        <translation>Bekijken…</translation>
     </message>
 </context>
 <context>
