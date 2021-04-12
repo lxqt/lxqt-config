@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klik om de kleur te wijzigen.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies een kleur</translation>
     </message>
 </context>
 <context>
@@ -37,12 +37,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Standaardlettertype voor gebruikersschil</translation>
+        <translation>Standaardlettertype van werkomgeving</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Naam van lettertype:</translation>
+        <translation>Lettertypenaam:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -62,32 +62,32 @@
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation>Vet</translation>
+        <translation>Vetgedrukt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation>Schuin</translation>
+        <translation>Cursief</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation>Vet en schuin</translation>
+        <translation>Vetgedrukt en cursief</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>De volgende instellingen hebben alleen gevolg voor nieuw opgestarte toepassingen</translation>
+        <translation>De volgende instellingen worden alleen toegepast op nieuw geopende programma&apos;s</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Gebruik antikartelvorming-lettertypen</translation>
+        <translation>Anti-kartelvorming gebruiken</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Bijstelling-stijl voor lettertypes:</translation>
+        <translation>Hintstijl van lettertypen:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -113,22 +113,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Bijstelling van lettertypes</translation>
+        <translation>Hinten</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Resolutie (DPI):</translation>
+        <translation>Resolutie (dpi):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Automatische bijstelling</translation>
+        <translation>Automatisch hinten</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Subpixel-antikartelvorming:</translation>
+        <translation>Subpixel-anti-kartelvorming:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt-instellingen voor uiterlijk</translation>
+        <translation>LXQt-vormgevingsinstellingen</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Kleur pictogrammen in op basis van stijl van minitoepassing (palet)</translation>
+        <translation>Pictogrammen inkleuren op basis van elementstijl (palet)</translation>
     </message>
 </context>
 <context>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Door gebruiker ingestelde bureaubladachtergrond negeren</translation>
+        <translation>Eigen ingestelde bureaubladachtergrond negeren</translation>
     </message>
 </context>
 <context>
@@ -192,12 +192,12 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt-instellingen voor uiterlijk</translation>
+        <translation>LXQt-vormgevingsinstellingen</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation>Stijl van de bedieningselementen</translation>
+        <translation>Elementstijl</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../main.cpp" line="106"/>
         <source>Cursor</source>
-        <translation>Aanwijzer</translation>
+        <translation>Cursor</translation>
     </message>
 </context>
 <context>
@@ -225,62 +225,62 @@
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation>Stijl van de bedieningselementen</translation>
+        <translation>Stijl van bedieningselementen</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt-palet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sommige Qt-thema&apos;s negeren deze kleuren.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Venster:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergave:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Link:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstertekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergavetekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Geselecteerde tekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezochte link:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Stan&amp;daardpalet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
@@ -302,24 +302,24 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Om uniforme thema&apos;s toe te passen, selecteer of een select gelijkende stijl/thema (indien beschikbaar) voor alle lijsten, of selecteer &apos;gtk2&apos; Qt-stijl (indien beschikbaar) om GTK-thema&apos;s na te bootsen.
+        <translation>Om uniforme thema&apos;s te verkrijgen, kunt u het best een gelijkende stijl/thema (indien beschikbaar) kiezen voor alle lijsten, of selecteer &apos;gtk2&apos; Qt-stijl (indien beschikbaar) om GTK-thema&apos;s na te bootsen.
 
-Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-applicaties te helpen om direct thema&apos;s toe te passen.</translation>
+Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te helpen direct thema&apos;s toe te passen.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
-        <translation>Stijl van de werkbalkknoppen:</translation>
+        <translation>Stijl van werkbalkknoppen:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
-        <translation>Toon alleen het pictogram</translation>
+        <translation>Alleen pictogram</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="324"/>
         <source>Only display the text</source>
-        <translation>Toon alleen de tekst</translation>
+        <translation>Alleen tekst</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
@@ -329,7 +329,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-applicaties te helpen o
     <message>
         <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
-        <translation>Tekst onder het pictogram</translation>
+        <translation>Tekst onder pictogram</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="339"/>
@@ -339,7 +339,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-applicaties te helpen o
     <message>
         <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
-        <translation>Activeer element met enkele klik</translation>
+        <translation>Items activeren met enkele klik</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>

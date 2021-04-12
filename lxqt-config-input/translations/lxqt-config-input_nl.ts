@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Knippertijd voor cursor:</translation>
+        <translation>Knippertijd van cursor:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Piep wanneer er een toetsenbordinvoerfout plaatsvindt</translation>
+        <translation>Piepen bij toetsenbord-invoerfouten</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation>Tekenherhaling</translation>
+        <translation>Herhaling</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Tik in het volgende veld om uw toetsenbordinstellingen uit te proberen</translation>
+        <translation>Typ in het volgende veld om uw toetsenbordinstellingen uit te proberen</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation>&amp;Verwijderen</translation>
+        <translation>Ve&amp;rwijderen</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Let op&lt;/span&gt;: indien u een &lt;span style=&quot; font-weight:600;&quot;&gt;invoermethode&lt;/span&gt; gebruikt zoals IBus, uim, fcitx of gcin, zullen de instellingen hier &lt;span style=&quot; font-weight:600;&quot;&gt;mogelijkerwijs niet werken&lt;/span&gt;, omdat ze worden tenietgedaan door de invoermethoden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Let op&lt;/span&gt;: indien u een &lt;span style=&quot; font-weight:600;&quot;&gt;invoermethode&lt;/span&gt; gebruikt als IBus, uim, fcitx of gcin, zullen de instellingen hier &lt;span style=&quot; font-weight:600;&quot;&gt;mogelijkerwijs niet werken&lt;/span&gt;, omdat ze worden tenietgedaan door de invoermethoden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Tussenpoze voor dubbelklikken:</translation>
+        <translation>Dubbelklikvertraging:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -155,17 +155,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Te schuiven regels voor muiswiel:</translation>
+        <translation>Scrollsnelheid:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Linkshandige bediening (linker- und rechtermuistoetsen omwisselen)</translation>
+        <translation>Linkshandige bediening (linker- en rechtermuisknoppen omwisselen)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>Enkele klik om elementen te activeren</translation>
+        <translation>Items activeren met enkele klik</translation>
     </message>
 </context>
 <context>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation>Instellingen van toetsenbord en muis</translation>
+        <translation>Toetsenbord- en muisinstellingen</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="79"/>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
-        <translation>Aanwijzer</translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="95"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation>Touchpadconfiguratie: </translation>
+        <translation>Touchpadinstellingen </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -234,12 +234,12 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation>Versnellingsnelheid:</translation>
+        <translation>Versnelling:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Tap om te klikken</translation>
+        <translation>Tik om te klikken</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation>Tap en sleep</translation>
+        <translation>Tikken-en-slepen</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation>&amp;Uitgeschakeld</translation>
+        <translation>Uitgeschakel&amp;d</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
@@ -269,17 +269,17 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation>Rand</translation>
+        <translation>Ra&amp;nd</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation>Knop</translation>
+        <translation>Kn&amp;op</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Apparaatinformatie</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ondersteunt alleen &apos;libinput&apos; as xinput-stuurprogramma.
+(huidige waarde: %1)
+
+Als dit gewenst is, stel xinput dan handmatig in.
+Als dit niet gewenst is, kunt u deze melding onderdrukken door het xinput-stuurprogramma in te stellen op &apos;libinput&apos;.
+</translation>
     </message>
 </context>
 </TS>
