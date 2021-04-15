@@ -93,7 +93,7 @@ set org.gnome.desktop.interface cursor-size "%7"
  * Button and menu images are deprecated in GTK 3.10:
  *    https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-menu-images
  * Toolbar-style is also deprecated.
- * GTK just doesn't intend to support image menu items. They're considered bad practice in modern UI. 
+ * GTK just doesn't intend to support image menu items. They're considered bad practice in modern UI.
  */
 
 ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
@@ -227,10 +227,14 @@ void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
     if(version == QLatin1String("3.0"))
         commands = getConfig(GTK3_GSETTINGS, ConfigOtherToolKits::GTK3GSETTINGS);
     for(QString command : commands.split(QStringLiteral("\n"))) {
-        if(command.isEmpty() or command.startsWith(QStringLiteral("#")))
+        if(command.isEmpty() || command.startsWith(QStringLiteral("#")))
             continue;
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
         QStringList args = QProcess::splitCommand(QStringView(command));
         bool ok = QProcess::startDetached(QStringLiteral("gsettings"), args);
+#else
+        bool ok = QProcess::startDetached(QStringLiteral("gsettings ") + command);
+#endif
         if(!ok) {
             QMessageBox::critical((QWidget*) parent(), tr("Error"), tr("Error: gsettings cannot be run"));
             break;
@@ -308,7 +312,7 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
 {
     QStringList themeList;
     QString configFile = version==QLatin1String("2.0") ? QStringLiteral("gtkrc") : QStringLiteral("gtk.css");
-    
+
     if(version != QLatin1String("2.0")) {
         // Insert default GTK3 themes:
         themeList << QStringLiteral("Adwaita") << QStringLiteral("HighContrast") << QStringLiteral("HighContrastInverse");
