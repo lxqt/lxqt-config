@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>Klicken um die Farbe zu ändern.</translation>
+        <translation>Anklicken um die Farbe zu wechseln.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished">Qt Palette</translation>
+        <translation>Qt Palette</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
@@ -265,7 +265,7 @@
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Textanzeige:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
@@ -302,7 +302,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Für ein Gleichartiges Thema wähle gleiche Themen/Stile über alle Bereiche oder wähle &apos;gtk2&apos; Qt Stil (wenn möglich) zur Nachbildung von GTK-Themen.
+
+&apos;xsettingsd&apos; muss installiert sein damit GTK Anwendungen Themen verwenden.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
