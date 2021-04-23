@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-sessionen måste startas om för att visa den här ändringen.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="233"/>
         <source>XCurTheme error</source>
-        <translation type="unfinished"></translation>
+        <translation>XCurTheme-fel</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="234"/>
@@ -49,12 +49,12 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulär</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt kunde inte hitta något markörtema. Standard X11-markörtema används istället. LXQt tittade i följande kataloger:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>

@@ -234,7 +234,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Accelerationshastighet:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>Naturlig rullning</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rullning:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
