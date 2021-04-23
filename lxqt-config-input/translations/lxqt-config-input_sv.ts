@@ -264,7 +264,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tvåfinger</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
