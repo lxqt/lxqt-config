@@ -166,7 +166,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>XDG ikooniteemade KDE laiendus -&gt; Järgi värviteemat</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -245,104 +245,106 @@
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaade:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valik:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Link:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Akna tekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaate tekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitud tekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Külastatud link:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Taasta paleti &amp;vaikeväärtus</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali GTK teemad (sellega muudame ka GTK seadistuste failid!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 teema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 teema</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="294"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selleks, et teemad oleks ühtlased, siis kui vähegi võimalik, palun vali samad stiilid/teemad kõikides loendites. Alternatiivina vali GTK teemade jäljendamiseks Qt teemaks „gtk2“.
+
+Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli et „xsettingsd“ oleks paigaldatud.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tööriistariba nuppude stiil:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ainult ikoon</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="324"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Ainult tekst</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst ikooni kõrval</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst ikooni all</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="339"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi väärtus</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Käivita objektid ühe klõpsuga</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt stiil</translation>
     </message>
 </context>
 </TS>

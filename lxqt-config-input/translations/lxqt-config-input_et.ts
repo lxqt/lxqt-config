@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorm</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation>Alampaigutus</translation>
+        <translation>Alamvariant</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Märkus&lt;/span&gt;: Kui sa kasutad &lt;span style=&quot; font-weight:600;&quot;&gt;sisestusviise&lt;/span&gt;, nagu IBus, uim, fcitx, või gcin, siis siinsed seadistused &lt;span style=&quot; font-weight:600;&quot;&gt;ei pruugi toimida&lt;/span&gt;, sest sisestusviis võib olla neid muutnud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -135,37 +135,37 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorm</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hiir&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Topeltklõpsu viivitus:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ridu hiireratta kerimisel:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasakuköeline kasutus (vaheta vasak ja parem nupp)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava objektid ühe klõpsuga</translation>
     </message>
 </context>
 <context>
@@ -173,12 +173,12 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="70"/>
         <source>Keyboard and Mouse Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatuuri ja hiire seadistused</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="79"/>
         <source>Mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiir</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="88"/>
@@ -188,17 +188,17 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="95"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatuur</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatuuri paigutus</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiir ja puuteplaat</translation>
     </message>
 </context>
 <context>
@@ -206,17 +206,17 @@
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali klaviatuuri paigutus</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatuuri paigutus</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Alamvariant</translation>
     </message>
 </context>
 <context>
@@ -224,62 +224,62 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>Puuteplaat </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seade:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiirendus:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Klõpsamiseks koputa</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>Loomulik kerimine</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Koputa ja lohista</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerimine:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ei ole kasutusel</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kahe sõrmega</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Äärtel</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nupuga</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>DeviceInfoLabel</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt võimaldab xinput&apos;i jaoks kasutada vaid „libinput“ meetodit.
+(praegune väärtus: %1)
+
+Kui sa tõesti seda plaanisid, siis palun seadista xinput käsitsi.
+Sellest sõnumist võid lahti saada, kui muudad xinput&apos;i meetodiks „libinput“.
+</translation>
     </message>
 </context>
 </TS>
