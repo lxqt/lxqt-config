@@ -93,12 +93,12 @@
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>% 1: Nie je možné zvýšiť / znížiť a nastaviť v spojení</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>% 1: Nie je možné súčasne používať možnosti zväčšenia a zmenšenia</translation>
     </message>
 </context>
 </TS>
