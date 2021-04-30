@@ -41,23 +41,23 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Internetový prehliadač</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mailový klienti</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation type="unfinished"></translation>
+        <translation>Správcovia súborov</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostatné aplikácie, ktoré pracujú s % 1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenašli sa žiadne ďalšie aplikácie</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmeniť...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,7 +99,7 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Združenia</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
@@ -137,29 +137,29 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Predvolené aplikácie</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Webový prehliadač</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
         <location filename="../mimetypeviewer.ui" line="487"/>
         <location filename="../mimetypeviewer.ui" line="562"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
         <source>Email Client</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mailový klient</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>
         <source>File Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Správca súborov</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
