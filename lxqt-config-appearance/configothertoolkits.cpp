@@ -229,12 +229,8 @@ void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
     for(QString command : commands.split(QStringLiteral("\n"))) {
         if(command.isEmpty() || command.startsWith(QStringLiteral("#")))
             continue;
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
         QStringList args = QProcess::splitCommand(QStringView(command));
         bool ok = QProcess::startDetached(QStringLiteral("gsettings"), args);
-#else
-        bool ok = QProcess::startDetached(QStringLiteral("gsettings ") + command);
-#endif
         if(!ok) {
             QMessageBox::critical((QWidget*) parent(), tr("Error"), tr("Error: gsettings cannot be run"));
             break;

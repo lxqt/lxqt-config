@@ -66,19 +66,11 @@ bool XCursorThemeFX::str2num (const QString &s, quint32 &res) {
 QList<XCursorThemeFX::tAnimSeq> XCursorThemeFX::parseScript (const QString &script, quint32 maxFrame) {
   QList<tAnimSeq> res;
   QString scp = script; scp.replace(QLatin1String("\r"), QLatin1String("\n"));
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   const QStringList scpL = scp.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
-#else
-  const QStringList scpL = scp.split(QLatin1Char('\n'), QString::SkipEmptyParts);
-#endif
   for (const QString &ss : scpL) {
     const QString s = ss.simplified();
     //qDebug() << s;
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
     QStringList fld = s.split(QLatin1Char(','), Qt::SkipEmptyParts); //BUG!BUG!BUG!
-#else
-    QStringList fld = s.split(QLatin1Char(','), QString::SkipEmptyParts); //BUG!BUG!BUG!
-#endif
     if (fld.size() != 2) {
      qDebug() << "script error:" << s;
       qWarning() << "script error:" << s;

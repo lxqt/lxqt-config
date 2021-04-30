@@ -126,11 +126,7 @@ const QStringList XCursorThemeModel::searchPaths()
     // Get the search path from Xcursor
     QString path = QString::fromUtf8(XcursorLibraryPath());
     // Separate the paths
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
     mBaseDirs = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
-#else
-    mBaseDirs = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
-#endif
     // Remove duplicates
     QMutableStringListIterator i(mBaseDirs);
     while (i.hasNext())
