@@ -62,7 +62,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation>Жирний</translation>
+        <translation>Грубий</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
