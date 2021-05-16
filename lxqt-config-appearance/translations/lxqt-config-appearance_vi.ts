@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp để thay đổi màu.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn Màu</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách gợi ý phông:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -113,22 +113,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Gợi ý phông</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Độ phân giải (DPI)</translation>
+        <translation>Độ phân giải (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Gợi ý tự động</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khử răng cưa subpixel:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -166,12 +166,12 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở rộng KDE của chủ đề biểu tượng XDG -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tô màu biểu tượng dựa trên phong cách widget (bảng màu)</translation>
     </message>
 </context>
 <context>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách Khiển tố</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="79"/>
@@ -225,62 +225,62 @@
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách Widget</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Bảng màu Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Một số phong cách Qt có thể sẽ bỏ qua những màu này.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cửa sổ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sự lựa chọn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liên kết:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản Cửa sổ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản Xem:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản Được chọn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liên kết Được ghé thăm:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bảng màu Mặc định</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>
@@ -302,47 +302,49 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Để áp dụng chủ đề đồng nhất, hãy chọn phong cách/chủ đề tương đồng (nếu có) trong toàn bộ các danh sách, hoặc chọn phong cách Qt &apos;gtk2&apos; (nếu có) để bắt chước chủ đề GTK.
+
+Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứng dụng GTK áp dụng chủ đề ngay luôn.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="311"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách nút thanh công cụ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="319"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ hiển thị biểu tượng</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="324"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ hiển thị văn bản</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản hiện kế bên biểu tượng</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="334"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản hiện dưới biểu tượng</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="339"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="347"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích hoạt mục khi nhấn đơn</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách Qt</translation>
     </message>
 </context>
 </TS>
