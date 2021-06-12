@@ -166,7 +166,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>KDE rozšírenie témy ikon XDG  -&gt; Nasleduje farebná schéma</translation>
+        <translation>KDE rozšírenie témy ikon XDG -&gt; Nasleduje farebná schéma</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
