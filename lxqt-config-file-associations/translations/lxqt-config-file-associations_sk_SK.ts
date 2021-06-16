@@ -117,17 +117,17 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Priradenie súborov</translation>
+        <translation>Predvolené aplikácie</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation>Združenia</translation>
+        <translation>Otvoriť pomocou</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
         <source>Default application</source>
-        <translation>Preddefinované aplikácie</translation>
+        <translation>Predvolené aplikácie</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
