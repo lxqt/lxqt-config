@@ -102,12 +102,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation>Smerom hore</translation>
+        <translation>Hore</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation>Smerom dole</translation>
+        <translation>Dolu</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Ľavoruká obsluha (prehodiť ľavé a pravé tlačítko myši)</translation>
+        <translation>Ľavoruká obsluha (vymeniť ľavé a pravé tlačítko myši)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
