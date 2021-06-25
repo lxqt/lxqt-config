@@ -240,47 +240,47 @@
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jendela:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilan:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleksi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tautan:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks Jendela:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilan Teks:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks yang Terpilih:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tautan yang Telah Dikunjungi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="227"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Palet &amp;Default</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="254"/>

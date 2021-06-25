@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt hanya mendukung &quot;libinput&quot; sebagai driver xinput.
+(Nilai saat ini: %1)
+ 
+Jika hal ni disengaja, silahkan atur xinput secara manual.
+Atau anda dapat menghilangkan pesan ini dengan mengubah driver xinput menjadi &quot;libinput&quot;.
+</translation>
     </message>
 </context>
 </TS>
