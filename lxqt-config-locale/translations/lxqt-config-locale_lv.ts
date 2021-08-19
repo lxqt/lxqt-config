@@ -26,7 +26,7 @@
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>Valūta</translation>
+        <translation>V&amp;alūta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai vēlaties saglabāt izmaiņas? Tās stāsies spēkā nākamajā ierakstīšanās reizē.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="438"/>
