@@ -12,7 +12,7 @@
         <location filename="../brightnesssettings.ui" line="35"/>
         <location filename="../brightnesssettings.ui" line="74"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation>☀</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
