@@ -38,10 +38,6 @@
 #include <QStringBuilder>
 #include <QDomDocument>
 
-#ifdef Q_WS_X11
-extern void qt_x11_apply_settings_in_all_apps();
-#endif
-
 static const char* subpixelNames[] = {"none", "rgb", "bgr", "vrgb", "vbgr"};
 static const char* hintStyleNames[] = {"hintnone", "hintslight", "hintmedium", "hintfull"};
 
@@ -186,11 +182,6 @@ void FontsConfig::updateQtFont()
         mQtSettings->sync();
 
         emit updateOtherSettings();
-
-#ifdef Q_WS_X11
-        qt_x11_apply_settings_in_all_apps();
-#endif
-
         update();
     }
 }
