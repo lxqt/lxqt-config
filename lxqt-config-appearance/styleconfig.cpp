@@ -134,12 +134,12 @@ void StyleConfig::initControls()
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
 
     // Qt style
-    mSettings->beginGroup(QLatin1String("Qt"));
+    mSettings->beginGroup(QStringLiteral("Qt"));
     ui->qtComboBox->setCurrentText(mSettings->value(QStringLiteral("style")).toString());
     mSettings->endGroup();
 
     // palette
-    mSettings->beginGroup(QLatin1String("Palette"));
+    mSettings->beginGroup(QStringLiteral("Palette"));
     QColor color;
     color.setNamedColor(mSettings->value(QStringLiteral("window_color")).toString());
     if (!color.isValid())
@@ -190,13 +190,13 @@ void StyleConfig::applyStyle()
 {
     // Qt style
     QString themeName = ui->qtComboBox->currentText();;
-    mQtSettings->beginGroup(QLatin1String("Qt"));
+    mQtSettings->beginGroup(QStringLiteral("Qt"));
     if(mQtSettings->value(QStringLiteral("style")).toString() != themeName)
         mQtSettings->setValue(QStringLiteral("style"), themeName);
     mQtSettings->endGroup();
 
     // palette
-    mSettings->beginGroup(QLatin1String("Palette"));
+    mSettings->beginGroup(QStringLiteral("Palette"));
     QColor color = ui->winColorLabel->getColor();
     QColor oldColor;
     oldColor.setNamedColor(mQtSettings->value(QStringLiteral("window_color")).toString());

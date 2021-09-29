@@ -56,8 +56,8 @@ KeyboardLayoutConfig::~KeyboardLayoutConfig() {
 void KeyboardLayoutConfig::loadSettings() {
   // load current settings from the output of setxkbmap command
   QProcess setxkbmap;
-  setxkbmap.start(QLatin1String("setxkbmap"), QStringList() << QLatin1String("-query")
-    << QLatin1String("-verbose") << QLatin1String("5"));
+  setxkbmap.start(QStringLiteral("setxkbmap"), QStringList() << QStringLiteral("-query")
+    << QStringLiteral("-verbose") << QStringLiteral("5"));
   setxkbmap.waitForFinished();
   if(setxkbmap.exitStatus() == QProcess::NormalExit) {
     QList<QByteArray> layouts, variants;
@@ -103,7 +103,7 @@ enum ListSection{
 void KeyboardLayoutConfig::loadLists() {
   // load known lists from xkb data files
   // XKBD_BASELIST_PATH is os dependent see keyboardlayoutconfig.h
-  QFile file(QLatin1String(XKBD_BASELIST_PATH));
+  QFile file(QStringLiteral(XKBD_BASELIST_PATH));
   if(file.open(QIODevice::ReadOnly)) {
     ListSection section = NoSection;
     while(!file.atEnd()) {
@@ -230,7 +230,7 @@ void KeyboardLayoutConfig::applyConfig() {
   int cur_model = ui.keyboardModel->currentIndex();
   if(cur_model >= 0) {
     model = ui.keyboardModel->itemData(cur_model, Qt::UserRole).toString();
-    args += QLatin1String("-model");
+    args += QStringLiteral("-model");
     args += model;
   }
 
@@ -247,18 +247,18 @@ void KeyboardLayoutConfig::applyConfig() {
         variants += QLatin1Char(',');
       }
     }
-    args += QLatin1String("-layout");
+    args += QStringLiteral("-layout");
     args += layouts;
 
     if (variants.indexOf(QLatin1Char(',')) > -1 || !variants.isEmpty()) {
-      args += QLatin1String("-variant");
+      args += QStringLiteral("-variant");
       args += variants;
     }
   }
 
   for(const QString& option : qAsConst(currentOptions_)) {
     if (!option.startsWith(QLatin1String("grp:"))) {
-      args += QLatin1String("-option");
+      args += QStringLiteral("-option");
       args += option;
     }
   }
@@ -267,7 +267,7 @@ void KeyboardLayoutConfig::applyConfig() {
   int cur_switch_key = ui.switchKey->currentIndex();
   if(cur_switch_key > 0) { // index 0 is "None"
     switchKey = ui.switchKey->itemData(cur_switch_key, Qt::UserRole).toString();
-    args += QLatin1String("-option");
+    args += QStringLiteral("-option");
     args += switchKey;
   }
 

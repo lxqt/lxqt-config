@@ -387,7 +387,7 @@ void XCursorTheme::parseThemeIndex (const QDir &dir) {
     fl.close();
   }
   if (mDescr.isEmpty() && !cmt.isEmpty()) mDescr = cmt;
-  if (mSample.isEmpty()) mSample = QLatin1String("left_ptr");
+  if (mSample.isEmpty()) mSample = QStringLiteral("left_ptr");
   mInherits.removeDuplicates();
 }
 
@@ -542,7 +542,7 @@ Inherits=core
   if (url.isEmpty()) url = mSite;
   if (dscr.isEmpty()) dscr = mDescr;
   if (cmt.isEmpty()) cmt = dscr;
-  /*if (sample.isEmpty())*/ sample = QLatin1String("left_ptr");
+  /*if (sample.isEmpty())*/ sample = QStringLiteral("left_ptr");
   if (inhs.size() == 0) inhs << QStringLiteral("core");
   inhs.removeDuplicates();
  dumpInfo();

@@ -114,7 +114,7 @@ const QString findDefaultTheme()
             if (!s.startsWith(QLatin1String("Xcursor.theme:"))) continue;
             s.remove(0, 14);
             s = s.trimmed();
-            if (s.isEmpty()) s = QLatin1String("default");
+            if (s.isEmpty()) s = QStringLiteral("default");
             res = s;
         }
         fl.close();
