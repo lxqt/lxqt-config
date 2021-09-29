@@ -44,13 +44,13 @@ XCursorThemeData::XCursorThemeData(const QDir &aDir)
     mPath = aDir.path();
     setName(aDir.dirName());
     if (aDir.exists(QStringLiteral("index.theme"))) parseIndexFile();
-    if (mDescription.isEmpty()) mDescription = QLatin1String("no description");
+    if (mDescription.isEmpty()) mDescription = QStringLiteral("no description");
     if (mTitle.isEmpty()) mTitle = mName;
 }
 
 void XCursorThemeData::parseIndexFile()
 {
-    QMultiMap<QString, QString> cfg = loadCfgFile(mPath + QString::fromUtf8("/index.theme"), true);
+    QMultiMap<QString, QString> cfg = loadCfgFile(mPath + QLatin1String("/index.theme"), true);
     if (cfg.contains(QStringLiteral("icon theme/name"))) mTitle = cfg.values(QStringLiteral("icon theme/name")).at(0).trimmed();
     if (cfg.contains(QStringLiteral("icon theme/comment"))) mDescription = cfg.values(QStringLiteral("icon theme/comment")).at(0).trimmed();
     if (cfg.contains(QStringLiteral("icon theme/example"))) mSample = cfg.values(QStringLiteral("icon theme/example")).at(0).trimmed();

@@ -165,26 +165,26 @@ void MouseConfig::applyConfig()
 }
 
 void MouseConfig::loadSettings() {
-  oldSingleClick = singleClick = qtSettings->value(QLatin1String("single_click_activate"), false).toBool();
+  oldSingleClick = singleClick = qtSettings->value(QStringLiteral("single_click_activate"), false).toBool();
 
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  oldDoubleClickInterval = doubleClickInterval = qtSettings->value(QLatin1String("doubleClickInterval"), 400).toInt();
-  oldWheelScrollLines = wheelScrollLines = qtSettings->value(QLatin1String("wheelScrollLines"), 3).toInt();
+  qtSettings->beginGroup(QStringLiteral("Qt"));
+  oldDoubleClickInterval = doubleClickInterval = qtSettings->value(QStringLiteral("doubleClickInterval"), 400).toInt();
+  oldWheelScrollLines = wheelScrollLines = qtSettings->value(QStringLiteral("wheelScrollLines"), 3).toInt();
   qtSettings->endGroup();
 
-  settings->beginGroup(QLatin1String("Mouse"));
-  oldAccel = accel = settings->value(QLatin1String("accel_factor"), 20).toInt();
-  oldThreshold = threshold = settings->value(QLatin1String("accel_threshold"), 10).toInt();
-  oldLeftHanded = leftHanded = settings->value(QLatin1String("left_handed"), false).toBool();
+  settings->beginGroup(QStringLiteral("Mouse"));
+  oldAccel = accel = settings->value(QStringLiteral("accel_factor"), 20).toInt();
+  oldThreshold = threshold = settings->value(QStringLiteral("accel_threshold"), 10).toInt();
+  oldLeftHanded = leftHanded = settings->value(QStringLiteral("left_handed"), false).toBool();
   settings->endGroup();
 }
 
 void MouseConfig::accept() {
   qtSettings->setValue(QStringLiteral("single_click_activate"), singleClick);
 
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  qtSettings->setValue(QLatin1String("doubleClickInterval"), doubleClickInterval);
-  qtSettings->setValue(QLatin1String("wheelScrollLines"), wheelScrollLines);
+  qtSettings->beginGroup(QStringLiteral("Qt"));
+  qtSettings->setValue(QStringLiteral("doubleClickInterval"), doubleClickInterval);
+  qtSettings->setValue(QStringLiteral("wheelScrollLines"), wheelScrollLines);
   qtSettings->endGroup();
 
   settings->beginGroup(QStringLiteral("Mouse"));

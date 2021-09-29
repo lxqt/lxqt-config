@@ -184,7 +184,7 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
     // textItem->setY(y);
     // textItem->setParentItem(this);
 
-    QSvgRenderer *renderer = new QSvgRenderer(QLatin1String(ICON_PATH "monitor.svg"));
+    QSvgRenderer *renderer = new QSvgRenderer(QStringLiteral(ICON_PATH "monitor.svg"));
     svgItem = new QGraphicsSvgItem();
     svgItem->setSharedRenderer(renderer);
     svgItem->setX(x);

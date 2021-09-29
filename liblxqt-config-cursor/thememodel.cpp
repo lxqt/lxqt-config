@@ -199,7 +199,7 @@ bool XCursorThemeModel::handleDefault(const QDir &themeDir)
         }
         return true;
     }
-    mDefaultName = QLatin1String("default");
+    mDefaultName = QStringLiteral("default");
     return false;
 }
 

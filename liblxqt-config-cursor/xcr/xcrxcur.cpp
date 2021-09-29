@@ -124,7 +124,7 @@ XCursorImagesXCur::XCursorImagesXCur (const QString &aFileName) : XCursorImages(
   if (name.isEmpty() || name.endsWith(QLatin1Char('/'))) return;
   int i = name.lastIndexOf(QLatin1Char('/'));
   QString dir;
-  if (i < 0) dir = QLatin1String("./"); else dir = name.left(i);
+  if (i < 0) dir = QStringLiteral("./"); else dir = name.left(i);
   name = name.mid(i+1);
   setName(name); setPath(dir);
   parseCursorFile(aFileName);

@@ -141,8 +141,8 @@ void KeyboardConfig::loadSettings() {
   oldNumlock = numlock = settings->value(QStringLiteral("numlock"), false).toBool();
   settings->endGroup();
 
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  oldFlashTime = flashTime = qtSettings->value(QLatin1String("cursorFlashTime"), 1000).toInt();
+  qtSettings->beginGroup(QStringLiteral("Qt"));
+  oldFlashTime = flashTime = qtSettings->value(QStringLiteral("cursorFlashTime"), 1000).toInt();
   qtSettings->endGroup();
 }
 
@@ -154,8 +154,8 @@ void KeyboardConfig::accept() {
   settings->setValue(QStringLiteral("numlock"), numlock);
   settings->endGroup();
 
-  qtSettings->beginGroup(QLatin1String("Qt"));
-  qtSettings->setValue(QLatin1String("cursorFlashTime"), flashTime);
+  qtSettings->beginGroup(QStringLiteral("Qt"));
+  qtSettings->setValue(QStringLiteral("cursorFlashTime"), flashTime);
   qtSettings->endGroup();
 }
 

@@ -403,7 +403,7 @@ QString ConfigOtherToolKits::getDefaultGTKTheme()
 
 void ConfigOtherToolKits::updateConfigFromSettings()
 {
-    mSettings->beginGroup(QLatin1String("Qt"));
+    mSettings->beginGroup(QStringLiteral("Qt"));
     QFont font;
     font.fromString(mSettings->value(QStringLiteral("font")).toString());
     // Font name from: https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string
@@ -427,17 +427,17 @@ void ConfigOtherToolKits::updateConfigFromSettings()
         mConfig.buttonStyle = 1;
         switch(val) {
             case Qt::ToolButtonIconOnly:
-                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_ICONS");
+                mConfig.toolButtonStyle = QStringLiteral("GTK_TOOLBAR_ICONS");
                 break;
             case Qt::ToolButtonTextOnly:
-                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_TEXT");
+                mConfig.toolButtonStyle = QStringLiteral("GTK_TOOLBAR_TEXT");
                 mConfig.buttonStyle = 0;
                 break;
             case Qt::ToolButtonTextUnderIcon:
-                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_BOTH");
+                mConfig.toolButtonStyle = QStringLiteral("GTK_TOOLBAR_BOTH");
                 break;
             default:
-                mConfig.toolButtonStyle = QLatin1String("GTK_TOOLBAR_BOTH_HORIZ");
+                mConfig.toolButtonStyle = QStringLiteral("GTK_TOOLBAR_BOTH_HORIZ");
         }
     }
 }
