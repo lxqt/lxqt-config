@@ -27,6 +27,7 @@
 
 #include "styleconfig.h"
 #include "ui_styleconfig.h"
+#include "ui_palettes.h"
 #include <QTreeWidget>
 #include <QDebug>
 #include <QStyleFactory>
@@ -36,6 +37,10 @@
 #include <QMetaProperty>
 #include <QMetaEnum>
 #include <QToolBar>
+#include <QInputDialog>
+#include <QMessageBox>
+#include <QStandardPaths>
+#include <QDir>
 #include <QGuiApplication>
 
 
@@ -86,6 +91,9 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::
         ui->linkColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Link), true);
         ui->linkVisitedColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::LinkVisited), true);
     });
+
+    connect(ui->savePaletteBtn, &QAbstractButton::clicked, this, &StyleConfig::savePalette);
+    connect(ui->loadPaletteBtn, &QAbstractButton::clicked, this, &StyleConfig::loadPalette);
 }
 
 
@@ -134,9 +142,9 @@ void StyleConfig::initControls()
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
 
     // Qt style
-    mSettings->beginGroup(QLatin1String("Qt"));
-    ui->qtComboBox->setCurrentText(mSettings->value(QStringLiteral("style")).toString());
-    mSettings->endGroup();
+    mQtSettings->beginGroup(QLatin1String("Qt"));
+    ui->qtComboBox->setCurrentText(mQtSettings->value(QStringLiteral("style")).toString());
+    mQtSettings->endGroup();
 
     // palette
     mSettings->beginGroup(QLatin1String("Palette"));
@@ -199,46 +207,46 @@ void StyleConfig::applyStyle()
     mSettings->beginGroup(QLatin1String("Palette"));
     QColor color = ui->winColorLabel->getColor();
     QColor oldColor;
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("window_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("window_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("window_color"), color.name());
+        mSettings->setValue(QStringLiteral("window_color"), color.name());
 
     color = ui->baseColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("base_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("base_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("base_color"), color.name());
+        mSettings->setValue(QStringLiteral("base_color"), color.name());
 
     color = ui->highlightColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("highlight_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("highlight_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("highlight_color"), color.name());
+        mSettings->setValue(QStringLiteral("highlight_color"), color.name());
 
     color = ui->windowTextColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("window_text_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("window_text_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("window_text_color"), color.name());
+        mSettings->setValue(QStringLiteral("window_text_color"), color.name());
 
     color = ui->viewTextColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("text_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("text_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("text_color"), color.name());
+        mSettings->setValue(QStringLiteral("text_color"), color.name());
 
     color = ui->highlightedTextColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("highlighted_text_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("highlighted_text_color"), color.name());
+        mSettings->setValue(QStringLiteral("highlighted_text_color"), color.name());
 
     color = ui->linkColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("link_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("link_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("link_color"), color.name());
+        mSettings->setValue(QStringLiteral("link_color"), color.name());
 
     color = ui->linkVisitedColorLabel->getColor();
-    oldColor.setNamedColor(mQtSettings->value(QStringLiteral("link_visited_color")).toString());
+    oldColor.setNamedColor(mSettings->value(QStringLiteral("link_visited_color")).toString());
     if (color != oldColor)
-        mQtSettings->setValue(QStringLiteral("link_visited_color"), color.name());
+        mSettings->setValue(QStringLiteral("link_visited_color"), color.name());
 
-    mQtSettings->endGroup();
+    mSettings->endGroup();
 
     // single click setting
     if(mSettings->value(QStringLiteral("single_click_activate")).toBool() !=  ui->singleClickActivate->isChecked()) {
@@ -278,4 +286,200 @@ void StyleConfig::showAdvancedOptions(bool on)
 {
     ui->uniformThemeLabel->setVisible(on);
     mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), on);
+}
+
+void StyleConfig::savePalette()
+{
+    bool ok;
+    QString name = QInputDialog::getText(this, tr("Save Palette"), tr("Palette name:"), QLineEdit::Normal, QString(), &ok);
+    if (!ok || name.isEmpty())
+        return;
+    const QString paletteFile = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+                                + QLatin1String("/lxqt/palettes/") + name;
+    if (QFile::exists(paletteFile))
+    {
+        QMessageBox::StandardButton btn =
+        QMessageBox::question(this,
+                              tr("Save Palette"),
+                              tr("A palette with the same name exists.\nDo you want to replace it?"));
+        if (btn != QMessageBox::Yes)
+            return;
+    }
+
+    QSettings settings(paletteFile, QSettings::IniFormat);
+    settings.beginGroup(QStringLiteral("Palette"));
+
+    QColor color = ui->winColorLabel->getColor();
+    settings.setValue(QStringLiteral("window_color"), color.name());
+
+    color = ui->baseColorLabel->getColor();
+    settings.setValue(QStringLiteral("base_color"), color.name());
+
+    color = ui->highlightColorLabel->getColor();
+    settings.setValue(QStringLiteral("highlight_color"), color.name());
+
+    color = ui->windowTextColorLabel->getColor();
+    settings.setValue(QStringLiteral("window_text_color"), color.name());
+
+    color = ui->viewTextColorLabel->getColor();
+    settings.setValue(QStringLiteral("text_color"), color.name());
+
+    color = ui->highlightedTextColorLabel->getColor();
+    settings.setValue(QStringLiteral("highlighted_text_color"), color.name());
+
+    color = ui->linkColorLabel->getColor();
+    settings.setValue(QStringLiteral("link_color"), color.name());
+
+    color = ui->linkVisitedColorLabel->getColor();
+    settings.setValue(QStringLiteral("link_visited_color"), color.name());
+
+    settings.endGroup();
+}
+
+void StyleConfig::loadPalette()
+{
+    class PalettesDialog : public QDialog {
+    public:
+        explicit PalettesDialog(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags())
+            : QDialog(parent, f) {
+            ui.setupUi(this);
+            ui.listWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
+            ui.listWidget->setSortingEnabled(true);
+            ui.listWidget->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+            updateList();
+            connect(ui.listWidget, &QListWidget::itemDoubleClicked, this, &QDialog::accept);
+            connect(ui.removeButton, &QAbstractButton::clicked, this, &PalettesDialog::removeSelectedItems);
+            connect(ui.lineEdit, &QLineEdit::textChanged, this, &PalettesDialog::filter);
+            if (parent)
+                resize(QSize (parent->size().width() / 2, 3 * parent->size().height() / 4));
+        }
+
+        QString currentPalette() {
+            if (auto cur = ui.listWidget->currentItem())
+            {
+                if (cur->isSelected())
+                    return cur->data(Qt::UserRole).toString();
+            }
+            return QString();
+        }
+
+    private slots:
+        void removeSelectedItems() {
+            const auto items = ui.listWidget->selectedItems();
+            if (items.isEmpty())
+                return;
+            QMessageBox::StandardButton btn =
+            QMessageBox::question(this,
+                                  tr("Remove Palettes"),
+                                  tr("Do you really want to remove selected palette(s)?\nRoot palettes will remain intact if existing."));
+            if (btn != QMessageBox::Yes)
+                return;
+            QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+                           + QLatin1String("/lxqt/palettes/");
+            for (const auto &item : items)
+                QFile::remove(path + item->text());
+            updateList();
+        }
+
+        void filter() {
+            QString filterStr = ui.lineEdit->text();
+            int I = -1;
+            for (int i = 0; i < ui.listWidget->count(); ++i)
+            {
+                if (auto item = ui.listWidget->item(i))
+                {
+                    bool visible(item->text().contains(filterStr, Qt::CaseInsensitive));
+                    if (I < 0 && visible)
+                        I  = i;
+                    item->setHidden(!visible);
+                }
+            }
+            if (I > -1) // select the first visible item
+                ui.listWidget->setCurrentRow(I);
+        }
+
+    private:
+        void updateList() {
+            ui.listWidget->clear();
+            auto paths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+            paths.removeDuplicates();
+            QString filterStr = ui.lineEdit->text();
+            QStringList names;
+            for (const auto &path : qAsConst(paths))
+            {
+                QDir dir(path + QLatin1String("/lxqt/palettes"));
+                if (dir.exists())
+                {
+                    const auto entries = dir.entryList(QDir::Files);
+                    for (const auto &entry : entries)
+                    {
+                        if (names.contains(entry)) // already added with higher priority
+                            continue;
+                        names << entry;
+                        auto *item = new QListWidgetItem(entry, ui.listWidget);
+                        QString palettePath = path + QStringLiteral("/lxqt/palettes/") + entry;
+                        item->setData(Qt::UserRole, palettePath);
+                        item->setHidden(!entry.contains(filterStr, Qt::CaseInsensitive));
+                        ui.listWidget->addItem(item);
+                    }
+                }
+            }
+            ui.listWidget->setCurrentRow(0);
+        }
+
+        Ui::PalettesDialog ui;
+    };
+
+    PalettesDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted)
+    { // set color labels
+        auto paletteFile = dialog.currentPalette();
+        if (paletteFile.isEmpty())
+            return;
+        QSettings settings(paletteFile, QSettings::IniFormat);
+        settings.beginGroup(QStringLiteral("Palette"));
+
+        QColor color;
+        color.setNamedColor(settings.value(QStringLiteral("window_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
+        ui->winColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("base_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::Base);
+        ui->baseColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("highlight_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::Highlight);
+        ui->highlightColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("window_text_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::WindowText);
+        ui->windowTextColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("text_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::Text);
+        ui->viewTextColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("highlighted_text_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::HighlightedText);
+        ui->highlightedTextColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("link_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::Link);
+        ui->linkColorLabel->setColor(color, true);
+
+        color.setNamedColor(settings.value(QStringLiteral("link_visited_color")).toString());
+        if (!color.isValid())
+            color = QGuiApplication::palette().color(QPalette::Active,QPalette::LinkVisited);
+        ui->linkVisitedColorLabel->setColor(color, true);
+
+        settings.endGroup();
+    }
 }
