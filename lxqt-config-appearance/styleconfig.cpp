@@ -294,6 +294,7 @@ void StyleConfig::savePalette()
     QString name = QInputDialog::getText(this, tr("Save Palette"), tr("Palette name:"), QLineEdit::Normal, QString(), &ok);
     if (!ok || name.isEmpty())
         return;
+    name = name.replace(QLatin1String("/"), QLatin1String(" ")).simplified();
     const QString paletteFile = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
                                 + QLatin1String("/lxqt/palettes/") + name;
     if (QFile::exists(paletteFile))
