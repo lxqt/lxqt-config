@@ -45,12 +45,12 @@
     <Menu>
         <Name>Other settings</Name>
         <Directory>lxqt-settings-other.directory</Directory>
-        <OnlyUnallocated />
         <Include>
             <And>
                 <Category>Settings</Category>
                 <Not>
                     <Or>
+                        <Filename>pcmanfm-qt-desktop-pref.desktop</Filename>
                         <Category>LXQt</Category>
                         <Category>LXDE</Category>
                         <Category>System</Category>
@@ -63,6 +63,7 @@
     <Layout>
         <Menuname>LXQt settings</Menuname>
         <Menuname>System settings</Menuname>
+        <Menuname>Other settings</Menuname>
         <Merge type="menus"/>
     </Layout>
 </Menu>
