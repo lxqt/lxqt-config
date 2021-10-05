@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sesi LXQt perlu dijalankan kembali setelah perubahan ini.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
