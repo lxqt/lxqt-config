@@ -59,6 +59,8 @@ signals:
 
 private slots:
     void showAdvancedOptions(bool on);
+    void savePalette();
+    void loadPalette();
 
 private:
     Ui::StyleConfig *ui;

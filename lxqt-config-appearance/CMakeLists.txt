@@ -34,6 +34,7 @@ set(UI_FILES
     iconthemeconfig.ui
     lxqtthemeconfig.ui
     fontsconfig.ui
+    palettes.ui
     styleconfig.ui
 )
 
