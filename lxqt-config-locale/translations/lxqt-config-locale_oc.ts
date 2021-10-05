@@ -6,7 +6,7 @@
     <message>
         <location filename="../localeconfig.ui" line="47"/>
         <source>Re&amp;gion:</source>
-        <translation>Re&amp;gion :</translation>
+        <translation>Re&amp;gion&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="76"/>
@@ -16,27 +16,27 @@
     <message>
         <location filename="../localeconfig.ui" line="83"/>
         <source>&amp;Numbers:</source>
-        <translation>&amp;Nombres :</translation>
+        <translation>&amp;Nombres&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="112"/>
         <source>&amp;Time:</source>
-        <translation>&amp;Ora :</translation>
+        <translation>&amp;Ora&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="141"/>
         <source>Currenc&amp;y:</source>
-        <translation>&amp;Devisa :</translation>
+        <translation>&amp;Devisa&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="170"/>
         <source>Measurement &amp;Units:</source>
-        <translation>&amp;Unitats de mesura :</translation>
+        <translation>&amp;Unitats de mesura&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="199"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Tria e règlas de classament :</translation>
+        <translation>&amp;Tria e règlas de classament&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -46,22 +46,22 @@
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation>Nombres :</translation>
+        <translation>Nombres&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation>Ora :</translation>
+        <translation>Ora&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation>Devisa :</translation>
+        <translation>Devisa&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation>Unitats de mesura :</translation>
+        <translation>Unitats de mesura&#x202f;:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="127"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Volètz enregistrar las modificacions ? S’aplicaràn a la connexion venenta.</translation>
+        <translation>Volètz enregistrar las modificacions&#x202f;? S’aplicaràn a la connexion venenta.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="438"/>

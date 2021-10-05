@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Durada del clucatejament del cursor :</translation>
+        <translation>Durada del clucatejament del cursor&#x202f;:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Relambi de repeticion :</translation>
+        <translation>Relambi de repeticion&#x202f;:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Interval de repeticion :</translation>
+        <translation>Interval de repeticion&#x202f;:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Interval d’un doble-clic :</translation>
+        <translation>Interval d’un doble-clic&#x202f;:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Linhas de desfilament de la ròda :</translation>
+        <translation>Linhas de desfilament de la ròda&#x202f;:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation>Acceleracion :</translation>
+        <translation>Acceleracion&#x202f;:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
