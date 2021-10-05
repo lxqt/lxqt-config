@@ -312,7 +312,6 @@
         <translatorcomment>%n másodperc van hátra</translatorcomment>
         <translation>
             <numerusform>%n másodperc van hátra</numerusform>
-            <numerusform>%n másodperc van hátra</numerusform>
         </translation>
     </message>
 </context>

@@ -34,12 +34,12 @@
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="233"/>
+        <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme エラー</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="234"/>
+        <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>アクティブなテーマは削除できません！</translation>
     </message>

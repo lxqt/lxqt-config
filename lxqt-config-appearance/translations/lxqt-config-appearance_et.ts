@@ -17,14 +17,24 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="148"/>
+        <location filename="../configothertoolkits.cpp" line="170"/>
         <source>GTK themes</source>
         <translation>GTK teemad</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="149"/>
+        <location filename="../configothertoolkits.cpp" line="171"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;„%1“ andmed on nüüd asendatud.&lt;/p&gt;&lt;p&gt;Koopia oma vanadest seadistustest leiad siit - „%2“&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="235"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="235"/>
+        <source>Error: gsettings cannot be run</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -188,34 +198,53 @@
     </message>
 </context>
 <context>
+    <name>PalettesDialog</name>
+    <message>
+        <location filename="../palettes.ui" line="14"/>
+        <location filename="../palettes.ui" line="20"/>
+        <source>Palettes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../palettes.ui" line="33"/>
+        <source>Filter...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../palettes.ui" line="43"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="58"/>
+        <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
         <translation>LXQt välimuse seadistused</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
         <translation>Vidina stiil</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="79"/>
+        <location filename="../main.cpp" line="82"/>
         <source>Icons Theme</source>
         <translation>Ikooniteema</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="88"/>
+        <location filename="../main.cpp" line="91"/>
         <source>LXQt Theme</source>
         <translation>LXQt teema</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="96"/>
+        <location filename="../main.cpp" line="99"/>
         <source>Font</source>
         <translation>Font</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="106"/>
+        <location filename="../main.cpp" line="109"/>
         <source>Cursor</source>
         <translation>Kursor</translation>
     </message>
@@ -278,27 +307,37 @@
         <translation>Külastatud link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="227"/>
+        <location filename="../styleconfig.ui" line="214"/>
+        <source>&amp;Save Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="221"/>
+        <source>&amp;Load Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="241"/>
         <source>&amp;Default Palette</source>
         <translation>Taasta paleti &amp;vaikeväärtus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="254"/>
+        <location filename="../styleconfig.ui" line="268"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>Vali GTK teemad (sellega muudame ka GTK seadistuste failid!)</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="288"/>
         <source>GTK 3 Theme</source>
         <translation>GTK 3 teema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="298"/>
         <source>GTK 2 Theme</source>
         <translation>GTK 2 teema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="294"/>
+        <location filename="../styleconfig.ui" line="308"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
@@ -307,37 +346,37 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
 Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli et „xsettingsd“ oleks paigaldatud.</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="311"/>
+        <location filename="../styleconfig.ui" line="325"/>
         <source>Toolbar button style:</source>
         <translation>Tööriistariba nuppude stiil:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="319"/>
+        <location filename="../styleconfig.ui" line="333"/>
         <source>Only display the icon</source>
         <translation>Ainult ikoon</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="324"/>
+        <location filename="../styleconfig.ui" line="338"/>
         <source>Only display the text</source>
         <translation>Ainult tekst</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="329"/>
+        <location filename="../styleconfig.ui" line="343"/>
         <source>The text appears beside the icon</source>
         <translation>Tekst ikooni kõrval</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="334"/>
+        <location filename="../styleconfig.ui" line="348"/>
         <source>The text appears under the icon</source>
         <translation>Tekst ikooni all</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="339"/>
+        <location filename="../styleconfig.ui" line="353"/>
         <source>Default</source>
         <translation>Vaikimisi väärtus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="347"/>
+        <location filename="../styleconfig.ui" line="361"/>
         <source>Activate item on single click</source>
         <translation>Käivita objektid ühe klõpsuga</translation>
     </message>
@@ -345,6 +384,34 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
         <translation>Qt stiil</translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="294"/>
+        <location filename="../styleconfig.cpp" line="304"/>
+        <source>Save Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="294"/>
+        <source>Palette name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="305"/>
+        <source>A palette with the same name exists.
+Do you want to replace it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="374"/>
+        <source>Remove Palettes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="375"/>
+        <source>Do you really want to remove selected palette(s)?
+Root palettes will remain intact if existing.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

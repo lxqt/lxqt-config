@@ -17,14 +17,24 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="148"/>
+        <location filename="../configothertoolkits.cpp" line="170"/>
         <source>GTK themes</source>
         <translation>GTK主题</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="149"/>
+        <location filename="../configothertoolkits.cpp" line="171"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; 已经被覆写。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;找到你的旧设定的拷贝。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="235"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../configothertoolkits.cpp" line="235"/>
+        <source>Error: gsettings cannot be run</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -188,34 +198,53 @@
     </message>
 </context>
 <context>
+    <name>PalettesDialog</name>
+    <message>
+        <location filename="../palettes.ui" line="14"/>
+        <location filename="../palettes.ui" line="20"/>
+        <source>Palettes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../palettes.ui" line="33"/>
+        <source>Filter...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../palettes.ui" line="43"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="58"/>
+        <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
         <translation>LXQt 外观配置</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="71"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
         <translation>小部件样式</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="79"/>
+        <location filename="../main.cpp" line="82"/>
         <source>Icons Theme</source>
         <translation>图标主题</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="88"/>
+        <location filename="../main.cpp" line="91"/>
         <source>LXQt Theme</source>
         <translation>LXQt 主题</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="96"/>
+        <location filename="../main.cpp" line="99"/>
         <source>Font</source>
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="106"/>
+        <location filename="../main.cpp" line="109"/>
         <source>Cursor</source>
         <translation>指针</translation>
     </message>
@@ -278,64 +307,74 @@
         <translation>访问过的链接：</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="227"/>
+        <location filename="../styleconfig.ui" line="214"/>
+        <source>&amp;Save Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="221"/>
+        <source>&amp;Load Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="241"/>
         <source>&amp;Default Palette</source>
         <translation>默认调色板(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="254"/>
+        <location filename="../styleconfig.ui" line="268"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>设置GTK主题（GTK配置文件将被覆盖！）</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="288"/>
         <source>GTK 3 Theme</source>
         <translation>GTK 3主题</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="298"/>
         <source>GTK 2 Theme</source>
         <translation>GTK 2主题</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="294"/>
+        <location filename="../styleconfig.ui" line="308"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>要尝试统一主题，请在所有列表中选择相似的样式/主题（如果可用），或选择“gtk2”Qt样式（如果可用）来模仿GTK主题。确保安装“xsettingsd”以帮助GTK应用程序动态应用主题。</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="311"/>
+        <location filename="../styleconfig.ui" line="325"/>
         <source>Toolbar button style:</source>
         <translation>工具栏按钮样式:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="319"/>
+        <location filename="../styleconfig.ui" line="333"/>
         <source>Only display the icon</source>
         <translation>仅显示图标</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="324"/>
+        <location filename="../styleconfig.ui" line="338"/>
         <source>Only display the text</source>
         <translation>仅显示文字</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="329"/>
+        <location filename="../styleconfig.ui" line="343"/>
         <source>The text appears beside the icon</source>
         <translation>文字在图标旁</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="334"/>
+        <location filename="../styleconfig.ui" line="348"/>
         <source>The text appears under the icon</source>
         <translation>文字在图标下</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="339"/>
+        <location filename="../styleconfig.ui" line="353"/>
         <source>Default</source>
         <translation>默认</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="347"/>
+        <location filename="../styleconfig.ui" line="361"/>
         <source>Activate item on single click</source>
         <translation>单击激活项目</translation>
     </message>
@@ -343,6 +382,34 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
         <translation>Qt风格</translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="294"/>
+        <location filename="../styleconfig.cpp" line="304"/>
+        <source>Save Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="294"/>
+        <source>Palette name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="305"/>
+        <source>A palette with the same name exists.
+Do you want to replace it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="374"/>
+        <source>Remove Palettes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.cpp" line="375"/>
+        <source>Do you really want to remove selected palette(s)?
+Root palettes will remain intact if existing.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
