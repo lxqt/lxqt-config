@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur : gsettings ne peut pas être lancé</translation>
     </message>
 </context>
 <context>
@@ -203,17 +203,17 @@
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Palettes</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
 </context>
 <context>
@@ -309,12 +309,12 @@
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrer Palette</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Charger Palette</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
@@ -389,29 +389,31 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
         <location filename="../styleconfig.cpp" line="294"/>
         <location filename="../styleconfig.cpp" line="304"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer la Palette</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="294"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de la palette :</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="305"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Une palette du même nom existe.
+Voulez vous la remplacer ?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="374"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer les Palettes</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="375"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Voulez vous vraiment supprimer les palettes sélectionnées ?
+Les palettes racines seront conservés si elles existent.</translation>
     </message>
 </context>
 </TS>

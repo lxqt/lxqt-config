@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка: не вдалося запустити gsettings</translation>
     </message>
 </context>
 <context>
@@ -203,17 +203,17 @@
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Палітри</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Фільтр...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Вилучити</translation>
     </message>
 </context>
 <context>
@@ -309,12 +309,12 @@
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Зберегти палітру</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>З&amp;авантажити палітру</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
@@ -389,29 +389,31 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.cpp" line="294"/>
         <location filename="../styleconfig.cpp" line="304"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберегти палітру</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="294"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Назва палітри:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="305"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Палітра з такою назвою вже існує.
+Бажаєте її замінити?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="374"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Вилучити палітри</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="375"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ви дійсно хочете вилучити вибрані палітри?
+Кореневі палітри залишаться недоторканими, якщо вони є.</translation>
     </message>
 </context>
 </TS>
