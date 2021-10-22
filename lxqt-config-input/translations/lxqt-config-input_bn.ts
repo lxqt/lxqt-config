@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>মাউস এবং টাচপ্যাড</translation>
     </message>
 </context>
 <context>
@@ -224,37 +224,37 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>টাচপ্যাড কনফিগ </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>যন্ত্র</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>ত্বরণ গতি:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>ক্লিক করতে আলতো চাপুন</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>প্রাকৃতিক স্ক্রোলিং</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>ট্যাপ করুন এবং টেনে আনুন</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>স্ক্রোলিং:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>

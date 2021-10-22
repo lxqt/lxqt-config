@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished">エラー: gsettings は実行出来ません</translation>
+        <translation>エラー: gsettings は実行出来ません</translation>
     </message>
 </context>
 <context>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished">フィルター...</translation>
+        <translation>フィルター...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
@@ -412,7 +412,7 @@ Do you want to replace it?</source>
         <location filename="../styleconfig.cpp" line="375"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished">本当に選択したパレットを削除しますか？
+        <translation>本当に選択したパレットを削除しますか？
 Root パレットが存在する場合、それは残ります。</translation>
     </message>
 </context>
