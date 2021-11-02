@@ -99,7 +99,7 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>Místní nastavení LXQt</translation>
+        <translation>Místní nastavení pro LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>

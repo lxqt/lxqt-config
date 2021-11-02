@@ -83,12 +83,12 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation>Nastavte jas z 1 na 100.</translation>
+        <translation>Nastavte jas od 1 do 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation>Obnovte výchozí hodnotu gama.</translation>
+        <translation>Vrátit nastavení gamma na výchozí hodnotu.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
