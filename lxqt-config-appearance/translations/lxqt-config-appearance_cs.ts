@@ -246,7 +246,7 @@
     <message>
         <location filename="../main.cpp" line="109"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation>Ukazatel</translation>
     </message>
 </context>
 <context>
@@ -378,7 +378,7 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
     <message>
         <location filename="../styleconfig.ui" line="361"/>
         <source>Activate item on single click</source>
-        <translation>Aktivovat prvek jedním klepnutím</translation>
+        <translation>Aktivovat prvek jedním kliknutím</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>

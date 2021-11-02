@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Interval dvojklepnutí:</translation>
+        <translation>Interval dvojkliku:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>Aktivovat prvky jedním klepnutím</translation>
+        <translation>Aktivovat prvky jedním kliknutím</translation>
     </message>
 </context>
 <context>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
-        <translation>Ukazovátko</translation>
+        <translation>Ukazatel</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="95"/>
@@ -289,11 +289,11 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation>LXQt podporuje jako ovladač pro xinput jen &quot;libinput&quot;.
+        <translation>LXQt podporuje jako ovladač pro xinput jen „libinput“.
 (nynější hodnota: %1)
 
 Pokud je to záměr, nastavte, prosím, xinput ručně.
-Jinak se této zprávy můžete zbavit záměnou ovladače xinput za &quot;libinput&quot;.
+Jinak se této zprávy můžete zbavit záměnou ovladače xinput za „libinput“.
 </translation>
     </message>
 </context>

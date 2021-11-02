@@ -208,12 +208,12 @@
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Remover</translation>
     </message>
 </context>
 <context>
@@ -309,12 +309,12 @@
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salvar paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Carregar pa&amp;leta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
@@ -389,29 +389,31 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
         <location filename="../styleconfig.cpp" line="294"/>
         <location filename="../styleconfig.cpp" line="304"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="294"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome da paleta:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="305"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Existe uma paleta com o mesmo nome.
+Deseja substituí-la?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="374"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Remover paletas</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="375"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tem certeza de que deseja remover as paletas selecionadas?
+As paletas raiz permanecerão intactas, se existentes.</translation>
     </message>
 </context>
 </TS>
