@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>Klepněte pro změnu barvy.</translation>
+        <translation>Pokud chcete změnit barvu, klikněte.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -189,12 +189,12 @@
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>Téma vzhledu LXQt</translation>
+        <translation>Motiv vzhledu LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Override user-defined wallpaper</source>
-        <translation>Přepsat uživatelem určené pozadí plochy</translation>
+        <translation>Přepsat uživatelsky určené pozadí plochy</translation>
     </message>
 </context>
 <context>

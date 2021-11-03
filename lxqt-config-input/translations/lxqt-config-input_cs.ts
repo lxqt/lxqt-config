@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Kolečko myši vytváří pohyb obrazu o … řádků:</translation>
+        <translation>Pootočení kolečkem myši vytváří pohyb obrazu o … řádků:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Zvolit klepnutím</translation>
+        <translation>Kliknout klepnutím</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -289,10 +289,10 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation>LXQt podporuje jako ovladač pro xinput jen „libinput“.
-(nynější hodnota: %1)
+        <translation>LXQt podporuje jako ovladač pro xinput pouze „libinput“.
+(stávající hodnota: %1)
 
-Pokud je to záměr, nastavte, prosím, xinput ručně.
+Pokud je to záměr, nastavte xinput ručně.
 Jinak se této zprávy můžete zbavit záměnou ovladače xinput za „libinput“.
 </translation>
     </message>
