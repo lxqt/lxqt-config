@@ -1,3 +1,10 @@
+lxqt-config-1.0.0 / 2021-11-04
+===============================
+ * Bumped minimum required Qt version to 5.15.
+ * Do not force openbox configs under LXQt.
+ * Made "Other Settings" work in Configuration Center.
+ * Save and load Qt palettes.
+
 lxqt-config-0.17.1 / 2021-04-16
 ===============================
   * Fixed compilation against Qt 5.12.
