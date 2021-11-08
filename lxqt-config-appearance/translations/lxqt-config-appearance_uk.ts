@@ -67,12 +67,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation>Нормальний</translation>
+        <translation>Звичайний</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation>Грубий</translation>
+        <translation>Жирний</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Згладження субпунктів:</translation>
+        <translation>Згладження субпікселів:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -294,7 +294,7 @@
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation>Текст пергляду:</translation>
+        <translation>Текст перегляду:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
