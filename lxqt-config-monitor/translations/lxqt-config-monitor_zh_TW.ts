@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation type="unfinished"></translation>
+        <translation>已套用預設的螢幕設定。如果您想要改變螢幕的設定，請使用「LXQt螢幕設定」。</translation>
     </message>
 </context>
 <context>
@@ -223,7 +223,7 @@
         <location filename="../monitorwidget.cpp" line="130"/>
         <source>Serial: %1
 </source>
-        <translation>序列： %1
+        <translation>序號： %1
 </translation>
     </message>
     <message>
@@ -237,7 +237,7 @@
         <location filename="../monitorwidget.cpp" line="132"/>
         <source>Serial number: %1
 </source>
-        <translation>序列號： %1
+        <translation>序號： %1
 </translation>
     </message>
     <message>

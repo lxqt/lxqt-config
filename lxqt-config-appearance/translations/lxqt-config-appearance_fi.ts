@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe: gsettings ohjelmaa ei voitu suorittaa</translation>
     </message>
 </context>
 <context>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Antialiasoi fontit</translation>
+        <translation>Käytä reunanpehmennys fontteja</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQtin ulkoasun hallinta</translation>
+        <translation>LXQt ulkoasun hallinta</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -203,17 +203,17 @@
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Väripaletit</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rajaa...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Poista</translation>
     </message>
 </context>
 <context>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQtin ulkoasun hallinta</translation>
+        <translation>LXQt ulkoasun hallinta</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
@@ -309,12 +309,12 @@
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tallenna Väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lataa Väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
@@ -341,9 +341,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Yrittääksesi yhtenäistää teemoitusta, voit valita joko samankaltaisen tyylin/teeman (jos saatavilla) joka listalta tai &apos;gtk2&apos; Qt-tyylin (jos saatavilla)  jäljitelläksesi GTK-teemoja.
+        <translation>Teemoja yhdenmukaistamiseksi voit valita joko samankaltaisen tyylin/teeman joka listalta (jos saatavilla), tai &apos;gtk2&apos; Qt-tyylin (jos saatavilla) jäljitelläksesi GTK-teemoja.
 
-Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien teemoitusta lennosta.</translation>
+Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien teemoitusta ilman uudelleenkäynnistystä.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="325"/>
@@ -389,29 +389,31 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
         <location filename="../styleconfig.cpp" line="294"/>
         <location filename="../styleconfig.cpp" line="304"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna Väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="294"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Väripaletin nimi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="305"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Saman niminen väripaletti on jo olemassa.
+Tahdotko korvata sen?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="374"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista Väripaletteja</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="375"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tahdotko varmasti poistaa valitut väripaletit?
+Olemassa olevia aloituspaletteja ei muuteta.</translation>
     </message>
 </context>
 </TS>
