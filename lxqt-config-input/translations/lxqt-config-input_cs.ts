@@ -249,7 +249,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation>Přetahovat klepnutím</translation>
+        <translation>Přetahovat kliknutím</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>

@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata: gsettings çalıştırılamıyor</translation>
     </message>
 </context>
 <context>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Süzgeç...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
