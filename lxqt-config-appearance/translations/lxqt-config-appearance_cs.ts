@@ -348,7 +348,7 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
     <message>
         <location filename="../styleconfig.ui" line="325"/>
         <source>Toolbar button style:</source>
-        <translation>Styl tlačítek v nástrojovém pruhu:</translation>
+        <translation>Styl tlačítek v nástrojové liště:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="333"/>
@@ -401,7 +401,7 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Paleta s takovým názvem už existuje.
-Chcete nahradit?</translation>
+Chcete ji nahradit?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="374"/>
