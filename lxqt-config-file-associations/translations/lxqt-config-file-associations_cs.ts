@@ -41,7 +41,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation>Prohlížeče internetových stránek</translation>
+        <translation>Prohlížeče webových stránek</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="290"/>
         <location filename="../mimetypeviewer.cpp" line="309"/>
         <source>Change...</source>
-        <translation>Změnit...</translation>
+        <translation>Změnit…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="275"/>
@@ -99,7 +99,7 @@
         <location filename="../mimetypeviewer.cpp" line="295"/>
         <location filename="../mimetypeviewer.cpp" line="314"/>
         <source>Choose...</source>
-        <translation>Vybrat...</translation>
+        <translation>Vybrat…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="384"/>
@@ -137,19 +137,19 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation>Výchozí programy</translation>
+        <translation>Výchozí aplikace</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation>Prohlížeč internetu</translation>
+        <translation>Webový prohlížeč</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
         <location filename="../mimetypeviewer.ui" line="487"/>
         <location filename="../mimetypeviewer.ui" line="562"/>
         <source>Choose...</source>
-        <translation>Vybrat...</translation>
+        <translation>Vybrat…</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
