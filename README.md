@@ -76,7 +76,7 @@ Third-party applications can include their configuration tools in
 "Configuration Center", too. This applies e. g. to "Connman UI Setup" of
 [cmst](https://github.com/andrew-bibb/cmst) or "SDDM Configuration" of
 [sddm-config-editor](https://github.com/hagabaka/sddm-config-editor).
-Not already included settings are shown under "Other Settings".
+Other kinds of settings are shown under "Other Settings".
 
 ## Installation
 
@@ -96,7 +96,7 @@ as usual.
 
 ### Binary packages
 
-The library is provided by all major Linux and BSD distributions. 
+The library is provided by all major Linux and BSD distributions.
 Just use your package manager to search for string `lxqt-config`.
 
 ## Usage
