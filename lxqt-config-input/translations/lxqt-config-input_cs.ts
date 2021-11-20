@@ -37,7 +37,7 @@
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation>Dlouhá</translation>
+        <translation>Dlouze</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
@@ -48,7 +48,7 @@
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation>Krátká</translation>
+        <translation>Krátce</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation>Myš a Touchpad</translation>
+        <translation>Myš a touchpad</translation>
     </message>
 </context>
 <context>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation>Přetahovat kliknutím</translation>
+        <translation>Přetahovat klepnutím</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation>Ok&amp;raj</translation>
+        <translation>Na ok&amp;raji</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>

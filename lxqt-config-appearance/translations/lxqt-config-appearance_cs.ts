@@ -259,12 +259,12 @@
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation>Paleta Qt</translation>
+        <translation>Qt paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation>Některé styly Qt mohou přehlížet tyto barvy.</translation>
+        <translation>Některé Qt styly mohou tyto barvy ignorovat.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
