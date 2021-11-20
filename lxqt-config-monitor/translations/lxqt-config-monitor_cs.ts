@@ -135,7 +135,7 @@
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="109"/>
         <source>Set position</source>
-        <translation>Nastavit polohu</translation>
+        <translation>Nastavit pozici</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="228"/>
@@ -188,7 +188,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="146"/>
         <source>Refresh rate:</source>
-        <translation>Frekvence obnovování obrazu:</translation>
+        <translation>Frekvence překreslování obrazu:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
