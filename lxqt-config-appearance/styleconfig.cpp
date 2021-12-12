@@ -355,6 +355,14 @@ void StyleConfig::loadPalette()
                 resize(QSize (parent->size().width() / 2, 3 * parent->size().height() / 4));
         }
 
+        // these are needed for translations
+        void setQuestionTitle(const QString &title) {
+            qTitle = title;
+        }
+        void setQuestion(const QString &text) {
+            qText = text;
+        }
+
         QString currentPalette() {
             if (auto cur = ui.listWidget->currentItem())
             {
@@ -369,10 +377,7 @@ void StyleConfig::loadPalette()
             const auto items = ui.listWidget->selectedItems();
             if (items.isEmpty())
                 return;
-            QMessageBox::StandardButton btn =
-            QMessageBox::question(this,
-                                  tr("Remove Palettes"),
-                                  tr("Do you really want to remove selected palette(s)?\nRoot palettes will remain intact if existing."));
+            QMessageBox::StandardButton btn = QMessageBox::question(this, qTitle, qText);
             if (btn != QMessageBox::Yes)
                 return;
             QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
@@ -429,9 +434,14 @@ void StyleConfig::loadPalette()
         }
 
         Ui::PalettesDialog ui;
+        QString qTitle;
+        QString qText;
     };
 
     PalettesDialog dialog(this);
+    dialog.setQuestionTitle(tr("Remove Palettes"));
+    dialog.setQuestion(tr("Do you really want to remove selected palette(s)?\nRoot palettes will remain intact if existing."));
+
     if (dialog.exec() == QDialog::Accepted)
     { // set color labels
         auto paletteFile = dialog.currentPalette();
