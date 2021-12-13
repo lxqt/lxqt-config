@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: se utilizzi un viene usato un&lt;span style=&quot; font-weight:600;&quot;&gt;metodo di inserimento&lt;/span&gt; come IBus, uim, fcitx o gcin, queste impostazioni &lt;span style=&quot; font-weight:600;&quot;&gt;potrebbero non funzionare&lt;/span&gt; poiché sono scavalcate dai metodi di inserimento.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: se si utilizza un &lt;span style=&quot; font-weight:600;&quot;&gt;metodo di inserimento&lt;/span&gt; come IBus, uim, fcitx o gcin, queste impostazioni &lt;span style=&quot; font-weight:600;&quot;&gt;potrebbero non funzionare&lt;/span&gt; poiché sono scavalcate dai metodi di inserimento.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
