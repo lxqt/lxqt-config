@@ -412,8 +412,8 @@ Voulez vous la remplacer ?</translation>
         <location filename="../styleconfig.cpp" line="375"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished">Voulez vous vraiment supprimer les palettes sélectionnées ?
-Les palettes racines seront conservés si elles existent.</translation>
+        <translation>Voulez vous vraiment supprimer les palettes sélectionnées ?
+Les palettes root seront conservés si elles existent.</translation>
     </message>
 </context>
 </TS>

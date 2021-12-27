@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished">TouchpadConfig </translation>
+        <translation>SetelanPapanSentuh </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -269,17 +269,17 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished">Ed&amp;ge</translation>
+        <translation>Ping&amp;gir</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished">B&amp;utton</translation>
+        <translation>T&amp;ombol</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>LabelInfoPerangkat</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
