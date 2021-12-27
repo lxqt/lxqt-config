@@ -23,8 +23,64 @@
 #include <QFile>
 #include <QHash>
 #include <QDebug>
+#include <QX11Info>
 #include "selectkeyboardlayoutdialog.h"
 #include <LXQt/Settings>
+
+#include <X11/Xlib.h>
+#include <X11/XKBlib.h>
+#include <X11/extensions/XKBrules.h>
+
+static QString xkbRulesDir();
+static QString xkbRulesFile();
+static QString xkbRulesName();
+static void _lxqt_xkb_free_var_defs(XkbRF_VarDefsRec *var_defs);
+
+static QString xkbRulesDir()
+{
+    return QStringLiteral(XKB_RULES_DIR);
+}
+
+static QString xkbRulesFile()
+{
+    QString rulesFile;
+    const QString rules = xkbRulesName();
+    const QString xkbDir = xkbRulesDir();
+    if (!rules.isEmpty()) {
+        rulesFile = QStringLiteral("%1/rules/%2.lst").arg(xkbDir, rules);
+    } else { // default
+        rulesFile = QStringLiteral("%1/rules/evdev.lst").arg(xkbDir);
+    }
+    return rulesFile;
+}
+
+static QString xkbRulesName()
+{
+    if (!QX11Info::isPlatformX11()) {
+        return QString();
+    }
+    XkbRF_VarDefsRec v{};
+    char *file = nullptr;
+
+    if (XkbRF_GetNamesProp(QX11Info::display(), &file, &v) && file != nullptr) {
+        const QString name = QString::fromUtf8(file);
+        XFree(file);
+        _lxqt_xkb_free_var_defs(&v);
+        return name;
+    }
+    return {};
+}
+
+static void _lxqt_xkb_free_var_defs(XkbRF_VarDefsRec *var_defs)
+{
+    if (var_defs == nullptr)
+        return;
+
+    free(static_cast<void *>(var_defs->model));
+    free(static_cast<void *>(var_defs->layout));
+    free(static_cast<void *>(var_defs->variant));
+    free(static_cast<void *>(var_defs->options));
+}
 
 KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent):
   QWidget(parent),
@@ -101,9 +157,7 @@ enum ListSection{
 };
 
 void KeyboardLayoutConfig::loadLists() {
-  // load known lists from xkb data files
-  // XKBD_BASELIST_PATH is os dependent see keyboardlayoutconfig.h
-  QFile file(QLatin1String(XKBD_BASELIST_PATH));
+  QFile file(xkbRulesFile());
   if(file.open(QIODevice::ReadOnly)) {
     ListSection section = NoSection;
     while(!file.atEnd()) {

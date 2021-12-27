@@ -2,8 +2,16 @@ project(lxqt-config-input)
 
 find_package(X11 REQUIRED)
 
+find_package(PkgConfig REQUIRED)
+execute_process(COMMAND ${PKG_CONFIG_EXECUTABLE} --variable=xkb_base xkeyboard-config
+    OUTPUT_VARIABLE XKB_RULES_DIR
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+if(NOT EXISTS "${XKB_RULES_DIR}")
+    message(FATAL_ERROR "Couldn't find XKB rules location: \"${XKB_RULES_DIR}\".")
+endif()
+
 if (WITH_TOUCHPAD)
-    find_package(PkgConfig REQUIRED)
     pkg_check_modules(XORG_LIBINPUT REQUIRED xorg-libinput)
     pkg_check_modules(XORG_XI REQUIRED xi)
     pkg_check_modules(LIBUDEV REQUIRED libudev)
@@ -27,6 +35,7 @@ endif ()
 
 include_directories(
     ${lxqt-config-input_INCS}
+    ${X11_xkbfile_INCLUDE_PATH}
 )
 
 set(lxqt-config-input_HDRS
@@ -102,6 +111,7 @@ set(lxqt-config-input_TLBS
     Qt5::Widgets
     Qt5::X11Extras
     ${X11_LIBRARIES}
+    ${X11_xkbfile_LIB}
     lxqt
     lxqt-config-cursor
 )
@@ -113,6 +123,11 @@ if (WITH_TOUCHPAD)
         udev
     )
 endif ()
+
+target_compile_definitions(lxqt-config-input
+    PRIVATE
+        "XKB_RULES_DIR=\"${XKB_RULES_DIR}\""
+)
 
 target_link_libraries(lxqt-config-input
     ${lxqt-config-input_TLBS}
