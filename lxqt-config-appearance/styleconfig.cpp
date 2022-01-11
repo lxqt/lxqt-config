@@ -43,11 +43,6 @@
 #include <QDir>
 #include <QGuiApplication>
 
-
-#ifdef Q_WS_X11
-extern void qt_x11_apply_settings_in_all_apps();
-#endif
-
 StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),

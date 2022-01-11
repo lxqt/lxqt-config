@@ -32,10 +32,6 @@
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 
-#ifdef Q_WS_X11
-extern void qt_x11_apply_settings_in_all_apps();
-#endif
-
 MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
   QWidget(parent),
   settings(_settings),
@@ -125,7 +121,6 @@ void MouseConfig::setLeftHandedMouse() {
 void MouseConfig::applyConfig()
 {
   bool acceptSetting = false;
-  bool applyX11 = false;
 
   if(leftHanded != ui.mouseLeftHanded->isChecked())
   {
@@ -137,31 +132,23 @@ void MouseConfig::applyConfig()
   if(doubleClickInterval != ui.doubleClickInterval->value())
   {
     doubleClickInterval = ui.doubleClickInterval->value();
-    acceptSetting = applyX11 = true;
+    acceptSetting = true;
   }
 
   if(wheelScrollLines != ui.wheelScrollLines->value())
   {
     wheelScrollLines = ui.wheelScrollLines->value();
-    acceptSetting = applyX11 = true;
+    acceptSetting = true;
   }
 
   if(singleClick != ui.singleClick->isChecked())
   {
     singleClick = ui.singleClick->isChecked();
-    acceptSetting = applyX11 = true;
+    acceptSetting = true;
   }
 
   if(acceptSetting)
     accept();
-
-#ifdef Q_WS_X11
-  if(applyX11)
-  {
-    qtSettings->sync();
-    qt_x11_apply_settings_in_all_apps();
-  }
-#endif
 }
 
 void MouseConfig::loadSettings() {

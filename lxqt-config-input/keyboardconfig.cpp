@@ -31,10 +31,6 @@
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 
-#ifdef Q_WS_X11
-extern void qt_x11_apply_settings_in_all_apps();
-#endif
-
 KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
   QWidget(parent),
   settings(_settings),
@@ -89,7 +85,6 @@ void KeyboardConfig::initControls() {
 void KeyboardConfig::applyConfig()
 {
   bool acceptSetting = false;
-  bool applyX11 = false;
 
   /* apply keyboard values */
   if(delay != ui.keyboardDelay->value() || interval != ui.keyboardInterval->value())
@@ -112,7 +107,7 @@ void KeyboardConfig::applyConfig()
   if(flashTime != ui.cursorFlashTime->value())
   {
     flashTime = ui.cursorFlashTime->value();
-    acceptSetting = applyX11 = true;
+    acceptSetting = true;
   }
 
   if(numlock != ui.keyboardNumLock->isChecked())
@@ -123,14 +118,6 @@ void KeyboardConfig::applyConfig()
 
   if(acceptSetting)
     accept();
-
-#ifdef Q_WS_X11
-  if(applyX11)
-  {
-    qtSettings->sync();
-    qt_x11_apply_settings_in_all_apps();
-  }
-#endif
 }
 
 void KeyboardConfig::loadSettings() {
