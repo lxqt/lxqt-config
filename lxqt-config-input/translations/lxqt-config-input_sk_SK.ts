@@ -48,7 +48,7 @@
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation>Krátka</translation>
+        <translation>Krátke</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Nastavenie klávesnice vyskúšate písaním do následujúcej oblasti</translation>
+        <translation>Nastavenie klávesnice vyskúšate písaním do následujúceho poľa</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>Po prihlásení zapnúť číselnú klávesnicu (NumLock)</translation>
+        <translation>Po prihlásení zapnúť numerickú klávesnicu (NumLock)</translation>
     </message>
 </context>
 <context>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation>Dolu</translation>
+        <translation>Dole</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
@@ -117,12 +117,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Kombinácia kláves pre prepnutie rozloženia:</translation>
+        <translation>Klávesová skratka pre prepnutie rozloženia:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation>Žiadne</translation>
+        <translation>Žiadna</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
@@ -155,12 +155,12 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Kolečko myši vytvára pohyb obrazu o ... riadkov:</translation>
+        <translation>Koliesko myši posunie:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Ľavoruká obsluha (vymeniť ľavé a pravé tlačítko myši)</translation>
+        <translation>Pre ľavákov (vymeniť ľavé a pravé tlačítko myši)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation>Nastavenie pre touchpad: </translation>
+        <translation>Nastavenia pre touchpad: </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Klepnúť pre kliknutie</translation>
+        <translation>Zapnúť kliknutie klepnutím</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -249,12 +249,12 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation>Preťahovať kliknutím</translation>
+        <translation>Klepnutím pretiahnuť</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation>Posúvanie:</translation>
+        <translation>Rolovanie:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation>&amp;Okraj</translation>
+        <translation>&amp;Pri okraji</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
