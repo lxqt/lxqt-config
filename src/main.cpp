@@ -2,7 +2,7 @@
  * (c)LGPL2+
  *
  * LXQt - a lightweight, Qt based, desktop toolset
- * https://lxqt.org
+ * https://lxqt-project.org
  *
  * Copyright: 2010-2011 Razor team
  * Authors:

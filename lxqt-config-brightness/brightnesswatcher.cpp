@@ -1,6 +1,6 @@
 /*
  * LXQt - a lightweight, Qt based, desktop toolset
- * https://lxqt.org
+ * https://lxqt-project.org
  * Copyright (C) 2020  Luís Pereira <luis.artur.pereira@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
