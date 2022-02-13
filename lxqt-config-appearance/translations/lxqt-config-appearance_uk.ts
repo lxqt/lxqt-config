@@ -52,7 +52,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Назва шрифта:</translation>
+        <translation>Назва шрифту:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -92,18 +92,18 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Використовувати шрифти зі згладженням</translation>
+        <translation>Використовувати шрифти зі згладжуванням</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Стиль шрифтів підказок:</translation>
+        <translation>Стиль хінтингу шрифтів:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation>Нічого</translation>
+        <translation>Вимкнено</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -123,7 +123,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Шрифт підказки</translation>
+        <translation>Хінтинг шрифтів</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -133,12 +133,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>Автопідказка</translation>
+        <translation>Автохінтинг</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Згладження субпікселів:</translation>
+        <translation>Згладжування субпікселів:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
