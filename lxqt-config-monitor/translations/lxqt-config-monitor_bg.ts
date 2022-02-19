@@ -244,7 +244,7 @@
         <location filename="../monitorwidget.cpp" line="133"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA device ID: %1
+        <translation>EISA устройство ID: %1
 </translation>
     </message>
     <message>
@@ -310,7 +310,7 @@
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
-            <numerusform>%n оставащи секунди</numerusform>
+            <numerusform>%n оставаща секунда</numerusform>
             <numerusform>%n оставащи секунди</numerusform>
         </translation>
     </message>
