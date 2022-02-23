@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>다음의 설정은 새로 시작하는 애플리케이션에만 적용됩니다</translation>
+        <translation>다음 설정은 새로 시작된 응용 프로그램에만 영향을 줍니다</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -341,9 +341,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>유니폼 테마를 시도하려면 모든 목록에서 유사한 스타일 / 테마 (가능한 경우)를 선택하거나 &apos;gtk2&apos;Qt 스타일 (가능한 경우)을 선택하여 GTK 테마를 따르세요.
+        <translation>균일한 테마를 시도하려면 모든 목록에서 유사한 스타일/테마(사용 가능한 경우)를 선택하거나 &apos;gtk2&apos; Qt 스타일(사용 가능한 경우)을 선택하여 GTK 테마를 모방합니다.
 
-GTK 애플리케이션이 테마를 즉시 적용할 수 있도록 &apos;xsettingsd&apos;가 설치되어 있는지 확인해주세요.</translation>
+GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;xsettingsd&apos;가 설치되어 있는지 확인하십시오.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="325"/>
