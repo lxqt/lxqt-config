@@ -166,7 +166,7 @@
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt 꾸미기설정</translation>
+        <translation>LXQt 모양새 구성</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt 꾸미기 설정</translation>
+        <translation>LXQt 모양새 구성</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
@@ -324,7 +324,7 @@
     <message>
         <location filename="../styleconfig.ui" line="268"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>GTK 테마 설정 (GTK 설정 파일을 덮어씁니다!)</translation>
+        <translation>GTK 테마 지정 (GTK 구성 파일을 덮어씁니다!)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="288"/>
@@ -358,17 +358,17 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     <message>
         <location filename="../styleconfig.ui" line="338"/>
         <source>Only display the text</source>
-        <translation>글자만 보이기</translation>
+        <translation>텍스트만 보이기</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="343"/>
         <source>The text appears beside the icon</source>
-        <translation>아이콘 옆에 글자 보이기</translation>
+        <translation>아이콘 옆에 텍스트가 나타납니다</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="348"/>
         <source>The text appears under the icon</source>
-        <translation>아이콘 아래에 글자 보이기</translation>
+        <translation>아이콘 아래에 텍스트가 나타납니다</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="353"/>
