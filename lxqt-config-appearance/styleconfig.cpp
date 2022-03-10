@@ -28,7 +28,6 @@
 #include "styleconfig.h"
 #include "ui_styleconfig.h"
 #include "ui_palettes.h"
-#include <QTreeWidget>
 #include <QDebug>
 #include <QStyleFactory>
 #include <QToolBar>
@@ -43,24 +42,17 @@
 #include <QDir>
 #include <QGuiApplication>
 
-StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent) :
+StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidget* parent) :
     QWidget(parent),
     ui(new Ui::StyleConfig),
     mQtSettings(qtSettings),
     mSettings(settings)
 {
-    mConfigAppearanceSettings = configAppearanceSettings;
-    mConfigOtherToolKits = configOtherToolKits;
     ui->setupUi(this);
 
     initControls();
 
-    connect(ui->advancedOptionsGroupBox, &QGroupBox::toggled, this, &StyleConfig::showAdvancedOptions);
-
     connect(ui->qtComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
-    connect(ui->advancedOptionsGroupBox, &QGroupBox::clicked, this, &StyleConfig::settingsChanged);
-    connect(ui->gtk2ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
-    connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
 
@@ -101,17 +93,7 @@ StyleConfig::~StyleConfig()
 void StyleConfig::initControls()
 {
 
-    // Fill global themes
     QStringList qtThemes = QStyleFactory::keys();
-    QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("2.0"));
-    QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("3.*"));
-
-    if(!mConfigAppearanceSettings->contains(QStringLiteral("ControlGTKThemeEnabled")))
-        mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), false);
-    bool controlGTKThemeEnabled = mConfigAppearanceSettings->value(QStringLiteral("ControlGTKThemeEnabled")).toBool();
-
-    showAdvancedOptions(controlGTKThemeEnabled);
-    ui->advancedOptionsGroupBox->setChecked(controlGTKThemeEnabled);
 
     // read other widget related settings from LXQt settings.
     QByteArray tb_style = mSettings->value(QStringLiteral("tool_button_style")).toByteArray();
@@ -129,12 +111,6 @@ void StyleConfig::initControls()
     ui->qtComboBox->clear();
     ui->qtComboBox->addItems(qtThemes);
 
-    // Fill GTK themes
-    ui->gtk2ComboBox->addItems(gtk2Themes);
-    ui->gtk3ComboBox->addItems(gtk3Themes);
-
-    ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("2.0")));
-    ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
 
     // Qt style
     mQtSettings->beginGroup(QLatin1String("Qt"));
@@ -259,28 +235,8 @@ void StyleConfig::applyStyle()
     {
         mSettings->setValue(QStringLiteral("tool_button_style"), QString::fromUtf8(str));
         mSettings->sync();
-        mConfigOtherToolKits->setConfig();
+        emit updateOtherSettings();
     }
-
-    if (ui->advancedOptionsGroupBox->isChecked())
-    {
-        // GTK3
-        themeName = ui->gtk3ComboBox->currentText();
-        mConfigOtherToolKits->setGTKConfig(QStringLiteral("3.0"), themeName);
-        if(QGuiApplication::platformName() == QStringLiteral("wayland"))
-            mConfigOtherToolKits->setGsettingsConfig(QStringLiteral("3.0"), themeName);
-        // GTK2
-        themeName = ui->gtk2ComboBox->currentText();
-        mConfigOtherToolKits->setGTKConfig(QStringLiteral("2.0"), themeName);
-        // Update xsettingsd
-        mConfigOtherToolKits->setXSettingsConfig();
-    }
-}
-
-void StyleConfig::showAdvancedOptions(bool on)
-{
-    ui->uniformThemeLabel->setVisible(on);
-    mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), on);
 }
 
 void StyleConfig::savePalette()

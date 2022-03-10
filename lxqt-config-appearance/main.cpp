@@ -38,6 +38,7 @@
 #include "styleconfig.h"
 #include "fontsconfig.h"
 #include "configothertoolkits.h"
+#include "gtkconfig.h"
 
 #include "../liblxqt-config-cursor/selectwnd.h"
 
@@ -70,12 +71,13 @@ int main (int argc, char **argv)
     QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
 
     /*** Widget Style ***/
-    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, &mConfigAppearanceSettings, configOtherToolKits, dialog);
+    StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
     dialog->addPage(stylePage, QObject::tr("Widget Style"), QStringList() << QStringLiteral("preferences-desktop-theme") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, stylePage, &StyleConfig::initControls);
     QObject::connect(stylePage, &StyleConfig::settingsChanged, dialog, [dialog] {
         dialog->enableButton(QDialogButtonBox::Apply, true); // enable Apply button when something is changed
     });
+    QObject::connect(stylePage, &StyleConfig::updateOtherSettings, configOtherToolKits, &ConfigOtherToolKits::setConfig);
 
     /*** Icon Theme ***/
     IconThemeConfig* iconPage = new IconThemeConfig(settings, dialog);
@@ -111,15 +113,24 @@ int main (int argc, char **argv)
             dialog->enableButton(QDialogButtonBox::Apply, true);
             });
 
+    /*** GTK Theme ***/
+    GTKConfig* GTKPage = new GTKConfig(&mConfigAppearanceSettings, configOtherToolKits, dialog);
+    dialog->addPage(GTKPage, QObject::tr("GTK Style"), QStringList() << QStringLiteral("gtk-preferences") << QStringLiteral("preferences-desktop"));
+    QObject::connect(dialog, &LXQt::ConfigDialog::reset, GTKPage, &GTKConfig::initControls);
+    QObject::connect(GTKPage, &GTKConfig::settingsChanged, dialog, [dialog] {
+        dialog->enableButton(QDialogButtonBox::Apply, true);
+    });
+
     // apply all changes on clicking Apply
     QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton btn) {
         if (btn == QDialogButtonBox::Apply)
         {
-            // FIXME: Update cursor style on Qt apps on wayland and GTK on X11. 
+            // FIXME: Update cursor style on Qt apps on wayland and GTK on X11.
             iconPage->applyIconTheme();
             themePage->applyLxqtTheme();
             fontsPage->updateQtFont();
             cursorPage->applyCusorTheme();
+            GTKPage->applyGTKStyle();
             stylePage->applyStyle(); // Cursor and font have to be set before style
             // disable Apply button after changes are applied
             dialog->enableButton(btn, false);

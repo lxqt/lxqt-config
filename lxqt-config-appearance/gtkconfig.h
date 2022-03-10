@@ -4,9 +4,7 @@
  * LXQt - a lightweight, Qt based, desktop toolset
  * https://lxqt-project.org/
  *
- * Copyright: 2012 Razor team
- * Authors:
- *   Alexander Sokoloff <sokoloff.a@gmail.com>
+ * Copyright: 2022 LXQt team
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -25,44 +23,42 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef STYLECONFIG_H
-#define STYLECONFIG_H
+#ifndef GTKCONFIG_H
+#define GTKCONFIG_H
 
 #include <QWidget>
-#include <LXQt/Settings>
+#include "ui_gtkconfig.h"
 #include "configothertoolkits.h"
 
-class QSettings;
-
 namespace Ui {
-    class StyleConfig;
+    class GTKConfig;
 }
 
-class StyleConfig : public QWidget
+class GTKConfig : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit StyleConfig(LXQt::Settings *settings, QSettings *qtSettings, QWidget *parent = nullptr);
-    ~StyleConfig();
+    explicit GTKConfig(LXQt::Settings *configAppearanceSettings,
+                       ConfigOtherToolKits *configOtherToolKits,
+                       QWidget *parent = nullptr);
+    ~GTKConfig();
 
-    void applyStyle();
+    void applyGTKStyle();
 
 public slots:
     void initControls();
 
 signals:
     void settingsChanged();
-    void updateOtherSettings();
 
 private slots:
-    void savePalette();
-    void loadPalette();
+    void showAdvancedOptions(bool on);
 
 private:
-    Ui::StyleConfig *ui;
-    QSettings *mQtSettings;
-    LXQt::Settings *mSettings;
+    Ui::GTKConfig *ui;
+    LXQt::Settings *mConfigAppearanceSettings;
+    ConfigOtherToolKits *mConfigOtherToolKits;
 };
 
-#endif // STYLECONFIG_H
+#endif // GTKCONFIG_H
