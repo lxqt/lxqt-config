@@ -162,6 +162,38 @@
     </message>
 </context>
 <context>
+    <name>GTKConfig</name>
+    <message>
+        <location filename="../gtkconfig.ui" line="44"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="63"/>
+        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
+        <translation>Nastaviť tému GTK (konfiguračný súbor GTK bude prepísaný!)</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="83"/>
+        <source>GTK 3 Theme</source>
+        <translation>Téma GTK 3</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="93"/>
+        <source>GTK 2 Theme</source>
+        <translation>Téma GTK 2</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="103"/>
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
+
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation>Pokiaľ sa pokúšate o jednotnú tému, buď vyberte zo zoznamu podobný štýl / tému vzhľadu (ak je k dispozícii), alebo vyberte gtk2 Qt tému vzhľadu (ak je k dispozícii).
+
+Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
+    </message>
+</context>
+<context>
     <name>IconThemeConfig</name>
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
@@ -219,34 +251,39 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Nastavenie vzhľadu LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Widget Style</source>
         <translation>Štýl widgetu</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="82"/>
+        <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
         <translation>Vzhľad ikôn</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="91"/>
+        <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
         <translation>Téma LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="99"/>
+        <location filename="../main.cpp" line="101"/>
         <source>Font</source>
         <translation>Písmo</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="109"/>
+        <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
         <translation>Kurzor</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="118"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -322,61 +359,37 @@
         <translation>&amp;Vymazať paletu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="268"/>
-        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Nastaviť tému GTK (konfiguračný súbor GTK bude prepísaný!)</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="288"/>
-        <source>GTK 3 Theme</source>
-        <translation>Téma GTK 3</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="298"/>
-        <source>GTK 2 Theme</source>
-        <translation>Téma GTK 2</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="308"/>
-        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
-
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Pokiaľ sa pokúšate o jednotnú tému, buď vyberte zo zoznamu podobný štýl / tému vzhľadu (ak je k dispozícii), alebo vyberte gtk2 Qt tému vzhľadu (ak je k dispozícii).
-
-Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="325"/>
+        <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
         <translation>Štýl tlačidiel v nástrojovom panely:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="333"/>
+        <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
         <translation>Zobraziť iba ikonu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
         <translation>Zobraziť iba text</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="343"/>
+        <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
         <translation>Text vedľa ikony</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
         <translation>Text pod ikonou</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="353"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
         <translation>Preddefinované</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="361"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
         <translation>Aktivovať prvok jednoduchým kliknutím</translation>
     </message>
@@ -386,30 +399,30 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
         <translation>Štýl Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
-        <location filename="../styleconfig.cpp" line="304"/>
+        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
         <translation>Uložiť paletu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
+        <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
         <translation>Názov palety:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="305"/>
+        <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Paleta s týmto názvom už existuje.
 Chcete ju nahradiť?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="374"/>
+        <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
         <translation>Odstrániť palety</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="375"/>
+        <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Prajete si odstrániť tieto palety?
