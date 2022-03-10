@@ -28,6 +28,7 @@ set(CPP_FILES
     fontconfigfile.cpp
     configothertoolkits.cpp
     colorLabel.cpp
+    gtkconfig.cpp
 )
 
 set(UI_FILES
@@ -36,6 +37,7 @@ set(UI_FILES
     fontsconfig.ui
     palettes.ui
     styleconfig.ui
+    gtkconfig.ui
 )
 
 set(QRC_FILES "")
