@@ -162,6 +162,38 @@
     </message>
 </context>
 <context>
+    <name>GTKConfig</name>
+    <message>
+        <location filename="../gtkconfig.ui" line="44"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="63"/>
+        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
+        <translation>Встановити теми GTK (файли налаштувань GTK буде замінено)</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="83"/>
+        <source>GTK 3 Theme</source>
+        <translation>Тема GTK 3</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="93"/>
+        <source>GTK 2 Theme</source>
+        <translation>Тема GTK 2</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="103"/>
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
+
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation>Щоб спробувати уніфікувати вигляд, виберіть або схожий стиль/тему (якщо доступні) в усіх списках, або виберіть стиль «gtk2» для Qt (якщо доступний), щоб імітувати теми GTK.
+
+Переконайтеся, що встановлено &apos;xsettingsd&apos;, щоб допомогти програмам GTK застосовувати теми «на льоту».</translation>
+    </message>
+</context>
+<context>
     <name>IconThemeConfig</name>
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
@@ -219,34 +251,39 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Налаштування вигляду LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Widget Style</source>
         <translation>Стиль віджетів</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="82"/>
+        <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
         <translation>Тема піктограм</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="91"/>
+        <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
         <translation>Тема LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="99"/>
+        <location filename="../main.cpp" line="101"/>
         <source>Font</source>
         <translation>Шрифт</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="109"/>
+        <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
         <translation>Курсор</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="118"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -322,61 +359,37 @@
         <translation>&amp;Типова палітра</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="268"/>
-        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Встановити теми GTK (файли налаштувань GTK буде замінено)</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="288"/>
-        <source>GTK 3 Theme</source>
-        <translation>Тема GTK 3</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="298"/>
-        <source>GTK 2 Theme</source>
-        <translation>Тема GTK 2</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="308"/>
-        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
-
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Щоб спробувати уніфікувати вигляд, виберіть або схожий стиль/тему (якщо доступні) в усіх списках, або виберіть стиль «gtk2» для Qt (якщо доступний), щоб імітувати теми GTK.
-
-Переконайтеся, що встановлено &apos;xsettingsd&apos;, щоб допомогти програмам GTK застосовувати теми «на льоту».</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="325"/>
+        <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
         <translation>Стиль кнопок панелі інструментів:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="333"/>
+        <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
         <translation>Показувати лише піктограму</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
         <translation>Показувати лише текст</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="343"/>
+        <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
         <translation>Текст з&apos;являється поруч з піктограмою</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
         <translation>Текст під піктограмою</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="353"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
         <translation>Типово</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="361"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
         <translation>Активувати одним натисканням</translation>
     </message>
@@ -386,30 +399,30 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <translation>Стиль Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
-        <location filename="../styleconfig.cpp" line="304"/>
+        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
         <translation>Зберегти палітру</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
+        <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
         <translation>Назва палітри:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="305"/>
+        <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Палітра з такою назвою вже існує.
 Бажаєте її замінити?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="374"/>
+        <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
         <translation>Вилучити палітри</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="375"/>
+        <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Ви дійсно хочете вилучити вибрані палітри?

@@ -162,6 +162,38 @@
     </message>
 </context>
 <context>
+    <name>GTKConfig</name>
+    <message>
+        <location filename="../gtkconfig.ui" line="44"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="63"/>
+        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
+        <translation>Vali GTK teemad (sellega muudame ka GTK seadistuste failid!)</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="83"/>
+        <source>GTK 3 Theme</source>
+        <translation>GTK 3 teema</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="93"/>
+        <source>GTK 2 Theme</source>
+        <translation>GTK 2 teema</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="103"/>
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
+
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation>Selleks, et teemad oleks ühtlased, siis kui vähegi võimalik, palun vali samad stiilid/teemad kõikides loendites. Alternatiivina vali GTK teemade jäljendamiseks Qt teemaks „gtk2“.
+
+Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli et „xsettingsd“ oleks paigaldatud.</translation>
+    </message>
+</context>
+<context>
     <name>IconThemeConfig</name>
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
@@ -219,34 +251,39 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
         <translation>LXQt välimuse seadistused</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Widget Style</source>
         <translation>Vidina stiil</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="82"/>
+        <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
         <translation>Ikooniteema</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="91"/>
+        <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
         <translation>LXQt teema</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="99"/>
+        <location filename="../main.cpp" line="101"/>
         <source>Font</source>
         <translation>Font</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="109"/>
+        <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
         <translation>Kursor</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="118"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -322,61 +359,37 @@
         <translation>Taasta värvipaleti &amp;vaikeväärtus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="268"/>
-        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Vali GTK teemad (sellega muudame ka GTK seadistuste failid!)</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="288"/>
-        <source>GTK 3 Theme</source>
-        <translation>GTK 3 teema</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="298"/>
-        <source>GTK 2 Theme</source>
-        <translation>GTK 2 teema</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="308"/>
-        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
-
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Selleks, et teemad oleks ühtlased, siis kui vähegi võimalik, palun vali samad stiilid/teemad kõikides loendites. Alternatiivina vali GTK teemade jäljendamiseks Qt teemaks „gtk2“.
-
-Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli et „xsettingsd“ oleks paigaldatud.</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="325"/>
+        <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
         <translation>Tööriistariba nuppude stiil:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="333"/>
+        <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
         <translation>Ainult ikoon</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
         <translation>Ainult tekst</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="343"/>
+        <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
         <translation>Tekst ikooni kõrval</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
         <translation>Tekst ikooni all</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="353"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
         <translation>Vaikimisi väärtus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="361"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
         <translation>Käivita objektid ühe klõpsuga</translation>
     </message>
@@ -386,30 +399,30 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
         <translation>Qt stiil</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
-        <location filename="../styleconfig.cpp" line="304"/>
+        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
         <translation>Salvesta värvipalett</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
+        <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
         <translation>Värvipaleti nimi:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="305"/>
+        <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Sellise nimega värvipalett on juba olemas.
 Kas sa soovid ta asendada?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="374"/>
+        <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
         <translation>Kustuta värvipaletid</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="375"/>
+        <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Kas sa kindlasti soovid kustutada valitud värvipaleti(d)?

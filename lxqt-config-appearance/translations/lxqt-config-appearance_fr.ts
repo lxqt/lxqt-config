@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Erreur : gsettings ne peut pas être lancé</translation>
+        <translation>Erreur&#xa0;: gsettings ne peut pas être lancé</translation>
     </message>
 </context>
 <context>
@@ -162,6 +162,38 @@
     </message>
 </context>
 <context>
+    <name>GTKConfig</name>
+    <message>
+        <location filename="../gtkconfig.ui" line="44"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="63"/>
+        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
+        <translation>Configurer les thèmes GTK (les fichiers de configuration de GTK seront écrasés!)</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="83"/>
+        <source>GTK 3 Theme</source>
+        <translation>Thème GTK 3</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="93"/>
+        <source>GTK 2 Theme</source>
+        <translation>Thème GTK 2</translation>
+    </message>
+    <message>
+        <location filename="../gtkconfig.ui" line="103"/>
+        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
+
+Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
+        <translation>Pour tenter une thématisation uniforme, sélectionner un style/thème similaire (si disponible) dans toutes les listes ou le style Qt &apos;gtk2&apos; (si disponible) pour imiter les thèmes GTK.
+
+S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer des thèmes à la volée.</translation>
+    </message>
+</context>
+<context>
     <name>IconThemeConfig</name>
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
@@ -219,34 +251,39 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Configuration de l&apos;apparence de LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="75"/>
         <source>Widget Style</source>
         <translation>Style des widgets</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="82"/>
+        <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
         <translation>Thème d’icônes</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="91"/>
+        <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
         <translation>Thème LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="99"/>
+        <location filename="../main.cpp" line="101"/>
         <source>Font</source>
         <translation>Police</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="109"/>
+        <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
         <translation>Curseur</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="118"/>
+        <source>GTK Style</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -322,61 +359,37 @@
         <translation>Palette par &amp;défaut</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="268"/>
-        <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Configurer les thèmes GTK (les fichiers de configuration de GTK seront écrasés!)</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="288"/>
-        <source>GTK 3 Theme</source>
-        <translation>Thème GTK 3</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="298"/>
-        <source>GTK 2 Theme</source>
-        <translation>Thème GTK 2</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="308"/>
-        <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
-
-Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Pour tenter une thématisation uniforme, sélectionner un style/thème similaire (si disponible) dans toutes les listes ou le style Qt &apos;gtk2&apos; (si disponible) pour imiter les thèmes GTK.
-
-S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer des thèmes à la volée.</translation>
-    </message>
-    <message>
-        <location filename="../styleconfig.ui" line="325"/>
+        <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
         <translation>Style des boutons de la barre d&apos;outils :</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="333"/>
+        <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
         <translation>N&apos;afficher que l&apos;icône</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
         <translation>N&apos;afficher que le texte</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="343"/>
+        <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
         <translation>Texte à côté de l&apos;icône</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
         <translation>Texte sous l&apos;icône</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="353"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
         <translation>Par défaut</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="361"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
         <translation>Activer l&apos;élément en un seul clic</translation>
     </message>
@@ -386,33 +399,33 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
         <translation>Style QT</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
-        <location filename="../styleconfig.cpp" line="304"/>
+        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
         <translation>Enregistrer la Palette</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="294"/>
+        <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation>Nom de la palette :</translation>
+        <translation>Nom de la palette&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="305"/>
+        <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Une palette du même nom existe.
-Voulez vous la remplacer ?</translation>
+Voulez vous la remplacer&#xa0;?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="374"/>
+        <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
         <translation>Supprimer les Palettes</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="375"/>
+        <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Voulez vous vraiment supprimer les palettes sélectionnées ?
+        <translation>Voulez vous vraiment supprimer les palettes sélectionnées&#xa0;?
 Les palettes root seront conservés si elles existent.</translation>
     </message>
 </context>
