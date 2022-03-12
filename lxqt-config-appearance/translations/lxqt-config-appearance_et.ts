@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK välimus</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -283,7 +283,7 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK välimus</translation>
     </message>
 </context>
 <context>
