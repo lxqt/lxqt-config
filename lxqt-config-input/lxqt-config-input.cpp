@@ -136,10 +136,14 @@ int main(int argc, char** argv) {
 
     dlg.setWindowIcon(QIcon::fromTheme(QStringLiteral("input-keyboard")));
 
+    LXQt::Settings mConfigInputSettings(QStringLiteral("lxqt-config-input"));
+    dlg.resize(mConfigInputSettings.value(QStringLiteral("size")).toSize().expandedTo(QSize(600, 400)));
+
     const QString initialPage = dlgOptions.page();
     if (!initialPage.isEmpty())
         dlg.showPage(initialPage);
 
     dlg.exec();
+    mConfigInputSettings.setValue(QStringLiteral("size"), dlg.size());
     return 0;
 }
