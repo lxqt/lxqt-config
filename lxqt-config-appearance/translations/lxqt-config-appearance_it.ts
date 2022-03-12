@@ -167,7 +167,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -284,7 +284,7 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile GTK</translation>
     </message>
 </context>
 <context>

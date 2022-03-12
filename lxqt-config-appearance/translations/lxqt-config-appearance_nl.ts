@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-thema</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -283,7 +283,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-thema</translation>
     </message>
 </context>
 <context>

@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Erreur&#xa0;: gsettings ne peut pas être lancé</translation>
+        <translation>Erreur : gsettings ne peut pas être lancé</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Style GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -283,7 +283,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Style GTK</translation>
     </message>
 </context>
 <context>
@@ -407,14 +407,14 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation>Nom de la palette&#xa0;:</translation>
+        <translation>Nom de la palette :</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Une palette du même nom existe.
-Voulez vous la remplacer&#xa0;?</translation>
+Voulez vous la remplacer ?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
@@ -425,7 +425,7 @@ Voulez vous la remplacer&#xa0;?</translation>
         <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Voulez vous vraiment supprimer les palettes sélectionnées&#xa0;?
+        <translation>Voulez vous vraiment supprimer les palettes sélectionnées ?
 Les palettes root seront conservés si elles existent.</translation>
     </message>
 </context>
