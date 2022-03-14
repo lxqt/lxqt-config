@@ -41,32 +41,32 @@
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>&lt;b&gt;Examples&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;उदाहरण&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="248"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>संख्या :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="268"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>टाइम :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="288"/>
         <source>Currency:</source>
-        <translation type="unfinished"></translation>
+        <translation>मुद्रा :</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="308"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>नाप-तौल इकाई :</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="127"/>
         <source>No change</source>
-        <translation type="unfinished"></translation>
+        <translation>कोई परिवर्तन नहीं</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="316"/>
