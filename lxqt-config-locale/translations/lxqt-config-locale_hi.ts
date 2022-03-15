@@ -71,27 +71,27 @@
     <message>
         <location filename="../localeconfig.cpp" line="316"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>प्रारूप सेटिंग्स परिवर्तित</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="317"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>क्या आप अपने परिवर्तनों को सहेजना चाहते हैं? अगली बार जब आप लॉग इन करेंगे तो वे प्रभावी होंगे.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="438"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>इंपीरियल UK</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="442"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>इंपीरियल US</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="446"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>मीट्रिक</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt स्थानीय कॉन्फ़िगरेशन</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>स्थानीय सेटिंग</translation>
     </message>
 </context>
 </TS>
