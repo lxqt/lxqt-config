@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK Biçemi</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -283,7 +283,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK Biçemi</translation>
     </message>
 </context>
 <context>
