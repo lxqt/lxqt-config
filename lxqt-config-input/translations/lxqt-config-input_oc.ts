@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation>Durada del clucatejament del cursor&#x202f;:</translation>
+        <translation>Durada del clucatejament del cursor :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Relambi de repeticion&#x202f;:</translation>
+        <translation>Relambi de repeticion :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Interval de repeticion&#x202f;:</translation>
+        <translation>Interval de repeticion :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Acorchis per modificar la disposicion :</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Interval d’un doble-clic&#x202f;:</translation>
+        <translation>Interval d’un doble-clic :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Linhas de desfilament de la ròda&#x202f;:</translation>
+        <translation>Linhas de desfilament de la ròda :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>Configuracion del pavat numeric </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -234,12 +234,12 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation>Acceleracion&#x202f;:</translation>
+        <translation>Acceleracion :</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Tòca per clicar</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Desactivat</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>Bò&amp;rds</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta d’informacions del periferic</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
