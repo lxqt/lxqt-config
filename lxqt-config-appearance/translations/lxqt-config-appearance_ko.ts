@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 스타일</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -283,7 +283,7 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 스타일</translation>
     </message>
 </context>
 <context>
