@@ -68,7 +68,6 @@ private:
     void writeExports();
 
     void updateExample();
-    void updateEnabled();
 
     Ui::LocaleConfig *m_ui;
     bool hasChanged;
