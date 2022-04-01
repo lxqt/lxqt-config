@@ -109,7 +109,7 @@ void LocaleConfig::load()
         connectCombo(combo);
     }
 
-    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [ = ]()
+    connect(m_ui->checkDetailed, &QGroupBox::toggled, [ = ]()
     {
         updateExample();
         updateEnabled();
