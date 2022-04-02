@@ -61,7 +61,7 @@ LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_set
     mSettings(settings),
     sSettings(session_settings)
 
-    
+
 {
     m_ui->setupUi(this);
     m_combos << m_ui->comboGlobal
@@ -109,14 +109,13 @@ void LocaleConfig::load()
         connectCombo(combo);
     }
 
-    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [ = ]()
+    connect(m_ui->checkDetailed, &QGroupBox::toggled, [ = ]()
     {
         updateExample();
-        updateEnabled();
         hasChanged = true;
     });
 
-    updateEnabled();
+
     updateExample();
     hasChanged = false;
 }
@@ -135,7 +134,7 @@ void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales
 
 void LocaleConfig::connectCombo(QComboBox *combo)
 {
-    connect(combo, &QComboBox::currentTextChanged, [ = ]()
+    connect(combo, QOverload<int>::of(&QComboBox::currentIndexChanged), [ = ]()
     {
         hasChanged = true;
         updateExample();
@@ -200,8 +199,6 @@ void LocaleConfig::readConfig()
     setCombo(m_ui->comboCollate, mSettings->value(lcCollate, QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData()))).toString());
     setCombo(m_ui->comboCurrency, mSettings->value(lcMonetary, QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData()))).toString());
     setCombo(m_ui->comboMeasurement, mSettings->value(lcMeasurement, QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData()))).toString());
-
-    updateEnabled();
 
     mSettings->endGroup();
 }
@@ -269,7 +266,7 @@ void LocaleConfig::writeConfig()
         if (time.isEmpty())
         {
             mSettings->remove(lcTime);
-        } 
+        }
         else
         {
             mSettings->setValue(lcTime, time);
@@ -299,7 +296,7 @@ void LocaleConfig::writeConfig()
         if (collate.isEmpty())
         {
             mSettings->remove(lcCollate);
-        } 
+        }
         else
         {
             mSettings->setValue(lcCollate, collate);
@@ -317,7 +314,7 @@ void LocaleConfig::saveSettings()
         msgBox.setText(tr("Do you want to save your changes? They will take effect the next time you log in."));
         msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
         msgBox.setDefaultButton(QMessageBox::Cancel);
-        
+
         int ret = msgBox.exec();
         if( ret == QMessageBox::Save )
         {
@@ -384,24 +381,6 @@ void LocaleConfig::defaults()
     setCombo(m_ui->comboCollate, QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData())));
     setCombo(m_ui->comboCurrency, QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData())));
     setCombo(m_ui->comboMeasurement, QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData())));
-
-    updateEnabled();
-}
-
-void LocaleConfig::updateEnabled()
-{
-    const bool enabled = m_ui->checkDetailed->isChecked();
-
-    m_ui->labelNumbers->setEnabled(enabled);
-    m_ui->labelTime->setEnabled(enabled);
-    m_ui->labelCurrency->setEnabled(enabled);
-    m_ui->labelMeasurement->setEnabled(enabled);
-    m_ui->labelCollate->setEnabled(enabled);
-    m_ui->comboNumbers->setEnabled(enabled);
-    m_ui->comboTime->setEnabled(enabled);
-    m_ui->comboCurrency->setEnabled(enabled);
-    m_ui->comboMeasurement->setEnabled(enabled);
-    m_ui->comboCollate->setEnabled(enabled);
 }
 
 void LocaleConfig::updateExample()
@@ -419,7 +398,7 @@ void LocaleConfig::updateExample()
         tloc = QLocale(m_ui->comboTime->currentData().toString());
         cloc = QLocale(m_ui->comboCurrency->currentData().toString());
         mloc = QLocale(m_ui->comboMeasurement->currentData().toString());
-    } 
+    }
     else
     {
         nloc = QLocale(m_ui->comboGlobal->currentData().toString());
