@@ -150,7 +150,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     mMimeappsTemp.close();
     // remember the DE's default apps list
     QList<QByteArray> desktopsList = qgetenv("XDG_CURRENT_DESKTOP").toLower().split(':');
-    if (!desktopsList.isEmpty())
+    if (!desktopsList.isEmpty() && !desktopsList.at(0).isEmpty())
     {
         ba.clear();
         QString DEMimeappsListPath(XdgDirs::configHome(true)
@@ -469,7 +469,7 @@ void MimetypeViewer::dialogButtonBoxClicked(QAbstractButton* button)
         QFile::copy(mMimeappsTemp.fileName(), mimeappsListPath);
         // restore the DE's default apps list
         QList<QByteArray> desktopsList = qgetenv("XDG_CURRENT_DESKTOP").toLower().split(':');
-        if (!desktopsList.isEmpty())
+        if (!desktopsList.isEmpty() && !desktopsList.at(0).isEmpty())
         {
             QString DEMimeappsListPath(XdgDirs::configHome(true)
                                         + QStringLiteral("/")
