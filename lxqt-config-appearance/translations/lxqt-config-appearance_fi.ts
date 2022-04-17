@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Virhe: gsettings ohjelmaa ei voitu suorittaa</translation>
+        <translation>Virhe: gsettings-ohjelmaa ei voitu suorittaa</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-tyyli</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -198,7 +198,7 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt ulkoasun hallinta</translation>
+        <translation>LXQt:n ulkoasun hallinta</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -253,7 +253,7 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt ulkoasun hallinta</translation>
+        <translation>LXQt:n ulkoasun hallinta</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
@@ -283,7 +283,7 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-tyyli</translation>
     </message>
 </context>
 <context>
@@ -346,17 +346,17 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation>&amp;Tallenna Väripaletti</translation>
+        <translation>&amp;Tallenna väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation>&amp;Lataa Väripaletti</translation>
+        <translation>&amp;Lataa väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
         <source>&amp;Default Palette</source>
-        <translation>&amp;Oletus väripaletti</translation>
+        <translation>&amp;Oletusväripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="256"/>
@@ -402,7 +402,7 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
         <location filename="../styleconfig.cpp" line="245"/>
         <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
-        <translation>Tallenna Väripaletti</translation>
+        <translation>Tallenna väripaletti</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
@@ -419,7 +419,7 @@ Tahdotko korvata sen?</translation>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
-        <translation>Poista Väripaletteja</translation>
+        <translation>Poista väripaletteja</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="394"/>

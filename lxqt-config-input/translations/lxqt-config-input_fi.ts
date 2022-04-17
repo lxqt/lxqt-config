@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Kirjoita allaolevaan kenttään kokeillaksesi asetuksia</translation>
+        <translation>Kirjoita alla olevaan kenttään kokeillaksesi asetuksia</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation>Hiiri ja Kosketuslevy</translation>
+        <translation>Hiiri ja kosketuslevy</translation>
     </message>
 </context>
 <context>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Klikkaa napauttamalla</translation>
+        <translation>Napsauta napauttamalla</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation>Luonnollinen Vieritys</translation>
+        <translation>Luonnollinen vieritys</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
