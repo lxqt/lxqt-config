@@ -6,7 +6,7 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQtin hiiriteeman asetukset</translation>
+        <translation>LXQt:n hiiriteeman asetukset</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="46"/>
