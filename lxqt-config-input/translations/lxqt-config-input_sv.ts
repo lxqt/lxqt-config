@@ -269,7 +269,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>Ka&amp;nt</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
