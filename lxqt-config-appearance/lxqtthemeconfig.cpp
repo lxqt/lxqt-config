@@ -113,7 +113,8 @@ void LXQtThemeConfig::initControls()
 
     QTreeWidgetItemIterator it(ui->lxqtThemeList);
     while (*it) {
-        if ((*it)->data(0, Qt::UserRole).toString() == currentTheme)
+        // liblxqt considers LXQt theme names case-insensitively
+        if (QString::compare((*it)->data(0, Qt::UserRole).toString(), currentTheme, Qt::CaseInsensitive) == 0)
         {
             ui->lxqtThemeList->setCurrentItem((*it));
             break;
@@ -131,10 +132,10 @@ void LXQtThemeConfig::applyLxqtTheme()
         return;
 
     LXQt::LXQtTheme currentTheme{mSettings->value(QStringLiteral("theme")).toString()};
-    QVariant themeName = item->data(0, Qt::UserRole);
-    if(mSettings->value(QStringLiteral("theme")) != themeName)
+    QString themeName = item->data(0, Qt::UserRole).toString();
+    if(QString::compare(mSettings->value(QStringLiteral("theme")).toString(), themeName, Qt::CaseInsensitive) != 0)
         mSettings->setValue(QStringLiteral("theme"), themeName);
-    LXQt::LXQtTheme theme(themeName.toString());
+    LXQt::LXQtTheme theme(themeName);
     if(theme.isValid()) {
         QString wallpaper = theme.desktopBackground();
         if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
