@@ -93,6 +93,7 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
         item->setData(0, Qt::UserRole, theme.name());
         ui->lxqtThemeList->addTopLevelItem(item);
     }
+    ui->lxqtThemeList->sortItems(0, Qt::AscendingOrder);
 
     initControls();
 
@@ -109,11 +110,13 @@ LXQtThemeConfig::~LXQtThemeConfig()
 
 void LXQtThemeConfig::initControls()
 {
-    QString currentTheme = mSettings->value(QStringLiteral("theme")).toString();
+    LXQt::LXQtTheme currentTheme{mSettings->value(QStringLiteral("theme")).toString()};
 
     QTreeWidgetItemIterator it(ui->lxqtThemeList);
     while (*it) {
-        if ((*it)->data(0, Qt::UserRole).toString() == currentTheme)
+        // use the theme name for comparison because the value of the "theme" key
+        // may differ in letter cases from it
+        if ((*it)->data(0, Qt::UserRole).toString() == currentTheme.name())
         {
             ui->lxqtThemeList->setCurrentItem((*it));
             break;
@@ -131,10 +134,10 @@ void LXQtThemeConfig::applyLxqtTheme()
         return;
 
     LXQt::LXQtTheme currentTheme{mSettings->value(QStringLiteral("theme")).toString()};
-    QVariant themeName = item->data(0, Qt::UserRole);
-    if(mSettings->value(QStringLiteral("theme")) != themeName)
+    QString themeName = item->data(0, Qt::UserRole).toString();
+    if(currentTheme.name() != themeName)
         mSettings->setValue(QStringLiteral("theme"), themeName);
-    LXQt::LXQtTheme theme(themeName.toString());
+    LXQt::LXQtTheme theme(themeName);
     if(theme.isValid()) {
         QString wallpaper = theme.desktopBackground();
         if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
