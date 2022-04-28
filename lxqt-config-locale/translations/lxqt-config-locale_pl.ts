@@ -41,7 +41,7 @@
     <message>
         <location filename="../localeconfig.ui" line="226"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>Przykłady</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Czy na pewno chcesz zachować zmiany&gt; Efekt będzie widoczny po następnym zalogowaniu.</translation>
+        <translation>Czy na pewno chcesz zachować zmiany? Efekt będzie widoczny po następnym zalogowaniu.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="417"/>
