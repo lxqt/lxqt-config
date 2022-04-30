@@ -41,7 +41,7 @@
     <message>
         <location filename="../localeconfig.ui" line="226"/>
         <source>Examples</source>
-        <translation>예제들</translation>
+        <translation>예시</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
