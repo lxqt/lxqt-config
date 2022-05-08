@@ -166,12 +166,12 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK stil</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Sæt GTK-temaer (GTK-konfigurationsfiler vil blive overskrevet!)</translation>
+        <translation>Angiv GTK temaer (GTK konfigurationsfiler vil blive overskrevet!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
@@ -188,9 +188,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>For at forsøge ensartet tema, vælg enten lignende stil/tema (hvis tilgængelig) på tværs af alle lister, eller vælg &apos;gtk2&apos; Qt-stil (hvis tilgængelig) for at efterligne GTK-temaer.
+        <translation>For at forsøge ensartet tema, vælg enten lignende stil/tema (hvis tilgængelig) på tværs af alle lister, eller vælg &apos;gtk2&apos; Qt-stil (hvis tilgængelig) for at efterligne GTK temaer.
 
-Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK-programmer med at anvende tema med det samme.</translation>
+Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programmer med at anvende tema med det samme.</translation>
     </message>
 </context>
 <context>
@@ -198,7 +198,7 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK-programme
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Konfiguraton af LXQt udseende</translation>
+        <translation>Konfiguration af LXQt udseende</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
