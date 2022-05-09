@@ -226,8 +226,8 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Sostituisci sfondo desktop personalizzato</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -225,8 +225,8 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby aplikacje GTK zmienia
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Zastąp tło pulpitu wybrane przez użytkownika</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

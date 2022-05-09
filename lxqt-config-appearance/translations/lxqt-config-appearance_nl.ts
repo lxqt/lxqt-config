@@ -225,8 +225,8 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Eigen ingestelde bureaubladachtergrond negeren</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

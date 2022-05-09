@@ -225,8 +225,8 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Kullanıcı tanımlı duvar kağıdını geçersiz kıl</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

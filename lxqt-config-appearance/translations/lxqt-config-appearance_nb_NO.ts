@@ -225,8 +225,8 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Bruk i stedet for brukerdefinert skrivebordsbakgrunn</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

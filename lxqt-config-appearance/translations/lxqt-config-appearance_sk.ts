@@ -225,8 +225,8 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Prepísať užívateľom určené pozadie plochy</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

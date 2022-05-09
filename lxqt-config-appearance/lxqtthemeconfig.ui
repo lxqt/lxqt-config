@@ -54,7 +54,7 @@
    <item>
     <widget class="QCheckBox" name="wallpaperOverride">
      <property name="text">
-      <string>Override user-defined wallpaper</string>
+      <string>Use wallpaper provided by theme</string>
      </property>
     </widget>
    </item>
