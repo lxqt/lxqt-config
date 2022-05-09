@@ -225,8 +225,8 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>壁紙のユーザー定義を上書きする</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

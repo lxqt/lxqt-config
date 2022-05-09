@@ -225,8 +225,8 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Substituir papel de parede do utilizador</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

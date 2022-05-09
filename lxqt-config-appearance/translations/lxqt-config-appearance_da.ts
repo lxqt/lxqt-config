@@ -225,8 +225,8 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Tilsidesæt brugerdefineret tapet</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -283,7 +283,7 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GTK stil</translation>
     </message>
 </context>
 <context>

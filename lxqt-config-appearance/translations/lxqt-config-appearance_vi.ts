@@ -225,8 +225,8 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Ghi đè hình nền mà người dùng đã chỉ định</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

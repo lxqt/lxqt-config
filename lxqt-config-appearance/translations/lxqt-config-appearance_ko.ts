@@ -225,8 +225,8 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>사용자가 설정한 배경화면 덮어쓰기</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -225,8 +225,8 @@ Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GT
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Substituír o fondo de pantalla definido polo usuario</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

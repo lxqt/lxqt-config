@@ -225,8 +225,8 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Asenda kasutaja määratud taustapilt</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

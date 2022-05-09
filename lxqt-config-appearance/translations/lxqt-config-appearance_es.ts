@@ -225,8 +225,8 @@ Asegúrese de que esté instalado &apos;xsettingsd&apos; para hacer que las apli
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Ignorar el fondo de pantalla definido por el usuario</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

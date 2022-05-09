@@ -224,8 +224,8 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Timpa kertas dinding yang ditetapkan pengguna</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

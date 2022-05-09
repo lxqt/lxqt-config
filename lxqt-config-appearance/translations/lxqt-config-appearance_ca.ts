@@ -225,8 +225,8 @@ Assegureu-vos que «xsettingsd» està instal·lat perquè ajudi a les aplicacio
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Anul·la el fons de pantalla definit per l&apos;usuari</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

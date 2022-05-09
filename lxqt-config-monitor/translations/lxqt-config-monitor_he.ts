@@ -312,8 +312,6 @@
         <translation>
             <numerusform>נותרה שנייה אחת</numerusform>
             <numerusform>נותרו %n שניות</numerusform>
-            <numerusform>נותרו %n שניות</numerusform>
-            <numerusform>נותרו %n שניות</numerusform>
         </translation>
     </message>
 </context>

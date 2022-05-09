@@ -225,8 +225,8 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
-        <source>Override user-defined wallpaper</source>
-        <translation>Felhasználói háttérkép felülírása</translation>
+        <source>Use wallpaper provided by theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
