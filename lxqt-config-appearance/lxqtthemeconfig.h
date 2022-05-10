@@ -53,6 +53,10 @@ public slots:
 signals:
     void settingsChanged();
 
+private slots:
+    void doubleClicked(QTreeWidgetItem *item, int column);
+    void contextMenu(const QPoint& p);
+
 private:
     Ui::LXQtThemeConfig *ui;
     LXQt::Settings *mSettings;
