@@ -226,7 +226,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema tarafından sağlanan duvar kağıdını kullan</translation>
     </message>
 </context>
 <context>
