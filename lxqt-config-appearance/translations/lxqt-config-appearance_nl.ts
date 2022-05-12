@@ -226,7 +226,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrond uit thema gebruiken</translation>
     </message>
 </context>
 <context>
