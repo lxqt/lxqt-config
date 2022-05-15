@@ -226,7 +226,7 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>테마에서 제공하는 배경화면 사용하기</translation>
     </message>
 </context>
 <context>
