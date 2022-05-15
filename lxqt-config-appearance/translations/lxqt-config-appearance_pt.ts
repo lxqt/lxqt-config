@@ -226,7 +226,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar papel de parede fornecido pelo tema</translation>
     </message>
 </context>
 <context>
