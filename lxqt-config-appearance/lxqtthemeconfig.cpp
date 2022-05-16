@@ -100,7 +100,6 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
         }
         item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
         item->setData(0, Qt::UserRole, theme.name());
-        item->setData(0, Qt::WhatsThisRole, theme.path());
         ui->lxqtThemeList->addTopLevelItem(item);
     }
     ui->lxqtThemeList->sortItems(0, Qt::AscendingOrder);
@@ -165,11 +164,15 @@ void LXQtThemeConfig::doubleClicked(QTreeWidgetItem *item, int /*column*/)
 {
     if (!item)
         return;
-    QString path = item->data(0, Qt::WhatsThisRole).toString();
+
+    LXQt::LXQtTheme theme{item->data(0, Qt::UserRole).toString()};
+    if (!theme.isValid())
+        return;
+
     // first try "qtxdg-mat"; fall back to QDesktopServices if we are not inside an LXQt session
-    if (!QProcess::startDetached(QStringLiteral("qtxdg-mat"), QStringList() << QStringLiteral("open") << path))
+    if (!QProcess::startDetached(QStringLiteral("qtxdg-mat"), QStringList() << QStringLiteral("open") << theme.path()))
     {
-        QDesktopServices::openUrl(QUrl(path));
+        QDesktopServices::openUrl(QUrl(theme.path()));
     }
 }
 
