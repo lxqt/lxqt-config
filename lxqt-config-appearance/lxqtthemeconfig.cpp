@@ -32,6 +32,11 @@
 #include <QProcess>
 #include <QItemDelegate>
 #include <QPainter>
+#include <QMenu>
+#include <QDesktopServices>
+#include <QUrl>
+
+#include <XdgDirs>
 
 /*!
  * \brief Simple delegate to draw system background color below decoration/icon
@@ -84,6 +89,10 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
     {
         QString themeName = theme.name();
         themeName[0] = themeName[0].toTitleCase();
+        if (theme.path().contains(XdgDirs::dataHome(false) + QStringLiteral("/")))
+        {
+            themeName += QStringLiteral(" ") + tr("(User Theme)");
+        }
         QTreeWidgetItem *item = new QTreeWidgetItem(QStringList(themeName));
         if (!theme.previewImage().isEmpty())
         {
@@ -93,11 +102,16 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent) :
         item->setData(0, Qt::UserRole, theme.name());
         ui->lxqtThemeList->addTopLevelItem(item);
     }
+    ui->lxqtThemeList->sortItems(0, Qt::AscendingOrder);
+    ui->lxqtThemeList->setContextMenuPolicy(Qt::CustomContextMenu);
 
     initControls();
 
     connect(ui->lxqtThemeList, &QTreeWidget::currentItemChanged, this, &LXQtThemeConfig::settingsChanged);
     connect(ui->wallpaperOverride, &QAbstractButton::clicked, this, &LXQtThemeConfig::settingsChanged);
+
+    connect(ui->lxqtThemeList, &QTreeWidget::itemDoubleClicked, this, &LXQtThemeConfig::doubleClicked);
+    connect(ui->lxqtThemeList, &QWidget::customContextMenuRequested, this, &LXQtThemeConfig::contextMenu);
 }
 
 
@@ -144,4 +158,30 @@ void LXQtThemeConfig::applyLxqtTheme()
             QProcess::startDetached(QStringLiteral("pcmanfm-qt"), args);
         }
     }
+}
+
+void LXQtThemeConfig::doubleClicked(QTreeWidgetItem *item, int /*column*/)
+{
+    if (!item)
+        return;
+
+    LXQt::LXQtTheme theme{item->data(0, Qt::UserRole).toString()};
+    if (!theme.isValid())
+        return;
+
+    // first try "qtxdg-mat"; fall back to QDesktopServices if we are not inside an LXQt session
+    if (!QProcess::startDetached(QStringLiteral("qtxdg-mat"), QStringList() << QStringLiteral("open") << theme.path()))
+    {
+        QDesktopServices::openUrl(QUrl(theme.path()));
+    }
+}
+
+void LXQtThemeConfig::contextMenu(const QPoint& p)
+{
+    QMenu menu;
+    QAction *a = menu.addAction(tr("Open theme folder"));
+    connect(a, &QAction::triggered, [this, p] {
+        doubleClicked(ui->lxqtThemeList->itemAt(p), 0);
+    });
+    menu.exec(ui->lxqtThemeList->viewport()->mapToGlobal(p));
 }
