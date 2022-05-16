@@ -121,7 +121,7 @@
           <item>
            <widget class="QGroupBox" name="groupBox_3">
             <property name="toolTip">
-             <string>The minimun value for backlight value can be really brightness. 
+             <string>The minimum value for backlight value can be really brightness. 
 It is possible set this minimum value.
 Warning: If a very low backlight is set, a black screen can be shown.</string>
             </property>
