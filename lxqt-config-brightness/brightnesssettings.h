@@ -25,13 +25,14 @@
 #include "ui_brightnesssettings.h"
 
 #include <LXQt/lxqtbacklight.h>
+#include <LXQt/Settings>
 
 class BrightnessSettings: public QDialog
 {
 Q_OBJECT
 
 public:
-    BrightnessSettings(QWidget *parent =nullptr);
+    BrightnessSettings(LXQt::Settings *settings, QWidget *parent =nullptr);
     ~BrightnessSettings();
 
     void revertValues();
@@ -55,7 +56,9 @@ private:
     LXQt::Backlight *mBacklight;
     int mLastBacklightValue;
     int mInitialBacklightValue;
-
+    int mInitialMinBacklightValue;
+    int mMinBacklightValue;
+    LXQt::Settings *mSettings;
 };
 
 

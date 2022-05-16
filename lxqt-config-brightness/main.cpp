@@ -22,6 +22,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <LXQt/SingleApplication>
+#include <LXQt/Settings>
 #include <QCommandLineParser>
 #include <QMessageBox>
 #include "brightnesssettings.h"
@@ -159,8 +160,10 @@ int main(int argn, char* argv[])
         Q_UNREACHABLE();
     }
 
+    LXQt::Settings session_settings(QStringLiteral("session"));
+
     if (config.mode == UiMode::GUI) {
-        BrightnessSettings brightnessSettings;
+        BrightnessSettings brightnessSettings(&session_settings);
         brightnessSettings.setWindowIcon(QIcon(QLatin1String(ICON_DIR) + QStringLiteral("/brightnesssettings.svg")));
         brightnessSettings.show();
         return app.exec();
@@ -184,7 +187,7 @@ int main(int argn, char* argv[])
 
         const int currentBacklight = mBacklight->getBacklight();
         const int maxBacklight = mBacklight->getMaxBacklight();
-        int backlight = ( currentBacklight + sign*(maxBacklight/50 + 1) )*qAbs(sign) + brightnessValue*maxBacklight;
+        int backlight = ( currentBacklight + sign*(maxBacklight/10 + 1) )*qAbs(sign) + brightnessValue*maxBacklight;
 
         mBacklight->setBacklight(backlight);
 
