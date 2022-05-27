@@ -226,7 +226,7 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít tapetu poskytovanou motivem vzhledu</translation>
     </message>
 </context>
 <context>
