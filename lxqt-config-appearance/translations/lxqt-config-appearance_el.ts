@@ -226,7 +226,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση της ταπετσαρίας του θέματος</translation>
     </message>
 </context>
 <context>
