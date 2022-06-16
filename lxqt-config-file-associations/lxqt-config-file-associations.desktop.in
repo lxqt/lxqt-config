@@ -2,7 +2,7 @@
 Type=Application
 Exec=lxqt-config-file-associations
 Icon=preferences-desktop-filetype-association
-Categories=Settings;DesktopSettings;Qt;LXQt;
+Categories=Settings;DesktopSettings;Qt;
 OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

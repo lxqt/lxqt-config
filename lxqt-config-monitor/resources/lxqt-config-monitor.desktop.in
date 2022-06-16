@@ -2,7 +2,7 @@
 Type=Application
 Exec=lxqt-config-monitor
 Icon=preferences-desktop-display
-Categories=Settings;DesktopSettings;Qt;LXQt;HardwareSettings;
+Categories=Settings;DesktopSettings;Qt;HardwareSettings;
 OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

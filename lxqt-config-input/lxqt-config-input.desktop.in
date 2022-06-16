@@ -2,7 +2,7 @@
 Type=Application
 Exec=lxqt-config-input
 Icon=preferences-desktop-peripherals
-Categories=Qt;Settings;HardwareSettings;DesktopSettings;LXQt;
+Categories=Qt;Settings;HardwareSettings;DesktopSettings;
 OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations

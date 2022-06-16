@@ -3,7 +3,7 @@ Exec=lxqt-config-brightness
 Terminal=false
 Type=Application
 Icon=brightnesssettings
-Categories=Settings;DesktopSettings;Qt;LXQt;HardwareSettings;
+Categories=Settings;DesktopSettings;Qt;HardwareSettings;
 OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
