@@ -11,7 +11,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation>Farbe wählen</translation>
+        <translation>Wähle Farbe</translation>
     </message>
 </context>
 <context>
@@ -226,7 +226,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Hintergrundbild des Themas verwenden</translation>
     </message>
 </context>
 <context>
@@ -331,7 +331,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation>Textanzeige:</translation>
+        <translation>Anzeigetext:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>

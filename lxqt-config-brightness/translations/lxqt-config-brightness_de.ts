@@ -83,12 +83,12 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation>Helligkeit von 1 bis 100 einstellen.</translation>
+        <translation>Helligkeit ändern von 1 bis 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation>Gamma auf Standardwert zurücksetzen.</translation>
+        <translation>Setze gamma auf Standardwert.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
