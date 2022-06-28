@@ -227,7 +227,7 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation>Usa sfondo desktop dal tema</translation>
+        <translation>Usa sfondo desktop del tema</translation>
     </message>
 </context>
 <context>

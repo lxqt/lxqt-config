@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Gaya GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -225,7 +225,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan wallpaper yang disediakan oleh tema</translation>
     </message>
 </context>
 <context>
@@ -282,7 +282,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Gaya GTK</translation>
     </message>
 </context>
 <context>
