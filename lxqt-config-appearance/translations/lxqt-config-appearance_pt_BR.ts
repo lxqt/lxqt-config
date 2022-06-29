@@ -228,6 +228,16 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
         <source>Use wallpaper provided by theme</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <source>(User Theme)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <source>Open theme folder</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PalettesDialog</name>
