@@ -228,6 +228,16 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
         <source>Use wallpaper provided by theme</source>
         <translation>테마에서 제공하는 배경화면 사용하기</translation>
     </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <source>(User Theme)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <source>Open theme folder</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PalettesDialog</name>
