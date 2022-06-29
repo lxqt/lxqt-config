@@ -239,7 +239,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryck för att klicka</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryck och dra</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
