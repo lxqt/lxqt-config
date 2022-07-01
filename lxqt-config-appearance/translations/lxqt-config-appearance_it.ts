@@ -232,12 +232,12 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Tema locale)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri cartella del tema</translation>
     </message>
 </context>
 <context>

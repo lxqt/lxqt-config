@@ -231,12 +231,12 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Kasutaja üldine teema)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava teemade kaust</translation>
     </message>
 </context>
 <context>
