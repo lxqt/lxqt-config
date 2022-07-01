@@ -231,12 +231,12 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Kullanıcı Teması)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema dizinini aç</translation>
     </message>
 </context>
 <context>
