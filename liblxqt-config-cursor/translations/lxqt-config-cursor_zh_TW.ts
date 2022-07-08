@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>請重新啟動 LXQt 以套用這些設定。</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
