@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjullrullslinjer:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>Pekplatteinställningar </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Enhetsinformation</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt stöder endast &quot;libinput&quot; som xinput-drivrutin.
+(nuvarande värde: %1)
+
+Om detta är medvetet var snäll och konfiguera xinput manuellt.
+Annars kan du ta bort detta meddelande genom att ändra xinput-drivrutinen till &quot;libinput&quot;.
+</translation>
     </message>
 </context>
 </TS>

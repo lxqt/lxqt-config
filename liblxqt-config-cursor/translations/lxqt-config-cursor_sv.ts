@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Välj tema för muspekaren (håll muspekaren över för förhandsvisning). &lt;b&gt; LXQt sessionen måste startas om efter den här ändringen&lt;/b&gt;:</translation>
+        <translation>Välj tema för muspekaren (håll muspekaren över för förhandsvisning). &lt;b&gt;LXQt-sessionen måste startas om efter den här ändringen&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Du kan inte ta bort aktivt tema!</translation>
+        <translation>Du kan inte ta bort det aktiva temat!</translation>
     </message>
 </context>
 <context>
