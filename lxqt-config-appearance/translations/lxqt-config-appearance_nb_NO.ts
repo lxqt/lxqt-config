@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-stil</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -226,17 +226,17 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Bruk bakgrunn tilbudt av drakt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Brukerdrakt)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpne draktmappen</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK-stil</translation>
     </message>
 </context>
 <context>
