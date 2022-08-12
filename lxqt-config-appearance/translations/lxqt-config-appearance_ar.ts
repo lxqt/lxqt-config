@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>أنقر لتغيير اللون.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>اختيار اللون</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>خطا</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>خطأ: لا يمكن تشغيل gsettings</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>أسلوب GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -226,17 +226,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>استخدام الخلفية المقدمة من قبل التشكيل الاساسي</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(تشكيل المستخدم)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>افتح مجلد التشكيل</translation>
     </message>
 </context>
 <context>
@@ -245,17 +245,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>لوحات</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>رشّح...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;إزالة</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>أسلوب GTK</translation>
     </message>
 </context>
 <context>
@@ -306,67 +306,67 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>لوحة QT</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>قد تتجاهل بعض أنماط Qt هذه الألوان.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>نافذة:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>معاينة:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>إختيار:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>رابط:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>نص النافذة:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>نص المعاينة:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>نص الإختيار:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>رابط المزارات:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;حفظ لوحة</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;حمّل اللوحة</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;اللوحة الافتراضية</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="256"/>
@@ -412,29 +412,31 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.cpp" line="245"/>
         <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>احفظ اللوحة</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>اسم اللوحة:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>توجد لوحة بنفس الاسم.
+هل تريد استبدالها؟</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>إزالة اللوحات</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation>هل تريد حقًا إزالة اللوحة (اللوحات) المحددة؟
+ستبقى لوحات الجذر سليمة إذا كانت موجودة.</translation>
     </message>
 </context>
 </TS>
