@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>أنقر لتغيير اللون.</translation>
+        <translation>انقر لتغيير اللون.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation>اختيار اللون</translation>
+        <translation>اختر لون</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>خطأ: لا يمكن تشغيل gsettings</translation>
+        <translation>خطا:gsettings لا يمكن تشغيلها</translation>
     </message>
 </context>
 <context>
@@ -255,7 +255,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation>&amp;إزالة</translation>
+        <translation>&amp;احذف</translation>
     </message>
 </context>
 <context>
