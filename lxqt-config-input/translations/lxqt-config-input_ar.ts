@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>الماوس ولوحة اللمس</translation>
     </message>
 </context>
 <context>
@@ -224,62 +224,62 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>اعداد لوحة اللمس </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>الجهاز:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>سرعة التسارع:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>اضغط للنقر</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>التمرير الطبيعي</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>انقر واسحب</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>التمرير:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;تعطيل</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;إصبعين</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;حافة</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;زر</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>تسمية معلومات الجهاز</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>يدعم LXQt فقط &quot;libinput&quot; كبرنامج تشغيل xinput.
+(القيمة الحالية: %1)
+
+إذا كان هذا مقصودا ، فيرجى تكوين xinput يدويا.
+خلاف ذلك يمكنك التخلص من هذه الرسالة عن طريق تغيير برنامج تشغيل xinput إلى &quot;libinput&quot;.
+</translation>
     </message>
 </context>
 </TS>

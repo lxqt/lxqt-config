@@ -17,22 +17,22 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;إعدادات الإضاءة الخلفية والسطوع:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>الإضاءة الخلفية</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>الإضاءه</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../outputwidget.ui" line="48"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="80"/>
         <source>☀</source>
-        <translation type="unfinished">☀</translation>
+        <translation>☀</translation>
     </message>
 </context>
 <context>
@@ -73,32 +73,32 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>زيادة السطوع.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>تقليل السطوع.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>اضبط السطوع من 1 إلى 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>إعادة تعيين غاما إلى القيمة الافتراضية.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: لا يمكن استخدام زيادة/نقصان وتعيينها بالاقتران</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: لا يمكن استخدام خيارات الزيادة والنقصان بالاقتران</translation>
     </message>
 </context>
 </TS>
