@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK Slog</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -188,7 +188,7 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Za enakomeren izgled programov uporabite podobni temi za GTK in Qt (če sta na voljo), ali pa izberite &apos;gtk2&apos; stil tem Qt.
+        <translation>Za enakomeren izgled programov uporabite podobni temi za GTK in Qt (če sta na voljo), ali pa izberite &apos;gtk2&apos; slog Qt.
 
 Če želite uveljaviti spremembe tem GTK takoj, namestite &apos;xsettingsd&apos;.</translation>
     </message>
@@ -226,17 +226,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi ozadje teme</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Uporabnikova tema)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri mapo teme</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK Slog</translation>
     </message>
 </context>
 <context>
