@@ -6,32 +6,32 @@
     <message>
         <location filename="../localeconfig.ui" line="31"/>
         <source>Re&amp;gion:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Območje:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="60"/>
         <source>De&amp;tailed Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Po&amp;drobne nastavitve</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="78"/>
         <source>&amp;Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Števila:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="107"/>
         <source>&amp;Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Čas:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="136"/>
         <source>Currenc&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Valuta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="165"/>
         <source>Measurement &amp;Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Merske &amp;enote:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="194"/>
@@ -41,42 +41,42 @@
     <message>
         <location filename="../localeconfig.ui" line="226"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>Primeri</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Številke:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="258"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Čas:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="278"/>
         <source>Currency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valuta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="298"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Merske enote:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="126"/>
         <source>No change</source>
-        <translation type="unfinished"></translation>
+        <translation>Brez spremembe</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="313"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve formata spremenjene</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ali želite shraniti spremembe? Uveljavljene bodo ob naslednji prijavi.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="417"/>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Območne nastavitve</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Območne nastavitve</translation>
     </message>
 </context>
 </TS>
