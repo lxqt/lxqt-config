@@ -231,12 +231,12 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(uživatelský motiv)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít složku motivu</translation>
     </message>
 </context>
 <context>
