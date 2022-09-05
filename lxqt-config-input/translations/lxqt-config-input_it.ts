@@ -254,7 +254,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation>Scrolling:</translation>
+        <translation>Scorrimento:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni del dispositivo</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>

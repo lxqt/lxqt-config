@@ -94,12 +94,12 @@
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è possibile utilizzare aumenta/diminuisci e impostarli insieme</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è possibile utilizzare le opzioni aumenta e diminuisci ed impostarle insieme</translation>
     </message>
 </context>
 </TS>
