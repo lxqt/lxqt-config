@@ -226,17 +226,17 @@ Asegúrese de que esté instalado &apos;xsettingsd&apos; para hacer que las apli
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar el fondo de pantalla proporcionado por el tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Tema del usuario)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir la carpeta de temas</translation>
     </message>
 </context>
 <context>
