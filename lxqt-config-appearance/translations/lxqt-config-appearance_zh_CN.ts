@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>点击以更改颜色。</translation>
+        <translation>点击可更改颜色。</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="171"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; 已经被覆写。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;找到你的旧设定的拷贝。&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; 已经被覆写。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;找到以前设定的备份。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
@@ -52,17 +52,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>字体名称:</translation>
+        <translation>字体名称：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>字形:</translation>
+        <translation>字形：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>大小:</translation>
+        <translation>大小：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>以下设置仅对新启动的应用程序有效</translation>
+        <translation>以下设置在程序重启之后生效</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>字体栅格指令样式:</translation>
+        <translation>字体提示样式：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -123,22 +123,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>开启栅格指令 (hinting)</translation>
+        <translation>字体提示</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>分辨率 (DPI):</translation>
+        <translation>分辨率 (DPI)：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation>开启自动栅格指令</translation>
+        <translation>自动提示</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation>次像素平滑:</translation>
+        <translation>次像素平滑：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
@@ -188,7 +188,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>要尝试统一主题，请在所有列表中选择相似的样式/主题（如果可用），或选择“gtk2”Qt样式（如果可用）来模仿GTK主题。确保安装“xsettingsd”以帮助GTK应用程序动态应用主题。</translation>
+        <translation>要尝试统一主题，请在所有列表中选择相似的样式/主题（如果可用），或选择“gtk2”Qt样式（如果可用）来模仿GTK主题。
+
+请确保“xsettingsd”已安装，以便帮助GTK应用程序动态应用主题。</translation>
     </message>
 </context>
 <context>
@@ -219,22 +221,22 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt 主题</translation>
+        <translation>LXQt主题</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation>使用主题提供的壁纸</translation>
+        <translation>使用主题内置壁纸</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>（用户主题）</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>打开主题文件夹</translation>
     </message>
 </context>
 <context>
@@ -243,12 +245,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation>工具箱</translation>
+        <translation>调色板</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation>滤镜……</translation>
+        <translation>过滤…</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
@@ -276,7 +278,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
-        <translation>LXQt 主题</translation>
+        <translation>LXQt主题</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="101"/>
@@ -286,7 +288,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
-        <translation>指针</translation>
+        <translation>光标</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="118"/>
@@ -304,12 +306,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation>Qt 调色板</translation>
+        <translation>Qt调色板</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation>某些 Qt 样式可能会忽略这些颜色。</translation>
+        <translation>某些Qt样式可能会忽略这些颜色。</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>

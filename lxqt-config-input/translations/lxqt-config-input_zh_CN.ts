@@ -183,7 +183,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="88"/>
         <source>Cursor</source>
-        <translation>指针</translation>
+        <translation>光标</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="95"/>
