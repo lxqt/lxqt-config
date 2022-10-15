@@ -226,17 +226,17 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby aplikacje GTK zmienia
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj tapety dostarczonej przez motyw</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Motyw Użytkownika)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz katalog z motywem</translation>
     </message>
 </context>
 <context>
