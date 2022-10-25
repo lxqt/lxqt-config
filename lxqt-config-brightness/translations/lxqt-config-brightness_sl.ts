@@ -60,12 +60,12 @@
     <message>
         <location filename="../outputwidget.ui" line="48"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">☼</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="80"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">☀</translation>
     </message>
 </context>
 <context>
