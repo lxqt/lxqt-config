@@ -1,3 +1,7 @@
+lxqt-config-1.2.0 / 2022-11-05
+===============================
+ * Enhancements to theme list in appearance config dialog. Themes are always sorted alphabetically, user themes are distinguished, and theme folders can be opened by double clicking or by using context menus.
+
 lxqt-config-1.1.0 / 2022-04-15
 ===============================
  * Updated `README.md`.
