@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="da">
+<TS version="2.1" language="kk">
 <context>
     <name>LocaleConfig</name>
     <message>
         <location filename="../localeconfig.ui" line="31"/>
         <source>Re&amp;gion:</source>
-        <translation>&amp;Region:</translation>
+        <translation>А&amp;ймақ:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="60"/>
         <source>De&amp;tailed Settings</source>
-        <translation>&amp;Detaljerede indstillinger</translation>
+        <translation>Кеңей&amp;тілген баптаулар</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="78"/>
         <source>&amp;Numbers:</source>
-        <translation>&amp;Tal:</translation>
+        <translation>Са&amp;ндар:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="107"/>
         <source>&amp;Time:</source>
-        <translation>&amp;Tid:</translation>
+        <translation>Уақы&amp;т:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="136"/>
         <source>Currenc&amp;y:</source>
-        <translation>&amp;Valuta:</translation>
+        <translation>Вал&amp;юта:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="165"/>
         <source>Measurement &amp;Units:</source>
-        <translation>&amp;Måleenheder:</translation>
+        <translation>Өлшем бі&amp;рліктері:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="194"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>&amp;Sammenligning og sortering:</translation>
+        <translation>Са&amp;лыстыру және сұрыптау:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="226"/>
         <source>Examples</source>
-        <translation>Eksempler</translation>
+        <translation>Мысалдар</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>Numbers:</source>
-        <translation>Tal:</translation>
+        <translation>Сандар:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="258"/>
         <source>Time:</source>
-        <translation>Tid:</translation>
+        <translation>Уақыт:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="278"/>
         <source>Currency:</source>
-        <translation>Valuta:</translation>
+        <translation>Валюта:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="298"/>
         <source>Measurement Units:</source>
-        <translation>Måleenheder:</translation>
+        <translation>Өлшем бірліктері:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="126"/>
         <source>No change</source>
-        <translation>Uændret</translation>
+        <translation>Өзгеріссіз</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="313"/>
         <source>Format Settings Changed</source>
-        <translation>Formatindstillinger ændret</translation>
+        <translation>Пішім баптаулары өзгертілген</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="314"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Vil du gemme dine ændringer? De træder i kraft næste gang du logger ind.</translation>
+        <translation>Өзгерістерді сақтағыңыз келе ме? Олар келесі рет жүйеге кірген кезде іске асырылады.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="417"/>
         <source>Imperial UK</source>
-        <translation>Imperial UK</translation>
+        <translation>Империалдық (Ұлыбритания)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="421"/>
         <source>Imperial US</source>
-        <translation>Imperial US</translation>
+        <translation>Империалдық (АҚШ)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="425"/>
         <source>Metric</source>
-        <translation>Metrisk</translation>
+        <translation>Метрикалық</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt-sprogkonfiguraton</translation>
+        <translation>LXQt локаль баптаулары</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>Locale Settings</source>
-        <translation>Sprogindstillinger</translation>
+        <translation>Локаль баптаулары</translation>
     </message>
 </context>
 </TS>
