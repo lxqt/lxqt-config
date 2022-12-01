@@ -226,17 +226,17 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug baggrundstapet leveret af tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Brugertema)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Åbn temamappe</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished">GTK stil</translation>
+        <translation>GTK stil</translation>
     </message>
 </context>
 <context>
