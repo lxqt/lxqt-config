@@ -41,7 +41,7 @@
     <message>
         <location filename="../localeconfig.ui" line="226"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksempler</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
