@@ -85,7 +85,8 @@ void KeyboardLayoutConfig::loadSettings() {
 
     const int size = layouts.size(), variantsSize = variants.size();
     for(int i = 0; i < size; ++i) {
-      currentLayouts_.append(QPair<QString, QString>(QString::fromUtf8(layouts.at(i)), variantsSize > 0 ? QString::fromUtf8(variants.at(i)) : QString()));
+      // Note: there can be fewer variants than layouts configured
+      currentLayouts_.append(QPair<QString, QString>(QString::fromUtf8(layouts.at(i)), i < variantsSize ? QString::fromUtf8(variants.at(i)) : QString()));
     }
 
     setxkbmap.close();
