@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per aplicar las modificacions, cal reaviar la session LXQt.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="91"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation type="unfinished"></translation>
+        <translation>Podètz pas suprimir lo tèma actual !</translation>
     </message>
 </context>
 <context>

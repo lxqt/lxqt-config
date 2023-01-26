@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Error : gsettings se pòt pas executar</translation>
     </message>
 </context>
 <context>
@@ -42,47 +42,47 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Polissa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Polissa per defaut per l’interfàcia utilizaire</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de polissa :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Talha de punt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normala</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Gras</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Italica</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Gras italica</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
@@ -103,32 +103,32 @@
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas cap</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Leugièr</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Mejana</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Complèt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Optimizacion de la polissa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolucion (PPP) :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
@@ -143,22 +143,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RVB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BVR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRVB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBVR</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -176,12 +176,12 @@
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil tèma GTK 3</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil tèma GTK 2</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -196,12 +196,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuracion de l’aparéncia LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Icònas del tèma</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -219,22 +219,22 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tèma LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar lo fons d’ecran provesit pel tèma</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Tèma utilizaire)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Dobrir lo dossièr tèma</translation>
     </message>
 </context>
 <context>
@@ -243,17 +243,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Paletas</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre....</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suprimir </translation>
     </message>
 </context>
 <context>
@@ -261,37 +261,37 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuracion de l’aparéncia LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil de Widget</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Icònas del tèma</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tèma LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="101"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Polissa</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil GTK</translation>
     </message>
 </context>
 <context>
@@ -299,134 +299,135 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil de Widget</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Paleta Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>D’unes estil Qt pòdon ignorar aquelas colors.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenèstra :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>Afichatge :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccion :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ligam :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tèxte de fenèstra :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tèxte d’afichatge :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tèxte seleccionat :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ligam visitat :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrar la paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cargar la paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Paleta per defaut</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil de boton de barra d’aisina</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Afichar sonque l’icòna</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Afichar sonque lo tèxte</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo tèxte apareis prèp de l’icòna</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo tèxte apareis jos l’icòna</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Per defaut</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar l’element amb un sol clic</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrar la paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de la paleta :</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Una paleta que pòrta lo meteis nom existís ja
+La volètz remplaçar ?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Suprimir las paletas</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="394"/>
