@@ -28,6 +28,7 @@
 #include "kscreenutils.h"
 
 #include <KScreen/Output>
+#include <KScreen/Mode>
 #include <QJsonObject>
 #include <QJsonArray>
 #include <LXQt/Settings>

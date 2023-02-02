@@ -2,6 +2,7 @@
 #include "timeoutdialog.h"
 
 #include <KScreen/Output>
+#include <KScreen/Mode>
 #include <KScreen/Config>
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
