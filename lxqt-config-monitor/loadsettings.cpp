@@ -23,6 +23,7 @@
 #include "kscreenutils.h"
 #include <KScreen/Output>
 #include <KScreen/Config>
+#include <KScreen/Mode>
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
 #include <LXQt/Settings>

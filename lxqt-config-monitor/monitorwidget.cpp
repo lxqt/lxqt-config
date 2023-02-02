@@ -22,6 +22,7 @@
 #include <QComboBox>
 #include <QStringBuilder>
 #include <QDialogButtonBox>
+#include <KScreen/Mode>
 #include <KScreen/EDID>
 
 #include <algorithm>
