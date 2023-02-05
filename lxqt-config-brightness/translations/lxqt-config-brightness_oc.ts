@@ -6,7 +6,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="14"/>
         <source>Brightness Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Reglatges de la luminositat</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="35"/>
@@ -17,12 +17,12 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de retroesclairatge e de luminositat :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Retroesclairatge</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
@@ -37,17 +37,17 @@
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Demandar confirmacion aprèp modificacion dels reglatges</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="112"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres de luminositat modificats</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="113"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmacion requerida. Los paramètres son corrèctes ?</translation>
     </message>
 </context>
 <context>
@@ -83,17 +83,17 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>Reglar la luminositat de 1 a 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Reïnicializar la gamma a la valor per defaut.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 : impossible d’utilizar aumentar/demesir e set a l’encòp</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
