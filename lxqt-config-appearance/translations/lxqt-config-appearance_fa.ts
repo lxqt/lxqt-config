@@ -11,7 +11,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>رنگ را انتخاب کنید</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>خطا</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
