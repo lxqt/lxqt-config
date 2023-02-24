@@ -423,9 +423,9 @@ void XCursorTheme::parseXCursorTheme (const QDir &dir) {
     //qDebug() << "searching" << *nlst;
     QString fn = findCursorFile(dir, *nlst);
     if (fn.isEmpty()) continue; // no such file
-    //qDebug() << " Xcrusor: (" << nlst[0] << ")";
+    //qDebug() << " Xcursor: (" << nlst[0] << ")";
     while (nlst[-1]) nlst++ ; // skip
-    //qDebug() << "  skiped: (" << nlst[1] << ")";
+    //qDebug() << "  skipped: (" << nlst[1] << ")";
     qDebug() << "loading" << fn;
     XCursorImages *ci = new XCursorImagesXCur(dr, fn);
     if (ci->count()) {

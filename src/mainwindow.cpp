@@ -261,7 +261,7 @@ void LXQtConfig::MainWindow::activateItem()
 
 /*Note: all this delayed activation is here to workaround the auto-repeated
  * Enter/Return key activation -> if the user keeps pressing the enter/return
- * we normaly will keep activating (spawning new processes) until the focus
+ * we normally will keep activating (spawning new processes) until the focus
  * isn't stolen from our window. New process is not spawned until the
  * (non-autorepeated) KeyRelease is delivered.
  *

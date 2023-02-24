@@ -312,20 +312,20 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
         }
 
         // Output is connected and enabled. Get data:
-        bool backlightIsSuported = false;
+        bool backlightIsSupported = false;
         long cur, min, max, backlight_max = -1;
         if (backlight_get(output) != -1)
         {
             if (backlight_get_with_range(output, cur, min, max))
             {
-                backlightIsSuported = true;
+                backlightIsSupported = true;
                 backlight_max = max - min;
             }
         }
 
         MonitorInfo monitor((int)output, name, backlight_max);
 
-        if(backlightIsSuported)
+        if(backlightIsSupported)
             monitor.setBacklight(cur-min);
 
         monitor.setBrightness(gamma_brightness_get(output));
@@ -380,13 +380,13 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
         QString name = QString::fromUtf8((const char *) xcb_randr_get_output_info_name(output_info.data()), output_info->name_len);
 
         // Output is connected and enabled. Get data:
-        bool backlightIsSuported = false;
+        bool backlightIsSupported = false;
         long cur, min, max, backlight_value = 0;
         if (backlight_get(output) != -1)
         {
             if (backlight_get_with_range(output, cur, min, max))
             {
-                backlightIsSuported = true;
+                backlightIsSupported = true;
                 backlight_value = cur - min;
             }
         }
@@ -399,7 +399,7 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
             if(monitor.id() == (int)output && monitor.name() == name)
             {
                 // Set settings
-                if(backlightIsSuported && monitor.backlight() != backlight_value)
+                if(backlightIsSupported && monitor.backlight() != backlight_value)
                     backlight_set(output, min+monitor.backlight());
                 if(monitor.brightness() != brightness_value)
                     gamma_brightness_set(output, monitor.brightness());

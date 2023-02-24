@@ -74,7 +74,7 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     ui->cursorSizeSpinBox->setValue(getDefaultCursorSize());
 
     
-    connect(ui->cursorSizeSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &SelectWnd::cursorSizeChaged);
+    connect(ui->cursorSizeSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &SelectWnd::cursorSizeChanged);
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there
@@ -251,7 +251,7 @@ void SelectWnd::showDirInfo()
     QToolTip::showText(mapToGlobal(ui->warningLabel->buttonPos()), mModel->searchPaths().join(QStringLiteral("\n")));
 }
 
-void SelectWnd::cursorSizeChaged(int size)
+void SelectWnd::cursorSizeChanged(int size)
 {
     ui->preview->setCursorSize(size);
     emit settingsChanged();

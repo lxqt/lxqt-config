@@ -242,7 +242,7 @@ bool TouchpadDevice::find_xi2_device()
               // lxqt does not support xf86-input-synaptics properties
               m_xinputDriver = QStringLiteral("synaptics");
             } else {
-              // otherweise we assumge libinput and don't test on libinput properties
+              // otherwise we assumge libinput and don't test on libinput properties
               m_xinputDriver = QStringLiteral("libinput");
             }
 

@@ -48,7 +48,7 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
 
   ui.setupUi(this);
 
-  /* read the config flie */
+  /* read the config file */
   loadSettings();
   initControls();
 

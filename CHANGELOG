@@ -85,7 +85,7 @@ lxqt-config-0.14.0 / 2019-01-25
     - Check for xi and libudev
     - Removed QUIET from find_package
     - Removed dependency on QtConcurrent
-    - Removed locale compile definitons
+    - Removed locale compile definitions
     - Installed former missed man pages
   * Moved translations from lxqt-l10n back to lxqt-policykit
     - Removed obsolete translation fuctionality
@@ -95,9 +95,9 @@ lxqt-config-0.14.0 / 2019-01-25
 lxqt-config-0.13.0 / 2018-05-21
 ===============================
 
-  * Spanish translation uptdate
+  * Spanish translation update
   * Update name for shortcut component
-  * timeoutdialog.cpp: include QIcon, QStyle explicitely
+  * timeoutdialog.cpp: include QIcon, QStyle explicitly
   * Remove time-out from backlight slider
   * lxqt-config-brightness: Sets minimum backlight value to 0
   * CMake: Prevent in-source builds
@@ -387,7 +387,7 @@ lxqt-config-0.8.0 / 2014-10-10
 ==============================
 
   * Adapts to translations infrastructure
-  * Option to set single-click as default and sigle-click handling in system settings' main window
+  * Option to set single-click as default and single-click handling in system settings' main window
   * Qt4 and Qt5 compiling fixed
   * Compiling in Qt4 fixed.
   * Fix #273 - File fonts.conf is created as folder if doesn't exist.
@@ -419,7 +419,7 @@ lxqt-config-0.8.0 / 2014-10-10
   * Use QWindow::windowHandle()->winId() to replace QWidget::winId() due to a bug of Qt5.
   * Added: Save settings in autostart desktop file.
   * Added timeout dialog. When settings are applied, a timeout dialog is shown. If user doesn't press "Yes" button, settings are restored.
-  * Monitor position can be changed. Outputs can be diferent. Position of outputs can be chosen. If system has got two monitors, wizard will be shown to config them.
+  * Monitor position can be changed. Outputs can be different. Position of outputs can be chosen. If system has got two monitors, wizard will be shown to config them.
   * Modules for xrandr and GUI. Now new backends can be added.
   * Split xrandr settings from UI.
   * Readme updated.
@@ -434,7 +434,7 @@ lxqt-config-0.8.0 / 2014-10-10
   * Show cursors by using raw xcb calls since Qt5 does not support creating QCursor based on native cursor handle.
   * Write Qt settings to lxqt.conf instead of the deprecated Trolltech.conf in Qt5.
   * Make the code compile with both Qt4 and Qt5.
-  * Fix keyboard layout settings reading and writting
+  * Fix keyboard layout settings reading and writing
   * Cleanup header style
   * Use new LXQt header files.
   * Use preferred header style.
@@ -469,7 +469,7 @@ lxqt-config-0.6.99 / 2014-05-01
   * Man page improvements
   * Correctly save the cursor theme name to lxqt session config file.
   * Correctly write current cursor theme name to ~/.icons/default/index.theme. Deprecate the use of XCURSOR_THEME environment variable.
-  * Support changing double click interval, whell scroll lines, and cursor flash time for Qt programs. Little adjustment of UI.
+  * Support changing double click interval, wheel scroll lines, and cursor flash time for Qt programs. Little adjustment of UI.
   * Fix incorrect linking to liblxqt-config-cursor.
   * Add missing desktop entry file for lxqt-config-input. Some cleanup.
   * Rename lxqt-config-mouse to lxqt-config-cursor to reflect what it does. Remove unnecessary desktop entry files and do some makefile cleanup.
@@ -513,7 +513,7 @@ lxqt-config-0.6.99 / 2014-05-01
   * config-file-associations, mimetypeviewer: Replaced QTreeWidget with QTreeView and new class MimetypeItemModel as model
   * config-file-associations: minor changes to mimetypeviewer looks
   * config-file-associations: Changed application listwidget back to treewidget, and dropped \handles\ listwidget
-  * Improved (hopefuly) layout and look of config-fileassociations, application chooser
+  * Improved (hopefully) layout and look of config-fileassociations, application chooser
   * config-file-associations: changed treewidget to listwidget in applicationchooser
   * razor-config-file-associations, improved layout for mimetype-viewer
   * Added application razor-config-file-associations

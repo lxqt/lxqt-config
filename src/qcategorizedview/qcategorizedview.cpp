@@ -1374,7 +1374,7 @@ void QCategorizedView::updateGeometries()
      * So we prevent QListView from having an own opinion on the scrollbar visibility by
      * fixing it before calling the baseclass QListView::updateGeometries()
      *
-     * Since the implicit show/hide by the followin range setting will cause further resizes if the policy is Qt::ScrollBarAsNeeded
+     * Since the implicit show/hide by the following range setting will cause further resizes if the policy is Qt::ScrollBarAsNeeded
      * we keep it static until we're done, then restore the original value and ultimately change the scrollbar visibility ourself.
      */
     if (d->isCategorized()) { // important! - otherwise we'd pollute the setting if the view is initially not categorized

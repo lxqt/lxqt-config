@@ -47,7 +47,7 @@
 
 enum ItemTypeEntries {
     GroupType = 1001,
-    EntrieType = 1002
+    EntryType = 1002
 };
 
 static bool mimeTypeLessThan(const QMimeType& m1, const QMimeType& m2)
@@ -79,7 +79,7 @@ void MimetypeViewer::loadAllMimeTypes()
             widget.mimetypeTreeWidget->insertTopLevelItem(0, item);
             mGroupItems.insert(mediaType, item);
         }
-        QTreeWidgetItem *item = new QTreeWidgetItem(mGroupItems.value(mediaType), EntrieType);
+        QTreeWidgetItem *item = new QTreeWidgetItem(mGroupItems.value(mediaType), EntryType);
         QVariant v;
         v.setValue(MimeTypeData(mt));
         item->setData(0, Qt::UserRole, v);
@@ -108,7 +108,7 @@ void MimetypeViewer::loadAllMimeTypes()
         mGroupItems.insert(mediaType, item);
     }
     for (const auto& scheme : schemes) {
-        QTreeWidgetItem *item = new QTreeWidgetItem(mGroupItems.value(mediaType), EntrieType);
+        QTreeWidgetItem *item = new QTreeWidgetItem(mGroupItems.value(mediaType), EntryType);
         MimeTypeData data = MimeTypeData();
         data.setName(mediaType + QStringLiteral("/") + scheme);
         QVariant v;
