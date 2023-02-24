@@ -148,7 +148,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation>建立</translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="29"/>
