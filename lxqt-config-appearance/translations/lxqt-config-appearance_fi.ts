@@ -231,7 +231,7 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Käyttäjäteema)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
