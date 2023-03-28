@@ -113,7 +113,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation>Keskiverto</translation>
+        <translation>Keskivahva</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
