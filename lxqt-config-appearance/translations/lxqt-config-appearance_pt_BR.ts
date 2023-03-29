@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -226,17 +226,17 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar papel de parede fornecido pelo tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Tema do Usuário)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir pasta de temas</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo GTK</translation>
     </message>
 </context>
 <context>
