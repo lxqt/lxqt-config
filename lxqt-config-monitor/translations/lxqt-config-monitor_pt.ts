@@ -32,7 +32,7 @@
 <context>
     <name>LoadSettings</name>
     <message>
-        <location filename="../loadsettings.cpp" line="97"/>
+        <location filename="../loadsettings.cpp" line="98"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
         <translation>Aplicadas todas as definições padrão para monitores. Se quiser alterar as definições do monitor, utilize lqxt-config-monitor.</translation>
     </message>
@@ -128,17 +128,17 @@
         <translation>Definições</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="105"/>
+        <location filename="../monitorsettingsdialog.cpp" line="106"/>
         <source>Fast Menu</source>
         <translation>Menu rápido</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="109"/>
+        <location filename="../monitorsettingsdialog.cpp" line="110"/>
         <source>Set position</source>
         <translation>Definir posição</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="228"/>
+        <location filename="../monitorsettingsdialog.cpp" line="229"/>
         <source>Advanced settings</source>
         <translation>Definições avançadas</translation>
     </message>
@@ -206,69 +206,69 @@
         <translation>Informação do ecrã</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="128"/>
+        <location filename="../monitorwidget.cpp" line="129"/>
         <source>Name: %1
 </source>
         <translation>Nome: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="129"/>
+        <location filename="../monitorwidget.cpp" line="130"/>
         <source>Vendor: %1
 </source>
         <translation>Fabricante: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="130"/>
+        <location filename="../monitorwidget.cpp" line="131"/>
         <source>Serial: %1
 </source>
         <translation>Série: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="131"/>
+        <location filename="../monitorwidget.cpp" line="132"/>
         <source>Display size: %1cm x %2cm
 </source>
         <translation>Tamanho do ecrã: %1 cm x %2 cm
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="132"/>
+        <location filename="../monitorwidget.cpp" line="133"/>
         <source>Serial number: %1
 </source>
         <translation>Número de série: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="133"/>
+        <location filename="../monitorwidget.cpp" line="134"/>
         <source>EISA device ID: %1
 </source>
         <translation>ID EISA do dispositivo: %1
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="153"/>
+        <location filename="../monitorwidget.cpp" line="154"/>
         <source>None</source>
         <translation>Nenhuma</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="154"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="155"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Right</source>
         <translation>Direita</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="156"/>
+        <location filename="../monitorwidget.cpp" line="157"/>
         <source>Inverted</source>
         <translation>Invertido</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="244"/>
+        <location filename="../monitorwidget.cpp" line="245"/>
         <source>%1 Hz</source>
         <translation>%1 HZ</translation>
     </message>

@@ -135,7 +135,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Форма</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>

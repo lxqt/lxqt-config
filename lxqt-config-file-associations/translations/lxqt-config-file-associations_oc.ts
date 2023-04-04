@@ -11,7 +11,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="46"/>
         <source>Pick an application for:</source>
-        <translation>Causir una aplicacion per :</translation>
+        <translation>Causir una aplicacion per&#xa0;:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="110"/>
