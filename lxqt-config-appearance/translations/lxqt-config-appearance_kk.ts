@@ -281,7 +281,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="101"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Қаріп</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="111"/>
