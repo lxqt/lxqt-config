@@ -1,3 +1,8 @@
+lxqt-config-1.3.0 / 2023-04-15
+===============================
+ * Fixed potential segfault when loading keyboard layout settings.
+ * lxqt-config-monitor: More header file inclusion for libkscreen 5.26.90.
+
 lxqt-config-1.2.0 / 2022-11-05
 ===============================
  * Enhancements to theme list in appearance config dialog. Themes are always sorted alphabetically, user themes are distinguished, and theme folders can be opened by double clicking or by using context menus.
