@@ -93,12 +93,12 @@
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation>%1 : Impossible d&apos;utiliser increase/decrease et set conjointement</translation>
+        <translation>%1 : Impossible d’utiliser conjointement les fonctions augmenter/diminuer et fixer</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation>%1 : Impossible d&apos;utiliser les options increase et decrease conjointement</translation>
+        <translation>%1 : Impossible d’utiliser conjointement les options d’augmentation et de diminution</translation>
     </message>
 </context>
 </TS>

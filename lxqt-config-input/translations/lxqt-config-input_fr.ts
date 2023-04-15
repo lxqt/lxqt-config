@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Émettre un son lors d&apos;une erreur d&apos;entrée sur le clavier</translation>
+        <translation>Émettre un son lors d’une erreur d’entrée sur le clavier</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt; : Si vous utilisez une &lt;span style=&quot; font-weight:600;&quot;&gt;méthode de saisie&lt;/span&gt;, telle que IBus, uim, fcitx, ou gcin, les réglages suivants &lt;span style=&quot; font-weight:600;&quot;&gt;peuvent ne pas fonctionner&lt;/span&gt; parce qu&apos;ils sont écrasés par les méthodes de saisie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt; : Si vous utilisez une &lt;span style=&quot; font-weight:600;&quot;&gt;méthode de saisie&lt;/span&gt;, telle que IBus, uim, fcitx, ou gcin, les réglages suivants &lt;span style=&quot; font-weight:600;&quot;&gt;peuvent ne pas fonctionner&lt;/span&gt; parce qu’ils sont écrasés par les méthodes de saisie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -146,7 +146,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Intervalle d&apos;un double-clic :</translation>
+        <translation>Intervalle d’un double-clic :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -235,7 +235,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation>Vitesse d&apos;accélération :</translation>
+        <translation>Vitesse d’accélération :</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
@@ -280,7 +280,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation>Étiquette d&apos;informations sur l&apos;appareil</translation>
+        <translation>Étiquette d’informations sur l’appareil</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -290,11 +290,11 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation>LXQt supporte uniquement &quot;libinput&quot; comme pilote xinput.
+        <translation>LXQt supporte uniquement « libinput » comme pilote xinput.
 (valeur actuelle : %1)
 
 Si cela est prévu, veuillez configurer xinput manuellement.
-Sinon, vous pouvez vous débarrasser de ce message en changeant le pilote xinput en &quot;libinput&quot;.
+Sinon, vous pouvez vous débarrasser de ce message en changeant le pilote xinput en « libinput ».
 </translation>
     </message>
 </context>

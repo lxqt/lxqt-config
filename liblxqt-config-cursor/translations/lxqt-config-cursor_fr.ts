@@ -54,7 +54,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt n&apos;a trouvé aucun thème de curseur. Le thème de curseur X11 par défaut sera utilisé à la place. LXQt a cherché dans les répertoires suivants :</translation>
+        <translation>LXQt n’a trouvé aucun thème de curseur. Le thème de curseur X11 par défaut sera utilisé à la place. LXQt a cherché dans les répertoires suivants :</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>

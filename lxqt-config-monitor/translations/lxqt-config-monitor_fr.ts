@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor.</source>
-        <translation>Les paramètres par défaut de l&apos;écran ont été appliqués. Si vous souhaitez modifier les paramètres des écrans, veuillez utiliser lxqt-config-monitor.</translation>
+        <translation>Les paramètres par défaut de l’écran ont été appliqués. Si vous souhaitez modifier les paramètres des écrans, veuillez utiliser lxqt-config-monitor.</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Paramètres d&apos;affichage</translation>
+        <translation>Paramètres d’affichage</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Paramètres d&apos;affichage</translation>
+        <translation>Paramètres d’affichage</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
@@ -230,7 +230,7 @@
         <location filename="../monitorwidget.cpp" line="132"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Taille de l&apos;écran : %1cm x %2cm
+        <translation>Taille de l’écran : %1cm x %2cm
 </translation>
     </message>
     <message>

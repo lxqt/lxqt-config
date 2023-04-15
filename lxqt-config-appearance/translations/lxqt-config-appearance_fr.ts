@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="171"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; a été écrasé.&lt;/p&gt;&lt;p&gt;Vous pouvez trouver une copie de vos anciens paramètres dans &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;« %1 » a été écrasé.&lt;/p&gt;&lt;p&gt;Vous pouvez trouver une copie de vos anciens paramètres dans « %2 »&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Erreur&#xa0;: gsettings ne peut pas être lancé</translation>
+        <translation>Erreur : gsettings ne peut pas être lancé</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Police par défaut pour l&apos;interface utilisateur</translation>
+        <translation>Police par défaut pour l’interface utilisateur</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Utiliser l&apos;anticrénelage des polices</translation>
+        <translation>Utiliser l’anticrénelage des polices</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Style d&apos;optimisation pour la police d&apos;affichage :</translation>
+        <translation>Style d’optimisation pour la police d’affichage :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -123,7 +123,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Optimisation de la police d&apos;affichage</translation>
+        <translation>Optimisation de la police d’affichage</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -188,9 +188,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Pour tenter une thématisation uniforme, sélectionner un style/thème similaire (si disponible) dans toutes les listes ou le style Qt &apos;gtk2&apos; (si disponible) pour imiter les thèmes GTK.
+        <translation>Pour tenter une thématisation uniforme, sélectionner un style/thème similaire (si disponible) dans toutes les listes ou le style Qt « gtk2 » (si disponible) pour imiter les thèmes GTK.
 
-S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer des thèmes à la volée.</translation>
+S’assurer que « xsettingsd » est installé pour aider les applications GTK à appliquer des thèmes à la volée.</translation>
     </message>
 </context>
 <context>
@@ -198,7 +198,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuration de l&apos;apparence de LXQt</translation>
+        <translation>Configuration de l’apparence de LXQt</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -208,7 +208,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>L&apos;extension de KDE des thèmes d’icônes XDG -&gt; Suivre le schéma de couleur</translation>
+        <translation>L’extension de KDE des thèmes d’icônes XDG -&gt; Suivre le schéma de couleur</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -226,7 +226,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation>Utiliser le fond d&apos;écran fourni par le thème</translation>
+        <translation>Utiliser le fond d’écran fourni par le thème</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
@@ -263,7 +263,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Configuration de l&apos;apparence de LXQt</translation>
+        <translation>Configuration de l’apparence de LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
@@ -371,27 +371,27 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
-        <translation>Style des boutons de la barre d&apos;outils :</translation>
+        <translation>Style des boutons de la barre d’outils :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
-        <translation>N&apos;afficher que l&apos;icône</translation>
+        <translation>N’afficher que l’icône</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
-        <translation>N&apos;afficher que le texte</translation>
+        <translation>N’afficher que le texte</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
-        <translation>Texte à côté de l&apos;icône</translation>
+        <translation>Texte à côté de l’icône</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
-        <translation>Texte sous l&apos;icône</translation>
+        <translation>Texte sous l’icône</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
@@ -401,7 +401,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
-        <translation>Activer l&apos;élément en un seul clic</translation>
+        <translation>Activer l’élément en un seul clic</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
@@ -417,14 +417,14 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation>Nom de la palette&#xa0;:</translation>
+        <translation>Nom de la palette :</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Une palette du même nom existe.
-Voulez vous la remplacer&#xa0;?</translation>
+Voulez vous la remplacer ?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
@@ -435,7 +435,7 @@ Voulez vous la remplacer&#xa0;?</translation>
         <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Voulez vous vraiment supprimer les palettes sélectionnées&#xa0;?
+        <translation>Voulez vous vraiment supprimer les palettes sélectionnées ?
 Les palettes root seront conservés si elles existent.</translation>
     </message>
 </context>
