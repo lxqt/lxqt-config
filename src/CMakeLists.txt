@@ -1,6 +1,5 @@
 project(lxqt-config)
 add_subdirectory(qcategorizedview)
-add_subdirectory(menuname)
 
 include_directories (
     "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
@@ -65,7 +64,4 @@ install(FILES
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     COMPONENT Runtime
 )
-install(FILES lxqt-config.menu
-    DESTINATION "${LXQT_ETC_XDG_DIR}/menus"
-    COMPONENT Runtime
-)
+
