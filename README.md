@@ -82,7 +82,7 @@ Other kinds of settings are shown under "Other Settings".
 
 ### Compiling source code
 
-Runtime dependencies are Xcursor, qtsvg, KScreen and
+Runtime dependencies are Xcursor, qtsvg, KScreen, [lxqt-menu-data](https://github.com/lxqt/lxqt-menu-data/) and
 [liblxqt](https://github.com/lxqt/liblxqt).  Additional build dependencies are
 CMake and optionally Git to pull latest VCS checkouts.
 
