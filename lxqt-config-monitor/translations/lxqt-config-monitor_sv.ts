@@ -193,7 +193,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="153"/>
         <source>Rotation:</source>
-        <translation>Rotation:</translation>
+        <translation>Vridning:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
