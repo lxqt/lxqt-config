@@ -57,7 +57,7 @@
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation>Другие приложение для %1</translation>
+        <translation>Прочие приложения для работы с %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
