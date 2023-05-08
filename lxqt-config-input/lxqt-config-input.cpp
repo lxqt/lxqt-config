@@ -134,7 +134,7 @@ int main(int argc, char** argv) {
             dlg.enableButton(QDialogButtonBox::Apply, false); // disable Apply button on resetting too
     });
 
-    dlg.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-peripherals")));
+    dlg.setWindowIcon(QIcon::fromTheme(QStringLiteral("input-keyboard")));
 
     LXQt::Settings mConfigInputSettings(QStringLiteral("lxqt-config-input"));
     dlg.resize(mConfigInputSettings.value(QStringLiteral("size")).toSize().expandedTo(QSize(600, 400)));
