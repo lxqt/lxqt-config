@@ -51,7 +51,7 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
 
   ui.setupUi(this);
 
-  /* read the config flie */
+  /* read the config file */
   loadSettings();
   initControls();
 

@@ -149,7 +149,7 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     // TODO: Properly handle scripts (@foo)
     QString cvalue = locale.name();
     if (!cvalue.contains(QLatin1Char('.')))
-    { // explicitely add the encoding, otherwise Qt doesn't accept dead keys and garbles the output as well
+    { // explicitly add the encoding, otherwise Qt doesn't accept dead keys and garbles the output as well
         cvalue.append(QLatin1Char('.') + QString::fromUtf8(QTextCodec::codecForLocale()->name()));
     }
 

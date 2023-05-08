@@ -60,7 +60,7 @@ private:
     QPersistentModelIndex pendingActivation;
 
 private:
-    void builGroup(const QDomElement& xml);
+    void buildGroup(const QDomElement& xml);
     void setSizing();
     void activateItem();
 
