@@ -113,7 +113,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation>Keskiverto</translation>
+        <translation>Keskivahva</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
@@ -226,17 +226,17 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä teeman tarjoamaa taustakuvaa</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Käyttäjäteema)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa teemakansio</translation>
     </message>
 </context>
 <context>

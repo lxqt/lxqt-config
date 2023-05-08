@@ -57,7 +57,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Estil :</translation>
+        <translation>Estil&#xa0;:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
@@ -314,12 +314,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation>Fenèstra :</translation>
+        <translation>Fenèstra&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Afichatge :</translation>
+        <translation>Afichatge&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
@@ -329,27 +329,27 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation>Ligam :</translation>
+        <translation>Ligam&#x202f;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation>Tèxte de fenèstra :</translation>
+        <translation>Tèxte de fenèstra&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation>Tèxte d’afichatge :</translation>
+        <translation>Tèxte d’afichatge&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation>Tèxte seleccionat :</translation>
+        <translation>Tèxte seleccionat&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation>Ligam visitat :</translation>
+        <translation>Ligam visitat&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="214"/>
