@@ -36,6 +36,7 @@ find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt5X11Extras ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt5Xml ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
+find_package(lxqt-menu-data ${LXQT_MINIMUM_VERSION} REQUIRED)
 
 include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
