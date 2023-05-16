@@ -69,11 +69,11 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     connect(mModel, &XCursorThemeModel::rowsRemoved, this, &SelectWnd::handleWarning);
 
     connect(ui->warningLabel, &WarningLabel::showDirInfo, this, &SelectWnd::showDirInfo);
-    
+
     // Set actual cursor size
     ui->cursorSizeSpinBox->setValue(getDefaultCursorSize());
 
-    
+
     connect(ui->cursorSizeSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &SelectWnd::cursorSizeChanged);
 
     // Disable the install button if we can't install new themes to ~/.icons,
@@ -168,23 +168,22 @@ void SelectWnd::applyCusorTheme()
     QModelIndex curIndex = ui->lbThemes->currentIndex();
     if(!curIndex.isValid()) return;
     const XCursorThemeData *theme = mModel->theme(curIndex);
-    
-    if(!theme ||
-        (
-            mSettings->value(QStringLiteral("Mouse/cursor_theme")) == theme->name()
-            && mSettings->value(QStringLiteral("Mouse/cursor_size")) == ui->cursorSizeSpinBox->value()
-        )
-    ) {
+
+    if(!theme)
+    {
+        // WARNING: This block should not return if the values in "session.conf" are equal to what
+        // the user wants to set because that file may not reflect the values in "~/.Xresources"
+        // (which may have been edited in some way).
         return;
     }
-    
-    applyTheme(*theme, ui->cursorSizeSpinBox->value());
-    fixXDefaults(theme->name(), ui->cursorSizeSpinBox->value());
 
-    // call xrdb to merge the new settings in ~/.Xdefaults
+    applyTheme(*theme, ui->cursorSizeSpinBox->value());
+    setXcursor(theme->name(), ui->cursorSizeSpinBox->value());
+
+    // call xrdb to merge the new settings in ~/.Xresources
     // FIXME: need to check if we're running in X?
     QProcess xrdb;
-    xrdb.start(QStringLiteral("xrdb"), QStringList() << QStringLiteral("-merge") << QDir::home().path() + QStringLiteral("/.Xdefaults"));
+    xrdb.start(QStringLiteral("xrdb"), QStringList() << QStringLiteral("-merge") << QDir::home().path() + QStringLiteral("/.Xresources"));
     xrdb.waitForFinished();
 
     // old razor-qt and lxqt versions use $XCURSOR_THEME environment variable

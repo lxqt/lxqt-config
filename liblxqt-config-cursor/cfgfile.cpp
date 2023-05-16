@@ -54,23 +54,22 @@ QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
     return res;
 }
 
-void fixXDefaults(const QString &themeName, int cursorSize)
+static inline void setXcursorInFile(const QString &fileName, const QString &themeName, int cursorSize)
 {
     QStringList lst;
     {
-        QFile fl(QDir::home().path()+QStringLiteral("/.Xdefaults"));
+        QFile fl(fileName);
         if (fl.open(QIODevice::ReadOnly))
         {
-            QTextStream stream;
-            stream.setDevice(&fl);
-            while (1)
+            QTextStream stream(&fl);
+            while (!stream.atEnd())
             {
-                QString s = stream.readLine();
-                if (s.isNull())
-                    break;
-                // if the line does not contain Xcursor.theme, save it to a list
-                if (!(s.startsWith(QLatin1String("Xcursor")) && s.midRef(8).startsWith(QLatin1String("theme"))))
-                    lst << s;
+                QString line = stream.readLine();
+                if (!line.startsWith(QLatin1String("Xcursor.theme:"))
+                    && !line.startsWith(QLatin1String("Xcursor.size:")))
+                {
+                    lst << line;
+                }
             }
             fl.close();
         }
@@ -82,27 +81,32 @@ void fixXDefaults(const QString &themeName, int cursorSize)
         lst.removeAt(lst.size()-1);
     }
     {
-        //QByteArray ba(themeName.toUtf8());
-        QFile fl(QDir::home().path()+QStringLiteral("/.Xdefaults"));
+        QFile fl(fileName);
         if (fl.open(QIODevice::WriteOnly))
         {
-            QTextStream stream;
-            stream.setDevice(&fl);
+            QTextStream stream(&fl);
             for (const QString &s : qAsConst(lst))
             {
                 stream << s << "\n";
             }
             stream << "\nXcursor.theme: " << themeName << "\n";
-            stream << "\nXcursor.size: " << cursorSize << "\n";
+            stream << "Xcursor.size: " << cursorSize << "\n";
             fl.close();
         }
     }
 }
 
+void setXcursor(const QString &themeName, int cursorSize)
+{
+    // NOTE: It should especially be set in "~/.Xresources", "~/.Xdefaults" being the old place.
+    setXcursorInFile(QDir::home().path() + QStringLiteral("/.Xresources"), themeName, cursorSize);
+    setXcursorInFile(QDir::home().path() + QStringLiteral("/.Xdefaults"), themeName, cursorSize);
+}
+
 const QString findDefaultTheme()
 {
-    QString res = QStringLiteral("default");
-    QFile fl(QDir::home().path()+QStringLiteral("/.Xdefaults"));
+    QString res;
+    QFile fl(QDir::home().path()+QStringLiteral("/.Xresources"));
     if (fl.open(QIODevice::ReadOnly))
     {
         QTextStream stream;
@@ -118,6 +122,30 @@ const QString findDefaultTheme()
             res = s;
         }
         fl.close();
+    }
+    if (res.isEmpty())
+    {
+        QFile fl = QFile(QDir::home().path()+QStringLiteral("/.Xdefaults"));
+        if (fl.open(QIODevice::ReadOnly))
+        {
+            QTextStream stream;
+            stream.setDevice(&fl);
+            while (1)
+            {
+                QString s = stream.readLine();
+                if (s.isNull()) break;
+                if (!s.startsWith(QLatin1String("Xcursor.theme:"))) continue;
+                s.remove(0, 14);
+                s = s.trimmed();
+                if (s.isEmpty()) s = QLatin1String("default");
+                res = s;
+            }
+            fl.close();
+        }
+    }
+    if (res.isEmpty())
+    {
+        res = QStringLiteral("default");
     }
     return res;
 }
