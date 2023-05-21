@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="171"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; on korvattu.&lt;/p&gt;&lt;p&gt;Voit etsiä vanhan asetuksesi kopion sijainnista: &apos;% 2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; on korvattu.&lt;/p&gt;&lt;p&gt;Voit etsiä vanhan asetuksesi kopion sijainnista: &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
