@@ -34,12 +34,12 @@
         <translation>Koko</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme-virhe</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="232"/>
+        <location filename="../selectwnd.cpp" line="231"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Käytössä olevaa teemaa ei voi poistaa!</translation>
     </message>
