@@ -5,7 +5,7 @@
     <name>ApplicationChooser</name>
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
-        <source>ApplicationChooser</source>
+        <source>Application Chooser</source>
         <translation>응용프로그램선택자</translation>
     </message>
     <message>
