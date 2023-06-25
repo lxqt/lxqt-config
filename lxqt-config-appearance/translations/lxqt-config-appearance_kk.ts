@@ -67,98 +67,98 @@
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Қалыпты</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Қалыңдаталған</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Курсив</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Қалыңдатылған курсив</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Өзгертілген реттеулер қайта қосылған бағдарламаларға қолданылады</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Қаріптерді тегістеуді қолдану</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Қаріпті хинтингтеу стилі:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Жоқ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Әлсіз</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Орташа</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Толық</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Қаріпті хинтингтеу</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Ажыратымдылық (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Автохинтинг</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Сабпиксельдік тегістеу:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -166,29 +166,31 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK стилі</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK рәсімдеу тәсілдерін орнату (GTK конфигурациялық файлы қайта жазылады)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 рәсімдеу тәсілі</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 рәсімдеу тәсілі</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Барлық бағдарламалардың сыртқы келбетінің біркелкілігіне қолжеткізу үшін барлық тізімдерде ұқсас стильдер/рәсімдеу тәсілдерін (мүмкін болса) таңдау керек немесе &apos;gtk2&apos; атты QT стилін (қолжетімді болса) таңдау арқылы QT-қа GTK рәсімдеу тәсіліне еліктеуге мүмкіндік беру керек.
+
+GTK бағдарламалары рәсімдеу стильдерін бірден қолдана алу үшін «xsettingsd» орнатылғанын тексеріңіз.</translation>
     </message>
 </context>
 <context>
@@ -196,22 +198,22 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt келбетін реттеу</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Белгішелер рәсімдеу тәсілі</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>XDG белгішелері үшін KDE кеңейтілімі -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Белгішелерінің түстері виджеттер стиліне негіздеу</translation>
     </message>
 </context>
 <context>
@@ -219,7 +221,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt рәсімдеу тәсілі</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
