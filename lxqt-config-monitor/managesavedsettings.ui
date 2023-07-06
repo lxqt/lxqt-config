@@ -30,7 +30,14 @@
         <item row="0" column="0">
          <widget class="QListWidget" name="allConfigs"/>
         </item>
-        <item row="3" column="0">
+        <item row="0" column="1">
+         <widget class="QTextEdit" name="selectedSettingsTextEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QPushButton" name="renamePushButton">
@@ -54,13 +61,6 @@
            </widget>
           </item>
          </layout>
-        </item>
-        <item row="0" column="1">
-         <widget class="QTextEdit" name="selectedSettingsTextEdit">
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
         </item>
        </layout>
       </widget>
