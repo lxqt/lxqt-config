@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi: gsettings không thể được khởi chạy</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -226,17 +226,17 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Sử dụng hình nền được cung cấp bởi chủ đề</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Chủ đề của người dùng)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở thư mục chủ đề</translation>
     </message>
 </context>
 <context>
@@ -245,17 +245,17 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bảng màu</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bộ lọc...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa bỏ (&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Phong cách GTK</translation>
     </message>
 </context>
 <context>
@@ -321,12 +321,12 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Xem:</translation>
+        <translation>Khung nhìn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation>Sự lựa chọn:</translation>
+        <translation>Lựa chọn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
@@ -336,37 +336,37 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation>Văn bản Cửa sổ:</translation>
+        <translation>Văn bản trong Cửa sổ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation>Văn bản Xem:</translation>
+        <translation>Văn bản trong Khung nhìn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation>Văn bản Được chọn:</translation>
+        <translation>Văn bản được lựa chọn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation>Liên kết Được ghé thăm:</translation>
+        <translation>Liên kết được ghé thăm:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu Bảng màu (&amp;S)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở Bảng màu (&amp;L)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
         <source>&amp;Default Palette</source>
-        <translation>&amp;Bảng màu Mặc định</translation>
+        <translation>Bảng màu mặc định (&amp;D)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="256"/>
@@ -412,29 +412,31 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
         <location filename="../styleconfig.cpp" line="245"/>
         <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu Bảng màu</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên Bảng màu:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Một bảng màu trùng tên đã tồn tại.
+Bạn có muốn thay thế nó?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa Bảng màu</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn có thực sự muốn xóa (các) bảng màu đã chọn không?
+Các bảng màu gốc sẽ được giữ nguyên nếu tồn tại.</translation>
     </message>
 </context>
 </TS>
