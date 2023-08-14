@@ -311,6 +311,8 @@
         <source>%n second(s) remaining</source>
         <translation>
             <numerusform>נותרה שנייה אחת</numerusform>
+            <numerusform>נותרו שתי שניות</numerusform>
+            <numerusform>נותרו %n שניות</numerusform>
             <numerusform>נותרו %n שניות</numerusform>
         </translation>
     </message>
