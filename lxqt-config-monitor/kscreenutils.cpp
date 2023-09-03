@@ -63,9 +63,9 @@ void KScreenUtils::extended(KScreen::ConfigPtr &config)
         output->setPos(pos);
         output->setEnabled(true);
         //first left one as primary
-        output->setPrimary(width == 0);
+        output->setPriority(width == 0 ? 1 : 0);
         KScreen::ModePtr mode(output->currentMode());
-        //if (!mode) 
+        //if (!mode)
         {
             // Set the biggest mode between preferred modes and the first mode.
             mode = output->modes().first();
@@ -83,7 +83,7 @@ void KScreenUtils::extended(KScreen::ConfigPtr &config)
             if (mode)
                 output->setCurrentModeId(mode->id());
         }
-        if (mode) 
+        if (mode)
             width += mode->size().width();
     }
 }
