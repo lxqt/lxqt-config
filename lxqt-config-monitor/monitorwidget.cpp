@@ -138,7 +138,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     if (config->connectedOutputs().count() == 1) {
         setOnlyMonitor(true);
         // There isn't always a primary output. Gross.
-        output->setPrimary(true);
+        output->setPriority(1);
     }
 
     ui.xPosSpinBox->setValue(output->pos().x());
@@ -208,7 +208,7 @@ void MonitorWidget::onBehaviorChanged(int idx)
     ui.xPosSpinBox->setVisible(idx == ExtendDisplay);
     ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
 
-    output->setPrimary(idx == PrimaryDisplay);
+    output->setPriority(idx == PrimaryDisplay ? 1 : 0);
     if(idx == PrimaryDisplay)
         emit primaryOutputChanged(this);
 }
