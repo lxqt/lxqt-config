@@ -94,7 +94,7 @@ void LoadSettings::applyBestSettings()
                     if (KScreen::Config::canBeApplied(config))
                         KScreen::SetConfigOperation(config).exec();
                     qDebug() << "lxqt-config-monitor: Extended mode has been applied";
-                    
+
                     mNotification->setSummary(tr("Default monitor settings has been applied. If you want change monitors settings, please, use lxqt-config-monitor."));
                     mNotification->update();
                     mNotification->setTimeout(1000);
@@ -133,7 +133,7 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 if( !output->isConnected() )
                     continue;
                 output->setEnabled( monitor.enabled );
-                output->setPrimary( monitor.primary );
+                output->setPriority( monitor.primary ? 1 : 0 );
                 output->setPos( QPoint(monitor.xPos, monitor.yPos) );
                 output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
                 // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
