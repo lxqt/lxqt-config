@@ -29,6 +29,7 @@
 
 #include <QWidget>
 #include <LXQt/Settings>
+#include <QDialogButtonBox>
 
 class QTreeWidgetItem;
 class QSettings;
@@ -55,6 +56,7 @@ public:
 
 public slots:
     void initControls();
+    void filterDialogButtonClickEvent(QDialogButtonBox::StandardButton button);
     void saveSettings();
 
 private:

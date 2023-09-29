@@ -305,22 +305,26 @@ void LocaleConfig::writeConfig()
     mSettings->endGroup();
 }
 
+void LocaleConfig::filterDialogButtonClickEvent(QDialogButtonBox::StandardButton button)
+{
+	if (button == QDialogButtonBox::Save)
+	{
+		saveSettings();
+	}
+}
+
 void LocaleConfig::saveSettings()
 {
     if (hasChanged)
     {
         QMessageBox msgBox;
         msgBox.setWindowTitle(tr("Format Settings Changed"));
-        msgBox.setText(tr("Do you want to save your changes? They will take effect the next time you log in."));
-        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
-        msgBox.setDefaultButton(QMessageBox::Cancel);
+        msgBox.setText(tr("Settings will not take effect until the next log in."));
+        msgBox.setStandardButtons(QMessageBox::Ok);
 
-        int ret = msgBox.exec();
-        if( ret == QMessageBox::Save )
-        {
-            writeConfig();
-            writeExports();
-        }
+        msgBox.exec();
+        writeConfig();
+        writeExports();
     }
 
 }
