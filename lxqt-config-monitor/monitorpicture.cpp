@@ -257,8 +257,8 @@ void MonitorPicture::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 //////////////////////////////////////////////////////////////////////////////////
 
 struct Result_moveMonitorPictureToNearest {
-    bool ok;
-    bool outside;
+    bool ok = false;
+    bool outside = false;
     QVector2D vector;
 };
 
