@@ -46,13 +46,6 @@
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QPushButton" name="applyPushButton">
-            <property name="text">
-             <string>Apply</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item row="0" column="1">

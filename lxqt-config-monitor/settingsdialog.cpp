@@ -31,4 +31,10 @@ SettingsDialog::SettingsDialog(const QString &title, LXQt::Settings *settings, K
 
     ManageSavedSettings * savedSettings = new ManageSavedSettings(settings, config, this);
     addPage(savedSettings, QObject::tr("Manage Saved Settings"), QStringLiteral("system-run"));
+
+    connect(this, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton button) {
+        if(button == QDialogButtonBox::Apply) {
+            savedSettings->onApplyItem();
+        }
+    });
 }
