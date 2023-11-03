@@ -263,7 +263,7 @@ GTK бағдарламалары рәсімдеу стильдерін бірд�
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LXQt келбетін реттеу</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
@@ -273,12 +273,12 @@ GTK бағдарламалары рәсімдеу стильдерін бірд�
     <message>
         <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Белгішелер рәсімдеу тәсілі</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LXQt рәсімдеу тәсілі</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="101"/>
@@ -293,7 +293,7 @@ GTK бағдарламалары рәсімдеу стильдерін бірд�
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GTK стилі</translation>
     </message>
 </context>
 <context>
