@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Sagua eta Touchpad</translation>
     </message>
 </context>
 <context>
@@ -229,32 +229,32 @@
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gailua:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Azelerazio abiadura:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Sakatu klik egiteko</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>Mugimendu naturala</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukitu eta arrastatu</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="79"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Korritzea:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
@@ -289,7 +289,12 @@
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-ek &quot;libinput&quot; soilik onartzen du xinput kontrolatzaile gisa.
+(uneko balioa: %1)
+
+Hau nahi izanez gero, mesedez konfiguratu xinput eskuz.
+Bestela, mezu hau ken dezakezu xinput kontrolatzailea &quot;libinput&quot;-ra aldatuz.
+</translation>
     </message>
 </context>
 </TS>
