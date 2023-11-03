@@ -21,7 +21,7 @@
 #include <QMessageBox>
 #include <QPushButton>
 
-BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
+BrightnessSettings::BrightnessSettings(LXQt::Settings *settings, QWidget *parent):QDialog(parent)
 {
     ui = new Ui::BrightnessSettings();
     ui->setupUi(this);
@@ -31,8 +31,17 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mMonitorsInitial = mBrightness->getMonitorsInfo();
     mBacklight = new LXQt::Backlight(this);
 
-    ui->headIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("display-brightness-symbolic")).pixmap(32, 32));
+    // Get minimum backlight
+    mSettings = settings;
+    mSettings->beginGroup(QStringLiteral("Backlight"));
+    mMinBacklightValue = mSettings->value(QStringLiteral("min"), -1).toInt();
+    if(mMinBacklightValue < 0) {
+        // Set the minimum to 5% of the maximum to prevent a black screen
+        mMinBacklightValue = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    }
+    mInitialMinBacklightValue = mMinBacklightValue;
 
+    ui->minBacklightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     ui->backlightGroupBox->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     if(mBacklight->isBacklightAvailable()) {
@@ -45,6 +54,34 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
             [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()-1); });
         connect(ui->backlightUpButton, &QToolButton::clicked,
             [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()+1); });
+
+        ui->minBacklightSlider->setMinimum(0);
+        ui->minBacklightSlider->setMaximum(mBacklight->getMaxBacklight());
+        ui->minBacklightSlider->setValue(mMinBacklightValue);
+
+        connect(ui->minBacklightSlider, &QSlider::valueChanged, this,
+            [this](int){
+                mMinBacklightValue = ui->minBacklightSlider->value();
+                setBacklightSliderValue(mLastBacklightValue);
+            });
+
+        connect(ui->minBacklightDownButton, &QToolButton::clicked,
+            [this](bool){
+                ui->minBacklightSlider->setValue(ui->minBacklightSlider->value()-1);
+                mMinBacklightValue = ui->minBacklightSlider->value();
+                setBacklightSliderValue(mLastBacklightValue);
+            });
+        connect(ui->minBacklightUpButton, &QToolButton::clicked,
+            [this](bool){
+                ui->minBacklightSlider->setValue(ui->minBacklightSlider->value()+1);
+                mMinBacklightValue = ui->minBacklightSlider->value();
+                setBacklightSliderValue(mLastBacklightValue);
+            });
+
+        connect(ui->checkMinBacklightButton, &QPushButton::pressed,
+            [this](){ mBacklight->setBacklight(ui->minBacklightSlider->value()); });
+        connect(ui->checkMinBacklightButton, &QPushButton::released,
+            [this](){ mBacklight->setBacklight(mLastBacklightValue); });
     }
 
     for(const MonitorInfo &monitor: qAsConst(mMonitors))
@@ -64,6 +101,13 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
         [this](QAbstractButton *button) {
             if(ui->buttonBox->button(QDialogButtonBox::Reset) == button) {
                 revertValues();
+            } else if(ui->buttonBox->button(QDialogButtonBox::Close) == button) {
+                close();
+            } else if(ui->buttonBox->button(QDialogButtonBox::Save) == button) {
+                mSettings->setValue(QStringLiteral("min"), mMinBacklightValue);
+                 QMessageBox msgBox;
+                 msgBox.setText(tr("Backlight minimum value has been saved."));
+                 msgBox.exec();
             }
         } );
 }
@@ -80,14 +124,8 @@ BrightnessSettings::~BrightnessSettings()
 void BrightnessSettings::setBacklight()
 {
     int value = ui->backlightSlider->value();
-    // Set the minimum to 5% of the maximum to prevent a black screen
-    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
-    int maxBacklight = mBacklight->getMaxBacklight();
-    int interval = maxBacklight - minBacklight;
-    if(interval > 100)
-        value = (value * maxBacklight) / 100;
     mBacklight->setBacklight(value);
-    
+
     if (ui->confirmCB->isChecked())
         mConfirmRequestTimer.start();
 }
@@ -160,6 +198,7 @@ void BrightnessSettings::revertValues()
         disconnect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
             mBacklight->setBacklight(mInitialBacklightValue);
             setBacklightSliderValue(mInitialBacklightValue);
+            ui->minBacklightSlider->setValue(mInitialMinBacklightValue);
         connect(ui->backlightSlider, &QSlider::valueChanged, this, &BrightnessSettings::setBacklight);
     }
 
@@ -171,18 +210,10 @@ void BrightnessSettings::revertValues()
 
 void BrightnessSettings::setBacklightSliderValue(int value)
 {
-    // Set the minimum to 5% of the maximum to prevent a black screen
-    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    int minBacklight = mMinBacklightValue;
     int maxBacklight = mBacklight->getMaxBacklight();
-    int interval = maxBacklight - minBacklight;
-    if(interval <= 100) {
-        ui->backlightSlider->setMaximum(maxBacklight);
-        ui->backlightSlider->setMinimum(minBacklight);
-        ui->backlightSlider->setValue(value);
-    } else {
-        ui->backlightSlider->setMaximum(100);
-        // Set the minimum to 5% of the maximum to prevent a black screen
-        ui->backlightSlider->setMinimum(5);
-        ui->backlightSlider->setValue( (value * 100) / maxBacklight);
-    }
+
+    ui->backlightSlider->setMaximum(maxBacklight);
+    ui->backlightSlider->setMinimum(minBacklight);
+    ui->backlightSlider->setValue(value);
 }
