@@ -54,7 +54,7 @@ int main (int argc, char **argv)
     LocaleConfig* localePage = new LocaleConfig(&settings, &session_settings, dialog);
     dialog->addPage(localePage, QObject::tr("Locale Settings"), QStringList() << QStringLiteral("preferences-desktop-locale") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, localePage, &LocaleConfig::initControls);
-    QObject::connect(dialog, &LXQt::ConfigDialog::clicked, localePage, &LocaleConfig::filterDialogButtonClickEvent);
+    QObject::connect(dialog, &LXQt::ConfigDialog::clicked, localePage, &LocaleConfig::filterDialogButtonClickedEvent);
 
     dialog->setButtons(QDialogButtonBox::Save | QDialogButtonBox::Close | QDialogButtonBox::Reset);
     dialog->setAttribute(Qt::WA_DeleteOnClose);

@@ -56,7 +56,7 @@ public:
 
 public slots:
     void initControls();
-    void filterDialogButtonClickEvent(QDialogButtonBox::StandardButton button);
+    void filterDialogButtonClickedEvent(QDialogButtonBox::StandardButton button);
     void saveSettings();
 
 private:

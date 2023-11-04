@@ -71,8 +71,6 @@ LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_set
              << m_ui->comboMeasurement
              << m_ui->comboCollate;
 
-    hasChanged = false;
-
     initControls();
 }
 
@@ -305,7 +303,7 @@ void LocaleConfig::writeConfig()
     mSettings->endGroup();
 }
 
-void LocaleConfig::filterDialogButtonClickEvent(QDialogButtonBox::StandardButton button)
+void LocaleConfig::filterDialogButtonClickedEvent(QDialogButtonBox::StandardButton button)
 {
 	if (button == QDialogButtonBox::Save)
 	{
@@ -325,6 +323,8 @@ void LocaleConfig::saveSettings()
         msgBox.exec();
         writeConfig();
         writeExports();
+
+        hasChanged = false;
     }
 
 }
