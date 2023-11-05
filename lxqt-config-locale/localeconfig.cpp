@@ -129,6 +129,7 @@ void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales
     for(const QLocale & l : qAsConst(allLocales))
     {
         addLocaleToCombo(combo, l);
+        combo->setEditable(false);
     }
 }
 

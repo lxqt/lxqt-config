@@ -38,7 +38,6 @@ public:
         setInsertPolicy(QComboBox::NoInsert);
         completer()->setCompletionMode(QCompleter::PopupCompletion);
         completer()->setFilterMode(Qt::MatchContains);
-        lineEdit()->setClearButtonEnabled(true);
     }
 
 protected:
