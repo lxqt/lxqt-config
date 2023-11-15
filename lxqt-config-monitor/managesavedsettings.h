@@ -41,7 +41,7 @@ public slots:
    */
   void loadSettings();
 
-  void showSelectedConfig(QListWidgetItem * item);
+  void showSelectedConfig();
 
   void onDeleteItem();
 
