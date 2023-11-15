@@ -14,15 +14,18 @@
    <string>LXQt Mouse Theme Configuration</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="5" column="3">
-    <widget class="QPushButton" name="btInstall">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
+   <item row="0" column="0" colspan="6">
+    <widget class="QLabel" name="infoLabel">
      <property name="text">
-      <string>&amp;Install New Theme...</string>
+      <string>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
+   </item>
+   <item row="1" column="0" colspan="6">
+    <widget class="WarningLabel" name="warningLabel" native="true"/>
    </item>
    <item row="2" column="0" colspan="6">
     <widget class="PreviewWidget" name="preview" native="true">
@@ -37,16 +40,6 @@
        <width>0</width>
        <height>48</height>
       </size>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0" colspan="6">
-    <widget class="QLabel" name="infoLabel">
-     <property name="text">
-      <string>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</string>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -66,6 +59,13 @@
      </property>
     </widget>
    </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="sizeLabel">
+     <property name="text">
+      <string>Size</string>
+     </property>
+    </widget>
+   </item>
    <item row="5" column="1">
     <widget class="QSpinBox" name="cursorSizeSpinBox">
      <property name="toolTip">
@@ -82,16 +82,6 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="6">
-    <widget class="WarningLabel" name="warningLabel" native="true"/>
-   </item>
-   <item row="5" column="4">
-    <widget class="QPushButton" name="btRemove">
-     <property name="text">
-      <string>&amp;Remove Theme</string>
-     </property>
-    </widget>
-   </item>
    <item row="5" column="2">
     <spacer>
      <property name="orientation">
@@ -105,10 +95,20 @@
      </property>
     </spacer>
    </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="sizeLabel">
+   <item row="5" column="3">
+    <widget class="QPushButton" name="btInstall">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="text">
-      <string>Size</string>
+      <string>&amp;Install New Theme...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="btRemove">
+     <property name="text">
+      <string>&amp;Remove Theme</string>
      </property>
     </widget>
    </item>
@@ -127,11 +127,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <tabstops>
-  <tabstop>lbThemes</tabstop>
-  <tabstop>btInstall</tabstop>
-  <tabstop>btRemove</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
