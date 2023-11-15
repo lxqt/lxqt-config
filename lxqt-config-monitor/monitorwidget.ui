@@ -127,6 +127,33 @@
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="orientationLabel">
+           <property name="text">
+            <string>Rotation:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="orientationCombo"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="rateLabel">
+           <property name="text">
+            <string>Refresh rate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="rateCombo">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
          <item row="3" column="0" colspan="2">
           <spacer name="verticalSpacer_2">
            <property name="orientation">
@@ -139,33 +166,6 @@
             </size>
            </property>
           </spacer>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="rateLabel">
-           <property name="text">
-            <string>Refresh rate:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="orientationLabel">
-           <property name="text">
-            <string>Rotation:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QComboBox" name="orientationCombo"/>
-         </item>
-         <item row="1" column="1">
-          <widget class="QComboBox" name="rateCombo">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
          </item>
         </layout>
        </item>
