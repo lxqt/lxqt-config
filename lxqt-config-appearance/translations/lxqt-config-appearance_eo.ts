@@ -108,7 +108,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Arina</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
@@ -374,7 +374,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bistaratu ikonoa soilik</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
