@@ -244,7 +244,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation>Инвертировать направление прокрутки</translation>
+        <translation>Обратить направление прокрутки</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
