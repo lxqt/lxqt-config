@@ -6,38 +6,38 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਰਮ</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
         <source>Cursor flash time:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਰਸਰ ਫਲੈਸ਼ ਟਾਈਮ:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="27"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;ਕੀਬੋਰਡ&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="34"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation type="unfinished"></translation>
+        <translation>ਜਦੋਂ ਵੀ ਕੀਬੋਰਡ ਇਨਪੁੱਟ ਦੀ ਗਲਤੀ ਹੋਵੇ ਤਾਂ ਬੀਪ ਦੀ ਆਵਾਜ਼</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="41"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ਮਿ.ਸ.</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="51"/>
         <source>Character Repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅੱਖਰ ਦੁਹਰਾਓ</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="79"/>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Long</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲੰਮਾ</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
@@ -58,18 +58,18 @@
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਪਣੀਆਂ ਕੀਬੋਰਡ ਸੈਟਿੰਗਾਂ ਨੂੰ ਟੈਸਟ ਕਰਨ ਲਈ ਅੱਗੇ ਦਿੱਤੇ ਬਾਕਸ ਵਿੱਚ ਲਿਖ ਕੇ ਵੇਖੋ</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
         <location filename="../keyboardconfig.ui" line="157"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲਾਗਇਨ ਦੇ ਬਾਅਦ ਨਮ-ਲਾਕ ਚਾਲੂ ਕਰੋ</translation>
     </message>
 </context>
 <context>
@@ -77,57 +77,57 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;ਕੀਬੋਰਡ ਖਾਕਾ&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖਾਕਾ</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>ਰੂਪ</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>ਜੋੜੋ(&amp;A)</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="70"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>ਹਟਾਓ(&amp;R)</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>ਉੱਤੇ</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>ਹੇਠਾਂ</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕੀਬੋਰਡ ਦਾ ਮਾਡਲ:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖਾਕਾ ਬਦਲਣ ਲਈ ਸਵਿੱਚਾਂ:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕੋਈ ਨਹੀਂ</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: ਜੇ ਤੁਸੀਂ &lt;span style=&quot; font-weight:600;&quot;&gt;ਇਨਪੁਟ ਢੰਗ&lt;/span&gt; ਜਿਵੇਂ ਕਿ IBus, uim, fcitx, ਜਾਂ gcin ਵਰਤ ਰਹੇ ਹੋ ਤਾਂ ਇਹ ਸੈਟਿੰਗਾਂ &lt;span style=&quot; font-weight:600;&quot;&gt;ਸ਼ਾਇਦ ਕੰਮ ਨਾ ਕਰਨ&lt;/span&gt;, ਕਿਉਂਕਿ ਇਨਪੁੱਟ ਢੰਗ ਇਹਨਾਂ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰ ਦਿੰਦੇ ਹਨ।&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਰਮ</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
