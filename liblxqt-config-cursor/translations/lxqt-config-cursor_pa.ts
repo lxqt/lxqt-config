@@ -36,7 +36,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="230"/>
         <source>XCurTheme error</source>
-        <translation type="unfinished"></translation>
+        <translation>XCurTheme ਗਲਤੀ</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="231"/>

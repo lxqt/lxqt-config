@@ -47,7 +47,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਰਤੋਂਕਾਰ ਇੰਟਰਫੇਸ ਲਈ ਮੂਲ ਫ਼ੋਂਟ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -103,7 +103,7 @@
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="183"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕੋਈ ਨਹੀਂ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੱਧਮ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>ਰੈਜ਼ੋਲੂਸ਼ਨ (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
@@ -143,22 +143,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK ਸਟਾਈਲ</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
@@ -176,12 +176,12 @@
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 ਥੀਮ</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 ਥੀਮ</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -196,12 +196,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ਦਿੱਖ ਸੰਰਚਨਾ</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਈਕਾਨ ਥੀਮ</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -219,7 +219,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ਥੀਮ</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -229,12 +229,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(ਵਰਤੋਂਕਾਰ ਥੀਮ)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>ਥੀਮ ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ</translation>
     </message>
 </context>
 <context>
@@ -248,12 +248,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਿਲਟਰ...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>ਹਟਾਓ(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -261,7 +261,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ਦਿੱਖ ਸੰਰਚਨਾ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
@@ -271,27 +271,27 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="84"/>
         <source>Icons Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਈਕਾਨ ਦਾ ਥੀਮ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="93"/>
         <source>LXQt Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ਥੀਮ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="101"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫ਼ੋਂਟ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="111"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਰਸਰ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK ਸਟਾਈਲ</translation>
     </message>
 </context>
 <context>
@@ -299,7 +299,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿਜੈੱਟ ਸਟਾਈਲ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
@@ -314,42 +314,42 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿੰਡੋ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵੇਖੋ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚੋਣ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲਿੰਕ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="152"/>
         <source>Window Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿੰਡੋ ਲਿਖਤ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="162"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲਿਖਤ ਵੇਖੋ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="172"/>
         <source>Selected Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚੁਣੀ ਲਿਖਤ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="182"/>
         <source>Visited Link:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖੋਲ੍ਹਿਆ ਲਿੰਕ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="214"/>
@@ -394,7 +394,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੂਲ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="292"/>
