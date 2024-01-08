@@ -30,6 +30,8 @@
 #include <QCommandLineParser>
 #include "localeconfig.h"
 
+LXQt::ConfigDialog* dialog;
+
 int main (int argc, char **argv)
 {
     LXQt::SingleApplication app(argc, argv);
@@ -47,7 +49,7 @@ int main (int argc, char **argv)
 
     LXQt::Settings settings(QStringLiteral("lxqt-config-locale"));
     LXQt::Settings session_settings(QStringLiteral("session"));
-    LXQt::ConfigDialog* dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Locale Configuration"), &settings);
+    dialog = new LXQt::ConfigDialog(QObject::tr("LXQt Locale Configuration"), &settings);
 
     app.setActivationWindow(dialog);
 
@@ -57,9 +59,15 @@ int main (int argc, char **argv)
     QObject::connect(dialog, &LXQt::ConfigDialog::clicked, localePage, &LocaleConfig::filterDialogButtonClickedEvent);
 
     dialog->setButtons(QDialogButtonBox::Save | QDialogButtonBox::Close | QDialogButtonBox::Reset);
+    dialog->enableButton(QDialogButtonBox::Save, false);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
     dialog->show();
 
     return app.exec();
+}
+
+void enableSaveButton(bool state)
+{
+	dialog->enableButton(QDialogButtonBox::Save, state);
 }

@@ -43,6 +43,8 @@
 
 #include <algorithm>
 
+extern void enableSaveButton(bool);
+
 const static QString lcLang = QStringLiteral("LANG");
 
 const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
@@ -111,6 +113,7 @@ void LocaleConfig::load()
     {
         updateExample();
         hasChanged = true;
+        enableSaveButton(true);
     });
 
 
@@ -136,6 +139,7 @@ void LocaleConfig::connectCombo(QComboBox *combo)
     {
         hasChanged = true;
         updateExample();
+        enableSaveButton(true);
     });
 }
 
@@ -308,6 +312,7 @@ void LocaleConfig::filterDialogButtonClickedEvent(QDialogButtonBox::StandardButt
 	if (button == QDialogButtonBox::Save)
 	{
 		saveSettings();
+		enableSaveButton(false);
 	}
 }
 
