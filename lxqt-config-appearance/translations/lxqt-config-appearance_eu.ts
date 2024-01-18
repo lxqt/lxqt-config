@@ -133,7 +133,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Iradokizun automatikoa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
@@ -376,7 +376,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bistaratu ikonoa soilik</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>

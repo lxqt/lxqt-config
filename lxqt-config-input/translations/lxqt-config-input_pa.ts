@@ -42,18 +42,18 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਦੁਹਰਾਉਣ ਲਈ ਦੇਰੀ:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <location filename="../keyboardconfig.ui" line="136"/>
         <source>Short</source>
-        <translation type="unfinished"></translation>
+        <translation>ਥੋੜ੍ਹੀ</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਦੁਹਰਾਉਣ ਦਾ ਅੰਤਰਾਲ:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
@@ -140,12 +140,12 @@
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
         <source>&lt;b&gt;Mouse&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;ਮਾਊਸ&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਡਬਲ ਕਲਿੱਕ ਦਾ ਅੰਤਰਾਲ:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -155,17 +155,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵ੍ਹੀਲ ਸਕਰੋਲ ਲਾਈਨਾਂ:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖੱਬੇ ਹੱਥਾ (ਮਾਊਸ ਦੇ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨ ਨੂੰ ਆਪਸ ਵਿੱਚ ਬਦਲੋ)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚੀਜ਼ਾਂ ਨੂੰ ਐਕਟੀਵੇਟ ਕਰਨ ਲਈ ਇਕਹੇਰਾ ਕਲਿੱਕ</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>ਟੱਚਪੈਚ-ਸੰਰਚਨਾ </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਐਕਸਰਲੇਸ਼ਨ ਦੀ ਸਪੀਡ:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕੁਦਰਤੀ ਸਕਰੋਲਿੰਗ</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>
@@ -264,7 +264,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>ਦੋ ਉਂਗਲਾਂ(&amp;T)</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="145"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>ਡਿਵਾਈਸ-ਜਾਣਕਾਰੀ-ਲੇਬਲ</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>

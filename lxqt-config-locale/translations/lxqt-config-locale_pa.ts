@@ -81,12 +81,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="417"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇਪੀਰੀਅਲ UK</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="421"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇਪੀਰੀਅਲ US</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="425"/>

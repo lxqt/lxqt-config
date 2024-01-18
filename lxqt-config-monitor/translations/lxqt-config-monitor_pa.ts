@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੂਲ ਮਾਨੀਟਰ ਸੈਟਿੰਗਾਂ ਨੂੰ ਲਾਗੂ ਕੀਤਾ ਗਿਆ ਹੈ। ਆਪਣੇ ਮਾਨੀਟਰ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਅਡਜੱਸਟ ਕਰਨ ਲਈ lxqt-config-monitor ਨੂੰ ਵਰਤੋਂ।</translation>
     </message>
 </context>
 <context>
@@ -244,7 +244,8 @@
         <location filename="../monitorwidget.cpp" line="134"/>
         <source>EISA device ID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>EISA ਡਿਵਾਈਸ ID: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="154"/>
