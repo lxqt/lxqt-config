@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>Touchpad konfigurazioa </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="102"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Desgaituta</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>

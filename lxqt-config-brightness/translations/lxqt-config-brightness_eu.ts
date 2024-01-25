@@ -22,32 +22,32 @@
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzeko argia</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Distira</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
         <source>Require confirmation after settings change</source>
-        <translation type="unfinished"></translation>
+        <translation>Berrespena eskatu ezarpenak aldatu ondoren</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="112"/>
         <source>Brightness settings changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Distira-ezarpenak aldatu dira</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="113"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation type="unfinished"></translation>
+        <translation>Berrespena beharrezkoa da.  Ezarpenak zuzenak al dira?</translation>
     </message>
 </context>
 <context>
@@ -55,17 +55,17 @@
     <message>
         <location filename="../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Irteera:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="48"/>
         <source>☼</source>
-        <translation type="unfinished"></translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="80"/>
         <source>☀</source>
-        <translation type="unfinished"></translation>
+        <translation>☀</translation>
     </message>
 </context>
 <context>
@@ -73,32 +73,32 @@
     <message>
         <location filename="../main.cpp" line="68"/>
         <source>Increase brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>Handitu distira.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Decrease brightness.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaitsi distira.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezarri distira 1etik 100era.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Berrezarri gamma balio lehenetsira.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Ezin da handitu/gutxiagotu eta ezarri elkarrekin</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: Ezin dira handitzeko eta txikitzeko aukerak batera erabili</translation>
     </message>
 </context>
 </TS>
