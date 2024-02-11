@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="46"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Londa olulyo lw&apos;akasonga lw&apos;oyagala okukozesa (Koona ku linya lya lwo akasonga kateeke awalabika obufaananyi olyoke osobole okulaba bwe kafuuka). &lt;b&gt;Ddamu okutandika olutuula lwa LXQt by&apos;olonze bisobole okukwata&lt;/b&gt;:</translation>
+        <translation>Londa olulyo lw&apos;akasonga lw&apos;oyagala okukozesa (Koona ku linya lya lwo akasonga kateeke awalabika obufaananyi olyoke osobole okulaba bwe kafuuka). &lt;br&gt;&lt;b&gt;Ddamu okutandika olutuula lwa LXQt by&apos;olonze bisobole okukwata&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="23"/>
