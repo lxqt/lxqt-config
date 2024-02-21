@@ -17,7 +17,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ਬੈਕ-ਲਾਈਟ ਅਤੇ ਚਮਕ ਸੈਟਿੰਗਾਂ:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
@@ -83,12 +83,12 @@
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਮਕ ਨੂੰ 1 ਤੋਂ 100 ਤੱਕ ਸੈੱਟ ਕਰੋ।</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation type="unfinished"></translation>
+        <translation>ਗਾਮਾ ਨੂੰ ਮੂਲ ਮੁੱਲ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ।</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>
