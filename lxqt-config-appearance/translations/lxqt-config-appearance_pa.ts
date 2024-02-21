@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>ਗਲਤੀ: gsettings ਨੂੰ ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪੁਆਇੰਟ ਆਕਾਰ:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>ਗੂੜ੍ਹਾ ਤਿਰਛਾ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>ਹਲਕਾ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
@@ -118,12 +118,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪੂਰਾ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫ਼ੌਂਟ ਹਿੰਟਿੰਗ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਟੋ-ਹਿੰਟ</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
@@ -224,7 +224,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>ਥੀਮ ਵਲੋਂ ਦਿੱਤੇ ਵਾਲਪੇਪਰ ਵਰਤੋਂ</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
@@ -266,7 +266,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="75"/>
         <source>Widget Style</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿਜੈਟ ਸਟਾਈਲ</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="84"/>
@@ -369,27 +369,27 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਟੂਲਬਾਰ ਬਟਨ ਸਟਾਈਲ:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਿਰਫ਼ ਆਈਕਾਨ ਹੀ ਵੇਖਾਓ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਿਰਫ਼ ਲਿਖਤ ਹੀ ਵੇਖਾਓ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਈਕਾਨ ਦੇ ਨਾਲ ਲਿਖਤ ਦਿਸਦੀ ਹੈ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਈਕਾਨ ਦੇ ਹੇਠਾਂ ਲਿਖਤ ਦਿਸਦੀ ਹੈ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
@@ -399,7 +399,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇੱਕ ਵਾਰ ਕਲਿਕੱ ਕਰਨ ਨਾਲ ਚੀਜ਼ ਨੂੰ ਸਰਗਰਮ ਰੋ</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
