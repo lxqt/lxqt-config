@@ -81,9 +81,7 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
     connect(ui.settingsButton, &QToolButton::clicked, this, &MonitorSettingsDialog::showSettingsDialog);
 }
 
-MonitorSettingsDialog::~MonitorSettingsDialog()
-{
-}
+MonitorSettingsDialog::~MonitorSettingsDialog() = default;
 
 void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 {

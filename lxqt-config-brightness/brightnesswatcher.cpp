@@ -27,9 +27,7 @@ BrightnessWatcher::BrightnessWatcher(QObject *parent)
 {
 }
 
-BrightnessWatcher::~BrightnessWatcher()
-{
-}
+BrightnessWatcher::~BrightnessWatcher() = default;
 
 void BrightnessWatcher::changed(int /*brightness*/)
 {

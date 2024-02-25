@@ -184,7 +184,6 @@ int naturalCompare(const QString &_a, const QString &_b, Qt::CaseSensitivity cas
 QCategorizedSortFilterProxyModel::QCategorizedSortFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private())
-
 {
 }
 

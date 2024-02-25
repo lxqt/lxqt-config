@@ -28,9 +28,7 @@
 
 #include "mimetypedata.h"
 
-MimeTypeData::MimeTypeData()
-{
-}
+MimeTypeData::MimeTypeData() = default;
 
 
 MimeTypeData::MimeTypeData(const XdgMimeType& mime)

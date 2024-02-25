@@ -274,16 +274,16 @@ QString XCursorTheme::findCursorFile (const QDir &dir, const char *name) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-XCursorTheme::XCursorTheme () :
-  mName(QLatin1String("")), mPath(QLatin1String("")), mTitle(QLatin1String("")), mAuthor(QLatin1String("")), mLicense(QLatin1String("")),
-  mEMail(QLatin1String("")), mSite(QLatin1String("")), mDescr(QLatin1String("")), mIM(QLatin1String("")), mSample(QStringLiteral("left_ptr"))
+XCursorTheme::XCursorTheme ()
+    : mName(QLatin1String("")), mPath(QLatin1String("")), mTitle(QLatin1String("")), mAuthor(QLatin1String("")), mLicense(QLatin1String("")),
+      mEMail(QLatin1String("")), mSite(QLatin1String("")), mDescr(QLatin1String("")), mIM(QLatin1String("")), mSample(QStringLiteral("left_ptr"))
 {
 }
 
 
-XCursorTheme::XCursorTheme (const QDir &aDir, const QString &aName) :
-  mName(aName), mPath(aDir.path()), mTitle(QLatin1String("")), mAuthor(QLatin1String("")), mLicense(QLatin1String("")),
-  mEMail(QLatin1String("")), mSite(QLatin1String("")), mDescr(QLatin1String("")), mIM(QLatin1String("")), mSample(QStringLiteral("left_ptr"))
+XCursorTheme::XCursorTheme (const QDir &aDir, const QString &aName)
+    : mName(aName), mPath(aDir.path()), mTitle(QLatin1String("")), mAuthor(QLatin1String("")), mLicense(QLatin1String("")),
+      mEMail(QLatin1String("")), mSite(QLatin1String("")), mDescr(QLatin1String("")), mIM(QLatin1String("")), mSample(QStringLiteral("left_ptr"))
 {
   parseXCursorTheme(aDir);
 }

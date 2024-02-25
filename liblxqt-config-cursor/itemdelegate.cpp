@@ -33,14 +33,12 @@ namespace {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-ItemDelegate::ItemDelegate(QObject *parent) : QAbstractItemDelegate(parent)
+ItemDelegate::ItemDelegate(QObject *parent)
+    : QAbstractItemDelegate(parent)
 {
 }
 
-
-ItemDelegate::~ItemDelegate()
-{
-}
+ItemDelegate::~ItemDelegate() = default;
 
 QString ItemDelegate::firstLine(const QModelIndex &index) const
 {

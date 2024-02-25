@@ -203,9 +203,7 @@ QCategoryDrawerV2::QCategoryDrawerV2(QObject *parent)
 {
 }
 
-QCategoryDrawerV2::~QCategoryDrawerV2()
-{
-}
+QCategoryDrawerV2::~QCategoryDrawerV2() = default;
 
 void QCategoryDrawerV2::mouseButtonPressed(const QModelIndex&, QMouseEvent *event)
 {

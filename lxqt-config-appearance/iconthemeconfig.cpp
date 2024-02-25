@@ -133,9 +133,7 @@ void IconThemeConfig::initControls()
 }
 
 
-IconThemeConfig::~IconThemeConfig()
-{
-}
+IconThemeConfig::~IconThemeConfig() = default;
 
 
 void IconThemeConfig::applyIconTheme()

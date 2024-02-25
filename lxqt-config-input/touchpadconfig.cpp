@@ -50,9 +50,7 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     connect(ui.buttonScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
 }
 
-TouchpadConfig::~TouchpadConfig()
-{
-}
+TouchpadConfig::~TouchpadConfig() = default;
 
 void TouchpadConfig::initFeatureControl(QCheckBox* control, int featureEnabled)
 {

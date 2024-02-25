@@ -30,14 +30,12 @@
  */
 
 
-MimetypeItemModel::MimetypeItemModel(QObject *parent) :
-QAbstractItemModel(parent)
+MimetypeItemModel::MimetypeItemModel(QObject *parent)
+    : QAbstractItemModel(parent)
 {
 }
 
-MimetypeItemModel::~MimetypeItemModel()
-{
-}
+MimetypeItemModel::~MimetypeItemModel() = default;
 
 QVariant MimetypeItemModel::data(const QModelIndex& index, int role) const
 {
@@ -143,8 +141,8 @@ int MimetypeItemModel::rowCount(const QModelIndex& parent) const
 }
 
 
-MimetypeFilterItemModel::MimetypeFilterItemModel(QObject* parent) :
-    QSortFilterProxyModel(parent)
+MimetypeFilterItemModel::MimetypeFilterItemModel(QObject* parent)
+    : QSortFilterProxyModel(parent)
 {
 }
 

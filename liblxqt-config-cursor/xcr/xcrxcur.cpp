@@ -78,8 +78,7 @@ XCursorImageXCur::XCursorImageXCur (const QString &aName, const void *aImgData) 
 }
 
 
-XCursorImageXCur::~XCursorImageXCur () {
-}
+XCursorImageXCur::~XCursorImageXCur () = default;
 
 
 void XCursorImageXCur::parseImgData (const void *aImgData) {

@@ -44,9 +44,7 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
     connect(ui.comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &FastMenu::onSeleccionChanged);
 }
 
-FastMenu::~FastMenu()
-{
-}
+FastMenu::~FastMenu() = default;
 
 static bool sizeBiggerThan(const QSize &sizeA, const QSize &sizeB)
 {

@@ -38,9 +38,7 @@ TimeoutDialog::TimeoutDialog(QWidget* parent, Qt::WindowFlags f) :
     adjustSize();
 }
 
-TimeoutDialog::~TimeoutDialog()
-{
-}
+TimeoutDialog::~TimeoutDialog() = default;
 
 void TimeoutDialog::showEvent(QShowEvent* e)
 {

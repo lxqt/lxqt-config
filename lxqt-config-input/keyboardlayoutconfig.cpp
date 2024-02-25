@@ -50,8 +50,7 @@ KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* p
   });
 }
 
-KeyboardLayoutConfig::~KeyboardLayoutConfig() {
-}
+KeyboardLayoutConfig::~KeyboardLayoutConfig() = default;
 
 void KeyboardLayoutConfig::loadSettings() {
   // load current settings from the output of setxkbmap command

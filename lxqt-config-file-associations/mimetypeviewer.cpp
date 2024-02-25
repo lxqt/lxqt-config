@@ -218,9 +218,7 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
     });
 }
 
-MimetypeViewer::~MimetypeViewer()
-{
-}
+MimetypeViewer::~MimetypeViewer() = default;
 
 void MimetypeViewer::addSearchIcon()
 {

@@ -180,9 +180,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     onBehaviorChanged(ui.behaviorCombo->currentIndex());
 }
 
-MonitorWidget::~MonitorWidget()
-{
-}
+MonitorWidget::~MonitorWidget() = default;
 
 void MonitorWidget::onEnabledChanged(bool enabled)
 {

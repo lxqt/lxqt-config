@@ -61,8 +61,7 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   connect(ui.singleClick, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
 }
 
-MouseConfig::~MouseConfig() {
-}
+MouseConfig::~MouseConfig() = default;
 
 void MouseConfig::initControls() {
   ui.mouseLeftHanded->setChecked(leftHanded);
