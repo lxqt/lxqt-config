@@ -96,10 +96,11 @@ set org.gnome.desktop.interface cursor-size "%7"
  * GTK just doesn't intend to support image menu items. They're considered bad practice in modern UI.
  */
 
-ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
+ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent)
+    : QObject(parent)
+    , mSettings(settings)
+    , mConfigAppearanceSettings(configAppearanceSettings)
 {
-    mSettings = settings;
-    mConfigAppearanceSettings = configAppearanceSettings;
     if(tempFile.open()) {
         mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
         mXsettingsdProc.start(QStringLiteral("xsettingsd"), QStringList() << QStringLiteral("-c") << tempFile.fileName());

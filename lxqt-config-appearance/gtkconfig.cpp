@@ -27,12 +27,12 @@
 #include "ui_gtkconfig.h"
 #include <QDebug>
 
-GTKConfig::GTKConfig(LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent) :
-    QWidget(parent),
-    ui(new Ui::GTKConfig)
+GTKConfig::GTKConfig(LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent)
+    : QWidget(parent)
+    , ui(new Ui::GTKConfig)
+    , mConfigAppearanceSettings(configAppearanceSettings)
+    , mConfigOtherToolKits(configOtherToolKits)
 {
-    mConfigAppearanceSettings = configAppearanceSettings;
-    mConfigOtherToolKits = configOtherToolKits;
     ui->setupUi(this);
 
     initControls();

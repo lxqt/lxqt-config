@@ -26,10 +26,11 @@
 #include "selectkeyboardlayoutdialog.h"
 #include <LXQt/Settings>
 
-KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent):
-  QWidget(parent),
-  settings(_settings),
-  applyConfig_(false) {
+KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent)
+    : QWidget(parent)
+    , settings(_settings)
+    , applyConfig_(false)
+{
   ui.setupUi(this);
 
   loadLists();

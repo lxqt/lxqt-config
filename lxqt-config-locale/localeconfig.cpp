@@ -54,14 +54,12 @@ const static QString lcCtype = QStringLiteral("LC_CTYPE");
 
 const static QString lcLanguage = QStringLiteral("LANGUAGE");
 
-LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_settings, QWidget* parent) :
-    QWidget(parent),
-    m_ui(new Ui::LocaleConfig),
-    hasChanged(new bool),
-    mSettings(settings),
-    sSettings(session_settings)
-
-
+LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_settings, QWidget* parent)
+    : QWidget(parent)
+    , m_ui(new Ui::LocaleConfig)
+    , hasChanged(new bool)
+    , mSettings(settings)
+    , sSettings(session_settings)
 {
     m_ui->setupUi(this);
     m_combos << m_ui->comboGlobal

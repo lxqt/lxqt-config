@@ -29,13 +29,11 @@
 Q_DECLARE_METATYPE(MonitorSavedSettings)
 
 
-ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  KScreen::ConfigPtr config, QWidget * parent):
-    QDialog(parent)
+ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  KScreen::ConfigPtr config, QWidget * parent)
+    : QDialog(parent)
+    , applicationSettings(applicationSettings)
+    , config(config)
 {
-
-    this->applicationSettings = applicationSettings;
-    this->config = config;
-
     ui.setupUi(this);
 
     connect(ui.allConfigs,       &QListWidget::itemSelectionChanged, this, &ManageSavedSettings::showSelectedConfig);

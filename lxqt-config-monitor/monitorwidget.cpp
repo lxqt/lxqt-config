@@ -60,12 +60,11 @@ static bool sizeBiggerThan(const KScreen::ModePtr &modeA, const KScreen::ModePtr
 }
 
 
-MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent) :
-    QGroupBox(parent)
+MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr config, QWidget* parent)
+    : QGroupBox(parent)
+    , output(output)
+    , config(config)
 {
-    this->output = output;
-    this->config = config;
-
     ui.setupUi(this);
 
     ui.enabledCheckbox->setChecked(output->isEnabled());

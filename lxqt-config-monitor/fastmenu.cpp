@@ -33,12 +33,11 @@ enum Options
     None=0, Extended=1, Unified=2, OnlyFirst=3, OnlySecond=4
 };
 
-FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
-    QGroupBox(parent)
+FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent)
+    : QGroupBox(parent)
+    , mConfig(config)
+    , mOldConfig(mConfig->clone())
 {
-    this->mConfig = config;
-    this->mOldConfig = mConfig->clone();
-
     ui.setupUi(this);
 
     connect(ui.comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &FastMenu::onSeleccionChanged);

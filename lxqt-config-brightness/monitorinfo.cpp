@@ -19,21 +19,21 @@
 #include "monitorinfo.h"
 
 MonitorInfo::MonitorInfo(int id, QString name, long backlightMax)
-    : mBacklightMax(backlightMax),
-      mBacklight(-1),
-      mBrightness(-1.0f),
-      mName(name),
-      mId(id)
+    : mBacklightMax(backlightMax)
+    , mBacklight(-1)
+    , mBrightness(-1.0f)
+    , mName(name)
+    , mId(id)
 {
 }
 
 MonitorInfo::MonitorInfo(const MonitorInfo &monitor)
+    : mBacklightMax(monitor.mBacklightMax)
+    , mBacklight(monitor.mBacklight)
+    , mBrightness(monitor.mBrightness)
+    , mName(monitor.mName)
+    , mId(monitor.mId)
 {
-    mId = monitor.mId;
-    mName = monitor.mName;
-    mBacklightMax = monitor.mBacklightMax;
-    mBacklight = monitor.mBacklight;
-    mBrightness = monitor.mBrightness;
 }
 
 bool MonitorInfo::isBacklightSupported() const

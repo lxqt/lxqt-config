@@ -42,9 +42,10 @@ static QSize sizeFromString(QString str)
     return QSize(width, height);
 }
 
-MonitorPictureProxy::MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture):QObject(parent)
+MonitorPictureProxy::MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture)
+    : QObject(parent)
+    , monitorPicture(monitorPicture)
 {
-    this->monitorPicture = monitorPicture;
 }
 
 void MonitorPictureProxy::updateSize()
@@ -62,13 +63,13 @@ void MonitorPictureProxy::updatePosition()
     monitorPicture->setMonitorPosition(pos.x(), pos.y());
 }
 
-MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent, Qt::WindowFlags f) :
-    QDialog(parent,f)
+MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent, Qt::WindowFlags f)
+    : QDialog(parent, f)
+    , updatingOk(false)
+    , mConfig(config)
+    , firstShownOk(false)
+    , maxMonitorSize(0)
 {
-    updatingOk = false;
-    firstShownOk = false;
-    maxMonitorSize = 0;
-    mConfig = config;
     ui.setupUi(this);
 }
 
@@ -163,11 +164,11 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
 
 MonitorPicture::MonitorPicture(QGraphicsItem * parent,
                                MonitorWidget *monitorWidget,
-                               MonitorPictureDialog *monitorPictureDialog) :
-    QGraphicsRectItem(parent)
+                               MonitorPictureDialog *monitorPictureDialog)
+    : QGraphicsRectItem(parent)
+    , monitorWidget(monitorWidget)
+    , monitorPictureDialog(monitorPictureDialog)
 {
-    this->monitorWidget = monitorWidget;
-    this->monitorPictureDialog = monitorPictureDialog;
     QSize currentSize = sizeFromString(monitorWidget->ui.resolutionCombo->currentText());
     if( monitorWidget->output->rotation() == KScreen::Output::Left || monitorWidget->output->rotation() == KScreen::Output::Right )
         currentSize.transpose();

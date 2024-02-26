@@ -31,20 +31,21 @@
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 
-KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent):
-  QWidget(parent),
-  settings(_settings),
-  qtSettings(_qtSettings),
-  delay(500),
-  oldDelay(500),
-  interval(30),
-  oldInterval(30),
-  flashTime(1000),
-  oldFlashTime(1000),
-  beep(true),
-  oldBeep(true),
-  numlock(false),
-  oldNumlock(false) {
+KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWidget* parent)
+    : QWidget(parent)
+    , settings(_settings)
+    , qtSettings(_qtSettings)
+    , delay(500)
+    , oldDelay(500)
+    , interval(30)
+    , oldInterval(30)
+    , flashTime(1000)
+    , oldFlashTime(1000)
+    , beep(true)
+    , oldBeep(true)
+    , numlock(false)
+    , oldNumlock(false)
+{
 
   ui.setupUi(this);
 
