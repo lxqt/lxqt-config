@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formularz</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation>Konfiguracja Touchpada </translation>
+        <translation>Konfiguracja touchpada </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Tap to click</source>
-        <translation>Dotknij aby kliknąć</translation>
+        <translation>Dotknij, aby kliknąć</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
@@ -292,8 +292,8 @@ Otherwise you can get rid of this message by changing xinput driver to &quot;lib
         <translation>LXQt wspiera tylko &quot;libinput&quot; jako sterownik xinput.
 (aktualna wartość: %1)
 
-Jeśli jest taka potrzeba skonfiguruj xinput ręcznie.
-W przeciwnym razie możesz pozbyć się tej wiadomości zmieniając sterownik xinput na &quot;libinput&quot;.
+Jeśli jest taka potrzeba, skonfiguruj xinput ręcznie.
+W przeciwnym razie możesz pozbyć się tego komunikatu, zmieniając sterownik xinput na &quot;libinput&quot;.
 </translation>
     </message>
 </context>

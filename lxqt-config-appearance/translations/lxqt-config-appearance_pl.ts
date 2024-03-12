@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>Kliknij aby zmienić kolor.</translation>
+        <translation>Kliknij, aby zmienić kolor.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Poniższe ustawienia dotyczą tylko nowo otwartych aplikacji</translation>
+        <translation>Poniższe ustawienia dotyczą tylko nowo otwartych programów</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -190,7 +190,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>Aby uzyskać jednolity wygląd wybierz podobny styl/motyw (jeżeli jest dostępny) z listy, lub wybierz styl Qt „gtk2&quot; (jeżeli jest dostępny), aby udawać motywy GTK.
 
-Upewnij się, że „xsettingsd” jest zainstalowany, aby aplikacje GTK zmieniały motyw natychmiastowo.</translation>
+Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmieniały motyw natychmiastowo.</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby aplikacje GTK zmienia
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation>(Motyw Użytkownika)</translation>
+        <translation>(Motyw użytkownika)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
