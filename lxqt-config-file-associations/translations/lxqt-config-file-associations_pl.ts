@@ -57,7 +57,7 @@
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation>Inne aplikacje obsługujące %1</translation>
+        <translation>Inne programy obsługujące %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation>Nie znaleziono więcej aplikacji</translation>
+        <translation>Nie znaleziono więcej programów</translation>
     </message>
 </context>
 <context>
@@ -137,7 +137,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation>Domyślne Aplikacje</translation>
+        <translation>Domyślne programy</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>

@@ -16,7 +16,7 @@
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ Połączony widok</translation>
+        <translation> ❶ ❶ Widok połączony</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
