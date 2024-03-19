@@ -309,7 +309,7 @@ protected:
       */
     void dataChanged(const QModelIndex &topLeft,
                              const QModelIndex &bottomRight,
-                             const QVector<int> & roles = QVector<int> ()) override;
+                             const QList<int> & roles = QList<int> ()) override;
 
     /**
       * Reimplemented from QAbstractItemView.
