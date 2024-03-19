@@ -127,8 +127,8 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         }
     }
 
-    for(const MonitorWidget *monitor1 : qAsConst(monitors)) {
-        for(const MonitorWidget *monitor : qAsConst(monitors)) {
+    for(const MonitorWidget *monitor1 : std::as_const(monitors)) {
+        for(const MonitorWidget *monitor : std::as_const(monitors)) {
             if(monitor != monitor1)
                 connect(monitor, &MonitorWidget::primaryOutputChanged, monitor1, &MonitorWidget::onPrimaryOutputChanged);
         }

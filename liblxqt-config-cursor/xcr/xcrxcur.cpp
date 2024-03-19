@@ -15,10 +15,7 @@
 #include <QApplication>
 #include <QStringList>
 #include <QStyle>
-#include <QTextCodec>
 #include <QTextStream>
-
-#include <QX11Info>
 
 
 #include <X11/Xlib.h>

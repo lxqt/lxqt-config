@@ -130,7 +130,6 @@ static CommandLineParseResult parseCommandLine(QCommandLineParser *parser, Brigh
 int main(int argn, char* argv[])
 {
     LXQt::SingleApplication app(argn, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     const QString VERINFO = QStringLiteral(LXQT_CONFIG_VERSION
                                            "\nliblxqt   " LXQT_VERSION

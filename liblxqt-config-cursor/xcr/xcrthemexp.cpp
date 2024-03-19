@@ -181,13 +181,13 @@ static void removeFilesAndDirs (QDir &dir) {
   //qDebug() << "dir:" << dir.path();
   // files
   QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
-  for (const QFileInfo &fi : qAsConst(lst)) {
+  for (const QFileInfo &fi : std::as_const(lst)) {
     //qDebug() << "removing" << fi.fileName() << fi.absoluteFilePath();
     dir.remove(fi.fileName());
   }
   // dirs
   lst = dir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot | QDir::Hidden);
-  for (const QFileInfo &fi : qAsConst(lst)) {
+  for (const QFileInfo &fi : std::as_const(lst)) {
     dir.cd(fi.fileName());
     removeFilesAndDirs(dir);
     dir.cd(QStringLiteral(".."));
@@ -271,7 +271,6 @@ bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
   if (!fl.open(QIODevice::ReadOnly)) return false; // no scheme --> no fun!
   QTextStream stream;
   stream.setDevice(&fl);
-  stream.setCodec("UTF-8");
   CursorInfo info;
   QSet<QString> sectionsSeen;
   bool eof = false;
@@ -316,7 +315,7 @@ bool XCursorThemeXP::parseCursorXPTheme (const QDir &thDir) {
        qDebug() << "frameWdt:" << frameWdt << "left:" << img.width()%(frameWdt*info.frameCnt);
         // now build animation sequence
         int fCnt = 0;
-        for (const XCursorThemeFX::tAnimSeq &a : qAsConst(aseq)) {
+        for (const XCursorThemeFX::tAnimSeq &a : std::as_const(aseq)) {
           bool back = a.from > a.to; // going backwards
           quint32 fNo = a.from;
           for (;; fCnt++) {

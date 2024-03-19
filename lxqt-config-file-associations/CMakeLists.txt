@@ -57,9 +57,9 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    Qt5::Xml
-    Qt5::DBus
-    Qt5::Widgets
+    Qt6::Xml
+    Qt6::DBus
+    Qt6::Widgets
     ${LIBRARIES}
 )
 

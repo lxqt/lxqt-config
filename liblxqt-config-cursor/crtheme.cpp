@@ -25,7 +25,6 @@
 #include "xcr/xcrimg.h"
 
 #include <QStyle>
-#include <QX11Info>
 #include <QSettings>
 #include "cfgfile.h"
 
@@ -190,7 +189,13 @@ unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) 
 
     unsigned long handle = 0;
     if(QGuiApplication::platformName() == QStringLiteral("xcb"))
-        handle = (unsigned long)XcursorImagesLoadCursor(QX11Info::display(), images);
+    {
+        if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
+        {
+            if (Display *dpy = x11NativeInterface->display())
+                handle = (unsigned long)XcursorImagesLoadCursor(dpy, images);
+        }
+    }
     XcursorImagesDestroy(images);
     //setCursorName(cursor, name);
     return handle;
@@ -225,18 +230,24 @@ bool haveXfixes()
     bool result = false;
     int event_base, error_base;
 
-    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
+    if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
     {
-        int major, minor;
-        XFixesQueryVersion(QX11Info::display(), &major, &minor);
-        result = (major >= 2);
+        if (Display *dpy = x11NativeInterface->display())
+        {
+            if (XFixesQueryExtension(dpy, &event_base, &error_base))
+            {
+                int major, minor;
+                XFixesQueryVersion(dpy, &major, &minor);
+                result = (major >= 2);
+            }
+        }
     }
     return result;
 }
 
 bool applyTheme(const XCursorThemeData &theme, int cursorSize)
 {
-    bool isX11 = QGuiApplication::platformName() == QStringLiteral("xcb"); 
+    bool isX11 = QGuiApplication::platformName() == QStringLiteral("xcb");
     if(isX11)
     {
         // Require the Xcursor version that shipped with X11R6.9 or greater, since
@@ -245,7 +256,11 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
         if (!haveXfixes()) return false;
 
         // Sets default cursor size
-        XcursorSetDefaultSize(QX11Info::display(), cursorSize);
+        if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
+        {
+            if (Display *dpy = x11NativeInterface->display())
+                XcursorSetDefaultSize(dpy, cursorSize);
+        }
     }
     // Set up the proper launch environment for newly started apps
     //k8:!!!:KToolInvocation::klauncher()->setLaunchEnv("XCURSOR_THEME", themeName);
@@ -271,12 +286,17 @@ bool applyTheme(const XCursorThemeData &theme, int cursorSize)
           << QStringLiteral("bottom_left_corner")  << QStringLiteral("left_side")           << QStringLiteral("question_arrow")
           << QStringLiteral("pirate");
 
-    //QX11Info x11Info;
-    for (const QString &name : qAsConst(names))
+    for (const QString &name : std::as_const(names))
     {
         Cursor cursor = (Cursor)theme.loadCursorHandle(name);
         if(isX11)
-            XFixesChangeCursorByName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
+        {
+            if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
+            {
+                if (Display *dpy = x11NativeInterface->display())
+                    XFixesChangeCursorByName(dpy, cursor, QFile::encodeName(name).constData());
+            }
+        }
         // FIXME: do we need to free the cursor?
     }
     return true;
@@ -286,7 +306,7 @@ QString getCurrentTheme()
 {
     // Wayland cursor theme
     if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
-        QString name, inherits; 
+        QString name, inherits;
         QString path = QDir::home().absolutePath() + QStringLiteral("/.icons/default/index.theme");
         if(! QFile::exists(path))
             path = QStringLiteral("/usr/share/icons/default/index.theme");
@@ -302,5 +322,10 @@ QString getCurrentTheme()
             return name;
     }
     // X11 cursor theme
-    return QString::fromUtf8(XcursorGetTheme(QX11Info::display()));
+    if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
+    {
+        if (Display *dpy = x11NativeInterface->display())
+            return QString::fromUtf8(XcursorGetTheme(dpy));
+    }
+    return QString();
 }

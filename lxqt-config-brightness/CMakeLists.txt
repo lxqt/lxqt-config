@@ -1,10 +1,9 @@
 project(lxqt-config-brightness)
 
-find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
-find_package(Qt5X11Extras ${QT_MINIMUM_VERSION} REQUIRED)
-find_package(XCB REQUIRED xcb xcb-randr)
+find_package(Qt6Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(XCB REQUIRED XCB RANDR)
 
-set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
+set(QTX_LIBRARIES Qt6::Widgets)
 
 
 include_directories (
@@ -33,7 +32,7 @@ set(UI_FILES
     outputwidget.ui
 )
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
+qt6_wrap_ui(UI_HEADERS ${UI_FILES})
 
 
 # Translations **********************************
@@ -72,4 +71,4 @@ install(
     FILES icons/brightnesssettings.svg
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps"
 )
-    
+

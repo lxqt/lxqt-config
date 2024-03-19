@@ -15,10 +15,8 @@
 #include <QPaintEngine>
 #include <QStringList>
 #include <QStyle>
-#include <QTextCodec>
 #include <QTextStream>
 #include <QSettings>
-#include <QX11Info>
 #include <QString>
 
 
@@ -193,7 +191,7 @@ QByteArray XCursorImages::genXCursor () const {
   baPutDW(res, 65536); // version number
   // TOC
   quint32 cnt = 0;
-  for (const XCursorImage *i : qAsConst(mList)) if (i->xcurSize() > 0) cnt++;
+  for (const XCursorImage *i : std::as_const(mList)) if (i->xcurSize() > 0) cnt++;
   // 'credits'
   for (int f = 0; f < 7; f++) if (!crdBA[f].isEmpty()) cnt++;
   //
@@ -209,7 +207,7 @@ QByteArray XCursorImages::genXCursor () const {
     dataOfs += crdBA[f].size()+20;
   }
   // add image chunks
-  for (const XCursorImage *i : qAsConst(mList)) {
+  for (const XCursorImage *i : std::as_const(mList)) {
     quint32 isz = i->xcurSize();
     if (!isz) continue;
     baPutDW(res, 0xfffd0002); // entry type
@@ -228,7 +226,7 @@ QByteArray XCursorImages::genXCursor () const {
     res.append(crdBA[f]);
   }
   // images
-  for (const XCursorImage *i : qAsConst(mList)) {
+  for (const XCursorImage *i : std::as_const(mList)) {
     quint32 isz = i->xcurSize();
     if (!isz) continue;
     i->genXCursorImg(res);
@@ -239,7 +237,7 @@ QByteArray XCursorImages::genXCursor () const {
 
 QImage XCursorImages::buildImage () const {
   int width = 0, height = 0, cnt = 0;
-  for (const XCursorImage *i : qAsConst(mList)) {
+  for (const XCursorImage *i : std::as_const(mList)) {
     if (i->xcurSize() > 0) {
       QImage img = i->image();
       width = qMax(width, img.width());
@@ -252,7 +250,7 @@ QImage XCursorImages::buildImage () const {
   QImage res(width*cnt, height, QImage::Format_ARGB32);
   QPainter p(&res);
   int x = 0;
-  for (const XCursorImage *i : qAsConst(mList)) {
+  for (const XCursorImage *i : std::as_const(mList)) {
     if (i->xcurSize() > 0) {
       QImage img = i->image();
       p.drawImage(QPoint(x, 0), img);
@@ -266,8 +264,12 @@ QImage XCursorImages::buildImage () const {
 int getDefaultCursorSize()
 {
     int size = 24; // Default size
-    if(QGuiApplication::platformName() == QStringLiteral("xcb"))
-        size = XcursorGetDefaultSize(QX11Info::display());
+    if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
+        if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+            if (Display* dpy = x11NativeInterface->display())
+                size = XcursorGetDefaultSize(dpy);
+        }
+    }
     else {
         // Wayland: get default cursor size
         QString path = QDir::home().absolutePath() + QStringLiteral("/.icons/default/index.theme");

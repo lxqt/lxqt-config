@@ -22,7 +22,6 @@ QMultiMap<QString, QString> loadCfgFile(const QString &fname, bool forceLoCase)
     {
         QTextStream stream;
         stream.setDevice(&fl);
-        stream.setCodec("UTF-8");
         QString curPath = QStringLiteral("/");
         while (1)
         {
@@ -85,7 +84,7 @@ static inline void setXcursorInFile(const QString &fileName, const QString &them
         if (fl.open(QIODevice::WriteOnly))
         {
             QTextStream stream(&fl);
-            for (const QString &s : qAsConst(lst))
+            for (const QString &s : std::as_const(lst))
             {
                 stream << s << "\n";
             }

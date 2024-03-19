@@ -92,9 +92,9 @@ int naturalCompare(const QString &_a, const QString &_b, Qt::CaseSensitivity cas
         }
 
         // compare these sequences
-        const QStringRef& subA(a.midRef(begSeqA - a.unicode(), currA - begSeqA));
-        const QStringRef& subB(b.midRef(begSeqB - b.unicode(), currB - begSeqB));
-        const int cmp = QStringRef::localeAwareCompare(subA, subB);
+        const QStringView subA(a.mid(begSeqA - a.unicode(), currA - begSeqA));
+        const QStringView subB(b.mid(begSeqB - b.unicode(), currB - begSeqB));
+        const int cmp = subA.localeAwareCompare(subB);
         if (cmp != 0) {
             return cmp < 0 ? -1 : +1;
         }
@@ -276,9 +276,9 @@ int QCategorizedSortFilterProxyModel::compareCategories(const QModelIndex &left,
 
     Q_ASSERT(l.isValid());
     Q_ASSERT(r.isValid());
-    Q_ASSERT(l.type() == r.type());
+    Q_ASSERT(l.typeId() == r.typeId());
 
-    if (l.type() == QVariant::String)
+    if (l.typeId() == QVariant::String)
     {
         QString lstr = l.toString();
         QString rstr = r.toString();

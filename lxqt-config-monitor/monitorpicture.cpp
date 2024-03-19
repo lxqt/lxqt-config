@@ -36,8 +36,8 @@ static QSize sizeFromString(QString str)
     int height = 0;
     int x = str.indexOf(QLatin1Char('x'));
     if (x > 0) {
-        width = str.leftRef(x).toInt();
-        height = str.midRef(x + 1).toInt();
+        width = str.first(x).toInt();
+        height = str.last(str.size() - x - 1).toInt();
     }
     return QSize(width, height);
 }
@@ -127,7 +127,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
     int x0, y0;
     x0 = y0 = 0;
 
-    for (MonitorPicture *picture : qAsConst(pictures)) {
+    for (MonitorPicture *picture : std::as_const(pictures)) {
         if (picture->monitorWidget->output->name() == primaryMonitor
                 || primaryMonitor == QLatin1String()) {
             x0 = picture->originX + picture->pos().x();
@@ -137,7 +137,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
     }
 
     if( primaryMonitor == QLatin1String() ) {
-        for(MonitorPicture *picture : qAsConst(pictures)) {
+        for(MonitorPicture *picture : std::as_const(pictures)) {
             int x1 = picture->originX + picture->pos().x();
             int y1 = picture->originY + picture->pos().y();
             x0 = qMin(x0, x1);
@@ -145,7 +145,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
         }
     }
 
-    for (MonitorPicture *picture : qAsConst(pictures)) {
+    for (MonitorPicture *picture : std::as_const(pictures)) {
         int x = picture->originX + picture->pos().x() - x0;
         int y = picture->originY + picture->pos().y() - y0;
         if( x != picture->monitorWidget->ui.xPosSpinBox->value() )
@@ -369,7 +369,7 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
 
 
     QVector2D vector(0, 0);
-    for (MonitorPicture *picture : qAsConst(pictures)) {
+    for (MonitorPicture *picture : std::as_const(pictures)) {
         if (picture == monitorPicture)
             continue;
 

@@ -1,7 +1,7 @@
 project(lxqt-config-cursor)
 
 find_package(X11 REQUIRED)
-find_package(XCB REQUIRED xcb)
+find_package(XCB REQUIRED XCB)
 include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})
 
@@ -65,9 +65,8 @@ add_library(lxqt-config-cursor
 )
 
 target_link_libraries(lxqt-config-cursor
-    Qt5::X11Extras
-    Qt5::DBus
-    Qt5::Xml
+    Qt6::DBus
+    Qt6::Xml
     ${X11_X11_LIB}
     ${X11_Xcursor_LIB}
     lxqt

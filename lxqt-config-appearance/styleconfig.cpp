@@ -120,42 +120,42 @@ void StyleConfig::initControls()
     // palette
     mSettings->beginGroup(QLatin1String("Palette"));
     QColor color;
-    color.setNamedColor(mSettings->value(QStringLiteral("window_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("window_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
     ui->winColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("base_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("base_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::Base);
     ui->baseColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("highlight_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("highlight_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::Highlight);
     ui->highlightColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("window_text_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("window_text_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::WindowText);
     ui->windowTextColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("text_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("text_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::Text);
     ui->viewTextColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::HighlightedText);
     ui->highlightedTextColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("link_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("link_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::Link);
     ui->linkColorLabel->setColor(color);
 
-    color.setNamedColor(mSettings->value(QStringLiteral("link_visited_color")).toString());
+    color = QColor::fromString(mSettings->value(QStringLiteral("link_visited_color")).toString());
     if (!color.isValid())
         color = QGuiApplication::palette().color(QPalette::Active,QPalette::LinkVisited);
     ui->linkVisitedColorLabel->setColor(color);
@@ -178,42 +178,42 @@ void StyleConfig::applyStyle()
     mSettings->beginGroup(QLatin1String("Palette"));
     QColor color = ui->winColorLabel->getColor();
     QColor oldColor;
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("window_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("window_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("window_color"), color.name());
 
     color = ui->baseColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("base_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("base_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("base_color"), color.name());
 
     color = ui->highlightColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("highlight_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("highlight_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("highlight_color"), color.name());
 
     color = ui->windowTextColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("window_text_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("window_text_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("window_text_color"), color.name());
 
     color = ui->viewTextColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("text_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("text_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("text_color"), color.name());
 
     color = ui->highlightedTextColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("highlighted_text_color"), color.name());
 
     color = ui->linkColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("link_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("link_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("link_color"), color.name());
 
     color = ui->linkVisitedColorLabel->getColor();
-    oldColor.setNamedColor(mSettings->value(QStringLiteral("link_visited_color")).toString());
+    oldColor = QColor::fromString(mSettings->value(QStringLiteral("link_visited_color")).toString());
     if (color != oldColor)
         mSettings->setValue(QStringLiteral("link_visited_color"), color.name());
 
@@ -362,7 +362,7 @@ void StyleConfig::loadPalette()
             paths.removeDuplicates();
             QString filterStr = ui.lineEdit->text();
             QStringList names;
-            for (const auto &path : qAsConst(paths))
+            for (const auto &path : std::as_const(paths))
             {
                 QDir dir(path + QLatin1String("/lxqt/palettes"));
                 if (dir.exists())
@@ -402,42 +402,42 @@ void StyleConfig::loadPalette()
         settings.beginGroup(QStringLiteral("Palette"));
 
         QColor color;
-        color.setNamedColor(settings.value(QStringLiteral("window_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("window_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
         ui->winColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("base_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("base_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::Base);
         ui->baseColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("highlight_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("highlight_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::Highlight);
         ui->highlightColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("window_text_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("window_text_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::WindowText);
         ui->windowTextColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("text_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("text_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::Text);
         ui->viewTextColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("highlighted_text_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("highlighted_text_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::HighlightedText);
         ui->highlightedTextColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("link_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("link_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::Link);
         ui->linkColorLabel->setColor(color, true);
 
-        color.setNamedColor(settings.value(QStringLiteral("link_visited_color")).toString());
+        color = QColor::fromString(settings.value(QStringLiteral("link_visited_color")).toString());
         if (!color.isValid())
             color = QGuiApplication::palette().color(QPalette::Active,QPalette::LinkVisited);
         ui->linkVisitedColorLabel->setColor(color, true);

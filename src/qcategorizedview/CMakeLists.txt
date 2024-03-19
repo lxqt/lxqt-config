@@ -7,4 +7,4 @@ set(SOURCES
 )
 
 add_library(qcategorizedview STATIC ${SOURCES})
-target_link_libraries(qcategorizedview Qt5::Widgets)
+target_link_libraries(qcategorizedview Qt6::Widgets)

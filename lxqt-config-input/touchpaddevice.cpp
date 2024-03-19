@@ -20,7 +20,7 @@
 
 #include <cmath>
 #include <QDebug>
-#include <QX11Info>
+#include <QGuiApplication>
 #include <QUrl>
 #include <libudev.h>
 #include <LXQt/Settings>
@@ -32,7 +32,8 @@ static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
 {
     QList<QVariant> ret;
 
-    Display* dpy = QX11Info::display();
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    Display* dpy = x11NativeInterface->display();
 
     Atom act_type;
     int act_format;
@@ -89,7 +90,8 @@ static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
 
 static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVariant> values)
 {
-    Display* dpy = QX11Info::display();
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    Display* dpy = x11NativeInterface->display();
 
     Atom prop_atom = XInternAtom(dpy, prop, False);
 
@@ -108,7 +110,7 @@ static bool xi2_set_device_property(int deviceid, const char* prop, QList<QVaria
 
     XFree(data);
 
-    auto dataType = static_cast<QMetaType::Type>(values[0].type());
+    int dataType = values[0].typeId();
     switch (dataType)
     {
     case QMetaType::Int:
@@ -222,7 +224,8 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
 
 bool TouchpadDevice::find_xi2_device()
 {
-    Display* dpy = QX11Info::display();
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    Display* dpy = x11NativeInterface->display();
 
     int ndevices;
     bool found = false;

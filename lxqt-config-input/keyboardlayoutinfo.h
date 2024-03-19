@@ -40,7 +40,7 @@ struct KeyboardLayoutInfo {
 
   const LayoutVariantInfo* findVariant(QString name) const {
     if(!name.isEmpty()) {
-      for(const LayoutVariantInfo& vinfo : qAsConst(variants)) {
+      for(const LayoutVariantInfo& vinfo : std::as_const(variants)) {
         if(vinfo.name == name)
           return &vinfo;
       }
