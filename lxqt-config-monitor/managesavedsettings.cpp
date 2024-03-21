@@ -189,7 +189,7 @@ void ManageSavedSettings::loadSettings()
     settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
-    for(const MonitorSavedSettings& o : qAsConst(monitors)) {
+    for(const MonitorSavedSettings& o : std::as_const(monitors)) {
         QListWidgetItem *item = new QListWidgetItem(o.name+QStringLiteral(" - ")+o.date, ui.allConfigs);
         QVariant var;
         var.setValue(o);

@@ -153,13 +153,13 @@ static void removeFilesAndDirs (QDir &dir) {
   //qDebug() << "dir:" << dir.path();
   // files
   QFileInfoList lst = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
-  for (const QFileInfo &fi : qAsConst(lst)) {
+  for (const QFileInfo &fi : std::as_const(lst)) {
     //qDebug() << "removing" << fi.fileName() << fi.absoluteFilePath();
     dir.remove(fi.fileName());
   }
   // dirs
   lst = dir.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot | QDir::Hidden);
-  for (const QFileInfo &fi : qAsConst(lst)) {
+  for (const QFileInfo &fi : std::as_const(lst)) {
     dir.cd(fi.fileName());
     removeFilesAndDirs(dir);
     dir.cd(QStringLiteral(".."));
@@ -303,7 +303,7 @@ bool XCursorTheme::writeToDir (const QDir &destDir) {
   dir.cd(QStringLiteral("cursors"));
   removeCursorFiles(dir);
   //
-  for (const XCursorImages *ci : qAsConst(mList)) {
+  for (const XCursorImages *ci : std::as_const(mList)) {
     const char **nlst = findCursorRecord(ci->name());
     if (!nlst) continue; // unknown cursor, skip it
     qDebug() << "writing" << *nlst;
@@ -353,7 +353,6 @@ void XCursorTheme::parseThemeIndex (const QDir &dir) {
   if (fl.open(QIODevice::ReadOnly)) {
     QTextStream stream;
     stream.setDevice(&fl);
-    stream.setCodec("UTF-8");
     bool inIconTheme = false;
     QString curPath;
     while (1) {
@@ -451,7 +450,7 @@ void XCursorTheme::parseXCursorTheme (const QDir &dir) {
 
 
 void XCursorTheme::fixInfoFields () {
-  for (XCursorImages *ci : qAsConst(mList)) {
+  for (XCursorImages *ci : std::as_const(mList)) {
     if (!mTitle.isEmpty() && ci->title().isEmpty()) ci->setTitle(title());
     if (!mAuthor.isEmpty() && ci->author().isEmpty()) ci->setAuthor(author());
     if (!mLicense.isEmpty() && ci->license().isEmpty()) ci->setLicense(license());
@@ -477,7 +476,6 @@ bool XCursorTheme::writeIndexTheme (const QDir &destDir) {
   if (fl.open(QIODevice::ReadOnly)) {
     QTextStream stream;
     stream.setDevice(&fl);
-    stream.setCodec("UTF-8");
     QString curPath;
     while (1) {
       QString s = stream.readLine();
@@ -561,8 +559,7 @@ Inherits=core
   {
     QTextStream stream;
     stream.setDevice(&fl);
-    stream.setCodec("UTF-8");
-    for (const QString &s : qAsConst(cfg)) stream << s << "\n";
+    for (const QString &s : std::as_const(cfg)) stream << s << "\n";
     stream << "[Icon Theme]\n";
     stream << "Name=" << name << "\n";
     stream << "Comment=" << cmt << "\n";
@@ -570,7 +567,7 @@ Inherits=core
     stream << "Url=" << url << "\n";
     stream << "Description=" << dscr << "\n";
     stream << "Example=" << mSample << "\n";
-    for (const QString &s : qAsConst(inhs)) stream << "Inherits=" << s << "\n";
+    for (const QString &s : std::as_const(inhs)) stream << "Inherits=" << s << "\n";
   }
   fl.close();
   return true;
@@ -589,7 +586,7 @@ static bool removeXCTheme (const QDir &thDir) {
   // check if there are some other files
   QFileInfoList lst = thDir.entryInfoList(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
   bool cantKill = false;
-  for (const QFileInfo &fi : qAsConst(lst)) {
+  for (const QFileInfo &fi : std::as_const(lst)) {
     QString s(fi.fileName());
     if (s != QLatin1String("icon-theme.cache") && s != QLatin1String("index.theme")) {
       cantKill = true;
@@ -701,11 +698,10 @@ bool XCursorTheme::writeXPTheme (const QDir &destDir) {
   if (fl.open(QIODevice::WriteOnly)) {
     QTextStream stream;
     stream.setDevice(&fl);
-    stream.setCodec("UTF-8");
     stream << "[General]\r\n";
     stream << "Version=130\r\n";
     qDebug() << "writing images...";
-    for (XCursorImages *ci : qAsConst(mList)) {
+    for (XCursorImages *ci : std::as_const(mList)) {
       const char **nlst = findCursorRecord(ci->name());
       if (!nlst) continue; // unknown cursor, skip it
       qDebug() << "image:" << *(nlst-1);

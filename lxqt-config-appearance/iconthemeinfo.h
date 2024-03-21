@@ -33,7 +33,7 @@
 #include <QIcon>
 #include <QDir>
 #include <QSettings>
-#include <QVector>
+#include <QList>
 
 class IconThemeInfo
 {
@@ -47,7 +47,7 @@ public:
 
     bool isValid() const { return mValid; }
     bool isHidden() const { return mHidden; }
-    QVector<QIcon> icons(const QStringList &iconNames) const;
+    QList<QIcon> icons(const QStringList &iconNames) const;
 
 private:
     QString mFileName;

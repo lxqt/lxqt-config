@@ -99,8 +99,7 @@ add_executable(lxqt-config-input
 )
 
 set(lxqt-config-input_TLBS
-    Qt5::Widgets
-    Qt5::X11Extras
+    Qt6::Widgets
     ${X11_LIBRARIES}
     lxqt
     lxqt-config-cursor

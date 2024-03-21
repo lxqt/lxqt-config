@@ -80,7 +80,7 @@ void IconThemeConfig::initIconsThemes()
                     item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
                     item->setData(0, Qt::UserRole, theme.name());
 
-                    const QVector<QIcon> icons = theme.icons(iconNames);
+                    const QList<QIcon> icons = theme.icons(iconNames);
 
                     const int K = icons.size();
                     for (int i = 0; i < K; ++i)

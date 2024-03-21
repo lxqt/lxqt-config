@@ -74,7 +74,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
 
     // Remove duplicate sizes
     QMap<QString, KScreen::ModePtr> noDuplicateModes;
-    for(const KScreen::ModePtr &mode : qAsConst(modeList)) {
+    for(const KScreen::ModePtr &mode : std::as_const(modeList)) {
         if( noDuplicateModes.keys().contains(modeToString(mode)) ) {
             KScreen::ModePtr actual = noDuplicateModes[modeToString(mode)];
             bool isActualPreferred = output->preferredModes().contains(actual->id());
@@ -91,7 +91,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     std::sort(modeList.begin(), modeList.end(), sizeBiggerThan);
 
     // Add each mode to the list
-    for (const KScreen::ModePtr &mode : qAsConst(modeList)) {
+    for (const KScreen::ModePtr &mode : std::as_const(modeList)) {
         ui.resolutionCombo->addItem(modeToString(mode), mode->id());
         if(output->preferredModes().contains(mode->id())) {
             // Make bold preferredModes
@@ -108,7 +108,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         int idx = ui.resolutionCombo->findData(output->currentMode()->id());
         if (idx < 0) {
             // Select mode with same size
-            for (const KScreen::ModePtr &mode : qAsConst(modeList)) {
+            for (const KScreen::ModePtr &mode : std::as_const(modeList)) {
                 if( mode->size() == output->currentMode()->size() )
                     idx = ui.resolutionCombo->findData(output->currentMode()->id());
             }
@@ -167,6 +167,8 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
         break;
     case KScreen::Output::Inverted:
         ui.orientationCombo->setCurrentIndex(3);
+        break;
+    default:
         break;
     }
 

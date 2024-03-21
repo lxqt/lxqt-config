@@ -185,7 +185,7 @@ void ApplicationChooser::fillApplicationListWidget()
         QStringList mimetypes;
         mimetypes << m_Type << mimeInfo.allAncestors();
 
-        for(const QString& mts : qAsConst(mimetypes)) {
+        for(const QString& mts : std::as_const(mimetypes)) {
             QMimeType mt = db.mimeTypeForName(mts);
             QString heading = mt.name() == QLatin1String("application/octet-stream") ?
                 tr("Other applications") :
@@ -212,7 +212,7 @@ void ApplicationChooser::fillApplicationListWidget()
     {
         QStringList types;
         types << m_Type << QString();
-        for(const QString& type : qAsConst(types)) {
+        for(const QString& type : std::as_const(types)) {
             QString heading = type.isEmpty() ?
                 tr("Other applications") :
                 m_Cat != category::none ?
@@ -266,7 +266,7 @@ void ApplicationChooser::addApplicationsToApplicationListWidget(QTreeWidgetItem*
         // WARNING: We cannot use QSet::contains() here because different addresses
         // can have the same value. Also, see libqtxdg -> XdgDesktopFile::operator==().
         bool wasAdded = false;
-        for (XdgDesktopFile* added : qAsConst(alreadyAdded))
+        for (XdgDesktopFile* added : std::as_const(alreadyAdded))
         {
             if (*added == *desktopFile)
             {

@@ -1,7 +1,7 @@
 project(lxqt-config-appearance)
 
 include_directories(
-    ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
+    ${Qt6Gui_PRIVATE_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
 )
 
@@ -73,9 +73,8 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    Qt5::Widgets
-    Qt5::X11Extras
-    Qt5::Xml
+    Qt6::Widgets
+    Qt6::Xml
     ${LIBRARIES}
     lxqt-config-cursor
 )

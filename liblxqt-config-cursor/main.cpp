@@ -31,7 +31,6 @@ int main (int argc, char *argv[])
     //QTextCodec::setCodecForLocale(QTextCodec::codecForName("koi8-r"));
 
     LXQt::Application app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     TRANSLATE_APP;
 

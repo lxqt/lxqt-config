@@ -19,18 +19,22 @@
  */
 
 
-#include <QX11Info>
+#include <QGuiApplication>
 #include <QDebug>
 
 #include "xrandrbrightness.h"
 
 XRandrBrightness::XRandrBrightness()
 {
-    if (!QX11Info::isPlatformX11()) {
+    if (QGuiApplication::platformName() != QStringLiteral("xcb")) {
         return;
     }
-    ScopedCPointer<xcb_randr_query_version_reply_t> versionReply(xcb_randr_query_version_reply(QX11Info::connection(),
-        xcb_randr_query_version(QX11Info::connection(), 1, 2),
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return;
+    }
+    ScopedCPointer<xcb_randr_query_version_reply_t> versionReply(xcb_randr_query_version_reply(x11NativeInterface->connection(),
+        xcb_randr_query_version(x11NativeInterface->connection(), 1, 2),
     nullptr));
 
     if (!versionReply) {
@@ -42,8 +46,8 @@ XRandrBrightness::XRandrBrightness()
         qDebug() << "RandR version" << versionReply->major_version << "." << versionReply->minor_version << " too old";
         return;
     }
-    ScopedCPointer<xcb_intern_atom_reply_t> backlightReply(xcb_intern_atom_reply(QX11Info::connection(),
-        xcb_intern_atom (QX11Info::connection(), 1, strlen("Backlight"), "Backlight"),
+    ScopedCPointer<xcb_intern_atom_reply_t> backlightReply(xcb_intern_atom_reply(x11NativeInterface->connection(),
+        xcb_intern_atom (x11NativeInterface->connection(), 1, strlen("Backlight"), "Backlight"),
     nullptr));
 
     if (!backlightReply) {
@@ -57,7 +61,7 @@ XRandrBrightness::XRandrBrightness()
         qDebug() << "No outputs have backlight property";
         //return;
     }
-    xcb_screen_iterator_t iter = xcb_setup_roots_iterator(xcb_get_setup(QX11Info::connection()));
+    xcb_screen_iterator_t iter = xcb_setup_roots_iterator(xcb_get_setup(x11NativeInterface->connection()));
     if (!iter.rem) {
         qDebug() << "XCB Screen Roots Iterator rem was null";
         return;
@@ -66,8 +70,8 @@ XRandrBrightness::XRandrBrightness()
     xcb_screen_t *screen = iter.data;
     xcb_window_t root = screen->root;
 
-    m_resources.reset(xcb_randr_get_screen_resources_current_reply(QX11Info::connection(),
-        xcb_randr_get_screen_resources_current(QX11Info::connection(), root)
+    m_resources.reset(xcb_randr_get_screen_resources_current_reply(x11NativeInterface->connection(),
+        xcb_randr_get_screen_resources_current(x11NativeInterface->connection(), root)
     , nullptr));
 
     if (!m_resources) {
@@ -83,9 +87,13 @@ bool XRandrBrightness::backlight_get_with_range(xcb_randr_output_t output, long 
     if (cur == -1) {
        return false;
     }
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return false;
+    }
 
-    ScopedCPointer<xcb_randr_query_output_property_reply_t> propertyReply(xcb_randr_query_output_property_reply(QX11Info::connection(),
-        xcb_randr_query_output_property(QX11Info::connection(), output, m_backlight)
+    ScopedCPointer<xcb_randr_query_output_property_reply_t> propertyReply(xcb_randr_query_output_property_reply(x11NativeInterface->connection(),
+        xcb_randr_query_output_property(x11NativeInterface->connection(), output, m_backlight)
     , nullptr));
 
     if (!propertyReply) {
@@ -105,12 +113,17 @@ bool XRandrBrightness::backlight_get_with_range(xcb_randr_output_t output, long 
 
 long XRandrBrightness::backlight_get(xcb_randr_output_t output) const
 {
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return -1;
+    }
+
     ScopedCPointer<xcb_randr_get_output_property_reply_t> propertyReply;
     long value;
 
     if (m_backlight != XCB_ATOM_NONE) {
-        propertyReply.reset(xcb_randr_get_output_property_reply(QX11Info::connection(),
-            xcb_randr_get_output_property(QX11Info::connection(), output, m_backlight, XCB_ATOM_NONE, 0, 4, 0, 0)
+        propertyReply.reset(xcb_randr_get_output_property_reply(x11NativeInterface->connection(),
+            xcb_randr_get_output_property(x11NativeInterface->connection(), output, m_backlight, XCB_ATOM_NONE, 0, 4, 0, 0)
         , nullptr));
 
         if (!propertyReply) {
@@ -128,7 +141,11 @@ long XRandrBrightness::backlight_get(xcb_randr_output_t output) const
 
 void XRandrBrightness::backlight_set(xcb_randr_output_t output, long value)
 {
-    xcb_randr_change_output_property(QX11Info::connection(), output, m_backlight, XCB_ATOM_INTEGER,
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return;
+    }
+    xcb_randr_change_output_property(x11NativeInterface->connection(), output, m_backlight, XCB_ATOM_INTEGER,
                                      32, XCB_PROP_MODE_REPLACE,
                                      1, reinterpret_cast<unsigned char *>(&value));
 }
@@ -136,10 +153,15 @@ void XRandrBrightness::backlight_set(xcb_randr_output_t output, long value)
 
 float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
 {
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return -1;
+    }
+
     xcb_generic_error_t  *error;
 
-    xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
-    ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
+    xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
+    ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
     if(error != nullptr)
     {
         qDebug() << "Error getting output_info";
@@ -151,8 +173,8 @@ float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
         return -1;
     }
     // xcb_randr_get_output_info_reply_t tiene como elemento crtc
-    xcb_randr_get_crtc_gamma_cookie_t gamma_cookie = xcb_randr_get_crtc_gamma_unchecked (QX11Info::connection(), output_info->crtc);
-    ScopedCPointer<xcb_randr_get_crtc_gamma_reply_t> gamma_reply(xcb_randr_get_crtc_gamma_reply (QX11Info::connection(), gamma_cookie, &error));
+    xcb_randr_get_crtc_gamma_cookie_t gamma_cookie = xcb_randr_get_crtc_gamma_unchecked (x11NativeInterface->connection(), output_info->crtc);
+    ScopedCPointer<xcb_randr_get_crtc_gamma_reply_t> gamma_reply(xcb_randr_get_crtc_gamma_reply (x11NativeInterface->connection(), gamma_cookie, &error));
     if(error != nullptr)
     {
         qDebug() << "Error getting gamma_reply";
@@ -190,10 +212,15 @@ float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
 
 void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float percent)
 {
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return;
+    }
+
     xcb_generic_error_t  *error;
 
-    xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
-    ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
+    xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
+    ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
     if(error != nullptr)
     {
         qDebug() << "Error getting output_info";
@@ -205,8 +232,8 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
         return;
     }
     // xcb_randr_get_output_info_reply_t tiene como elemento crtc
-    xcb_randr_get_crtc_gamma_cookie_t gamma_cookie = xcb_randr_get_crtc_gamma_unchecked (QX11Info::connection(), output_info->crtc);
-    ScopedCPointer<xcb_randr_get_crtc_gamma_reply_t> gamma_reply(xcb_randr_get_crtc_gamma_reply (QX11Info::connection(), gamma_cookie, &error));
+    xcb_randr_get_crtc_gamma_cookie_t gamma_cookie = xcb_randr_get_crtc_gamma_unchecked (x11NativeInterface->connection(), output_info->crtc);
+    ScopedCPointer<xcb_randr_get_crtc_gamma_reply_t> gamma_reply(xcb_randr_get_crtc_gamma_reply (x11NativeInterface->connection(), gamma_cookie, &error));
     if(error != nullptr)
     {
         qDebug() << "Error getting gamma_reply";
@@ -243,7 +270,7 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
         int value = qMin((int)(((float)i/(float)(red_length-1))*max_gamma),65535);
         green[i] = blue[i] = red[i] = value;
     }
-    xcb_randr_set_crtc_gamma (QX11Info::connection(), output_info->crtc, red_length, red, green, blue);
+    xcb_randr_set_crtc_gamma (x11NativeInterface->connection(), output_info->crtc, red_length, red, green, blue);
 }
 
 
@@ -254,6 +281,10 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
     if (!m_resources) {
         return monitors;
     }
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return monitors;
+    }
 
     auto *outputs = xcb_randr_get_screen_resources_current_outputs(m_resources.data());
     for (int i = 0; i < m_resources->num_outputs; ++i) {
@@ -261,8 +292,8 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
 
         xcb_generic_error_t  *error;
 
-        xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
-        ScopedCPointer <xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
+        xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
+        ScopedCPointer <xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
         if(error != nullptr)
         {
             qDebug() << "Error getting output_info";
@@ -293,8 +324,8 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
             qDebug() << "Crtc is not null. Output not enabled.";
             continue;
         }
-        xcb_randr_get_crtc_info_cookie_t crtc_info_cookie = xcb_randr_get_crtc_info_unchecked (QX11Info::connection(), output_info->crtc, 0);
-        ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (QX11Info::connection(), crtc_info_cookie, &error));
+        xcb_randr_get_crtc_info_cookie_t crtc_info_cookie = xcb_randr_get_crtc_info_unchecked (x11NativeInterface->connection(), output_info->crtc, 0);
+        ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (x11NativeInterface->connection(), crtc_info_cookie, &error));
         if(error != nullptr)
         {
             qDebug() << "Error getting output_info";
@@ -343,6 +374,10 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
     if (!m_resources) {
         return;
     }
+    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11NativeInterface) {
+        return;
+    }
 
     auto *outputs = xcb_randr_get_screen_resources_current_outputs(m_resources.data());
     for (int i = 0; i < m_resources->num_outputs; ++i) {
@@ -350,8 +385,8 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
 
         xcb_generic_error_t  *error;
 
-        xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (QX11Info::connection(), output, 0);
-        ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (QX11Info::connection(), output_info_cookie, &error));
+        xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
+        ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
         if(error != nullptr)
         {
             qDebug() << "Error getting output_info";
@@ -370,8 +405,8 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
         // Is enabled?
         if( output_info->crtc == 0)
             continue;
-        xcb_randr_get_crtc_info_cookie_t crtc_info_cookie = xcb_randr_get_crtc_info_unchecked (QX11Info::connection(), output_info->crtc, 0);
-        ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (QX11Info::connection(), crtc_info_cookie, &error));
+        xcb_randr_get_crtc_info_cookie_t crtc_info_cookie = xcb_randr_get_crtc_info_unchecked (x11NativeInterface->connection(), output_info->crtc, 0);
+        ScopedCPointer<xcb_randr_get_crtc_info_reply_t> crtc_info(xcb_randr_get_crtc_info_reply (x11NativeInterface->connection(), crtc_info_cookie, &error));
         if(error != nullptr)
             continue;
         if(crtc_info == nullptr || crtc_info->mode == XCB_NONE )

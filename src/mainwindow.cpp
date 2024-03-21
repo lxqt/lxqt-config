@@ -231,7 +231,7 @@ LXQtConfig::MainWindow::MainWindow() : QMainWindow()
 
     QTimer::singleShot(0, [this] { setSizing(); });
     QTimer::singleShot(1, this, SLOT(load()));
-    new QShortcut{QKeySequence{Qt::CTRL + Qt::Key_Q}, this, SLOT(close())};
+    new QShortcut{QKeySequence{Qt::CTRL | Qt::Key_Q}, this, SLOT(close())};
 }
 
 void LXQtConfig::MainWindow::load()

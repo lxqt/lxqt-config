@@ -1,7 +1,8 @@
 project(lxqt-config-monitor)
 
-find_package(KF5Screen ${KF5SCREEN_MINIMUM_VERSION} REQUIRED)
-find_package(Qt5Svg ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(KF6Screen ${KF6SCREEN_MINIMUM_VERSION} REQUIRED)
+find_package(Qt6Svg ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt6SvgWidgets ${QT_MINIMUM_VERSION} REQUIRED)
 
 set(HEADERS
     monitorsettingsdialog.h
@@ -72,10 +73,10 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    Qt5::Widgets
-    Qt5::X11Extras
-    Qt5::Svg
-    KF5::Screen
+    Qt6::Widgets
+    Qt6::Svg
+    Qt6::SvgWidgets
+    KF6::Screen
     lxqt
 )
 
