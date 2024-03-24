@@ -42,6 +42,8 @@
 
 #include <algorithm>
 
+extern void enableSaveButton(bool);
+
 const static QString lcLang = QStringLiteral("LANG");
 
 const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
@@ -69,8 +71,6 @@ LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_set
              << m_ui->comboCurrency
              << m_ui->comboMeasurement
              << m_ui->comboCollate;
-
-    hasChanged = false;
 
     initControls();
 }
@@ -112,6 +112,7 @@ void LocaleConfig::load()
     {
         updateExample();
         hasChanged = true;
+        enableSaveButton(true);
     });
 
 
@@ -137,6 +138,7 @@ void LocaleConfig::connectCombo(QComboBox *combo)
     {
         hasChanged = true;
         updateExample();
+        enableSaveButton(true);
     });
 }
 
@@ -304,22 +306,29 @@ void LocaleConfig::writeConfig()
     mSettings->endGroup();
 }
 
+void LocaleConfig::filterDialogButtonClickedEvent(QDialogButtonBox::StandardButton button)
+{
+	if (button == QDialogButtonBox::Save)
+	{
+		saveSettings();
+		enableSaveButton(false);
+	}
+}
+
 void LocaleConfig::saveSettings()
 {
     if (hasChanged)
     {
         QMessageBox msgBox;
         msgBox.setWindowTitle(tr("Format Settings Changed"));
-        msgBox.setText(tr("Do you want to save your changes? They will take effect the next time you log in."));
-        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
-        msgBox.setDefaultButton(QMessageBox::Cancel);
+        msgBox.setText(tr("Settings will not take effect until the next log in."));
+        msgBox.setStandardButtons(QMessageBox::Ok);
 
-        int ret = msgBox.exec();
-        if( ret == QMessageBox::Save )
-        {
-            writeConfig();
-            writeExports();
-        }
+        msgBox.exec();
+        writeConfig();
+        writeExports();
+
+        hasChanged = false;
     }
 
 }
