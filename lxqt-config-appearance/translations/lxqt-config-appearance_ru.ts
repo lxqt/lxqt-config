@@ -171,7 +171,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Установить темы GTK (будет перезаписан файл конфигурации GTK)</translation>
+        <translation>Установить темы GTK (файлы настроек GTK перезапуштся)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
