@@ -80,7 +80,7 @@ void LoadSettings::applyBestSettings()
                 settings.beginGroup(QStringLiteral("SavedConfigs"));
                 loadMonitorSettings(settings, monitorsSavedSettings);
                 settings.endGroup();
-                for(const MonitorSavedSettings& o : qAsConst(monitorsSavedSettings)) {
+                for(const MonitorSavedSettings& o : std::as_const(monitorsSavedSettings)) {
                     ok = applySettings(configOp->config(), o.monitors);
                     if(ok) break;
                 }
@@ -138,7 +138,7 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
                 // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
                 KScreen::ModeList modeList = output->modes();
-                for(const KScreen::ModePtr &mode : qAsConst(modeList)) {
+                for(const KScreen::ModePtr &mode : std::as_const(modeList)) {
                     if( mode->id() == QString(monitor.currentMode)
                             ||
                             (

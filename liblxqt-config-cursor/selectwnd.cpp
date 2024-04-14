@@ -36,7 +36,6 @@
 #include <QTextStream>
 #include <QProcess>
 
-#include <QX11Info>
 #include <X11/Xcursor/Xcursor.h>
 
 #include <QGuiApplication>

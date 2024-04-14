@@ -23,6 +23,7 @@
 #include "monitor.h"
 #include <QDebug>
 #include <QInputDialog>
+#include <QMessageBox>
 #include <QDateTime>
 
 Q_DECLARE_METATYPE(MonitorSavedSettings)
@@ -37,18 +38,21 @@ ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  
 
     ui.setupUi(this);
 
-    connect(ui.allConfigs,       &QListWidget::itemActivated, this, &ManageSavedSettings::showSelectedConfig);
-    connect(ui.deletePushButton, &QPushButton::clicked,       this, &ManageSavedSettings::onDeleteItem);
-    connect(ui.renamePushButton, &QPushButton::clicked,       this, &ManageSavedSettings::onRenameItem);
-    connect(ui.applyPushButton,  &QPushButton::clicked,       this, &ManageSavedSettings::onApplyItem);
+    connect(ui.allConfigs,       &QListWidget::itemSelectionChanged, this, &ManageSavedSettings::showSelectedConfig);
+    connect(ui.allConfigs,       &QListWidget::itemDoubleClicked,    this, &ManageSavedSettings::onApplyItem);
+    connect(ui.deletePushButton, &QPushButton::clicked,              this, &ManageSavedSettings::onDeleteItem);
+    connect(ui.renamePushButton, &QPushButton::clicked,              this, &ManageSavedSettings::onRenameItem);
 
     loadSettings();
 }
 
 
-void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
+void ManageSavedSettings::showSelectedConfig()
 {
-    MonitorSavedSettings o = item->data(Qt::UserRole).value<MonitorSavedSettings>();
+    QListWidgetItem * currItem = ui.allConfigs->currentItem();
+    if (currItem == nullptr)
+        return;
+    MonitorSavedSettings o = currItem->data(Qt::UserRole).value<MonitorSavedSettings>();
     QString text;
     for(int i=0; i < o.monitors.size(); i++) {
         MonitorSettings setting = o.monitors[i];
@@ -77,7 +81,6 @@ void ManageSavedSettings::showSelectedConfig(QListWidgetItem * item)
     }
     text += QLatin1String("<br/>");
     ui.selectedSettingsTextEdit->setText(text);
-    ui.applyPushButton->setEnabled(isHardwareCompatible(o));
 }
 
 
@@ -164,6 +167,14 @@ void ManageSavedSettings::onApplyItem()
     if (ui.allConfigs->currentItem() == nullptr)
         return;
     MonitorSavedSettings settings = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
+
+    if (!isHardwareCompatible(settings)) {
+        QMessageBox::information(this, tr("Settings Activation Failed"),
+                                 tr("Selected settings cannot be applied with currently active monitors.\n\n"
+                                    "Please choose from the highlighted configurations."));
+        return;
+    }
+
     applySettings(config, settings.monitors);
 }
 
@@ -178,7 +189,7 @@ void ManageSavedSettings::loadSettings()
     settings.beginGroup(QStringLiteral("SavedConfigs"));
     loadMonitorSettings(settings, monitors);
     settings.endGroup();
-    for(const MonitorSavedSettings& o : qAsConst(monitors)) {
+    for(const MonitorSavedSettings& o : std::as_const(monitors)) {
         QListWidgetItem *item = new QListWidgetItem(o.name+QStringLiteral(" - ")+o.date, ui.allConfigs);
         QVariant var;
         var.setValue(o);

@@ -165,7 +165,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>Один клик для активации элементов</translation>
+        <translation>Один щелчок для активации объектов</translation>
     </message>
 </context>
 <context>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../touchpadconfig.ui" line="44"/>
         <source>Natural Scrolling</source>
-        <translation>Инвертировать направление прокрутки</translation>
+        <translation>Обратить направление прокрутки</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="51"/>

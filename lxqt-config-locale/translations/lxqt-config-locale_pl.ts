@@ -81,17 +81,17 @@
     <message>
         <location filename="../localeconfig.cpp" line="417"/>
         <source>Imperial UK</source>
-        <translation>Jednostki brytyjskie</translation>
+        <translation>Imperialne (UK)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="421"/>
         <source>Imperial US</source>
-        <translation>Jednostki amerykańskie</translation>
+        <translation>Imperialne (USA)</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="425"/>
         <source>Metric</source>
-        <translation>Metry</translation>
+        <translation>Metryczne</translation>
     </message>
 </context>
 <context>

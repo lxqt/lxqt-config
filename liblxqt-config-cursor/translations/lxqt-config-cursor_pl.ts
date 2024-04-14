@@ -16,7 +16,7 @@
     <message>
         <location filename="../selectwnd.ui" line="23"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Zainstaluj Nowy Motyw…</translation>
+        <translation>&amp;Zainstaluj nowy motyw…</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../selectwnd.ui" line="91"/>
         <source>&amp;Remove Theme</source>
-        <translation>&amp;Usuń Motyw</translation>
+        <translation>&amp;Usuń motyw</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="111"/>

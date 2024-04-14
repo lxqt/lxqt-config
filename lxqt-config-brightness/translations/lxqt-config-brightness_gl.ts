@@ -27,12 +27,12 @@
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
         <source>☼</source>
-        <translation type="unfinished">☼</translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation type="unfinished">Brillo</translation>
+        <translation>Brillo</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../outputwidget.ui" line="48"/>
         <source>☼</source>
-        <translation type="unfinished">☼</translation>
+        <translation>☼</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="80"/>
         <source>☀</source>
-        <translation type="unfinished">☀</translation>
+        <translation>☀</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation type="unfinished">%1: Non se pode usar aumentar/diminución e establecer conxuntamente</translation>
+        <translation>%1: Non se pode usar aumentar/diminución e establecer conxuntamente</translation>
     </message>
 </context>
 </TS>

@@ -37,7 +37,6 @@
 #include <QLocale>
 #include <QStandardPaths>
 #include <QTextStream>
-#include <QTextCodec>
 #include <QDateTime>
 #include <QMessageBox>
 
@@ -85,26 +84,26 @@ LocaleConfig::~LocaleConfig()
 bool countryLessThan(const QLocale & c1, const QLocale & c2)
 {
     // get the strings as in addLocaleToCombo() -> clabel
-    return QString::localeAwareCompare(!c1.nativeCountryName().isEmpty()
-                                           ? c1.nativeCountryName()
-                                           : c1.countryToString(c1.country()),
-                                       !c2.nativeCountryName().isEmpty()
-                                           ? c2.nativeCountryName()
-                                           : c2.countryToString(c2.country())) < 0;
+    return QString::localeAwareCompare(!c1.nativeTerritoryName().isEmpty()
+                                           ? c1.nativeTerritoryName()
+                                           : c1.territoryToString(c1.territory()),
+                                       !c2.nativeTerritoryName().isEmpty()
+                                           ? c2.nativeTerritoryName()
+                                           : c2.territoryToString(c2.territory())) < 0;
 }
 
 void LocaleConfig::load()
 {
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     std::sort(allLocales.begin(), allLocales.end(), countryLessThan);
-    for(QComboBox * combo : qAsConst(m_combos))
+    for(QComboBox * combo : std::as_const(m_combos))
     {
         initCombo(combo, allLocales);
     }
 
     readConfig();
 
-    for(QComboBox * combo : qAsConst(m_combos))
+    for(QComboBox * combo : std::as_const(m_combos))
     {
         connectCombo(combo);
     }
@@ -127,7 +126,7 @@ void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales
     const QString clabel = tr("No change");
     combo->setInsertPolicy(QComboBox::InsertAlphabetically);
     combo->addItem(clabel, QString());
-    for(const QLocale & l : qAsConst(allLocales))
+    for(const QLocale & l : std::as_const(allLocales))
     {
         addLocaleToCombo(combo, l);
     }
@@ -145,14 +144,14 @@ void LocaleConfig::connectCombo(QComboBox *combo)
 
 void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
-    const QString clabel = !locale.nativeCountryName().isEmpty() ? locale.nativeCountryName() : locale.countryToString(locale.country());
+    const QString clabel = !locale.nativeTerritoryName().isEmpty() ? locale.nativeTerritoryName() : locale.territoryToString(locale.territory());
     // This needs to use name() rather than bcp47name() or later on the export will generate a non-sense locale (e.g. "it" instead of
     // "it_IT")
     // TODO: Properly handle scripts (@foo)
     QString cvalue = locale.name();
     if (!cvalue.contains(QLatin1Char('.')))
     { // explicitly add the encoding, otherwise Qt doesn't accept dead keys and garbles the output as well
-        cvalue.append(QLatin1Char('.') + QString::fromUtf8(QTextCodec::codecForLocale()->name()));
+        cvalue.append(QStringLiteral(".UTF-8"));
     }
 
     QString flagcode;

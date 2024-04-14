@@ -135,7 +135,8 @@ bool QCategorizedView::Private::isCategorized() const
 
 QStyleOptionViewItem QCategorizedView::Private::blockRect(const QModelIndex &representative)
 {
-    QStyleOptionViewItem option(q->viewOptions());
+    QStyleOptionViewItem option;
+    q->initViewItemOption(&option);
     const int height = categoryDrawer->categoryHeight(representative, option);
     const QString categoryDisplay = representative.data(QCategorizedSortFilterProxyModel::CategoryDisplayRole).toString();
     QPoint pos = blockPosition(categoryDisplay);
@@ -219,7 +220,9 @@ QPoint QCategorizedView::Private::blockPosition(const QString &category)
         if (index.row() < categoryIndex.row()) {
             continue;
         }
-        res.ry() += categoryDrawer->categoryHeight(categoryIndex, q->viewOptions()) + categorySpacing;
+        QStyleOptionViewItem option;
+        q->initViewItemOption(&option);
+        res.ry() += categoryDrawer->categoryHeight(categoryIndex, option) + categorySpacing;
         if (index.row() == categoryIndex.row()) {
             continue;
         }
@@ -332,7 +335,7 @@ void QCategorizedView::Private::rowsInserted(const QModelIndex &parent, int star
         QList<Block> blockList = blocks.values();
         std::sort(blockList.begin(), blockList.end(), Block::lessThan);
         QList<int> firstIndexesRows;
-        for (const Block &block : qAsConst(blockList)) {
+        for (const Block &block : std::as_const(blockList)) {
             firstIndexesRows << block.firstIndex.row();
         }
         //END: order for marking as alternate those blocks that are alternate
@@ -783,7 +786,9 @@ void QCategorizedView::reset()
 
 QSize QCategorizedView::decorationSize() const
 {
-    return viewOptions().decorationSize;
+    QStyleOptionViewItem option;
+    initViewItemOption(&option);
+    return option.decorationSize;
 }
 
 void QCategorizedView::paintEvent(QPaintEvent *event)
@@ -805,7 +810,8 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
     while (it != d->blocks.constEnd()) {
         const Private::Block &block = *it;
         const QModelIndex categoryIndex = d->proxyModel->index(block.firstIndex.row(), d->proxyModel->sortColumn(), rootIndex());
-        QStyleOptionViewItem option(viewOptions());
+        QStyleOptionViewItem option;
+        initViewItemOption(&option);
         option.features |= d->alternatingBlockColors && block.alternate ? QStyleOptionViewItem::Alternate
                                                                         : QStyleOptionViewItem::None;
         option.state |= !d->collapsibleBlocks || !block.collapsed ? QStyle::State_Open
@@ -854,7 +860,8 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
 
             const QModelIndex index = d->proxyModel->index(i, modelColumn(), rootIndex());
             const Qt::ItemFlags flags = d->proxyModel->flags(index);
-            QStyleOptionViewItem option(viewOptions());
+            QStyleOptionViewItem option;
+            initViewItemOption(&option);
             option.rect = visualRect(index);
             option.widget = this;
             option.features |= wordWrap() ? QStyleOptionViewItem::WrapText
@@ -876,7 +883,7 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
                                                            : QStyle::State_None;
             }
 
-            itemDelegate(index)->paint(&p, option, index);
+            itemDelegateForIndex(index)->paint(&p, option, index);
             ++i;
         }
         //END: draw items
@@ -951,7 +958,7 @@ void QCategorizedView::setSelection(const QRect &rect,
 void QCategorizedView::mouseMoveEvent(QMouseEvent *event)
 {
     QListView::mouseMoveEvent(event);
-    d->hoveredIndex = indexAt(event->pos());
+    d->hoveredIndex = indexAt(event->position().toPoint());
     const SelectionMode itemViewSelectionMode = selectionMode();
     if (state() == DragSelectingState && isSelectionRectVisible() && itemViewSelectionMode != SingleSelection
         && itemViewSelectionMode != NoSelection) {
@@ -967,7 +974,8 @@ void QCategorizedView::mouseMoveEvent(QMouseEvent *event)
     while (it != d->blocks.constEnd()) {
         const Private::Block &block = *it;
         const QModelIndex categoryIndex = d->proxyModel->index(block.firstIndex.row(), d->proxyModel->sortColumn(), rootIndex());
-        QStyleOptionViewItem option(viewOptions());
+        QStyleOptionViewItem option;
+        initViewItemOption(&option);
         const int height = d->categoryDrawer->categoryHeight(categoryIndex, option);
         QPoint pos = d->blockPosition(it.key());
         pos.ry() -= height;
@@ -1097,7 +1105,7 @@ void QCategorizedView::startDrag(Qt::DropActions supportedActions)
 void QCategorizedView::dragMoveEvent(QDragMoveEvent *event)
 {
     QListView::dragMoveEvent(event);
-    d->hoveredIndex = indexAt(event->pos());
+    d->hoveredIndex = indexAt(event->position().toPoint());
 }
 
 void QCategorizedView::dragEnterEvent(QDragEnterEvent *event)
@@ -1329,7 +1337,7 @@ void QCategorizedView::rowsAboutToBeRemoved(const QModelIndex &parent,
     }
     //END: update the items that are in quarantine in affected categories
 
-    for(const QString &category : qAsConst(listOfCategoriesMarkedForRemoval)) {
+    for(const QString &category : std::as_const(listOfCategoriesMarkedForRemoval)) {
         d->blocks.remove(category);
     }
 
@@ -1339,7 +1347,7 @@ void QCategorizedView::rowsAboutToBeRemoved(const QModelIndex &parent,
         QList<Private::Block> blockList = d->blocks.values();
         std::sort(blockList.begin(), blockList.end(), Private::Block::lessThan);
         QList<int> firstIndexesRows;
-        for (const Private::Block &block : qAsConst(blockList)) {
+        for (const Private::Block &block : std::as_const(blockList)) {
             firstIndexesRows << block.firstIndex.row();
         }
         //END: order for marking as alternate those blocks that are alternate
@@ -1457,7 +1465,7 @@ void QCategorizedView::currentChanged(const QModelIndex &current,
 
 void QCategorizedView::dataChanged(const QModelIndex &topLeft,
                                    const QModelIndex &bottomRight,
-                                   const QVector<int> & /* roles */)
+                                   const QList<int> & /* roles */)
 {
     QListView::dataChanged(topLeft, bottomRight);
     if (!d->isCategorized()) {

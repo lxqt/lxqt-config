@@ -33,7 +33,6 @@
 
 int main(int argc, char** argv) {
     LXQt::SingleApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QCommandLineParser parser;
     LXQt::ConfigDialogCmdLineOptions dlgOptions;

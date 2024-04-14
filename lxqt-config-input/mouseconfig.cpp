@@ -28,7 +28,6 @@
 #include <QDebug>
 
 // FIXME: how to support XCB or Wayland?
-#include <QX11Info>
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 
@@ -90,7 +89,16 @@ void MouseConfig::setLeftHandedMouse() {
   if(!buttons) {
     return;
   }
-  n_buttons = XGetPointerMapping(QX11Info::display(), buttons, DEFAULT_PTR_MAP_SIZE);
+  auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+  if(!x11NativeInterface) {
+    return;
+  }
+  Display* dpy = x11NativeInterface->display();
+  if(!dpy) {
+    return;
+  }
+
+  n_buttons = XGetPointerMapping(dpy, buttons, DEFAULT_PTR_MAP_SIZE);
 
   if(n_buttons > DEFAULT_PTR_MAP_SIZE) {
     more_buttons = (unsigned char*)realloc(buttons, n_buttons);
@@ -99,7 +107,7 @@ void MouseConfig::setLeftHandedMouse() {
       return;
     }
     buttons = more_buttons;
-    n_buttons = XGetPointerMapping(QX11Info::display(), buttons, n_buttons);
+    n_buttons = XGetPointerMapping(dpy, buttons, n_buttons);
   }
 
   for(i = 0; i < n_buttons; i++) {
@@ -113,7 +121,7 @@ void MouseConfig::setLeftHandedMouse() {
       (!leftHanded && idx_1 > idx_3)) {
     buttons[idx_1] = ((n_buttons < 3) ? 2 : 3);
     buttons[idx_3] = 1;
-    XSetPointerMapping(QX11Info::display(), buttons, n_buttons);
+    XSetPointerMapping(dpy, buttons, n_buttons);
   }
   free(buttons);
 }
@@ -190,8 +198,12 @@ void MouseConfig::reset() {
   singleClick = oldSingleClick;
   doubleClickInterval = oldDoubleClickInterval;
   wheelScrollLines = oldWheelScrollLines;
-  XChangePointerControl(QX11Info::display(), True, True,
-                        accel, 10, threshold);
+  if(auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+    if(Display* dpy = x11NativeInterface->display()) {
+      XChangePointerControl(dpy, True, True,
+                            accel, 10, threshold);
+    }
+  }
   setLeftHandedMouse();
 
   initControls();

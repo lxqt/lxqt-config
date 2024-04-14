@@ -11,7 +11,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Hautatu Kolorea</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errorea</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Errorea: ezin da gsettings exekutatu</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Letra-tipoaren izena:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -62,27 +62,27 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntuen tamaina:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normala</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="73"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Lodia</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="78"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Etzana</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="83"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Etzana lodia</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation type="unfinished"></translation>
+        <translation>Arina</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
@@ -118,47 +118,47 @@
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Osoa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>Letra-tipoaren iradokizuna</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation type="unfinished"></translation>
+        <translation>Bereizmena (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Iradokizun automatikoa</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="172"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Azpipixelen antialiasing:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="188"/>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -166,29 +166,31 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK estiloa</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezarri GTK gaiak (GTK konfigurazio fitxategiak gainidatziko dira!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
         <source>GTK 3 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 3 gaia</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 2 Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK 2 Gaia</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gaiak uniformeki jartzen saiatzeko, hautatu antzeko estilo/gaia (eskuragarri badago) zerrenda guztietan, edo hautatu &apos;gtk2&apos; Qt estiloa (eskuragarri badago) GTK gaiak imitatzeko.
+
+ Ziurtatu &apos;xsettingsd&apos; instalatuta dagoela GTK aplikazioei gaiak berehala aplikatzen laguntzeko.</translation>
     </message>
 </context>
 <context>
@@ -206,12 +208,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>XDG ikono-gaien KDE luzapena -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation type="unfinished"></translation>
+        <translation>Koloreztatu ikonoak widget estiloaren arabera (paleta)</translation>
     </message>
 </context>
 <context>
@@ -224,17 +226,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabili gaiak emandako horma-papera</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
         <source>(User Theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Erabiltzailearen gaia)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ireki gaiaren karpeta</translation>
     </message>
 </context>
 <context>
@@ -243,12 +245,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Paletak</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Iragazi...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
@@ -291,7 +293,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="118"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK estiloa</translation>
     </message>
 </context>
 <context>
@@ -309,7 +311,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt estilo batzuek kolore hauek alde batera utzi ditzakete.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
@@ -369,70 +371,72 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="256"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tresna-barrako botoiaren estiloa:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="264"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bistaratu ikonoa soilik</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Bistaratu testua soilik</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="274"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Testua ikonoaren ondoan agertzen da</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="279"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Testua ikonoaren azpian agertzen da</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Lehenetsia</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="292"/>
         <source>Activate item on single click</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktibatu elementua klik bakarrean</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt estiloa</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Gorde paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paletaren izena:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Izen bereko paleta bat existitzen da.
+ Ordezkatu nahi duzu?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="393"/>
         <source>Remove Palettes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kendu paletak</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Benetan hautatutako paleta(k) kendu nahi dituzu?
+ Erro paletak osorik mantenduko dira existitzen badira.</translation>
     </message>
 </context>
 </TS>

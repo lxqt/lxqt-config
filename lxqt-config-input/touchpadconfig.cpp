@@ -31,7 +31,7 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     ui.setupUi(this);
 
     devices = TouchpadDevice::enumerate_from_udev();
-    for (const TouchpadDevice& device : qAsConst(devices))
+    for (const TouchpadDevice& device : std::as_const(devices))
     {
         ui.devicesComboBox->addItem(device.name());
     }
@@ -131,7 +131,7 @@ void TouchpadConfig::initControls()
 
 void TouchpadConfig::accept()
 {
-    for (const TouchpadDevice& device : qAsConst(devices))
+    for (const TouchpadDevice& device : std::as_const(devices))
     {
         device.saveSettings(settings);
     }
@@ -146,7 +146,7 @@ void TouchpadConfig::accept()
 
 void TouchpadConfig::reset()
 {
-    for (const TouchpadDevice& device : qAsConst(devices))
+    for (const TouchpadDevice& device : std::as_const(devices))
     {
         device.setTappingEnabled(device.oldTappingEnabled());
         device.setNaturalScrollingEnabled(device.oldNaturalScrollingEnabled());

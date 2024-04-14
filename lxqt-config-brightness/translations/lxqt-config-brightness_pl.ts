@@ -88,7 +88,7 @@
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Reset gamma to default value.</source>
-        <translation>Zresetuj gamma do wartości domyślnej.</translation>
+        <translation>Zresetuj gammę do wartości domyślnej.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="112"/>

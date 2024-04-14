@@ -63,9 +63,9 @@ void IconThemeInfo::load(const QString &fileName)
 }
 
 
-QVector<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
+QList<QIcon> IconThemeInfo::icons(const QStringList &iconNames) const
 {
-    QVector<QIcon> icons;
+    QList<QIcon> icons;
     QString current_theme = QIcon::themeName();
 
     QIcon::setThemeName(mName);

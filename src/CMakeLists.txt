@@ -45,8 +45,8 @@ add_executable(lxqt-config
 )
 
 target_link_libraries(lxqt-config
-    Qt5::Widgets
-    Qt5::Xml
+    Qt6::Widgets
+    Qt6::Xml
     lxqt
 )
 

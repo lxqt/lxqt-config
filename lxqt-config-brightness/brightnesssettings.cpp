@@ -47,7 +47,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
             [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()+1); });
     }
 
-    for(const MonitorInfo &monitor: qAsConst(mMonitors))
+    for(const MonitorInfo &monitor: std::as_const(mMonitors))
     {
         OutputWidget *output = new OutputWidget(monitor, this);
         ui->layout->addWidget(output);
@@ -87,7 +87,7 @@ void BrightnessSettings::setBacklight()
     if(interval > 100)
         value = (value * maxBacklight) / 100;
     mBacklight->setBacklight(value);
-    
+
     if (ui->confirmCB->isChecked())
         mConfirmRequestTimer.start();
 }
@@ -113,16 +113,21 @@ void BrightnessSettings::requestConfirmation()
         , tr("Confirmation required. Are the settings correct?")
         , QMessageBox::Yes | QMessageBox::No};
     int timeout = 5; // seconds
-    QString no_text = msg.button(QMessageBox::No)->text();
-    no_text += QStringLiteral("(%1)");
-    msg.setButtonText(QMessageBox::No, no_text.arg(timeout));
+    QString no_text;
+    if (auto btn = msg.button(QMessageBox::No)) {
+        no_text = btn->text();
+        no_text += QStringLiteral("(%1)");
+        btn->setText(no_text.arg(timeout));
+    }
     msg.setDefaultButton(QMessageBox::No);
 
     QTimer timeoutTimer;
     timeoutTimer.setSingleShot(false);
     timeoutTimer.setInterval(1000);
     connect(&timeoutTimer, &QTimer::timeout, [&] {
-        msg.setButtonText(QMessageBox::No, no_text.arg(--timeout));
+        if (auto btn = msg.button(QMessageBox::No)) {
+            btn->setText(no_text.arg(--timeout));
+        }
         if (timeout == 0)
         {
             timeoutTimer.stop();
@@ -149,7 +154,7 @@ void BrightnessSettings::requestConfirmation()
         }
 
         mBrightness->setMonitorsSettings(mMonitors);
-        for (const auto & monitor : qAsConst(mMonitors))
+        for (const auto & monitor : std::as_const(mMonitors))
             emit monitorReverted(monitor);
     }
 }
@@ -164,7 +169,7 @@ void BrightnessSettings::revertValues()
     }
 
     mBrightness->setMonitorsSettings(mMonitorsInitial);
-    for (const auto & monitor : qAsConst(mMonitorsInitial))
+    for (const auto & monitor : std::as_const(mMonitorsInitial))
             emit monitorReverted(monitor);
 }
 

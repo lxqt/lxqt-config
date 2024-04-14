@@ -14,7 +14,7 @@ set(UI_FILES
     localeconfig.ui
 )
 
-qt5_wrap_cpp(COMBO_HEADER combobox.h)
+qt6_wrap_cpp(COMBO_HEADER combobox.h)
 
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
@@ -44,8 +44,8 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    Qt5::Widgets
-    Qt5::Xml
+    Qt6::Widgets
+    Qt6::Xml
     lxqt
 )
 

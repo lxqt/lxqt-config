@@ -1,3 +1,12 @@
+lxqt-config-1.4.0 / 2023-11-05
+===============================
+ * Use lxqt-menu-data.
+ * Fixed setting of primary monitor after a change in libkscreen.
+ * Put cursor settings in ~/.Xresources (fixes the problem of not being able to set the cursor or its size when Xresources from `/etc` is read).
+ * Corrected some typos.
+ * Improved the message about default monitor settings.
+ * Don't return uninitialized struct members.
+
 lxqt-config-1.3.0 / 2023-04-15
 ===============================
  * Fixed potential segfault when loading keyboard layout settings.

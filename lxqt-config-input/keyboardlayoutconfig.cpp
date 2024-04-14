@@ -257,7 +257,7 @@ void KeyboardLayoutConfig::applyConfig() {
     }
   }
 
-  for(const QString& option : qAsConst(currentOptions_)) {
+  for(const QString& option : std::as_const(currentOptions_)) {
     if (!option.startsWith(QLatin1String("grp:"))) {
       args += QLatin1String("-option");
       args += option;

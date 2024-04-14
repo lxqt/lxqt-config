@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="171"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&quot;%1&quot; buvo perrašyta.&lt;/p&gt;&lt;p&gt;Savo senųjų nustatymų kopiją galite rasti ties &quot;%2&quot;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;„%1“ buvo perrašyta.&lt;/p&gt;&lt;p&gt;Savo senųjų nustatymų kopiją galite rasti ties „%2“&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
@@ -188,9 +188,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Norėdami pabandyti suvienodintą apipavidalinimą, visuose sąrašuose pasirinkite panašų stilių/apipavidalinimų (jei prieinama), arba pasirinkite &quot;gtk2&quot; Qt stilių (jei prieinama), kuris mėgdžiotų GTK apipavidalinimus.
+        <translation>Norėdami pabandyti suvienodintą apipavidalinimą, visuose sąrašuose pasirinkite panašų stilių/apipavidalinimų (jei prieinama), arba pasirinkite „gtk2“ Qt stilių (jei prieinama), kuris mėgdžiotų GTK apipavidalinimus.
 
-Įsitikinkite, kad yra įdiegtas paketas &quot;xsettingsd&quot;, kuris padėtų GTK programoms iš karto taikyti apipavidalinimus.</translation>
+Įsitikinkite, kad yra įdiegtas paketas „xsettingsd“, kuris padėtų GTK programoms iš karto taikyti apipavidalinimus.</translation>
     </message>
 </context>
 <context>
