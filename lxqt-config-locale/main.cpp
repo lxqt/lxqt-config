@@ -53,8 +53,14 @@ int main (int argc, char **argv)
     LocaleConfig* localePage = new LocaleConfig(&settings, &session_settings, dialog);
     dialog->addPage(localePage, QObject::tr("Locale Settings"), QStringList() << QStringLiteral("preferences-desktop-locale") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, localePage, &LocaleConfig::initControls);
-    QObject::connect(dialog, &LXQt::ConfigDialog::save, localePage, &LocaleConfig::saveSettings);
 
+    QObject::connect(dialog, &LXQt::ConfigDialog::clicked, localePage, &LocaleConfig::clickedEventFilter);
+    QObject::connect(localePage, &LocaleConfig::enableApply, dialog, [dialog](bool state) {
+        dialog->enableButton(QDialogButtonBox::Apply, state);
+    });
+
+    dialog->setButtons(QDialogButtonBox::Reset | QDialogButtonBox::Apply | QDialogButtonBox::Close);
+    dialog->enableButton(QDialogButtonBox::Apply, false);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
     dialog->show();

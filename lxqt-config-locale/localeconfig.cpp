@@ -111,6 +111,7 @@ void LocaleConfig::load()
     connect(m_ui->checkDetailed, &QGroupBox::toggled, [ = ]()
     {
         updateExample();
+        emit enableApply(true);
         hasChanged = true;
     });
 
@@ -135,8 +136,9 @@ void LocaleConfig::connectCombo(QComboBox *combo)
 {
     connect(combo, QOverload<int>::of(&QComboBox::currentIndexChanged), [ = ]()
     {
-        hasChanged = true;
         updateExample();
+        emit enableApply(true);
+        hasChanged = true;
     });
 }
 
@@ -304,22 +306,27 @@ void LocaleConfig::writeConfig()
     mSettings->endGroup();
 }
 
+void LocaleConfig::clickedEventFilter(QDialogButtonBox::StandardButton btn)
+{
+    if (btn == QDialogButtonBox::Apply)
+    {
+        saveSettings();
+        emit enableApply(false);
+    }
+}
+
 void LocaleConfig::saveSettings()
 {
     if (hasChanged)
     {
         QMessageBox msgBox;
         msgBox.setWindowTitle(tr("Format Settings Changed"));
-        msgBox.setText(tr("Do you want to save your changes? They will take effect the next time you log in."));
-        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
-        msgBox.setDefaultButton(QMessageBox::Cancel);
+        msgBox.setText(tr("Settings will take effect the next time you log in."));
+        msgBox.setStandardButtons(QMessageBox::Ok);
 
-        int ret = msgBox.exec();
-        if( ret == QMessageBox::Save )
-        {
-            writeConfig();
-            writeExports();
-        }
+        msgBox.exec();
+        writeConfig();
+        writeExports();
     }
 
 }
