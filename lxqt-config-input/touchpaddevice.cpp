@@ -368,7 +368,12 @@ bool TouchpadDevice::setTapToDragEnabled(bool enabled) const
 
 bool TouchpadDevice::setAccelSpeed(float speed) const
 {
-    return set_xi2_property(LIBINPUT_PROP_ACCEL, QList<QVariant>({speed}));
+    // Clang is very fussy with narrowing in initializer list
+    // We just avoid it.
+    QList<QVariant> l;
+    l.append(speed);
+
+    return set_xi2_property(LIBINPUT_PROP_ACCEL, l);
 }
 
 int TouchpadDevice::scrollMethodsAvailable() const
