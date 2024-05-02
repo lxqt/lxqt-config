@@ -198,7 +198,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Mouse and Touchpad</source>
-        <translation>Мышь и тачпад</translation>
+        <translation>Мышь и сенсорная панель</translation>
     </message>
 </context>
 <context>

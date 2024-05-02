@@ -52,17 +52,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Nume font</translation>
+        <translation>Nume font:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Stil</translation>
+        <translation>Stil:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Marime punct</translation>
+        <translation>Marime punct:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Sursa</translation>
+        <translation>Urmatoarele setări vor afecta doar programele nou pornite</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Font hinting style:</source>
-        <translation>Stil previzualizare font</translation>
+        <translation>Stil previzualizare font:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
         <source>Slight</source>
-        <translation>Subtire</translation>
+        <translation>Subțire</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
         <source>Resolution (DPI):</source>
-        <translation>Rezoluție (DPI)</translation>
+        <translation>Rezoluție (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="155"/>
@@ -148,17 +148,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="193"/>
         <source>BGR</source>
-        <translation type="unfinished"></translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="198"/>
         <source>VRGB</source>
-        <translation type="unfinished"></translation>
+        <translation>VRGB</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="203"/>
         <source>VBGR</source>
-        <translation type="unfinished"></translation>
+        <translation>VBGR</translation>
     </message>
 </context>
 <context>
@@ -166,12 +166,12 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Seteaza teme GTK (fisierele de configurare GTK vor fi suprascrise)</translation>
+        <translation>Seteaza teme GTK (fisierele de configurare GTK vor fi suprascrise!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="83"/>
