@@ -62,7 +62,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="53"/>
         <source>Point size:</source>
-        <translation>Кегль:</translation>
+        <translation>Размер шрифта:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="68"/>
@@ -203,7 +203,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Тема Значков</translation>
+        <translation>Тема значков</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
@@ -236,7 +236,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="182"/>
         <source>Open theme folder</source>
-        <translation>Открыть директорию темы</translation>
+        <translation>Открыть каталог темы</translation>
     </message>
 </context>
 <context>

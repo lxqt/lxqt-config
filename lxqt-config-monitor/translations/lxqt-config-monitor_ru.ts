@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation>Применены настройки монитора по умолчанию. Если вы хотите изменить настройки мониторов, используйте lxqt-config-monitor.</translation>
+        <translation>Были применены стандартные настройки монитора. Изменить параметры монитора можно с помощью lxqt-config-monitor.</translation>
     </message>
 </context>
 <context>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation>Информация</translation>
+        <translation>Сведения</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
@@ -244,7 +244,7 @@
         <location filename="../monitorwidget.cpp" line="134"/>
         <source>EISA device ID: %1
 </source>
-        <translation>EISA ID устройства: %1
+        <translation>ИД устройства EISA: %1
 </translation>
     </message>
     <message>
