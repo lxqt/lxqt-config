@@ -121,7 +121,7 @@ int main (int argc, char **argv)
     });
 
     // apply all changes on clicking Apply
-    QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=] (QDialogButtonBox::StandardButton btn) {
+    QObject::connect(dialog, &LXQt::ConfigDialog::clicked, [=, &mConfigAppearanceSettings] (QDialogButtonBox::StandardButton btn) {
         if (btn == QDialogButtonBox::Apply)
         {
             // FIXME: Update cursor style on Qt apps on wayland and GTK on X11.
@@ -136,6 +136,8 @@ int main (int argc, char **argv)
         }
         else if (btn == QDialogButtonBox::Reset)
             dialog->enableButton(QDialogButtonBox::Apply, false); // disable Apply button on resetting too
+        else if (btn == QDialogButtonBox::Close)
+            mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
     });
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
@@ -144,7 +146,6 @@ int main (int argc, char **argv)
     dialog->show();
 
     int ret = app.exec();
-    mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
     return ret;
 }
 
