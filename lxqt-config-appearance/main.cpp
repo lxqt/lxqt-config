@@ -151,6 +151,10 @@ int main (int argc, char **argv)
     dialog->show();
 
     int ret = app.exec();
+
+    delete settings;
+    delete sessionSettings;
+
     return ret;
 }
 
