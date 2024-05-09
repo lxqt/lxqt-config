@@ -138,13 +138,19 @@ int main (int argc, char **argv)
             dialog->enableButton(QDialogButtonBox::Apply, false); // disable Apply button on resetting too
     });
 
+    app.setQuitOnLastWindowClosed(false);
+    app.connect(&app, &LXQt::SingleApplication::lastWindowClosed, [=, &mConfigAppearanceSettings] () {
+        mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
+        LXQt::SingleApplication::quit();
+
+    });
+
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-theme")));
     dialog->resize(mConfigAppearanceSettings.value(QStringLiteral("size")).toSize().expandedTo(QSize(600, 400)));
     dialog->show();
 
     int ret = app.exec();
-    mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
     return ret;
 }
 
