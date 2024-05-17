@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="108"/>
         <source>Repeat delay:</source>
-        <translation>Повторно закъснение:</translation>
+        <translation>Закъснение на повторение:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
@@ -53,12 +53,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
         <source>Repeat interval:</source>
-        <translation>Повтори интервал:</translation>
+        <translation>Интервал на повторение:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="129"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Пишете в следната кутия, за да тествате клавиатурните настройки</translation>
+        <translation>В долното поле може да тествате клавиатурните настройки</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="150"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Забележка&lt;/span&gt;: Ако използвате &lt;span style=&quot; font-weight:600;&quot;&gt;метод на въвеждане&lt;/span&gt;, като IBus, uim, fcitx или gcin, настройките тук &lt;span style=&quot; font-weight:600;&quot;&gt;може да не работят&lt;/span&gt;, защото са презаписани от този метод на въвеждане.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Забележка&lt;/span&gt;: Ако използвате &lt;span style=&quot; font-weight:600;&quot;&gt;метод на въвеждане&lt;/span&gt;, като IBus, uim, fcitx или gcin, настройките тук &lt;span style=&quot; font-weight:600;&quot;&gt;може да не работят&lt;/span&gt;, защото ще бъдат презаписани.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Интерван на двойния клик:</translation>
+        <translation>Интервал за двойно кликване:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Линии на скрола за превъртане:</translation>
+        <translation>Брой редове при превъртане:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>Един клик за активиране на елементи</translation>
+        <translation>Единично кликване за активиране на елементи</translation>
     </message>
 </context>
 <context>

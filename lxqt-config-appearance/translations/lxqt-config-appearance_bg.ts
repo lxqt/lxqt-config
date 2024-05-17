@@ -123,7 +123,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="141"/>
         <source>Font hinting</source>
-        <translation>Хинтинг на шрифта</translation>
+        <translation>Хинтиране на шрифта</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="148"/>
@@ -226,7 +226,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation>Използвай фон от темата</translation>
+        <translation>Използване на фон от темата</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="94"/>
@@ -436,7 +436,7 @@ Do you want to replace it?</source>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Наистина ли искате да премахнете избраната(ите) палитра(и)?
-Root палитрите ще останат непокътнати, ако съществуват.</translation>
+Основните палитри ще останат непроменени, ако съществуват.</translation>
     </message>
 </context>
 </TS>

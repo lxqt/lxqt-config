@@ -41,7 +41,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation>Интернет браузери</translation>
+        <translation>Уеб браузъри</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation>Файлови мениджъри</translation>
+        <translation>Преглед на файлове</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation>Интернет браузер</translation>
+        <translation>Уеб браузър</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
