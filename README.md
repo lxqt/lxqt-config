@@ -43,6 +43,7 @@ Configures hardware of pointer devices. Settings like repeat delay and interval
 of keyboards or acceleration of pointer devices.
 
 Binary `lxqt-config-input`.
+**Note**: Not supported currently under wayland.
 
 #### Locale
 
@@ -58,6 +59,8 @@ Binary `lxqt-config-locale`.
 Adjusts screen resolutions, positioning of screens and the likes.
 
 Binary `lxqt-config-monitor`.
+
+**Note**: Not supported currently under wlroots based compositors.
 
 ### Configuration Center
 
