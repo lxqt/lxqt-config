@@ -102,12 +102,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="77"/>
         <source>Up</source>
-        <translation>Sopra</translation>
+        <translation>Insù</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="84"/>
         <source>Down</source>
-        <translation>Sotto</translation>
+        <translation>Ingiù</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
