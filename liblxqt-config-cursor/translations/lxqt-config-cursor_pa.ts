@@ -9,12 +9,12 @@
         <translation>LXQt ਮਾਊਸ ਥੀਮ ਸੰਰਚਨਾ</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>ਨਵਾਂ ਥੀਮ ਇੰਸਟਾਲ ਕਰੋ(&amp;I)...</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>ਇਸ ਤਬਦੀਲੀ ਲਈ LXQt ਸ਼ੈਸ਼ਨ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰੋ।</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>ਥੀਮ ਨੂੰ ਹਟਾਓ(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>ਆਕਾਰ</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="229"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme ਗਲਤੀ</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>ਤੁਸੀਂ ਸਰਗਰਮ ਥੀਮ ਨੂੰ ਹਟਾ ਨਹੀਂ ਸਕਦੇ ਹੋ!</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>ਨਾਂ</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>ਵਰਣਨ</translation>
     </message>

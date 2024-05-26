@@ -60,27 +60,27 @@
         <translation>Stile:</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="53"/>
+        <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
         <translation>Dimensione:</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="68"/>
+        <location filename="../fontsconfig.ui" line="54"/>
         <source>Normal</source>
         <translation>Normale</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="73"/>
+        <location filename="../fontsconfig.ui" line="59"/>
         <source>Bold</source>
         <translation>Grassetto</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="78"/>
+        <location filename="../fontsconfig.ui" line="64"/>
         <source>Italic</source>
         <translation>Corsivo</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="83"/>
+        <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold Italic</source>
         <translation>Grassetto corsivo</translation>
     </message>
@@ -95,69 +95,69 @@
         <translation>Utilizza l&apos;anti-aliasing per i caratteri</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="107"/>
+        <location filename="../fontsconfig.ui" line="153"/>
         <source>Font hinting style:</source>
         <translation>Stile di hinting del carattere:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
-        <location filename="../fontsconfig.ui" line="183"/>
+        <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="123"/>
+        <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
         <translation>Leggero</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="128"/>
+        <location filename="../fontsconfig.ui" line="174"/>
         <source>Medium</source>
         <translation>Medio</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="133"/>
+        <location filename="../fontsconfig.ui" line="179"/>
         <source>Full</source>
         <translation>Intero</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="141"/>
+        <location filename="../fontsconfig.ui" line="146"/>
         <source>Font hinting</source>
         <translation>Hinting caratteri</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="148"/>
+        <location filename="../fontsconfig.ui" line="187"/>
         <source>Resolution (DPI):</source>
         <translation>Resoluzione (DPI):</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="155"/>
+        <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
         <translation>Hinting automatico</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="172"/>
+        <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
         <translatorcomment>no idea how to translate that</translatorcomment>
         <translation>Antialiasing dei subpixel:</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="188"/>
+        <location filename="../fontsconfig.ui" line="123"/>
         <source>RGB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="193"/>
+        <location filename="../fontsconfig.ui" line="128"/>
         <source>BGR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="198"/>
+        <location filename="../fontsconfig.ui" line="133"/>
         <source>VRGB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="203"/>
+        <location filename="../fontsconfig.ui" line="138"/>
         <source>VBGR</source>
         <translation></translation>
     </message>
@@ -175,12 +175,12 @@
         <translation>Imposta tema GTK (verranno sovrascritti i file di configurazione di GTK!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="83"/>
+        <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 3 Theme</source>
         <translation>Tema GTK 3</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="77"/>
         <source>GTK 2 Theme</source>
         <translation>Tema GTK 2</translation>
     </message>
@@ -262,37 +262,37 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Configurazione dell&apos;aspetto di LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="75"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
         <translation>Stile degli elementi</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="84"/>
+        <location filename="../main.cpp" line="83"/>
         <source>Icons Theme</source>
         <translation>Tema delle icone</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="93"/>
+        <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
         <translation>Tema di LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="101"/>
+        <location filename="../main.cpp" line="100"/>
         <source>Font</source>
         <translation>Carattere</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="111"/>
+        <location filename="../main.cpp" line="110"/>
         <source>Cursor</source>
         <translation>Puntatore</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="118"/>
+        <location filename="../main.cpp" line="117"/>
         <source>GTK Style</source>
         <translation>Stile GTK</translation>
     </message>

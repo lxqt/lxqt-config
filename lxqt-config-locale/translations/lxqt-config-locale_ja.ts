@@ -64,33 +64,33 @@
         <translation>単位:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="126"/>
+        <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
         <translation>変更なし</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="312"/>
         <source>Format Settings Changed</source>
         <translation>書式設定が変更されました</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="313"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>変更は次回のログイン時から有効になります。
 変更を保存しますか？</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="417"/>
+        <location filename="../localeconfig.cpp" line="416"/>
         <source>Imperial UK</source>
         <translation>ヤード・ポンド法(UK)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="421"/>
+        <location filename="../localeconfig.cpp" line="420"/>
         <source>Imperial US</source>
         <translation>ヤード・ポンド法(US)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="425"/>
+        <location filename="../localeconfig.cpp" line="424"/>
         <source>Metric</source>
         <translation>メートル法</translation>
     </message>
@@ -98,12 +98,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
         <translation>LXQt 地域の設定</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
         <translation>地域の設定</translation>
     </message>

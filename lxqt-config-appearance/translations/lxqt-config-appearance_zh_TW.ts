@@ -60,27 +60,27 @@
         <translation>樣式：</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="53"/>
+        <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
         <translation>字體大小：</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="68"/>
+        <location filename="../fontsconfig.ui" line="54"/>
         <source>Normal</source>
         <translation>正常</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="73"/>
+        <location filename="../fontsconfig.ui" line="59"/>
         <source>Bold</source>
         <translation>粗體</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="78"/>
+        <location filename="../fontsconfig.ui" line="64"/>
         <source>Italic</source>
         <translation>斜體</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="83"/>
+        <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold Italic</source>
         <translation>粗斜體</translation>
     </message>
@@ -95,68 +95,68 @@
         <translation>使用反鋸齒字型</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="107"/>
+        <location filename="../fontsconfig.ui" line="153"/>
         <source>Font hinting style:</source>
         <translation>字型微調樣式：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
-        <location filename="../fontsconfig.ui" line="183"/>
+        <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
         <translation>無</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="123"/>
+        <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
         <translation>稍微</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="128"/>
+        <location filename="../fontsconfig.ui" line="174"/>
         <source>Medium</source>
         <translation>中等</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="133"/>
+        <location filename="../fontsconfig.ui" line="179"/>
         <source>Full</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="141"/>
+        <location filename="../fontsconfig.ui" line="146"/>
         <source>Font hinting</source>
         <translation>字型微調</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="148"/>
+        <location filename="../fontsconfig.ui" line="187"/>
         <source>Resolution (DPI):</source>
         <translation>解析度 (DPI)：</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="155"/>
+        <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
         <translation>自動微調</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="172"/>
+        <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
         <translation>次像素反鋸齒：</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="188"/>
+        <location filename="../fontsconfig.ui" line="123"/>
         <source>RGB</source>
         <translation>RGB (紅綠藍)</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="193"/>
+        <location filename="../fontsconfig.ui" line="128"/>
         <source>BGR</source>
         <translation>BGR (藍綠紅)</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="198"/>
+        <location filename="../fontsconfig.ui" line="133"/>
         <source>VRGB</source>
         <translation>VRGB (灰紅綠藍)</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="203"/>
+        <location filename="../fontsconfig.ui" line="138"/>
         <source>VBGR</source>
         <translation>VBGR (灰藍綠紅)</translation>
     </message>
@@ -174,12 +174,12 @@
         <translation>設定GTK主題 (GTK設定將會被覆蓋!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="83"/>
+        <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 3 Theme</source>
         <translation>GTK 3主題</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="77"/>
         <source>GTK 2 Theme</source>
         <translation>GTK 2主題</translation>
     </message>
@@ -261,37 +261,37 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
         <translation>LXQt自訂外觀</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="75"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
         <translation>小工具樣式</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="84"/>
+        <location filename="../main.cpp" line="83"/>
         <source>Icons Theme</source>
         <translation>圖示主題</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="93"/>
+        <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
         <translation>LXQt主題</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="101"/>
+        <location filename="../main.cpp" line="100"/>
         <source>Font</source>
         <translation>字型</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="111"/>
+        <location filename="../main.cpp" line="110"/>
         <source>Cursor</source>
         <translation>游標</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="118"/>
+        <location filename="../main.cpp" line="117"/>
         <source>GTK Style</source>
         <translation>GTK 樣式</translation>
     </message>

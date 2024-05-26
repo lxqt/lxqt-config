@@ -50,61 +50,68 @@
         <translation>Saved settings</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="38"/>
+        <location filename="../managesavedsettings.ui" line="45"/>
         <source>Rename</source>
         <translation>Rename</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="45"/>
+        <location filename="../managesavedsettings.ui" line="52"/>
         <source>Delete</source>
         <translation>Delete</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="52"/>
-        <source>Apply</source>
-        <translation>Apply</translation>
-    </message>
-    <message>
-        <location filename="../managesavedsettings.cpp" line="62"/>
+        <location filename="../managesavedsettings.cpp" line="66"/>
         <source>None</source>
         <translation>None</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="65"/>
+        <location filename="../managesavedsettings.cpp" line="69"/>
         <source>Left</source>
         <translation>Left</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="68"/>
+        <location filename="../managesavedsettings.cpp" line="72"/>
         <source>Inverted</source>
         <translation>Inverted</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="71"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
         <source>Right</source>
         <translation>Right</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>True</source>
         <translation>True</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>False</source>
         <translation>False</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name:</source>
         <translation>Name:</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="172"/>
+        <source>Settings Activation Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="173"/>
+        <source>Selected settings cannot be applied with currently active monitors.
+
+Please choose from the highlighted configurations.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -128,17 +135,29 @@
         <translation>Settings</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="106"/>
+        <location filename="../monitorsettingsdialog.cpp" line="62"/>
+        <source>Platform unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="63"/>
+        <source>LXQt monitor settings are currently unsupported under this wayland compositor.
+
+You can configure your monitor(s) with kanshi.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="114"/>
         <source>Fast Menu</source>
         <translation>Fast Menu</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="110"/>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Set position</source>
         <translation>Set position</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="229"/>
+        <location filename="../monitorsettingsdialog.cpp" line="237"/>
         <source>Advanced settings</source>
         <translation>Advanced settings</translation>
     </message>
@@ -151,32 +170,32 @@
         <translation>Setup</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="29"/>
+        <location filename="../monitorwidget.ui" line="64"/>
         <source> (x)</source>
         <translation> (x)</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="45"/>
+        <location filename="../monitorwidget.ui" line="80"/>
         <source> (y)</source>
         <translation> (y)</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="78"/>
+        <location filename="../monitorwidget.ui" line="36"/>
         <source>Resolution:</source>
         <translation>Resolution:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="90"/>
+        <location filename="../monitorwidget.ui" line="27"/>
         <source>Enable this display</source>
         <translation>Enable this display</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="98"/>
+        <location filename="../monitorwidget.ui" line="49"/>
         <source>This is my primary display</source>
         <translation>This is my primary display</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="103"/>
+        <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
         <translation>This screen extends another display</translation>
     </message>
@@ -186,12 +205,12 @@
         <translation>Advanced</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="146"/>
+        <location filename="../monitorwidget.ui" line="143"/>
         <source>Refresh rate:</source>
         <translation>Refresh rate:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="153"/>
+        <location filename="../monitorwidget.ui" line="133"/>
         <source>Rotation:</source>
         <translation>Rotation:</translation>
     </message>
@@ -268,7 +287,7 @@
         <translation>Inverted</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="245"/>
+        <location filename="../monitorwidget.cpp" line="247"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>

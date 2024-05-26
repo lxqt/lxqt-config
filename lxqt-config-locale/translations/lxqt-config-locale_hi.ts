@@ -64,32 +64,32 @@
         <translation>नाप-तौल इकाई :</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="126"/>
+        <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
         <translation>कोई परिवर्तन नहीं</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="312"/>
         <source>Format Settings Changed</source>
         <translation>प्रारूप सेटिंग्स परिवर्तित</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="313"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>क्या आप अपने परिवर्तनों को सहेजना चाहते हैं? अगली बार जब आप लॉग इन करेंगे तो वे प्रभावी होंगे.</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="417"/>
+        <location filename="../localeconfig.cpp" line="416"/>
         <source>Imperial UK</source>
         <translation>इंपीरियल UK</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="421"/>
+        <location filename="../localeconfig.cpp" line="420"/>
         <source>Imperial US</source>
         <translation>इंपीरियल US</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="425"/>
+        <location filename="../localeconfig.cpp" line="424"/>
         <source>Metric</source>
         <translation>मीट्रिक</translation>
     </message>
@@ -97,12 +97,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
         <translation>LXQt स्थानीय कॉन्फ़िगरेशन</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
         <translation>स्थानीय सेटिंग</translation>
     </message>

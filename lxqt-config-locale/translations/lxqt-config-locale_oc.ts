@@ -64,32 +64,32 @@
         <translation>Unitats de mesura&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="126"/>
+        <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
         <translation>Cap de cambiament</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="312"/>
         <source>Format Settings Changed</source>
         <translation>Paramètres del format modificats</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="313"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>Volètz enregistrar las modificacions&#x202f;? S’aplicaràn a la connexion venenta.</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="417"/>
+        <location filename="../localeconfig.cpp" line="416"/>
         <source>Imperial UK</source>
         <translation>Imperial Reialme-Unit</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="421"/>
+        <location filename="../localeconfig.cpp" line="420"/>
         <source>Imperial US</source>
         <translation>Imperial Estats-Units</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="425"/>
+        <location filename="../localeconfig.cpp" line="424"/>
         <source>Metric</source>
         <translation>Metric</translation>
     </message>
@@ -97,12 +97,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
         <translation>Paramètres regionals de LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
         <translation>Paramètres regionals</translation>
     </message>

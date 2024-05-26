@@ -9,60 +9,60 @@
         <translation>Formulář</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="20"/>
+        <location filename="../keyboardconfig.ui" line="143"/>
         <source>Cursor flash time:</source>
         <translation>Rychlost blikání ukazatele:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="27"/>
+        <location filename="../keyboardconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
         <translation>&lt;b&gt;Klávesnice&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="34"/>
+        <location filename="../keyboardconfig.ui" line="160"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>Při chybném vstupu z klávesnice zvukově upozornit</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="41"/>
+        <location filename="../keyboardconfig.ui" line="150"/>
         <source> ms</source>
         <translation> ms</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="51"/>
+        <location filename="../keyboardconfig.ui" line="27"/>
         <source>Character Repeat</source>
         <translation>Opakování znaku</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="79"/>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
+        <location filename="../keyboardconfig.ui" line="116"/>
         <source>Long</source>
         <translation>Dlouze</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="108"/>
+        <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>Prodleva opakování:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="115"/>
-        <location filename="../keyboardconfig.ui" line="136"/>
+        <location filename="../keyboardconfig.ui" line="40"/>
+        <location filename="../keyboardconfig.ui" line="90"/>
         <source>Short</source>
         <translation>Krátce</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.ui" line="83"/>
         <source>Repeat interval:</source>
         <translation>Interval opakování:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="129"/>
+        <location filename="../keyboardconfig.ui" line="130"/>
         <source>Type in the following box to test your keyboard settings</source>
         <translation>Nastavení klávesnice vyzkoušíte psaním do následující oblasti</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
-        <location filename="../keyboardconfig.ui" line="157"/>
+        <location filename="../keyboardconfig.ui" line="76"/>
+        <location filename="../keyboardconfig.ui" line="123"/>
         <source>0</source>
         <translation>0</translation>
     </message>
@@ -171,32 +171,44 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="70"/>
+        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <source>Platform unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <source>LXQt input settings are currently unsupported under wayland.
+
+Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Nastavení klávesnice a myši</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="79"/>
+        <location filename="../lxqt-config-input.cpp" line="87"/>
         <source>Mouse</source>
         <translation>Myš</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="88"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Cursor</source>
         <translation>Ukazatel</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="95"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard</source>
         <translation>Klávesnice</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="111"/>
         <source>Keyboard Layout</source>
         <translation>Rozložení klávesnice</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="120"/>
         <source>Mouse and Touchpad</source>
         <translation>Myš a touchpad</translation>
     </message>
@@ -232,52 +244,52 @@
         <translation>Zařízení:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>Acceleration speed:</source>
         <translation>Míra zrychlení:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Tap to click</source>
         <translation>Kliknout klepnutím</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="44"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>Přirozený směr posouvání</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="51"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
         <translation>Přetahovat klepnutím</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="79"/>
+        <location filename="../touchpadconfig.ui" line="86"/>
         <source>Scrolling:</source>
         <translation>Posunování:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="102"/>
+        <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Disabled</source>
         <translation>%Vypnuto</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="116"/>
         <source>&amp;Two-Finger</source>
         <translation>Dvěma prs&amp;ty</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="123"/>
         <source>Ed&amp;ge</source>
         <translation>Na ok&amp;raji</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="130"/>
         <source>B&amp;utton</source>
         <translation>&amp;Tlačítko</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="145"/>
+        <location filename="../touchpadconfig.ui" line="30"/>
         <source>DeviceInfoLabel</source>
         <translation>ŠtítekInformaceOZařízení</translation>
     </message>

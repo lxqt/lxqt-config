@@ -9,60 +9,60 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="20"/>
+        <location filename="../keyboardconfig.ui" line="143"/>
         <source>Cursor flash time:</source>
         <translation>Durada del clucatejament del cursor&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="27"/>
+        <location filename="../keyboardconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
         <translation>&lt;b&gt;Clavièr&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="34"/>
+        <location filename="../keyboardconfig.ui" line="160"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>Emetre un son quand i a una error d’entrada del clavièr</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="41"/>
+        <location filename="../keyboardconfig.ui" line="150"/>
         <source> ms</source>
         <translation> ms</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="51"/>
+        <location filename="../keyboardconfig.ui" line="27"/>
         <source>Character Repeat</source>
         <translation>Repeticion de caractèrs</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="79"/>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
+        <location filename="../keyboardconfig.ui" line="116"/>
         <source>Long</source>
         <translation>Long</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="108"/>
+        <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>Relambi de repeticion&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="115"/>
-        <location filename="../keyboardconfig.ui" line="136"/>
+        <location filename="../keyboardconfig.ui" line="40"/>
+        <location filename="../keyboardconfig.ui" line="90"/>
         <source>Short</source>
         <translation>Cort</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.ui" line="83"/>
         <source>Repeat interval:</source>
         <translation>Interval de repeticion&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="129"/>
+        <location filename="../keyboardconfig.ui" line="130"/>
         <source>Type in the following box to test your keyboard settings</source>
         <translation>Picar una frasa per ensajar los reglatges</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
-        <location filename="../keyboardconfig.ui" line="157"/>
+        <location filename="../keyboardconfig.ui" line="76"/>
+        <location filename="../keyboardconfig.ui" line="123"/>
         <source>0</source>
         <translation>0</translation>
     </message>
@@ -171,32 +171,44 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="70"/>
+        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <source>Platform unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <source>LXQt input settings are currently unsupported under wayland.
+
+Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Paramètres clavièr e mirga</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="79"/>
+        <location filename="../lxqt-config-input.cpp" line="87"/>
         <source>Mouse</source>
         <translation>Mirga</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="88"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="95"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard</source>
         <translation>Clavièr</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="111"/>
         <source>Keyboard Layout</source>
         <translation>Agençament del clavièr</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="120"/>
         <source>Mouse and Touchpad</source>
         <translation>Mirga e pavat tactil</translation>
     </message>
@@ -232,52 +244,52 @@
         <translation>Periferic :</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>Acceleration speed:</source>
         <translation>Acceleracion&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Tap to click</source>
         <translation>Tòca per clicar</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="44"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>Desfilament natural</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="51"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
         <translation>Picar per clicar</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="79"/>
+        <location filename="../touchpadconfig.ui" line="86"/>
         <source>Scrolling:</source>
         <translation>Desfilament :</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="102"/>
+        <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Desactivat</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="116"/>
         <source>&amp;Two-Finger</source>
         <translation>&amp;Dos dets</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="123"/>
         <source>Ed&amp;ge</source>
         <translation>Bò&amp;rds</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="130"/>
         <source>B&amp;utton</source>
         <translation>B&amp;oton</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="145"/>
+        <location filename="../touchpadconfig.ui" line="30"/>
         <source>DeviceInfoLabel</source>
         <translation>Etiqueta d’informacions del periferic</translation>
     </message>
