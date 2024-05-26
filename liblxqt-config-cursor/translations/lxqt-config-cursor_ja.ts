@@ -9,12 +9,12 @@
         <translation>LXQt マウステーマの設定</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>使いたいカーソルテーマを選択して下さい (カーソルをテストするにはプレビューの上にマウスを合わせます)。&lt;b&gt;この変更後に LXQt セッションを再起動して下さい&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>新しいテーマのインストール(&amp;I)...</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>この変更を表示するには LXQt セッションを再起動して下さい。</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>テーマの削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="229"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme エラー</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>アクティブなテーマは削除できません！</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>説明</translation>
     </message>

@@ -9,12 +9,12 @@
         <translation>LXQt egértéma beállítások</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Válassza ki a kurzor témát amit szeretne használni. &lt;b&gt;Az érvényesítéshez az LXQt munkamenetet újra kell indítani&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>Ú&amp;j téma telepítése...</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>Az LXQt munkamenetet újra kell indítani a változás érvényesítéséhez.</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>Téma tö&amp;rlése</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>Méret</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="229"/>
         <source>XCurTheme error</source>
         <translation>Kurzortéma-hiba</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Az aktív témát nem lehet eltávolítani!</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>Leírás</translation>
     </message>

@@ -9,12 +9,12 @@
         <translation>LXQt-cursorthema-instellingen</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Kies het cursorthema dat u wilt gebruiken (ga met de muis naar de voorvertoning om uit te proberen). &lt;b&gt;Herstart de LXQt-sessie om de wijziging toe te passen&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>Thema &amp;installeren…</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>Herstart de LXQt-sessie om de wijziging toe te passen.</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>Thema ve&amp;rwijderen</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>Grootte</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="229"/>
         <source>XCurTheme error</source>
         <translation>XcurTheme-fout</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>U kunt het actieve thema niet verwijderen!</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>Naam</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>Beschrijving</translation>
     </message>

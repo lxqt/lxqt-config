@@ -50,61 +50,68 @@
         <translation>已保存的设置</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="38"/>
+        <location filename="../managesavedsettings.ui" line="45"/>
         <source>Rename</source>
         <translation>重命名</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="45"/>
+        <location filename="../managesavedsettings.ui" line="52"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="52"/>
-        <source>Apply</source>
-        <translation>应用</translation>
-    </message>
-    <message>
-        <location filename="../managesavedsettings.cpp" line="62"/>
+        <location filename="../managesavedsettings.cpp" line="66"/>
         <source>None</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="65"/>
+        <location filename="../managesavedsettings.cpp" line="69"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="68"/>
+        <location filename="../managesavedsettings.cpp" line="72"/>
         <source>Inverted</source>
         <translation>上下反转</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="71"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>True</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>False</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name:</source>
         <translation>名称:</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="172"/>
+        <source>Settings Activation Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="173"/>
+        <source>Selected settings cannot be applied with currently active monitors.
+
+Please choose from the highlighted configurations.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -128,17 +135,29 @@
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="106"/>
+        <location filename="../monitorsettingsdialog.cpp" line="62"/>
+        <source>Platform unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="63"/>
+        <source>LXQt monitor settings are currently unsupported under this wayland compositor.
+
+You can configure your monitor(s) with kanshi.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="114"/>
         <source>Fast Menu</source>
         <translation>快速菜单</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="110"/>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Set position</source>
         <translation>设置位置</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="229"/>
+        <location filename="../monitorsettingsdialog.cpp" line="237"/>
         <source>Advanced settings</source>
         <translation>高级设置</translation>
     </message>
@@ -151,32 +170,32 @@
         <translation>配置</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="29"/>
+        <location filename="../monitorwidget.ui" line="64"/>
         <source> (x)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="45"/>
+        <location filename="../monitorwidget.ui" line="80"/>
         <source> (y)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="78"/>
+        <location filename="../monitorwidget.ui" line="36"/>
         <source>Resolution:</source>
         <translation>分辨率:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="90"/>
+        <location filename="../monitorwidget.ui" line="27"/>
         <source>Enable this display</source>
         <translation>开启此显示器</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="98"/>
+        <location filename="../monitorwidget.ui" line="49"/>
         <source>This is my primary display</source>
         <translation>设置为主要显示器</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="103"/>
+        <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
         <translation>设置为扩展显示器</translation>
     </message>
@@ -186,12 +205,12 @@
         <translation>高级</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="146"/>
+        <location filename="../monitorwidget.ui" line="143"/>
         <source>Refresh rate:</source>
         <translation>刷新率:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="153"/>
+        <location filename="../monitorwidget.ui" line="133"/>
         <source>Rotation:</source>
         <translation>旋转:</translation>
     </message>
@@ -268,7 +287,7 @@
         <translation>上下反转</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="245"/>
+        <location filename="../monitorwidget.cpp" line="247"/>
         <source>%1 Hz</source>
         <translation></translation>
     </message>

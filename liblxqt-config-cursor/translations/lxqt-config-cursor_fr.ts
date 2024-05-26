@@ -9,12 +9,12 @@
         <translation>LXQt configuration du thème de la souris</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Sélectionner le thème de curseur que vous souhaitez utiliser (aperçu au survol pour tester le curseur). &lt;b&gt;La session LXQt doit être redémarrée après cette modification&lt;/b&gt; :</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Installer un nouveau thème...</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>Pour observer les changements, la session LXQt doit être redémarrée.</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Supprimer le thème</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>Taille</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="229"/>
         <source>XCurTheme error</source>
         <translation>Erreur XCurTheme</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Vous ne pouvez pas supprimer le thème actuel !</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>Description</translation>
     </message>

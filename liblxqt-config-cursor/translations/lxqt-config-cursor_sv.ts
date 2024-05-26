@@ -9,12 +9,12 @@
         <translation>LXQt Mouse Theme Configuration</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Välj tema för muspekaren (håll muspekaren över för förhandsvisning). &lt;b&gt;LXQt-sessionen måste startas om efter den här ändringen&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Installera nytt tema...</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>LXQt-sessionen måste startas om för att visa den här ändringen.</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Ta bort tema</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>Storlek</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="229"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme-fel</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="230"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Du kan inte ta bort det aktiva temat!</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>Beskrivning</translation>
     </message>

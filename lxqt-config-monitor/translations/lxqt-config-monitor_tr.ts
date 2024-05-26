@@ -50,61 +50,68 @@
         <translation>Kaydedilmiş Ayarlar</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="38"/>
+        <location filename="../managesavedsettings.ui" line="45"/>
         <source>Rename</source>
         <translation>Yeniden Adlandır</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="45"/>
+        <location filename="../managesavedsettings.ui" line="52"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="52"/>
-        <source>Apply</source>
-        <translation>Uygula</translation>
-    </message>
-    <message>
-        <location filename="../managesavedsettings.cpp" line="62"/>
+        <location filename="../managesavedsettings.cpp" line="66"/>
         <source>None</source>
         <translation>Hiçbiri</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="65"/>
+        <location filename="../managesavedsettings.cpp" line="69"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="68"/>
+        <location filename="../managesavedsettings.cpp" line="72"/>
         <source>Inverted</source>
         <translation>Ters Çevrilmiş</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="71"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
         <source>Right</source>
         <translation>Sağ</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>True</source>
         <translation>Doğru</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>False</source>
         <translation>Yanlış</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name</source>
         <translation>Adı</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name:</source>
         <translation>Adı:</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="172"/>
+        <source>Settings Activation Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="173"/>
+        <source>Selected settings cannot be applied with currently active monitors.
+
+Please choose from the highlighted configurations.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -128,17 +135,29 @@
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="106"/>
+        <location filename="../monitorsettingsdialog.cpp" line="62"/>
+        <source>Platform unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="63"/>
+        <source>LXQt monitor settings are currently unsupported under this wayland compositor.
+
+You can configure your monitor(s) with kanshi.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="114"/>
         <source>Fast Menu</source>
         <translation>Hızlı Menü</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="110"/>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Set position</source>
         <translation>Konumu ayarla</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="229"/>
+        <location filename="../monitorsettingsdialog.cpp" line="237"/>
         <source>Advanced settings</source>
         <translation>Gelişmiş ayarlar</translation>
     </message>
@@ -151,32 +170,32 @@
         <translation>Ayarla</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="29"/>
+        <location filename="../monitorwidget.ui" line="64"/>
         <source> (x)</source>
         <translation> (x)</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="45"/>
+        <location filename="../monitorwidget.ui" line="80"/>
         <source> (y)</source>
         <translation> (y)</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="78"/>
+        <location filename="../monitorwidget.ui" line="36"/>
         <source>Resolution:</source>
         <translation>Çözünürlük:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="90"/>
+        <location filename="../monitorwidget.ui" line="27"/>
         <source>Enable this display</source>
         <translation>Bu ekranı etkinleştir</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="98"/>
+        <location filename="../monitorwidget.ui" line="49"/>
         <source>This is my primary display</source>
         <translation>Bu benim birinci ekranım</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="103"/>
+        <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
         <translation>Bu ekran genişletilmiş diğer ekran</translation>
     </message>
@@ -186,12 +205,12 @@
         <translation>Gelişmiş</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="146"/>
+        <location filename="../monitorwidget.ui" line="143"/>
         <source>Refresh rate:</source>
         <translation>Yineleme oranı:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="153"/>
+        <location filename="../monitorwidget.ui" line="133"/>
         <source>Rotation:</source>
         <translation>Yönlendir:</translation>
     </message>
@@ -268,7 +287,7 @@
         <translation>Ters Çevrilmiş</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="245"/>
+        <location filename="../monitorwidget.cpp" line="247"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>

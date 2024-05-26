@@ -64,32 +64,32 @@
         <translation>度量衡:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="126"/>
+        <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
         <translation>不改变</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="312"/>
         <source>Format Settings Changed</source>
         <translation>已改变格式设置</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="314"/>
+        <location filename="../localeconfig.cpp" line="313"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>是否保存您的设置？设置将在下次登录时生效。</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="417"/>
+        <location filename="../localeconfig.cpp" line="416"/>
         <source>Imperial UK</source>
         <translation>英制</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="421"/>
+        <location filename="../localeconfig.cpp" line="420"/>
         <source>Imperial US</source>
         <translation>美制</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="425"/>
+        <location filename="../localeconfig.cpp" line="424"/>
         <source>Metric</source>
         <translation>公制</translation>
     </message>
@@ -97,12 +97,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
         <translation>LXQt 区域配置</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
         <translation>区域设置</translation>
     </message>

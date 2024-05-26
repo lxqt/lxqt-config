@@ -9,60 +9,60 @@
         <translation>表單</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="20"/>
+        <location filename="../keyboardconfig.ui" line="143"/>
         <source>Cursor flash time:</source>
         <translation>游標閃爍時間：</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="27"/>
+        <location filename="../keyboardconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard&lt;/b&gt;</source>
         <translation>&lt;b&gt;鍵盤&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="34"/>
+        <location filename="../keyboardconfig.ui" line="160"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>鍵盤輸入錯誤時發出嗶聲</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="41"/>
+        <location filename="../keyboardconfig.ui" line="150"/>
         <source> ms</source>
         <translation> 毫秒</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="51"/>
+        <location filename="../keyboardconfig.ui" line="27"/>
         <source>Character Repeat</source>
         <translation>字元重複</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="79"/>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
+        <location filename="../keyboardconfig.ui" line="116"/>
         <source>Long</source>
         <translation>長</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="108"/>
+        <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>重複延遲：</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="115"/>
-        <location filename="../keyboardconfig.ui" line="136"/>
+        <location filename="../keyboardconfig.ui" line="40"/>
+        <location filename="../keyboardconfig.ui" line="90"/>
         <source>Short</source>
         <translation>短</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.ui" line="83"/>
         <source>Repeat interval:</source>
         <translation>重複間隔時間：</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="129"/>
+        <location filename="../keyboardconfig.ui" line="130"/>
         <source>Type in the following box to test your keyboard settings</source>
         <translation>在下列方框裡輸入文字測試你的鍵盤設定</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
-        <location filename="../keyboardconfig.ui" line="157"/>
+        <location filename="../keyboardconfig.ui" line="76"/>
+        <location filename="../keyboardconfig.ui" line="123"/>
         <source>0</source>
         <translation>0</translation>
     </message>
@@ -171,32 +171,44 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="70"/>
+        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <source>Platform unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <source>LXQt input settings are currently unsupported under wayland.
+
+Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>鍵盤和滑鼠設定</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="79"/>
+        <location filename="../lxqt-config-input.cpp" line="87"/>
         <source>Mouse</source>
         <translation>滑鼠</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="88"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Cursor</source>
         <translation>游標</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="95"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Keyboard</source>
         <translation>鍵盤</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="111"/>
         <source>Keyboard Layout</source>
         <translation>鍵盤布局</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="120"/>
         <source>Mouse and Touchpad</source>
         <translation>滑鼠及觸控版</translation>
     </message>
@@ -232,52 +244,52 @@
         <translation>裝置：</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>Acceleration speed:</source>
         <translation>加速：</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Tap to click</source>
         <translation>輕觸以點擊</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="44"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>自然捲動</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="51"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
         <translation>輕觸然後拖曳</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="79"/>
+        <location filename="../touchpadconfig.ui" line="86"/>
         <source>Scrolling:</source>
         <translation>捲動：</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="102"/>
+        <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Disabled</source>
         <translation>停用(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="116"/>
         <source>&amp;Two-Finger</source>
         <translation>雙指(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="123"/>
         <source>Ed&amp;ge</source>
         <translation>邊緣(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="130"/>
         <source>B&amp;utton</source>
         <translation>按鍵(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="145"/>
+        <location filename="../touchpadconfig.ui" line="30"/>
         <source>DeviceInfoLabel</source>
         <translation>裝置資訊</translation>
     </message>
