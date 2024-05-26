@@ -56,7 +56,15 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
             operation->deleteLater();
         }
         else if(configOp && !configOp->config()) {
-            qDebug() << "Error: Config is invalid, probably backend couldn't load";
+            // Show info under wlroots based compositors
+            if (QGuiApplication::platformName() == QLatin1String("wayland")) {
+                QMessageBox::warning(this,
+                                     tr("Platform unsupported"),
+                                     tr("LXQt monitor settings are currently unsupported under this wayland compositor.\n\nYou can configure your monitor(s) with kanshi."));
+            }
+            else {
+                qDebug() << "Error: Config is invalid, probably backend couldn't load";
+            }
             exit(1);
         }
         else if(configOp && configOp->config() && !configOp->config()->screen()) {
