@@ -21,6 +21,7 @@
 #include <LXQt/ConfigDialogCmdLineOptions>
 #include <LXQt/Settings>
 #include <QCommandLineParser>
+#include <QMessageBox>
 #include "mouseconfig.h"
 #include "keyboardconfig.h"
 #include "../liblxqt-config-cursor/selectwnd.h"
@@ -65,6 +66,14 @@ int main(int argc, char** argv) {
         return 0;
     }
 #endif
+    // Show message under wayland only if no options are given
+    if (QGuiApplication::platformName() == QLatin1String("wayland"))
+    {
+        QMessageBox::warning(nullptr,
+            QObject::tr("Platform unsupported"),
+            QObject::tr("LXQt input settings are currently unsupported under wayland.\n\nMouse, touchpad and keyboard can be configured in the settings of the compositor."));
+        return 0;
+    }
 
     LXQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
     dlg.setButtons(QDialogButtonBox::Apply|QDialogButtonBox::Close|QDialogButtonBox::Reset);
