@@ -106,14 +106,16 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>فشل تفعيل الإعدادات</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>لا يمكن تطبيق الإعدادات المحددة مع الشاشات النشطة حاليًا.
+
+الرجاء الاختيار من بين الاعدادات المميزة.</translation>
     </message>
 </context>
 <context>
@@ -139,14 +141,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>المنصة غير مدعومة</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>إعدادات شاشة LXQt غير مدعومة حاليًا ضمن أداة تركيب Wayland هذه.
+
+يمكنك تكوين شاشتك (شاشاتك) باستخدام kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="114"/>
