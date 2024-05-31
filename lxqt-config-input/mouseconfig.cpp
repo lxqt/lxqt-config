@@ -91,10 +91,12 @@ void MouseConfig::setLeftHandedMouse() {
   }
   auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
   if(!x11NativeInterface) {
+    free(buttons);
     return;
   }
   Display* dpy = x11NativeInterface->display();
   if(!dpy) {
+    free(buttons);
     return;
   }
 
