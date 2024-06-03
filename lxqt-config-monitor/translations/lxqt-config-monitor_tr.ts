@@ -104,14 +104,16 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar Etkinleştirme Başarısız</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçilen ayarlar o anda etkin olan ekrana uygulanamaz.
+
+Lütfen vurgulanan yapılandırmalardan birini seçin.</translation>
     </message>
 </context>
 <context>
@@ -137,14 +139,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Platform desteklenmiyor</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ekran ayarları şu anda bu wayland kompozitörü altında desteklenmemektedir.
+
+Ekran(lar)ınızı kanshi ile yapılandırabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="114"/>
