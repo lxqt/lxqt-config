@@ -104,14 +104,16 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία ενεργοποίησης των ρυθμίσεων</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι επιλεγμένες ρυθμίσεις δεν μπορούν να εφαρμοστούν στις ενεργές οθόνες.
+
+Παρακαλώ επιλέξτε μεταξύ των επισημασμένων διαμορφώσεων.</translation>
     </message>
 </context>
 <context>
@@ -137,14 +139,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Μη υποστηριζόμενο πλατύβαθρο</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι ρυθμίσεις οθόνης του LXQt δεν υποστηρίζονται για τον συνθέτη wayland.
+
+Μπορείτε να διαμορφώσετε την οθόνη σας με το kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="114"/>

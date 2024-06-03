@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color.</source>
-        <translation>برای تغییر رنگ کلیک کنید.</translation>
+        <translation>برای تغییر رنگ کلیک کنید.برای تغییر رنگ کلیک کنید.</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="170"/>
         <source>GTK themes</source>
-        <translation>قالب های GTK</translation>
+        <translation>تم های GTK</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="171"/>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>خطا: gsettings قابل اجرا نیست</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
-        <translation type="unfinished"></translation>
+        <translation>اندازه نقطه:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="54"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="153"/>
         <source>Font hinting style:</source>
-        <translation type="unfinished"></translation>
+        <translation>سبک اشاره فونت:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation type="unfinished"></translation>
+        <translation>سبک GTK</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
