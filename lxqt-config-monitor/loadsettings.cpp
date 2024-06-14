@@ -66,39 +66,39 @@ void LoadSettings::applyBestSettings()
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
         if (configOp) {
             bool ok = false;
-            //if(!ok) {
+            if (configOp->config() != nullptr) {
                 qDebug() << "lxqt-config-monitor: Applying current settings...";
                 QList<MonitorSettings> monitors = loadConfiguration(QStringLiteral("currentConfig"));
                 ok = applySettings(configOp->config(), monitors);
-            //}
-            if(!ok) {
-                qDebug() << "lxqt-config-monitor: Current settings can not be applied.";
-                qDebug() << "lxqt-config-monitor: Searching in saved settings...";
-                // Load configs
-                LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
-                QList<MonitorSavedSettings> monitorsSavedSettings;
-                settings.beginGroup(QStringLiteral("SavedConfigs"));
-                loadMonitorSettings(settings, monitorsSavedSettings);
-                settings.endGroup();
-                for(const MonitorSavedSettings& o : std::as_const(monitorsSavedSettings)) {
-                    ok = applySettings(configOp->config(), o.monitors);
-                    if(ok) break;
-                }
                 if(!ok) {
-                    // Saved configs can not be applied
-                    // Extended mode will be applied
-                    qDebug() << "lxqt-config-monitor: No saved settings has been found";
-                    KScreen::ConfigPtr config = configOp->config();
-                    KScreenUtils::extended(config);
-                    KScreenUtils::updateScreenSize(config);
-                    if (KScreen::Config::canBeApplied(config))
-                        KScreen::SetConfigOperation(config).exec();
-                    qDebug() << "lxqt-config-monitor: Extended mode has been applied";
+                    qDebug() << "lxqt-config-monitor: Current settings can not be applied.";
+                    qDebug() << "lxqt-config-monitor: Searching in saved settings...";
+                    // Load configs
+                    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+                    QList<MonitorSavedSettings> monitorsSavedSettings;
+                    settings.beginGroup(QStringLiteral("SavedConfigs"));
+                    loadMonitorSettings(settings, monitorsSavedSettings);
+                    settings.endGroup();
+                    for(const MonitorSavedSettings& o : std::as_const(monitorsSavedSettings)) {
+                        ok = applySettings(configOp->config(), o.monitors);
+                        if(ok) break;
+                    }
+                    if(!ok) {
+                        // Saved configs can not be applied
+                        // Extended mode will be applied
+                        qDebug() << "lxqt-config-monitor: No saved settings has been found";
+                        KScreen::ConfigPtr config = configOp->config();
+                        KScreenUtils::extended(config);
+                        KScreenUtils::updateScreenSize(config);
+                        if (KScreen::Config::canBeApplied(config))
+                            KScreen::SetConfigOperation(config).exec();
+                        qDebug() << "lxqt-config-monitor: Extended mode has been applied";
 
-                    mNotification->setSummary(tr("Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings."));
-                    mNotification->update();
-                    mNotification->setTimeout(1000);
-                    mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
+                        mNotification->setSummary(tr("Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings."));
+                        mNotification->update();
+                        mNotification->setTimeout(1000);
+                        mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
+                    }
                 }
             }
             if(ok)
