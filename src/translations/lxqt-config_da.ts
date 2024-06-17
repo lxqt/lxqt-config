@@ -6,7 +6,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Configuration Center</source>
-        <translation>Konfigurationscenter</translation>
+        <translation>Indstillingscenter</translation>
     </message>
 </context>
 </TS>

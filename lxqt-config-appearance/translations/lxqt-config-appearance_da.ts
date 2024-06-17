@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Fejl: gsettings cannot be run</translation>
+        <translation>Fejl: gsettings kan ikke køres</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Angiv GTK temaer (GTK konfigurationsfiler vil blive overskrevet!)</translation>
+        <translation>Angiv GTK temaer (GTK indstillingsfiler vil blive overskrevet!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
@@ -198,7 +198,7 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Konfiguration af LXQt udseende</translation>
+        <translation>Indstilling af LXQt udseende</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -263,12 +263,12 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Konfiguraton af LXQt udseende</translation>
+        <translation>Indstilling af LXQt udseende</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
-        <translation>Widgetstil</translation>
+        <translation>Kontrolstil</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
@@ -301,7 +301,7 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation>Widgetstil</translation>
+        <translation>Kontrolstil</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
@@ -356,12 +356,12 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
     <message>
         <location filename="../styleconfig.ui" line="214"/>
         <source>&amp;Save Palette</source>
-        <translation>&amp;Gem palette</translation>
+        <translation>&amp;Gem palet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="221"/>
         <source>&amp;Load Palette</source>
-        <translation>&amp;indlæs palette</translation>
+        <translation>&amp;indlæs palet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="241"/>
@@ -412,18 +412,18 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
         <location filename="../styleconfig.cpp" line="245"/>
         <location filename="../styleconfig.cpp" line="255"/>
         <source>Save Palette</source>
-        <translation>Gem palette</translation>
+        <translation>Gem palet</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="245"/>
         <source>Palette name:</source>
-        <translation>Palette navn:</translation>
+        <translation>Palet-navn:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="256"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation>En palette med samme navn findes allerede.
+        <translation>En palet med samme navn findes allerede.
 Ønsker du at erstatte den?</translation>
     </message>
     <message>
@@ -435,7 +435,7 @@ Do you want to replace it?</source>
         <location filename="../styleconfig.cpp" line="394"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Ønsker du virkelig at fjerne den/de valgte palette(r)
+        <translation>Ønsker du virkelig at fjerne den/de valgte palet(ter)
 Root paletter vil forblive intakte hvis de findes.</translation>
     </message>
 </context>

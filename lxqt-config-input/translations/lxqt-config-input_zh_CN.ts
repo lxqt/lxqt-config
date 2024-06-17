@@ -173,14 +173,16 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="73"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>不支持的平台</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="74"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 输入配置暂不支持 Wayland 。
+
+鼠标、触摸板和键盘可在混成器的设置中进行配置。</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="78"/>
