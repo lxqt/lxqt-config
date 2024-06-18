@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="115"/>
         <source>Applications that handle JPEG</source>
-        <translation>Program som håndtere JPEG</translation>
+        <translation>Programmer som kan håndtere JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="124"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation>Webbrowsere</translation>
+        <translation>Netlæsere</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation>E-mailklienter</translation>
+        <translation>E-postklienter</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>
         <source>Web Browser</source>
-        <translation>Webbrowser</translation>
+        <translation>Netlæser</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="412"/>
@@ -154,7 +154,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="422"/>
         <source>Email Client</source>
-        <translation>E-mailklient</translation>
+        <translation>E-postklient</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>

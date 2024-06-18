@@ -99,12 +99,12 @@
     <message>
         <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt-sprogkonfiguraton</translation>
+        <translation>LXQt lokalitetindstillinger</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
-        <translation>Sprogindstillinger</translation>
+        <translation>Lokalitetindstillinger</translation>
     </message>
 </context>
 </TS>

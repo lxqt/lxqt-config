@@ -34,7 +34,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation>Standardskærmindstillingerne er blevet anvendt. Hvis du vil ændre skærmindstillingerne, så brug venligst lxqt-config-monitor.</translation>
+        <translation>Standard skærmindstillingerne er blevet anvendt. Hvis du vil ændre skærmindstillingerne, så brug venligst lxqt-config-monitor.</translation>
     </message>
 </context>
 <context>
@@ -104,14 +104,16 @@
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke aktivere indstillinger</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Valgte indstillinger kan ikke anvendes med aktuelt aktive skærme.
+
+Vælg venligst fra de fremhævede indstillinger.</translation>
     </message>
 </context>
 <context>
@@ -119,7 +121,7 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>Bevar tilkoblede skærme</translation>
+        <translation>Behold skærme tilkoblede</translation>
     </message>
 </context>
 <context>
@@ -137,14 +139,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Platform ikke understøttet</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt skærmindstillingerne er i øjeblikket ikke understøttet med denne Wayland-kompositor.
+
+Du kan indstille din(e) skærm(e) med kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="114"/>
