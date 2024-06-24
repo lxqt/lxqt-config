@@ -28,6 +28,7 @@
 #define LOCALECONFIG_H
 
 #include <QWidget>
+#include <QDialogButtonBox>
 #include <LXQt/Settings>
 
 class QTreeWidgetItem;
@@ -53,8 +54,12 @@ public:
     void save();
     void defaults();
 
+signals:
+    void enableApply(bool state);
+
 public slots:
     void initControls();
+    void clickedEventFilter(QDialogButtonBox::StandardButton btn);
     void saveSettings();
 
 private:
