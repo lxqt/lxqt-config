@@ -24,7 +24,23 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="6">
+   <item row="1" column="0" colspan="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>10</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="6">
     <widget class="WarningLabel" name="warningLabel" native="true"/>
    </item>
    <item row="2" column="0" colspan="6">
@@ -43,7 +59,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="6">
+   <item row="4" column="0" colspan="6">
     <widget class="QListView" name="lbThemes">
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -109,6 +125,16 @@
     <widget class="QPushButton" name="btRemove">
      <property name="text">
       <string>&amp;Remove Theme</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="5">
+    <widget class="QLabel" name="waylandLabel">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
