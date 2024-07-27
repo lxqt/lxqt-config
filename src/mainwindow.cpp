@@ -152,15 +152,18 @@ public:
             auto name = m_list[index.row()].xdg().name();
             auto gName = m_list[index.row()].xdg().localizedValue(QStringLiteral("GenericName")).toString();
             if (!gName.isEmpty() && QString::compare(gName, name, Qt::CaseInsensitive) != 0)
-                toolTip = name + QStringLiteral("\n") + gName;
+            {
+                toolTip = QStringLiteral("<p><b>") + name
+                          + QStringLiteral("</b></p><p><i>") + gName + QStringLiteral("</i></p>");
+            }
             else
-                toolTip = name;
+                toolTip = QStringLiteral("<p><b>") + name + QStringLiteral("</b></p>");
             auto comment = m_list[index.row()].xdg().comment();
             if (!comment.isEmpty()
                 && QString::compare(comment, name, Qt::CaseInsensitive) != 0
                 && QString::compare(comment, gName, Qt::CaseInsensitive) != 0)
             {
-                toolTip += QStringLiteral("\n") + comment;
+                toolTip += QStringLiteral("<p>") + comment + QStringLiteral("</p>");
             }
             return toolTip;
         }
