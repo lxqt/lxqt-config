@@ -144,8 +144,29 @@ public:
 
     QVariant data(const QModelIndex &index, int role) const override
     {
-        if (role == Qt::DisplayRole || role == Qt::ToolTipRole)
+        if (role == Qt::DisplayRole)
             return m_list[index.row()].xdg().name();
+        if (role == Qt::ToolTipRole)
+        {
+            QString toolTip;
+            auto name = m_list[index.row()].xdg().name();
+            auto gName = m_list[index.row()].xdg().localizedValue(QStringLiteral("GenericName")).toString();
+            if (!gName.isEmpty() && QString::compare(gName, name, Qt::CaseInsensitive) != 0)
+            {
+                toolTip = QStringLiteral("<p><b>") + name
+                          + QStringLiteral("</b></p><p><i>") + gName + QStringLiteral("</i></p>");
+            }
+            else
+                toolTip = QStringLiteral("<p><b>") + name + QStringLiteral("</b></p>");
+            auto comment = m_list[index.row()].xdg().comment();
+            if (!comment.isEmpty()
+                && QString::compare(comment, name, Qt::CaseInsensitive) != 0
+                && QString::compare(comment, gName, Qt::CaseInsensitive) != 0)
+            {
+                toolTip += QStringLiteral("<p>") + comment + QStringLiteral("</p>");
+            }
+            return toolTip;
+        }
         if (role == QCategorizedSortFilterProxyModel::CategoryDisplayRole)
             return m_list[index.row()].category();
         if (role == QCategorizedSortFilterProxyModel::CategorySortRole)
