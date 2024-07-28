@@ -27,27 +27,8 @@
 #include <QCoreApplication>
 #include "loadsettings.h"
 
-static bool loadSettingsOk(int argc, char** argv)
-{
-    for(int i=0; i<argc; i++) {
-        if(QString::fromUtf8(argv[i]) == QLatin1String("-l"))
-            return true;
-    }
-    return false;
-}
-
 int main(int argc, char** argv)
 {
-    if( loadSettingsOk(argc, argv) ) {
-        // If -l option is provided, settings are loaded and app is closed.
-        QGuiApplication app(argc, argv);
-        LoadSettings load;
-        load.applyBestSettings();
-        qDebug() << "[load.applyBestSettings()] Finished";
-        //QCoreApplication::instance()->exit(0);
-        return app.exec();
-    }
-
     LXQt::SingleApplication app(argc, argv);
 
     // Command line options
@@ -64,7 +45,13 @@ int main(int argc, char** argv)
     parser.addHelpOption();
 
     parser.process(app);
-    //bool loadLastSettings = parser.isSet(loadOption);
+
+    if (parser.isSet(loadOption))
+    { // If -l option is provided, settings are loaded and app is closed.
+        LoadSettings load;
+        load.applyBestSettings();
+        return app.exec();
+    }
 
     MonitorSettingsDialog dlg;
     app.setActivationWindow(&dlg);

@@ -102,7 +102,9 @@ void LoadSettings::applyBestSettings()
                 }
             }
             if(ok)
-                qDebug() << "lxqt-config-monitor: Settings applied.";
+                qDebug() << tr("lxqt-config-monitor: Settings applied.");
+            else
+                qDebug().noquote() << tr("lxqt-config-monitor: Settings not applied.\nIf this is a Wayland compositor, you could try kanshi to configure your monitor(s).");
             operation->deleteLater();
             QCoreApplication::instance()->exit(0);
         }
