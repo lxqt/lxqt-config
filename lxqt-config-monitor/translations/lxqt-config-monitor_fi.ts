@@ -137,7 +137,7 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Alusta ei ole tuettu</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
