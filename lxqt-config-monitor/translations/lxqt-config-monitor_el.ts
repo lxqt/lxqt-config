@@ -253,7 +253,8 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="132"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>Μέγεθος προβολής: %1εκ x %2εκ</translation>
+        <translation>Μέγεθος προβολής: %1εκ x %2εκ
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="133"/>
@@ -266,7 +267,8 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="134"/>
         <source>EISA device ID: %1
 </source>
-        <translation>Αναγνωριστικό συσκευής EISA: %1</translation>
+        <translation>Αναγνωριστικό συσκευής EISA: %1
+</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="154"/>
@@ -331,8 +333,8 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
-            <numerusform>Υπολείπεται %n δευτερόλεπτο(α)</numerusform>
-            <numerusform>Υπολείπεται %n δευτερόλεπτο(α)</numerusform>
+            <numerusform>Υπολείπεται %n δευτερόλεπτο</numerusform>
+            <numerusform>Υπολείπονται %n δευτερόλεπτα</numerusform>
         </translation>
     </message>
 </context>
