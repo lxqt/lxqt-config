@@ -6,7 +6,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="14"/>
         <source>Form</source>
-        <translation>Blankett</translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="143"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="14"/>
         <source>Form</source>
-        <translation>Blankett</translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="23"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="73"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Plattform støttes ikke</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="74"/>
@@ -256,7 +256,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
-        <translation>Omvendt rulling</translation>
+        <translation>Naturlig rulling</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>

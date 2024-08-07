@@ -16,7 +16,7 @@
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ Kombinert visning</translation>
+        <translation> ❶ ❶ Enhetlig visning</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
@@ -137,7 +137,7 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Plattform støttes ikke</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
