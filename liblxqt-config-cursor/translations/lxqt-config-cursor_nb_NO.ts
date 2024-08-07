@@ -49,7 +49,7 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation>Tabell</translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../localeconfig.ui" line="31"/>
         <source>Re&amp;gion:</source>
-        <translation>Om&amp;råde:</translation>
+        <translation>&amp;Region:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="60"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="194"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>So&amp;rteringsrekkefølge:</translation>
+        <translation>&amp;Sammenstilling og sortering:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="226"/>
