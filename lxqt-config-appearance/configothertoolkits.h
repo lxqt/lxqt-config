@@ -49,6 +49,7 @@ public slots:
     void setXSettingsConfig();
     void setGTKConfig(QString version, QString theme = QString());
     void setGsettingsConfig(QString version, QString theme = QString());
+    void setFontsConfig();
 
 private:
     struct Config {

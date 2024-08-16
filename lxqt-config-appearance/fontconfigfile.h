@@ -22,66 +22,23 @@
 #define FONTCONFIGFILE_H
 
 #include <QString>
-#include <QByteArray>
-#include <QObject>
 
-class QTimer;
-
-class FontConfigFile: public QObject
+namespace LXQt
 {
-    Q_OBJECT
+    class Settings;
+}
+
+class FontConfigFile
+{
 public:
-    explicit FontConfigFile(QObject* parent = nullptr);
-    virtual ~FontConfigFile();
+    explicit FontConfigFile(LXQt::Settings *settings);
 
-    bool antialias() const {
-        return mAntialias;
-    }
-    void setAntialias(bool value);
-
-    bool hinting() const {
-        return mHinting;
-    }
-    void setHinting(bool value);
-
-    QByteArray subpixel() const {
-        return mSubpixel;
-    }
-    void setSubpixel(QByteArray value);
-
-    QByteArray hintStyle() const {
-        return mHintStyle;
-    }
-    void setHintStyle(QByteArray value);
-
-    int dpi() const {
-        return mDpi;
-    }
-    void setDpi(int value);
-
-    bool autohint() const {
-        return mAutohint;
-    }
-    void setAutohint(bool value);
-
-
-private Q_SLOTS:
     void save();
 
 private:
-    void load();
-    void queueSave();
-
-private:
-    bool mAntialias;
-    bool mHinting;
-    QByteArray mSubpixel;
-    QByteArray mHintStyle;
-    int mDpi;
-    bool mAutohint;
     QString mDirPath;
     QString mFilePath;
-    QTimer* mSaveTimer;
+    LXQt::Settings *mSettings;
 };
 
 #endif // FONTCONFIGFILE_H
