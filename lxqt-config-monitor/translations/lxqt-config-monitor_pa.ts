@@ -137,7 +137,7 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਲੇਟਫਾਰਮ ਗ਼ੈਰ-ਸਹਾਇਕ ਹੈ</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
