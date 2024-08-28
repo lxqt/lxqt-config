@@ -77,17 +77,17 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation>&lt;b&gt;키보드 레이아웃&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;키보드 자판&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation>레이아웃</translation>
+        <translation>자판</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation>변종</translation>
+        <translation>변형</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>레이아웃 변경 키:</translation>
+        <translation>자판 변경 키:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -173,14 +173,16 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="73"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>지원되지 않는 플랫폼</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="74"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 입력 설정은 현재 wayland에서 지원되지 않습니다.
+
+마우스, 터치패드 및 키보드는 컴포지터 설정에서 구성할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="78"/>
@@ -205,7 +207,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="111"/>
         <source>Keyboard Layout</source>
-        <translation>키보드 레이아웃</translation>
+        <translation>키보드 자판</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="120"/>
@@ -218,17 +220,17 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>키보드 레이아웃 선택</translation>
+        <translation>키보드 자판 선택</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>키보드 레이아웃</translation>
+        <translation>키보드 자판</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation>변종</translation>
+        <translation>변형</translation>
     </message>
 </context>
 <context>
