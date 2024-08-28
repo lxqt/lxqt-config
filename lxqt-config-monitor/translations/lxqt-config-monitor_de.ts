@@ -139,7 +139,7 @@ Bitte wählen Sie aus den hervorgehobenen Konfigurationen.</translation>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation>Plattform wird nicht unterstützt</translation>
+        <translation>Plattform nicht unterstützt</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
