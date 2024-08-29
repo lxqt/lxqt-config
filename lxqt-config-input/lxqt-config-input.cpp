@@ -1,5 +1,7 @@
 /*
     Copyright (C) 2013-2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
+    Copyright (c) 2015-2024 LXQt Team.
+    This file is part of the LXQt project. <https://lxqt-project.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
