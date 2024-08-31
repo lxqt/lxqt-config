@@ -49,6 +49,10 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
 {
     ui->setupUi(this);
     ui->warningLabel->hide();
+    if (QGuiApplication::platformName() == QStringLiteral("wayland"))
+    {
+        ui->waylandLabel->setText(tr("<br>Note</br>: Under Wayland, cursor theme and size are configured by the compositor instead."));
+    }
     ui->preview->setCurrentCursorSize(getDefaultCursorSize());
     ui->preview->setCursorSize(ui->preview->getCurrentCursorSize());
 
