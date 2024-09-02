@@ -57,7 +57,7 @@
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
         <source>Delete</source>
-        <translation>Apagar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="66"/>
