@@ -146,7 +146,7 @@ Odaberi jednu od istaknutih konfiguracija.</translation>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation>Postavke LXQt monitora trenutačno nisu podržane u ovom wayland sastavljaču.
+        <translation>LXQt postavke monitora trenutačno nisu podržane u ovom wayland sastavljaču.
 
 Svoje monitore možeš konfigurirati s kanshi.</translation>
     </message>
