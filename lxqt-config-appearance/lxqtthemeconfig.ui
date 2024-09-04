@@ -58,6 +58,13 @@
      </property>
     </widget>
    </item>
+   <item>
+    <widget class="QCheckBox" name="paletteOverride">
+     <property name="text">
+      <string>Use palette provided by theme</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

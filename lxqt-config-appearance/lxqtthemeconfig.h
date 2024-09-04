@@ -30,6 +30,7 @@
 
 #include <QWidget>
 #include <LXQt/Settings>
+#include "styleconfig.h"
 
 class QTreeWidgetItem;
 
@@ -42,7 +43,7 @@ class LXQtThemeConfig : public QWidget
     Q_OBJECT
 
 public:
-    explicit LXQtThemeConfig(LXQt::Settings *settings, QWidget *parent = nullptr);
+    explicit LXQtThemeConfig(LXQt::Settings *settings, StyleConfig *stylePage, QWidget *parent = nullptr);
     ~LXQtThemeConfig();
 
     void applyLxqtTheme();
@@ -56,10 +57,15 @@ signals:
 private slots:
     void doubleClicked(QTreeWidgetItem *item, int column);
     void contextMenu(const QPoint& p);
+    void onPaletteOverrideChanged(bool checked);
+    void onCurrentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*);
 
 private:
+    void loadThemePalette();
+
     Ui::LXQtThemeConfig *ui;
     LXQt::Settings *mSettings;
+    StyleConfig *mStylePage;
 };
 
 #endif // LXQTTHEMECONFIG_H

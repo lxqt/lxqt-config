@@ -88,7 +88,7 @@ int main (int argc, char **argv)
     QObject::connect(iconPage, &IconThemeConfig::updateOtherSettings, configOtherToolKits, &ConfigOtherToolKits::setConfig);
 
     /*** LXQt Theme ***/
-    LXQtThemeConfig* themePage = new LXQtThemeConfig(settings, dialog);
+    LXQtThemeConfig* themePage = new LXQtThemeConfig(settings, stylePage, dialog);
     dialog->addPage(themePage, QObject::tr("LXQt Theme"), QStringList() << QStringLiteral("preferences-desktop-color") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, themePage, &LXQtThemeConfig::initControls);
     QObject::connect(themePage, &LXQtThemeConfig::settingsChanged, dialog, [dialog] {

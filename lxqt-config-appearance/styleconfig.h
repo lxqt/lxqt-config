@@ -47,6 +47,7 @@ public:
     ~StyleConfig();
 
     void applyStyle();
+    void loadPaletteFile(const QString& paletteFile);
 
 public slots:
     void initControls();
