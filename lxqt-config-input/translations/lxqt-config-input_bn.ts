@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>বিন্যাস পরিবর্তন করার কী:</translation>
+        <translation type="unfinished">বিন্যাস পরিবর্তন করার কী:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: আপনি যদি একটি ব্যবহার করছেন &lt;span style=&quot; font-weight:600;&quot;&gt;ইনপুট পদ্ধতি&lt;/span&gt;, যেমন আইবাস, ইউইম, এফসিটেক্স বা জিসিিন, সেটিংস এখানে &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; কারণ সেগুলি ইনপুট পদ্ধতিগুলিতে ওভাররাইড করা হয়.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: আপনি যদি একটি ব্যবহার করছেন &lt;span style=&quot; font-weight:600;&quot;&gt;ইনপুট পদ্ধতি&lt;/span&gt;, যেমন আইবাস, ইউইম, এফসিটেক্স বা জিসিিন, সেটিংস এখানে &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; কারণ সেগুলি ইনপুট পদ্ধতিগুলিতে ওভাররাইড করা হয়.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>ডাবল ক্লিক বিরতি:</translation>
+        <translation type="unfinished">ডাবল ক্লিক বিরতি:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>বাম হাতে (বাম এবং ডান মাউস বোতামগুলি অদলবদল করুন)</translation>
+        <translation type="unfinished">বাম হাতে (বাম এবং ডান মাউস বোতামগুলি অদলবদল করুন)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
