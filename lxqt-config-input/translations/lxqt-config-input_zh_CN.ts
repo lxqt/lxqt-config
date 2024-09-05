@@ -171,12 +171,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform unsupported</source>
         <translation>不支持的平台</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,32 +185,32 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 鼠标、触摸板和键盘可在混成器的设置中进行配置。</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="78"/>
+        <location filename="../lxqt-config-input.cpp" line="81"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>键盘与鼠标设置</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="87"/>
+        <location filename="../lxqt-config-input.cpp" line="90"/>
         <source>Mouse</source>
         <translation>鼠标</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="96"/>
+        <location filename="../lxqt-config-input.cpp" line="99"/>
         <source>Cursor</source>
         <translation>光标</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="106"/>
         <source>Keyboard</source>
         <translation>键盘</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="111"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard Layout</source>
         <translation>键盘布局</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="120"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Mouse and Touchpad</source>
         <translation>鼠标和触控板</translation>
     </message>

@@ -229,12 +229,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <translation>Hintergrundbild des Themas verwenden</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <location filename="../lxqtthemeconfig.ui" line="64"/>
+        <source>Use palette provided by theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="96"/>
         <source>(User Theme)</source>
         <translation>(Benutzerthema)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <location filename="../lxqtthemeconfig.cpp" line="194"/>
         <source>Open theme folder</source>
         <translation>Themenordner öffnen</translation>
     </message>
@@ -330,76 +335,86 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
+        <source>Tooltip:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
         <translation>Link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="152"/>
+        <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
         <translation>Fenstertext:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="162"/>
+        <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
         <translation>Anzeigetext:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="172"/>
+        <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
         <translation>Ausgewählter Text:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="182"/>
+        <location filename="../styleconfig.ui" line="196"/>
+        <source>Tooltip Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
         <translation>Besuchter Link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="214"/>
+        <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
         <translation>Palette &amp;speichern</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="221"/>
+        <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
         <translation>Palette &amp;laden</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="241"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
         <translation>Stan&amp;dardpalette</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="256"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Toolbar button style:</source>
         <translation>Werkzeugleisten-Schaltflächenstil:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="264"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Only display the icon</source>
         <translation>Nur das Symbol anzeigen</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="297"/>
         <source>Only display the text</source>
         <translation>Nur den Text anzeigen</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="302"/>
         <source>The text appears beside the icon</source>
         <translation>Der Text erscheint neben dem Symbol</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="279"/>
+        <location filename="../styleconfig.ui" line="307"/>
         <source>The text appears under the icon</source>
         <translation>Der Text erscheint unter dem Symbol</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="312"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>Activate item on single click</source>
         <translation>Element mit einem einzigen Klick aktivieren</translation>
     </message>
@@ -409,30 +424,30 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <translation>Qt-Stil</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
-        <location filename="../styleconfig.cpp" line="255"/>
+        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="281"/>
         <source>Save Palette</source>
         <translation>Palette speichern</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="271"/>
         <source>Palette name:</source>
         <translation>Palettenname:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="256"/>
+        <location filename="../styleconfig.cpp" line="282"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Es existiert eine Palette mit dem gleichen Namen.
 Möchten Sie sie ersetzen?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="393"/>
+        <location filename="../styleconfig.cpp" line="425"/>
         <source>Remove Palettes</source>
         <translation>Paletten entfernen</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="394"/>
+        <location filename="../styleconfig.cpp" line="426"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Möchten Sie die ausgewählte(n) Palette(n) wirklich entfernen?

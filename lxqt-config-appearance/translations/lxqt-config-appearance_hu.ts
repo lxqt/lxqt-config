@@ -229,12 +229,17 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <location filename="../lxqtthemeconfig.ui" line="64"/>
+        <source>Use palette provided by theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="96"/>
         <source>(User Theme)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <location filename="../lxqtthemeconfig.cpp" line="194"/>
         <source>Open theme folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -330,76 +335,86 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
+        <source>Tooltip:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
         <translation>Link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="152"/>
+        <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
         <translation>Ablakszöveg:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="162"/>
+        <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
         <translation>Nézet szövege:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="172"/>
+        <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
         <translation>Kijelölt szöveg:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="182"/>
+        <location filename="../styleconfig.ui" line="196"/>
+        <source>Tooltip Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
         <translation>Megtekintett link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="214"/>
+        <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="221"/>
+        <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="241"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
         <translation>&amp;Alapértelmezett paletta</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="256"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Toolbar button style:</source>
         <translation>Eszköztárgombok stílusa:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="264"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Only display the icon</source>
         <translation>Csak ikonok</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="297"/>
         <source>Only display the text</source>
         <translation>Csak szöveg</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="302"/>
         <source>The text appears beside the icon</source>
         <translation>Szöveg az ikonok mellett</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="279"/>
+        <location filename="../styleconfig.ui" line="307"/>
         <source>The text appears under the icon</source>
         <translation>Szöveg az ikonok alatt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="312"/>
         <source>Default</source>
         <translation>Alapértelmezett</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>Activate item on single click</source>
         <translation>Egykattintásos mód</translation>
     </message>
@@ -409,29 +424,29 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
         <translation>Qt stílus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
-        <location filename="../styleconfig.cpp" line="255"/>
+        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="281"/>
         <source>Save Palette</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="271"/>
         <source>Palette name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="256"/>
+        <location filename="../styleconfig.cpp" line="282"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="393"/>
+        <location filename="../styleconfig.cpp" line="425"/>
         <source>Remove Palettes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="394"/>
+        <location filename="../styleconfig.cpp" line="426"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation type="unfinished"></translation>

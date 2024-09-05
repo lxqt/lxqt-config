@@ -229,12 +229,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <translation>Naudoti apipavidalinimo teikiamą darbalaukio foną</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <location filename="../lxqtthemeconfig.ui" line="64"/>
+        <source>Use palette provided by theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="96"/>
         <source>(User Theme)</source>
         <translation>(Naudotojo apipavidalinimas)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <location filename="../lxqtthemeconfig.cpp" line="194"/>
         <source>Open theme folder</source>
         <translation>Atverti apipavidalinimo aplanką</translation>
     </message>
@@ -330,76 +335,86 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
+        <source>Tooltip:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
         <translation>Nuoroda:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="152"/>
+        <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
         <translation>Lango tekstas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="162"/>
+        <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
         <translation>Rodinio tekstas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="172"/>
+        <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
         <translation>Pažymėtas tekstas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="182"/>
+        <location filename="../styleconfig.ui" line="196"/>
+        <source>Tooltip Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
         <translation>Aplankyta nuoroda:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="214"/>
+        <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
         <translation>Į&amp;rašyti paletę</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="221"/>
+        <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
         <translation>Į&amp;kelti paletę</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="241"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
         <translation>&amp;Numatytoji paletė</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="256"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Toolbar button style:</source>
         <translation>Įrankių juostos mygtukų stilius:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="264"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Only display the icon</source>
         <translation>Rodyti tik piktogramas</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="297"/>
         <source>Only display the text</source>
         <translation>Rodyti tik tekstą</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="302"/>
         <source>The text appears beside the icon</source>
         <translation>Rodyti tekstą šalia piktogramų</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="279"/>
+        <location filename="../styleconfig.ui" line="307"/>
         <source>The text appears under the icon</source>
         <translation>Rodyti tekstą po piktogramomis</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="312"/>
         <source>Default</source>
         <translation>Numatytasis</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>Activate item on single click</source>
         <translation>Aktyvuoti elementą, spustelėjus vieną kartą</translation>
     </message>
@@ -409,30 +424,30 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <translation>Qt stilius</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
-        <location filename="../styleconfig.cpp" line="255"/>
+        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="281"/>
         <source>Save Palette</source>
         <translation>Įrašyti paletę</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="271"/>
         <source>Palette name:</source>
         <translation>Paletės pavadinimas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="256"/>
+        <location filename="../styleconfig.cpp" line="282"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Paletė tokiu pavadinimu jau yra.
 Ar norite ją pakeisti?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="393"/>
+        <location filename="../styleconfig.cpp" line="425"/>
         <source>Remove Palettes</source>
         <translation>Šalinti paletes</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="394"/>
+        <location filename="../styleconfig.cpp" line="426"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Ar tikrai norite šalinti pažymėtas paletes?

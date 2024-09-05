@@ -230,12 +230,17 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
         <translation>Usa sfondo desktop del tema</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <location filename="../lxqtthemeconfig.ui" line="64"/>
+        <source>Use palette provided by theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="96"/>
         <source>(User Theme)</source>
         <translation>(Tema locale)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <location filename="../lxqtthemeconfig.cpp" line="194"/>
         <source>Open theme folder</source>
         <translation>Apri cartella del tema</translation>
     </message>
@@ -331,76 +336,86 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
+        <source>Tooltip:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
         <translation>Collegamento:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="152"/>
+        <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
         <translation>Testo finestra:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="162"/>
+        <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
         <translation>Testo riquadro:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="172"/>
+        <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
         <translation>Testo selezionato:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="182"/>
+        <location filename="../styleconfig.ui" line="196"/>
+        <source>Tooltip Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
         <translation>Collegamento visitato:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="214"/>
+        <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
         <translation>&amp;Salva schema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="221"/>
+        <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
         <translation>&amp;Carica schema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="241"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
         <translation>&amp;Ripristina</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="256"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Toolbar button style:</source>
         <translation>Stile della barra delle applicazioni:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="264"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Only display the icon</source>
         <translation>Mostra solo l&apos;icona</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="297"/>
         <source>Only display the text</source>
         <translation>Mostra solo il testo</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="302"/>
         <source>The text appears beside the icon</source>
         <translation>Testo accanto all&apos;icona</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="279"/>
+        <location filename="../styleconfig.ui" line="307"/>
         <source>The text appears under the icon</source>
         <translation>Testo sotto l&apos;icona</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="312"/>
         <source>Default</source>
         <translation>Predefinito</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>Activate item on single click</source>
         <translation>Attiva elementi con un clic singolo</translation>
     </message>
@@ -410,30 +425,30 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
         <translation>Stile Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
-        <location filename="../styleconfig.cpp" line="255"/>
+        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="281"/>
         <source>Save Palette</source>
         <translation>Salva schema</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="271"/>
         <source>Palette name:</source>
         <translation>Nome dello schema:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="256"/>
+        <location filename="../styleconfig.cpp" line="282"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Un schema dello stesso nome esiste già.
 Sostituirlo?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="393"/>
+        <location filename="../styleconfig.cpp" line="425"/>
         <source>Remove Palettes</source>
         <translation>Rimuovi schemi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="394"/>
+        <location filename="../styleconfig.cpp" line="426"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Si è sicuro di voler rimuovere lo schema selezionato?

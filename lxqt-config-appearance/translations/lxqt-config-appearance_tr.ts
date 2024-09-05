@@ -229,12 +229,17 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
         <translation>Tema tarafından sağlanan duvar kağıdını kullan</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <location filename="../lxqtthemeconfig.ui" line="64"/>
+        <source>Use palette provided by theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="96"/>
         <source>(User Theme)</source>
         <translation>(Kullanıcı Teması)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <location filename="../lxqtthemeconfig.cpp" line="194"/>
         <source>Open theme folder</source>
         <translation>Tema dizinini aç</translation>
     </message>
@@ -330,76 +335,86 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
+        <source>Tooltip:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
         <translation>Bağlantı:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="152"/>
+        <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
         <translation>Pencere Metni:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="162"/>
+        <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
         <translation>Metni Görüntüle:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="172"/>
+        <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
         <translation>Seçilen Metin:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="182"/>
+        <location filename="../styleconfig.ui" line="196"/>
+        <source>Tooltip Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
         <translation>Ziyaret Edilen Bağlantı:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="214"/>
+        <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
         <translation>Paleti &amp;Kaydet</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="221"/>
+        <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
         <translation>Paleti &amp;Yükle</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="241"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
         <translation>&amp;Varsayılan Palet</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="256"/>
+        <location filename="../styleconfig.ui" line="284"/>
         <source>Toolbar button style:</source>
         <translation>Araç çubuğu düğme stili:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="264"/>
+        <location filename="../styleconfig.ui" line="292"/>
         <source>Only display the icon</source>
         <translation>Sadece simgeyi göster</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="297"/>
         <source>Only display the text</source>
         <translation>Sadece metni göster</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="302"/>
         <source>The text appears beside the icon</source>
         <translation>Simgenin yanında metin göster</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="279"/>
+        <location filename="../styleconfig.ui" line="307"/>
         <source>The text appears under the icon</source>
         <translation>Simge altında metin göster</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="312"/>
         <source>Default</source>
         <translation>Varsayılan</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>Activate item on single click</source>
         <translation>Tek tıklamayla öğeyi etkinleştir</translation>
     </message>
@@ -409,30 +424,30 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
         <translation>Qt Biçemi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
-        <location filename="../styleconfig.cpp" line="255"/>
+        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="281"/>
         <source>Save Palette</source>
         <translation>Paleti Kaydet</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="271"/>
         <source>Palette name:</source>
         <translation>Palet adı:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="256"/>
+        <location filename="../styleconfig.cpp" line="282"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Aynı ada sahip bir palet var.
 Değiştirmek istiyor musun?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="393"/>
+        <location filename="../styleconfig.cpp" line="425"/>
         <source>Remove Palettes</source>
         <translation>Paletleri Kaldır</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="394"/>
+        <location filename="../styleconfig.cpp" line="426"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Seçilen paleti/paletleri gerçekten kaldırmak istiyor musunuz?

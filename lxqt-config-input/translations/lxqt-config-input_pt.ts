@@ -171,12 +171,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform unsupported</source>
         <translation>Plataforma não suportada</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,32 +185,32 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 O rato, o touchpad e o teclado podem ser configurados nas definições do compositor.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="78"/>
+        <location filename="../lxqt-config-input.cpp" line="81"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Definições de teclado e de rato</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="87"/>
+        <location filename="../lxqt-config-input.cpp" line="90"/>
         <source>Mouse</source>
         <translation>Rato</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="96"/>
+        <location filename="../lxqt-config-input.cpp" line="99"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="106"/>
         <source>Keyboard</source>
         <translation>Teclado</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="111"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard Layout</source>
         <translation>Disposição do teclado</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="120"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Mouse and Touchpad</source>
         <translation>Rato e teclado</translation>
     </message>
