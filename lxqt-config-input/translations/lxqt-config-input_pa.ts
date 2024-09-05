@@ -171,44 +171,44 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform unsupported</source>
         <translation>ਪਲੇਟਫਾਰਮ ਗ਼ੈਰ-ਸਹਾਇਕ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="78"/>
+        <location filename="../lxqt-config-input.cpp" line="81"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>ਕੀਬੋਰਡ ਅਤੇ ਮਾਊਸ ਸੈਟਿੰਗਾਂ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="87"/>
+        <location filename="../lxqt-config-input.cpp" line="90"/>
         <source>Mouse</source>
         <translation>ਮਾਊਸ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="96"/>
+        <location filename="../lxqt-config-input.cpp" line="99"/>
         <source>Cursor</source>
         <translation>ਕਰਸਰ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="106"/>
         <source>Keyboard</source>
         <translation>ਕੀਬੋਰਡ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="111"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard Layout</source>
         <translation>ਕੀਬੋਰਡ ਲੇਆਉਟ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="120"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Mouse and Touchpad</source>
         <translation>ਮਾਊਸ ਅਤੇ ਟੱਚਪੈਡ</translation>
     </message>

@@ -172,12 +172,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform unsupported</source>
         <translation>Plateforme non prise en charge</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -186,32 +186,32 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 La souris, le pavé tactile et le clavier peuvent être configurés dans les paramètres du compositeur.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="78"/>
+        <location filename="../lxqt-config-input.cpp" line="81"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Paramètres clavier et souris</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="87"/>
+        <location filename="../lxqt-config-input.cpp" line="90"/>
         <source>Mouse</source>
         <translation>Souris</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="96"/>
+        <location filename="../lxqt-config-input.cpp" line="99"/>
         <source>Cursor</source>
         <translation>Curseur</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="106"/>
         <source>Keyboard</source>
         <translation>Clavier</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="111"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard Layout</source>
         <translation>Disposition du clavier</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="120"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Mouse and Touchpad</source>
         <translation>Souris et pavé numérique</translation>
     </message>

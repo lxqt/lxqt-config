@@ -32,9 +32,20 @@
 <context>
     <name>LoadSettings</name>
     <message>
-        <location filename="../loadsettings.cpp" line="98"/>
+        <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
         <translation>默认显示器设置已被应用。如果你想要更改显示器设置，请使用 lxqt-config-monitor。</translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="105"/>
+        <source>lxqt-config-monitor: Settings applied.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="107"/>
+        <source>lxqt-config-monitor: Settings not applied.
+If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

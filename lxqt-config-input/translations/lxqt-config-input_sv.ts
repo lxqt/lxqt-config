@@ -171,12 +171,12 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="73"/>
+        <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform unsupported</source>
         <translation>Plattform stöds inte</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="74"/>
+        <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,32 +185,32 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 Mus, pekplatta och tangentbord kan konfigureras i kompositörens inställningar.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="78"/>
+        <location filename="../lxqt-config-input.cpp" line="81"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Inställningar för tangentbord och mus</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="87"/>
+        <location filename="../lxqt-config-input.cpp" line="90"/>
         <source>Mouse</source>
         <translation>Mus</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="96"/>
+        <location filename="../lxqt-config-input.cpp" line="99"/>
         <source>Cursor</source>
         <translation>Markör</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="106"/>
         <source>Keyboard</source>
         <translation>Tangentbord</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="111"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard Layout</source>
         <translation>Tangentbordslayout</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="120"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Mouse and Touchpad</source>
         <translation>Mus och pekplatta</translation>
     </message>
