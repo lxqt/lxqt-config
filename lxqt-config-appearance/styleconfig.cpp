@@ -54,6 +54,7 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
 
     connect(ui->qtComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
+    connect(ui->toolBarIconSize, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
     connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
 
     connect(ui->winColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);
@@ -108,6 +109,33 @@ void StyleConfig::initControls()
     if(val == -1)
       val = Qt::ToolButtonTextBesideIcon;
     ui->toolButtonStyle->setCurrentIndex(val);
+
+    // toolbar icon size
+    int index = mSettings->value(QLatin1String("tool_bar_icon_size")).toInt();
+    if (index < 16) // consult the active Qt style
+        index = style()->pixelMetric(QStyle::PM_ToolBarIconSize);
+    switch (index)
+    {
+        case 16:
+            index = 0;
+            break;
+        case 22:
+            index = 1;
+            break;
+        case 24:
+            index = 2;
+            break;
+        case 32:
+            index = 3;
+            break;
+        case 48:
+            index = 4;
+            break;
+        default:
+            index = 2;
+            break;
+    }
+    ui->toolBarIconSize->setCurrentIndex(index);
 
     // activate item views with single click
     ui->singleClickActivate->setChecked( mSettings->value(QStringLiteral("single_click_activate"), false).toBool());
@@ -262,6 +290,37 @@ void StyleConfig::applyStyle()
         mSettings->setValue(QStringLiteral("tool_button_style"), QString::fromUtf8(str));
         mSettings->sync();
         emit updateOtherSettings();
+    }
+
+    // toolbar icon size
+    index = ui->toolBarIconSize->currentIndex();
+    switch (index)
+    {
+        case 0:
+            index = 16;
+            break;
+        case 1:
+            index = 22;
+            break;
+        case 2:
+            index = 24;
+            break;
+        case 3:
+            index = 32;
+            break;
+        case 4:
+            index = 48;
+            break;
+        default:
+            index = 24;
+            break;
+    }
+    if(index != mSettings->value(QLatin1String("tool_bar_icon_size")).toInt())
+    {
+        mSettings->setValue(QStringLiteral("tool_bar_icon_size"), index);
+        // TODO: Do we want to apply it to GTK somehow?
+        /*mSettings->sync();
+        emit updateOtherSettings();*/
     }
 }
 
