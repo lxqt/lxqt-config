@@ -100,6 +100,8 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settin
 {
     mSettings = settings;
     mConfigAppearanceSettings = configAppearanceSettings;
+    if(QGuiApplication::platformName() != QStringLiteral("xcb"))
+        return;
     if(tempFile.open()) {
         mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
         mXsettingsdProc.start(QStringLiteral("xsettingsd"), QStringList() << QStringLiteral("-c") << tempFile.fileName());
@@ -190,15 +192,16 @@ void ConfigOtherToolKits::setConfig()
     mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("3.0"));
     setGTKConfig(QStringLiteral("3.0"));
 
-    if(QGuiApplication::platformName() == QStringLiteral("xcb")) {
-        // Call to xsettings to update config
-        setXSettingsConfig();
-    }
+    // Call to xsettings to update config
+    setXSettingsConfig();
     setGsettingsConfig(QStringLiteral("3.0"));
 }
 
 void ConfigOtherToolKits::setXSettingsConfig()
 {
+    if(QGuiApplication::platformName() != QStringLiteral("xcb"))
+        return;
+
     // setGTKConfig is called before calling setXSettingsConfig,
     // then updateConfigFromSettings is not required.
     //updateConfigFromSettings();
