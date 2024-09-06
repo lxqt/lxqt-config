@@ -61,19 +61,6 @@ protected:
     }
 };
 
-/*!
- * \brief Check if currently configured wallpaper (read from pcmanfm-qt's
- * settings) is the same as \param themeWallpaper
- */
-static bool isWallpaperChanged(const QString & themeWallpaper)
-{
-    static const QString config_path = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)
-        + QStringLiteral("/pcmanfm-qt/lxqt/settings.conf");
-    static const QString wallpaper_key = QStringLiteral("Desktop/Wallpaper");
-    const QString current_wallpaper = QSettings{config_path, QSettings::IniFormat}.value(wallpaper_key).toString();
-    return themeWallpaper != current_wallpaper;
-}
-
 LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, StyleConfig *stylePage, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::LXQtThemeConfig),
@@ -154,14 +141,18 @@ void LXQtThemeConfig::applyLxqtTheme()
     QVariant themeName = item->data(0, Qt::UserRole);
     if(mSettings->value(QStringLiteral("theme")) != themeName)
         mSettings->setValue(QStringLiteral("theme"), themeName);
-    LXQt::LXQtTheme theme(themeName.toString());
-    if(theme.isValid()) {
-        QString wallpaper = theme.desktopBackground();
-        if(!wallpaper.isEmpty() && (ui->wallpaperOverride->isChecked() || !isWallpaperChanged(currentTheme.desktopBackground()))) {
-            // call pcmanfm-qt to update wallpaper
-            QStringList args;
-            args << QStringLiteral("--set-wallpaper") << wallpaper;
-            QProcess::startDetached(QStringLiteral("pcmanfm-qt"), args);
+
+    if (ui->wallpaperOverride->isChecked())
+    { // set the wallpaper
+        LXQt::LXQtTheme theme(themeName.toString());
+        if(theme.isValid()) {
+            QString wallpaper = theme.desktopBackground();
+            if(!wallpaper.isEmpty()) {
+                // call pcmanfm-qt to update wallpaper
+                QStringList args;
+                args << QStringLiteral("--set-wallpaper") << wallpaper;
+                QProcess::startDetached(QStringLiteral("pcmanfm-qt"), args);
+            }
         }
     }
 
