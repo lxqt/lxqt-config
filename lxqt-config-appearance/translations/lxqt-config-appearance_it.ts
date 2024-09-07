@@ -232,7 +232,7 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa schema di colori fornito del tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="96"/>
@@ -337,7 +337,7 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suggerimenti:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -362,7 +362,7 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo suggerimento:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>

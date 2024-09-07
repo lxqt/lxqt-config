@@ -39,13 +39,14 @@
     <message>
         <location filename="../loadsettings.cpp" line="105"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Ayarlar uygulandı.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Ayarlar uygulanmadı.
+Eğer bu bir Wayland kompozitörü ise, ekran(lar)ınızı yapılandırmak için kanshi&apos;yi deneyebilirsiniz.</translation>
     </message>
 </context>
 <context>

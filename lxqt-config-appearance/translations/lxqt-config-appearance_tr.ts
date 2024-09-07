@@ -231,7 +231,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema tarafından sağlanan paleti kullan</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="96"/>
@@ -336,7 +336,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>İpucu:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>İpucu Metni:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>

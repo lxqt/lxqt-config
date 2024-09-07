@@ -231,7 +231,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj palety dostarczonej przez motyw</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="96"/>
@@ -336,7 +336,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpowiedź:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst podpowiedzi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
