@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="235"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Erro: não é possível executar o gsettings</translation>
+        <translation>Erro: não foi possível executar o gsettings</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar a paleta fornecida pelo tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="96"/>
@@ -336,7 +336,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dica:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto da dica:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>

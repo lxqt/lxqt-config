@@ -231,7 +231,7 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta teema poolt pakutud värvipaletti</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="96"/>
@@ -336,7 +336,7 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohtspikker:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohtspikri tekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
