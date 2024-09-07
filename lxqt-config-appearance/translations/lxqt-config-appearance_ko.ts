@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="170"/>
+        <location filename="../configothertoolkits.cpp" line="172"/>
         <source>GTK themes</source>
         <translation>GTK 테마</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="171"/>
+        <location filename="../configothertoolkits.cpp" line="173"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; 덮어 써졌습니다.&lt;/p&gt;&lt;p&gt;&apos;%2&apos;에서 이전 설정의 복사본을 찾으실 수 있습니다&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error: gsettings cannot be run</source>
         <translation>오류: gsettings를 실행할 수 없습니다</translation>
     </message>
@@ -234,12 +234,12 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="96"/>
+        <location filename="../lxqtthemeconfig.cpp" line="83"/>
         <source>(User Theme)</source>
         <translation>(사용자 테마)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="194"/>
+        <location filename="../lxqtthemeconfig.cpp" line="185"/>
         <source>Open theme folder</source>
         <translation>테마 폴더 열기</translation>
     </message>
@@ -385,36 +385,75 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="294"/>
+        <location filename="../styleconfig.ui" line="326"/>
+        <location filename="../styleconfig.ui" line="336"/>
+        <location filename="../styleconfig.ui" line="368"/>
+        <source>May be overridden by Qt style or app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="287"/>
         <source>Toolbar button style:</source>
         <translation>툴바 버튼 스타일:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="298"/>
         <source>Only display the icon</source>
         <translation>아이콘만 보이기</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="297"/>
+        <location filename="../styleconfig.ui" line="303"/>
         <source>Only display the text</source>
         <translation>텍스트만 보이기</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="302"/>
+        <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
         <translation>아이콘 옆에 텍스트가 나타납니다</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="307"/>
+        <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
         <translation>아이콘 아래에 텍스트가 나타납니다</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="312"/>
+        <location filename="../styleconfig.ui" line="318"/>
         <source>Default</source>
         <translation>기본</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="320"/>
+        <location filename="../styleconfig.ui" line="329"/>
+        <source>Toolbar icon size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="340"/>
+        <source>16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="345"/>
+        <source>22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="350"/>
+        <source>24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="355"/>
+        <source>32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="360"/>
+        <source>48</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
         <translation>한 번 클릭으로 실행하기</translation>
     </message>
@@ -424,30 +463,30 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
         <translation>Qt 스타일</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="271"/>
-        <location filename="../styleconfig.cpp" line="281"/>
+        <location filename="../styleconfig.cpp" line="330"/>
+        <location filename="../styleconfig.cpp" line="340"/>
         <source>Save Palette</source>
         <translation>팔레트 저장</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
         <translation>팔레트 이름:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="282"/>
+        <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>같은 이름의 팔레트가 있습니다.
 교체하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="425"/>
+        <location filename="../styleconfig.cpp" line="484"/>
         <source>Remove Palettes</source>
         <translation>팔레트 제거</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="426"/>
+        <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>선택한 팔레트를 정말로 제거하시겠습니까?
