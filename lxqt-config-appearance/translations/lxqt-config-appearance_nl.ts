@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="170"/>
+        <location filename="../configothertoolkits.cpp" line="172"/>
         <source>GTK themes</source>
         <translation>GTK-thema&apos;s</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="171"/>
+        <location filename="../configothertoolkits.cpp" line="173"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; werd overschreven.&lt;/p&gt;&lt;p&gt;U kunt een kopie van uw oude instellingen terugvinden in &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error</source>
         <translation>Foutmelding</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Foutmelding: gsettings kan niet worden gestart</translation>
     </message>
@@ -234,12 +234,12 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
         <translation>Kleurenschema van systeemthema gebruiken</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="96"/>
+        <location filename="../lxqtthemeconfig.cpp" line="83"/>
         <source>(User Theme)</source>
         <translation>(eigen thema)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="194"/>
+        <location filename="../lxqtthemeconfig.cpp" line="185"/>
         <source>Open theme folder</source>
         <translation>Themamap openen</translation>
     </message>
@@ -385,36 +385,75 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="294"/>
+        <location filename="../styleconfig.ui" line="326"/>
+        <location filename="../styleconfig.ui" line="336"/>
+        <location filename="../styleconfig.ui" line="368"/>
+        <source>May be overridden by Qt style or app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="287"/>
         <source>Toolbar button style:</source>
         <translation>Stijl van werkbalkknoppen:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="298"/>
         <source>Only display the icon</source>
         <translation>Alleen pictogram</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="297"/>
+        <location filename="../styleconfig.ui" line="303"/>
         <source>Only display the text</source>
         <translation>Alleen tekst</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="302"/>
+        <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
         <translation>Tekst naast pictogram</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="307"/>
+        <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
         <translation>Tekst onder pictogram</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="312"/>
+        <location filename="../styleconfig.ui" line="318"/>
         <source>Default</source>
         <translation>Standaard</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="320"/>
+        <location filename="../styleconfig.ui" line="329"/>
+        <source>Toolbar icon size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="340"/>
+        <source>16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="345"/>
+        <source>22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="350"/>
+        <source>24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="355"/>
+        <source>32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="360"/>
+        <source>48</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
         <translation>Items activeren met enkele klik</translation>
     </message>
@@ -424,30 +463,30 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
         <translation>Qt-stijl</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="271"/>
-        <location filename="../styleconfig.cpp" line="281"/>
+        <location filename="../styleconfig.cpp" line="330"/>
+        <location filename="../styleconfig.cpp" line="340"/>
         <source>Save Palette</source>
         <translation>Kleurenschema opslaan</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
         <translation>Naam van kleurenschema:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="282"/>
+        <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Er is al een schema met deze naam.
 Wil je dat schema vervangen?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="425"/>
+        <location filename="../styleconfig.cpp" line="484"/>
         <source>Remove Palettes</source>
         <translation>Kleurenschema&apos;s verwijderen</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="426"/>
+        <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Weet je zeker dat de selectie wilt verwijderen?

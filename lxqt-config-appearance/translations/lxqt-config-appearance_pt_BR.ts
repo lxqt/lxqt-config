@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="170"/>
+        <location filename="../configothertoolkits.cpp" line="172"/>
         <source>GTK themes</source>
         <translation>Temas GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="171"/>
+        <location filename="../configothertoolkits.cpp" line="173"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; foi sobrescrito.&lt;/p&gt;&lt;p&gt;Você pode encontrar uma cópia de suas configurações anteriores em &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Erro: gsettings não pode ser executado</translation>
     </message>
@@ -234,12 +234,12 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="96"/>
+        <location filename="../lxqtthemeconfig.cpp" line="83"/>
         <source>(User Theme)</source>
         <translation>(Tema do Usuário)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="194"/>
+        <location filename="../lxqtthemeconfig.cpp" line="185"/>
         <source>Open theme folder</source>
         <translation>Abrir pasta de temas</translation>
     </message>
@@ -385,36 +385,75 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="294"/>
+        <location filename="../styleconfig.ui" line="326"/>
+        <location filename="../styleconfig.ui" line="336"/>
+        <location filename="../styleconfig.ui" line="368"/>
+        <source>May be overridden by Qt style or app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="287"/>
         <source>Toolbar button style:</source>
         <translation>Estilo dos botões da barra de ferramentas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="298"/>
         <source>Only display the icon</source>
         <translation>Mostrar apenas ícones</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="297"/>
+        <location filename="../styleconfig.ui" line="303"/>
         <source>Only display the text</source>
         <translation>Mostrar apenas texto</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="302"/>
+        <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
         <translation>O texto aparece ao lado do ícone</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="307"/>
+        <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
         <translation>O texto aparece abaixo do ícone</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="312"/>
+        <location filename="../styleconfig.ui" line="318"/>
         <source>Default</source>
         <translation>Padrão</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="320"/>
+        <location filename="../styleconfig.ui" line="329"/>
+        <source>Toolbar icon size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="340"/>
+        <source>16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="345"/>
+        <source>22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="350"/>
+        <source>24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="355"/>
+        <source>32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="360"/>
+        <source>48</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
         <translation>Ativar item com clique único</translation>
     </message>
@@ -424,30 +463,30 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
         <translation>Estilo Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="271"/>
-        <location filename="../styleconfig.cpp" line="281"/>
+        <location filename="../styleconfig.cpp" line="330"/>
+        <location filename="../styleconfig.cpp" line="340"/>
         <source>Save Palette</source>
         <translation>Salvar paleta</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="271"/>
+        <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
         <translation>Nome da paleta:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="282"/>
+        <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Existe uma paleta com o mesmo nome.
 Deseja substituí-la?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="425"/>
+        <location filename="../styleconfig.cpp" line="484"/>
         <source>Remove Palettes</source>
         <translation>Remover paletas</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="426"/>
+        <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Tem certeza de que deseja remover as paletas selecionadas?
