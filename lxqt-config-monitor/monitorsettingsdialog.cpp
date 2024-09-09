@@ -87,6 +87,9 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
     });
 
     connect(ui.settingsButton, &QToolButton::clicked, this, &MonitorSettingsDialog::showSettingsDialog);
+
+    // make sure that widgets are shown completely (a Qt bug under Wayland?)
+    resize(sizeHint().expandedTo(QSize(600, 400)));
 }
 
 MonitorSettingsDialog::~MonitorSettingsDialog()
