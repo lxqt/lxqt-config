@@ -42,6 +42,7 @@ public:
 private:
     void applyConfiguration(bool saveConfigOk);
     void cancelConfiguration();
+    void saveSize();
 
 private Q_SLOTS:
     void loadConfiguration(KScreen::ConfigPtr config);

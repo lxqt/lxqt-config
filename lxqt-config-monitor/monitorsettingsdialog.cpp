@@ -88,8 +88,9 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
 
     connect(ui.settingsButton, &QToolButton::clicked, this, &MonitorSettingsDialog::showSettingsDialog);
 
-    // make sure that widgets are shown completely (a Qt bug under Wayland?)
-    resize(sizeHint().expandedTo(QSize(600, 400)));
+    // also make sure that widgets are shown completely (a Qt bug under Wayland?)
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+    resize(sizeHint().expandedTo(settings.value(QStringLiteral("size")).toSize().expandedTo(QSize(600, 400))));
 }
 
 MonitorSettingsDialog::~MonitorSettingsDialog()
@@ -163,12 +164,13 @@ void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
 
 void MonitorSettingsDialog::accept()
 {
-    //applyConfiguration(true);
+    saveSize();
     QDialog::accept();
 }
 
 void MonitorSettingsDialog::reject()
 {
+    saveSize();
     QDialog::reject();
 }
 
@@ -239,4 +241,10 @@ void MonitorSettingsDialog::showSettingsDialog()
 
     SettingsDialog settingsDialog(tr("Advanced settings"), &settings, mConfig);
     settingsDialog.exec();
+}
+
+void MonitorSettingsDialog::saveSize()
+{
+    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+    settings.setValue(QStringLiteral("size"), size());
 }
