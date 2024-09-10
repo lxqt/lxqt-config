@@ -96,6 +96,7 @@ void LoadSettings::applyBestSettings()
 
                         mNotification->setSummary(tr("Default monitor settings applied."));
                         mNotification->setBody(tr("Use LXQt Monitor Settings to adjust your monitor settings."));
+                        mNotification->setIcon(QStringLiteral("preferences-desktop-display"));
                         mNotification->update();
                         mNotification->setTimeout(1000);
                         mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
