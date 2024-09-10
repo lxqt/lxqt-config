@@ -95,7 +95,7 @@ void LoadSettings::applyBestSettings()
                         qDebug() << "lxqt-config-monitor: Extended mode has been applied";
 
                         mNotification->setSummary(tr("Default monitor settings applied."));
-                        mNotification->setBody(tr("Use lxqt-config-monitor for adjusting your monitor settings."));
+                        mNotification->setBody(tr("Use LXQt Monitor Settings to adjust your monitor settings."));
                         mNotification->update();
                         mNotification->setTimeout(1000);
                         mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
