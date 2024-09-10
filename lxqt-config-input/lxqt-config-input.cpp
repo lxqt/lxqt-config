@@ -35,7 +35,7 @@
 int main(int argc, char** argv) {
     LXQt::SingleApplication app(argc, argv);
 
-    QString waylandMsg = QObject::tr("LXQt input settings are currently unsupported under wayland.\n\nMouse, touchpad and keyboard can be configured in the settings of the compositor.");
+    QString waylandMsg = QObject::tr("LXQt input settings are currently unsupported under Wayland.\n\nMouse, touchpad and keyboard can be configured in the settings of your compositor.");
 
     QCommandLineParser parser;
     LXQt::ConfigDialogCmdLineOptions dlgOptions;
@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
 
     if (QGuiApplication::platformName() == QLatin1String("wayland"))
     { // Show a message dialog under wayland if no options are given.
-        QMessageBox::warning(nullptr, QObject::tr("Platform unsupported"), waylandMsg);
+        QMessageBox::warning(nullptr, QObject::tr("Platform Unsupported"), waylandMsg);
         return 0;
     }
 
