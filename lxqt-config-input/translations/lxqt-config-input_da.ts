@@ -177,7 +177,7 @@
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="38"/>
-        <source>LXQt input settings are currently unsupported under wayland.
+        <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
         <translation>LXQt-indgangsindstillinger er i øjeblikket ikke understøttet under Wayland.
