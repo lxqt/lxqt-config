@@ -173,7 +173,7 @@
     <name>QObject</name>
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
-        <source>Platform unsupported</source>
+        <source>Platform Unsupported</source>
         <translation>Plateforme non prise en charge</translation>
     </message>
     <message>
