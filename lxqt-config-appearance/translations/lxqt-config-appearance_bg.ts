@@ -390,7 +390,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Може да бъде заменен от стила на Qt или приложение</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Рамер на иконите на лентата с инструменти:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>

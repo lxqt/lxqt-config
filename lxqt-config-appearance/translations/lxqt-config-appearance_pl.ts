@@ -390,7 +390,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Może zostać zastąpione stylem Qt lub aplikacji</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar ikony paska narzędzi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>

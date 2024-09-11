@@ -303,11 +303,11 @@ Muis, touchpad en toetsenbord kunnen worden ingesteld in de instellingen van de 
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation>LXQt ondersteunt alleen &apos;libinput&apos; as xinput-stuurprogramma.
+        <translation>LXQt ondersteunt alleen ‘libinput’ as xinput-stuurprogramma.
 (huidige waarde: %1)
 
 Als dit gewenst is, stel xinput dan handmatig in.
-Als dit niet gewenst is, kunt u deze melding onderdrukken door het xinput-stuurprogramma in te stellen op &apos;libinput&apos;.
+Als dit niet gewenst is, kunt u deze melding onderdrukken door het xinput-stuurprogramma in te stellen op ‘libinput’.
 </translation>
     </message>
 </context>

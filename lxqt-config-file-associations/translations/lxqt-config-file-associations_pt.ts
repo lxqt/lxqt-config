@@ -57,13 +57,13 @@
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation>Outras aplicações para manipular %1</translation>
+        <translation>Outras aplicações que lidam com %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
         <location filename="../applicationchooser.cpp" line="220"/>
         <source>Applications that handle %1</source>
-        <translation>Aplicações para manipular %1</translation>
+        <translation>Aplicações que lidam com %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="305"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
         <source>Default application</source>
-        <translation>Aplicação padrão</translation>
+        <translation>Aplicação predefinida</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
@@ -137,7 +137,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation>Aplicações padrão</translation>
+        <translation>Aplicações predefinidas</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="347"/>

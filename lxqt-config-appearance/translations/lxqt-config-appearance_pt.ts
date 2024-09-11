@@ -390,7 +390,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Pode ser substituído pelo estilo Qt ou pela aplicação</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho dos ícones da barra de ferramentas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>
@@ -489,8 +489,8 @@ Quer substituí-la?</translation>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Quer realmente remover a(s) paleta(s) selecionada(s)?
-As paletas do root permanecerão intactas se existirem.</translation>
+        <translation>Pretende mesmo remover a(s) paleta(s) selecionada(s)?
+As paletas de raiz permanecerão intactas se existirem.</translation>
     </message>
 </context>
 </TS>
