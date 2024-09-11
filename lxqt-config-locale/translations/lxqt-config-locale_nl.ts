@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="194"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>Verge&amp;lijking en ragnschikking:</translation>
+        <translation>Verge&amp;lijking en rangschikking:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="226"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="313"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation>Wilt u uw aanpassingen opslaan? Ze zullen worden toegepast zodra u zich opnieuw aanmeldt.</translation>
+        <translation>Wilt u uw aanpassingen opslaan? Ze zullen worden toegepast nadat u zich opnieuw heeft aangemeld.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="416"/>

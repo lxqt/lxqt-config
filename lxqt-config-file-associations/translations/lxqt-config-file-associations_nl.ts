@@ -73,7 +73,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation>Geen verdere programma&apos;s aangetroffen</translation>
+        <translation>Geen programma&apos;s meer aangetroffen</translation>
     </message>
 </context>
 <context>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="146"/>
         <source>MIME type</source>
-        <translation>MIME-type</translation>
+        <translation>Mimetype</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="164"/>

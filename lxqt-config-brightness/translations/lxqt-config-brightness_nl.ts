@@ -37,7 +37,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
         <source>Require confirmation after settings change</source>
-        <translation>Bevestiging vragen bij aanpassen van instellingen</translation>
+        <translation>Om bevestiging vragen na aanpassen van instellingen</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="112"/>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation>%1: de verhoog- en verlaagopties kunnen niet samenwerken</translation>
+        <translation>%1: de verhoog- en verlaagopties kunnen niet tegelijkertijd worden gebruikt</translation>
     </message>
 </context>
 </TS>

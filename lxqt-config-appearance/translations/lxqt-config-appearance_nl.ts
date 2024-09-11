@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="173"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; werd overschreven.&lt;/p&gt;&lt;p&gt;U kunt een kopie van uw oude instellingen terugvinden in &apos;%2&apos;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;‘%1’ werd overschreven.&lt;/p&gt;&lt;p&gt;U kunt een kopie van uw oude instellingen terugvinden in ‘%2’.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="238"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>GTK-thema&apos;s instellen (GTK-instellingsbestanden zullen worden overschreven)</translation>
+        <translation>GTK-thema&apos;s instellen (GTK-instellingsbestanden zullen worden overschreven!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
@@ -188,9 +188,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Om uniforme thema&apos;s te verkrijgen, kunt u het best een gelijkende stijl/thema (indien beschikbaar) kiezen voor alle lijsten, of selecteer &apos;gtk2&apos; Qt-stijl (indien beschikbaar) om GTK-thema&apos;s na te bootsen.
+        <translation>Als u alle programma&apos;s er hetzelfde wilt laten uitzien, kunt u het beste een gelijkende stijl/thema kiezen (indien beschikbaar) voor alle lijsten of de ‘gtk2’ Qt-stijl kiezen (indien beschikbaar) om GTK-thema&apos;s na te bootsen.
 
-Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te helpen direct thema&apos;s toe te passen.</translation>
+Zorg dat ‘xsettingsd’ geïnstalleerd is zodat GTK-programma&apos;s meteen van het nieuwe thema worden voorzien.</translation>
     </message>
 </context>
 <context>
@@ -208,7 +208,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>De KDE-extensie van XDG pictogramthema&apos;s -&gt; FollowsColorScheme</translation>
+        <translation>De KDE-extensie van XDG pictogramthema&apos;s → FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -390,7 +390,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan worden aangepast door een Qt-stijl of een programma</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramgrootte op werkbalk:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>
@@ -478,7 +478,7 @@ Zorg dat &apos;xsettingsd&apos; geïnstalleerd is om GTK-programma&apos;s te hel
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Er is al een schema met deze naam.
-Wil je dat schema vervangen?</translation>
+Wilt u dat schema vervangen?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
@@ -489,7 +489,7 @@ Wil je dat schema vervangen?</translation>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Weet je zeker dat de selectie wilt verwijderen?
+        <translation>Weet u zeker dat u de selectie wilt verwijderen?
 Systeembrede schema&apos;s blijven bewaard.</translation>
     </message>
 </context>
