@@ -163,17 +163,17 @@ You can configure your monitor(s) with kanshi.</source>
 Ви можете налаштувати монітор(и) за допомогою kanshi.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="114"/>
+        <location filename="../monitorsettingsdialog.cpp" line="117"/>
         <source>Fast Menu</source>
         <translation>Швидке меню</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="118"/>
+        <location filename="../monitorsettingsdialog.cpp" line="121"/>
         <source>Set position</source>
         <translation>Встановити позицію</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="237"/>
+        <location filename="../monitorsettingsdialog.cpp" line="240"/>
         <source>Advanced settings</source>
         <translation>Розширені налаштування</translation>
     </message>

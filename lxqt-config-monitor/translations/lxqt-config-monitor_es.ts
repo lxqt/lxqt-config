@@ -162,17 +162,17 @@ You can configure your monitor(s) with kanshi.</source>
 Puedes configurar tu(s) monitor(es) con kanshi.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="114"/>
+        <location filename="../monitorsettingsdialog.cpp" line="117"/>
         <source>Fast Menu</source>
         <translation>Menú rápido</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="118"/>
+        <location filename="../monitorsettingsdialog.cpp" line="121"/>
         <source>Set position</source>
         <translation>Establecer la posición</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="237"/>
+        <location filename="../monitorsettingsdialog.cpp" line="240"/>
         <source>Advanced settings</source>
         <translation>Configuración avanzada</translation>
     </message>

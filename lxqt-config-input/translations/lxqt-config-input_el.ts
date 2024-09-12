@@ -172,15 +172,15 @@
     <name>QObject</name>
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
-        <source>Platform unsupported</source>
+        <source>Platform Unsupported</source>
         <translation>Μη υποστηριζόμενο πλατύβαθρο</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="38"/>
-        <source>LXQt input settings are currently unsupported under wayland.
+        <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation>Οι ρυθμίσεις εισαγωγής LXQt δεν υποστηρίζονται στο wayland.
+        <translation>Οι ρυθμίσεις εισαγωγής LXQt δεν υποστηρίζονται στο Wayland.
 
 Το ποντίκι, η επιφάνεια αφής και το πληκτρολόγιο μπορούν να διαμορφωθούν από τις ρυθμίσεις του συνθέτη.</translation>
     </message>
