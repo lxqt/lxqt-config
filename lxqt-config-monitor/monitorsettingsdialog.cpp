@@ -150,7 +150,6 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
         monitorPicture->setScene(monitors);
 
     ui.monitorList->setCurrentRow(0);
-    adjustSize();
 }
 
 void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
