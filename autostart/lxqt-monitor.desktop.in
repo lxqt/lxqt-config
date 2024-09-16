@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Monitor Settings
+TryExec=lxqt-monitor
+Exec=lxqt-monitor
+OnlyShowIn=LXQt;
+X-LXQt-Need-Tray=false
+X-LXQt-Module=true
+
+#TRANSLATIONS_DIR=translations
