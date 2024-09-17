@@ -30,6 +30,7 @@
 #include "ui_palettes.h"
 #include <QDebug>
 #include <QStyleFactory>
+#include <QPushButton>
 #include <QToolBar>
 #include <QSettings>
 #include <QMetaObject>
@@ -391,6 +392,9 @@ void StyleConfig::loadPalette()
             ui.listWidget->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
             updateList();
             connect(ui.listWidget, &QListWidget::itemDoubleClicked, this, &QDialog::accept);
+            connect(ui.listWidget, &QListWidget::itemSelectionChanged, this, [this] {
+                ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(ui.listWidget->selectedItems().length() == 1);
+            });
             connect(ui.removeButton, &QAbstractButton::clicked, this, &PalettesDialog::removeSelectedItems);
             connect(ui.lineEdit, &QLineEdit::textChanged, this, &PalettesDialog::filter);
             if (parent)
