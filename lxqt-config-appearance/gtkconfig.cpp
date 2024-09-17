@@ -94,4 +94,6 @@ void GTKConfig::showAdvancedOptions(bool on)
 {
     ui->uniformThemeLabel->setVisible(on);
     mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), on);
+    if (on)
+        mConfigOtherToolKits->startXsettingsd();
 }
