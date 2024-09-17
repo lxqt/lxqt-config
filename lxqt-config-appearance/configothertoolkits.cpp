@@ -100,7 +100,18 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settin
 {
     mSettings = settings;
     mConfigAppearanceSettings = configAppearanceSettings;
+}
+
+ConfigOtherToolKits::~ConfigOtherToolKits()
+{
+    mXsettingsdProc.close();
+}
+
+void ConfigOtherToolKits::startXsettingsd()
+{
     if(QGuiApplication::platformName() != QStringLiteral("xcb"))
+        return;
+    if(QProcess::NotRunning != mXsettingsdProc.state())
         return;
     if(tempFile.open()) {
         mXsettingsdProc.setProcessChannelMode(QProcess::ForwardedChannels);
@@ -109,11 +120,6 @@ ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settin
             return;
         tempFile.close();
     }
-}
-
-ConfigOtherToolKits::~ConfigOtherToolKits()
-{
-    mXsettingsdProc.close();
 }
 
 static QString get_environment_var(const char *envvar, const char *defaultValue)
