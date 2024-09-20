@@ -173,7 +173,7 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform Unsupported</source>
-        <translation>지원되지 않는 플랫폼</translation>
+        <translation>플랫폼 지원되지 않음</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="38"/>
