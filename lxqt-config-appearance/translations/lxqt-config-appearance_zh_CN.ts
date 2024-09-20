@@ -231,7 +231,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>采用主题提供的配色</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -390,7 +390,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt 样式或程序可能会覆盖这些设置</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,7 +425,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>工具栏图标尺寸：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
