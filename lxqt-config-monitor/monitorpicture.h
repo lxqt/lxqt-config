@@ -44,8 +44,11 @@ public:
 
 protected:
     void showEvent(QShowEvent * event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
+    void updateScale(qreal scale);
+
     Ui::MonitorPictureDialog ui;
     QList<MonitorPicture*> pictures;
     bool updatingOk;
@@ -70,7 +73,7 @@ public:
 
 private:
     QGraphicsTextItem *textItem;
-    QGraphicsSvgItem *svgItem;    
+    QGraphicsSvgItem *svgItem;
     MonitorPictureDialog *monitorPictureDialog;
 
 
@@ -85,11 +88,11 @@ class MonitorPictureProxy: public QObject
     public:
         MonitorPictureProxy(QObject *parent, MonitorPicture *monitorPicture);
         MonitorPicture *monitorPicture;
-        
+
     public slots:
         void updateSize();
         void updatePosition();
-        
+
 };
 
 

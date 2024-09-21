@@ -26,6 +26,8 @@
 #include <QRectF>
 #include <KScreen/Mode>
 #include <QScrollBar>
+#include <QResizeEvent>
+#include <QTransform>
 
 #include "configure.h"
 
@@ -97,13 +99,34 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
 void MonitorPictureDialog::showEvent(QShowEvent * event)
 {
     QWidget::showEvent(event);
-    if( ! firstShownOk ) {
-        // Update scale and set scrollbar position.
-        // Real widget size is not set, until widget is shown.
+    if (!firstShownOk) {
         firstShownOk = true;
-        int minWidgetLength = qMin(ui.graphicsView->size().width(), ui.graphicsView->size().width()) / 1.5;
-        qDebug() << "minWidgetLength" << minWidgetLength << "maxMonitorSize" << maxMonitorSize << "scale" << minWidgetLength / (float) maxMonitorSize;
-        ui.graphicsView->scale(minWidgetLength / (float) maxMonitorSize, minWidgetLength / (float) maxMonitorSize);
+        qreal minWidgetLength = static_cast<qreal>(qMax(ui.graphicsView->size().width(), ui.graphicsView->size().height())) / 1.2;
+        if (maxMonitorSize > 0)
+            updateScale(minWidgetLength / maxMonitorSize);
+    }
+}
+
+void MonitorPictureDialog::resizeEvent(QResizeEvent *event)
+{
+    QDialog::resizeEvent(event);
+    if (firstShownOk && maxMonitorSize > 0)
+    {
+        qreal scale = ui.graphicsView->transform().m11();
+        if (scale > 0)
+        {
+            qreal minWidgetLength = static_cast<qreal>(qMax(ui.graphicsView->size().width(), ui.graphicsView->size().height())) / 1.2;
+            updateScale((minWidgetLength / maxMonitorSize) / scale);
+        }
+    }
+}
+
+void MonitorPictureDialog::updateScale(qreal scale)
+{
+    // Update scale and set scrollbar position.
+    if (scale > 0)
+    {
+        ui.graphicsView->scale(scale, scale);
         updateScene();
         ui.graphicsView->verticalScrollBar()->setValue(0);
         ui.graphicsView->horizontalScrollBar()->setValue(0);
