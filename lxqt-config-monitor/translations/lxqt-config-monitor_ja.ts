@@ -158,7 +158,9 @@ Please choose from the highlighted configurations.</source>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation>LXQt モニター設定は、現在この Wayland コンポジターではサポートされていません。kanshi を使用してモニターを設定できます。</translation>
+        <translation>LXQt モニター設定は、現在この Wayland コンポジターではサポートされていません。
+
+kanshi を使用してモニターを設定できます。</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="117"/>
