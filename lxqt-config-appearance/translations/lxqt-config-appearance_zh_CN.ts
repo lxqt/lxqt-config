@@ -336,7 +336,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>工具提示：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>工具提示文本：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
@@ -430,27 +430,27 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>
