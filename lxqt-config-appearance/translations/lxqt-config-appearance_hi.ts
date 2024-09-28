@@ -148,7 +148,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="128"/>
         <source>BGR</source>
-        <translation type="unfinished">BGR</translation>
+        <translation>BGR</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="133"/>
@@ -188,7 +188,7 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>समान थीम का प्रयास करने के लिए, या तो सभी सूचियों में समान शैली/थीम (यदि उपलब्ध हो) का चयन करें, या जीटीके थीम की नकल करने के लिए &apos;gtk2&apos; क्यूटी शैली (यदि उपलब्ध हो) का चयन करें। सुनिश्चित करें कि जीटीके अनुप्रयोगों को तुरंत थीम लागू करने में मदद करने के लिए &apos;xsettingsd&apos; इंस्टॉल किया गया है।</translation>
     </message>
 </context>
 <context>
@@ -196,7 +196,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt उपस्थिति विन्यास</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>

@@ -39,13 +39,14 @@
     <message>
         <location filename="../loadsettings.cpp" line="105"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: ההגדרות חלו.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: ההגדרות לא חלו.
+אם מדובר במנהל החלונאי Wayland אפשר לנסות את kanshi כדי להגדיר את הצג או הצגים שלך.</translation>
     </message>
 </context>
 <context>
@@ -115,14 +116,16 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>הפעלת ההגדרות נכשלה</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>אי אפשר להחיל את ההגדרות על הצגים שפעילים כרגע.
+
+נא לבחור מההגדרות המודגשות.</translation>
     </message>
 </context>
 <context>
@@ -148,14 +151,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>הפלטפורמה לא נתמכת</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>הגדרות הצגים של LXQt לא נתמכות תחת המנהל החלונאי הזה של wayland.
+
+אפשר להגדיר את הצג או הצגים שלך עם kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="117"/>
@@ -342,6 +347,8 @@ You can configure your monitor(s) with kanshi.</source>
         <translation>
             <numerusform>נותרה שנייה אחת</numerusform>
             <numerusform>נותרו שתי שניות</numerusform>
+            <numerusform>נותרו %n שניות</numerusform>
+            <numerusform>נותרו %n שניות</numerusform>
         </translation>
     </message>
 </context>
