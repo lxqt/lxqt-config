@@ -59,7 +59,7 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
             // Show info under wlroots based compositors
             if (QGuiApplication::platformName() == QLatin1String("wayland")) {
                 QMessageBox::warning(this,
-                                     tr("Platform unsupported"),
+                                     tr("Platform Unsupported"),
                                      tr("LXQt monitor settings are currently unsupported under this wayland compositor.\n\nYou can configure your monitor(s) with kanshi."));
             }
             else {
