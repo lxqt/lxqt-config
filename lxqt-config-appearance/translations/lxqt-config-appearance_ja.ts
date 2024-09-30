@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="172"/>
+        <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
         <translation>GTK テーマ</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="173"/>
+        <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; が上書きされました。&lt;/p&gt;&lt;p&gt;&apos;%2&apos; に古い設定のコピーがあります。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
         <translation>エラー: gsettings は実行出来ません</translation>
     </message>

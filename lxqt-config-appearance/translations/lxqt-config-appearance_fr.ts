@@ -17,24 +17,24 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="172"/>
+        <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
         <translation>Thèmes GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="173"/>
+        <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; a été écrasé.&lt;/p&gt;&lt;p&gt;Vous pouvez trouver une copie de vos anciens paramètres dans &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Erreur : gsettings ne peut pas être lancé</translation>
+        <translation>Erreur&#xa0;: gsettings ne peut pas être lancé</translation>
     </message>
 </context>
 <context>
@@ -471,14 +471,14 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
-        <translation>Nom de la palette :</translation>
+        <translation>Nom de la palette&#xa0;:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Une palette du même nom existe.
-Voulez vous la remplacer ?</translation>
+Voulez vous la remplacer&#xa0;?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
@@ -489,7 +489,7 @@ Voulez vous la remplacer ?</translation>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Voulez vous vraiment supprimer les palettes sélectionnées ?
+        <translation>Voulez vous vraiment supprimer les palettes sélectionnées&#xa0;?
 Les palettes root seront conservés si elles existent.</translation>
     </message>
 </context>

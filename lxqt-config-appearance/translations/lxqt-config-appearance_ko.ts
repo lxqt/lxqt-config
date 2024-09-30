@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="172"/>
+        <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
         <translation>GTK 테마</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="173"/>
+        <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; 덮어 써졌습니다.&lt;/p&gt;&lt;p&gt;&apos;%2&apos;에서 이전 설정의 복사본을 찾으실 수 있습니다&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
         <translation>오류: gsettings를 실행할 수 없습니다</translation>
     </message>

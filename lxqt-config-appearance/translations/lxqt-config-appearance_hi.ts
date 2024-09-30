@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="172"/>
+        <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
         <translation>जीटीके थीम</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="173"/>
+        <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; को अधिलेखित कर दिया गया है.&lt;/p&gt;&lt;p&gt;आप &apos;%2&apos; में अपनी पुरानी सेटिंग्स की एक प्रति प्राप्त कर सकते हैं&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
         <translation>त्रुटि</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
         <translation>त्रुटि : gsettings को नहीं चलाया जा सकता</translation>
     </message>
@@ -266,7 +266,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LXQt उपस्थिति विन्यास</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>

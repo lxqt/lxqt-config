@@ -33,16 +33,21 @@
     <name>LoadSettings</name>
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
-        <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation>既定のモニター設定を適用しました。モニター設定を変更する場合は lxqt-config-monitor を使用して下さい。</translation>
+        <source>Default monitor settings applied.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsettings.cpp" line="105"/>
+        <location filename="../loadsettings.cpp" line="98"/>
+        <source>Use LXQt Monitor Settings to adjust your monitor settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
         <translation>lxqt-config-monitor: 設定が適用されました。</translation>
     </message>
     <message>
-        <location filename="../loadsettings.cpp" line="107"/>
+        <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
         <translation>lxqt-config-monitor: 設定は適用されません。
@@ -163,17 +168,17 @@ You can configure your monitor(s) with kanshi.</source>
 kanshi を使用してモニターを設定できます。</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="117"/>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Fast Menu</source>
         <translation>簡易メニュー</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="121"/>
+        <location filename="../monitorsettingsdialog.cpp" line="122"/>
         <source>Set position</source>
         <translation>位置の設定</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="240"/>
+        <location filename="../monitorsettingsdialog.cpp" line="241"/>
         <source>Advanced settings</source>
         <translation>設定</translation>
     </message>

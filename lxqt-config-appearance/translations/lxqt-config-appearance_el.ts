@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="172"/>
+        <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
         <translation>Θέματα GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="173"/>
+        <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Το %1 αντικαταστάθηκε.&lt;/p&gt;&lt;p&gt;Μπορείτε να βρείτε ένα αντίγραφο της παλιάς διαμόρφωσης στο &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="238"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Σφάλμα: αδυναμία εκτέλεσης του gsettings</translation>
     </message>

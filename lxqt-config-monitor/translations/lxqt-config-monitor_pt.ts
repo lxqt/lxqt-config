@@ -33,16 +33,21 @@
     <name>LoadSettings</name>
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
-        <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation>Aplicadas todas as definições padrão para monitores. Se quiser alterar as definições do monitor, utilize lqxt-config-monitor.</translation>
+        <source>Default monitor settings applied.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsettings.cpp" line="105"/>
+        <location filename="../loadsettings.cpp" line="98"/>
+        <source>Use LXQt Monitor Settings to adjust your monitor settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
         <translation>lxqt-config-monitor: Definições aplicadas.</translation>
     </message>
     <message>
-        <location filename="../loadsettings.cpp" line="107"/>
+        <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
         <translation>lxqt-config-monitor: Definições não aplicadas.
@@ -163,17 +168,17 @@ You can configure your monitor(s) with kanshi.</source>
 Pode configurar o seu(s) monitor(es) com o kanshi.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="117"/>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Fast Menu</source>
         <translation>Menu rápido</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="121"/>
+        <location filename="../monitorsettingsdialog.cpp" line="122"/>
         <source>Set position</source>
         <translation>Definir posição</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="240"/>
+        <location filename="../monitorsettingsdialog.cpp" line="241"/>
         <source>Advanced settings</source>
         <translation>Definições avançadas</translation>
     </message>
