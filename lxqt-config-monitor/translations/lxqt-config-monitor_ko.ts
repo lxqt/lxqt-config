@@ -33,16 +33,21 @@
     <name>LoadSettings</name>
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
-        <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation>기본 모니터 설정이 적용되었습니다. 모니터 설정을 변경하려면 lxqt-config-monitor를 사용하십시오.</translation>
+        <source>Default monitor settings applied.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsettings.cpp" line="105"/>
+        <location filename="../loadsettings.cpp" line="98"/>
+        <source>Use LXQt Monitor Settings to adjust your monitor settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
         <translation>lxqt-config-monitor: 설정이 적용되었습니다.</translation>
     </message>
     <message>
-        <location filename="../loadsettings.cpp" line="107"/>
+        <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
         <translation>lxqt-config-monitor: 설정이 적용되지 않았습니다.
@@ -163,17 +168,17 @@ You can configure your monitor(s) with kanshi.</source>
 kanshi로 모니터를 구성할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="117"/>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Fast Menu</source>
         <translation>빠른 메뉴</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="121"/>
+        <location filename="../monitorsettingsdialog.cpp" line="122"/>
         <source>Set position</source>
         <translation>위치 지정</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="240"/>
+        <location filename="../monitorsettingsdialog.cpp" line="241"/>
         <source>Advanced settings</source>
         <translation>고급 설정</translation>
     </message>
