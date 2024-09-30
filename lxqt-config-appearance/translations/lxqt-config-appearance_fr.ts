@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="238"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Erreur&#xa0;: gsettings ne peut pas être lancé</translation>
+        <translation>Erreur : gsettings ne peut pas être lancé</translation>
     </message>
 </context>
 <context>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
-        <translation>Fin</translation>
+        <translation>Léger</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="174"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="179"/>
         <source>Full</source>
-        <translation>Plein</translation>
+        <translation>Important</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="146"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Antialiasing des sous-pixels :</translation>
+        <translation>Anticrénelage :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -188,9 +188,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Pour tenter une thématisation uniforme, sélectionner un style/thème similaire (si disponible) dans toutes les listes ou le style Qt &apos;gtk2&apos; (si disponible) pour imiter les thèmes GTK.
+        <translation>Pour uniformiser les thèmes, sélectionnez un style/thème similaire (si disponible) dans toutes les listes, ou sélectionnez le style Qt &apos;gtk2&apos; (si disponible) pour imiter les thèmes GTK.
 
-S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applications GTK à appliquer des thèmes à la volée.</translation>
+&apos;xsettingsd&apos; doit être installé pour permettre aux applications GTK d&apos;appliquer des thèmes à la volée.</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser la palette fournie par le thème</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -336,7 +336,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Infobulle :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte de l&apos;infobulle :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
@@ -390,7 +390,7 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Peut être remplacé par un style Qt ou une application</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille des icônes de la barre d&apos;outils :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>
@@ -471,14 +471,14 @@ S&apos;assurer que &apos;xsettingsd&apos; est installé pour aider les applicati
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
-        <translation>Nom de la palette&#xa0;:</translation>
+        <translation>Nom de la palette :</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Une palette du même nom existe.
-Voulez vous la remplacer&#xa0;?</translation>
+Voulez vous la remplacer ?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
@@ -489,7 +489,7 @@ Voulez vous la remplacer&#xa0;?</translation>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Voulez vous vraiment supprimer les palettes sélectionnées&#xa0;?
+        <translation>Voulez vous vraiment supprimer les palettes sélectionnées ?
 Les palettes root seront conservés si elles existent.</translation>
     </message>
 </context>
