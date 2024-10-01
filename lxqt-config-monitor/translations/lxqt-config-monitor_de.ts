@@ -38,7 +38,7 @@
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
-        <source>Use LXQt Monitor Settings to adjust your monitor settings.</source>
+        <source>Adjust your screens with LXQt Monitor Settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -154,7 +154,7 @@ Bitte wählen Sie aus den hervorgehobenen Konfigurationen.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
-        <source>Platform unsupported</source>
+        <source>Platform Unsupported</source>
         <translation>Plattform nicht unterstützt</translation>
     </message>
     <message>
