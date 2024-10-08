@@ -65,19 +65,13 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QToolButton" name="settingsButton">
+      <widget class="QPushButton" name="settingsButton">
        <property name="text">
         <string>Settings</string>
        </property>
        <property name="icon">
         <iconset theme="preferences-system">
          <normaloff>.</normaloff>.</iconset>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextBesideIcon</enum>
-       </property>
-       <property name="autoRaise">
-        <bool>false</bool>
        </property>
       </widget>
      </item>
