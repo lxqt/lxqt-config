@@ -32,9 +32,25 @@
 <context>
     <name>LoadSettings</name>
     <message>
+        <location filename="../loadsettings.cpp" line="97"/>
+        <source>Default monitor settings applied.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../loadsettings.cpp" line="98"/>
-        <source>Default monitor settings have been applied. Use lxqt-config-monitor for adjusting your monitor settings.</source>
-        <translation>Enteekateeka eza bulijjo ze ziteekedwawo. Okuzikyusa, kozesa lxqt-config-monitor.</translation>
+        <source>Adjust your screens with LXQt Monitor Settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="107"/>
+        <source>lxqt-config-monitor: Settings applied.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsettings.cpp" line="109"/>
+        <source>lxqt-config-monitor: Settings not applied.
+If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -50,61 +66,68 @@
         <translation>Enteekateeka ezaakwatibwamu fayiro</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="38"/>
+        <location filename="../managesavedsettings.ui" line="45"/>
         <source>Rename</source>
         <translation>Kyusa linnya</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="45"/>
+        <location filename="../managesavedsettings.ui" line="52"/>
         <source>Delete</source>
         <translation>Gyawo</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.ui" line="52"/>
-        <source>Apply</source>
-        <translation>Kaza</translation>
-    </message>
-    <message>
-        <location filename="../managesavedsettings.cpp" line="62"/>
+        <location filename="../managesavedsettings.cpp" line="66"/>
         <source>None</source>
         <translation>Tewali</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="65"/>
+        <location filename="../managesavedsettings.cpp" line="69"/>
         <source>Left</source>
         <translation>Ku kkono</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="68"/>
+        <location filename="../managesavedsettings.cpp" line="72"/>
         <source>Inverted</source>
         <translation>Luvuunike</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="71"/>
+        <location filename="../managesavedsettings.cpp" line="75"/>
         <source>Right</source>
         <translation>Ku ddyo</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>True</source>
         <translation>Ye</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
-        <location filename="../managesavedsettings.cpp" line="76"/>
+        <location filename="../managesavedsettings.cpp" line="79"/>
+        <location filename="../managesavedsettings.cpp" line="80"/>
         <source>False</source>
         <translation>Nedda</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name</source>
         <translation>Linnya</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="136"/>
+        <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name:</source>
         <translation>Linnya:</translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="172"/>
+        <source>Settings Activation Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managesavedsettings.cpp" line="173"/>
+        <source>Selected settings cannot be applied with currently active monitors.
+
+Please choose from the highlighted configurations.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -128,17 +151,29 @@
         <translation>Enteekateeka</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="106"/>
+        <location filename="../monitorsettingsdialog.cpp" line="62"/>
+        <source>Platform Unsupported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="63"/>
+        <source>LXQt monitor settings are currently unsupported under this wayland compositor.
+
+You can configure your monitor(s) with kanshi.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Fast Menu</source>
         <translation>Menyu ey&apos;amangu</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="110"/>
+        <location filename="../monitorsettingsdialog.cpp" line="122"/>
         <source>Set position</source>
         <translation>Tegeka obusangiro</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="229"/>
+        <location filename="../monitorsettingsdialog.cpp" line="241"/>
         <source>Advanced settings</source>
         <translation>Ebyetaagisa bumanyirivu</translation>
     </message>
@@ -151,32 +186,32 @@
         <translation>Entegeka</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="29"/>
+        <location filename="../monitorwidget.ui" line="64"/>
         <source> (x)</source>
         <translation> (x)</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="45"/>
+        <location filename="../monitorwidget.ui" line="80"/>
         <source> (y)</source>
         <translation> (y)</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="78"/>
+        <location filename="../monitorwidget.ui" line="36"/>
         <source>Resolution:</source>
         <translation>Obungi bw&apos;obutonyeze:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="90"/>
+        <location filename="../monitorwidget.ui" line="27"/>
         <source>Enable this display</source>
         <translation>Zuukusa olutimbe luno</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="98"/>
+        <location filename="../monitorwidget.ui" line="49"/>
         <source>This is my primary display</source>
         <translation>Luno lwe lutimbe olukulu</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="103"/>
+        <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
         <translation>Olutimbe luno lukola ng&apos;ekitundu ky&apos;olulala</translation>
     </message>
@@ -186,12 +221,12 @@
         <translation>Ebyetaagisa bumanyirivu</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="146"/>
+        <location filename="../monitorwidget.ui" line="143"/>
         <source>Refresh rate:</source>
         <translation>Obwangu bw&apos;okulaga bifaananyi:</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.ui" line="153"/>
+        <location filename="../monitorwidget.ui" line="133"/>
         <source>Rotation:</source>
         <translation>Obuwunzike:</translation>
     </message>
@@ -268,7 +303,7 @@
         <translation>Luvuunike</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="245"/>
+        <location filename="../monitorwidget.cpp" line="247"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>

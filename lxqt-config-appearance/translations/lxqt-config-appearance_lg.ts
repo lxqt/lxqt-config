@@ -17,22 +17,22 @@
 <context>
     <name>ConfigOtherToolKits</name>
     <message>
-        <location filename="../configothertoolkits.cpp" line="170"/>
+        <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
         <translation>Endyo z&apos;endabika eza mu GTK</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="171"/>
+        <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&apos;%1&apos; ewandkidwako empya.&lt;/p&gt;&lt;p&gt;Koppi y&apos;enteekateeka zo enkadde gisange mu &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="235"/>
+        <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Kiremya: gsettings tesobola kutandikibwa</translation>
     </message>
@@ -60,27 +60,27 @@
         <translation>Misono:</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="53"/>
+        <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
         <translation>Obunene bw&apos;ennukuta (mu pt):</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="68"/>
+        <location filename="../fontsconfig.ui" line="54"/>
         <source>Normal</source>
         <translation>Za bulijjo</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="73"/>
+        <location filename="../fontsconfig.ui" line="59"/>
         <source>Bold</source>
         <translation>Nziggumivu</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="78"/>
+        <location filename="../fontsconfig.ui" line="64"/>
         <source>Italic</source>
         <translation>Nsurike</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="83"/>
+        <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold Italic</source>
         <translation>Nsurike nziggumivu</translation>
     </message>
@@ -95,68 +95,68 @@
         <translation>Kozesa nnukuta ez&apos;enkula enseeteeze</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="107"/>
+        <location filename="../fontsconfig.ui" line="153"/>
         <source>Font hinting style:</source>
         <translation>Obuhintawaze:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
-        <location filename="../fontsconfig.ui" line="183"/>
+        <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
         <translation>Bbule</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="123"/>
+        <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
         <translation>Katono</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="128"/>
+        <location filename="../fontsconfig.ui" line="174"/>
         <source>Medium</source>
         <translation>Kisaamusaamu</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="133"/>
+        <location filename="../fontsconfig.ui" line="179"/>
         <source>Full</source>
         <translation>Mu bujjuvu</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="141"/>
+        <location filename="../fontsconfig.ui" line="146"/>
         <source>Font hinting</source>
         <translation>Okuhintawaza nnukuta</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="148"/>
+        <location filename="../fontsconfig.ui" line="187"/>
         <source>Resolution (DPI):</source>
         <translation>Obungi bw&apos;obutonyeze (DPI):</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="155"/>
+        <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
         <translation>Puloguramu yetereereze obuhintawaze</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="172"/>
+        <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
         <translation>Kika kya kuseeteezesa pikiseli eza langi:</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="188"/>
+        <location filename="../fontsconfig.ui" line="123"/>
         <source>RGB</source>
         <translation>RGB</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="193"/>
+        <location filename="../fontsconfig.ui" line="128"/>
         <source>BGR</source>
         <translation>BGR</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="198"/>
+        <location filename="../fontsconfig.ui" line="133"/>
         <source>VRGB</source>
         <translation>VRGB</translation>
     </message>
     <message>
-        <location filename="../fontsconfig.ui" line="203"/>
+        <location filename="../fontsconfig.ui" line="138"/>
         <source>VBGR</source>
         <translation>VBGR</translation>
     </message>
@@ -175,12 +175,12 @@
 (Kino kijja okuzzawo fayiro ez&apos;entaakateeka za GTK mpya mu kifo ky&apos;eziriwo kakano!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="83"/>
+        <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 3 Theme</source>
         <translation>Lulyo lw&apos;endabika ya GTK 3</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="77"/>
         <source>GTK 2 Theme</source>
         <translation>Lulyo lw&apos;endabika ya GTK 2</translation>
     </message>
@@ -233,12 +233,17 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
         <translation>Kozesa endabika y&apos;obwaliriro bw&apos;awakolerwa ejjira ku lulyo lw&apos;endabika</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="94"/>
+        <location filename="../lxqtthemeconfig.ui" line="64"/>
+        <source>Use palette provided by theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqtthemeconfig.cpp" line="83"/>
         <source>(User Theme)</source>
         <translation>(Olulyo lw&apos;endabika lwa mukozesa)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="182"/>
+        <location filename="../lxqtthemeconfig.cpp" line="185"/>
         <source>Open theme folder</source>
         <translation>Bikkula etterekero elirimu fayiro ezikola olulyo lw&apos;endabika</translation>
     </message>
@@ -265,37 +270,37 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
         <translation>Enteekateeka za ndabika ya LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="75"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
         <translation>Enteekateeka y&apos;obutundu bw&apos;endabika</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="84"/>
+        <location filename="../main.cpp" line="83"/>
         <source>Icons Theme</source>
         <translation>Endyo z&apos;obufaananyi obuyunzi</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="93"/>
+        <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
         <translation>Endyo z&apos;endabika ya LXQt</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="101"/>
+        <location filename="../main.cpp" line="100"/>
         <source>Font</source>
         <translation>Enkula y&apos;ennukuta</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="111"/>
+        <location filename="../main.cpp" line="110"/>
         <source>Cursor</source>
         <translation>Akasonga</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="118"/>
+        <location filename="../main.cpp" line="117"/>
         <source>GTK Style</source>
         <translation>Endabika y&apos;ebikozesa GTK</translation>
     </message>
@@ -334,76 +339,125 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
+        <source>Tooltip:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
         <translation>Enyunzi:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="152"/>
+        <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
         <translation>Bigambo eby&apos;okuddirisa:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="162"/>
+        <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
         <translation>Bigambo bya ku bwaliriro bw&apos;eddirisa:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="172"/>
+        <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
         <translation>Bigambo ebitangaazidwa:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="182"/>
+        <location filename="../styleconfig.ui" line="196"/>
+        <source>Tooltip Text:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
         <translation>Enyunzi ekozesedwa:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="214"/>
+        <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
         <translation>&amp;Kwata langi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="221"/>
+        <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
         <translation>&amp;Londa omuganda gwa langi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="241"/>
+        <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
         <translation>Kozesa langi eza &amp;bulijjo</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="256"/>
+        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="294"/>
+        <location filename="../styleconfig.ui" line="326"/>
+        <location filename="../styleconfig.ui" line="336"/>
+        <location filename="../styleconfig.ui" line="368"/>
+        <source>May be overridden by Qt style or app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="287"/>
         <source>Toolbar button style:</source>
         <translation>Entegeka ya mapeesa ag&apos;okububaawo:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="264"/>
+        <location filename="../styleconfig.ui" line="298"/>
         <source>Only display the icon</source>
         <translation>Kafaananyi kokka</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="303"/>
         <source>Only display the text</source>
         <translation>Bigambo byokka</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="274"/>
+        <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
         <translation>Bigambo wabbali w&apos;akafaananyi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="279"/>
+        <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
         <translation>Bigambo wansi w&apos;akafaananyi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
+        <location filename="../styleconfig.ui" line="318"/>
         <source>Default</source>
         <translation>Ekya bulijjo</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="292"/>
+        <location filename="../styleconfig.ui" line="329"/>
+        <source>Toolbar icon size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="340"/>
+        <source>16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="345"/>
+        <source>22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="350"/>
+        <source>24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="355"/>
+        <source>32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="360"/>
+        <source>48</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
         <translation>Ppeesa likolera ku lukoona lumu</translation>
     </message>
@@ -413,30 +467,30 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
         <translation>Musono gw&apos;ebikozesa Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
-        <location filename="../styleconfig.cpp" line="255"/>
+        <location filename="../styleconfig.cpp" line="330"/>
+        <location filename="../styleconfig.cpp" line="340"/>
         <source>Save Palette</source>
         <translation>Kwata langi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="245"/>
+        <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
         <translation>Linnya lya muganda gwa langi:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="256"/>
+        <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Waliwo omuganda gwa langi omulala ogulina erinnay eryo.
 Oyagala guno omupya gudde mu kifo kya gwo?</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="393"/>
+        <location filename="../styleconfig.cpp" line="484"/>
         <source>Remove Palettes</source>
         <translation>Gyawo miganda gya langi</translation>
     </message>
     <message>
-        <location filename="../styleconfig.cpp" line="394"/>
+        <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
         <translation>Ddala oyagala okugyawo emiganda gya langi egitangaazidwa?
