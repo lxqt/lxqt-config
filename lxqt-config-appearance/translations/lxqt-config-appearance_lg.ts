@@ -235,7 +235,7 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Kozesa ezo langi ezireetedwa olulyo lw&apos;endabika</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -340,7 +340,7 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Magezi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -365,7 +365,7 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bigambo bya mu magezi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
@@ -394,7 +394,7 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Ebitegekedwa mu ndabika ya Qt oba eya puloguramu biyinza okudda mu kifo kya bino</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -429,32 +429,32 @@ ebikozesa GTK okukwata mangu endabika zino.</translation>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obunene bw&apos;obufaananyi bwa ku bubaawo:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>

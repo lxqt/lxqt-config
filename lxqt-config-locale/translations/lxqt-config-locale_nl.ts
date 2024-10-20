@@ -66,7 +66,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="125"/>
         <source>No change</source>
-        <translation>Niets aangepast</translation>
+        <translation>Standaard</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="312"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt-regio-instellingen</translation>
+        <translation>LXQt-taalinstellingen</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
