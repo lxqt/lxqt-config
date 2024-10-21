@@ -176,12 +176,14 @@ akabonero nga erinwyezezza wansi:</translation>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kakano LXQt tekusobozesa okukola ku nteekateeka z&apos;ebikozesebwa okuyingiza nga Wayland y&apos;ekola.
+
+Enteekateeka ez&apos;akasongesebwa aka bulijjo n&apos;akasiisirizibwa ne ez&apos;amapeesa agawandiksibwa osobola okuzikolerako w&apos;otegekera ebya puloguramu ekwanaganya ebirabikira awakolerwa.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Tewali nkolagana ne sisitemu</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="81"/>

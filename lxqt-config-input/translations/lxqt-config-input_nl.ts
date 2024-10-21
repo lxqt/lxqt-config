@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>Typ in het volgende veld om uw toetsenbordinstellingen uit te proberen</translation>
+        <translation>In het veld hieronder kunt u de instellingen uitproberen:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Toetsen om de indeling te wijzigen:</translation>
+        <translation>Indeling wijzigen met behulp van:</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Scrollsnelheid:</translation>
+        <translation>Aantal te scrollen regels:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -263,7 +263,7 @@ Muis, touchpad en toetsenbord kunnen worden ingesteld in de instellingen van de 
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
-        <translation>Tikken-en-slepen</translation>
+        <translation>Slepen-en-neerzetten</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="86"/>
