@@ -173,14 +173,16 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform Unsupported</source>
-        <translation>Alusta ei ole tuettu</translation>
+        <translation>Alustaa ei tueta</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt:n syöttöasetukset eivät vielä tue Waylandiä.
+
+Hiiri, kosketuslevy ja näppäimistö määritetään koostajan asetuksissa.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="81"/>
