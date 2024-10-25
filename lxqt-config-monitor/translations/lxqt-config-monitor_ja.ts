@@ -34,12 +34,12 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>既定のモニター設定が適用されました。</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LXQt 【モニターの設定】で画面を調整して下さい。</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
