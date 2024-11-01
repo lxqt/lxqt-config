@@ -203,17 +203,17 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Symboltema</translation>
+        <translation>Ikontema</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>KDE tillegget for XDG symboltemaer -&gt; FollowsColorScheme</translation>
+        <translation>KDE-utvidelsen for XDG-ikontemaer -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Fargelegg symboler basert på widgetstil (palett)</translation>
+        <translation>Fargelegg ikoner basert på widget-stil (palett)</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Bruk palett gitt av tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -278,7 +278,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../main.cpp" line="83"/>
         <source>Icons Theme</source>
-        <translation>Symboltema</translation>
+        <translation>Ikontema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="92"/>
@@ -336,7 +336,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verktøytips:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verktøytips-tekst:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
@@ -390,7 +390,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan overstyres av Qt-stil eller program</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -400,7 +400,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="298"/>
         <source>Only display the icon</source>
-        <translation>Bare vis symbolet</translation>
+        <translation>Bare vis ikonet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="303"/>
@@ -410,12 +410,12 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
-        <translation>Tekst vises ved siden av symbolet</translation>
+        <translation>Teksten vises ved siden av ikonet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
-        <translation>Tekst vises under symbolet</translation>
+        <translation>Teksten vises under ikonet</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="318"/>
@@ -425,7 +425,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Størrelse på verktøylinjeikon:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>

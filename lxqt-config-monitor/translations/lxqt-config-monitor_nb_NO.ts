@@ -34,17 +34,17 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard skjerminnstillinger brukes.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Juster dine skjermer med LXQt-skjerminnstillinger.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: innstillinger brukes.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
