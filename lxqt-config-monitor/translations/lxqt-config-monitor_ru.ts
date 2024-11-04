@@ -34,23 +34,24 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>Применены настройки монитора по умолчанию.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Измените свои настройки экрана с помощью модуля «Настройки монитора» LXQt.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Настройки применены.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Настройки не применены.
+Если это композитор Wayland, вы можете попробовать настроить свой монитор в kanshi.</translation>
     </message>
 </context>
 <context>
@@ -120,14 +121,16 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось применить настройки</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбранные настройки не могут быть применены к данному выбранному монитору.
+
+Пожалуйста, выберите одну из подсвеченных конфигураций.</translation>
     </message>
 </context>
 <context>
@@ -153,14 +156,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Платформа не поддерживается</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>На данный момент LXQt не поддерживает настройку монитора под этим композитором Wayland.
+
+Вы можете настроить свой монитор(ы) с помощью kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="118"/>
