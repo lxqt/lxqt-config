@@ -180,7 +180,9 @@
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>На данный момент LXQt не поддерживает настройку ввода под Wayland.
+
+Изменить параметры мыши, сенсорной панели или клавиатуры можно в настройка своего композитора.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="81"/>
