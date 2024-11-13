@@ -173,14 +173,16 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Platform Unsupported</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt input settings are currently unsupported under Wayland.
+
+Mouse, touchpad and keyboard can be configured in the compositor settings.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="81"/>
@@ -210,7 +212,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Mouse and Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Mouse and Touchpad</translation>
     </message>
 </context>
 <context>
@@ -236,62 +238,62 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="14"/>
         <source>TouchpadConfig </source>
-        <translation type="unfinished"></translation>
+        <translation>TouchpadConfig </translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>Device:</source>
-        <translation type="unfinished"></translation>
+        <translation>Device:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Acceleration speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Acceleration speed:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="60"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap to click</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
-        <translation type="unfinished"></translation>
+        <translation>Natural Scrolling</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap and drag</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="86"/>
         <source>Scrolling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrolling:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Disabled</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Two-Finger</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>Ed&amp;ge</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="130"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>B&amp;utton</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>DeviceInfoLabel</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="85"/>
@@ -301,7 +303,12 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt only supports &quot;libinput&quot; as xinput driver.
+(current value: %1)
+
+If this is intended, please configure xinput manually.
+Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
+</translation>
     </message>
 </context>
 </TS>
