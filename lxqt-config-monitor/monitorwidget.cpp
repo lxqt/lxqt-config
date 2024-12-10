@@ -133,6 +133,8 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
             tr("Serial number: %1\n").arg(edid->serial()) %
             tr("EISA device ID: %1\n").arg(edid->eisaId())
         );
+        ui.outputInfoLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+        ui.outputInfoLabel->setCursor(QCursor(Qt::IBeamCursor));
     }
 
     if (config->connectedOutputs().count() == 1) {
