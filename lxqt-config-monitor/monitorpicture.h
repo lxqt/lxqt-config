@@ -24,14 +24,13 @@
 #include <QGraphicsTextItem>
 #include <QSvgRenderer>
 #include <QGraphicsSvgItem>
-#include <QDialog>
 #include "monitor.h"
 #include "ui_monitorpicture.h"
 #include "monitorwidget.h"
 
 class MonitorPicture;
 
-class MonitorPictureDialog : public QDialog
+class MonitorPictureDialog : public QWidget
 {
     Q_OBJECT
 

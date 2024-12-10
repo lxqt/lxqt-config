@@ -65,7 +65,7 @@ void MonitorPictureProxy::updatePosition()
 }
 
 MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent, Qt::WindowFlags f) :
-    QDialog(parent,f)
+    QWidget(parent,f)
 {
     updatingOk = false;
     firstShownOk = false;
@@ -79,7 +79,7 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
 {
     int monitorsWidth =0;
     int monitorsHeight = 0;
-    QGraphicsScene *scene = new QGraphicsScene();
+    QGraphicsScene *scene = new QGraphicsScene(this);
     for (MonitorWidget *monitor : monitors) {
         MonitorPicture *monitorPicture = new MonitorPicture(nullptr, monitor, this);
         pictures.append(monitorPicture);
@@ -109,7 +109,7 @@ void MonitorPictureDialog::showEvent(QShowEvent * event)
 
 void MonitorPictureDialog::resizeEvent(QResizeEvent *event)
 {
-    QDialog::resizeEvent(event);
+    QWidget::resizeEvent(event);
     if (firstShownOk && maxMonitorSize > 0)
     {
         qreal scale = ui.graphicsView->transform().m11();
