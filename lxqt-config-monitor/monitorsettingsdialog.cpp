@@ -86,7 +86,7 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
 
     });
 
-    connect(ui.settingsButton, &QToolButton::clicked, this, &MonitorSettingsDialog::showSettingsDialog);
+    connect(ui.settingsButton, &QPushButton::clicked, this, &MonitorSettingsDialog::showSettingsDialog);
 
     // also make sure that widgets are shown completely (a Qt bug under Wayland?)
     LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
