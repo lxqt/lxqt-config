@@ -168,6 +168,10 @@ QPair<QModelIndex, QModelIndex> QCategorizedView::Private::intersectingIndexesWi
         itemRect.topLeft().rx() += horizontalOff;
         itemRect.bottomRight().ry() += verticalOff;
         itemRect.bottomRight().rx() += horizontalOff;
+        if (hasGrid()) { // see QCategorizedView::visualRect
+            itemRect.setLeft(itemRect.left() - (q->gridSize().width() - itemRect.width()) / 2);
+            itemRect.setSize(q->gridSize());
+        }
         if (itemRect.bottomRight().y() <= rect.topLeft().y()) {
             bottom = middle + 1;
         } else {
@@ -190,6 +194,10 @@ QPair<QModelIndex, QModelIndex> QCategorizedView::Private::intersectingIndexesWi
         itemRect.topLeft().rx() += horizontalOff;
         itemRect.bottomRight().ry() += verticalOff;
         itemRect.bottomRight().rx() += horizontalOff;
+        if (hasGrid()) {
+            itemRect.setLeft(itemRect.left() - (q->gridSize().width() - itemRect.width()) / 2);
+            itemRect.setSize(q->gridSize());
+        }
         if (itemRect.topLeft().y() <= rect.bottomRight().y()) {
             bottom = middle + 1;
         } else {
@@ -761,6 +769,10 @@ QModelIndex QCategorizedView::indexAt(const QPoint &point) const
                 return index;
             }
             return QModelIndex();
+        }
+        if (d->hasGrid()) { // see QCategorizedView::visualRect
+            rect.setLeft(rect.left() - (gridSize().width() - rect.width()) / 2);
+            rect.setSize(gridSize());
         }
         bool directionCondition;
         if (layoutDirection() == Qt::LeftToRight) {
