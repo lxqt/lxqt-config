@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="he">
+<TS version="2.1" language="ka">
 <context>
     <name>FastMenu</name>
     <message>
         <location filename="../fastmenu.ui" line="20"/>
         <source>Fast options</source>
-        <translation>אפשרויות מהירות</translation>
+        <translation>სწრაფი მორგება</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ תצוגה מורחבת</translation>
+        <translation> ❶ ❷ გაფართოებული ხედი</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ תצוגה מאוחדת</translation>
+        <translation> ❶ ❶ გაერთიანებული ხედი</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation> ❶     רק הראשונה</translation>
+        <translation> ❶     მხოლოდ პირველი</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation>     ❷ רק השנייה</translation>
+        <translation>     ❷ მხოლოდ მეორე</translation>
     </message>
 </context>
 <context>
@@ -34,24 +34,24 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation>הגדרות מעקב ברירת מחדל הוחלו.</translation>
+        <translation>გამოიყენება ნაგულისხმევი ეკრანის პარამეტრები.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation>כיוון המסכים שלך עם הגדרות הצגים של LXQt.</translation>
+        <translation>მოირგეთ თქვენი ეკრანები LXQt-ის ეკრანის პარამეტრებში.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation>lxqt-config-monitor: ההגדרות חלו.</translation>
+        <translation>lxqt-config-monitor: პარამეტრები გადატარებულია.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation>lxqt-config-monitor: ההגדרות לא חלו.
-אם מדובר במנהל החלונאי Wayland אפשר לנסות את kanshi כדי להגדיר את הצג או הצגים שלך.</translation>
+        <translation>lxqt-config-monitor: პარამეტრები არ გადატარებულა.
+თუ ეს Wayland-ის კომპოზიტორია, ეკრანის მოსარგებად kanshi სცადეთ.</translation>
     </message>
 </context>
 <context>
@@ -59,78 +59,78 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>הגדרות צגים</translation>
+        <translation>ეკრანის მორგება</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation>הגדרות שנשמרו</translation>
+        <translation>შენახული პარამეტრები</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
         <source>Rename</source>
-        <translation>שינוי שם</translation>
+        <translation>სახელის გადარქმევა</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="52"/>
         <source>Delete</source>
-        <translation>מחיקה</translation>
+        <translation>წაშლა</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="66"/>
         <source>None</source>
-        <translation>ללא</translation>
+        <translation>არცერთი</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="69"/>
         <source>Left</source>
-        <translation>שמאל</translation>
+        <translation>მარცხენა</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="72"/>
         <source>Inverted</source>
-        <translation>הפוך</translation>
+        <translation>გადაბრუნებული</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="75"/>
         <source>Right</source>
-        <translation>ימין</translation>
+        <translation>მარჯვენა</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
         <source>True</source>
-        <translation>אמת</translation>
+        <translation>ჭეშმარიტი</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
         <source>False</source>
-        <translation>שקר</translation>
+        <translation>ცრუ</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name</source>
-        <translation>שם</translation>
+        <translation>სახელი</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="139"/>
         <source>Name:</source>
-        <translation>שם:</translation>
+        <translation>სახელი:</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation>הפעלת ההגדרות נכשלה</translation>
+        <translation>პარამეტრების გააქტიურება ჩავარდა</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation>אי אפשר להחיל את ההגדרות על הצגים שפעילים כרגע.
+        <translation>არჩეული პარამეტრების გადატარება შეუძლებელია ამჟამად აქტიურ ეკრანებზე.
 
-נא לבחור מההגדרות המודגשות.</translation>
+აირჩიე, გამოკვეთილი კონფიგურაციებიდან.</translation>
     </message>
 </context>
 <context>
@@ -138,7 +138,7 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>להשאיר את הצגים מחוברים</translation>
+        <translation>ეკრანების მიერთებულად შენარჩუნება</translation>
     </message>
 </context>
 <context>
@@ -146,41 +146,41 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>הגדרות צג</translation>
+        <translation>ეკრანის პარამეტრები</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
-        <translation>הגדרות</translation>
+        <translation>მორგება</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform Unsupported</source>
-        <translation>הפלטפורמה לא נתמכת</translation>
+        <translation>პლატფორმა მხარდაჭერილი არაა</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation>הגדרות הצגים של LXQt לא נתמכות תחת המנהל החלונאי הזה של wayland.
+        <translation>LXQt-ის ეკრანის მორგება ამჟამად Wayland-ის კომპოზიტორით მხარდაჭერილი არა.
 
-אפשר להגדיר את הצג או הצגים שלך עם kanshi.</translation>
+ეკრანის მორგება kanshi-ით შეგიძლიათ.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="118"/>
         <source>Fast Menu</source>
-        <translation>תפריט מהיר</translation>
+        <translation>სწრაფი მენიუ</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="122"/>
         <source>Set position</source>
-        <translation>הגדרת מיקום</translation>
+        <translation>მდებარეობის დაყენება</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="241"/>
         <source>Advanced settings</source>
-        <translation>הגדרות מתקדמות</translation>
+        <translation>დამატებითი პარამეტრები</translation>
     </message>
 </context>
 <context>
@@ -188,129 +188,129 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation>התקנה</translation>
+        <translation>მორგება</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="64"/>
         <source> (x)</source>
-        <translation></translation>
+        <translation> (x)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="80"/>
         <source> (y)</source>
-        <translation></translation>
+        <translation> (y)</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="36"/>
         <source>Resolution:</source>
-        <translation>רזולוציה:</translation>
+        <translation>გაფართოება:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="27"/>
         <source>Enable this display</source>
-        <translation>הפעלת התצוגה הזו</translation>
+        <translation>ამ ეკრანის ჩართვა</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="49"/>
         <source>This is my primary display</source>
-        <translation>זו התצוגה הראשית שלי</translation>
+        <translation>ეს ჩემი ძირითადი ეკრანია</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
-        <translation>צג זה מרחיב תצוגה אחרת</translation>
+        <translation>ეს ეკრანი სხვა ეკრანს აგრძელებს</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation>מתקדם</translation>
+        <translation>დამატებით</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="143"/>
         <source>Refresh rate:</source>
-        <translation>קצב רענון:</translation>
+        <translation>განახლების სიხშირე:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="133"/>
         <source>Rotation:</source>
-        <translation>הטיה:</translation>
+        <translation>მობრუნება:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="176"/>
         <source>Info</source>
-        <translation>מידע</translation>
+        <translation>ინფორმაცია</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="182"/>
         <source>Display information</source>
-        <translation>פרטי התצוגה</translation>
+        <translation>ინფორმაცია ეკრანის შესახებ</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="129"/>
         <source>Name: %1
 </source>
-        <translation>שם: %1
+        <translation>სახელი: %1
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="130"/>
         <source>Vendor: %1
 </source>
-        <translation>יצרן: %1
+        <translation>მომწოდებელი: %1
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="131"/>
         <source>Serial: %1
 </source>
-        <translation>מס׳ סידורי: %1
+        <translation>სერიული ნომერი: %1
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="132"/>
         <source>Display size: %1cm x %2cm
 </source>
-        <translation>גודל תצוגה: %1 ס״מ × %2 ס״מ
+        <translation>ეკრანის ზომა: %1სმ x %2სმ
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="133"/>
         <source>Serial number: %1
 </source>
-        <translation>מספר סידורי: %1
+        <translation>სერიული ნომერი: %1
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="134"/>
         <source>EISA device ID: %1
 </source>
-        <translation>מזהה התקן EISA:‏ %1
+        <translation>EISA მოწყობილობის ID: %1
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="154"/>
         <source>None</source>
-        <translation>אין</translation>
+        <translation>არცერთი</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="155"/>
         <source>Left</source>
-        <translation>שמאל</translation>
+        <translation>მარცხენა</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="156"/>
         <source>Right</source>
-        <translation>ימין</translation>
+        <translation>მარჯვენა</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="157"/>
         <source>Inverted</source>
-        <translation>הפוך</translation>
+        <translation>გადაბრუნებული</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="247"/>
         <source>%1 Hz</source>
-        <translation>%1 הרץ</translation>
+        <translation>%1 ჰც</translation>
     </message>
 </context>
 <context>
@@ -318,7 +318,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>ניהול הגדרות שמורות</translation>
+        <translation>შენახული პარამეტრების ნახვა</translation>
     </message>
 </context>
 <context>
@@ -326,12 +326,12 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../savesettings.cpp" line="87"/>
         <source>Name</source>
-        <translation>שם</translation>
+        <translation>სახელი</translation>
     </message>
     <message>
         <location filename="../savesettings.cpp" line="87"/>
         <source>Name:</source>
-        <translation>שם:</translation>
+        <translation>სახელი:</translation>
     </message>
 </context>
 <context>
@@ -339,19 +339,19 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>ההגדרות נערכו</translation>
+        <translation>პარამეტრები შეიცვალა</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>ההגדרות הנוכחיות מתאימות לך?</translation>
+        <translation>მოგწონთ მიმდინარე პარამეტრები?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
-            <numerusform>נותרה שנייה אחת</numerusform>
-            <numerusform>נותרו שתי שניות</numerusform>
+            <numerusform>დარჩენილია &amp;n წამი</numerusform>
+            <numerusform>დარჩენილია &amp;n წამი</numerusform>
         </translation>
     </message>
 </context>
