@@ -159,7 +159,7 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
         flagcode = split[1].toLower();
     }
     /* TODO Find a better place for flags ... */
-    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/locale/countries/%1/flag.png").arg(flagcode)));
+    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("iso-flags-svg/country-4x3/%1.svg").arg(flagcode)));
     QIcon flagIcon;
     if (!flag.isEmpty())
     {
