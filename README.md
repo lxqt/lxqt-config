@@ -54,6 +54,8 @@ belonging to LXQt, too.
 
 Binary `lxqt-config-locale`.
 
+**Note**: The SVG ISO flags from `$XDG_DATA_DIRS/iso-flags-svg/country-4x3/` will be shown if `iso-flags-svg` is installed (whether as root or inside `~/.local/share/`).
+
 #### Monitor Settings
 
 Adjusts screen resolutions, positioning of screens and the likes.
