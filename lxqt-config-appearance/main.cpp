@@ -67,7 +67,7 @@ int main (int argc, char **argv)
     LXQt::Settings mConfigAppearanceSettings(QStringLiteral("lxqt-config-appearance"));
     ConfigOtherToolKits *configOtherToolKits = new ConfigOtherToolKits(settings, &mConfigAppearanceSettings, dialog);
 
-    QSettings& qtSettings = *settings; // use lxqt config file for Qt settings in Qt5.
+    QSettings& qtSettings = *settings; // use lxqt config file for Qt settings
 
     /*** Widget Style ***/
     StyleConfig* stylePage = new StyleConfig(settings, &qtSettings, dialog);
@@ -140,7 +140,8 @@ int main (int argc, char **argv)
 
     app.setQuitOnLastWindowClosed(false);
     app.connect(&app, &LXQt::SingleApplication::lastWindowClosed, [=, &mConfigAppearanceSettings] () {
-        mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
+        if (mConfigAppearanceSettings.value(QStringLiteral("size")).toSize() != dialog->size())
+            mConfigAppearanceSettings.setValue(QStringLiteral("size"), dialog->size());
         LXQt::SingleApplication::quit();
 
     });
