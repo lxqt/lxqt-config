@@ -10,23 +10,6 @@ This application is a settings center for all environment related applications
 and all configuration software installed and registered by the \fBLXQt\fR
 desktop environment.
 .P
-\fBLXQt\fR is an advanced, easy-to-use, and fast desktop environment based on Qt
-technologies and ships several core desktop components, all of which are
-optional:
-.P
- * Panel
- * Desktop
- * Application launcher
- * Configuration center \fI(this)\fR
- * Session handler
- * Polkit handler
- * SSH password access
-.P
-These components perform actions like their counterparts in other desktop
-environments and their names are self-descriptive. They are usually not
-launched manually but automatically, when an \fBLXQt\fR session is chosen in the
-Display Manager.
-.P
 .SH LXQt Settings Applications
 .P
 \fBLXQt\fR has various config applications:
@@ -47,18 +30,23 @@ Configuration Center under the categories "Other Settings" and "System Settings"
 .P
 These applications can also be found in the Settings or Preferences menu; please
 consult the respective manpages.
+.P
+.SH OPTIONS
+-v, --version  Displays version information.
+.br
+-h, --help     Displays help on command line options.
+.br
+--help-all     Displays help, including generic Qt options.
 .SH "REPORTING BUGS"
 Report bugs to https://github.com/lxqt/lxqt-config/issues
 .SH "SEE ALSO"
 \fBLXQt\fR has been tailored for users who value simplicity, speed, and an
 intuitive interface. LXQt is also intended for less powerful machines. See:
-
-.\" any module must refer to session app, for more info on starting it
 .P
  * Input settings: \fBlxqt-config-input(1)\fR
-.P
+.br
  * Appearance settings: \fBlxqt-config-appearance(1)\fR
-.P
+.br
  * Session settings: \fBlxqt-config-session(1)\fR
-.P
+.br
  * Notification settings: \fBlxqt-config-notificationd(1)\fR
