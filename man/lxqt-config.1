@@ -1,63 +1,53 @@
-.TH lxqt-config "1" "September 2012" "LXQt 0.7.0" "LXQt System Settings"
+.TH LXQT-CONFIG "1" "January 2025" "LXQt 2.1.0" "LXQt Configuration Center"
 .SH NAME
-lxqt-config \- \fBLXQt\fR Settings Center for all related modules and
+lxqt-config \- \fBLXQt\fR Configuration Center for all related modules and
 applications
 .SH SYNOPSIS
 .B lxqt-config
 .br
 .SH DESCRIPTION
 This application is a settings center for all environment related applications
-and all config software installed and registered by the \fBLXQt\fR desktop
-environment.
+and all configuration software installed and registered by the \fBLXQt\fR
+desktop environment.
 .P
-\fBLXQt\fR is an advanced, easy-to-use, and fast desktop environment based on Qt
-technologies and ships several core desktop components, all of which are
-optional:
-.P
- * Panel
- * Desktop
- * Application launcher
- * Settings center \fI(this)\fR
- * Session handler
- * Polkit handler
- * SSH password access
- * Display manager handler
-.P
-These components perform actions like their counterparts in other desktop
-environments and their names are self-descriptive. They are usually not
-launched manually but automatically, when an \fBLXQt\fR session is chosen in the
-Display Manager.
-.P
-.SH LXQt Settings Center related applications
+.SH LXQt Settings Applications
 .P
 \fBLXQt\fR has various config applications:
 .P
- * Mouse settings: (\fBlxqt-config-mouse\fR)
- * Desktop settings: (\fBlxqt-config-desktop\fR)
+ * Input settings: (\fBlxqt-config-input\fR)
+ * Brightness settings: (\fBlxqt-config-brightness\fR)
  * Appearance settings: (\fBlxqt-config-appearance\fR)
  * Session settings: (\fBlxqt-config-session\fR)
  * Notification settings: (\fBlxqt-config-notificationd\fR)
+ * Monitor settings: (\fBlxqt-config-monitor\fR)
+ * Locale settings: (\fBlxqt-config-locale\fR)
+ * Power Management settings: (\fBlxqt-config-powermanagement\fR)
+ * File Associations settings: (\fBlxqt-config-file-associations\fR)
+ * Global Shortcuts settings: (\fBlxqt-config-globalkeyshortcuts\fR)
+ * Desktop settings: (\fBpcmanfm-qt --desktop-pref=general\fR)
 .P
-All of this can also be found in Settings or Preferences menu; please consult
-the respective manpages.
+Additionally, if present, other non-LXQt settings applications appear in the
+Configuration Center under the categories "Other Settings" and "System Settings".
+.P
+These applications can also be found in the Settings or Preferences menu; please
+consult the respective manpages.
+.P
+.SH OPTIONS
+-v, --version  Displays version information.
+.br
+-h, --help     Displays help on command line options.
+.br
+--help-all     Displays help, including generic Qt options.
 .SH "REPORTING BUGS"
-Report bugs to https://github.com/lxqt/lxqt/issues
+Report bugs to https://github.com/lxqt/lxqt-config/issues
 .SH "SEE ALSO"
 \fBLXQt\fR has been tailored for users who value simplicity, speed, and an
 intuitive interface. LXQt is also intended for less powerful machines. See:
-
-.\" any module must refer to session app, for more info on starting it
 .P
- * Mouse settings: \fBlxqt-config-mouse(1)\fR
-.P
- * Desktop settings: \fBlxqt-config-desktop(1)\fR
-.P
+ * Input settings: \fBlxqt-config-input(1)\fR
+.br
  * Appearance settings: \fBlxqt-config-appearance(1)\fR
-.P
+.br
  * Session settings: \fBlxqt-config-session(1)\fR
-.P
+.br
  * Notification settings: \fBlxqt-config-notificationd(1)\fR
-.P
-.SH AUTHOR
-This manual page was created by \fBPICCORO Lenz McKAY\fR \fI<mckaygerhard@gmail.com>\fR
-for \fBLXQt\fR project and VENENUX GNU/Linux but can be used by others.
