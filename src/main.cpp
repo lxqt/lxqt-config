@@ -59,7 +59,8 @@ int main(int argc, char **argv)
 
     int ret = app.exec();
 
-    QSettings{}.setValue(QStringLiteral("size"), w.size());
+    if (s != w.size())
+        QSettings{}.setValue(QStringLiteral("size"), w.size());
 
     return ret;
 }
