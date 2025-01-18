@@ -5,8 +5,8 @@
     <name>ColorLabel</name>
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
-        <source>Click to change color.</source>
-        <translation>برای تغییر رنگ کلیک کنید.برای تغییر رنگ کلیک کنید.</translation>
+        <source>Click to change color</source>
+        <translation>برای تغییر رنگ کلیک کنید</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
