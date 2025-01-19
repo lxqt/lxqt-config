@@ -5,8 +5,8 @@
     <name>ColorLabel</name>
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
-        <source>Click to change color.</source>
-        <translation>Kattintson ide a szín megváltoztatásához.</translation>
+        <source>Click to change color</source>
+        <translation>Kattintson ide a szín megváltoztatásához</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
