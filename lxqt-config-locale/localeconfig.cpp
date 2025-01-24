@@ -407,7 +407,8 @@ void LocaleConfig::updateExample()
     }
 
     const QString numberExample = nloc.toString(1000.01);
-    const QString timeExample = tloc.toString(QDateTime::currentDateTime());
+    const QString timeExampleLong = tloc.toString(QDateTime::currentDateTime(), QLocale::LongFormat);
+    const QString timeExampleShort = tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat);
     const QString currencyExample = cloc.toCurrencyString(24);
 
     QString measurementSetting;
@@ -425,7 +426,8 @@ void LocaleConfig::updateExample()
     }
 
     m_ui->exampleNumbers->setText(numberExample);
-    m_ui->exampleTime->setText(timeExample);
+    m_ui->exampleTimeLong->setText(timeExampleLong);
+    m_ui->exampleTimeShort->setText(timeExampleShort);
     m_ui->exampleCurrency->setText(currencyExample);
     m_ui->exampleMeasurement->setText(measurementSetting);
 }
