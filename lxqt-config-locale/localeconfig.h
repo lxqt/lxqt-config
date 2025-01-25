@@ -51,14 +51,14 @@ public:
 
     void load();
     void save();
-    void defaults();
 
 public slots:
     void initControls();
     void saveSettings();
 
 private:
-    void addLocaleToCombo(QComboBox *combo, const QLocale &locale);
+    void addLocaleToCombo(QComboBox *combo, const QLocale &locale, bool currentLocale = false);
+    QString getCurrentforCombo(QComboBox *combo);
     void initCombo(QComboBox *combo, const QList<QLocale> &allLocales);
     void connectCombo(QComboBox *combo);
     QList<QComboBox *> m_combos;

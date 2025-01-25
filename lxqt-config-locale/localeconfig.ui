@@ -304,7 +304,7 @@
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="lexMeasurement_2">
+           <widget class="QLabel" name="lexMeasurement">
             <property name="text">
              <string>Measurement Units:</string>
             </property>

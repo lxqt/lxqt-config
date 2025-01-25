@@ -56,7 +56,7 @@ const static QString lcLanguage = QStringLiteral("LANGUAGE");
 LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_settings, QWidget* parent) :
     QWidget(parent),
     m_ui(new Ui::LocaleConfig),
-    hasChanged(new bool),
+    hasChanged(false),
     mSettings(settings),
     sSettings(session_settings)
 
@@ -69,8 +69,6 @@ LocaleConfig::LocaleConfig(LXQt::Settings* settings, LXQt::Settings* session_set
              << m_ui->comboCurrency
              << m_ui->comboMeasurement
              << m_ui->comboCollate;
-
-    hasChanged = false;
 
     initControls();
 }
@@ -119,12 +117,54 @@ void LocaleConfig::load()
     hasChanged = false;
 }
 
+QString LocaleConfig::getCurrentforCombo(QComboBox *combo)
+{
+    QString res;
+    const QString global = QString::fromLocal8Bit(qgetenv(lcLang.toLatin1().constData()));
+    if (combo == m_ui->comboGlobal)
+    {
+        res = global;
+    }
+    else if (combo == m_ui->comboNumbers)
+    {
+        const QString numeric = QString::fromLocal8Bit(qgetenv(lcNumeric.toLatin1().constData()));
+        res = numeric.isEmpty() ? global : numeric;
+    }
+    else if (combo == m_ui->comboTime)
+    {
+        const QString time = QString::fromLocal8Bit(qgetenv(lcTime.toLatin1().constData()));
+        res = time.isEmpty() ? global : time;
+    }
+    else if (combo == m_ui->comboCurrency)
+    {
+        const QString monetary = QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData()));
+        res = monetary.isEmpty() ? global : monetary;
+    }
+    else if (combo == m_ui->comboMeasurement)
+    {
+        const QString measurement = QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData()));
+        res = measurement.isEmpty() ? global : measurement;
+    }
+    else// if (combo == m_ui->comboCollate)
+    {
+        const QString collate = QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData()));
+        res = collate.isEmpty() ? global : collate;
+    }
+    return res;
+}
+
 void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
 {
     combo->clear();
-    const QString clabel = tr("No change");
     combo->setInsertPolicy(QComboBox::InsertAlphabetically);
-    combo->addItem(clabel, QString());
+
+    // set the first item to "Unset"
+    combo->addItem(tr("Unset"), QString());
+
+    // add the current locale
+    addLocaleToCombo(combo, QLocale(getCurrentforCombo(combo)), true);
+
+    // add all locales
     for(const QLocale & l : std::as_const(allLocales))
     {
         addLocaleToCombo(combo, l);
@@ -140,7 +180,7 @@ void LocaleConfig::connectCombo(QComboBox *combo)
     });
 }
 
-void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
+void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale, bool currentLocale)
 {
     const QString clabel = !locale.nativeTerritoryName().isEmpty() ? locale.nativeTerritoryName() : locale.territoryToString(locale.territory());
     // This needs to use name() rather than bcp47name() or later on the export will generate a non-sense locale (e.g. "it" instead of
@@ -171,8 +211,17 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
                         .arg(clabel,
                         locale.nativeLanguageName(),
                         locale.name());
+    if (currentLocale)
+    {
+        itemResult = tr("Current: ") + itemResult;
+    }
 
     combo->addItem(flagIcon, itemResult, cvalue);
+
+    if (currentLocale)
+    {
+        combo->insertSeparator(combo->count());
+    }
 }
 
 void setCombo(QComboBox *combo, const QString &key)
@@ -181,6 +230,10 @@ void setCombo(QComboBox *combo, const QString &key)
     if (ix > -1)
     {
         combo->setCurrentIndex(ix);
+    }
+    else if (combo->count() > 0)
+    {
+        combo->setCurrentIndex(0); // the "Unset" index
     }
 }
 
@@ -191,38 +244,33 @@ void LocaleConfig::readConfig()
     bool useDetailed = mSettings->value(QStringLiteral("useDetailed"), false).toBool();
     m_ui->checkDetailed->setChecked(useDetailed);
 
-    setCombo(m_ui->comboGlobal, mSettings->value(lcLang, QString::fromLocal8Bit(qgetenv(lcLang.toLatin1().constData()))).toString());
-
-    setCombo(m_ui->comboNumbers, mSettings->value(lcNumeric, QString::fromLocal8Bit(qgetenv(lcNumeric.toLatin1().constData()))).toString());
-    setCombo(m_ui->comboTime, mSettings->value(lcTime, QString::fromLocal8Bit(qgetenv(lcTime.toLatin1().constData()))).toString());
-    setCombo(m_ui->comboCollate, mSettings->value(lcCollate, QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData()))).toString());
-    setCombo(m_ui->comboCurrency, mSettings->value(lcMonetary, QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData()))).toString());
-    setCombo(m_ui->comboMeasurement, mSettings->value(lcMeasurement, QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData()))).toString());
+    // set the combos by using the current EVs as fallbacks
+    setCombo(m_ui->comboGlobal, mSettings->value(lcLang, getCurrentforCombo(m_ui->comboGlobal)).toString());
+    setCombo(m_ui->comboNumbers, mSettings->value(lcNumeric, getCurrentforCombo(m_ui->comboNumbers)).toString());
+    setCombo(m_ui->comboTime, mSettings->value(lcTime, getCurrentforCombo(m_ui->comboTime)).toString());
+    setCombo(m_ui->comboCollate, mSettings->value(lcCollate, getCurrentforCombo(m_ui->comboCollate)).toString());
+    setCombo(m_ui->comboCurrency, mSettings->value(lcMonetary, getCurrentforCombo(m_ui->comboCurrency)).toString());
+    setCombo(m_ui->comboMeasurement, mSettings->value(lcMeasurement, getCurrentforCombo(m_ui->comboMeasurement)).toString());
 
     mSettings->endGroup();
 }
 
 void LocaleConfig::writeConfig()
 {
-    mSettings->beginGroup(QStringLiteral("Formats"));
-
-    // global ends up empty here when OK button is clicked from kcmshell5,
-    // apparently the data in the combo is gone by the time save() is called.
-    // This might be a problem in KCModule, but does not directly affect us
-    // since within systemsettings, it works fine.
-    // See https://bugs.kde.org/show_bug.cgi?id=334624
     if (m_ui->comboGlobal->count() == 0)
     {
         qWarning() << "Couldn't read data from UI, writing configuration failed.";
         return;
     }
+
+    mSettings->beginGroup(QStringLiteral("Formats"));
     const QString global = m_ui->comboGlobal->currentData().toString();
 
     if (!m_ui->checkDetailed->isChecked())
     {
         // Global setting, clean up config
         mSettings->remove(QStringLiteral("useDetailed"));
-        if (global.isEmpty())
+        if (global.isEmpty()) // not set
         {
             mSettings->remove(lcLang);
         }
@@ -328,101 +376,145 @@ void LocaleConfig::writeExports()
 {
     sSettings->beginGroup(QStringLiteral("Environment"));
     mSettings->beginGroup(QStringLiteral("Formats"));
-    if (!mSettings->value(lcLang).toString().isNull())
+
+    // add the LANG EV if set; otherwise, remove it
+    if (mSettings->value(lcLang).toString().isNull()) // not set
+    {
+        sSettings->remove(lcLang);
+    }
+    else
     {
         sSettings->setValue(lcLang, mSettings->value(lcLang).toString());
+    }
 
-        if (mSettings->value(QStringLiteral("useDetailed")).toBool())
+    if (mSettings->value(QStringLiteral("useDetailed")).toBool())
+    { // add the existing detailed EVs and remove the others
+        if (mSettings->value(lcNumeric).toString().isNull())
         {
-            if (!mSettings->value(lcNumeric).toString().isNull())
-            {
-                sSettings->setValue(lcNumeric, mSettings->value(lcNumeric).toString());
-            }
-            if (!mSettings->value(lcTime).toString().isNull())
-            {
-                sSettings->setValue(lcTime, mSettings->value(lcTime).toString());
-            }
-            if (!mSettings->value(lcCollate).toString().isNull())
-            {
-                sSettings->setValue(lcCollate, mSettings->value(lcCollate).toString());
-            }
-            if (!mSettings->value(lcMonetary).toString().isNull())
-            {
-                sSettings->setValue(lcMonetary, mSettings->value(lcMonetary).toString());
-            }
-            if (!mSettings->value(lcMeasurement).toString().isNull())
-            {
-                sSettings->setValue(lcMeasurement, mSettings->value(lcMeasurement).toString());
-            }
+            sSettings->remove(lcNumeric);
         }
         else
         {
-            sSettings->setValue(lcNumeric, mSettings->value(lcLang).toString());
-            sSettings->setValue(lcTime, mSettings->value(lcLang).toString());
-            sSettings->setValue(lcCollate, mSettings->value(lcLang).toString());
-            sSettings->setValue(lcMonetary, mSettings->value(lcLang).toString());
-            sSettings->setValue(lcMeasurement, mSettings->value(lcLang).toString());
+            sSettings->setValue(lcNumeric, mSettings->value(lcNumeric).toString());
+        }
+
+        if (mSettings->value(lcTime).toString().isNull())
+        {
+            sSettings->remove(lcTime);
+        }
+        else
+        {
+            sSettings->setValue(lcTime, mSettings->value(lcTime).toString());
+        }
+
+        if (mSettings->value(lcCollate).toString().isNull())
+        {
+            sSettings->remove(lcCollate);
+        }
+        else
+        {
+            sSettings->setValue(lcCollate, mSettings->value(lcCollate).toString());
+        }
+
+        if (mSettings->value(lcMonetary).toString().isNull())
+        {
+            sSettings->remove(lcMonetary);
+        }
+        else
+        {
+            sSettings->setValue(lcMonetary, mSettings->value(lcMonetary).toString());
+        }
+
+        if (mSettings->value(lcMeasurement).toString().isNull())
+        {
+            sSettings->remove(lcMeasurement);
+        }
+        else
+        {
+            sSettings->setValue(lcMeasurement, mSettings->value(lcMeasurement).toString());
         }
     }
+    else
+    { // remove all detailed EVs
+        sSettings->remove(lcNumeric);
+        sSettings->remove(lcTime);
+        sSettings->remove(lcCollate);
+        sSettings->remove(lcMonetary);
+        sSettings->remove(lcMeasurement);
+    }
+
     mSettings->endGroup();
     sSettings->endGroup();
     sSettings->sync();
-}
-
-void LocaleConfig::defaults()
-{
-    m_ui->checkDetailed->setChecked(false);
-
-    // restore user defaults from env vars
-    setCombo(m_ui->comboGlobal, QString::fromLocal8Bit(qgetenv(lcLang.toLatin1().constData())));
-    setCombo(m_ui->comboNumbers, QString::fromLocal8Bit(qgetenv(lcNumeric.toLatin1().constData())));
-    setCombo(m_ui->comboTime, QString::fromLocal8Bit(qgetenv(lcTime.toLatin1().constData())));
-    setCombo(m_ui->comboCollate, QString::fromLocal8Bit(qgetenv(lcCollate.toLatin1().constData())));
-    setCombo(m_ui->comboCurrency, QString::fromLocal8Bit(qgetenv(lcMonetary.toLatin1().constData())));
-    setCombo(m_ui->comboMeasurement, QString::fromLocal8Bit(qgetenv(lcMeasurement.toLatin1().constData())));
 }
 
 void LocaleConfig::updateExample()
 {
     const bool useDetailed = m_ui->checkDetailed->isChecked();
 
-    QLocale nloc;
-    QLocale tloc;
-    QLocale cloc;
-    QLocale mloc;
-
-    if (useDetailed)
+    // if the main locale is not set and there is not detail, hide the Examples box
+    bool noExample(!useDetailed && m_ui->comboGlobal->currentIndex() < 1);
+    m_ui->exampleBox->setVisible(!noExample);
+    if (noExample)
     {
-        nloc = QLocale(m_ui->comboNumbers->currentData().toString());
-        tloc = QLocale(m_ui->comboTime->currentData().toString());
-        cloc = QLocale(m_ui->comboCurrency->currentData().toString());
-        mloc = QLocale(m_ui->comboMeasurement->currentData().toString());
-    }
-    else
-    {
-        nloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        tloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        cloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        mloc = QLocale(m_ui->comboGlobal->currentData().toString());
+        return;
     }
 
-    const QString numberExample = nloc.toString(1000.01);
-    const QString timeExampleLong = tloc.toString(QDateTime::currentDateTime(), QLocale::LongFormat);
-    const QString timeExampleShort = tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat);
-    const QString currencyExample = cloc.toCurrencyString(24);
+    QString nStr;
+    QString tStr;
+    QString cStr;
+    QString mStr;
+
+    if (useDetailed) // get the locales from the detailed combos
+    {
+        nStr = m_ui->comboNumbers->currentData().toString();
+        tStr = m_ui->comboTime->currentData().toString();
+        cStr = m_ui->comboCurrency->currentData().toString();
+        mStr = m_ui->comboMeasurement->currentData().toString();
+    }
+    else // get the locales from the global one
+    {
+        if (m_ui->comboGlobal->currentIndex() == 1) // this is the current locale
+        {
+            nStr = getCurrentforCombo(m_ui->comboNumbers);
+            tStr = getCurrentforCombo(m_ui->comboTime);
+            cStr = getCurrentforCombo(m_ui->comboCurrency);
+            mStr = getCurrentforCombo(m_ui->comboMeasurement);
+        }
+        else // another locale is selected from the list
+        {
+            nStr = m_ui->comboGlobal->currentData().toString();
+            tStr = m_ui->comboGlobal->currentData().toString();
+            cStr = m_ui->comboGlobal->currentData().toString();
+            mStr = m_ui->comboGlobal->currentData().toString();
+        }
+    }
+
+    const QString numberExample = nStr.isEmpty() ? QString()
+        : QLocale(nStr).toString(1000.01);
+    const QString timeExampleLong = tStr.isEmpty() ? QString()
+        : QLocale(tStr).toString(QDateTime::currentDateTime(), QLocale::LongFormat);
+    const QString timeExampleShort = tStr.isEmpty() ? QString()
+        : QLocale(tStr).toString(QDateTime::currentDateTime(), QLocale::ShortFormat);
+    const QString currencyExample = cStr.isEmpty() ? QString()
+        : QLocale(cStr).toCurrencyString(24);
 
     QString measurementSetting;
-    if (mloc.measurementSystem() == QLocale::ImperialUKSystem)
+    if (!mStr.isEmpty())
     {
-        measurementSetting = tr("Imperial UK");
-    }
-    else if (mloc.measurementSystem() == QLocale::ImperialUSSystem)
-    {
-        measurementSetting = tr("Imperial US");
-    }
-    else
-    {
-        measurementSetting = tr("Metric");
+        QLocale mLoc(mStr);
+        if (mLoc.measurementSystem() == QLocale::ImperialUKSystem)
+        {
+            measurementSetting = tr("Imperial UK");
+        }
+        else if (mLoc.measurementSystem() == QLocale::ImperialUSSystem)
+        {
+            measurementSetting = tr("Imperial US");
+        }
+        else
+        {
+            measurementSetting = tr("Metric");
+        }
     }
 
     m_ui->exampleNumbers->setText(numberExample);
@@ -434,7 +526,6 @@ void LocaleConfig::updateExample()
 
 void LocaleConfig::initControls()
 {
-    defaults();
     load();
     hasChanged = false;
 }
