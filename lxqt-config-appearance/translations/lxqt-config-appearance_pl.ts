@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>Motyw GTK3</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>Motyw GTK3:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>Motyw GTK2</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>Motyw GTK2:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Styl Qt</translation>
+        <source>Qt Style:</source>
+        <translation>Styl Qt:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

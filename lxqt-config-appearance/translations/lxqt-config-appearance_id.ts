@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>Tema GTK 3</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>Tema GTK 3:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>Tema GTK 2</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>Tema GTK 2:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -458,8 +458,8 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Gaya Qt</translation>
+        <source>Qt Style:</source>
+        <translation>Gaya Qt:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

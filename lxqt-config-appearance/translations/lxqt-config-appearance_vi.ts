@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>Chủ đề GTK 3</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>Chủ đề GTK 3:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>Chủ đề GTK 2</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>Chủ đề GTK 2:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Phong cách Qt</translation>
+        <source>Qt Style:</source>
+        <translation>Phong cách Qt:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

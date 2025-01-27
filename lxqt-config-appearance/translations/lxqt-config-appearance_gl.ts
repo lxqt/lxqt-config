@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>Tema para GTK 3</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>Tema para GTK 3:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>Tema para GTK 2</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>Tema para GTK 2:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GT
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Estilo de Qt</translation>
+        <source>Qt Style:</source>
+        <translation>Estilo de Qt:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

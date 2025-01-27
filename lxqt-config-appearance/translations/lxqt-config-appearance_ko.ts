@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>GTK 3 테마</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>GTK 3 테마:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>GTK 2 테마</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>GTK 2 테마:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Qt 스타일</translation>
+        <source>Qt Style:</source>
+        <translation>Qt 스타일:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

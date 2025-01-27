@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>GTK 3 Teması</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>GTK 3 Teması:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>GTK 2 Teması</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>GTK 2 Teması:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Qt Biçemi</translation>
+        <source>Qt Style:</source>
+        <translation>Qt Biçemi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
