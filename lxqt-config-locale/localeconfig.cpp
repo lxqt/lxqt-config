@@ -156,7 +156,9 @@ QString LocaleConfig::getCurrentforCombo(QComboBox *combo)
 void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
 {
     combo->clear();
-    combo->setInsertPolicy(QComboBox::InsertAlphabetically);
+
+    // for performance reason
+    combo->setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLengthWithIcon);
 
     // set the first item to "Unset"
     combo->addItem(tr("Unset"), QString());
@@ -203,7 +205,15 @@ void LocaleConfig::addLocaleToCombo(QComboBox *combo, const QLocale &locale, boo
     QIcon flagIcon;
     if (!flag.isEmpty())
     {
-        flagIcon = QIcon(flag);
+        if (!mFlags.contains(flag))
+        {
+            flagIcon = QIcon(flag);
+            mFlags.insert(flag, flagIcon);
+        }
+        else
+        {
+            flagIcon = mFlags.value(flag);
+        }
     }
 
     QString itemResult;
@@ -356,7 +366,7 @@ void LocaleConfig::saveSettings()
 {
     if (hasChanged)
     {
-        QMessageBox msgBox;
+        QMessageBox msgBox(this);
         msgBox.setWindowTitle(tr("Format Settings Changed"));
         msgBox.setText(tr("Do you want to save your changes? They will take effect the next time you log in."));
         msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
@@ -522,6 +532,9 @@ void LocaleConfig::updateExample()
     m_ui->exampleTimeShort->setText(timeExampleShort);
     m_ui->exampleCurrency->setText(currencyExample);
     m_ui->exampleMeasurement->setText(measurementSetting);
+
+    // this is especially needed on Wayland for preventing a truncated time label
+    m_ui->exampleBox->adjustSize();
 }
 
 void LocaleConfig::initControls()
