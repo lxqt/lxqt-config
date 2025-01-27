@@ -73,6 +73,7 @@ private:
     bool hasChanged;
     LXQt::Settings *mSettings;
     LXQt::Settings *sSettings;
+    QHash<const QString, QIcon>mFlags;
 };
 
 #endif // LOCALECONFIG_H
