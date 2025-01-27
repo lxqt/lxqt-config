@@ -175,12 +175,12 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
+        <source>GTK 3 Theme:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
+        <source>GTK 2 Theme:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -457,7 +457,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
+        <source>Qt Style:</source>
         <translation></translation>
     </message>
     <message>

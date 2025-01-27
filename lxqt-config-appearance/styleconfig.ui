@@ -48,7 +48,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
-            <string>Qt Style</string>
+            <string>Qt Style:</string>
            </property>
           </widget>
          </item>

@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>GTK 3 motiv vzhledu</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>GTK 3 motiv vzhledu:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>GTK 2 motiv vzhledu</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>GTK 2 motiv vzhledu:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ Aby bylo možné u GTK aplikací změnit motiv vzhledu za chodu, ověřte, že j
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Qt styl</translation>
+        <source>Qt Style:</source>
+        <translation>Qt styl:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

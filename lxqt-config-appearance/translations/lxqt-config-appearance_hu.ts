@@ -175,13 +175,13 @@
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
-        <source>GTK 3 Theme</source>
-        <translation>GTK 3 téma</translation>
+        <source>GTK 3 Theme:</source>
+        <translation>GTK 3 téma:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
-        <source>GTK 2 Theme</source>
-        <translation>GTK 2 téma</translation>
+        <source>GTK 2 Theme:</source>
+        <translation>GTK 2 téma:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="103"/>
@@ -459,8 +459,8 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
-        <source>Qt Style</source>
-        <translation>Qt stílus</translation>
+        <source>Qt Style:</source>
+        <translation>Qt stílus:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
