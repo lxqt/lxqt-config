@@ -54,42 +54,47 @@
         <translation>时间:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.ui" line="278"/>
+        <location filename="../localeconfig.ui" line="289"/>
         <source>Currency:</source>
         <translation>货币:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.ui" line="298"/>
+        <location filename="../localeconfig.ui" line="309"/>
         <source>Measurement Units:</source>
         <translation>度量衡:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="125"/>
-        <source>No change</source>
-        <translation>不改变</translation>
+        <location filename="../localeconfig.cpp" line="164"/>
+        <source>Unset</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="312"/>
+        <location filename="../localeconfig.cpp" line="226"/>
+        <source>Current: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../localeconfig.cpp" line="370"/>
         <source>Format Settings Changed</source>
         <translation>已改变格式设置</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="371"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>是否保存您的设置？设置将在下次登录时生效。</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="416"/>
+        <location filename="../localeconfig.cpp" line="518"/>
         <source>Imperial UK</source>
         <translation>英制</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="420"/>
+        <location filename="../localeconfig.cpp" line="522"/>
         <source>Imperial US</source>
         <translation>美制</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="424"/>
+        <location filename="../localeconfig.cpp" line="526"/>
         <source>Metric</source>
         <translation>公制</translation>
     </message>

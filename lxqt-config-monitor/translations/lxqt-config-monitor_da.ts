@@ -288,27 +288,27 @@ Du kan indstille din(e) skærm(e) med kanshi.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="154"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>None</source>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="155"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Left</source>
         <translation>Venstre</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="156"/>
+        <location filename="../monitorwidget.cpp" line="157"/>
         <source>Right</source>
         <translation>Højre</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="157"/>
+        <location filename="../monitorwidget.cpp" line="158"/>
         <source>Inverted</source>
         <translation>Omvendt</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="247"/>
+        <location filename="../monitorwidget.cpp" line="248"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>

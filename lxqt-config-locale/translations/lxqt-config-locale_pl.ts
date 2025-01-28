@@ -54,42 +54,47 @@
         <translation>Czas:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.ui" line="278"/>
+        <location filename="../localeconfig.ui" line="289"/>
         <source>Currency:</source>
         <translation>Waluta:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.ui" line="298"/>
+        <location filename="../localeconfig.ui" line="309"/>
         <source>Measurement Units:</source>
         <translation>Jednostki miary:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="125"/>
-        <source>No change</source>
-        <translation>Bez zmiany</translation>
+        <location filename="../localeconfig.cpp" line="164"/>
+        <source>Unset</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="312"/>
+        <location filename="../localeconfig.cpp" line="226"/>
+        <source>Current: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../localeconfig.cpp" line="370"/>
         <source>Format Settings Changed</source>
         <translation>Zmiana ustawień formatu</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="371"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>Czy na pewno chcesz zachować zmiany? Efekt będzie widoczny po następnym zalogowaniu.</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="416"/>
+        <location filename="../localeconfig.cpp" line="518"/>
         <source>Imperial UK</source>
         <translation>Imperialne (UK)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="420"/>
+        <location filename="../localeconfig.cpp" line="522"/>
         <source>Imperial US</source>
         <translation>Imperialne (USA)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="424"/>
+        <location filename="../localeconfig.cpp" line="526"/>
         <source>Metric</source>
         <translation>Metryczne</translation>
     </message>

@@ -287,27 +287,27 @@ Anda dapat mengonfigurasi layar anda dengan kanshi.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="154"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>None</source>
         <translation>Tidak ada</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="155"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Left</source>
         <translation>Kiri</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="156"/>
+        <location filename="../monitorwidget.cpp" line="157"/>
         <source>Right</source>
         <translation>Kanan</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="157"/>
+        <location filename="../monitorwidget.cpp" line="158"/>
         <source>Inverted</source>
         <translation>Terbalik</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="247"/>
+        <location filename="../monitorwidget.cpp" line="248"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>

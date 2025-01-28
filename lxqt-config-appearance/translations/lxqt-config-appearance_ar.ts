@@ -184,7 +184,7 @@
         <translation>سمة جتك ٢:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="103"/>
+        <location filename="../gtkconfig.ui" line="105"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
