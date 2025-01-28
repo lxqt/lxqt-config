@@ -283,27 +283,27 @@ You can configure your monitor(s) with kanshi.</source>
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="154"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>None</source>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="155"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Left</source>
         <translation>Venstre</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="156"/>
+        <location filename="../monitorwidget.cpp" line="157"/>
         <source>Right</source>
         <translation>Høyre</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="157"/>
+        <location filename="../monitorwidget.cpp" line="158"/>
         <source>Inverted</source>
         <translation>Invertert</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="247"/>
+        <location filename="../monitorwidget.cpp" line="248"/>
         <source>%1 Hz</source>
         <translation></translation>
     </message>

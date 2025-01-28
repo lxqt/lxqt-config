@@ -54,42 +54,47 @@
         <translation>시간:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.ui" line="278"/>
+        <location filename="../localeconfig.ui" line="289"/>
         <source>Currency:</source>
         <translation>통화:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.ui" line="298"/>
+        <location filename="../localeconfig.ui" line="309"/>
         <source>Measurement Units:</source>
         <translation>측정 단위:</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="125"/>
-        <source>No change</source>
-        <translation>변경 없음</translation>
+        <location filename="../localeconfig.cpp" line="164"/>
+        <source>Unset</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="312"/>
+        <location filename="../localeconfig.cpp" line="226"/>
+        <source>Current: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../localeconfig.cpp" line="370"/>
         <source>Format Settings Changed</source>
         <translation>형식 설정 변경됨</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="313"/>
+        <location filename="../localeconfig.cpp" line="371"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
         <translation>변경 사항을 저장하시겠습니까? 다음에 로그인할 때 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="416"/>
+        <location filename="../localeconfig.cpp" line="518"/>
         <source>Imperial UK</source>
         <translation>야드 파운드법(UK)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="420"/>
+        <location filename="../localeconfig.cpp" line="522"/>
         <source>Imperial US</source>
         <translation>야드 파운드법(US)</translation>
     </message>
     <message>
-        <location filename="../localeconfig.cpp" line="424"/>
+        <location filename="../localeconfig.cpp" line="526"/>
         <source>Metric</source>
         <translation>미터법</translation>
     </message>
