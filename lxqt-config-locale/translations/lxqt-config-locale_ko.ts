@@ -36,7 +36,7 @@
     <message>
         <location filename="../localeconfig.ui" line="194"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation>대조 및 정렬(&amp;L):</translation>
+        <translation>정렬 및 분류(&amp;L):</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="226"/>
@@ -66,12 +66,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="164"/>
         <source>Unset</source>
-        <translation type="unfinished"></translation>
+        <translation>미지정</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
         <source>Current: </source>
-        <translation type="unfinished"></translation>
+        <translation>현재: </translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="370"/>
