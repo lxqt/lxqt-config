@@ -27,6 +27,7 @@
 #include "brightnesssettings.h"
 
 #include <iostream>
+#include <algorithm>
 
 enum CommandLineParseResult {
     CommandLineOk,
@@ -167,7 +168,7 @@ int main(int argn, char* argv[])
 
     // TUi mode
     float sign = (config.decreaseBrightness) ? -1.0f : 1.0f;
-    float brightnessValue = qMin( qMax(config.brightnessValue, 0.0f), 100.0f ) / 100.0f;
+    float brightnessValue = std::clamp(config.brightnessValue, 0.0f, 100.0f) / 100.0f;
 
     // Checks if backlight driver is available
     LXQt::Backlight *mBacklight = new LXQt::Backlight(&app);
@@ -183,7 +184,7 @@ int main(int argn, char* argv[])
 
         const int currentBacklight = mBacklight->getBacklight();
         const int maxBacklight = mBacklight->getMaxBacklight();
-        int backlight = ( currentBacklight + sign*(maxBacklight/50 + 1) )*qAbs(sign) + brightnessValue*maxBacklight;
+        int backlight = ( currentBacklight + sign*(maxBacklight/50 + 1) )*std::abs(sign) + brightnessValue*maxBacklight;
 
         mBacklight->setBacklight(backlight);
 
@@ -211,7 +212,7 @@ int main(int argn, char* argv[])
 
             if(monitor.isBacklightSupported() )
             {
-                long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*qAbs(sign) + brightnessValue*monitor.backlightMax();
+                long backlight = ( monitor.backlight() + sign*(monitor.backlightMax()/50 + 1) )*std::abs(sign) + brightnessValue*monitor.backlightMax();
                 if(backlight<monitor.backlightMax() && backlight>0)
                 {
                     monitor.setBacklight(backlight);
@@ -220,7 +221,7 @@ int main(int argn, char* argv[])
             }
             else
             {
-                float brightness = (monitor.brightness() + 0.1f *sign)*qAbs(sign) + brightnessValue * 2.0f;
+                float brightness = (monitor.brightness() + 0.1f *sign)*std::abs(sign) + brightnessValue * 2.0f;
                 if(brightness < 2.0f && brightness > 0.0f)
                 {
                     monitor.setBrightness(brightness);

@@ -22,6 +22,8 @@
 #include <QGuiApplication>
 #include <QDebug>
 
+#include <algorithm>
+
 #include "xrandrbrightness.h"
 
 XRandrBrightness::XRandrBrightness()
@@ -267,7 +269,7 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
     float max_gamma = 65535*percent;
     for(int i=0;i<red_length;i++)
     {
-        int value = qMin((int)(((float)i/(float)(red_length-1))*max_gamma),65535);
+        int value = std::min((int)(((float)i/(float)(red_length-1))*max_gamma), 65535);
         green[i] = blue[i] = red[i] = value;
     }
     xcb_randr_set_crtc_gamma (x11NativeInterface->connection(), output_info->crtc, red_length, red, green, blue);

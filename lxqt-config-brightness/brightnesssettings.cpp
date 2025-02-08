@@ -21,6 +21,8 @@
 #include <QMessageBox>
 #include <QPushButton>
 
+#include <algorithm>
+
 BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
 {
     ui = new Ui::BrightnessSettings();
@@ -81,7 +83,7 @@ void BrightnessSettings::setBacklight()
 {
     int value = ui->backlightSlider->value();
     // Set the minimum to 5% of the maximum to prevent a black screen
-    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    int minBacklight = std::max(std::round((qreal)(mBacklight->getMaxBacklight())*0.05), 1.0);
     int maxBacklight = mBacklight->getMaxBacklight();
     int interval = maxBacklight - minBacklight;
     if(interval > 100)
@@ -177,7 +179,7 @@ void BrightnessSettings::revertValues()
 void BrightnessSettings::setBacklightSliderValue(int value)
 {
     // Set the minimum to 5% of the maximum to prevent a black screen
-    int minBacklight = qMax(qRound((qreal)(mBacklight->getMaxBacklight())*0.05), 1);
+    int minBacklight = std::max(std::round((qreal)(mBacklight->getMaxBacklight())*0.05), 1.0);
     int maxBacklight = mBacklight->getMaxBacklight();
     int interval = maxBacklight - minBacklight;
     if(interval <= 100) {

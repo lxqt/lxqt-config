@@ -26,6 +26,7 @@
 #include <QModelIndex>
 #include <QPainter>
 
+#include <algorithm>
 
 namespace {
     const int decorationMargin = 8;
@@ -74,10 +75,10 @@ QSize ItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInd
     QFontMetrics fm1(boldfont);
     QFontMetrics fm2(normalfont);
     int height = fm1.lineSpacing() + fm2.lineSpacing();
-    height = qMax(height, option.decorationSize.height());
+    height = std::max(height, option.decorationSize.height());
     // Compute the text width
     int width = fm1.horizontalAdvance(firstRow);
-    width = qMax(width, fm2.horizontalAdvance(secondRow));
+    width = std::max(width, fm2.horizontalAdvance(secondRow));
     // Add decoration width + margin
     width += option.decorationSize.width()+decorationMargin;
     return QSize(width, height+16);

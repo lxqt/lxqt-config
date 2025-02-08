@@ -45,6 +45,8 @@
 #include "qcategorydrawer.h"
 #include "qcategorizedsortfilterproxymodel.h"
 
+#include <algorithm>
+
 namespace LXQtConfig {
 
 struct ConfigPaneData: public QSharedData
@@ -203,8 +205,8 @@ public:
         if (delta > 0)
           opt.rect.adjust(delta/2, 0 , -delta/2, 0);
         QSize defaultSize = QStyledItemDelegate::sizeHint(opt, index);
-        return QSize(qMin(defaultSize.width() + 4, mView->gridSize().width() - 8),
-                     qMin(defaultSize.height() + 4, mView->gridSize().height() - 8));
+        return QSize(std::min(defaultSize.width() + 4, mView->gridSize().width() - 8),
+                     std::min(defaultSize.height() + 4, mView->gridSize().height() - 8));
     }
 
 protected:
@@ -217,7 +219,7 @@ protected:
         initStyleOption(&opt, index);
 
         const QSize & iconSize = option.decorationSize;
-        int size = qMin(mView->gridSize().width() - 8, // 4-px margin around each cell
+        int size = std::min(mView->gridSize().width() - 8, // 4-px margin around each cell
                         iconSize.height());
         opt.decorationSize = QSize(size, size);
 
@@ -320,7 +322,7 @@ bool LXQtConfig::MainWindow::eventFilter(QObject * watched, QEvent * event)
 void LXQtConfig::MainWindow::setSizing()
 {
     // consult the style to know the icon size
-    int iconSize = qBound(16, view->decorationSize().height(), 256);
+    int iconSize = std::clamp(view->decorationSize().height(), 16, 256);
     /* To have an appropriate grid size, we suppose that
      *
      * (1) The text has 3 lines and each line has 16 chars (for languages like German), at most;
@@ -332,7 +334,7 @@ void LXQtConfig::MainWindow::setSizing()
     int textWidth = fm.averageCharWidth() * 16;
     int textHeight = fm.lineSpacing() * 3;
     QSize grid;
-    grid.setWidth(qMax(iconSize, textWidth) + 4);
+    grid.setWidth(std::max(iconSize, textWidth) + 4);
     grid.setHeight(iconSize + textHeight + 4 + 3);
     view->setGridSize(grid + QSize(8, 8));
 }

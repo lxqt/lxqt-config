@@ -8,6 +8,7 @@
 #include <KScreen/SetConfigOperation>
 #include <KScreen/EDID>
 
+#include <algorithm>
 
 void KScreenUtils::updateScreenSize(KScreen::ConfigPtr &config)
 {
@@ -20,8 +21,8 @@ void KScreenUtils::updateScreenSize(KScreen::ConfigPtr &config)
         QPoint pos = output->pos();
         if (output->currentMode()) {
             KScreen::ModePtr mode(output->currentMode());
-            width = qMax(pos.x() + mode->size().width(), width);
-            height = qMax(pos.y() + mode->size().height(), height);
+            width = std::max(pos.x() + mode->size().width(), width);
+            height = std::max(pos.y() + mode->size().height(), height);
         }
     }
     if (width != 0 && height != 0)

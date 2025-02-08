@@ -19,6 +19,8 @@
 #include <QStringList>
 #include <QTextStream>
 
+#include <algorithm>
+
 #include "xcrimg.h"
 #include "xcrxcur.h"
 #include "xcrtheme.h"
@@ -86,7 +88,7 @@ QList<XCursorThemeFX::tAnimSeq> XCursorThemeFX::parseScript (const QString &scri
         qWarning() << "script error (frame):" << s;
         continue;
       }
-      a.from = qMax(qMin(maxFrame, a.from), (quint32)1)-1;
+      a.from = std::clamp(a.from, (quint32)1, maxFrame) - 1;
       a.to = a.from;
     } else {
       // a..b
@@ -95,13 +97,13 @@ QList<XCursorThemeFX::tAnimSeq> XCursorThemeFX::parseScript (const QString &scri
         qWarning() << "script error (frame from):" << s;
         continue;
       }
-      a.from = qMax(qMin(maxFrame, a.from), (quint32)1)-1;
+      a.from = std::clamp(a.from, (quint32)1, maxFrame) - 1;
       if (!str2num(fld[0].mid(hyph+1), a.to)) {
        qDebug() << "script error (frame to):" << s;
         qWarning() << "script error (frame to):" << s;
         continue;
       }
-      a.to = qMax(qMin(maxFrame, a.to), (quint32)1)-1;
+      a.to = std::clamp(a.to, (quint32)1, maxFrame) - 1;
     }
     // delay
     if (!str2num(fld[1], a.delay)) {

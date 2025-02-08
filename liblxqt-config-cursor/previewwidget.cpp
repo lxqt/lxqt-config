@@ -33,6 +33,8 @@
 #include <QWindow>
 #include <QGuiApplication>
 
+#include <algorithm>
+
 namespace {
     // Preview cursors
     const char *const cursorNames[] = {
@@ -144,11 +146,11 @@ QSize PreviewWidget::sizeHint() const
     for (const PreviewCursor *c : std::as_const(mList))
     {
         totalWidth += c->width();
-        maxHeight = qMax(c->height(), maxHeight);
+        maxHeight = std::max(c->height(), maxHeight);
     }
     totalWidth += (mList.count()-1)*cursorSpacing;
-    maxHeight = qMax(maxHeight, widgetMinHeight);
-    return QSize(qMax(totalWidth, widgetMinWidth), qMax(height(), maxHeight));
+    maxHeight = std::max(maxHeight, widgetMinHeight);
+    return QSize(std::max(totalWidth, widgetMinWidth), std::max(height(), maxHeight));
 }
 
 void PreviewWidget::layoutItems()
