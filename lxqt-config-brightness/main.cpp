@@ -27,6 +27,7 @@
 #include "brightnesssettings.h"
 
 #include <iostream>
+#include <cmath>
 #include <algorithm>
 
 enum CommandLineParseResult {

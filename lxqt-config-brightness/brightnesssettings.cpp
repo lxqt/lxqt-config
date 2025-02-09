@@ -21,6 +21,7 @@
 #include <QMessageBox>
 #include <QPushButton>
 
+#include <cmath>
 #include <algorithm>
 
 BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)

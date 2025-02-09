@@ -29,6 +29,7 @@
 #include <QResizeEvent>
 #include <QTransform>
 
+#include <cmath>
 #include <algorithm>
 
 #include "configure.h"
