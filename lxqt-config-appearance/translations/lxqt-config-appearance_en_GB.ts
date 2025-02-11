@@ -34,7 +34,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Error: gsettings cannot be run</translation>
     </message>
 </context>
 <context>
