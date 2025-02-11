@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>登入後自動開啟NumLock</translation>
+        <translation>登入後自動啟用 NumLock</translation>
     </message>
 </context>
 <context>
@@ -77,17 +77,17 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="20"/>
         <source>&lt;b&gt;Keyboard Layout&lt;/b&gt;</source>
-        <translation>&lt;b&gt;鍵盤布局&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;鍵盤配置&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="48"/>
         <source>Layout</source>
-        <translation>布局</translation>
+        <translation>配置</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation>變形</translation>
+        <translation>變異</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="108"/>
         <source>Keyboard model:</source>
-        <translation>鍵盤模型：</translation>
+        <translation>鍵盤型號：</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>切換布局的按鍵：</translation>
+        <translation>切換鍵盤配置的按鍵：</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;注意&lt;/span&gt;：如果你正在使用像是IBus、uim、fcitx或gcin的&lt;span style=&quot; font-weight:600;&quot;&gt;輸入模式&lt;/span&gt;，這裡的設定&lt;span style=&quot; font-weight:600;&quot;&gt;可能無效&lt;/span&gt;，因為它們可能被輸入模式覆寫了。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;注意&lt;/span&gt;：如果你正在使用的&lt;span style=&quot; font-weight:600;&quot;&gt;輸入模式&lt;/span&gt;，像是 IBus、uim、fcitx 或 gcin 輸入，於此設定&lt;span style=&quot; font-weight:600;&quot;&gt;可能無法運作&lt;/span&gt;，因為它們可能被輸入模式所覆寫。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -165,7 +165,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>點一下選取物件</translation>
+        <translation>點按一下啟動項目</translation>
     </message>
 </context>
 <context>
@@ -173,14 +173,16 @@
     <message>
         <location filename="../lxqt-config-input.cpp" line="77"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>非支援的平台</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="38"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 輸入設定目前在 Wayland 下尚未支援。
+
+滑鼠、觸控板及鍵盤可以在合成器設定中進行調整。</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="81"/>
@@ -205,7 +207,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard Layout</source>
-        <translation>鍵盤布局</translation>
+        <translation>鍵盤配置</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="123"/>
@@ -218,17 +220,17 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="14"/>
         <source>Select a keyboard layout</source>
-        <translation>選擇鍵盤布局</translation>
+        <translation>選擇鍵盤配置</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>鍵盤布局</translation>
+        <translation>鍵盤配置</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation>變形</translation>
+        <translation>變異</translation>
     </message>
 </context>
 <context>

@@ -34,23 +34,24 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>預設顯示器設定已經套用。</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 LXQt 顯示器設定來調整螢幕。</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor：設定已經套用。</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor：設定並未套用。
+如果這是 Wayland 合成器，您可以嘗試 kanshi 來調整顯示器設定。</translation>
     </message>
 </context>
 <context>
@@ -120,14 +121,16 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>設定啟動失敗</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>所選的設定不可套用於目前作用的顯示器。
+
+請從強調顯示的調整項目進行選擇。</translation>
     </message>
 </context>
 <context>
@@ -153,14 +156,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="62"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>非支援的平台</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="63"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 顯示器設定在此 Wayland 合成器下目前並未支援。
+
+您可以使用 kanshi 來調整您的顯示器。</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="118"/>
