@@ -61,7 +61,7 @@ QList<MonitorSettings> LoadSettings::loadConfiguration(QString scope)
 
 void LoadSettings::applyBestSettings()
 {
-    KScreen::GetConfigOperation *operation  = new KScreen::GetConfigOperation();
+    KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
     connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
         KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
         if (configOp) {

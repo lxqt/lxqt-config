@@ -96,7 +96,7 @@ set org.gnome.desktop.interface cursor-size "%7"
  * GTK just doesn't intend to support image menu items. They're considered bad practice in modern UI.
  */
 
-ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings,  LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
+ConfigOtherToolKits::ConfigOtherToolKits(LXQt::Settings *settings, LXQt::Settings *configAppearanceSettings, QObject *parent) : QObject(parent)
 {
     mSettings = settings;
     mConfigAppearanceSettings = configAppearanceSettings;
@@ -406,7 +406,7 @@ QString ConfigOtherToolKits::getDefaultGTKTheme()
     if(defaultTheme.size() <= 1)
         return QString();
     // The theme has got quotation marks. Remove it:
-    defaultTheme.replace("'","");
+    defaultTheme.replace("'", "");
     return QString::fromUtf8(defaultTheme);
 }
 

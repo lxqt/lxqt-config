@@ -94,7 +94,7 @@ void BrightnessSettings::setBacklight()
 
 void BrightnessSettings::monitorSettingsChanged(MonitorInfo monitor)
 {
-    mBrightness->setMonitorsSettings(QList<MonitorInfo>{}  << monitor);
+    mBrightness->setMonitorsSettings(QList<MonitorInfo>{} << monitor);
     if (ui->confirmCB->isChecked())
         mConfirmRequestTimer.start();
     else {

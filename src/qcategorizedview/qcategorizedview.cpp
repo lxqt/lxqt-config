@@ -443,7 +443,7 @@ void QCategorizedView::Private::leftToRightVisualRect(const QModelIndex &index, 
                 QModelIndex prevIndex = proxyModel->index(index.row() - 1, q->modelColumn(), q->rootIndex());
                 QRect prevRect = q->visualRect(prevIndex);
                 prevRect = mapFromViewport(prevRect);
-                if ((prevRect.bottomRight().x() + 1) + currSize.width() - blockPos.x() + q->spacing()  > viewportW) {
+                if ((prevRect.bottomRight().x() + 1) + currSize.width() - blockPos.x() + q->spacing() > viewportW) {
                     // we have to check the whole previous row, and see which one was the
                     // highest.
                     Q_FOREVER {

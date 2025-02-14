@@ -29,7 +29,7 @@
 Q_DECLARE_METATYPE(MonitorSavedSettings)
 
 
-ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings,  KScreen::ConfigPtr config, QWidget * parent):
+ManageSavedSettings::ManageSavedSettings(LXQt::Settings * applicationSettings, KScreen::ConfigPtr config, QWidget * parent):
     QDialog(parent)
 {
 

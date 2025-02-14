@@ -230,14 +230,14 @@ void MimetypeViewer::addSearchIcon()
 
     widget.searchTermLineEdit->setTextMargins(0, 0, 30, 0);
     QHBoxLayout *hBoxLayout = new QHBoxLayout(widget.searchTermLineEdit);
-    hBoxLayout->setContentsMargins(0,0,0,0);
+    hBoxLayout->setContentsMargins(0, 0, 0, 0);
     widget.searchTermLineEdit->setLayout(hBoxLayout);
     QLabel *searchIconLabel = new QLabel(widget.searchTermLineEdit);
     searchIconLabel->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchIconLabel->setMinimumHeight(30);
     searchIconLabel->setMinimumWidth(30);
 
-    searchIconLabel->setPixmap(searchIcon.pixmap(QSize(20,20)));
+    searchIconLabel->setPixmap(searchIcon.pixmap(QSize(20, 20)));
     hBoxLayout->addWidget(searchIconLabel, 0, Qt::AlignRight | Qt::AlignVCenter);
 }
 

@@ -65,7 +65,7 @@ void MonitorPictureProxy::updatePosition()
 }
 
 MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * parent, Qt::WindowFlags f) :
-    QWidget(parent,f)
+    QWidget(parent, f)
 {
     updatingOk = false;
     firstShownOk = false;
@@ -179,7 +179,7 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
             picture->monitorWidget->ui.yPosSpinBox->setValue(y);
         //else
         //    qDebug() << "y Iguales";
-        //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]" << x << '=' <<  picture->monitorWidget->ui.xPosSpinBox->value() << ',' << y << '=' << picture->monitorWidget->ui.yPosSpinBox->value();
+        //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]" << x << '=' << picture->monitorWidget->ui.xPosSpinBox->value() << ',' << y << '=' << picture->monitorWidget->ui.yPosSpinBox->value();
     }
     updatingOk = false;
 }

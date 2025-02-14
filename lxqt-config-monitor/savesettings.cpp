@@ -33,7 +33,7 @@ SaveSettings::SaveSettings(LXQt::Settings*applicationSettings, QWidget* parent):
 
     ui.setupUi(this);
 
-    QSize size(128,64);
+    QSize size(128, 64);
     ui.save->setIcon(QIcon::fromTheme("document-save"));
     ui.save->setIconSize(size);
 
@@ -62,9 +62,9 @@ void SaveSettings::onDeleteItem()
 {
     if( ui.allConfigs->currentItem() == NULL )
         return;
-    QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+    QJsonObject obj = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
     applicationSettings->beginGroup("configMonitor");
-    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+    QJsonArray savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
     for(int i=0; i<savedConfigs.size(); i++) {
         const QJsonValue & v = savedConfigs[i];
         QJsonObject o = v.toObject();
@@ -82,13 +82,13 @@ void SaveSettings::onRenameItem()
 {
     if( ui.allConfigs->currentItem() == NULL )
         return;
-    QJsonObject obj  = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
+    QJsonObject obj = ui.allConfigs->currentItem()->data(Qt::UserRole).toJsonObject();
     bool ok;
     QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"), QLineEdit::Normal, obj["name"].toString(), &ok);
     if (!ok || configName.isEmpty())
         return;
     applicationSettings->beginGroup("configMonitor");
-    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+    QJsonArray savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
     for(int i=0; i<savedConfigs.size(); i++) {
         const QJsonValue & v = savedConfigs[i];
         QJsonObject o = v.toObject();
@@ -109,7 +109,7 @@ void SaveSettings::loadSettings()
     ui.allConfigs->clear();
     ui.hardwareCompatibleConfigs->clear();
     applicationSettings->beginGroup("configMonitor");
-    QJsonArray  savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
+    QJsonArray savedConfigs = QJsonDocument::fromJson(applicationSettings->value("saved").toByteArray()).array();
     foreach (const QJsonValue & v, savedConfigs) {
         QJsonObject o = v.toObject();
         QListWidgetItem *item = new QListWidgetItem(o["name"].toString(), ui.allConfigs);

@@ -87,7 +87,7 @@ LXQtThemeConfig::LXQtThemeConfig(LXQt::Settings *settings, StyleConfig *stylePag
         {
             item->setIcon(0, QIcon(theme.previewImage()));
         }
-        item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
+        item->setSizeHint(0, QSize(42, 42)); // make icons non-cropped
         item->setData(0, Qt::UserRole, theme.name());
         ui->lxqtThemeList->addTopLevelItem(item);
     }
