@@ -77,7 +77,7 @@ void IconThemeConfig::initIconsThemes()
                 if (theme.isValid() && (!theme.isHidden()))
                 {
                     QTreeWidgetItem *item = new QTreeWidgetItem((QTreeWidget*)nullptr);
-                    item->setSizeHint(0, QSize(42,42)); // make icons non-cropped
+                    item->setSizeHint(0, QSize(42, 42)); // make icons non-cropped
                     item->setData(0, Qt::UserRole, theme.name());
 
                     const QList<QIcon> icons = theme.icons(iconNames);

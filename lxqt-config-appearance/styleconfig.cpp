@@ -72,17 +72,17 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
         QColor winColor(239, 239, 239);
         QPalette defaultPalette(winColor);
         ui->winColorLabel->setColor(winColor, true);
-        ui->baseColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Base), true);
+        ui->baseColorLabel->setColor(defaultPalette.color(QPalette::Active, QPalette::Base), true);
         // Qt's default highlight color may be different from that of Fusion
         ui->highlightColorLabel->setColor(QColor(60, 140, 230), true);
-        ui->windowTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::WindowText), true);
-        ui->viewTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Text), true);
-        ui->highlightedTextColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::HighlightedText), true);
-        ui->linkColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::Link), true);
-        ui->linkVisitedColorLabel->setColor(defaultPalette.color(QPalette::Active,QPalette::LinkVisited), true);
+        ui->windowTextColorLabel->setColor(defaultPalette.color(QPalette::Active, QPalette::WindowText), true);
+        ui->viewTextColorLabel->setColor(defaultPalette.color(QPalette::Active, QPalette::Text), true);
+        ui->highlightedTextColorLabel->setColor(defaultPalette.color(QPalette::Active, QPalette::HighlightedText), true);
+        ui->linkColorLabel->setColor(defaultPalette.color(QPalette::Active, QPalette::Link), true);
+        ui->linkVisitedColorLabel->setColor(defaultPalette.color(QPalette::Active, QPalette::LinkVisited), true);
         // tooltips use the Inactive color group
-        ui->tooltipColorLabel->setColor(defaultPalette.color(QPalette::Inactive,QPalette::ToolTipBase), true);
-        ui->tooltipTextColorLabel->setColor(defaultPalette.color(QPalette::Inactive,QPalette::ToolTipText), true);
+        ui->tooltipColorLabel->setColor(defaultPalette.color(QPalette::Inactive, QPalette::ToolTipBase), true);
+        ui->tooltipTextColorLabel->setColor(defaultPalette.color(QPalette::Inactive, QPalette::ToolTipText), true);
     });
 
     connect(ui->savePaletteBtn, &QAbstractButton::clicked, this, &StyleConfig::savePalette);
@@ -155,53 +155,53 @@ void StyleConfig::initControls()
     QColor color;
     color = QColor::fromString(mSettings->value(QStringLiteral("window_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Window);
     ui->winColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("base_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Base);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Base);
     ui->baseColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("highlight_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Highlight);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Highlight);
     ui->highlightColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("window_text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::WindowText);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::WindowText);
     ui->windowTextColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Text);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Text);
     ui->viewTextColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("highlighted_text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::HighlightedText);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::HighlightedText);
     ui->highlightedTextColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("link_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Link);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Link);
     ui->linkColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("link_visited_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::LinkVisited);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::LinkVisited);
     ui->linkVisitedColorLabel->setColor(color);
 
     // tooltips use the Inactive color group
     color = QColor::fromString(mSettings->value(QStringLiteral("tooltip_base_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Inactive,QPalette::ToolTipBase);
+        color = QGuiApplication::palette().color(QPalette::Inactive, QPalette::ToolTipBase);
     ui->tooltipColorLabel->setColor(color);
 
     color = QColor::fromString(mSettings->value(QStringLiteral("tooltip_text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Inactive,QPalette::ToolTipText);
+        color = QGuiApplication::palette().color(QPalette::Inactive, QPalette::ToolTipText);
     ui->tooltipTextColorLabel->setColor(color);
 
     mSettings->endGroup();
@@ -438,7 +438,7 @@ void StyleConfig::loadPalette()
                 {
                     bool visible(item->text().contains(filterStr, Qt::CaseInsensitive));
                     if (I < 0 && visible)
-                        I  = i;
+                        I = i;
                     item->setHidden(!visible);
                 }
             }
@@ -501,53 +501,53 @@ void StyleConfig::loadPaletteFile(const QString& paletteFile)
     QColor color;
     color = QColor::fromString(settings.value(QStringLiteral("window_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Window);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Window);
     ui->winColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("base_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Base);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Base);
     ui->baseColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("highlight_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Highlight);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Highlight);
     ui->highlightColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("window_text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::WindowText);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::WindowText);
     ui->windowTextColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Text);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Text);
     ui->viewTextColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("highlighted_text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::HighlightedText);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::HighlightedText);
     ui->highlightedTextColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("link_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::Link);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::Link);
     ui->linkColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("link_visited_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Active,QPalette::LinkVisited);
+        color = QGuiApplication::palette().color(QPalette::Active, QPalette::LinkVisited);
     ui->linkVisitedColorLabel->setColor(color, true);
 
     // tooltips use the Inactive color group
     color = QColor::fromString(settings.value(QStringLiteral("tooltip_base_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Inactive,QPalette::ToolTipBase);
+        color = QGuiApplication::palette().color(QPalette::Inactive, QPalette::ToolTipBase);
     ui->tooltipColorLabel->setColor(color, true);
 
     color = QColor::fromString(settings.value(QStringLiteral("tooltip_text_color")).toString());
     if (!color.isValid())
-        color = QGuiApplication::palette().color(QPalette::Inactive,QPalette::ToolTipText);
+        color = QGuiApplication::palette().color(QPalette::Inactive, QPalette::ToolTipText);
     ui->tooltipTextColorLabel->setColor(color, true);
 
     settings.endGroup();

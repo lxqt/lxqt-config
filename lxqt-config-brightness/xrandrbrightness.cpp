@@ -158,7 +158,7 @@ float XRandrBrightness::gamma_brightness_get(xcb_randr_output_t output)
         return -1;
     }
 
-    xcb_generic_error_t  *error;
+    xcb_generic_error_t *error;
 
     xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
     ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
@@ -217,7 +217,7 @@ void XRandrBrightness::gamma_brightness_set(xcb_randr_output_t output, float per
         return;
     }
 
-    xcb_generic_error_t  *error;
+    xcb_generic_error_t *error;
 
     xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
     ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
@@ -290,7 +290,7 @@ QList<MonitorInfo> XRandrBrightness::getMonitorsInfo()
     for (int i = 0; i < m_resources->num_outputs; ++i) {
         xcb_randr_output_t output = outputs[i];
 
-        xcb_generic_error_t  *error;
+        xcb_generic_error_t *error;
 
         xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
         ScopedCPointer <xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
@@ -383,7 +383,7 @@ void XRandrBrightness::setMonitorsSettings(QList<MonitorInfo> monitors)
     for (int i = 0; i < m_resources->num_outputs; ++i) {
         xcb_randr_output_t output = outputs[i];
 
-        xcb_generic_error_t  *error;
+        xcb_generic_error_t *error;
 
         xcb_randr_get_output_info_cookie_t output_info_cookie = xcb_randr_get_output_info (x11NativeInterface->connection(), output, 0);
         ScopedCPointer<xcb_randr_get_output_info_reply_t> output_info(xcb_randr_get_output_info_reply (x11NativeInterface->connection(), output_info_cookie, &error));
