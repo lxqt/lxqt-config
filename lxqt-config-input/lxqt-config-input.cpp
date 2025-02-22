@@ -72,12 +72,6 @@ int main(int argc, char** argv) {
     }
 #endif
 
-    if (QGuiApplication::platformName() == QLatin1String("wayland"))
-    { // Show a message dialog under wayland if no options are given.
-        QMessageBox::warning(nullptr, QObject::tr("Platform Unsupported"), waylandMsg);
-        return 0;
-    }
-
     LXQt::ConfigDialog dlg(QObject::tr("Keyboard and Mouse Settings"), &settings);
     dlg.setButtons(QDialogButtonBox::Apply|QDialogButtonBox::Close|QDialogButtonBox::Reset);
     dlg.enableButton(QDialogButtonBox::Apply, false); // disable Apply button in the beginning
@@ -110,21 +104,29 @@ int main(int argc, char** argv) {
     });
 
     /*** Keyboard Layout ***/
-    KeyboardLayoutConfig* keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
-    dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), QStringLiteral("input-keyboard"));
-    QObject::connect(&dlg, &LXQt::ConfigDialog::reset, keyboardLayoutConfig, &KeyboardLayoutConfig::reset);
-    QObject::connect(keyboardLayoutConfig, &KeyboardLayoutConfig::settingsChanged, &dlg, [&dlg] {
-        dlg.enableButton(QDialogButtonBox::Apply, true);
-    });
+    KeyboardLayoutConfig* keyboardLayoutConfig = nullptr;
+    if (QGuiApplication::platformName() == QLatin1String("xcb"))
+    {
+        keyboardLayoutConfig = new KeyboardLayoutConfig(&settings, &dlg);
+        dlg.addPage(keyboardLayoutConfig, QObject::tr("Keyboard Layout"), QStringLiteral("input-keyboard"));
+        QObject::connect(&dlg, &LXQt::ConfigDialog::reset, keyboardLayoutConfig, &KeyboardLayoutConfig::reset);
+        QObject::connect(keyboardLayoutConfig, &KeyboardLayoutConfig::settingsChanged, &dlg, [&dlg] {
+            dlg.enableButton(QDialogButtonBox::Apply, true);
+        });
+    }
 
 #ifdef WITH_TOUCHPAD
-    /*** Touchpad Config ***/
-    TouchpadConfig* touchpadConfig = new TouchpadConfig(&settings, &dlg);
-    dlg.addPage(touchpadConfig, QObject::tr("Mouse and Touchpad"), QStringLiteral("input-tablet"));
-    QObject::connect(&dlg, &LXQt::ConfigDialog::reset, touchpadConfig, &TouchpadConfig::reset);
-    QObject::connect(touchpadConfig, &TouchpadConfig::settingsChanged, &dlg, [&dlg] {
-        dlg.enableButton(QDialogButtonBox::Apply, true);
-    });
+    TouchpadConfig* touchpadConfig = nullptr;
+    if (QGuiApplication::platformName() == QLatin1String("xcb"))
+    {
+        /*** Touchpad Config ***/
+        touchpadConfig = new TouchpadConfig(&settings, &dlg);
+        dlg.addPage(touchpadConfig, QObject::tr("Mouse and Touchpad"), QStringLiteral("input-tablet"));
+        QObject::connect(&dlg, &LXQt::ConfigDialog::reset, touchpadConfig, &TouchpadConfig::reset);
+        QObject::connect(touchpadConfig, &TouchpadConfig::settingsChanged, &dlg, [&dlg] {
+            dlg.enableButton(QDialogButtonBox::Apply, true);
+        });
+    }
 #endif
 
     // apply all changes on clicking Apply
@@ -134,9 +136,11 @@ int main(int argc, char** argv) {
             mouseConfig->applyConfig();
             cursorConfig->applyCusorTheme();
             keyboardConfig->applyConfig();
-            keyboardLayoutConfig->applyConfig();
+            if (keyboardLayoutConfig)
+                keyboardLayoutConfig->applyConfig();
 #ifdef WITH_TOUCHPAD
-            touchpadConfig->applyConfig();
+            if (touchpadConfig)
+                touchpadConfig->applyConfig();
 #endif
             // disable Apply button after changes are applied
             dlg.enableButton(btn, false);
