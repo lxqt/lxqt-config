@@ -29,6 +29,9 @@
 #include <QResizeEvent>
 #include <QTransform>
 
+#include <cmath>
+#include <algorithm>
+
 #include "configure.h"
 
 // Gets size from string rate. String rate format is "widthxheight". Example: 800x600
@@ -92,7 +95,7 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
     }
     // The blue rectangle is maximum size of virtual screen (framebuffer)
     scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
-    maxMonitorSize = qMax(monitorsWidth, monitorsHeight);
+    maxMonitorSize = std::max(monitorsWidth, monitorsHeight);
     ui.graphicsView->setScene(scene);
 }
 
@@ -101,7 +104,7 @@ void MonitorPictureDialog::showEvent(QShowEvent * event)
     QWidget::showEvent(event);
     if (!firstShownOk) {
         firstShownOk = true;
-        qreal minWidgetLength = static_cast<qreal>(qMax(ui.graphicsView->size().width(), ui.graphicsView->size().height())) / 1.2;
+        qreal minWidgetLength = static_cast<qreal>(std::max(ui.graphicsView->size().width(), ui.graphicsView->size().height())) / 1.2;
         if (maxMonitorSize > 0)
             updateScale(minWidgetLength / maxMonitorSize);
     }
@@ -115,7 +118,7 @@ void MonitorPictureDialog::resizeEvent(QResizeEvent *event)
         qreal scale = ui.graphicsView->transform().m11();
         if (scale > 0)
         {
-            qreal minWidgetLength = static_cast<qreal>(qMax(ui.graphicsView->size().width(), ui.graphicsView->size().height())) / 1.2;
+            qreal minWidgetLength = static_cast<qreal>(std::max(ui.graphicsView->size().width(), ui.graphicsView->size().height())) / 1.2;
             updateScale((minWidgetLength / maxMonitorSize) / scale);
         }
     }
@@ -163,8 +166,8 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
         for(MonitorPicture *picture : std::as_const(pictures)) {
             int x1 = picture->originX + picture->pos().x();
             int y1 = picture->originY + picture->pos().y();
-            x0 = qMin(x0, x1);
-            y0 = qMin(y0, y1);
+            x0 = std::min(x0, x1);
+            y0 = std::min(y0, y1);
         }
     }
 
@@ -234,8 +237,8 @@ void MonitorPicture::adjustNameSize()
     qreal fontWidth = QFontMetrics(textItem->font()).horizontalAdvance(monitorWidget->output->name() + QStringLiteral("  "));
     textItem->setScale((qreal) this->rect().width() / fontWidth);
     QTransform transform;
-    qreal width = qAbs(this->rect().width()/svgItem->boundingRect().width());
-    qreal height = qAbs(this->rect().height()/svgItem->boundingRect().height());
+    qreal width = std::abs(this->rect().width()/svgItem->boundingRect().width());
+    qreal height = std::abs(this->rect().height()/svgItem->boundingRect().height());
     qDebug() << "Width x Height" << width << "x" << height;
     transform.scale(width, height);
     svgItem->setTransform(transform);
@@ -311,9 +314,9 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
     result.ok = false;
 
     extendedAreaRect = QRectF(
-                           qMin(monitorPicture2Rect.x(), monitorPicture1Rect.x()) - monitorPicture2Rect.width(),
+                           std::min(monitorPicture2Rect.x(), monitorPicture1Rect.x()) - monitorPicture2Rect.width(),
                            monitorPicture2Rect.y(),
-                           qMax(monitorPicture2Rect.x(), monitorPicture1Rect.x()) + 2*monitorPicture2Rect.width(),
+                           std::max(monitorPicture2Rect.x(), monitorPicture1Rect.x()) + 2*monitorPicture2Rect.width(),
                            monitorPicture2Rect.height());
 
     //qDebug() << "\nextendedAreaRect: " << extendedAreaRect;
@@ -347,9 +350,9 @@ static Result_moveMonitorPictureToNearest compareTwoMonitors(MonitorPicture* mon
 
     extendedAreaRect = QRectF(
                            monitorPicture2Rect.x(),
-                           qMin(monitorPicture2Rect.y(), monitorPicture1Rect.y()) - monitorPicture2Rect.height(),
+                           std::min(monitorPicture2Rect.y(), monitorPicture1Rect.y()) - monitorPicture2Rect.height(),
                            monitorPicture2Rect.width(),
-                           qMax(monitorPicture2Rect.y(), monitorPicture1Rect.y()) + 2*monitorPicture2Rect.height()
+                           std::max(monitorPicture2Rect.y(), monitorPicture1Rect.y()) + 2*monitorPicture2Rect.height()
                        );
 
     if(extendedAreaRect.intersects(monitorPicture1Rect)) {
@@ -387,8 +390,8 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
         return;
 
     // Float to int
-    monitorPicture->setX(static_cast<qreal>(qRound(monitorPicture->x())));
-    monitorPicture->setY(static_cast<qreal>(qRound(monitorPicture->y())));
+    monitorPicture->setX(static_cast<qreal>(std::round(monitorPicture->x())));
+    monitorPicture->setY(static_cast<qreal>(std::round(monitorPicture->y())));
 
 
     QVector2D vector(0, 0);
@@ -399,8 +402,8 @@ void MonitorPictureDialog::moveMonitorPictureToNearest(MonitorPicture* monitorPi
         // Float to int. The positions of the Monitors must be set with pixels.
         // QGraphicsView uses float to store x and y. Then, positions as (800.5, 600.3) are stored.
         // x and y have to be translated from float to int in order to store pixels position:
-        picture->setX(static_cast<qreal>(qRound(picture->x())));
-        picture->setY(static_cast<qreal>(qRound(picture->y())));
+        picture->setX(static_cast<qreal>(std::round(picture->x())));
+        picture->setY(static_cast<qreal>(std::round(picture->y())));
 
         Result_moveMonitorPictureToNearest result = compareTwoMonitors(monitorPicture, picture);
         if (result.ok)

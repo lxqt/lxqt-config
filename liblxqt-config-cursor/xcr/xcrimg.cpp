@@ -19,11 +19,11 @@
 #include <QSettings>
 #include <QString>
 
-
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/Xfixes.h>
 
+#include <algorithm>
 
 inline static quint8 alphaPreMul (quint8 clr, quint8 alpha) {
   quint32 c32 = clr, a32 = alpha;
@@ -240,8 +240,8 @@ QImage XCursorImages::buildImage () const {
   for (const XCursorImage *i : std::as_const(mList)) {
     if (i->xcurSize() > 0) {
       QImage img = i->image();
-      width = qMax(width, img.width());
-      height = qMax(height, img.height());
+      width = std::max(width, img.width());
+      height = std::max(height, img.height());
       ++cnt;
     }
   }

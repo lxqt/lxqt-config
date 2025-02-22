@@ -261,7 +261,7 @@ int QCategorizedView::Private::blockHeight(const QString &category)
     QRect bottomRight = q->visualRect(lastIndex);
 
     if (hasGrid()) {
-        bottomRight.setHeight(qMax(bottomRight.height(), q->gridSize().height()));
+        bottomRight.setHeight(std::max(bottomRight.height(), q->gridSize().height()));
     } else {
         if (!q->uniformItemSizes()) {
             bottomRight.setHeight(highestElementInLastRow(block) + q->spacing() * 2);
@@ -389,7 +389,7 @@ int QCategorizedView::Private::highestElementInLastRow(const Block &block) const
         if (tempRect.topLeft().y() < prevRect.topLeft().y()) {
             break;
         }
-        res = qMax(res, tempRect.height());
+        res = std::max(res, tempRect.height());
         if (prevIndex == block.firstIndex) {
             break;
         }
@@ -418,7 +418,7 @@ void QCategorizedView::Private::leftToRightVisualRect(const QModelIndex &index, 
 
     if (hasGrid()) {
         const int relativeRow = index.row() - firstIndexRow;
-        const int maxItemsPerRow = qMax(viewportWidth() / q->gridSize().width(), 1);
+        const int maxItemsPerRow = std::max(viewportWidth() / q->gridSize().width(), 1);
         if (q->layoutDirection() == Qt::LeftToRight) {
             item.topLeft.rx() = (relativeRow % maxItemsPerRow) * q->gridSize().width() + blockPos.x() + categoryDrawer->leftMargin();
         } else {
@@ -429,7 +429,7 @@ void QCategorizedView::Private::leftToRightVisualRect(const QModelIndex &index, 
         if (q->uniformItemSizes()) {
             const int relativeRow = index.row() - firstIndexRow;
             const QSize itemSize = q->sizeHintForIndex(index);
-            const int maxItemsPerRow = qMax((viewportWidth() - q->spacing()) / (itemSize.width() + q->spacing()), 1);
+            const int maxItemsPerRow = std::max((viewportWidth() - q->spacing()) / (itemSize.width() + q->spacing()), 1);
             if (q->layoutDirection() == Qt::LeftToRight) {
                 item.topLeft.rx() = (relativeRow % maxItemsPerRow) * itemSize.width() + blockPos.x() + categoryDrawer->leftMargin();
             } else {
@@ -1185,7 +1185,7 @@ QModelIndex QCategorizedView::moveCursor(CursorAction cursorAction,
                     const QSize itemSize = d->hasGrid() ? gridSize()
                                                         : sizeHintForIndex(current);
                     const Private::Block &block = d->blocks[d->categoryForIndex(current)];
-                    const int maxItemsPerRow = qMax(d->viewportWidth() / itemSize.width(), 1);
+                    const int maxItemsPerRow = std::max(d->viewportWidth() / itemSize.width(), 1);
                     const bool canMove = current.row() + maxItemsPerRow < block.firstIndex.row() +
                                                                           block.items.count();
 
@@ -1220,7 +1220,7 @@ QModelIndex QCategorizedView::moveCursor(CursorAction cursorAction,
                     const QSize itemSize = d->hasGrid() ? gridSize()
                                                         : sizeHintForIndex(current);
                     const Private::Block &block = d->blocks[d->categoryForIndex(current)];
-                    const int maxItemsPerRow = qMax(d->viewportWidth() / itemSize.width(), 1);
+                    const int maxItemsPerRow = std::max(d->viewportWidth() / itemSize.width(), 1);
                     const bool canMove = current.row() - maxItemsPerRow >= block.firstIndex.row();
 
                     if (canMove) {
@@ -1442,7 +1442,7 @@ void QCategorizedView::updateGeometries()
 
     if (verticalScrollMode() == ScrollPerItem) {
         verticalScrollBar()->setSingleStep(lastItemRect.height());
-        const int rowsPerPage = qMax(viewport()->height() / lastItemRect.height(), 1);
+        const int rowsPerPage = std::max(viewport()->height() / lastItemRect.height(), 1);
         verticalScrollBar()->setPageStep(rowsPerPage * lastItemRect.height());
     }
 

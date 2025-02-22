@@ -19,6 +19,8 @@
 #include <QStringList>
 #include <QTextStream>
 
+#include <algorithm>
+
 #include "xcrimg.h"
 #include "xcrxcur.h"
 #include "xcrtheme.h"
@@ -145,10 +147,10 @@ static bool readNextSection (QTextStream &stream, CursorInfo &info) {
     bool numOk = XCursorThemeFX::str2num(nv[1].trimmed(), num);
     if (!numOk) num = 0;
     if (name == QLatin1String("frames")) {
-      info.frameCnt = qMax(num, (quint32)1);
+      info.frameCnt = std::max(num, (quint32)1);
       info.wasFrameCnt = true;
     } else if (name == QLatin1String("interval")) {
-      info.delay = qMax(qMin(num, (quint32)0x7fffffffL), (quint32)10);
+      info.delay = std::clamp(num, (quint32)10, (quint32)0x7fffffffL);
       info.wasDelay = true;
     } else if (name == QLatin1String("animation style")) {
       info.isLooped = true;
