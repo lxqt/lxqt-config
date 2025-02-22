@@ -58,6 +58,11 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   connect(ui.doubleClickInterval, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
   connect(ui.wheelScrollLines, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
   connect(ui.singleClick, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
+
+  if (QGuiApplication::platformName() == QLatin1String("wayland"))
+  { // disable the settings that don't work under Wayland
+    ui.mouseLeftHanded->setEnabled(false);
+  }
 }
 
 MouseConfig::~MouseConfig() {

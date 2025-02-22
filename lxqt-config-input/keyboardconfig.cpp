@@ -61,6 +61,14 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
   connect(ui.keyboardBeep, &QAbstractButton::clicked, this, &KeyboardConfig::settingsChanged);
   connect(ui.cursorFlashTime, QOverload<int>::of(&QSpinBox::valueChanged), this, &KeyboardConfig::settingsChanged);
   connect(ui.keyboardNumLock, &QAbstractButton::clicked, this, &KeyboardConfig::settingsChanged);
+
+  if (QGuiApplication::platformName() == QLatin1String("wayland"))
+  { // disable the settings that don't work under Wayland
+    ui.keyboardDelay->setEnabled(false);
+    ui.keyboardInterval->setEnabled(false);
+    ui.keyboardBeep->setEnabled(false);
+    ui.keyboardNumLock->setEnabled(false);
+  }
 }
 
 KeyboardConfig::~KeyboardConfig() {
@@ -70,10 +78,12 @@ KeyboardConfig::~KeyboardConfig() {
 void KeyboardConfig::initControls() {
   ui.keyboardDelay->blockSignals(true);
   ui.keyboardDelay->setValue(delay);
+  ui.label_delay->setNum(delay);
   ui.keyboardDelay->blockSignals(false);
 
   ui.keyboardInterval->blockSignals(true);
   ui.keyboardInterval->setValue(interval);
+  ui.label_interval->setNum(interval);
   ui.keyboardInterval->blockSignals(false);
 
   ui.keyboardBeep->setChecked(beep);
@@ -88,24 +98,29 @@ void KeyboardConfig::applyConfig()
 {
   bool acceptSetting = false;
 
-    auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
-    Display* dpy = x11NativeInterface->display();
+  Display* dpy = nullptr;
+  if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
+    dpy = x11NativeInterface->display();
 
   /* apply keyboard values */
   if(delay != ui.keyboardDelay->value() || interval != ui.keyboardInterval->value())
   {
     delay = ui.keyboardDelay->value();
     interval = ui.keyboardInterval->value();
-    XkbSetAutoRepeatRate(dpy, XkbUseCoreKbd, delay, interval);
+    if (dpy)
+      XkbSetAutoRepeatRate(dpy, XkbUseCoreKbd, delay, interval);
     acceptSetting = true;
   }
 
   if(beep != ui.keyboardBeep->isChecked())
   {
     beep = ui.keyboardBeep->isChecked();
-    XKeyboardControl values;
-    values.bell_percent = beep ? -1 : 0;
-    XChangeKeyboardControl(dpy, KBBellPercent, &values);
+    if (dpy)
+    {
+      XKeyboardControl values;
+      values.bell_percent = beep ? -1 : 0;
+      XChangeKeyboardControl(dpy, KBBellPercent, &values);
+    }
     acceptSetting = true;
   }
 
