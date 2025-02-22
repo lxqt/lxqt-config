@@ -64,8 +64,7 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
 
   if (QGuiApplication::platformName() == QLatin1String("wayland"))
   { // disable the settings that don't work under Wayland
-    ui.keyboardDelay->setEnabled(false);
-    ui.keyboardInterval->setEnabled(false);
+    ui.repeatGroupBox->setEnabled(false);
     ui.keyboardBeep->setEnabled(false);
     ui.keyboardNumLock->setEnabled(false);
   }
