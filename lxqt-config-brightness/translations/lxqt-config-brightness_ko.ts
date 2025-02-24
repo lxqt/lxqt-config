@@ -40,12 +40,12 @@
         <translation>설정 변경 후 확인 필요</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="112"/>
+        <location filename="../brightnesssettings.cpp" line="115"/>
         <source>Brightness settings changed</source>
         <translation>밝기 설정이 변경됨</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="113"/>
+        <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>확인이 필요합니다. 설정이 올바릅니까?</translation>
     </message>
@@ -71,32 +71,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="68"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Increase brightness.</source>
         <translation>밝기를 높입니다.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Decrease brightness.</source>
         <translation>밝기를 줄입니다.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
         <translation>밝기를 1에서 100까지 설정합니다.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
         <translation>감마를 기본값으로 재설정합니다.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="112"/>
+        <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
         <translation>%1: 증가/감소 및 설정을 함께 사용할 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="117"/>
+        <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
         <translation>%1: 증가 및 감소 옵션을 함께 사용할 수 없습니다</translation>
     </message>

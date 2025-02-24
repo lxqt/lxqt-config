@@ -34,12 +34,12 @@
         <translation>Velikost</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="229"/>
+        <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
         <translation>Chyba XCurTheme</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Není možné odstranit právě používaný vzhled!</translation>
     </message>

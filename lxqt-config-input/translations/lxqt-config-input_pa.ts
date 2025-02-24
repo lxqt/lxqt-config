@@ -167,48 +167,53 @@
         <source>Single click to activate items</source>
         <translation>ਚੀਜ਼ਾਂ ਨੂੰ ਐਕਟੀਵੇਟ ਕਰਨ ਲਈ ਇਕਹੇਰਾ ਕਲਿੱਕ</translation>
     </message>
+    <message>
+        <location filename="../mouseconfig.cpp" line="65"/>
+        <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="77"/>
-        <source>Platform Unsupported</source>
-        <translation>ਪਲੇਟਫਾਰਮ ਗ਼ੈਰ-ਸਹਾਇਕ</translation>
-    </message>
-    <message>
-        <location filename="../lxqt-config-input.cpp" line="38"/>
+        <location filename="../lxqt-config-input.cpp" line="39"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="81"/>
+        <location filename="../lxqt-config-input.cpp" line="76"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>ਕੀਬੋਰਡ ਅਤੇ ਮਾਊਸ ਸੈਟਿੰਗਾਂ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="90"/>
+        <location filename="../lxqt-config-input.cpp" line="94"/>
         <source>Mouse</source>
         <translation>ਮਾਊਸ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="99"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Cursor</source>
         <translation>ਕਰਸਰ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="106"/>
+        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Keyboard</source>
         <translation>ਕੀਬੋਰਡ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="114"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Keyboard Layout</source>
         <translation>ਕੀਬੋਰਡ ਲੇਆਉਟ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="136"/>
         <source>Mouse and Touchpad</source>
         <translation>ਮਾਊਸ ਅਤੇ ਟੱਚਪੈਡ</translation>
     </message>

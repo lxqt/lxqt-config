@@ -34,12 +34,12 @@
         <translation>Өлшемі</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="229"/>
+        <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme қатесі</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Белсенді теманы өшіру мүмкін емес!</translation>
     </message>

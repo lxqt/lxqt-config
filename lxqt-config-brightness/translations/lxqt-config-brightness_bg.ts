@@ -40,12 +40,12 @@
         <translation>Изискване потвърждение след промяна на настройките</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="112"/>
+        <location filename="../brightnesssettings.cpp" line="115"/>
         <source>Brightness settings changed</source>
         <translation>Настройките на яркостта са променени</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="113"/>
+        <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Изисква се потвърждение. Коректни ли са настройките?</translation>
     </message>
@@ -71,32 +71,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="68"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Increase brightness.</source>
         <translation>Увеличаване на яркостта.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Decrease brightness.</source>
         <translation>Намаляване на яркостта.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
         <translation>Задаване яркост от 1 до 100.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
         <translation>Възстановяване на стойностите на Gamma по подразбиране.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="112"/>
+        <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
         <translation>%1: Увеличаване/намаляване и задаване на стойност не могат да бъдат приложени в последователност</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="117"/>
+        <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
         <translation>%1: Опциите за увеличаване и намаляване не могат да бъдат приложени в последователност</translation>
     </message>

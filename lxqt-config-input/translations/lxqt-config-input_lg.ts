@@ -168,11 +168,16 @@ akabonero nga erinwyezezza wansi:</translation>
         <source>Single click to activate items</source>
         <translation>Amapeesa gakolere ku lukoona lumu</translation>
     </message>
+    <message>
+        <location filename="../mouseconfig.cpp" line="65"/>
+        <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="38"/>
+        <location filename="../lxqt-config-input.cpp" line="39"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -181,37 +186,37 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 Enteekateeka ez&apos;akasongesebwa aka bulijjo n&apos;akasiisirizibwa ne ez&apos;amapeesa agawandiksibwa osobola okuzikolerako w&apos;otegekera ebya puloguramu ekwanaganya ebirabikira awakolerwa.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="77"/>
-        <source>Platform Unsupported</source>
-        <translation>Tewali nkolagana ne sisitemu</translation>
-    </message>
-    <message>
-        <location filename="../lxqt-config-input.cpp" line="81"/>
+        <location filename="../lxqt-config-input.cpp" line="76"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Enteekateeka z&apos;akasongesebwa n&apos;amapeesa agwandisibwa</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="90"/>
+        <location filename="../lxqt-config-input.cpp" line="94"/>
         <source>Mouse</source>
         <translation>Akasongesebwa</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="99"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Cursor</source>
         <translation>Akasonga</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="106"/>
+        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Keyboard</source>
         <translation>Mapeesa agawandisibwa</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="114"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Keyboard Layout</source>
         <translation>Entereeza y&apos;amapeesa agawandisibwa</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="136"/>
         <source>Mouse and Touchpad</source>
         <translation>Akasongesebwa aka bulijjo n&apos;akasiisirizibwa</translation>
     </message>

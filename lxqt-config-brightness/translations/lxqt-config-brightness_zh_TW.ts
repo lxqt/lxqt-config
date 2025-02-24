@@ -40,12 +40,12 @@
         <translation>在設定變更之後需要確認</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="112"/>
+        <location filename="../brightnesssettings.cpp" line="115"/>
         <source>Brightness settings changed</source>
         <translation>亮度設定已經變更</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="113"/>
+        <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>需要確認。此設定是否正確？</translation>
     </message>
@@ -71,32 +71,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="68"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Increase brightness.</source>
         <translation>提高亮度。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Decrease brightness.</source>
         <translation>降低亮度。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
         <translation>設定亮度由 1 至 100。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
         <translation>重新設定 Gamma 為預設值。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="112"/>
+        <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
         <translation>%1： : 不可同時使用 提高/降低 和 設定</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="117"/>
+        <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
         <translation>%1：不可同時使用 提高 和 降低 選項</translation>
     </message>

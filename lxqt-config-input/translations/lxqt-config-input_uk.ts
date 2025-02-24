@@ -167,16 +167,16 @@
         <source>Single click to activate items</source>
         <translation>Одинарне клацання для активування</translation>
     </message>
+    <message>
+        <location filename="../mouseconfig.cpp" line="65"/>
+        <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="77"/>
-        <source>Platform Unsupported</source>
-        <translation>Непідтримувана платформа</translation>
-    </message>
-    <message>
-        <location filename="../lxqt-config-input.cpp" line="38"/>
+        <location filename="../lxqt-config-input.cpp" line="39"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,32 +185,37 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 Мишу, тачпад і клавіатуру можна налаштувати у налаштуваннях композитора.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="81"/>
+        <location filename="../lxqt-config-input.cpp" line="76"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Налаштування клавіатури і миші</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="90"/>
+        <location filename="../lxqt-config-input.cpp" line="94"/>
         <source>Mouse</source>
         <translation>Миша</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="99"/>
+        <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Cursor</source>
         <translation>Курсор</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="106"/>
+        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../lxqt-config-input.cpp" line="112"/>
         <source>Keyboard</source>
         <translation>Клавіатура</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="114"/>
+        <location filename="../lxqt-config-input.cpp" line="123"/>
         <source>Keyboard Layout</source>
         <translation>Розкладка клавіатури</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="136"/>
         <source>Mouse and Touchpad</source>
         <translation>Миша та сенсорна панель</translation>
     </message>
