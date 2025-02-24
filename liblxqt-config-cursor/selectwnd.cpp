@@ -52,6 +52,8 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     ui->preview->setCurrentCursorSize(getDefaultCursorSize());
     ui->preview->setCursorSize(ui->preview->getCurrentCursorSize());
 
+    ui->extraInfoLabel->hide();
+
     mModel = new XCursorThemeModel(this);
 
     int size = style()->pixelMetric(QStyle::PM_LargeIconSize);
@@ -253,4 +255,18 @@ void SelectWnd::cursorSizeChanged(int size)
 {
     ui->preview->setCursorSize(size);
     emit settingsChanged();
+}
+
+void SelectWnd::showExtraInfo(const QString& info)
+{
+    if (info.isEmpty())
+    {
+        ui->extraInfoLabel->clear();
+        ui->extraInfoLabel->hide();
+    }
+    else
+    {
+        ui->extraInfoLabel->setText(info);
+        ui->extraInfoLabel->show();
+    }
 }

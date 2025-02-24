@@ -38,6 +38,8 @@ public:
 
     void applyCusorTheme();
 
+    void showExtraInfo(const QString& info);
+
 public slots:
     void setCurrent ();
 

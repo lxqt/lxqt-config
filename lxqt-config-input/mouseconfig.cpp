@@ -60,9 +60,12 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   connect(ui.singleClick, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
 
   if (QGuiApplication::platformName() == QLatin1String("wayland"))
-  { // disable the settings that don't work under Wayland
+  { // disable the settings that don't work under Wayland and show the extra info
     ui.mouseLeftHanded->setEnabled(false);
+    ui.extraInfoLabel->setText(QStringLiteral("\n") + tr("Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard."));
   }
+  else
+    ui.extraInfoLabel->hide();
 }
 
 MouseConfig::~MouseConfig() {

@@ -25,6 +25,7 @@
 #include "mouseconfig.h"
 #include "keyboardconfig.h"
 #include "../liblxqt-config-cursor/selectwnd.h"
+#include "../lxqt-config-appearance/configothertoolkits.h"
 #include "keyboardlayoutconfig.h"
 
 #ifdef WITH_TOUCHPAD
@@ -79,6 +80,15 @@ int main(int argc, char** argv) {
 
     LXQt::Settings qtSettings(QStringLiteral("lxqt"));
 
+    LXQt::Settings configAppearanceSettings(QStringLiteral("lxqt-config-appearance"));
+    ConfigOtherToolKits *configOtherToolKits = nullptr;
+    bool controlGTK(configAppearanceSettings.value(QStringLiteral("ControlGTKThemeEnabled")).toBool());
+    if (controlGTK)
+    {
+        configOtherToolKits = new ConfigOtherToolKits(&qtSettings, &configAppearanceSettings, &dlg);
+        configOtherToolKits->startXsettingsd();
+    }
+
     /*** Mouse Config ***/
     MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
     dlg.addPage(mouseConfig, QObject::tr("Mouse"), QStringLiteral("input-mouse"));
@@ -94,6 +104,8 @@ int main(int argc, char** argv) {
     QObject::connect(cursorConfig, &SelectWnd::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true);
     });
+    if (!controlGTK)
+        cursorConfig->showExtraInfo(QStringLiteral("\n") + QObject::tr("To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style."));
 
     /*** Keyboard Config ***/
     KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
@@ -135,6 +147,17 @@ int main(int argc, char** argv) {
         {
             mouseConfig->applyConfig();
             cursorConfig->applyCusorTheme();
+            if (configOtherToolKits)
+            {
+                // GTK3
+                configOtherToolKits->setGTKConfig(QStringLiteral("3.0"));
+                if(QGuiApplication::platformName() == QStringLiteral("wayland"))
+                    configOtherToolKits->setGsettingsConfig(QStringLiteral("3.0"));
+                // GTK2
+                configOtherToolKits->setGTKConfig(QStringLiteral("2.0"));
+                // Update xsettingsd
+                configOtherToolKits->setXSettingsConfig();
+            }
             keyboardConfig->applyConfig();
             if (keyboardLayoutConfig)
                 keyboardLayoutConfig->applyConfig();

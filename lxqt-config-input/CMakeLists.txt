@@ -35,6 +35,7 @@ set(lxqt-config-input_HDRS
     mouseconfig.h
     keyboardlayoutconfig.h
     selectkeyboardlayoutdialog.h
+    ../lxqt-config-appearance/configothertoolkits.h
 )
 
 set(lxqt-config-input_SRCS
@@ -43,6 +44,7 @@ set(lxqt-config-input_SRCS
     mouseconfig.cpp
     keyboardlayoutconfig.cpp
     selectkeyboardlayoutdialog.cpp
+    ../lxqt-config-appearance/configothertoolkits.cpp
 )
 
 set(lxqt-config-input_UIS
