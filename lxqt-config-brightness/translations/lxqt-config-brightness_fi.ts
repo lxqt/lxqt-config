@@ -40,12 +40,12 @@
         <translation>Kysy vahvistus ennen muutoksia</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="112"/>
+        <location filename="../brightnesssettings.cpp" line="115"/>
         <source>Brightness settings changed</source>
         <translation>Kirkkaus (gamma) asetus muuttui</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="113"/>
+        <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Vahvistus vaaditaan. Ovatko asetukset oikein?</translation>
     </message>
@@ -71,32 +71,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="68"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Increase brightness.</source>
         <translation>Lisää kirkkautta.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Decrease brightness.</source>
         <translation>Vähennä kirkkautta.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
         <translation>Aseta kirkkaus välillä 1-100.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
         <translation>Palauta gamma-asetuksen oletusarvo.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="112"/>
+        <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
         <translation>%1: Lisää/vähennä- ja aseta -komentoja ei voi käyttää samanaikaisesti</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="117"/>
+        <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
         <translation>%1: Lisää- ja vähennä -asetuksia ei voi käyttää samanaikaisesti</translation>
     </message>

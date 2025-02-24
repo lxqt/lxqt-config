@@ -40,12 +40,12 @@
         <translation>Kræv bekræftelse efter indstillinger er blevet ændret</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="112"/>
+        <location filename="../brightnesssettings.cpp" line="115"/>
         <source>Brightness settings changed</source>
         <translation>Lysstyrkeindstillinger ændret</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="113"/>
+        <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Bekræftelse krævet. Er indstillingerne korrekte?</translation>
     </message>
@@ -71,32 +71,32 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="68"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Increase brightness.</source>
         <translation>Lysere.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="70"/>
+        <location filename="../main.cpp" line="72"/>
         <source>Decrease brightness.</source>
         <translation>Mørkere.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
         <translation>Indstil lysstyrke fra 1 til 100.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="74"/>
+        <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
         <translation>Nulstil gamma til standardværdi.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="112"/>
+        <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
         <translation>%1: Kan ikke bruge lysere/mørkere og indstil sammen</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="117"/>
+        <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
         <translation>%1: Kan ikke bruge valgmulighederne lysere og mørkere sammen</translation>
     </message>
