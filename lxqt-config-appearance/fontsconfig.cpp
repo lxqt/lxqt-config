@@ -38,6 +38,8 @@
 #include <QStringBuilder>
 #include <QDomDocument>
 
+using namespace Qt::Literals::StringLiterals;
+
 static const char* subpixelNames[] = {"none", "rgb", "bgr", "vrgb", "vbgr"};
 static const char* hintStyleNames[] = {"hintnone", "hintslight", "hintmedium", "hintfull"};
 
@@ -45,8 +47,7 @@ FontsConfig::FontsConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
     QWidget(parent),
     ui(new Ui::FontsConfig),
     mQtSettings(qtSettings),
-    mSettings(settings),
-    mFontConfigFile()
+    mSettings(settings)
 {
     ui->setupUi(this);
 
@@ -94,10 +95,10 @@ void FontsConfig::initControls()
     mQtSettings->endGroup();
 
     // load fontconfig config
-    ui->antialias->setChecked(mFontConfigFile.antialias());
-    ui->autohint->setChecked(mFontConfigFile.autohint());
+    ui->antialias->setChecked(mQtSettings->value("Fonts/Antialias"_L1, true).toBool());
+    ui->autohint->setChecked(mQtSettings->value("Fonts/Autohint"_L1, false).toBool());
 
-    QByteArray subpixelStr = mFontConfigFile.subpixel();
+    QByteArray subpixelStr = mQtSettings->value("Fonts/Subpixel"_L1, "rgb"_ba).toByteArray();
     int subpixel;
     for(subpixel = 0; subpixel < 5; ++subpixel)
     {
@@ -107,9 +108,9 @@ void FontsConfig::initControls()
     if(subpixel < 5)
         ui->subpixel->setCurrentIndex(subpixel);
 
-    ui->hinting->setChecked(mFontConfigFile.hinting());
+    ui->hinting->setChecked(mQtSettings->value("Fonts/Hinting"_L1, true).toBool());
 
-    QByteArray hintStyleStr = mFontConfigFile.hintStyle();
+    QByteArray hintStyleStr = mQtSettings->value("Fonts/Hintstyle"_L1, "hintslight"_ba).toByteArray();
     int hintStyle;
     for(hintStyle = 0; hintStyle < 4; ++hintStyle)
     {
@@ -119,7 +120,7 @@ void FontsConfig::initControls()
     if(hintStyle < 4)
         ui->hintStyle->setCurrentIndex(hintStyle);
 
-    int dpi = mFontConfigFile.dpi();
+    int dpi = mQtSettings->value("Fonts/DPI"_L1, 96).toInt();
     ui->dpi->blockSignals(true);
     ui->dpi->setValue(dpi);
     ui->dpi->blockSignals(false);
@@ -129,29 +130,28 @@ void FontsConfig::initControls()
 
 void FontsConfig::updateQtFont()
 {
-    if(mFontConfigFile.antialias() != ui->antialias->isChecked())
-        mFontConfigFile.setAntialias(ui->antialias->isChecked());
+    if(mQtSettings->value("Fonts/Antialias"_L1).toBool() != ui->antialias->isChecked())
+        mQtSettings->setValue("Fonts/Antialias"_L1, ui->antialias->isChecked());
 
-    if(mFontConfigFile.dpi() != ui->dpi->value())
-        mFontConfigFile.setDpi(ui->dpi->value());
+    if(mQtSettings->value("Fonts/DPI"_L1).toInt() != ui->dpi->value())
+        mQtSettings->setValue("Fonts/DPI"_L1, ui->dpi->value());
 
-    if(mFontConfigFile.hinting() != ui->hinting->isChecked())
-        mFontConfigFile.setHinting(ui->hinting->isChecked());
+    if(mQtSettings->value("Fonts/Hinting"_L1).toBool() != ui->hinting->isChecked())
+        mQtSettings->setValue("Fonts/Hinting"_L1, ui->hinting->isChecked());
 
     int index = ui->subpixel->currentIndex();
-    if(index >= 0 && index <= 4 && mFontConfigFile.subpixel() != subpixelNames[index])
-        mFontConfigFile.setSubpixel(subpixelNames[index]);
+    if(index >= 0 && index <= 4 && mQtSettings->value("Fonts/Subpixel"_L1).toByteArray() != subpixelNames[index])
+        mQtSettings->setValue("Fonts/Subpixel"_L1, QByteArray(subpixelNames[index]));
 
     index = ui->hintStyle->currentIndex();
-    if(index >= 0 && index <= 3 && mFontConfigFile.hintStyle() != hintStyleNames[index])
-        mFontConfigFile.setHintStyle(hintStyleNames[index]);
+    if(index >= 0 && index <= 3 && mQtSettings->value("Fonts/Hintstyle"_L1).toByteArray() != hintStyleNames[index])
+        mQtSettings->value("Fonts/Hintstyle"_L1, QByteArray(hintStyleNames[index]));
 
-    if(mFontConfigFile.autohint() != ui->autohint->isChecked())
-        mFontConfigFile.setAutohint(ui->autohint->isChecked());
+    if(mQtSettings->value("Fonts/Autohint"_L1).toBool() != ui->autohint->isChecked())
+        mQtSettings->setValue("Fonts/Autohint"_L1, ui->autohint->isChecked());
 
     // FIXME: the change does not apply to some currently running Qt programs.
     // FIXME: does not work with KDE apps
-    // TODO: also write the config values to GTK+ config files (gtk-2.0.rc and gtk3/settings.ini)
     // FIXME: the selected font does not apply to our own application. Why?
 
     QFont font = ui->fontName->currentFont();
@@ -174,14 +174,15 @@ void FontsConfig::updateQtFont()
     font.setBold(bold);
     font.setItalic(italic);
 
+    // FIXME: Migrate this setting under the 'Fonts' group instead of the 'Qt' group
     const QString fontStr = font.toString();
     if(mQtSettings->value(QLatin1String("Qt/font")).toString() != fontStr) {
         mQtSettings->beginGroup(QLatin1String("Qt"));
         mQtSettings->setValue(QStringLiteral("font"), fontStr);
         mQtSettings->endGroup();
         mQtSettings->sync();
-
-        emit updateOtherSettings();
-        update();
     }
+
+    emit updateOtherSettings();
+    update();
 }
