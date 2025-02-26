@@ -171,7 +171,7 @@ akabonero nga erinwyezezza wansi:</translation>
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ebisoboka ebirala mu kuteekateeka mapeesa n&apos;obusongesebwa bisange w&apos;otegekera ebya Wayland.</translation>
     </message>
 </context>
 <context>
@@ -203,7 +203,7 @@ Enteekateeka ez&apos;akasongesebwa aka bulijjo n&apos;akasiisirizibwa ne ez&apos
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bino bw&apos;oba oyagala bikwate ne ku bya mu GTK, tonyeza ku Teekateeka ndabika ya LXQt → Endabika y&apos;ebikozsa GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
