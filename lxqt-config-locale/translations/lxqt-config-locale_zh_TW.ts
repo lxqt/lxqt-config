@@ -104,7 +104,7 @@
     <message>
         <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
-        <translation>LXQt 地區設定配置</translation>
+        <translation>LXQt 地區設定</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>

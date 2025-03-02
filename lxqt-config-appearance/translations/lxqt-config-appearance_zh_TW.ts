@@ -19,12 +19,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
-        <translation>GTK主題</translation>
+        <translation>GTK 主題</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&apos;%1&apos; 已經被覆寫。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;中找到你舊設定的備份&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; 已經被覆寫。&lt;/p&gt;&lt;p&gt;可以在 &apos;%2&apos; 中找到您的舊設定備份&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
-        <translation>字體大小：</translation>
+        <translation>大小：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="54"/>
@@ -87,12 +87,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>以下設定僅影響新啟動的應用程式</translation>
+        <translation>以下設定僅作用於重新啟動的應用程式</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>使用反鋸齒字型</translation>
+        <translation>使用平滑字型</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="153"/>
@@ -171,26 +171,26 @@
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>設定GTK主題 (GTK設定將會被覆蓋!)</translation>
+        <translation>設定 GTK 主題 (GTK 設定將會被覆蓋！)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 3 Theme:</source>
-        <translation>GTK 3主題：</translation>
+        <translation>GTK 3 主題：</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
         <source>GTK 2 Theme:</source>
-        <translation>GTK 2主題：</translation>
+        <translation>GTK 2 主題：</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="105"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>要嘗試統一主題，請在所有列表中選擇相似的樣式/主題（如果可用），或選擇“gtk2”Qt樣式（如果可用）來模仿GTK主題。
+        <translation>要嘗試一致的主題，請在全部列表中選擇類似的樣式/主題(若有可用)，或是選擇 &apos;gtk2&apos; Qt 樣式(若有可用)來摹擬 GTK 主題。
 
-確保安裝&apos;xsettingsd&apos;以幫助GTK應用程序動態應用主題。</translation>
+確定 &apos;xsettingsd&apos; 已有安裝，來幫助 GTK 應用程式迅即套用主題。</translation>
     </message>
 </context>
 <context>
@@ -198,7 +198,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt自訂外觀</translation>
+        <translation>LXQt 外觀設定</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -208,7 +208,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>XDG圖示主題的KDE擴充套件 -&gt; 沿用色彩主題</translation>
+        <translation>XDG 圖示主題的 KDE 擴充套件 -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -221,27 +221,27 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt主題</translation>
+        <translation>LXQt 主題</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation>使用主題提供的桌布</translation>
+        <translation>使用主題所提供的桌布壁紙</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation>使用主題樣式提供的配色板</translation>
+        <translation>使用主題樣式所提供的配色板</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
         <source>(User Theme)</source>
-        <translation>(自訂主題)</translation>
+        <translation>(使用者主題)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="185"/>
         <source>Open theme folder</source>
-        <translation>打開主題資料夾</translation>
+        <translation>開啟主題資料夾</translation>
     </message>
 </context>
 <context>
@@ -268,7 +268,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>LXQt自訂外觀</translation>
+        <translation>LXQt 外觀設定</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
@@ -283,7 +283,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
-        <translation>LXQt主題</translation>
+        <translation>LXQt 主題</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="100"/>
@@ -311,12 +311,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation>Qt 色盤</translation>
+        <translation>Qt 調色盤</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation>一些 Qt 樣式可能會無視這些顏色。</translation>
+        <translation>有些 Qt 樣式可能會忽略這些顏色。</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
@@ -326,12 +326,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>文字區:</translation>
+        <translation>檢視：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation>選取：</translation>
+        <translation>選擇：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
@@ -351,12 +351,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
-        <translation>一般文字：</translation>
+        <translation>檢視文字：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
-        <translation>已選取的文字：</translation>
+        <translation>選取文字：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="196"/>
@@ -366,22 +366,22 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
-        <translation>已檢視的連結：</translation>
+        <translation>已經查看的連結：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
-        <translation>儲存這個色盤 (&amp;S)</translation>
+        <translation>儲存調色盤(&amp;S)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
-        <translation>載入色盤 (&amp;L)</translation>
+        <translation>載入調色盤 (&amp;L)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
-        <translation>預設值 (&amp;D)</translation>
+        <translation>預設調色板(&amp;D)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
@@ -390,7 +390,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation>可能會由 Qt 樣式或應用程式所覆蓋</translation>
+        <translation>可由 Qt 樣式或應用程式所覆蓋</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -410,12 +410,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
-        <translation>圖示旁顯示文字</translation>
+        <translation>圖示旁側顯示文字</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
-        <translation>圖示下顯示文字</translation>
+        <translation>圖示下方顯示文字</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="318"/>
@@ -425,7 +425,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation>工具圖示大小：</translation>
+        <translation>工具列圖示大小：</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
@@ -455,42 +455,42 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
-        <translation>單擊選擇物件</translation>
+        <translation>點按一下啟用項目</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style:</source>
-        <translation>Qt風格：</translation>
+        <translation>Qt 樣式：</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <location filename="../styleconfig.cpp" line="340"/>
         <source>Save Palette</source>
-        <translation>儲存色盤</translation>
+        <translation>儲存調色盤</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
-        <translation>色盤名稱：</translation>
+        <translation>調色盤名稱：</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation>已有一個同名的色盤。
-要取代掉嗎？</translation>
+        <translation>已有相同名稱的調色盤。
+要取代嗎？</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
         <source>Remove Palettes</source>
-        <translation>刪除色盤</translation>
+        <translation>移除調色盤</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>請問真的要把已選擇的色盤刪除嗎？
-基底調色盤會被保留。</translation>
+        <translation>真的要將所選的調色盤刪除嗎？
+根調色盤若有存在，將會保留完好。</translation>
     </message>
 </context>
 </TS>
