@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>切換鍵盤配置的按鍵：</translation>
+        <translation>按鍵用於變更配置：</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 Wayland 合成器的設定來用於有關滑鼠、觸控板和鍵盤的更多選項。</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>若要將變更也套用於 GTK，請勾選 LXQt 外觀 設定 → GTK 樣式。</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>

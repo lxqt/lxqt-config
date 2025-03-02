@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd inställningarna för Wayland-kompositören för fler alternativ för mus, pekplatta och tangentbord.</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Mus, pekplatta och tangentbord kan konfigureras i kompositörens inställningar.
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>För att tillämpa ändringarna även på GTK, markera LXQt Utseendekonfiguration → GTK Stil.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
