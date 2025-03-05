@@ -194,7 +194,8 @@ MonitorPicture::MonitorPicture(QGraphicsItem * parent,
 {
     this->monitorWidget = monitorWidget;
     this->monitorPictureDialog = monitorPictureDialog;
-    QSize currentSize = sizeFromString(monitorWidget->ui.resolutionCombo->currentText());
+    QSizeF currentSizeF = sizeFromString(monitorWidget->ui.resolutionCombo->currentText()) / monitorWidget->output->scale();
+    QSize currentSize = currentSizeF.toSize();
     if( monitorWidget->output->rotation() == KScreen::Output::Left || monitorWidget->output->rotation() == KScreen::Output::Right )
         currentSize.transpose();
     int x = monitorWidget->ui.xPosSpinBox->value();
