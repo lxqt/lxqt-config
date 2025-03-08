@@ -51,7 +51,7 @@
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
         <translation>lxqt-config-monitor：設定並未套用。
-如果這是 Wayland 合成器，您可以嘗試 kanshi 來調整顯示器設定。</translation>
+如果這是 Wayland 合成器，您可以嘗試 kanshi 來設定顯示器。</translation>
     </message>
 </context>
 <context>
@@ -130,7 +130,7 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
 Please choose from the highlighted configurations.</source>
         <translation>所選的設定不可套用於目前作用的顯示器。
 
-請從強調顯示的調整項目進行選擇。</translation>
+請由強調顯示的設定項目來進行選擇。</translation>
     </message>
 </context>
 <context>
@@ -165,7 +165,7 @@ Please choose from the highlighted configurations.</source>
 You can configure your monitor(s) with kanshi.</source>
         <translation>LXQt 顯示器設定在此 Wayland 合成器下目前並未支援。
 
-您可以使用 kanshi 來調整您的顯示器。</translation>
+您可以使用 kanshi 來設定顯示器。</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="118"/>
@@ -339,7 +339,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>設定已更改</translation>
+        <translation>設定已經變更</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>

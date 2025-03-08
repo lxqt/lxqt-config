@@ -182,7 +182,7 @@
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
         <translation>LXQt 輸入設定目前在 Wayland 下尚未支援。
 
-滑鼠、觸控板及鍵盤可以在合成器設定中進行調整。</translation>
+滑鼠、觸控板及鍵盤可以在合成器設定中進行設定。</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="76"/>

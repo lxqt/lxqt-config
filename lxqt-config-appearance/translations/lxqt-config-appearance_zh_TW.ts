@@ -231,7 +231,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation>使用主題樣式所提供的配色板</translation>
+        <translation>使用主題樣式所提供的調色盤</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -376,12 +376,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
-        <translation>載入調色盤 (&amp;L)</translation>
+        <translation>載入調色盤(&amp;L)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
-        <translation>預設調色板(&amp;D)</translation>
+        <translation>預設調色盤(&amp;D)</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
