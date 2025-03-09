@@ -68,12 +68,12 @@
     <message>
         <location filename="../applicationchooser.cpp" line="305"/>
         <source>No applications found</source>
-        <translation>找無應用程式</translation>
+        <translation>查無應用程式</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation>找無更多應用程式</translation>
+        <translation>查無更多應用程式</translation>
     </message>
 </context>
 <context>
