@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ďalšie možnosti týkajúce sa myši, touchpadu a klávesnice nájdete v nastaveniach kompozitora Wayland.</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,9 @@
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém Wayland nepodporuje nastavenia vstupov LXQt.
+
+Myš, touchpad a klávesnicu možno nastaviť v nastaveniach kompozitora.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="76"/>
@@ -200,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ak chcete zmeny aplikovať aj na GTK, vyberte položku Nastavenie vzhľadu LXQt → Štýl GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>

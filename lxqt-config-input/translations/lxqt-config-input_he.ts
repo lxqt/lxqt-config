@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>אפשר להשתמש בהגדרות של המנהל החלונאי Wayland לאפשרויות נוספות כגון עכבר, משטח מגע ומקלדת.</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>כדי להחיל את השינויים גם על GTK, נא לגשת להגדרות המראה של LXQt ← סגנון GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
