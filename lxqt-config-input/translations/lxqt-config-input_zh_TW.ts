@@ -268,7 +268,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
-        <translation>輕觸然後拖曳</translation>
+        <translation>點按拖放</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="86"/>

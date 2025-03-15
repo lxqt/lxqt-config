@@ -231,7 +231,7 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Použitie palety poskytnutej témou</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -316,7 +316,7 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation>Niektoré štýly Qt môžu ignorovať tieto farby.</translation>
+        <translation>Niektoré štýly Qt môžu tieto farby ignorovať.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
@@ -336,7 +336,7 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
@@ -361,7 +361,7 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text popisu:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
@@ -390,7 +390,7 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Môže byť prepísaný štýlom alebo aplikáciou Qt</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť ikony panela s nástrojmi:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>

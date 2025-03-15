@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudokite „Wayland“ tvarkytojo nustatymus, kad pasiektumėte daugiau pelės, jutiklinio kilimėlio ir klaviatūros parinkčių.</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Pelė, jutiklinis kilimėlis ir klaviatūra gali būti sukonfigūruoti kompozito
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Norėdami taikyti pakeitimus taip pat ir GTK, pasižiūrėkite LXQt išvaizdos konfigūravimas → GTK stilius.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
