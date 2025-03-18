@@ -41,7 +41,7 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
 
     ui.setupUi(this);
 
-    connect(ui.comboBox, &QComboBox::currentIndexChanged, this, &FastMenu::onSeleccionChanged);
+    connect(ui.comboBox, &QComboBox::currentIndexChanged, this, &FastMenu::onSelectionChanged);
 }
 
 FastMenu::~FastMenu()
@@ -112,7 +112,7 @@ void FastMenu::onlySecond()
     }
 }
 
-void FastMenu::onSeleccionChanged(int index)
+void FastMenu::onSelectionChanged(int index)
 {
     switch((Options) index) {
     case Extended:

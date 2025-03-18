@@ -39,13 +39,13 @@ public:
     ~FastMenu() override;
 
 private Q_SLOTS:
-    void onSeleccionChanged(int index);
+    void onSelectionChanged(int index);
 
 private:
     Ui::FastMenu ui;
     KScreen::ConfigPtr mConfig;
     KScreen::ConfigPtr mOldConfig;
-    
+
     void unified();
     void onlyFirst();
     void onlySecond();
