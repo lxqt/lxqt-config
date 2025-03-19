@@ -41,7 +41,7 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
 
     ui.setupUi(this);
 
-    connect(ui.comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &FastMenu::onSeleccionChanged);
+    connect(ui.comboBox, &QComboBox::currentIndexChanged, this, &FastMenu::onSelectionChanged);
 }
 
 FastMenu::~FastMenu()
@@ -56,48 +56,42 @@ static bool sizeBiggerThan(const QSize &sizeA, const QSize &sizeB)
 void FastMenu::unified()
 {
     const KScreen::OutputList outputs = mConfig->outputs();
-    // Look for common size
+    // Find the common sizes
     QList<QSize> commonSizes;
     for (const KScreen::OutputPtr &output : outputs) {
-        if( !output->isConnected() )
-            continue;
-
-        const auto modes = output->modes();
-        for(const KScreen::ModePtr &mode : modes) {
-            commonSizes.append(mode->size());
-        }
-        break;
-    }
-    for (const KScreen::OutputPtr &output : outputs) {
-        if( !output->isConnected() )
+        if (!output->isConnected())
             continue;
         QList<QSize> sizes;
         const auto modes = output->modes();
-        for(const KScreen::ModePtr &mode : modes) {
-            if( commonSizes.contains(mode->size()) )
+        for (const KScreen::ModePtr &mode : modes) {
+            if (commonSizes.isEmpty() // this is the first connected output
+                || commonSizes.contains(mode->size())) // the size existed in previous outputs
+            {
                 sizes.append(mode->size());
+            }
         }
+        if (sizes.isEmpty()) // there is no common size
+            return;
         commonSizes = sizes;
     }
-    // Select the bigest common size
-    std::sort(commonSizes.begin(), commonSizes.end(), sizeBiggerThan);
-    if(commonSizes.isEmpty())
+    if (commonSizes.isEmpty())
         return;
-    QSize commonSize = commonSizes[0];
-    // Put all monitors in (0,0) position and set size
+    // Sort the common sizes from the largest to the smallest
+    std::sort(commonSizes.begin(), commonSizes.end(), sizeBiggerThan);
+    // Select the largest common size
+    QSize largestSize = commonSizes.at(0);
+    // Put all monitors at (0,0)
+    QPoint orig(0, 0);
     for (const KScreen::OutputPtr &output : outputs) {
-        if( !output->isConnected() )
+        if (!output->isConnected())
             continue;
-        QPoint pos = output->pos();
-        pos.setX(0);
-        pos.setY(0);
-        output->setPos(pos);
+        output->setPos(orig);
         output->setEnabled(true);
-        // Select mode with the biggest refresh rate
+        // Select the mode with the largest size and the maximum refresh rate
         float maxRefreshRate = 0.0;
-        const auto outputs = output->modes();
-        for(const KScreen::ModePtr &mode : outputs) {
-            if(mode->size() == commonSize && maxRefreshRate < mode->refreshRate()) {
+        const auto outputModes = output->modes();
+        for (const KScreen::ModePtr &mode : outputModes) {
+            if (mode->size() == largestSize && maxRefreshRate < mode->refreshRate()) {
                 output->setCurrentModeId(mode->id());
                 maxRefreshRate = mode->refreshRate();
             }
@@ -110,12 +104,9 @@ void FastMenu::onlyFirst()
     bool foundOk = false;
     const KScreen::OutputList outputs = mConfig->outputs();
     for (const KScreen::OutputPtr &output : outputs) {
-        if( !output->isConnected() )
+        if (!output->isConnected())
             continue;
-        QPoint pos = output->pos();
-        pos.setX(0);
-        pos.setY(0);
-        output->setPos(pos);
+        output->setPos(QPoint(0, 0));
         output->setEnabled(!foundOk);
         foundOk = true;
     }
@@ -126,18 +117,15 @@ void FastMenu::onlySecond()
     bool foundOk = true;
     const KScreen::OutputList outputs = mConfig->outputs();
     for (const KScreen::OutputPtr &output : outputs) {
-        if( !output->isConnected() )
+        if (!output->isConnected())
             continue;
-        QPoint pos = output->pos();
-        pos.setX(0);
-        pos.setY(0);
-        output->setPos(pos);
+        output->setPos(QPoint(0, 0));
         output->setEnabled(!foundOk);
         foundOk = false;
     }
 }
 
-void FastMenu::onSeleccionChanged(int index)
+void FastMenu::onSelectionChanged(int index)
 {
     switch((Options) index) {
     case Extended:
