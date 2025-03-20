@@ -11,22 +11,22 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ 延伸螢幕</translation>
+        <translation> ❶ ❷ 延伸檢視</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
         <source> ❶ ❶ Unified view</source>
-        <translation> ❶ ❶ 同步螢幕</translation>
+        <translation> ❶ ❶ 同步檢視</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="50"/>
         <source> ❶     Only first</source>
-        <translation> ❶     僅顯示第一螢幕</translation>
+        <translation> ❶     僅顯示第一個</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="55"/>
         <source>     ❷ Only second</source>
-        <translation>     ❷ 僅顯示第二螢幕</translation>
+        <translation>     ❷ 僅顯示第二個</translation>
     </message>
 </context>
 <context>
@@ -64,7 +64,7 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation>儲存設定</translation>
+        <translation>已經儲存設定</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
@@ -121,7 +121,7 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="172"/>
         <source>Settings Activation Failed</source>
-        <translation>設定啟動失敗</translation>
+        <translation>設定啟用失敗</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="173"/>
@@ -208,17 +208,17 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.ui" line="27"/>
         <source>Enable this display</source>
-        <translation>啟用這個螢幕</translation>
+        <translation>啟用這個顯示</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="49"/>
         <source>This is my primary display</source>
-        <translation>這是我的主螢幕</translation>
+        <translation>這是我的主要顯示</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
-        <translation>此螢幕延伸自另一個螢幕</translation>
+        <translation>此螢幕延伸另一個顯示</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -344,7 +344,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>現在的設定是否合適？</translation>
+        <translation>目前的設定是否適用？</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>

@@ -188,7 +188,7 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>要嘗試一致的主題，請在全部列表中選擇類似的樣式/主題(若有可用)，或是選擇 &apos;gtk2&apos; Qt 樣式(若有可用)來摹擬 GTK 主題。
+        <translation>要嘗試一致的主題，可在全部列表中選擇類似的樣式/主題(若有可用)，或是選擇 &apos;gtk2&apos; Qt 樣式(若有可用)來模擬 GTK 主題。
 
 確定 &apos;xsettingsd&apos; 已有安裝，來幫助 GTK 應用程式迅即套用主題。</translation>
     </message>
@@ -260,7 +260,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation>刪除(&amp;R)</translation>
+        <translation>移除(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -455,7 +455,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
-        <translation>點按一下啟用項目</translation>
+        <translation>點按一下啟動項目</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
@@ -489,7 +489,7 @@ Do you want to replace it?</source>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>真的要將所選的調色盤刪除嗎？
+        <translation>確定要將所選的調色盤移除嗎？
 根調色盤若有存在，將會保留完好。</translation>
     </message>
 </context>
