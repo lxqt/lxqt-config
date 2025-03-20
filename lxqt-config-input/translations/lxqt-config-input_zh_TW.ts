@@ -58,7 +58,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
         <source>Type in the following box to test your keyboard settings</source>
-        <translation>在下列方框裡輸入文字測試你的鍵盤設定</translation>
+        <translation>在下列方框裡輸入文字測試您的鍵盤設定</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="167"/>
         <source>Turn on NumLock after login</source>
-        <translation>登入後自動啟用 NumLock</translation>
+        <translation>登入後自動開用 NumLock</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;注意&lt;/span&gt;：如果你正在使用的&lt;span style=&quot; font-weight:600;&quot;&gt;輸入模式&lt;/span&gt;，像是 IBus、uim、fcitx 或 gcin 輸入，於此設定&lt;span style=&quot; font-weight:600;&quot;&gt;可能無法運作&lt;/span&gt;，因為它們可能被輸入模式所覆寫。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;注意&lt;/span&gt;：如果您正在使用的&lt;span style=&quot; font-weight:600;&quot;&gt;輸入法&lt;/span&gt;，像是 IBus、uim、fcitx 或 gcin 輸入，於此設定&lt;span style=&quot; font-weight:600;&quot;&gt;可能無法運作&lt;/span&gt;，因為它們可能被輸入法所覆寫。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation>若要將變更也套用於 GTK，請勾選 LXQt 外觀 設定 → GTK 樣式。</translation>
+        <translation>要將變更套用也用於 GTK，勾選 LXQt 外觀 設定 → GTK 樣式。</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
@@ -258,7 +258,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="60"/>
         <source>Tap to click</source>
-        <translation>輕觸以點擊</translation>
+        <translation>輕觸點按</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
@@ -311,8 +311,8 @@ Otherwise you can get rid of this message by changing xinput driver to &quot;lib
         <translation>LXQt 僅支援以 &quot;libinput&quot; 作為 xinput 的驅動。
 (目前是： %1)
 
-如果您真的想這樣做，請手動設定 xinput 。
-否則請把 xinput 驅動設定為 &quot;libinput&quot; 來隱藏這個訊息。
+如果確定要這樣做，請手動設定 xinput 。
+否則可以把 xinput 驅動設定為 &quot;libinput&quot; 來隱藏這個訊息。
 </translation>
     </message>
 </context>
