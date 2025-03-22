@@ -6,22 +6,22 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt滑鼠游標主題設定</translation>
+        <translation>LXQt 滑鼠游標主題設定</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>選擇想要使用的游標主題 (來回移動來測試游標)。&lt;b&gt;變更後需要重新啟動 LXQt 會話&lt;/b&gt;：</translation>
+        <translation>選擇所要用的游標主題(懸停預覽測試游標)。&lt;b&gt;變更後需要重新啟動 LXQt 工作階段&lt;/b&gt;：</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
-        <translation>安裝新主題(&amp;I)...</translation>
+        <translation>安裝新的主題(&amp;I)…</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation>請重新啟動 LXQt 以套用這些設定。</translation>
+        <translation>LXQt 工作階段需要重新啟動以檢視這些變更。</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="111"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
-        <translation>XCurTheme錯誤</translation>
+        <translation>XCurTheme 錯誤</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>無法移除正在套用的主題！</translation>
+        <translation>無法移除作用中的主題！</translation>
     </message>
 </context>
 <context>
@@ -49,17 +49,17 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation>表單</translation>
+        <translation>型式</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt 找不到任何游標主題，將改為使用 X11 預設的游標主題。 LXQt 已在下列目錄中查尋：</translation>
+        <translation>LXQt 找不到任何游標主題，將改為使用 X11 預設的游標主題。 LXQt 已在下列目錄查尋：</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>顯示...</translation>
+        <translation>顯示…</translation>
     </message>
 </context>
 <context>
