@@ -39,7 +39,7 @@
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished">LXQt 【モニターの設定】で画面を調整して下さい。</translation>
+        <translation>LXQt のモニター設定で画面を調整してください。</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>

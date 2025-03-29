@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa la configuració del compositor Wayland per obtenir més opcions sobre el ratolí, el ratolí tàctil i el teclat.</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ El ratolí, el ratolí tàctil i el teclat es poden configurar a la configuraci�
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per aplicar els canvis també a GTK, marqueu Configuració d&apos;aparença LXQt → Estil GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
