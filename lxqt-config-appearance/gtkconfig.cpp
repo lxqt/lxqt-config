@@ -41,6 +41,7 @@ GTKConfig::GTKConfig(LXQt::Settings *configAppearanceSettings, ConfigOtherToolKi
     connect(ui->advancedOptionsGroupBox, &QGroupBox::clicked, this, &GTKConfig::settingsChanged);
     connect(ui->gtk2ComboBox, QOverload<int>::of(&QComboBox::activated), this, &GTKConfig::settingsChanged);
     connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &GTKConfig::settingsChanged);
+    connect(ui->gtk4ComboBox, QOverload<int>::of(&QComboBox::activated), this, &GTKConfig::settingsChanged);
 }
 
 GTKConfig::~GTKConfig()
@@ -54,6 +55,7 @@ void GTKConfig::initControls()
     // Fill themes
     QStringList gtk2Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("2.0"));
     QStringList gtk3Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("3.*"));
+    QStringList gtk4Themes = mConfigOtherToolKits->getGTKThemes(QStringLiteral("4.*"));
 
     if(!mConfigAppearanceSettings->contains(QStringLiteral("ControlGTKThemeEnabled")))
         mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), false);
@@ -66,9 +68,11 @@ void GTKConfig::initControls()
     // Fill GTK themes
     ui->gtk2ComboBox->addItems(gtk2Themes);
     ui->gtk3ComboBox->addItems(gtk3Themes);
+    ui->gtk4ComboBox->addItems(gtk4Themes);
 
     ui->gtk2ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("2.0")));
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
+    ui->gtk4ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("4.0")));
 
     update();
 }
@@ -77,8 +81,13 @@ void GTKConfig::applyGTKStyle()
 {
     if (ui->advancedOptionsGroupBox->isChecked())
     {
+        // GTK4
+        QString themeName = ui->gtk4ComboBox->currentText();
+        mConfigOtherToolKits->setGTKConfig(QStringLiteral("4.0"), themeName);
+        if(QGuiApplication::platformName() == QStringLiteral("wayland"))
+            mConfigOtherToolKits->setGsettingsConfig(QStringLiteral("4.0"), themeName);
         // GTK3
-        QString themeName = ui->gtk3ComboBox->currentText();
+        themeName = ui->gtk3ComboBox->currentText();
         mConfigOtherToolKits->setGTKConfig(QStringLiteral("3.0"), themeName);
         if(QGuiApplication::platformName() == QStringLiteral("wayland"))
             mConfigOtherToolKits->setGsettingsConfig(QStringLiteral("3.0"), themeName);

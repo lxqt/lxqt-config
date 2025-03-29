@@ -62,7 +62,7 @@ private:
     } mConfig;
 
     enum Version {
-        GTK2, GTK3, GTK3GSETTINGS
+        GTK2, GTK3, GTK4, GTK3GSETTINGS, GTK4GSETTINGS
     };
     void writeConfig(QString path, const char *configString, Version version);
     QString getConfig(const char *configString, Version version);
