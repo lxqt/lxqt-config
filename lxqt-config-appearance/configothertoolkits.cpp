@@ -361,7 +361,7 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
             QDir dirsInTheme(QStringLiteral("%1/themes/%2").arg(dataPath, theme));
             const QStringList dirs = dirsInTheme.entryList(QDir::Dirs);
             for(const QString &dir : dirs) {
-                if(dir.startsWith(QLatin1String("gtk-"))) {
+                if(dir.startsWith(QLatin1String("gtk-") + version.front())) {
                     if(!version.endsWith(QLatin1String("*")) && dir != QStringLiteral("gtk-%1").arg(version))
                          continue;
                     QFileInfo themePath(QStringLiteral("%1/themes/%2/%3/%4").arg(dataPath, theme, dir, configFile));
