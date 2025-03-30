@@ -74,6 +74,8 @@ void GTKConfig::initControls()
     ui->gtk3ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("3.0")));
     ui->gtk4ComboBox->setCurrentText(mConfigOtherToolKits->getGTKThemeFromRCFile(QStringLiteral("4.0")));
 
+    ui->gtk4ThemeDisclaimerLabel->setVisible(true);
+
     update();
 }
 

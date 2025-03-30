@@ -110,6 +110,17 @@
            </layout>
           </item>
           <item>
+           <widget class="QLabel" name="gtk4ThemeDisclaimerLabel">
+            <property name="text">
+             <string>The selected GTK 4 theme does not apply to applications that use Libadwaita.
+             </string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="uniformThemeLabel">
             <property name="text">
              <string>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select 'gtk2' Qt style (if available) to mimic GTK themes.
