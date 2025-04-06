@@ -1,3 +1,12 @@
+lxqt-config-2.2.0 / 2025-04-17
+===============================
+ * Tidy up some whitespaces in the code.
+ * Replaced qMin,qMax,qBound,qRound and qAbs with standard functions.
+ * Let Keyboard and Mouse Settings be shown partially under Wayland.
+ * Apply cursor changes to GTK in Keyboard and Mouse Settings if needed.
+ * Fixed screen images with different scales in the monitors page of LXQt Monitor Settings.
+ * Cleaned up the code of fast options in LXQt Monitor Settings.
+
 lxqt-config-2.1.1 / 2025-02-07
 ===============================
  * Fixed the "Set Position" page in lxqt-config-monitor.
