@@ -1,6 +1,6 @@
 /*
+    Copyright (C) 2013  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
     Copyright (C) 2014  P.L. Lucas <selairi@gmail.com>
-    Copyright (C) 2013  <copyright holder> <email>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
