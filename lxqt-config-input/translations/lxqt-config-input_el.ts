@@ -202,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Για την εφαρμογή των αλλαγών επίσης στο GTK, ελέγξτε στο Διαμόρφωση Εμφάνισης LXQt → Τεχνοτροπία GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>

@@ -66,7 +66,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="164"/>
         <source>Unset</source>
-        <translation>未設定にすると「まだ設定されていません」になります</translation>
+        <translation>未設定</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
