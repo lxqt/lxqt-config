@@ -222,7 +222,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     LXQt::AutostartEntry autoStart(QStringLiteral("lxqt-config-monitor-autostart.desktop"));
     XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, QStringLiteral("lxqt-config-monitor-autostart"), QStringLiteral("lxqt-config-monitor -l"));
     //desktopFile.setValue("OnlyShowIn", QString(qgetenv("XDG_CURRENT_DESKTOP")));
-    desktopFile.setValue(QStringLiteral("OnlyShowIn"), QStringLiteral("LXQt"));
+    desktopFile.setValue(QStringLiteral("OnlyShowIn"), QStringLiteral("LXQt;"));
     desktopFile.setValue(QStringLiteral("Comment"), QStringLiteral("Autostart monitor settings for LXQt-config-monitor"));
     autoStart.setFile(desktopFile);
     autoStart.commit();
