@@ -39,7 +39,13 @@
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QDateTime>
+#include <QDebug>
+#include <QString>
 #include <lxqtautostartentry.h>
+
+#include <XdgDirs>
+
+using namespace Qt::Literals::StringLiterals;
 
 MonitorSettingsDialog::MonitorSettingsDialog() :
     QDialog(nullptr, Qt::WindowFlags())
@@ -219,13 +225,22 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     qDebug() << "[ MonitorSettingsDialog::saveConfiguration] # monitors Write:" << monitors.size();
     settings.endGroup();
 
-    LXQt::AutostartEntry autoStart(QStringLiteral("lxqt-config-monitor-autostart.desktop"));
-    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, QStringLiteral("lxqt-config-monitor-autostart"), QStringLiteral("lxqt-config-monitor -l"));
-    //desktopFile.setValue("OnlyShowIn", QString(qgetenv("XDG_CURRENT_DESKTOP")));
-    desktopFile.setValue(QStringLiteral("OnlyShowIn"), QStringLiteral("LXQt"));
-    desktopFile.setValue(QStringLiteral("Comment"), QStringLiteral("Autostart monitor settings for LXQt-config-monitor"));
-    autoStart.setFile(desktopFile);
-    autoStart.commit();
+    LXQt::AutostartEntry autoStart;
+    XdgDesktopFile desktopFile;
+    const QStringList dirs = XdgDirs::dataDirs();
+    auto it = dirs.cbegin();
+    for ( ;it != dirs.cend(); ++it) {
+        const QString fn = *it + "/applications/lxqt-config-monitor-autostart.desktop"_L1;
+        if (QFile::exists(fn))
+            if (desktopFile.load(fn)) {
+                autoStart.setFile(desktopFile);
+                autoStart.commit();
+                break;
+            }
+        }
+        if (it == dirs.cend()) {
+            qWarning() << "[ MonitorSettingsDialog::saveConfiguration] # LXQt Config Monitor autostart file not found";
+        }
 }
 
 

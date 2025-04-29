@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=lxqt-config-monitor -l
+OnlyShowIn=LXQt;
+Type=Application
+Version=1.0
+NoDisplay=true
+
+#TRANSLATIONS_DIR=translations
