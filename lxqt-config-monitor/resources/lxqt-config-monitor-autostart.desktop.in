@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=LXQt Monitor Settings Loader
+Comment=Autostart monitor settings for LXQt-config-monitor
+Exec=lxqt-config-monitor -l
+OnlyShowIn=LXQt;
+Type=Application
+Version=1.0
+
+#TRANSLATIONS_DIR=translations
+
