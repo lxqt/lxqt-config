@@ -85,7 +85,12 @@ lxqt_translate_ts(QM_FILES
 )
 
 lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in USE_YAML)
+lxqt_translate_desktop(DESKTOP_FILES
+    SOURCES
+        ${PROJECT_NAME}.desktop.in
+        resources/lxqt-config-touchpad-autostart.desktop.in
+    USE_YAML
+)
 
 #************************************************
 
