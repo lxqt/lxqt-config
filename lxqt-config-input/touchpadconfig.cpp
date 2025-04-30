@@ -20,9 +20,18 @@
 #include "touchpaddevice.h"
 
 #include <cmath>
+
+#include <QDebug>
+#include <QFile>
+#include <QString>
 #include <QUrl>
+
+#include <XdgDirs>
+
 #include <LXQt/AutostartEntry>
 #include <LXQt/Settings>
+
+using namespace Qt::Literals::StringLiterals;
 
 TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     QWidget(parent),
@@ -136,10 +145,23 @@ void TouchpadConfig::accept()
         device.saveSettings(settings);
     }
 
-    LXQt::AutostartEntry autoStart(QStringLiteral("lxqt-config-touchpad-autostart.desktop"));
-    XdgDesktopFile desktopFile(XdgDesktopFile::ApplicationType, QStringLiteral("lxqt-config-touchpad-autostart"), QStringLiteral("lxqt-config-input --load-touchpad"));
-    desktopFile.setValue(QStringLiteral("OnlyShowIn"), QStringLiteral("LXQt"));
-    desktopFile.setValue(QStringLiteral("Comment"), QStringLiteral("Autostart touchpad settings for lxqt-config-input"));
+    LXQt::AutostartEntry autoStart;
+    XdgDesktopFile desktopFile;
+
+    const QStringList dirs = XdgDirs::dataDirs();
+    auto it = dirs.cbegin();
+    for ( ;it != dirs.cend(); ++it) {
+        const QString fn = *it + "/applications/lxqt-config-touchpad-autostart.desktop"_L1;
+        if (QFile::exists(fn))
+            if (desktopFile.load(fn)) {
+                autoStart.setFile(desktopFile);
+                autoStart.commit();
+                break;
+            }
+        }
+        if (it == dirs.cend()) {
+            qWarning() << " TouchpadConfig::accept(): LXQt Config Touchpad autostart file not found";
+        }
     autoStart.setFile(desktopFile);
     autoStart.commit();
 }
