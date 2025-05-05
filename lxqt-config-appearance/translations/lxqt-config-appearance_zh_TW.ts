@@ -190,7 +190,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>要嘗試一致的主題，可在全部列表中選擇類似的樣式/主題(若有可用)，或是選擇 &apos;gtk2&apos; Qt 樣式(若有可用)來模擬 GTK 主題。
 
-確定 &apos;xsettingsd&apos; 已有安裝，來幫助 GTK 應用程式迅即套用主題。</translation>
+確定 &apos;xsettingsd&apos; 已有安裝，來協助 GTK 應用程式迅即套用主題。</translation>
     </message>
 </context>
 <context>

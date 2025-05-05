@@ -170,7 +170,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="122"/>
         <source>Set position</source>
-        <translation>Nastavit pozici</translation>
+        <translation>Nastavit polohu</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="241"/>

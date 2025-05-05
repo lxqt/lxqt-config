@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>選擇所要用的游標主題(懸停預覽測試游標)。&lt;b&gt;變更後需要重新啟動 LXQt 工作階段&lt;/b&gt;：</translation>
+        <translation>選擇所要使用的游標主題(懸停預覽測試游標)。&lt;b&gt;變更後需要重新啟動 LXQt 工作階段&lt;/b&gt;：</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="104"/>
