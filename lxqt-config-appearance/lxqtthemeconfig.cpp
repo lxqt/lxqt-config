@@ -183,6 +183,7 @@ void LXQtThemeConfig::contextMenu(const QPoint& p)
 {
     QMenu menu;
     QAction *a = menu.addAction(tr("Open theme folder"));
+    a->setIcon(QIcon::fromTheme(QStringLiteral("document-open")));
     connect(a, &QAction::triggered, [this, p] {
         doubleClicked(ui->lxqtThemeList->itemAt(p), 0);
     });
