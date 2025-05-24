@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρησιμοποιήστε τις ρυθμίσεις του σύνθετη Wayland για περισσότερες επιλογές σχετικά με το ποντίκι, την επιφάνεια αφής και το πληκτρολόγιο.</translation>
     </message>
 </context>
 <context>
