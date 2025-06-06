@@ -52,7 +52,8 @@ void ManageSavedSettings::showSelectedConfig()
     QListWidgetItem * currItem = ui.allConfigs->currentItem();
     if (currItem == nullptr)
         return;
-    MonitorSavedSettings o = currItem->data(Qt::UserRole).value<MonitorSavedSettings>();
+    QVariant v = currItem->data(Qt::UserRole);
+    MonitorSavedSettings o = v.value<MonitorSavedSettings>();
     QString text;
     for(int i=0; i < o.monitors.size(); i++) {
         MonitorSettings setting = o.monitors[i];
@@ -110,7 +111,8 @@ void ManageSavedSettings::onDeleteItem()
 {
     if (ui.allConfigs->currentItem() == nullptr)
         return;
-    MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
+    QVariant v = ui.allConfigs->currentItem()->data(Qt::UserRole);
+    MonitorSavedSettings obj = v.value<MonitorSavedSettings>();
 
     LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
     QList<MonitorSavedSettings> monitors;
@@ -134,7 +136,8 @@ void ManageSavedSettings::onRenameItem()
 {
     if (ui.allConfigs->currentItem() == nullptr)
         return;
-    MonitorSavedSettings obj = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
+    QVariant v = ui.allConfigs->currentItem()->data(Qt::UserRole);
+    MonitorSavedSettings obj = v.value<MonitorSavedSettings>();
     bool ok;
     QString configName = QInputDialog::getText(this, tr("Name"), tr("Name:"),
                          QLineEdit::Normal,
@@ -166,7 +169,8 @@ void ManageSavedSettings::onApplyItem()
 {
     if (ui.allConfigs->currentItem() == nullptr)
         return;
-    MonitorSavedSettings settings = ui.allConfigs->currentItem()->data(Qt::UserRole).value<MonitorSavedSettings>();
+    QVariant v = ui.allConfigs->currentItem()->data(Qt::UserRole);
+    MonitorSavedSettings settings = v.value<MonitorSavedSettings>();
 
     if (!isHardwareCompatible(settings)) {
         QMessageBox::information(this, tr("Settings Activation Failed"),

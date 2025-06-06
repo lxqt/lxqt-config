@@ -340,7 +340,8 @@ void MimetypeViewer::currentMimetypeChanged()
         return;
     }
 
-    MimeTypeData mimeData = sel->data(0, Qt::UserRole).value<MimeTypeData>();
+    QVariant v = sel->data(0, Qt::UserRole);
+    MimeTypeData mimeData = v.value<MimeTypeData>();
     XdgMimeApps appsDb;
     XdgDesktopFile *defaultApp = nullptr;
 
@@ -403,7 +404,8 @@ void MimetypeViewer::filter(const QString& pattern)
     }
 
     for(QTreeWidgetItem* it : std::as_const(mItemList)) {
-        mimeData = it->data(0, Qt::UserRole).value<MimeTypeData>();
+        QVariant v = it->data(0, Qt::UserRole);
+        mimeData = v.value<MimeTypeData>();
         if (pattern.isEmpty() || mimeData.matches(pattern)) {
             const int i = mimeData.name().indexOf(QLatin1Char('/'));
             const QString mediaType = mimeData.name().left(i);

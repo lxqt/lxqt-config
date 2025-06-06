@@ -357,15 +357,15 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
     }
     // decode image
     QImage img((const uchar *)unp.constData()+ipos+realHdrSize, imgWdt, imgHgt, QImage::Format_ARGB32);
+#if (QT_VERSION >= QT_VERSION_CHECK(6,9,0))
+    img = img.flipped(Qt::Vertical);
+#else
     img = img.mirrored(false, true);
-    //
+#endif
     XCursorImages *cim = new XCursorImages(QString::fromUtf8(*nlst));
     cim->setScript(script);
-    //!!!
-    //!!!img.save(QString("_png/%1.png").arg(cim->name()));
-    //!!!
     quint32 frameWdt = img.width()/frameCnt;
-   qDebug() << "frameWdt:" << frameWdt << "left:" << img.width()%(frameWdt*frameCnt);
+    //qDebug() << "frameWdt:" << frameWdt << "left:" << img.width()%(frameWdt*frameCnt);
     // now build animation sequence
     int fCnt = 0;
     for (const tAnimSeq &a : std::as_const(aseq)) {
