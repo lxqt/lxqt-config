@@ -106,7 +106,7 @@ void LocaleConfig::load()
         connectCombo(combo);
     }
 
-    connect(m_ui->checkDetailed, &QGroupBox::toggled, [ = ]()
+    connect(m_ui->checkDetailed, &QGroupBox::toggled, this, [this]()
     {
         updateExample();
         hasChanged = true;
@@ -175,7 +175,7 @@ void LocaleConfig::initCombo(QComboBox *combo, const QList<QLocale> & allLocales
 
 void LocaleConfig::connectCombo(QComboBox *combo)
 {
-    connect(combo, QOverload<int>::of(&QComboBox::currentIndexChanged), [ = ]()
+    connect(combo, &QComboBox::currentIndexChanged, this, [this]()
     {
         hasChanged = true;
         updateExample();
