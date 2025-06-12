@@ -314,7 +314,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Some Qt styles may ignore these colours.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
