@@ -52,6 +52,7 @@ private:
 
 public slots:
     void initControls();
+    void onItemDoubleClicked(QTreeWidgetItem*, int);
 
 signals:
     void settingsChanged();

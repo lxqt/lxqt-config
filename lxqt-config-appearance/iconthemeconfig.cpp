@@ -31,6 +31,10 @@
 #include <QStringList>
 #include <QStringBuilder>
 #include <QIcon>
+#include <QDesktopServices>
+#include <QProcess>
+
+static QStringList iconThemeDirList;
 
 IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
     QWidget(parent),
@@ -42,6 +46,7 @@ IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
     initControls();
 
     connect(iconThemeList, &QTreeWidget::currentItemChanged, this, &IconThemeConfig::settingsChanged);
+    connect(iconThemeList, &QTreeWidget::itemDoubleClicked, this, &IconThemeConfig::onItemDoubleClicked);
     connect(iconFollowColorSchemeCB, &QAbstractButton::clicked, this, &IconThemeConfig::settingsChanged);
 }
 
@@ -76,6 +81,8 @@ void IconThemeConfig::initIconsThemes()
                 IconThemeInfo theme(QDir(dir.canonicalFilePath()));
                 if (theme.isValid() && (!theme.isHidden()))
                 {
+                    iconThemeDirList << dir.canonicalFilePath();
+
                     QTreeWidgetItem *item = new QTreeWidgetItem((QTreeWidget*)nullptr);
                     item->setSizeHint(0, QSize(42, 42)); // make icons non-cropped
                     item->setData(0, Qt::UserRole, theme.name());
@@ -154,5 +161,21 @@ void IconThemeConfig::applyIconTheme()
 
             emit updateOtherSettings();
         }
+    }
+}
+
+void IconThemeConfig::onItemDoubleClicked(QTreeWidgetItem *item, int /*column*/)
+{
+    if (!item)
+        return;
+
+    QString iconThemeDir = iconThemeDirList[iconThemeList->indexOfTopLevelItem(item)];
+
+    if (!QDir(iconThemeDir).exists())
+        return;
+
+    if (!QProcess::startDetached(QStringLiteral("qtxdg-mat"), QStringList() << QStringLiteral("open") << iconThemeDir))
+    {
+        QDesktopServices::openUrl(QUrl(iconThemeDir));
     }
 }
