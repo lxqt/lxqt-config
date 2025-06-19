@@ -82,12 +82,6 @@ int main(int argc, char** argv) {
 
     LXQt::Settings configAppearanceSettings(QStringLiteral("lxqt-config-appearance"));
     ConfigOtherToolKits *configOtherToolKits = nullptr;
-    bool controlGTK(configAppearanceSettings.value(QStringLiteral("ControlGTKThemeEnabled")).toBool());
-    if (controlGTK)
-    {
-        configOtherToolKits = new ConfigOtherToolKits(&qtSettings, &configAppearanceSettings, &dlg);
-        configOtherToolKits->startXsettingsd();
-    }
 
     /*** Mouse Config ***/
     MouseConfig* mouseConfig = new MouseConfig(&settings, &qtSettings, &dlg);
@@ -104,8 +98,6 @@ int main(int argc, char** argv) {
     QObject::connect(cursorConfig, &SelectWnd::settingsChanged, &dlg, [&dlg] {
         dlg.enableButton(QDialogButtonBox::Apply, true);
     });
-    if (!controlGTK)
-        cursorConfig->showExtraInfo(QStringLiteral("\n") + QObject::tr("To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style."));
 
     /*** Keyboard Config ***/
     KeyboardConfig* keyboardConfig = new KeyboardConfig(&settings, &qtSettings, &dlg);
