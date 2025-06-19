@@ -52,6 +52,8 @@ private:
 
 public slots:
     void initControls();
+    void onItemDoubleClicked(QTreeWidgetItem*, int);
+    void contextMenuRequested(const QPoint&);
 
 signals:
     void settingsChanged();
