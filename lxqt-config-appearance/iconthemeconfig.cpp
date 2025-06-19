@@ -31,6 +31,7 @@
 #include <QStringList>
 #include <QStringBuilder>
 #include <QIcon>
+#include <QMenu>
 #include <QDesktopServices>
 #include <QProcess>
 
@@ -45,9 +46,12 @@ IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):
     initIconsThemes();
     initControls();
 
+    iconThemeList->setContextMenuPolicy(Qt::CustomContextMenu);
+
     connect(iconThemeList, &QTreeWidget::currentItemChanged, this, &IconThemeConfig::settingsChanged);
     connect(iconThemeList, &QTreeWidget::itemDoubleClicked, this, &IconThemeConfig::onItemDoubleClicked);
     connect(iconFollowColorSchemeCB, &QAbstractButton::clicked, this, &IconThemeConfig::settingsChanged);
+    connect(iconThemeList, &QWidget::customContextMenuRequested, this, &IconThemeConfig::contextMenuRequested);
 }
 
 
@@ -162,6 +166,17 @@ void IconThemeConfig::applyIconTheme()
             emit updateOtherSettings();
         }
     }
+}
+#include <QDebug>
+void IconThemeConfig::contextMenuRequested(const QPoint& p)
+{
+    QMenu menu;
+    QAction *a = menu.addAction(tr("Open theme folder"));
+    connect(a, &QAction::triggered, [this, p] {
+        onItemDoubleClicked(iconThemeList->itemAt(p), 0);
+    });
+    if (iconThemeList->itemAt(p))
+        menu.exec(iconThemeList->viewport()->mapToGlobal(p));
 }
 
 void IconThemeConfig::onItemDoubleClicked(QTreeWidgetItem *item, int /*column*/)
