@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Za više opcija za miš, dodirnu ploču i tipkovnicu koristi postavke Wayland kompozitora.</translation>
     </message>
 </context>
 <context>
@@ -182,7 +182,7 @@
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
         <translation>Wayland trenutačno ne podržava postavke LXQt unosa.
 
-Miš, dodirna ploča i tipkovnica se mogu konfigurirati u postavkama sastavljača.</translation>
+Miš, dodirna ploča i tipkovnica se mogu konfigurirati u postavkama kompositora.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="76"/>
@@ -202,7 +202,7 @@ Miš, dodirna ploča i tipkovnica se mogu konfigurirati u postavkama sastavljač
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Za primjenu promjena i na GTK-u, označi Konfiguracija LXQt izgleda → GTK stil.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
