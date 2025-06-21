@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.1" language="sv">
 <context>
     <name>ColorLabel</name>
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color</source>
-        <translation>Pritisni za mijenjanje boje</translation>
+        <translation>Tryck för att ändra färg</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation>Odaberi boju</translation>
+        <translation>Välj färg</translation>
     </message>
 </context>
 <context>
@@ -19,22 +19,22 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
-        <translation>GTK teme</translation>
+        <translation>GTK-teman</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;„%1” je prepisano.&lt;/p&gt;&lt;p&gt;Kopija prijašnjih postavki nalazi se u „%2”&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; är uppdaterad.&lt;/p&gt;&lt;p&gt;En kopia av de gamla inställningarna sparas i &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
-        <translation>Greška</translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation>Greška: gsettings se ne može pokrenuti</translation>
+        <translation>Fel: Kan inte köra GSettings</translation>
     </message>
 </context>
 <context>
@@ -42,17 +42,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation>Font</translation>
+        <translation>Typsnitt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Standardni font za korisničko sučelje</translation>
+        <translation>Standardtypsnitt för användargränssnittet</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation>Ime fonta:</translation>
+        <translation>Namn:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
@@ -62,83 +62,83 @@
     <message>
         <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
-        <translation>Veličina u tipografskim točkama:</translation>
+        <translation>Punktstorlek:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="54"/>
         <source>Normal</source>
-        <translation>Normalni</translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="59"/>
         <source>Bold</source>
-        <translation>Debeli</translation>
+        <translation>Fet</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Italic</source>
-        <translation>Kurziv</translation>
+        <translation>Kursiv</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold Italic</source>
-        <translation>Debeli kurziv</translation>
+        <translation>Fet kursiv</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Sljedeće postavke djeluju samo na novo pokrenute programe</translation>
+        <translation>Följande inställningar påverkar bara nystartade program</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Koristi zaglađivanje rubova fontova</translation>
+        <translation>Använd kantutjämning</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="153"/>
         <source>Font hinting style:</source>
-        <translation>Stil kontrola za iscrtavanje fontova:</translation>
+        <translation>Nivå av hinting:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
-        <translation>Bez</translation>
+        <translation>Inget</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
-        <translation>Malo</translation>
+        <translation>Lätt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="174"/>
         <source>Medium</source>
-        <translation>Srednje</translation>
+        <translation>Mellan</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="179"/>
         <source>Full</source>
-        <translation>Potpuno</translation>
+        <translation>Fullständigt</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="146"/>
         <source>Font hinting</source>
-        <translation>Kontrole za iscrtavanje fontova</translation>
+        <translation>Använd hinting</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="187"/>
         <source>Resolution (DPI):</source>
-        <translation>Razlučivost (DPI):</translation>
+        <translation>Upplösning (DPI):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
-        <translation>Automatske kontrole za iscrtavanje fontova</translation>
+        <translation>Automatisk hint</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
-        <translation>Zaglađivanje rubova podpikselima:</translation>
+        <translation>Subpixel-framställning:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -166,31 +166,31 @@
     <message>
         <location filename="../gtkconfig.ui" line="44"/>
         <source>GTK Style</source>
-        <translation>GTK stil</translation>
+        <translation>GTK-stil</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="63"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Postavi GTK teme (datoteke GTK konfiguracije će se prepisati!)</translation>
+        <translation>Välj GTK tema (OBS: konfigurationsfilerna blir överskrivna)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="93"/>
         <source>GTK 3 Theme:</source>
-        <translation>GTK 3 tema:</translation>
+        <translation>GTK 3-tema:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="77"/>
         <source>GTK 2 Theme:</source>
-        <translation>GTK 2 tema:</translation>
+        <translation>GTK 2-tema:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="105"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Za jednoliku upotrebu tema, odaberi sličan stil/temu (ako su dostupni) na svim popisima ili odaberi Qt stil „gtk2” (ako je dostupan) za oponašanje GTK teme.
+        <translation>För att få ett enhetligt systemtema välj antingen samma stil/tema (om tillgängligt) ur listorna eller välj &apos;gtk2&apos; Qt-stil (om tillgänglig) som efterliknar GTK-teman. 
 
-Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutno primijeniti teme.</translation>
+&apos;xsettingsd&apos; måste vara installerat för att man ska se omedelbar effekt på GTK-program.</translation>
     </message>
 </context>
 <context>
@@ -198,22 +198,22 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Konfiguracija LXQt izgleda</translation>
+        <translation>LXQt temainställningar</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
         <source>Icons Theme</source>
-        <translation>Tema ikona</translation>
+        <translation>Ikontema</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation>KDE proširenje XDG tema ikona -&gt; Prati shemu boja</translation>
+        <translation>KDE-tillägget för XDG-ikonteman -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
         <source>Colorize icons based on widget style (palette)</source>
-        <translation>Oboji ikone na osnovi stila programčića (palete)</translation>
+        <translation>Ärv ikonfärger från widgetstil (färgpalett)</translation>
     </message>
 </context>
 <context>
@@ -221,27 +221,27 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>LXQt teme</translation>
+        <translation>LXQt-tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
         <source>Use wallpaper provided by theme</source>
-        <translation>Koristi sliku pozadine koju pruža tema</translation>
+        <translation>Använd temats bakgrundsbild</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation>Koristi paletu koju pruža tema</translation>
+        <translation>Använd färgpalett från temat</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
         <source>(User Theme)</source>
-        <translation>(Korisnička tema)</translation>
+        <translation>(Användartema)</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="185"/>
         <source>Open theme folder</source>
-        <translation>Otvori mapu tema</translation>
+        <translation>Öppna temamapp</translation>
     </message>
 </context>
 <context>
@@ -250,17 +250,17 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
         <location filename="../palettes.ui" line="14"/>
         <location filename="../palettes.ui" line="20"/>
         <source>Palettes</source>
-        <translation>Palete</translation>
+        <translation>Färgpalett</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation>Filtriraj …</translation>
+        <translation>Filter ...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation>&amp;Ukloni</translation>
+        <translation>&amp;Ta bort</translation>
     </message>
 </context>
 <context>
@@ -268,37 +268,37 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Konfiguracija LXQt izgleda</translation>
+        <translation>Ändra LXQts utseende</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
-        <translation>Stil programčića</translation>
+        <translation>Widgetstil</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
         <source>Icons Theme</source>
-        <translation>Tema ikona</translation>
+        <translation>Ikontema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
-        <translation>LXQt teme</translation>
+        <translation>LXQt-tema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="100"/>
         <source>Font</source>
-        <translation>Font</translation>
+        <translation>Typsnitt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="110"/>
         <source>Cursor</source>
-        <translation>Pokazivač</translation>
+        <translation>Muspekare</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>GTK Style</source>
-        <translation>GTK stil</translation>
+        <translation>GTK-stil</translation>
     </message>
 </context>
 <context>
@@ -306,82 +306,82 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
     <message>
         <location filename="../styleconfig.ui" line="33"/>
         <source>Widget Style</source>
-        <translation>Stil programčića</translation>
+        <translation>Widgetstil</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Palette</source>
-        <translation>Qt paleta</translation>
+        <translation>Qt-färgpalett</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="77"/>
         <source>Some Qt styles may ignore these colors.</source>
-        <translation>Moguće je da neki Qt stilovi zanemaruju ove boje.</translation>
+        <translation>Vissa Qt-stilar påverkas inte av färgval.</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation>Prozor:</translation>
+        <translation>Fönster:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Prikaz:</translation>
+        <translation>Visning:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
         <source>Selection:</source>
-        <translation>Odabir:</translation>
+        <translation>Markering:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation>Opis alata:</translation>
+        <translation>Inforuta:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
-        <translation>Poveznica:</translation>
+        <translation>Länk:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
-        <translation>Tekst prozora:</translation>
+        <translation>Fönstertext:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
-        <translation>Tekst prikaza:</translation>
+        <translation>Visningstext:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
-        <translation>Odabrani tekst:</translation>
+        <translation>Markering (text):</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation>Tekst opisa alata:</translation>
+        <translation>Infotext:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
-        <translation>Posjećena poveznica:</translation>
+        <translation>Besökt länk:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="242"/>
         <source>&amp;Save Palette</source>
-        <translation>&amp;Spremi palete</translation>
+        <translation>&amp;Spara färger</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
-        <translation>&amp;Učitaj palete</translation>
+        <translation>&amp;Ladda färger</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
         <source>&amp;Default Palette</source>
-        <translation>S&amp;tandardna paleta</translation>
+        <translation>&amp;Standardfärger</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="284"/>
@@ -390,42 +390,42 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation>Može se nadjačati Qt stilom ili aplikacijom</translation>
+        <translation>Kan åsidosättas av Qt-stil eller program</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
         <source>Toolbar button style:</source>
-        <translation>Stil gumbova alatne trake:</translation>
+        <translation>Knappstil för verktygsfält:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="298"/>
         <source>Only display the icon</source>
-        <translation>Prikaži samo ikone</translation>
+        <translation>Visa bara ikonen</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="303"/>
         <source>Only display the text</source>
-        <translation>Prikaži samo tekst</translation>
+        <translation>Visa bara texten</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="308"/>
         <source>The text appears beside the icon</source>
-        <translation>Tekst se prikazuje pored ikone</translation>
+        <translation>Text visas vid sidan om ikonen</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="313"/>
         <source>The text appears under the icon</source>
-        <translation>Tekst se prikazuje ispod ikone</translation>
+        <translation>Text visas under ikonen</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="318"/>
         <source>Default</source>
-        <translation>Standardno</translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation>Veličina ikone alatne trake:</translation>
+        <translation>Storleken på verktygsfältet:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
@@ -455,42 +455,42 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
     <message>
         <location filename="../styleconfig.ui" line="371"/>
         <source>Activate item on single click</source>
-        <translation>Aktiviraj objekt jednim pritiskom</translation>
+        <translation>Navigera med enkelklick</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="51"/>
         <source>Qt Style:</source>
-        <translation>Qt stil:</translation>
+        <translation>Qt-stil:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <location filename="../styleconfig.cpp" line="340"/>
         <source>Save Palette</source>
-        <translation>Spremi paletu</translation>
+        <translation>Spara färgpalett</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
-        <translation>Ime palete:</translation>
+        <translation>Namn på färgpalett:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation>Paleta s tim imenom već postoji.
-Želiš li je zamijeniti?</translation>
+        <translation>Det finns en färgpalett med samma namn.
+Vill du ersätta den?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
         <source>Remove Palettes</source>
-        <translation>Ukloni palete</translation>
+        <translation>Ta bort färgpalett</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Stvarno želiš ukloniti odabrane palete?
-Korijenske palete će ostati netaknute ako postoje.</translation>
+        <translation>Vill du ta bort valda färgepalett(er)?
+Färgpaletter sparade på rotnivå kommer inte att påverkas.</translation>
     </message>
 </context>
 </TS>
