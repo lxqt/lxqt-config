@@ -197,7 +197,7 @@ Mus, pekplatta och tangentbord kan konfigureras i kompositörens inställningar.
     <message>
         <location filename="../lxqt-config-input.cpp" line="103"/>
         <source>Cursor</source>
-        <translation>Markör</translation>
+        <translation>Muspekare</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
