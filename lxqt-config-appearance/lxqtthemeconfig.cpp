@@ -181,13 +181,14 @@ void LXQtThemeConfig::doubleClicked(QTreeWidgetItem *item, int /*column*/)
 
 void LXQtThemeConfig::contextMenu(const QPoint& p)
 {
+    if (!ui->lxqtThemeList->itemAt(p))
+        return;
+
     QMenu menu;
     QAction *a = menu.addAction(tr("Open theme folder"));
     connect(a, &QAction::triggered, [this, p] {
         doubleClicked(ui->lxqtThemeList->itemAt(p), 0);
     });
-    if (ui->lxqtThemeList->itemAt(p))
-        menu.exec(ui->lxqtThemeList->viewport()->mapToGlobal(p));
 }
 
 void LXQtThemeConfig::loadThemePalette()
