@@ -189,6 +189,7 @@ void LXQtThemeConfig::contextMenu(const QPoint& p)
     connect(a, &QAction::triggered, [this, p] {
         doubleClicked(ui->lxqtThemeList->itemAt(p), 0);
     });
+    menu.exec(ui->lxqtThemeList->viewport()->mapToGlobal(p));
 }
 
 void LXQtThemeConfig::loadThemePalette()
