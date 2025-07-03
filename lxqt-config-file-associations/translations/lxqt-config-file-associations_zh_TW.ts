@@ -36,7 +36,7 @@
         <location filename="../applicationchooser.cpp" line="191"/>
         <location filename="../applicationchooser.cpp" line="217"/>
         <source>Other applications</source>
-        <translation>其它應用程式</translation>
+        <translation>其他應用程式</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
@@ -57,7 +57,7 @@
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation>其它應用程式用於處理 %1</translation>
+        <translation>其他應用程式用於處理 %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
