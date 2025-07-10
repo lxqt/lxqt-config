@@ -47,7 +47,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Berrespena beharrezkoa da.  Ezarpenak zuzenak al dira?</translation>
+        <translation>Berrespena beharrezkoa da. Ezarpenak zuzenak al dira?</translation>
     </message>
 </context>
 <context>

@@ -29,7 +29,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiba</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
