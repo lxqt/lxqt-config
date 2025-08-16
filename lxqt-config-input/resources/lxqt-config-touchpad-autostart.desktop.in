@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=lxqt-config-input --load-touchpad
+OnlyShowIn=LXQt;
+Type=Application
+Version=1.0
+
+#TRANSLATIONS_DIR=translations
