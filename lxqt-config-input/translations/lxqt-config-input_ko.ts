@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wayland 컴포지터의 설정을 사용하여 마우스, 터치패드 및 키보드에 대한 더 많은 옵션을 확인하세요.</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK에도 변경 사항을 적용하려면 LXQt 외관 구성 → GTK 스타일을 확인하세요.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>

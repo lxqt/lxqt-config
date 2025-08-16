@@ -171,7 +171,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisez les paramètres du compositeur Wayland pour plus d’options concernant la souris, le pavé tactile et le clavier.</translation>
     </message>
 </context>
 <context>
@@ -203,7 +203,7 @@ La souris, le pavé tactile et le clavier peuvent être configurés dans les par
     <message>
         <location filename="../lxqt-config-input.cpp" line="108"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour appliquer les modifications aussi à GTK, cochez dans Configuration de l’apparence LXQt → Style GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="112"/>
