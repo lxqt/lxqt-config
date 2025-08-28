@@ -61,6 +61,11 @@ class ConfigPane
 public:
     ConfigPane(): d(new ConfigPaneData) { }
     ConfigPane(const ConfigPane &other): d(other.d) { }
+    ConfigPane& operator=(const ConfigPane& other)
+    {
+        d = other.d;
+        return *this;
+    }
 
     inline QString &id() const { return d->id; }
     inline XdgDesktopFile xdg() const { return d->xdg; }
