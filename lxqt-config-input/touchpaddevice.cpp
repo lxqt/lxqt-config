@@ -353,17 +353,17 @@ float TouchpadDevice::accelSpeed() const
 
 bool TouchpadDevice::setTappingEnabled(bool enabled) const
 {
-    return set_xi2_property(LIBINPUT_PROP_TAP, QList<QVariant>({enabled ? 1 : 0}));
+    return set_xi2_property(LIBINPUT_PROP_TAP, QList<QVariant>{(enabled ? 1 : 0)});
 }
 
 bool TouchpadDevice::setNaturalScrollingEnabled(bool enabled) const
 {
-    return set_xi2_property(LIBINPUT_PROP_NATURAL_SCROLL, QList<QVariant>({enabled ? 1 : 0}));
+    return set_xi2_property(LIBINPUT_PROP_NATURAL_SCROLL, QList<QVariant>{(enabled ? 1 : 0)});
 }
 
 bool TouchpadDevice::setTapToDragEnabled(bool enabled) const
 {
-    return set_xi2_property(LIBINPUT_PROP_TAP_DRAG, QList<QVariant>({enabled ? 1 : 0}));
+    return set_xi2_property(LIBINPUT_PROP_TAP_DRAG, QList<QVariant>{(enabled ? 1 : 0)});
 }
 
 bool TouchpadDevice::setAccelSpeed(float speed) const

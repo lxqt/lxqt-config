@@ -38,6 +38,16 @@ MonitorInfo::MonitorInfo(const MonitorInfo &monitor)
     mBrightness = monitor.mBrightness;
 }
 
+MonitorInfo& MonitorInfo::operator=(const MonitorInfo& monitor)
+{
+    mId = monitor.mId;
+    mName = monitor.mName;
+    mBacklightMax = monitor.mBacklightMax;
+    mBacklight = monitor.mBacklight;
+    mBrightness = monitor.mBrightness;
+    return *this;
+}
+
 bool MonitorInfo::isBacklightSupported() const
 {
     return mBacklightMax > 0;

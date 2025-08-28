@@ -278,7 +278,7 @@ int QCategorizedSortFilterProxyModel::compareCategories(const QModelIndex &left,
     Q_ASSERT(r.isValid());
     Q_ASSERT(l.typeId() == r.typeId());
 
-    if (l.typeId() == QVariant::String)
+    if (l.typeId() == QMetaType::QString)
     {
         QString lstr = l.toString();
         QString rstr = r.toString();
