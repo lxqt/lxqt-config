@@ -231,7 +231,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar paleta fornecida pelo tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -255,7 +255,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../palettes.ui" line="33"/>
         <source>Filter...</source>
-        <translation>Filtro...</translation>
+        <translation>Filtros...</translation>
     </message>
     <message>
         <location filename="../palettes.ui" line="43"/>
@@ -376,7 +376,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../styleconfig.ui" line="249"/>
         <source>&amp;Load Palette</source>
-        <translation>Carregar pa&amp;leta</translation>
+        <translation>&amp;Carregar Paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="269"/>
@@ -390,7 +390,7 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
         <location filename="../styleconfig.ui" line="336"/>
         <location filename="../styleconfig.ui" line="368"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pode ser sobrescrito pelo estilo QT ou pelo aplicativo</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="287"/>
@@ -425,32 +425,32 @@ Verifique se o pacote &apos;xsettingsd&apos; está instalado, para permitir com 
     <message>
         <location filename="../styleconfig.ui" line="329"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tamanho do ícone da barra de ferramentas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>

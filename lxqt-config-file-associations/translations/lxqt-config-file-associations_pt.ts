@@ -51,7 +51,7 @@
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation>Gestores de ficheiros</translation>
+        <translation>Gerenciadores de arquivo</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Associação de ficheiros</translation>
+        <translation>Associação de arquivos</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
@@ -159,7 +159,7 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="497"/>
         <source>File Manager</source>
-        <translation>Gestor de ficheiros</translation>
+        <translation>Gerenciador de arquivos</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
