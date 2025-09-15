@@ -231,7 +231,7 @@ Asegúrese de que esté instalado &apos;xsettingsd&apos; para hacer que las apli
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilice la paleta proporcionada por el tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
