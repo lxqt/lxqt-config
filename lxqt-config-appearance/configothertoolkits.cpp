@@ -67,6 +67,17 @@ gtk-cursor-theme-name = %6
 gtk-cursor-theme-size = %7
 )GTK3_CONFIG";
 
+static const char *GTK4_CONFIG = R"GTK4_CONFIG(
+# Created by lxqt-config-appearance (DO NOT EDIT!)
+[Settings]
+gtk-theme-name = %1
+gtk-icon-theme-name = %2
+# GTK4 ignores bold or italic attributes.
+gtk-font-name = %3
+gtk-cursor-theme-name = %4
+gtk-cursor-theme-size = %5
+)GTK4_CONFIG";
+
 static const char *XSETTINGS_CONFIG = R"XSETTINGS_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
 Net/IconThemeName "%2"
@@ -88,6 +99,16 @@ set org.gnome.desktop.interface font-name "%3"
 set org.gnome.desktop.interface cursor-theme "%6"
 set org.gnome.desktop.interface cursor-size "%7"
 )GTK3_GSETTINGS";
+
+static const char *GTK4_GSETTINGS = R"GTK4_GSETTINGS(
+set org.gnome.desktop.interface icon-theme "%2"
+set org.gnome.desktop.interface gtk-theme "%1"
+set org.gnome.desktop.interface font-name "%3"
+# set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ButtonImages': <%4>, 'Gtk/MenuImages': <%4>}"
+# set org.gnome.desktop.interface toolbar-style "%5"
+set org.gnome.desktop.interface cursor-theme "%6"
+set org.gnome.desktop.interface cursor-size "%7"
+)GTK4_GSETTINGS";
 
 /*
  * Button and menu images are deprecated in GTK 3.10:
@@ -197,10 +218,13 @@ void ConfigOtherToolKits::setConfig()
     setGTKConfig(QStringLiteral("2.0"));
     mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("3.0"));
     setGTKConfig(QStringLiteral("3.0"));
+    mConfig.styleTheme = getGTKThemeFromRCFile(QStringLiteral("4.0"));
+    setGTKConfig(QStringLiteral("4.0"));
 
     // Call to xsettings to update config
     setXSettingsConfig();
     setGsettingsConfig(QStringLiteral("3.0"));
+    setGsettingsConfig(QStringLiteral("4.0"));
 }
 
 void ConfigOtherToolKits::setXSettingsConfig()
@@ -235,6 +259,8 @@ void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
     QString commands;
     if(version == QLatin1String("3.0"))
         commands = getConfig(GTK3_GSETTINGS, ConfigOtherToolKits::GTK3GSETTINGS);
+    else if(version == QLatin1String("4.0"))
+        commands = getConfig(GTK4_GSETTINGS, ConfigOtherToolKits::GTK4GSETTINGS);
     for(QString command : commands.split(QStringLiteral("\n"))) {
         if(command.isEmpty() || command.startsWith(QStringLiteral("#")))
             continue;
@@ -256,8 +282,10 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
     QString gtkrcPath = getGTKConfigPath(version);
     if(version == QLatin1String("2.0"))
         writeConfig(gtkrcPath, GTK2_CONFIG, ConfigOtherToolKits::GTK2);
-    else
+    else if(version == QLatin1String("3.0"))
         writeConfig(gtkrcPath, GTK3_CONFIG, ConfigOtherToolKits::GTK3);
+    else if(version == QLatin1String("4.0"))
+        writeConfig(gtkrcPath, GTK4_CONFIG, ConfigOtherToolKits::GTK4);
 }
 
 QString ConfigOtherToolKits::getConfig(const char *configString, ConfigOtherToolKits::Version version)
@@ -267,6 +295,7 @@ QString ConfigOtherToolKits::getConfig(const char *configString, ConfigOtherTool
     QString cursorSize = sessionSettings->value(QStringLiteral("Mouse/cursor_size")).toString();
     delete sessionSettings;
     switch(version) {
+        case ConfigOtherToolKits::GTK4GSETTINGS:
         case ConfigOtherToolKits::GTK3GSETTINGS:
             {
                 QString toolBar;
@@ -284,6 +313,7 @@ QString ConfigOtherToolKits::getConfig(const char *configString, ConfigOtherTool
                         );
             }
             break;
+        case ConfigOtherToolKits::GTK4:
         case ConfigOtherToolKits::GTK3:
         case ConfigOtherToolKits::GTK2:
             return QString::fromUtf8(configString).arg(mConfig.styleTheme, mConfig.iconTheme,
@@ -319,7 +349,7 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
     QString configFile = version==QLatin1String("2.0") ? QStringLiteral("gtkrc") : QStringLiteral("gtk.css");
 
     if(version != QLatin1String("2.0")) {
-        // Insert default GTK3 themes:
+        // Insert default GTK3 and GTK4 themes:
         themeList << QStringLiteral("Adwaita") << QStringLiteral("HighContrast") << QStringLiteral("HighContrastInverse");
     }
 
@@ -331,7 +361,7 @@ QStringList ConfigOtherToolKits::getGTKThemes(QString version)
             QDir dirsInTheme(QStringLiteral("%1/themes/%2").arg(dataPath, theme));
             const QStringList dirs = dirsInTheme.entryList(QDir::Dirs);
             for(const QString &dir : dirs) {
-                if(dir.startsWith(QLatin1String("gtk-"))) {
+                if(dir.startsWith(QLatin1String("gtk-") + version.front())) {
                     if(!version.endsWith(QLatin1String("*")) && dir != QStringLiteral("gtk-%1").arg(version))
                          continue;
                     QFileInfo themePath(QStringLiteral("%1/themes/%2/%3/%4").arg(dataPath, theme, dir, configFile));
