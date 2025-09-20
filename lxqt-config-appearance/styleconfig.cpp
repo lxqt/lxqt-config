@@ -52,9 +52,9 @@ StyleConfig::StyleConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
 
     initControls();
 
-    connect(ui->qtComboBox, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
-    connect(ui->toolButtonStyle, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
-    connect(ui->toolBarIconSize, QOverload<int>::of(&QComboBox::activated), this, &StyleConfig::settingsChanged);
+    connect(ui->qtComboBox, &QComboBox::activated, this, &StyleConfig::settingsChanged);
+    connect(ui->toolButtonStyle, &QComboBox::activated, this, &StyleConfig::settingsChanged);
+    connect(ui->toolBarIconSize, &QComboBox::activated, this, &StyleConfig::settingsChanged);
     connect(ui->singleClickActivate, &QAbstractButton::clicked, this, &StyleConfig::settingsChanged);
 
     connect(ui->winColorLabel, &ColorLabel::colorChanged, this, &StyleConfig::settingsChanged);

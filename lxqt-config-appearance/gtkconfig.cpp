@@ -39,8 +39,8 @@ GTKConfig::GTKConfig(LXQt::Settings *configAppearanceSettings, ConfigOtherToolKi
 
     connect(ui->advancedOptionsGroupBox, &QGroupBox::toggled, this, &GTKConfig::showAdvancedOptions);
     connect(ui->advancedOptionsGroupBox, &QGroupBox::clicked, this, &GTKConfig::settingsChanged);
-    connect(ui->gtk2ComboBox, QOverload<int>::of(&QComboBox::activated), this, &GTKConfig::settingsChanged);
-    connect(ui->gtk3ComboBox, QOverload<int>::of(&QComboBox::activated), this, &GTKConfig::settingsChanged);
+    connect(ui->gtk2ComboBox, &QComboBox::activated, this, &GTKConfig::settingsChanged);
+    connect(ui->gtk3ComboBox, &QComboBox::activated, this, &GTKConfig::settingsChanged);
 }
 
 GTKConfig::~GTKConfig()

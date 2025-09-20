@@ -75,7 +75,7 @@ SelectWnd::SelectWnd(LXQt::Settings* settings, QWidget *parent)
     ui->cursorSizeSpinBox->setValue(getDefaultCursorSize());
 
 
-    connect(ui->cursorSizeSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &SelectWnd::cursorSizeChanged);
+    connect(ui->cursorSizeSpinBox, &QSpinBox::valueChanged, this, &SelectWnd::cursorSizeChanged);
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there

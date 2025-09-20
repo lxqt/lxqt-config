@@ -40,11 +40,11 @@ KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* p
   connect(ui.removeLayout, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onRemoveLayout);
   connect(ui.moveUp, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onMoveUp);
   connect(ui.moveDown, &QAbstractButton::clicked, this, &KeyboardLayoutConfig::onMoveDown);
-  connect(ui.keyboardModel, QOverload<int>::of(&QComboBox::activated), [this](int /*index*/) {
+  connect(ui.keyboardModel, &QComboBox::activated, [this](int /*index*/) {
     applyConfig_ = true;
     Q_EMIT settingsChanged();
   });
-  connect(ui.switchKey, QOverload<int>::of(&QComboBox::activated), [this](int /*index*/) {
+  connect(ui.switchKey, &QComboBox::activated, [this](int /*index*/) {
     applyConfig_ = true;
     Q_EMIT settingsChanged();
   });

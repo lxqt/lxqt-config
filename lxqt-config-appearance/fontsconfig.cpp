@@ -52,14 +52,14 @@ FontsConfig::FontsConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
 
     initControls();
 
-    connect(ui->fontName, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
-    connect(ui->fontStyle, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
-    connect(ui->fontSize, QOverload<int>::of(&QSpinBox::valueChanged), this, &FontsConfig::settingsChanged);
+    connect(ui->fontName, &QComboBox::activated, this, &FontsConfig::settingsChanged);
+    connect(ui->fontStyle, &QComboBox::activated, this, &FontsConfig::settingsChanged);
+    connect(ui->fontSize, &QSpinBox::valueChanged, this, &FontsConfig::settingsChanged);
     connect(ui->antialias, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
-    connect(ui->subpixel, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
+    connect(ui->subpixel, &QComboBox::activated, this, &FontsConfig::settingsChanged);
     connect(ui->hinting, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
-    connect(ui->hintStyle, QOverload<int>::of(&QComboBox::activated), this, &FontsConfig::settingsChanged);
-    connect(ui->dpi, QOverload<int>::of(&QSpinBox::valueChanged), this, &FontsConfig::settingsChanged);
+    connect(ui->hintStyle, &QComboBox::activated, this, &FontsConfig::settingsChanged);
+    connect(ui->dpi, &QSpinBox::valueChanged, this, &FontsConfig::settingsChanged);
     connect(ui->autohint, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
 }
 

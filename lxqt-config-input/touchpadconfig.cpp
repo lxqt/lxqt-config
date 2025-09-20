@@ -38,12 +38,12 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
 
     initControls();
 
-    connect(ui.devicesComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
-            this, [this] (int/* index*/) { initControls(); }); // update GUI on device change
+    connect(ui.devicesComboBox, &QComboBox::currentIndexChanged, this,
+            [this] (int /*index*/) { initControls(); }); // update GUI on device change
     connect(ui.tappingEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.naturalScrollingEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.tapToDragEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
-    connect(ui.accelSpeedDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &TouchpadConfig::settingsChanged);
+    connect(ui.accelSpeedDoubleSpinBox, &QDoubleSpinBox::valueChanged, this, &TouchpadConfig::settingsChanged);
     connect(ui.noScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.twoFingerScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.edgeScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);

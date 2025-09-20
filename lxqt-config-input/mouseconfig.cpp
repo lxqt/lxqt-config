@@ -55,8 +55,8 @@ MouseConfig::MouseConfig(LXQt::Settings* _settings, QSettings* _qtSettings, QWid
   initControls();
 
   connect(ui.mouseLeftHanded, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
-  connect(ui.doubleClickInterval, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
-  connect(ui.wheelScrollLines, QOverload<int>::of(&QSpinBox::valueChanged), this, &MouseConfig::settingsChanged);
+  connect(ui.doubleClickInterval, &QSpinBox::valueChanged, this, &MouseConfig::settingsChanged);
+  connect(ui.wheelScrollLines, &QSpinBox::valueChanged, this, &MouseConfig::settingsChanged);
   connect(ui.singleClick, &QAbstractButton::clicked, this, &MouseConfig::settingsChanged);
 
   if (QGuiApplication::platformName() == QLatin1String("wayland"))

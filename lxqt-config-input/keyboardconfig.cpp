@@ -59,7 +59,7 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
   // set_range_stops(ui.keyboardInterval, 10);
   connect(ui.keyboardInterval, &QAbstractSlider::valueChanged, this, &KeyboardConfig::settingsChanged);
   connect(ui.keyboardBeep, &QAbstractButton::clicked, this, &KeyboardConfig::settingsChanged);
-  connect(ui.cursorFlashTime, QOverload<int>::of(&QSpinBox::valueChanged), this, &KeyboardConfig::settingsChanged);
+  connect(ui.cursorFlashTime, &QSpinBox::valueChanged, this, &KeyboardConfig::settingsChanged);
   connect(ui.keyboardNumLock, &QAbstractButton::clicked, this, &KeyboardConfig::settingsChanged);
 
   if (QGuiApplication::platformName() == QLatin1String("wayland"))
