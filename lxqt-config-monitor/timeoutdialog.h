@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
+ * Copyright (C) 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
