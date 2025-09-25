@@ -31,7 +31,6 @@
 #include <QWidget>
 #include <QFont>
 #include <LXQt/Settings>
-#include "fontconfigfile.h"
 
 class QTreeWidgetItem;
 class QSettings;
@@ -61,7 +60,6 @@ private:
     Ui::FontsConfig *ui;
     QSettings *mQtSettings;
     LXQt::Settings *mSettings;
-    FontConfigFile mFontConfigFile;
 };
 
 #endif // FONTSCONFIG_H

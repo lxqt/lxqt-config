@@ -41,6 +41,8 @@
 #include <sys/types.h>
 #include <signal.h>
 
+#include "fontconfigfile.h"
+
 static const char *GTK2_CONFIG = R"GTK2_CONFIG(
 # Created by lxqt-config-appearance (DO NOT EDIT!)
 gtk-theme-name = "%1"
@@ -185,6 +187,8 @@ bool ConfigOtherToolKits::backupGTKSettings(QString version)
 
 void ConfigOtherToolKits::setConfig()
 {
+    setFontsConfig();
+
     if(!mConfigAppearanceSettings->contains(QStringLiteral("ControlGTKThemeEnabled")))
         mConfigAppearanceSettings->setValue(QStringLiteral("ControlGTKThemeEnabled"), false);
     bool controlGTKThemeEnabled = mConfigAppearanceSettings->value(QStringLiteral("ControlGTKThemeEnabled")).toBool();
@@ -258,6 +262,12 @@ void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
         writeConfig(gtkrcPath, GTK2_CONFIG, ConfigOtherToolKits::GTK2);
     else
         writeConfig(gtkrcPath, GTK3_CONFIG, ConfigOtherToolKits::GTK3);
+}
+
+void ConfigOtherToolKits::setFontsConfig()
+{
+    FontConfigFile fontConfigFile(mSettings);
+    fontConfigFile.save();
 }
 
 QString ConfigOtherToolKits::getConfig(const char *configString, ConfigOtherToolKits::Version version)
@@ -450,4 +460,3 @@ void ConfigOtherToolKits::updateConfigFromSettings()
         }
     }
 }
-
