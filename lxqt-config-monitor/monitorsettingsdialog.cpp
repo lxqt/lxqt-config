@@ -238,7 +238,7 @@ void MonitorSettingsDialog::showSettingsDialog()
 
     LXQt::Settings settings(QString::fromLocal8Bit(configName));
 
-    SettingsDialog settingsDialog(tr("Advanced settings"), &settings, mConfig);
+    SettingsDialog settingsDialog(tr("Advanced settings"), &settings, mConfig, this);
     settingsDialog.exec();
 }
 
