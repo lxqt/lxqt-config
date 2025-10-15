@@ -239,7 +239,7 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
         <translation>(Chủ đề của người dùng)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Mở thư mục chủ đề</translation>
     </message>

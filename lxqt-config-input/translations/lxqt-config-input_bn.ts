@@ -176,44 +176,44 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="39"/>
+        <location filename="../lxqt-config-input.cpp" line="41"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="76"/>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>কীবোর্ড এবং মাউস সেটিংস</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="94"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Mouse</source>
         <translation>মাউস</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="105"/>
         <source>Cursor</source>
         <translation>কার্সার</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard</source>
         <translation>কীবোর্ড</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="125"/>
         <source>Keyboard Layout</source>
         <translation>কিবোর্ডের ভিত্তি ধরণ</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="136"/>
+        <location filename="../lxqt-config-input.cpp" line="138"/>
         <source>Mouse and Touchpad</source>
         <translation>মাউস এবং টাচপ্যাড</translation>
     </message>

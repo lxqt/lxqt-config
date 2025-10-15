@@ -239,7 +239,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
         <translation>(Tema do Utilizador)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Abrir pasta de temas</translation>
     </message>

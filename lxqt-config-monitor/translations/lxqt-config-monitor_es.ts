@@ -76,54 +76,54 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="66"/>
+        <location filename="../managesavedsettings.cpp" line="67"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="69"/>
+        <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="72"/>
+        <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Inverted</source>
         <translation>Invertida</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>Right</source>
         <translation>Derecha</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>True</source>
         <translation>Cierto</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>False</source>
         <translation>Falso</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name:</source>
         <translation>Nombre:</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="172"/>
+        <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
         <translation>La Activación de la Configuración Falló</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="173"/>
+        <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>

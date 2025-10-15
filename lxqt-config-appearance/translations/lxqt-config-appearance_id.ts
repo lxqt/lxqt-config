@@ -238,7 +238,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
         <translation>Tema Pengguna</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Buka Tema Folder</translation>
     </message>

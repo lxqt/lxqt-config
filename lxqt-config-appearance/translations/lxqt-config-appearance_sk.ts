@@ -239,7 +239,7 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
         <translation>(Užívateľská téma)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Otvoriť priečinok s témami</translation>
     </message>

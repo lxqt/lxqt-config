@@ -239,7 +239,7 @@ Zorg dat ‘xsettingsd’ geïnstalleerd is zodat GTK-programma&apos;s meteen va
         <translation>(eigen thema)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Themamap openen</translation>
     </message>

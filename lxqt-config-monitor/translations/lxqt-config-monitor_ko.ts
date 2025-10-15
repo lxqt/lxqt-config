@@ -77,54 +77,54 @@ Wayland 컴포지터인 경우, kanshi를 사용하여 사용자의 모니터를
         <translation>삭제</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="66"/>
+        <location filename="../managesavedsettings.cpp" line="67"/>
         <source>None</source>
         <translation>없음</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="69"/>
+        <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Left</source>
         <translation>왼쪽</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="72"/>
+        <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Inverted</source>
         <translation>반전됨</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>Right</source>
         <translation>오른쪽</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>True</source>
         <translation>참</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>False</source>
         <translation>거짓</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name</source>
         <translation>이름</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name:</source>
         <translation>이름:</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="172"/>
+        <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
         <translation>설정 활성화에 실패했습니다</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="173"/>
+        <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>

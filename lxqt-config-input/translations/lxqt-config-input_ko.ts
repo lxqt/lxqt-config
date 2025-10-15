@@ -176,7 +176,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="39"/>
+        <location filename="../lxqt-config-input.cpp" line="41"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,37 +185,37 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 마우스, 터치패드 및 키보드는 컴포지터 설정에서 구성할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="76"/>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>키보드 및 마우스 설정</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="94"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Mouse</source>
         <translation>마우스</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="105"/>
         <source>Cursor</source>
         <translation>커서</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
         <translation>GTK에도 변경 사항을 적용하려면 LXQt 외관 구성 → GTK 스타일을 확인하세요.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard</source>
         <translation>키보드</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="125"/>
         <source>Keyboard Layout</source>
         <translation>키보드 자판</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="136"/>
+        <location filename="../lxqt-config-input.cpp" line="138"/>
         <source>Mouse and Touchpad</source>
         <translation>마우스 및 터치 패드</translation>
     </message>

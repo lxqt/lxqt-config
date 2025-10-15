@@ -77,54 +77,54 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="66"/>
+        <location filename="../managesavedsettings.cpp" line="67"/>
         <source>None</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="69"/>
+        <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="72"/>
+        <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Inverted</source>
         <translation>上下反转</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>True</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>False</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name:</source>
         <translation>名称:</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="172"/>
+        <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
         <translation>设置没有成功生效</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="173"/>
+        <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
