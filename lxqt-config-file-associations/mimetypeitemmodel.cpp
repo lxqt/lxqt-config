@@ -1,5 +1,5 @@
 /*
-* Copyright (c) Christian Surlykke
+* Copyright (c) 2015 Christian Surlykke
 *
 * This file is part of the LXQt project. <https://lxqt-project.org>
 * It is distributed under the LGPL 2.1 or later license.
