@@ -240,7 +240,7 @@ Assicurati che &apos;xsettingsd&apos; sia installato per aiutare le applicazioni
         <translation>(Tema locale)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Apri cartella del tema</translation>
     </message>

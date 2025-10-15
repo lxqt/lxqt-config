@@ -239,7 +239,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
         <translation>(Motyw użytkownika)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Otwórz katalog z motywem</translation>
     </message>

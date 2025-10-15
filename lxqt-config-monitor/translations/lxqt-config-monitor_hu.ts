@@ -76,54 +76,54 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="66"/>
+        <location filename="../managesavedsettings.cpp" line="67"/>
         <source>None</source>
         <translation>Nincs</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="69"/>
+        <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Left</source>
         <translation>Balra</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="72"/>
+        <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Inverted</source>
         <translation>Inverz</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>Right</source>
         <translation>Jobbra</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>True</source>
         <translation>Igaz</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>False</source>
         <translation>Hamis</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name:</source>
         <translation>Név:</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="172"/>
+        <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="173"/>
+        <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>

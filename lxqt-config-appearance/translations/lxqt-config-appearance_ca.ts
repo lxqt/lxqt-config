@@ -239,7 +239,7 @@ Assegureu-vos que «xsettingsd» està instal·lat perquè ajudi a les aplicacio
         <translation>(Tema de l&apos;usuari)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Obre la carpeta de temes</translation>
     </message>

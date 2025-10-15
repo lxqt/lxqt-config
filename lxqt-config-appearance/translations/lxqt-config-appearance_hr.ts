@@ -239,7 +239,7 @@ Uvjeri se da je „xsettingsd” instaliran, koji GTK programima pomaže trenutn
         <translation>(Korisnička tema)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Otvori mapu tema</translation>
     </message>

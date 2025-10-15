@@ -239,7 +239,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <translation>(使用者主題)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>開啟主題資料夾</translation>
     </message>

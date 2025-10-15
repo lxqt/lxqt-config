@@ -176,7 +176,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="39"/>
+        <location filename="../lxqt-config-input.cpp" line="41"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,37 +185,37 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 El ratolí, el ratolí tàctil i el teclat es poden configurar a la configuració del compositor.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="76"/>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Ajusts del teclat i del ratolí</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="94"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Mouse</source>
         <translation>Ratolí</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="105"/>
         <source>Cursor</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
         <translation>Per aplicar els canvis també a GTK, marqueu Configuració d&apos;aparença LXQt → Estil GTK.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard</source>
         <translation>Teclat</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="125"/>
         <source>Keyboard Layout</source>
         <translation>Disposició de teclat</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="136"/>
+        <location filename="../lxqt-config-input.cpp" line="138"/>
         <source>Mouse and Touchpad</source>
         <translation>Ratolí i ratolí tàctil</translation>
     </message>

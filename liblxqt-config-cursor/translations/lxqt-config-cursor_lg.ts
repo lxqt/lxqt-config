@@ -9,12 +9,12 @@
         <translation>Enteekateeka y&apos;olulyo lw&apos;akasongesebwa olwa mu LXQt</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="46"/>
+        <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
         <translation>Londa olulyo lw&apos;akasonga lw&apos;oyagala okukozesa (Koona ku linya lya lwo akasonga kateeke awalabika obufaananyi olyoke osobole okulaba bwe kafuuka). &lt;br&gt;&lt;b&gt;Ddamu okutandika olutuula lwa LXQt by&apos;olonze bisobole okukwata&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="23"/>
+        <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
         <translation>&amp;Nona olulyo olupya...</translation>
     </message>
@@ -24,22 +24,22 @@
         <translation>Ddamu okutandika olutuula lwa LXQt by&apos;okyusizza bisobole okukwata.</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="91"/>
+        <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
         <translation>&amp;Olulyo lugyewo</translation>
     </message>
     <message>
-        <location filename="../selectwnd.ui" line="111"/>
+        <location filename="../selectwnd.ui" line="65"/>
         <source>Size</source>
         <translation>Bunene</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="230"/>
+        <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
         <translation>XCurTheme ezzeeko kiremya</translation>
     </message>
     <message>
-        <location filename="../selectwnd.cpp" line="231"/>
+        <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
         <translation>Tosobola okugyawo olulyo nga lukozesebwa!</translation>
     </message>
@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="61"/>
+        <location filename="../thememodel.cpp" line="62"/>
         <source>Name</source>
         <translation>Linnya</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="63"/>
         <source>Description</source>
         <translation>Okunnyonyola</translation>
     </message>

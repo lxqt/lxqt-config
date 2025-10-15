@@ -239,7 +239,7 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
         <translation>(사용자 테마)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>테마 폴더 열기</translation>
     </message>

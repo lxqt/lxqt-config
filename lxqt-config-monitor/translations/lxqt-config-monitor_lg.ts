@@ -77,54 +77,54 @@ Puloguramu ekwanaganya ebirabikira awakolerwa eno bw&apos;eba ya mu Wayland, oyi
         <translation>Gyawo</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="66"/>
+        <location filename="../managesavedsettings.cpp" line="67"/>
         <source>None</source>
         <translation>Tewali</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="69"/>
+        <location filename="../managesavedsettings.cpp" line="70"/>
         <source>Left</source>
         <translation>Ku kkono</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="72"/>
+        <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Inverted</source>
         <translation>Luvuunike</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="75"/>
+        <location filename="../managesavedsettings.cpp" line="76"/>
         <source>Right</source>
         <translation>Ku ddyo</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>True</source>
         <translation>Ye</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="79"/>
         <location filename="../managesavedsettings.cpp" line="80"/>
+        <location filename="../managesavedsettings.cpp" line="81"/>
         <source>False</source>
         <translation>Nedda</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name</source>
         <translation>Linnya</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="139"/>
+        <location filename="../managesavedsettings.cpp" line="142"/>
         <source>Name:</source>
         <translation>Linnya:</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="172"/>
+        <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
         <translation>Enteekateeka zigaanye okukwata</translation>
     </message>
     <message>
-        <location filename="../managesavedsettings.cpp" line="173"/>
+        <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
@@ -288,27 +288,27 @@ Osobola okuteekateeka bya ntimbe nga weyambisa kanshi.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="154"/>
+        <location filename="../monitorwidget.cpp" line="155"/>
         <source>None</source>
         <translation>Tewali</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="155"/>
+        <location filename="../monitorwidget.cpp" line="156"/>
         <source>Left</source>
         <translation>Ku kkono</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="156"/>
+        <location filename="../monitorwidget.cpp" line="157"/>
         <source>Right</source>
         <translation>Ku ddyo</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="157"/>
+        <location filename="../monitorwidget.cpp" line="158"/>
         <source>Inverted</source>
         <translation>Luvuunike</translation>
     </message>
     <message>
-        <location filename="../monitorwidget.cpp" line="247"/>
+        <location filename="../monitorwidget.cpp" line="248"/>
         <source>%1 Hz</source>
         <translation>%1 Hz</translation>
     </message>

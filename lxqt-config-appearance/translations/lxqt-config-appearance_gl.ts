@@ -239,7 +239,7 @@ Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GT
         <translation>(Tema do usuario)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Abrir o cartafol de temas</translation>
     </message>

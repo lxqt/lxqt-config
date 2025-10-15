@@ -239,7 +239,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
         <translation>(Brukerdrakt)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Åpne draktmappen</translation>
     </message>

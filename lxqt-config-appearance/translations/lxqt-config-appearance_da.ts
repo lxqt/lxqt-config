@@ -239,7 +239,7 @@ Sørg for at &apos;xsettingsd&apos; er installeret, for at hjælpe GTK programme
         <translation>(Brugertema)</translation>
     </message>
     <message>
-        <location filename="../lxqtthemeconfig.cpp" line="185"/>
+        <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
         <translation>Åbn temamappe</translation>
     </message>

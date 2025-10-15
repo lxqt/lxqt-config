@@ -176,7 +176,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="39"/>
+        <location filename="../lxqt-config-input.cpp" line="41"/>
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
@@ -185,37 +185,37 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan kompositor.</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="76"/>
+        <location filename="../lxqt-config-input.cpp" line="78"/>
         <source>Keyboard and Mouse Settings</source>
         <translation>Pengaturan Papan Tik dan Tetikus</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="94"/>
+        <location filename="../lxqt-config-input.cpp" line="96"/>
         <source>Mouse</source>
         <translation>Tetikus</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="103"/>
+        <location filename="../lxqt-config-input.cpp" line="105"/>
         <source>Cursor</source>
         <translation>Kursor</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="108"/>
+        <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="112"/>
+        <location filename="../lxqt-config-input.cpp" line="114"/>
         <source>Keyboard</source>
         <translation>Papan tik</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="123"/>
+        <location filename="../lxqt-config-input.cpp" line="125"/>
         <source>Keyboard Layout</source>
         <translation>Tata Letak Papan Tik</translation>
     </message>
     <message>
-        <location filename="../lxqt-config-input.cpp" line="136"/>
+        <location filename="../lxqt-config-input.cpp" line="138"/>
         <source>Mouse and Touchpad</source>
         <translation>Tetikus dan Touchpad</translation>
     </message>
