@@ -154,12 +154,12 @@ Pasirinkite kurią nors iš paryškintų konfigūracijų.</translation>
         <translation>Nustatymai</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="62"/>
+        <location filename="../monitorsettingsdialog.cpp" line="68"/>
         <source>Platform Unsupported</source>
         <translation>Platforma nepalaikoma</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="63"/>
+        <location filename="../monitorsettingsdialog.cpp" line="69"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
@@ -168,17 +168,17 @@ You can configure your monitor(s) with kanshi.</source>
 Galite konfigūruoti monitorių(-ius) naudodami kanshi.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="118"/>
+        <location filename="../monitorsettingsdialog.cpp" line="124"/>
         <source>Fast Menu</source>
         <translation>Greitasis meniu</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="122"/>
+        <location filename="../monitorsettingsdialog.cpp" line="128"/>
         <source>Set position</source>
         <translation>Nustatyti poziciją</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="241"/>
+        <location filename="../monitorsettingsdialog.cpp" line="256"/>
         <source>Advanced settings</source>
         <translation>Išplėstiniai nustatymai</translation>
     </message>

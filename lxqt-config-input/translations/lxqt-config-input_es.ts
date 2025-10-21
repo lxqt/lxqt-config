@@ -301,7 +301,7 @@ El ratón, el panel táctil y el teclado pueden ser configurados en los ajustes 
         <translation>Etiqueta de información de dispositivo</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="85"/>
+        <location filename="../touchpadconfig.cpp" line="94"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

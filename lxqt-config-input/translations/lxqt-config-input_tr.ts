@@ -301,7 +301,7 @@ Fare, dokunmatik yüzey ve klavye, kompozitör ayarlarında yapılandırılabili
         <translation>AygıtBilgiEtiketi</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="85"/>
+        <location filename="../touchpadconfig.cpp" line="94"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 
