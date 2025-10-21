@@ -301,7 +301,7 @@ Mysz, touchpad i klawiaturę można skonfigurować w ustawieniach kompozytora.</
         <translation>Nazwa urządzenia</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="85"/>
+        <location filename="../touchpadconfig.cpp" line="94"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

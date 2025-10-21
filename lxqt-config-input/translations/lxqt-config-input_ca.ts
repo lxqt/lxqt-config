@@ -301,7 +301,7 @@ El ratolí, el ratolí tàctil i el teclat es poden configurar a la configuraci�
         <translation>Etiqueta d&apos;informació del dispositiu</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="85"/>
+        <location filename="../touchpadconfig.cpp" line="94"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

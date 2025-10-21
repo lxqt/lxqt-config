@@ -154,12 +154,12 @@ Scegli tra le configurazioni evidenziate per favore.</translation>
         <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="62"/>
+        <location filename="../monitorsettingsdialog.cpp" line="68"/>
         <source>Platform Unsupported</source>
         <translation>Piattaforma non supportata</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="63"/>
+        <location filename="../monitorsettingsdialog.cpp" line="69"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
@@ -168,17 +168,17 @@ You can configure your monitor(s) with kanshi.</source>
 Puoi configurare i tuoi monitor usando kanshi.</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="118"/>
+        <location filename="../monitorsettingsdialog.cpp" line="124"/>
         <source>Fast Menu</source>
         <translation>Opzioni veloci</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="122"/>
+        <location filename="../monitorsettingsdialog.cpp" line="128"/>
         <source>Set position</source>
         <translation>Imposta la posizione</translation>
     </message>
     <message>
-        <location filename="../monitorsettingsdialog.cpp" line="241"/>
+        <location filename="../monitorsettingsdialog.cpp" line="256"/>
         <source>Advanced settings</source>
         <translation>Impostazioni avanzate</translation>
     </message>

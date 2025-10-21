@@ -302,7 +302,7 @@ La souris, le pavé tactile et le clavier peuvent être configurés dans les par
         <translation>Étiquette d&apos;informations sur l&apos;appareil</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="85"/>
+        <location filename="../touchpadconfig.cpp" line="94"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

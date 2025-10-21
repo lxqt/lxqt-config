@@ -301,7 +301,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
         <translation>DeviceInfoLabel</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="85"/>
+        <location filename="../touchpadconfig.cpp" line="94"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 
