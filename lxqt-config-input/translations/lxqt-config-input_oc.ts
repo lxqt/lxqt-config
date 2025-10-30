@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="143"/>
         <source>Cursor flash time:</source>
-        <translation>Durada del clucatejament del cursor&#x202f;:</translation>
+        <translation>Durada del clucatejament del cursor :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
-        <translation>Relambi de repeticion&#x202f;:</translation>
+        <translation>Relambi de repeticion :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="40"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="83"/>
         <source>Repeat interval:</source>
-        <translation>Interval de repeticion&#x202f;:</translation>
+        <translation>Interval de repeticion :</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="122"/>
         <source>Keys to change layout:</source>
-        <translation>Acorchis per modificar la disposicion&#x202f;:</translation>
+        <translation>Acorchis per modificar la disposicion :</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="133"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nòta&lt;/span&gt; : s&apos;utilizatz un &lt;span style=&quot; font-weight:600;&quot;&gt;metòde de sasida&lt;/span&gt;, coma IBus, uim, fcitx o gcin, los reglatges aicí &lt;span style=&quot; font-weight:600;&quot;&gt;poirián foncionar pas&lt;/span&gt; perque son remplaçats pels metòdes de sasida.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="30"/>
         <source>Double click interval:</source>
-        <translation>Interval d’un doble-clic&#x202f;:</translation>
+        <translation>Interval d’un doble-clic :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="37"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Linhas de desfilament de la ròda&#x202f;:</translation>
+        <translation>Linhas de desfilament de la ròda :</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizatz los paramètres del compositor Wayland per mai d&apos;opcions concernissent la mirga, lo pavat tactil e lo clavièr.</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,9 @@
         <source>LXQt input settings are currently unsupported under Wayland.
 
 Mouse, touchpad and keyboard can be configured in the settings of the compositor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los paramètres d&apos;entrada de LXQt son pas preses en carga per Wayland pel moment.
+
+La mirga, lo pavat tactil e lo clavièr se pòdon configurar dins los paramètres del compositor.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="78"/>
@@ -200,7 +202,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per aplicar los cambiaments tanben dins GTK, verificatz Configuracion de l&apos;aparéncia de LXQt → Estil GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="114"/>
@@ -251,7 +253,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Acceleration speed:</source>
-        <translation>Acceleracion&#x202f;:</translation>
+        <translation>Acceleracion :</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="60"/>
@@ -306,7 +308,12 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt supòrta pas que « libinput » coma pilòt xinput.
+(valor actuala : %1)
+
+S&apos;es volgut, configuratz xinput manualament.
+Dins lo cas contrari, podètz suprimir aqueste messatge en cambiant lo pilòt xinput per « libinput ».
+</translation>
     </message>
 </context>
 </TS>

@@ -256,7 +256,7 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="130"/>
         <source>Vendor: %1
 </source>
-        <translation>Vendor: %1
+        <translation>Доставчик: %1
 </translation>
     </message>
     <message>

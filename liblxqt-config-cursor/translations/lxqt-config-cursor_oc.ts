@@ -11,7 +11,7 @@
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation type="unfinished"></translation>
+        <translation>Causissètz lo tèma de cursor que desiratz utilizar (passatz lo cursor sus la previsualizacion per l&apos;ensajar). &lt;b&gt;La session LXQt deu èsser reaviada aprèp aquesta modificacion&lt;/b&gt; :</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="104"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Podètz pas suprimir lo tèma actual&#xa0;!</translation>
+        <translation>Podètz pas suprimir lo tèma actual !</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt a pas pogut trobar cap de tèma de cursor. Lo tèma de cursor per defaut d&apos;X11 serà utilizat a la plaça. LXQt a cercat dins los repertòris seguents :</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>

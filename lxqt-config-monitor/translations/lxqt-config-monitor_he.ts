@@ -352,6 +352,8 @@ You can configure your monitor(s) with kanshi.</source>
         <translation>
             <numerusform>נותרה שנייה אחת</numerusform>
             <numerusform>נותרו שתי שניות</numerusform>
+            <numerusform>נותרו %Ln שניות</numerusform>
+            <numerusform>נותרו %Ln שניות</numerusform>
         </translation>
     </message>
 </context>
