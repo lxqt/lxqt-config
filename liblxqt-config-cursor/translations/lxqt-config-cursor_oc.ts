@@ -41,7 +41,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Podètz pas suprimir lo tèma actual !</translation>
+        <translation>Podètz pas suprimir lo tèma actual&#xa0;!</translation>
     </message>
 </context>
 <context>
