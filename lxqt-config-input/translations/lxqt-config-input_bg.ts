@@ -160,7 +160,7 @@
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Лява ръка (смяна на ляв и десен бутони на мишката)</translation>
+        <translation>За лява ръка (смяна на ляв и десен бутони на мишката)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
@@ -253,12 +253,12 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>Acceleration speed:</source>
-        <translation>Скорост на ускорение:</translation>
+        <translation>Ускорение:</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="60"/>
         <source>Tap to click</source>
-        <translation>Докоснете, за да щракнете</translation>
+        <translation>Докосване за кликване</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
@@ -268,7 +268,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap and drag</source>
-        <translation>Чукнете и плъзнете</translation>
+        <translation>Докосване и влачене</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="86"/>
@@ -278,7 +278,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="109"/>
         <source>&amp;Disabled</source>
-        <translation>&amp;Изключен</translation>
+        <translation>&amp;Изключено</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="116"/>
@@ -288,17 +288,17 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="123"/>
         <source>Ed&amp;ge</source>
-        <translation>Ръб, край</translation>
+        <translation>По р&amp;ъба</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="130"/>
         <source>B&amp;utton</source>
-        <translation>б&amp;утон</translation>
+        <translation>Б&amp;утон</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="30"/>
         <source>DeviceInfoLabel</source>
-        <translation>Инфоетикет Устройство</translation>
+        <translation>DeviceInfoLabel</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="94"/>

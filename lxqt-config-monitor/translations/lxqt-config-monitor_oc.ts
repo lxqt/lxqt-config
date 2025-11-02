@@ -34,23 +34,24 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres per defaut del monitor aplicats.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustatz vòstres ecrans amb los paramètres de monitor de LXQt.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor : configuracion aplicada.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor : paramètres pas aplicats.
+S&apos;es un compositor Wayland, poiriatz ensajar kanshi per configurar vòstre(s) monitor(s).</translation>
     </message>
 </context>
 <context>
@@ -120,14 +121,16 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Fracàs de l’activacion dels paramètres</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los paramètres causits se pòdon pas aplicar amb los monitors actius ara.
+
+Mercés de causir una de las configuracions en evidéncia.</translation>
     </message>
 </context>
 <context>
@@ -153,14 +156,16 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="68"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Platafòrma incompatibla</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="69"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los paramètres de monitor de LXQt son pas preses en carga ara per ara amb aqueste compositor Wayland.
+
+Podètz configurar vòstres monitors amb kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="124"/>
@@ -258,7 +263,7 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="131"/>
         <source>Serial: %1
 </source>
-        <translation>Seria&#xa0;: %1
+        <translation>Seria : %1
 </translation>
     </message>
     <message>
@@ -272,7 +277,7 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="133"/>
         <source>Serial number: %1
 </source>
-        <translation>Numèro de seria&#xa0;: %1
+        <translation>Numèro de seria : %1
 </translation>
     </message>
     <message>
@@ -339,7 +344,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Los paramètres actuals vos convenon&#xa0;?</translation>
+        <translation>Los paramètres actuals vos convenon ?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>

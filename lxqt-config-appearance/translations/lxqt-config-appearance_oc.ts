@@ -24,7 +24,7 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;« %1 » es estat espotit.&lt;/p&gt;&lt;p&gt;Podètz trobar una còpia de vòstres ancians paramètres dins « %2 »&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation>Estil&#xa0;:</translation>
+        <translation>Estil :</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="77"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Los paramètres seguents auràn sonque d’efièches per las aplicacions lançadas a partir d’ara</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Contorn automatic</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
@@ -229,7 +229,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar la paleta fornida pel tèma</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -319,12 +319,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="102"/>
         <source>Window:</source>
-        <translation>Fenèstra&#xa0;:</translation>
+        <translation>Fenèstra :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="112"/>
         <source>View:</source>
-        <translation>Afichatge&#xa0;:</translation>
+        <translation>Afichatge :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="122"/>
@@ -334,37 +334,37 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="132"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Conselh :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="146"/>
         <source>Link:</source>
-        <translation>Ligam&#x202f;:</translation>
+        <translation>Ligam :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="166"/>
         <source>Window Text:</source>
-        <translation>Tèxte de fenèstra&#xa0;:</translation>
+        <translation>Tèxte de fenèstra :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="176"/>
         <source>View Text:</source>
-        <translation>Tèxte d’afichatge&#xa0;:</translation>
+        <translation>Tèxte d’afichatge :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="186"/>
         <source>Selected Text:</source>
-        <translation>Tèxte seleccionat&#xa0;:</translation>
+        <translation>Tèxte seleccionat :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="196"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tèxte del conselh :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="210"/>
         <source>Visited Link:</source>
-        <translation>Ligam visitat&#xa0;:</translation>
+        <translation>Ligam visitat :</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="242"/>
@@ -428,27 +428,27 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="340"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="345"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="350"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="355"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="360"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="371"/>

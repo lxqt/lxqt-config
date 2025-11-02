@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color</source>
-        <translation>Щракни за смяна на цвета</translation>
+        <translation>Щракнете за смяна на цвета</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>

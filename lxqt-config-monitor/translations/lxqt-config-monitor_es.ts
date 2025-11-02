@@ -34,23 +34,24 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración del monitor predeterminada aplicada.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajusta tus pantallas con la Configuración de Monitor de LXQt.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Configuración aplicada.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Configuración no aplicada.
+Si esto es un compositor Wayland, puedes probar kanshi para configurar tu(s) monitor(es).</translation>
     </message>
 </context>
 <context>
