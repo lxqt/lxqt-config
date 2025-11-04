@@ -263,7 +263,7 @@ Podètz configurar vòstres monitors amb kanshi.</translation>
         <location filename="../monitorwidget.cpp" line="131"/>
         <source>Serial: %1
 </source>
-        <translation>Seria : %1
+        <translation>Seria&#xa0;: %1
 </translation>
     </message>
     <message>
@@ -277,7 +277,7 @@ Podètz configurar vòstres monitors amb kanshi.</translation>
         <location filename="../monitorwidget.cpp" line="133"/>
         <source>Serial number: %1
 </source>
-        <translation>Numèro de seria : %1
+        <translation>Numèro de seria&#xa0;: %1
 </translation>
     </message>
     <message>
@@ -344,7 +344,7 @@ Podètz configurar vòstres monitors amb kanshi.</translation>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Los paramètres actuals vos convenon ?</translation>
+        <translation>Los paramètres actuals vos convenon&#xa0;?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
