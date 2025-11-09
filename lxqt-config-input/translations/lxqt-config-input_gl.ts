@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>Escriba na seguinte caixa para probar os axustes do teclado</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>Escriba na seguinte caixa para probar os axustes do teclado:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

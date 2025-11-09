@@ -32,8 +32,8 @@
     </message>
     <message>
         <location filename="../selectwnd.ui" line="65"/>
-        <source>Size</source>
-        <translation>Dimensione</translation>
+        <source>Size:</source>
+        <translation>Dimensione:</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="231"/>
