@@ -74,16 +74,6 @@
    <signal>rejected()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>481</x>
-     <y>324</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>458</x>
-     <y>341</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>
