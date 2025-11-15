@@ -105,32 +105,12 @@
    <signal>currentRowChanged(int)</signal>
    <receiver>stackedWidget</receiver>
    <slot>setCurrentIndex(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>126</x>
-     <y>181</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
    <receiver>MonitorSettingsDialog</receiver>
    <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>338</x>
-     <y>439</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>257</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>
