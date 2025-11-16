@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>키보드 설정을 테스트하려면 다음 상자에 입력하십시오</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>키보드 설정을 테스트하려면 다음 상자에 입력하십시오:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

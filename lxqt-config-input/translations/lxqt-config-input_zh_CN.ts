@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>在下面的框中输入字符，以测试键盘设置</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>在下面的框中输入字符，以测试键盘设置:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

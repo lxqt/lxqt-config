@@ -30,7 +30,7 @@
     </message>
     <message>
         <location filename="../selectwnd.ui" line="65"/>
-        <source>Size</source>
+        <source>Size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

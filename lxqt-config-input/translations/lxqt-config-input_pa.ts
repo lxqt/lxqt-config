@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>ਆਪਣੀਆਂ ਕੀਬੋਰਡ ਸੈਟਿੰਗਾਂ ਨੂੰ ਟੈਸਟ ਕਰਨ ਲਈ ਅੱਗੇ ਦਿੱਤੇ ਬਾਕਸ ਵਿੱਚ ਲਿਖ ਕੇ ਵੇਖੋ</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>ਆਪਣੀਆਂ ਕੀਬੋਰਡ ਸੈਟਿੰਗਾਂ ਨੂੰ ਟੈਸਟ ਕਰਨ ਲਈ ਅੱਗੇ ਦਿੱਤੇ ਬਾਕਸ ਵਿੱਚ ਲਿਖ ਕੇ ਵੇਖੋ:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>
