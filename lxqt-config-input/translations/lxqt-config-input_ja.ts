@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>キーボード設定を確認するには、下のボックスで入力して下さい</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>キーボード設定を確認するには、下のボックスで入力して下さい:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

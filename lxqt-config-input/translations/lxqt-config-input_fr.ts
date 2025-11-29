@@ -57,7 +57,7 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
+        <source>Type in the following box to test your keyboard settings:</source>
         <translatorcomment>Tapez dans le champ ci-dessous pour tester vos paramètres clavier</translatorcomment>
         <translation>Saisir une phrase pour tester les réglages</translation>
     </message>

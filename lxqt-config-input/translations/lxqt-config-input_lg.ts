@@ -58,8 +58,8 @@ akabonero nga erinwyezezza wansi:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>Wandika wano olabe by&apos;otegese bwe bikola</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>Wandika wano olabe by&apos;otegese bwe bikola:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

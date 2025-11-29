@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>Skriv i den følgende boks for at test dine tastaturindstillinger</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>Skriv i den følgende boks for at test dine tastaturindstillinger:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>
