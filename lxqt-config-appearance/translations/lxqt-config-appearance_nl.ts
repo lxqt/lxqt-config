@@ -190,7 +190,7 @@
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
         <translation>Als u alle programma&apos;s er hetzelfde wilt laten uitzien, kunt u het beste een gelijkende stijl/thema kiezen (indien beschikbaar) voor alle lijsten of de ‘gtk2’ Qt-stijl kiezen (indien beschikbaar) om GTK-thema&apos;s na te bootsen.
 
-Zorg dat ‘xsettingsd’ geïnstalleerd is zodat GTK-programma&apos;s meteen van het nieuwe thema worden voorzien.</translation>
+Zorg dat ‘xsettingsd’ geïnstalleerd is, zodat GTK-programma&apos;s meteen van het nieuwe thema worden voorzien.</translation>
     </message>
 </context>
 <context>
