@@ -47,7 +47,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="116"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Bevestiging vereist. Zijn de instellingen juist?</translation>
+        <translation>Kloppen de instellingen zo?</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation>%1: de verhoog- en verlaagopties kunnen niet tegelijkertijd worden gebruikt</translation>
+        <translation>%1: de verhoog- en verlaagopties kunnen niet gelijktijdig worden gebruikt</translation>
     </message>
 </context>
 </TS>
