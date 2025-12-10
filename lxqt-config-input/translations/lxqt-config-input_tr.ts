@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>Klavye ayarlarını test etmek için aşağıdaki kutuya yazın</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>Klavye ayarlarını test etmek için aşağıdaki kutuya yazın:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

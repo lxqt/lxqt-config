@@ -57,8 +57,8 @@
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="130"/>
-        <source>Type in the following box to test your keyboard settings</source>
-        <translation>В долното поле може да тествате клавиатурните настройки</translation>
+        <source>Type in the following box to test your keyboard settings:</source>
+        <translation>В долното поле може да тествате клавиатурните настройки:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="76"/>

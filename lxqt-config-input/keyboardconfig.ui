@@ -127,7 +127,7 @@
       <item row="3" column="0" colspan="4">
        <widget class="QLabel" name="label_9">
         <property name="text">
-         <string>Type in the following box to test your keyboard settings</string>
+         <string>Type in the following box to test your keyboard settings:</string>
         </property>
        </widget>
       </item>
