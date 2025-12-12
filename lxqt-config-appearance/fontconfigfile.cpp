@@ -174,7 +174,6 @@ void FontConfigFile::load()
                         {
                             QString value = el.text();
                             mMono = value.toLatin1();
-                            break;
                         }
                     }
                     break;
