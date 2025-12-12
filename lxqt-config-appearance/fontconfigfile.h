@@ -54,6 +54,11 @@ public:
     }
     void setHintStyle(QByteArray value);
 
+    QByteArray monospace() const {
+        return mMono;
+    }
+    void setMonospace(QByteArray value);
+
     int dpi() const {
         return mDpi;
     }
@@ -77,6 +82,7 @@ private:
     bool mHinting;
     QByteArray mSubpixel;
     QByteArray mHintStyle;
+    QByteArray mMono;
     int mDpi;
     bool mAutohint;
     QString mDirPath;

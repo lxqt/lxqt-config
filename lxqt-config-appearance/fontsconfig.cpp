@@ -31,6 +31,7 @@
 #include <QDebug>
 #include <QSettings>
 #include <QFont>
+#include <QFontInfo>
 #include <QFile>
 #include <QDir>
 #include <QDesktopServices>
@@ -59,6 +60,7 @@ FontsConfig::FontsConfig(LXQt::Settings* settings, QSettings* qtSettings, QWidge
     connect(ui->subpixel, &QComboBox::activated, this, &FontsConfig::settingsChanged);
     connect(ui->hinting, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
     connect(ui->hintStyle, &QComboBox::activated, this, &FontsConfig::settingsChanged);
+    connect(ui->monospaceName, &QComboBox::activated, this, &FontsConfig::settingsChanged);
     connect(ui->dpi, &QSpinBox::valueChanged, this, &FontsConfig::settingsChanged);
     connect(ui->autohint, &QAbstractButton::clicked, this, &FontsConfig::settingsChanged);
 }
@@ -124,6 +126,12 @@ void FontsConfig::initControls()
     ui->dpi->setValue(dpi);
     ui->dpi->blockSignals(false);
 
+    QByteArray mono = mFontConfigFile.monospace();
+    QString monospaceName = QString::fromLatin1(mono);
+    QFont monospaceFont;
+    monospaceFont.fromString(monospaceName);
+    ui->monospaceName->setCurrentFont(monospaceFont);
+
     update();
 }
 
@@ -148,6 +156,10 @@ void FontsConfig::updateQtFont()
 
     if(mFontConfigFile.autohint() != ui->autohint->isChecked())
         mFontConfigFile.setAutohint(ui->autohint->isChecked());
+
+    QFont monospaceFont = ui->monospaceName->currentFont();
+    QString monospaceFamily = QFontInfo(monospaceFont).family();
+    mFontConfigFile.setMonospace(monospaceFamily.toLatin1());
 
     // FIXME: the change does not apply to some currently running Qt programs.
     // FIXME: does not work with KDE apps

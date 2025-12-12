@@ -26,6 +26,8 @@
 #include <QDesktopServices>
 #include <QStringBuilder>
 #include <QDomDocument>
+#include <QFont>
+#include <QFontInfo>
 #include <QTimer>
 #include <QDebug>
 #include <QStandardPaths>
@@ -40,6 +42,10 @@ FontConfigFile::FontConfigFile(QObject* parent):
     mAutohint(false),
     mSaveTimer(nullptr)
 {
+    QFont f(QStringLiteral("Monospace"));
+    QString monoFamily = QFontInfo(f).family();
+    mMono = monoFamily.toLatin1();
+
     mDirPath = QString::fromLocal8Bit(qgetenv("XDG_CONFIG_HOME"));
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     if(mDirPath.isEmpty())
@@ -81,6 +87,12 @@ void FontConfigFile::setHinting(bool value)
 void FontConfigFile::setHintStyle(QByteArray value)
 {
     mHintStyle = value;
+    queueSave();
+}
+
+void FontConfigFile::setMonospace(QByteArray value)
+{
+    mMono = value;
     queueSave();
 }
 
@@ -144,6 +156,28 @@ void FontConfigFile::load()
                 {
                     QString value = editElem.firstChildElement(QStringLiteral("bool")).text();
                     mAutohint = value[0] == QLatin1Char('t') ? true : false;
+                }
+            }
+
+            // find the preferred monospace
+            QDomNodeList aliasNodes = docElem.elementsByTagName(QStringLiteral("alias"));
+            for (int i = 0; i < aliasNodes.count(); ++i)
+            {
+                QDomElement el = aliasNodes.at(i).firstChildElement(QStringLiteral("family"));
+                if (!el.isNull() && el.text() == QStringLiteral("monospace"))
+                {
+                    el = el.nextSiblingElement(QStringLiteral("prefer"));
+                    if (!el.isNull())
+                    {
+                        el = el.firstChildElement(QStringLiteral("family"));
+                        if (!el.isNull())
+                        {
+                            QString value = el.text();
+                            mMono = value.toLatin1();
+                            break;
+                        }
+                    }
+                    break;
                 }
             }
         }
@@ -215,6 +249,12 @@ void FontConfigFile::save()
         "      <double>" << mDpi << "</double>\n"
         "    </edit>\n"
         "  </match>\n"
+        "  <alias>\n"
+        "    <family>monospace</family>\n"
+        "    <prefer>\n"
+        "      <family>" << mMono << "</family>\n"
+        "    </prefer>\n"
+        "  </alias>\n"
         "</fontconfig>";
         s.flush();
         file.close();
