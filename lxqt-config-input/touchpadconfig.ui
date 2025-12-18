@@ -96,7 +96,7 @@
      <item>
       <widget class="QCheckBox" name="dragLockEnabledCheckBox">
        <property name="text">
-        <string>Lock drag</string>
+        <string>Drag lock</string>
        </property>
       </widget>
      </item>
