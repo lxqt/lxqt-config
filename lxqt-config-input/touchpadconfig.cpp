@@ -58,6 +58,11 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     connect(ui.twoFingerScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.edgeScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.buttonScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
+    connect(ui.tapToDragEnabledCheckBox, &QCheckBox::toggled,
+        ui.dragLockEnabledCheckBox, &QCheckBox::setEnabled);
+    ui.dragLockEnabledCheckBox->setEnabled(ui.tapToDragEnabledCheckBox->isChecked());
+
+
 }
 
 TouchpadConfig::~TouchpadConfig()
@@ -70,6 +75,7 @@ void TouchpadConfig::initFeatureControl(QCheckBox* control, int featureEnabled)
     {
         control->setEnabled(true);
         control->setCheckState(featureEnabled ? Qt::Checked : Qt::Unchecked);
+
     }
     else
     {
@@ -88,7 +94,7 @@ void TouchpadConfig::initControls()
     initFeatureControl(ui.tappingEnabledCheckBox, device.tappingEnabled());
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
     initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
-    initFeatureControl(ui.dragLockEnabledCheckBox, device.dragLockEnabled());
+    ui.dragLockEnabledCheckBox->setEnabled(ui.tapToDragEnabledCheckBox->isChecked());
 
     auto ok = device.xinputDriverSupported();
     if (!ok) {
