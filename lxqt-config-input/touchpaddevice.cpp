@@ -206,6 +206,7 @@ QList<TouchpadDevice> TouchpadDevice::enumerate_from_udev()
                 qDebug() << "xinput driver:" << dev.xinputDriver();
                 dev.m_oldTappingEnabled = dev.tappingEnabled();
                 dev.m_oldNaturalScrollingEnabled = dev.naturalScrollingEnabled();
+                dev.m_oldDisableWhileTypingEnabled = dev.disableWhileTypingEnabled();
                 dev.m_oldTapToDragEnabled = dev.tapToDragEnabled();
                 dev.m_oldDragLockEnabled = dev.dragLockEnabled();
                 dev.m_oldAccelSpeed = dev.accelSpeed();
@@ -281,6 +282,9 @@ void TouchpadDevice::loadSettings(LXQt::Settings* settings)
         if (settings->contains(QLatin1String(NATURAL_SCROLLING_ENABLED))) {
             device.setNaturalScrollingEnabled(settings->value(QLatin1String(NATURAL_SCROLLING_ENABLED)).toBool());
         }
+        if (settings->contains(QLatin1String(DISABLE_WHILE_TYPING_ENABLED))) {
+            device.setDisableWhileTypingEnabled(settings->value(QLatin1String(DISABLE_WHILE_TYPING_ENABLED)).toBool());
+        }
         if (settings->contains(QLatin1String(TAP_TO_DRAG_ENABLED))) {
             device.setTapToDragEnabled(settings->value(QLatin1String(TAP_TO_DRAG_ENABLED)).toBool());
         }
@@ -306,6 +310,7 @@ void TouchpadDevice::saveSettings(LXQt::Settings* settings) const
     settings->beginGroup(escapedName());
     settings->setValue(QLatin1String(TAPPING_ENABLED), tappingEnabled());
     settings->setValue(QLatin1String(NATURAL_SCROLLING_ENABLED), naturalScrollingEnabled());
+    settings->setValue(QLatin1String(DISABLE_WHILE_TYPING_ENABLED), disableWhileTypingEnabled());
     settings->setValue(QLatin1String(TAP_TO_DRAG_ENABLED), tapToDragEnabled());
     settings->setValue(QLatin1String(DRAG_LOCK_ENABLED), dragLockEnabled());
     settings->setValue(QLatin1String(ACCELERATION_SPEED), accelSpeed());
@@ -337,7 +342,10 @@ int TouchpadDevice::naturalScrollingEnabled() const
 {
     return featureEnabled(LIBINPUT_PROP_NATURAL_SCROLL);
 }
-
+int TouchpadDevice::disableWhileTypingEnabled() const
+{
+    return featureEnabled(LIBINPUT_PROP_DISABLE_WHILE_TYPING);
+}
 int TouchpadDevice::tapToDragEnabled() const
 {
     return featureEnabled(LIBINPUT_PROP_TAP_DRAG);
@@ -369,6 +377,10 @@ bool TouchpadDevice::setTappingEnabled(bool enabled) const
 bool TouchpadDevice::setNaturalScrollingEnabled(bool enabled) const
 {
     return set_xi2_property(LIBINPUT_PROP_NATURAL_SCROLL, QList<QVariant>{(enabled ? 1 : 0)});
+}
+bool TouchpadDevice::setDisableWhileTypingEnabled(bool enabled) const
+{
+    return set_xi2_property(LIBINPUT_PROP_DISABLE_WHILE_TYPING, QList<QVariant>{(enabled ? 1 : 0)});
 }
 
 bool TouchpadDevice::setTapToDragEnabled(bool enabled) const

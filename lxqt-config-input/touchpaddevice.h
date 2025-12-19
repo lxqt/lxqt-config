@@ -36,6 +36,7 @@ enum ScrollingMethod
 
 const char TAPPING_ENABLED[] = "tappingEnabled";
 const char NATURAL_SCROLLING_ENABLED[] = "naturalScrollingEnabled";
+const char DISABLE_WHILE_TYPING_ENABLED[] = "disableWhileTypingEnabled";
 const char TAP_TO_DRAG_ENABLED[] = "tapToDragEnabled";
 const char DRAG_LOCK_ENABLED[] = "dragLockEnabled";
 const char SCROLLING_METHOD_ENABLED[] = "scrollingMethodEnabled";
@@ -55,16 +56,19 @@ public:
 
     int tappingEnabled() const;
     int naturalScrollingEnabled() const;
+    int disableWhileTypingEnabled() const;
     int tapToDragEnabled() const;
     int dragLockEnabled() const;
     float accelSpeed() const;
     bool setTappingEnabled(bool enabled) const;
     bool setNaturalScrollingEnabled(bool enabled) const;
+    bool setDisableWhileTypingEnabled(bool enabled) const;
     bool setTapToDragEnabled(bool enabled) const;
     bool setDragLockEnabled(bool enabled) const;
     bool setAccelSpeed(float speed) const;
     bool oldTappingEnabled() const { return m_oldTappingEnabled; }
     bool oldNaturalScrollingEnabled() const { return m_oldNaturalScrollingEnabled; }
+    bool oldDisableWhileTypingEnabled() const { return m_oldDisableWhileTypingEnabled; }
     bool oldTapToDragEnabled() const { return m_oldTapToDragEnabled; }
     bool oldDragLockEnabled() const { return m_oldDragLockEnabled; }
     ScrollingMethod oldScrollingMethodEnabled() const { return m_oldScrollingMethodEnabled; }
@@ -84,6 +88,7 @@ private:
 
     bool m_oldTappingEnabled;
     bool m_oldNaturalScrollingEnabled;
+    bool m_oldDisableWhileTypingEnabled;
     bool m_oldTapToDragEnabled;
     bool m_oldDragLockEnabled;
     float m_oldAccelSpeed;
