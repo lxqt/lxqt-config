@@ -92,6 +92,7 @@ void TouchpadConfig::initControls()
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
     initFeatureControl(ui.disableWhileTypingCheckBox, device.disableWhileTypingEnabled());
     initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
+    initFeatureControl(ui.dragLockEnabledCheckBox, device.dragLockEnabled());
     ui.dragLockEnabledCheckBox->setEnabled(ui.tapToDragEnabledCheckBox->isChecked());
 
     auto ok = device.xinputDriverSupported();
