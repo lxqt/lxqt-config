@@ -30,7 +30,6 @@
 #include "ui_palettes.h"
 
 #include <QStyleFactory>
-#include <QToolBar>
 #include <QSettings>
 #include <QMetaObject>
 #include <QMetaProperty>

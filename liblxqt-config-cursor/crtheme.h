@@ -24,10 +24,8 @@
 
 #include <QApplication>
 #include <QDir>
-#include <QIcon>
 #include <QImage>
 #include <QString>
-#include <QStringList>
 
 //#include <xcb/xcb.h>
 //#include <xcb/xproto.h>
