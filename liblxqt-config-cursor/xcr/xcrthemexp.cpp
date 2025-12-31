@@ -7,25 +7,21 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
-#include <QDebug>
-//#include <QtCore>
 
 #include "xcrthemexp.h"
-
-#include <unistd.h>
-#include <zlib.h>
-
-#include <QSet>
-#include <QStringList>
-#include <QTextStream>
-
-#include <algorithm>
-
 #include "xcrimg.h"
 #include "xcrxcur.h"
 #include "xcrtheme.h"
 #include "xcrthemefx.h"
 
+#include <QDebug>
+#include <QSet>
+#include <QStringList>
+#include <QTextStream>
+
+#include <unistd.h>
+#include <zlib.h>
+#include <algorithm>
 
 static const char *curShapeName[] = {
   "Arrow",

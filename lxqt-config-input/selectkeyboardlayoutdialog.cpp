@@ -20,7 +20,6 @@
  */
 
 #include "selectkeyboardlayoutdialog.h"
-#include <QDebug>
 
 SelectKeyboardLayoutDialog::SelectKeyboardLayoutDialog(QMap< QString, KeyboardLayoutInfo>& knownLayouts, QWidget* parent):
   QDialog(parent),

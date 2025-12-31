@@ -19,12 +19,13 @@
  */
 
 #include "keyboardlayoutconfig.h"
+#include "selectkeyboardlayoutdialog.h"
+
+#include <LXQt/Settings>
+
 #include <QProcess>
 #include <QFile>
-#include <QHash>
 #include <QDebug>
-#include "selectkeyboardlayoutdialog.h"
-#include <LXQt/Settings>
 
 KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent):
   QWidget(parent),

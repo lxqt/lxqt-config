@@ -23,21 +23,16 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
+#include "mimetypeviewer.h"
+
 #include <LXQt/SingleApplication>
-
-#include <QDebug>
-#include <QString>
-#include <QStringList>
-#include <QFile>
-#include <QIODevice>
-#include <QSettings>
-#include <QVariant>
-#include <QCommandLineParser>
-
 #include <LXQt/Settings>
 #include <XdgDesktopFile>
-#include "mimetypeviewer.h"
 #include <XdgDirs>
+
+#include <QString>
+#include <QSettings>
+#include <QCommandLineParser>
 
 int main (int argc, char **argv)
 {

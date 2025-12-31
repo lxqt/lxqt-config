@@ -10,10 +10,10 @@
 #ifndef XCRIMG_H
 #define XCRIMG_H
 
-#include <QtCore>
+#include <QDir>
+#include <QFile>
 #include <QCursor>
 #include <QPixmap>
-
 
 class XCursorImage {
 public:

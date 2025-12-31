@@ -19,10 +19,10 @@
 #ifndef __OUTPUT_WIDGET_H__
 #define __OUTPUT_WIDGET_H__
 
-#include <QGroupBox>
-#include <QMouseEvent>
 #include "monitorinfo.h"
 #include "ui_outputwidget.h"
+
+#include <QMouseEvent>
 
 class OutputWidget: public QWidget
 {

@@ -10,12 +10,8 @@
 #ifndef XCRTHEME_H
 #define XCRTHEME_H
 
-#include <QtCore>
-#include <QCursor>
-#include <QPixmap>
-
 #include "xcrimg.h"
-
+#include <QProcess>
 
 class XCursorTheme {
 public:
@@ -86,12 +82,10 @@ protected:
   QList<XCursorImages *> mList;
 };
 
-
 bool removeXCursorTheme (const QDir &thDir, const QString &name);
 bool removeXCursorTheme (const QString &name);
 bool removeXCursorTheme (const QDir &thDir);
 
 bool packXCursorTheme (const QString &destFName, const QDir &thDir, const QString &thName, bool removeTheme=false);
-
 
 #endif

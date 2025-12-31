@@ -19,6 +19,7 @@
 /*
  * additional code: Ketmar // Vampire Avalon (psyc://ketmar.no-ip.org/~Ketmar)
  */
+
 #ifndef THEMEMODEL_H
 #define THEMEMODEL_H
 

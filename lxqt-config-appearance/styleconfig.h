@@ -28,9 +28,9 @@
 #ifndef STYLECONFIG_H
 #define STYLECONFIG_H
 
-#include <QWidget>
-#include <LXQt/Settings>
 #include "configothertoolkits.h"
+#include <LXQt/Settings>
+#include <QWidget>
 
 class QSettings;
 

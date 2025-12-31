@@ -19,14 +19,15 @@
 #ifndef _MONITORPICTURE_H_
 #define _MONITORPICTURE_H_
 
+#include "monitor.h"
+#include "ui_monitorpicture.h"
+#include "monitorwidget.h"
+
 #include <QGraphicsView>
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
 #include <QSvgRenderer>
 #include <QGraphicsSvgItem>
-#include "monitor.h"
-#include "ui_monitorpicture.h"
-#include "monitorwidget.h"
 
 class MonitorPicture;
 

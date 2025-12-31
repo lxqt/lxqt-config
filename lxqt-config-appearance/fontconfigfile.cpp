@@ -23,13 +23,10 @@
 #include <QByteArray>
 #include <QFile>
 #include <QDir>
-#include <QDesktopServices>
-#include <QStringBuilder>
 #include <QDomDocument>
 #include <QFont>
 #include <QFontInfo>
 #include <QTimer>
-#include <QDebug>
 #include <QStandardPaths>
 
 FontConfigFile::FontConfigFile(QObject* parent):

@@ -16,13 +16,14 @@
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
+
 /*
  * additional code: Ketmar // Vampire Avalon (psyc://ketmar.no-ip.org/~Ketmar)
  */
+
 #include "itemdelegate.h"
 #include "crtheme.h"
 
-#include <QApplication>
 #include <QModelIndex>
 #include <QPainter>
 
@@ -31,7 +32,6 @@
 namespace {
     const int decorationMargin = 8;
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////
 ItemDelegate::ItemDelegate(QObject *parent) : QAbstractItemDelegate(parent)

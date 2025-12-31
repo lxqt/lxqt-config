@@ -28,10 +28,10 @@
 #ifndef FONTSCONFIG_H
 #define FONTSCONFIG_H
 
+#include "fontconfigfile.h"
+#include <LXQt/Settings>
 #include <QWidget>
 #include <QFont>
-#include <LXQt/Settings>
-#include "fontconfigfile.h"
 
 class QTreeWidgetItem;
 class QSettings;

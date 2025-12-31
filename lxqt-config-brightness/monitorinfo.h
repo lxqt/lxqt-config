@@ -21,7 +21,6 @@
 
 #include <QString>
 
-
 /** This class represents backlight and brightness values of screen.
  * If backlight is supported, backlight power of screen can be changed.
  * Brightness represents color saturation.

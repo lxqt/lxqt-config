@@ -11,5 +11,4 @@
 #define LXQT_CONFIG_INPUT_H
 
 
-
 #endif // LXQT_CONFIG_INPUT_H

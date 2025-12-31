@@ -23,12 +23,13 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/SingleApplication>
+#include "localeconfig.h"
 
+#include <LXQt/SingleApplication>
 #include <LXQt/Settings>
 #include <LXQt/ConfigDialog>
+
 #include <QCommandLineParser>
-#include "localeconfig.h"
 
 int main (int argc, char **argv)
 {

@@ -22,6 +22,7 @@
 
 #include <QComboBox>
 #include <QPoint>
+
 #include <KScreen/Output>
 #include <KScreen/Mode>
 #include <KScreen/SetConfigOperation>

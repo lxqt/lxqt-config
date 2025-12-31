@@ -20,14 +20,12 @@
   */
 
 #include "qcategorydrawer.h"
+#include "qcategorizedview.h"
+#include "qcategorizedsortfilterproxymodel.h"
 
 #include <QPainter>
 #include <QStyleOption>
 #include <QApplication>
-
-//#include <kiconloader.h>
-#include <qcategorizedview.h>
-#include <qcategorizedsortfilterproxymodel.h>
 
 #define HORIZONTAL_HINT 3
 

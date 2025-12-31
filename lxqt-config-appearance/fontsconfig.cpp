@@ -27,17 +27,9 @@
 
 #include "fontsconfig.h"
 #include "ui_fontsconfig.h"
-#include <QTreeWidget>
-#include <QDebug>
 #include <QSettings>
 #include <QFont>
 #include <QFontInfo>
-#include <QFile>
-#include <QDir>
-#include <QDesktopServices>
-#include <QTextStream>
-#include <QStringBuilder>
-#include <QDomDocument>
 
 static const char* subpixelNames[] = {"none", "rgb", "bgr", "vrgb", "vbgr"};
 static const char* hintStyleNames[] = {"hintnone", "hintslight", "hintmedium", "hintfull"};

@@ -23,11 +23,11 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
+#include "applicationchooser.h"
+
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QSettings>
 #include <QString>
-#include <QDebug>
 #include <QMimeDatabase>
 #include <QTimer>
 
@@ -36,8 +36,6 @@
 #include <XdgDefaultApps>
 
 #include <algorithm>
-
-#include "applicationchooser.h"
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)
 
@@ -95,8 +93,6 @@ int ApplicationChooser::exec()
 
     return QDialog::exec();
 }
-
-
 
 bool lessThan(XdgDesktopFile* a, XdgDesktopFile* b)
 {

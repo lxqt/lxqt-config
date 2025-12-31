@@ -28,7 +28,7 @@
 #include "styleconfig.h"
 #include "ui_styleconfig.h"
 #include "ui_palettes.h"
-#include <QDebug>
+
 #include <QStyleFactory>
 #include <QToolBar>
 #include <QSettings>

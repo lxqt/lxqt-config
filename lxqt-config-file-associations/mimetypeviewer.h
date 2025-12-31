@@ -27,15 +27,15 @@
 #ifndef _MIMETYPEVIEWER_H
 #define	_MIMETYPEVIEWER_H
 
-#include <QDialog>
-#include <QStringList>
-#include <QTemporaryFile>
-
-#include <XdgMimeType>
-
 #include "mimetypedata.h"
 #include "ui_mimetypeviewer.h"
 #include "applicationchooser.h"
+
+#include <XdgMimeType>
+
+#include <QDialog>
+#include <QStringList>
+#include <QTemporaryFile>
 
 class QSettings;
 

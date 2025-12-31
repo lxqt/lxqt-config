@@ -10,17 +10,8 @@
 
 // 2014-04-10 modified by Hong Jen Yee (PCMan) for integration with lxqt-config-input
 
-#include <QDebug>
-
 #include "selectwnd.h"
 #include "ui_selectwnd.h"
-
-#include <QKeyEvent>
-#include <QMessageBox>
-#include <QTimer>
-#include <QWidget>
-#include <QPushButton>
-#include <QToolTip>
 
 #include "cfgfile.h"
 #include "crtheme.h"
@@ -31,14 +22,17 @@
 #include "xcrxcur.h"
 #include "xcrtheme.h"
 
-#include <LXQt/Settings>
-#include <XdgIcon>
+#include <QMessageBox>
+#include <QWidget>
+#include <QToolTip>
 #include <QTextStream>
 #include <QProcess>
+#include <QDebug>
+
+#include <LXQt/Settings>
+#include <XdgIcon>
 
 #include <X11/Xcursor/Xcursor.h>
-
-#include <QGuiApplication>
 
 const QString HOME_ICON_DIR(QDir::homePath() + QStringLiteral("/.icons"));
 

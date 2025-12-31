@@ -18,6 +18,7 @@
 
 #include "brightnesssettings.h"
 #include "outputwidget.h"
+
 #include <QMessageBox>
 #include <QPushButton>
 

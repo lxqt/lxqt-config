@@ -18,15 +18,17 @@
 
 #include "touchpaddevice.h"
 
-#include <cmath>
 #include <QDebug>
 #include <QGuiApplication>
 #include <QUrl>
+
 #include <libudev.h>
 #include <LXQt/Settings>
 #include <X11/Xatom.h>
 #include <X11/extensions/XInput2.h>
 #include <libinput-properties.h>
+
+#include <cmath>
 
 static QList<QVariant> xi2_get_device_property(int deviceid, const char* prop)
 {

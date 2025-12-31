@@ -19,8 +19,9 @@
 #ifndef TOUCHPADCONFIG_H
 #define TOUCHPADCONFIG_H
 
-#include <QWidget>
 #include "ui_touchpadconfig.h"
+
+#include <QWidget>
 
 namespace LXQt
 {

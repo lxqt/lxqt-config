@@ -24,12 +24,12 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <QDirIterator>
-#include <QLineEdit>
-#include <QTimer>
-
 #include "mainwindow.h"
-#include <QtDebug>
+#include "qcategorizedview.h"
+#include "qcategorydrawer.h"
+#include "qcategorizedsortfilterproxymodel.h"
+
+#include <QTimer>
 #include <QMessageBox>
 #include <QStyledItemDelegate>
 #include <QShortcut>
@@ -39,10 +39,6 @@
 #include <XdgIcon>
 #include <XdgMenu>
 #include <XmlHelper>
-
-#include "qcategorizedview.h"
-#include "qcategorydrawer.h"
-#include "qcategorizedsortfilterproxymodel.h"
 
 #include <algorithm>
 

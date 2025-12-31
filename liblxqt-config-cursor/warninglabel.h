@@ -30,7 +30,6 @@
 
 #include "ui_warninglabel.h"
 
-
 class WarningLabel : public QWidget, public Ui::WarningLabel
 {
     Q_OBJECT

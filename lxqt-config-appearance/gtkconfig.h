@@ -26,9 +26,9 @@
 #ifndef GTKCONFIG_H
 #define GTKCONFIG_H
 
-#include <QWidget>
 #include "ui_gtkconfig.h"
 #include "configothertoolkits.h"
+#include <QWidget>
 
 namespace Ui {
     class GTKConfig;

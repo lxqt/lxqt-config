@@ -22,6 +22,7 @@
 
 #include "ui_managesavedsettings.h"
 #include "monitor.h"
+
 #include <LXQt/Settings>
 #include <KScreen/Output>
 #include <KScreen/EDID>

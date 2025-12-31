@@ -25,7 +25,6 @@
 
 #include "gtkconfig.h"
 #include "ui_gtkconfig.h"
-#include <QDebug>
 
 GTKConfig::GTKConfig(LXQt::Settings *configAppearanceSettings, ConfigOtherToolKits *configOtherToolKits, QWidget* parent) :
     QWidget(parent),

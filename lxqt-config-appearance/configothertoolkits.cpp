@@ -24,6 +24,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include "configothertoolkits.h"
+
 #include <QFile>
 #include <QTextStream>
 #include <QStandardPaths>
@@ -36,7 +37,6 @@
 #include <QMessageBox>
 #include <QProcess>
 #include <QGuiApplication>
-#include <QDebug>
 
 #include <sys/types.h>
 #include <signal.h>

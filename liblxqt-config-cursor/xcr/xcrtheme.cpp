@@ -7,18 +7,16 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
-#include <QDebug>
-//#include <QtCore>
 
 #include "xcrtheme.h"
-
-#include <unistd.h>
+#include "xcrimg.h"
+#include "xcrxcur.h"
 
 #include <QStringList>
 #include <QTextStream>
+#include <QDebug>
 
-#include "xcrimg.h"
-#include "xcrxcur.h"
+#include <unistd.h>
 
 /*
  0   standard arrow

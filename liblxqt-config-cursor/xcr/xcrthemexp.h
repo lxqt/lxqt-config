@@ -7,17 +7,18 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
+
 #ifndef XCRTHEMEXP_H
 #define XCRTHEMEXP_H
 
-#include <QtCore>
+#include <QDir>
+#include <QString>
 #include <QCursor>
 #include <QPixmap>
 
 #include "xcrimg.h"
 #include "xcrtheme.h"
 #include "xcrthemefx.h"
-
 
 class XCursorThemeXP : public XCursorTheme {
 public:

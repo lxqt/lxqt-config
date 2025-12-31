@@ -25,14 +25,6 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/SingleApplication>
-
-#include <LXQt/Settings>
-#include <LXQt/ConfigDialog>
-#include <QCommandLineParser>
-#include <QMessageBox>
-#include <QGuiApplication>
-
 #include "iconthemeconfig.h"
 #include "lxqtthemeconfig.h"
 #include "styleconfig.h"
@@ -41,6 +33,12 @@
 #include "gtkconfig.h"
 
 #include "../liblxqt-config-cursor/selectwnd.h"
+
+#include <LXQt/SingleApplication>
+#include <LXQt/Settings>
+#include <LXQt/ConfigDialog>
+
+#include <QCommandLineParser>
 
 int main (int argc, char **argv)
 {

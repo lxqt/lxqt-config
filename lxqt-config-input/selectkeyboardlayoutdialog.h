@@ -21,9 +21,10 @@
 #ifndef SELECTKEYBOARDLAYOUTDIALOG_H
 #define SELECTKEYBOARDLAYOUTDIALOG_H
 
-#include <QDialog>
 #include "ui_selectkeyboardlayoutdialog.h"
 #include "keyboardlayoutinfo.h"
+
+#include <QDialog>
 
 class SelectKeyboardLayoutDialog : public QDialog {
   Q_OBJECT

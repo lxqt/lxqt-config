@@ -31,7 +31,6 @@
 
 class QItemSelection;
 
-
 /**
   * This class lets you categorize a view. It is meant to be used along with
   * QCategorizedView class.
