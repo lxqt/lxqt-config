@@ -71,7 +71,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
         <source>Current: </source>
-        <translation type="unfinished"></translation>
+        <translation>Saat ini: </translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="370"/>
