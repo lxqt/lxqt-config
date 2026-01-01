@@ -100,6 +100,11 @@
         <translation>Fontide varjundamise stiil:</translation>
     </message>
     <message>
+        <location filename="../fontsconfig.ui" line="211"/>
+        <source>Monospace:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
@@ -164,27 +169,27 @@
 <context>
     <name>GTKConfig</name>
     <message>
-        <location filename="../gtkconfig.ui" line="44"/>
+        <location filename="../gtkconfig.ui" line="56"/>
         <source>GTK Style</source>
         <translation>GTK välimus</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="63"/>
+        <location filename="../gtkconfig.ui" line="75"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>Vali GTK teemad (sellega muudame ka GTK seadistuste failid!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="105"/>
         <source>GTK 3 Theme:</source>
         <translation>GTK 3 teema:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="77"/>
+        <location filename="../gtkconfig.ui" line="89"/>
         <source>GTK 2 Theme:</source>
         <translation>GTK 2 teema:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="105"/>
+        <location filename="../gtkconfig.ui" line="117"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
@@ -304,161 +309,161 @@ Kui soovid GTK-põhiste rakenduste välimust lennult muuta, siis palun kontrolli
 <context>
     <name>StyleConfig</name>
     <message>
-        <location filename="../styleconfig.ui" line="33"/>
+        <location filename="../styleconfig.ui" line="45"/>
         <source>Widget Style</source>
         <translation>Vidina stiil</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="63"/>
+        <location filename="../styleconfig.ui" line="75"/>
         <source>Qt Palette</source>
         <translation>Qt värvipalett</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="77"/>
+        <location filename="../styleconfig.ui" line="89"/>
         <source>Some Qt styles may ignore these colors.</source>
         <translation>Mõned Qt stiilid võivad need värvid jätta kasutamata.</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="102"/>
+        <location filename="../styleconfig.ui" line="114"/>
         <source>Window:</source>
         <translation>Aken:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="112"/>
+        <location filename="../styleconfig.ui" line="124"/>
         <source>View:</source>
         <translation>Vaade:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="122"/>
+        <location filename="../styleconfig.ui" line="134"/>
         <source>Selection:</source>
         <translation>Valik:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="132"/>
+        <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
         <translation>Kohtspikker:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="146"/>
+        <location filename="../styleconfig.ui" line="158"/>
         <source>Link:</source>
         <translation>Link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="166"/>
+        <location filename="../styleconfig.ui" line="178"/>
         <source>Window Text:</source>
         <translation>Akna tekst:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="176"/>
+        <location filename="../styleconfig.ui" line="188"/>
         <source>View Text:</source>
         <translation>Vaate tekst:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="186"/>
+        <location filename="../styleconfig.ui" line="198"/>
         <source>Selected Text:</source>
         <translation>Valitud tekst:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="196"/>
+        <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
         <translation>Kohtspikri tekst:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="210"/>
+        <location filename="../styleconfig.ui" line="222"/>
         <source>Visited Link:</source>
         <translation>Külastatud link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="242"/>
+        <location filename="../styleconfig.ui" line="254"/>
         <source>&amp;Save Palette</source>
         <translation>&amp;Salvesta värvipalett</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="249"/>
+        <location filename="../styleconfig.ui" line="261"/>
         <source>&amp;Load Palette</source>
         <translation>&amp;Laadi värvipalett</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="281"/>
         <source>&amp;Default Palette</source>
         <translation>Taasta värvipaleti &amp;vaikeväärtus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
-        <location filename="../styleconfig.ui" line="294"/>
-        <location filename="../styleconfig.ui" line="326"/>
-        <location filename="../styleconfig.ui" line="336"/>
-        <location filename="../styleconfig.ui" line="368"/>
+        <location filename="../styleconfig.ui" line="296"/>
+        <location filename="../styleconfig.ui" line="306"/>
+        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
         <translation>Selle võib asendada kas Qt stiil või mõni rakendus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="287"/>
+        <location filename="../styleconfig.ui" line="299"/>
         <source>Toolbar button style:</source>
         <translation>Tööriistariba nuppude stiil:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="298"/>
+        <location filename="../styleconfig.ui" line="310"/>
         <source>Only display the icon</source>
         <translation>Ainult ikoon</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="303"/>
+        <location filename="../styleconfig.ui" line="315"/>
         <source>Only display the text</source>
         <translation>Ainult tekst</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="308"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>The text appears beside the icon</source>
         <translation>Tekst ikooni kõrval</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="313"/>
+        <location filename="../styleconfig.ui" line="325"/>
         <source>The text appears under the icon</source>
         <translation>Tekst ikooni all</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="318"/>
+        <location filename="../styleconfig.ui" line="330"/>
         <source>Default</source>
         <translation>Vaikimisi väärtus</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="329"/>
+        <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
         <translation>Tööriistariba ikooni suurus:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="340"/>
+        <location filename="../styleconfig.ui" line="352"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="345"/>
+        <location filename="../styleconfig.ui" line="357"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="350"/>
+        <location filename="../styleconfig.ui" line="362"/>
         <source>24</source>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="355"/>
+        <location filename="../styleconfig.ui" line="367"/>
         <source>32</source>
         <translation>32</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="360"/>
+        <location filename="../styleconfig.ui" line="372"/>
         <source>48</source>
         <translation>48</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="371"/>
+        <location filename="../styleconfig.ui" line="383"/>
         <source>Activate item on single click</source>
         <translation>Käivita objektid ühe klõpsuga</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="51"/>
+        <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Style:</source>
         <translation>Qt stiil:</translation>
     </message>

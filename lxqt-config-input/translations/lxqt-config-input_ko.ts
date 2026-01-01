@@ -256,42 +256,52 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>가속 속도:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap to click</source>
         <translation>탭하여 클릭</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Natural Scrolling</source>
         <translation>내추럴 스크롤링</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
+        <source>Disable while typing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="83"/>
         <source>Tap and drag</source>
         <translation>탭하여 드래그</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="86"/>
+        <location filename="../touchpadconfig.ui" line="106"/>
+        <source>Drag lock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="133"/>
         <source>Scrolling:</source>
         <translation>스크롤링:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="156"/>
         <source>&amp;Disabled</source>
         <translation>비활성화됨(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Two-Finger</source>
         <translation>두 손가락(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>Ed&amp;ge</source>
         <translation>가장자리(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="130"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>B&amp;utton</source>
         <translation>단추(&amp;U)</translation>
     </message>
@@ -301,7 +311,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>장치정보레이블</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="94"/>
+        <location filename="../touchpadconfig.cpp" line="100"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

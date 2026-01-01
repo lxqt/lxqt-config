@@ -256,42 +256,52 @@ El ratolí, el ratolí tàctil i el teclat es poden configurar a la configuraci�
         <translation>Velocitat d&apos;acceleració:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap to click</source>
         <translation>Toca per fer clic</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Natural Scrolling</source>
         <translation>Desplaçament natural</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
+        <source>Disable while typing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="83"/>
         <source>Tap and drag</source>
         <translation>Toca i arrossega</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="86"/>
+        <location filename="../touchpadconfig.ui" line="106"/>
+        <source>Drag lock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="133"/>
         <source>Scrolling:</source>
         <translation>Desplaçament:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="156"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Inhabilitat</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Two-Finger</source>
         <translation>&amp;Dos dits</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>Ed&amp;ge</source>
         <translation>&amp;Vora</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="130"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>B&amp;utton</source>
         <translation>&amp;Botó</translation>
     </message>
@@ -301,7 +311,7 @@ El ratolí, el ratolí tàctil i el teclat es poden configurar a la configuraci�
         <translation>Etiqueta d&apos;informació del dispositiu</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="94"/>
+        <location filename="../touchpadconfig.cpp" line="100"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

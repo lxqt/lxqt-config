@@ -100,6 +100,11 @@
         <translation>글꼴 힌팅 스타일:</translation>
     </message>
     <message>
+        <location filename="../fontsconfig.ui" line="211"/>
+        <source>Monospace:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
@@ -164,27 +169,27 @@
 <context>
     <name>GTKConfig</name>
     <message>
-        <location filename="../gtkconfig.ui" line="44"/>
+        <location filename="../gtkconfig.ui" line="56"/>
         <source>GTK Style</source>
         <translation>GTK 스타일</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="63"/>
+        <location filename="../gtkconfig.ui" line="75"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>GTK 테마 지정 (GTK 구성 파일을 덮어씁니다!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="105"/>
         <source>GTK 3 Theme:</source>
         <translation>GTK 3 테마:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="77"/>
+        <location filename="../gtkconfig.ui" line="89"/>
         <source>GTK 2 Theme:</source>
         <translation>GTK 2 테마:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="105"/>
+        <location filename="../gtkconfig.ui" line="117"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
@@ -304,161 +309,161 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
 <context>
     <name>StyleConfig</name>
     <message>
-        <location filename="../styleconfig.ui" line="33"/>
+        <location filename="../styleconfig.ui" line="45"/>
         <source>Widget Style</source>
         <translation>위젯 스타일</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="63"/>
+        <location filename="../styleconfig.ui" line="75"/>
         <source>Qt Palette</source>
         <translation>Qt 팔레트</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="77"/>
+        <location filename="../styleconfig.ui" line="89"/>
         <source>Some Qt styles may ignore these colors.</source>
         <translation>일부 Qt 스타일은 이러한 색상을 무시할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="102"/>
+        <location filename="../styleconfig.ui" line="114"/>
         <source>Window:</source>
         <translation>창:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="112"/>
+        <location filename="../styleconfig.ui" line="124"/>
         <source>View:</source>
         <translation>보기:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="122"/>
+        <location filename="../styleconfig.ui" line="134"/>
         <source>Selection:</source>
         <translation>선택:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="132"/>
+        <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
         <translation>툴팁:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="146"/>
+        <location filename="../styleconfig.ui" line="158"/>
         <source>Link:</source>
         <translation>링크:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="166"/>
+        <location filename="../styleconfig.ui" line="178"/>
         <source>Window Text:</source>
         <translation>창 텍스트:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="176"/>
+        <location filename="../styleconfig.ui" line="188"/>
         <source>View Text:</source>
         <translation>보기 텍스트:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="186"/>
+        <location filename="../styleconfig.ui" line="198"/>
         <source>Selected Text:</source>
         <translation>선택한 텍스트:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="196"/>
+        <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
         <translation>툴팁 텍스트:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="210"/>
+        <location filename="../styleconfig.ui" line="222"/>
         <source>Visited Link:</source>
         <translation>방문한 링크:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="242"/>
+        <location filename="../styleconfig.ui" line="254"/>
         <source>&amp;Save Palette</source>
         <translation>팔레트 저장(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="249"/>
+        <location filename="../styleconfig.ui" line="261"/>
         <source>&amp;Load Palette</source>
         <translation>팔레트 불러오기(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="281"/>
         <source>&amp;Default Palette</source>
         <translation>기본 팔레트(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
-        <location filename="../styleconfig.ui" line="294"/>
-        <location filename="../styleconfig.ui" line="326"/>
-        <location filename="../styleconfig.ui" line="336"/>
-        <location filename="../styleconfig.ui" line="368"/>
+        <location filename="../styleconfig.ui" line="296"/>
+        <location filename="../styleconfig.ui" line="306"/>
+        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
         <translation>Qt 스타일 또는 앱에 의해 재정의될 수 있습니다</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="287"/>
+        <location filename="../styleconfig.ui" line="299"/>
         <source>Toolbar button style:</source>
         <translation>툴바 버튼 스타일:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="298"/>
+        <location filename="../styleconfig.ui" line="310"/>
         <source>Only display the icon</source>
         <translation>아이콘만 보이기</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="303"/>
+        <location filename="../styleconfig.ui" line="315"/>
         <source>Only display the text</source>
         <translation>텍스트만 보이기</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="308"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>The text appears beside the icon</source>
         <translation>아이콘 옆에 텍스트가 나타납니다</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="313"/>
+        <location filename="../styleconfig.ui" line="325"/>
         <source>The text appears under the icon</source>
         <translation>아이콘 아래에 텍스트가 나타납니다</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="318"/>
+        <location filename="../styleconfig.ui" line="330"/>
         <source>Default</source>
         <translation>기본</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="329"/>
+        <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
         <translation>도구모음 아이콘 크기:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="340"/>
+        <location filename="../styleconfig.ui" line="352"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="345"/>
+        <location filename="../styleconfig.ui" line="357"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="350"/>
+        <location filename="../styleconfig.ui" line="362"/>
         <source>24</source>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="355"/>
+        <location filename="../styleconfig.ui" line="367"/>
         <source>32</source>
         <translation>32</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="360"/>
+        <location filename="../styleconfig.ui" line="372"/>
         <source>48</source>
         <translation>48</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="371"/>
+        <location filename="../styleconfig.ui" line="383"/>
         <source>Activate item on single click</source>
         <translation>한 번 클릭으로 실행하기</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="51"/>
+        <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Style:</source>
         <translation>Qt 스타일:</translation>
     </message>

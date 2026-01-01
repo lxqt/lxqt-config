@@ -140,32 +140,32 @@
         <translation>기본 응용프로그램</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.ui" line="347"/>
+        <location filename="../mimetypeviewer.ui" line="335"/>
         <source>Web Browser</source>
         <translation>웹 브라우저</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.ui" line="412"/>
-        <location filename="../mimetypeviewer.ui" line="487"/>
-        <location filename="../mimetypeviewer.ui" line="562"/>
+        <location filename="../mimetypeviewer.ui" line="400"/>
+        <location filename="../mimetypeviewer.ui" line="475"/>
+        <location filename="../mimetypeviewer.ui" line="550"/>
         <source>Choose...</source>
         <translation>선택하기...</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.ui" line="422"/>
+        <location filename="../mimetypeviewer.ui" line="410"/>
         <source>Email Client</source>
         <translation>이메일 클라이언트</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.ui" line="497"/>
+        <location filename="../mimetypeviewer.ui" line="485"/>
         <source>File Manager</source>
         <translation>파일 관리자</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
-        <location filename="../mimetypeviewer.ui" line="396"/>
-        <location filename="../mimetypeviewer.ui" line="471"/>
-        <location filename="../mimetypeviewer.ui" line="546"/>
+        <location filename="../mimetypeviewer.ui" line="384"/>
+        <location filename="../mimetypeviewer.ui" line="459"/>
+        <location filename="../mimetypeviewer.ui" line="534"/>
         <source>None</source>
         <translation>없음</translation>
     </message>
@@ -187,9 +187,9 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="164"/>
         <location filename="../mimetypeviewer.ui" line="248"/>
-        <location filename="../mimetypeviewer.ui" line="389"/>
-        <location filename="../mimetypeviewer.ui" line="464"/>
-        <location filename="../mimetypeviewer.ui" line="539"/>
+        <location filename="../mimetypeviewer.ui" line="377"/>
+        <location filename="../mimetypeviewer.ui" line="452"/>
+        <location filename="../mimetypeviewer.ui" line="527"/>
         <source>Icon</source>
         <translation>아이콘</translation>
     </message>
