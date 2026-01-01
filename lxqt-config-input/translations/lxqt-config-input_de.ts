@@ -256,42 +256,52 @@ Maus, Touchpad und Tastatur können in den Einstellungen des Kompositors konfigu
         <translation>Beschleunigung:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap to click</source>
         <translation>Tippen zum Klicken</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Natural Scrolling</source>
         <translation>Natürlicher Bildlauf</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
+        <source>Disable while typing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="83"/>
         <source>Tap and drag</source>
         <translation>Tippen und ziehen</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="86"/>
+        <location filename="../touchpadconfig.ui" line="106"/>
+        <source>Drag lock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="133"/>
         <source>Scrolling:</source>
         <translation>Scrollen:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="156"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Deaktiviert</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Two-Finger</source>
         <translation>&amp; Zwei Finger</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>Ed&amp;ge</source>
         <translation>&amp;Rand</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="130"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>B&amp;utton</source>
         <translation>&amp;Taste</translation>
     </message>
@@ -301,7 +311,7 @@ Maus, Touchpad und Tastatur können in den Einstellungen des Kompositors konfigu
         <translation>Geräteinformationen</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="94"/>
+        <location filename="../touchpadconfig.cpp" line="100"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

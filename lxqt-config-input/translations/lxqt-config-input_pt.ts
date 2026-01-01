@@ -256,42 +256,52 @@ O rato, o touchpad e o teclado podem ser configurados nas definições do compos
         <translation>Velocidade de aceleração:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap to click</source>
         <translation>Toque para clicar</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Natural Scrolling</source>
         <translation>Deslocação natural</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
+        <source>Disable while typing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="83"/>
         <source>Tap and drag</source>
         <translation>Tocar e arrastar</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="86"/>
+        <location filename="../touchpadconfig.ui" line="106"/>
+        <source>Drag lock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="133"/>
         <source>Scrolling:</source>
         <translation>Deslocação:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="156"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Desativado</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Two-Finger</source>
         <translation>Dois d&amp;edos</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>Ed&amp;ge</source>
         <translation>&amp;Limite</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="130"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>B&amp;utton</source>
         <translation>B&amp;otão</translation>
     </message>
@@ -301,7 +311,7 @@ O rato, o touchpad e o teclado podem ser configurados nas definições do compos
         <translation>Etiqueta DeviceInfo</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="94"/>
+        <location filename="../touchpadconfig.cpp" line="100"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

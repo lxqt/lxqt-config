@@ -256,42 +256,52 @@ Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan komp
         <translation>Kecepatan akselerasi:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap to click</source>
         <translation>Ketuk untuk mengklik</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="60"/>
         <source>Natural Scrolling</source>
         <translation>Gulir Natural</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
+        <source>Disable while typing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="83"/>
         <source>Tap and drag</source>
         <translation>Ketuk dan seret</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="86"/>
+        <location filename="../touchpadconfig.ui" line="106"/>
+        <source>Drag lock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="133"/>
         <source>Scrolling:</source>
         <translation>Bergulir:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="109"/>
+        <location filename="../touchpadconfig.ui" line="156"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Dimatikan</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="116"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Two-Finger</source>
         <translation>&amp;Dua-Jari</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="123"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>Ed&amp;ge</source>
         <translation>Ping&amp;gir</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="130"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>B&amp;utton</source>
         <translation>T&amp;ombol</translation>
     </message>
@@ -301,7 +311,7 @@ Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan komp
         <translation>LabelInfoPerangkat</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="94"/>
+        <location filename="../touchpadconfig.cpp" line="100"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

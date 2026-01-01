@@ -100,6 +100,11 @@
         <translation>Estilo de suavização:</translation>
     </message>
     <message>
+        <location filename="../fontsconfig.ui" line="211"/>
+        <source>Monospace:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
@@ -164,27 +169,27 @@
 <context>
     <name>GTKConfig</name>
     <message>
-        <location filename="../gtkconfig.ui" line="44"/>
+        <location filename="../gtkconfig.ui" line="56"/>
         <source>GTK Style</source>
         <translation>Estilo do GTK</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="63"/>
+        <location filename="../gtkconfig.ui" line="75"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>Definir temas GTK (ficheiros de configuração GTK serão substituídos!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="105"/>
         <source>GTK 3 Theme:</source>
         <translation>Tema GTK 3:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="77"/>
+        <location filename="../gtkconfig.ui" line="89"/>
         <source>GTK 2 Theme:</source>
         <translation>Tema GTK 2:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="105"/>
+        <location filename="../gtkconfig.ui" line="117"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
@@ -304,161 +309,161 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
 <context>
     <name>StyleConfig</name>
     <message>
-        <location filename="../styleconfig.ui" line="33"/>
+        <location filename="../styleconfig.ui" line="45"/>
         <source>Widget Style</source>
         <translation>Estilo do widget</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="63"/>
+        <location filename="../styleconfig.ui" line="75"/>
         <source>Qt Palette</source>
         <translation>Paleta Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="77"/>
+        <location filename="../styleconfig.ui" line="89"/>
         <source>Some Qt styles may ignore these colors.</source>
         <translation>Alguns estilos Qt podem ignorar estas cores.</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="102"/>
+        <location filename="../styleconfig.ui" line="114"/>
         <source>Window:</source>
         <translation>Janela:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="112"/>
+        <location filename="../styleconfig.ui" line="124"/>
         <source>View:</source>
         <translation>Vista:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="122"/>
+        <location filename="../styleconfig.ui" line="134"/>
         <source>Selection:</source>
         <translation>Seleção:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="132"/>
+        <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
         <translation>Dica:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="146"/>
+        <location filename="../styleconfig.ui" line="158"/>
         <source>Link:</source>
         <translation>Ligação:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="166"/>
+        <location filename="../styleconfig.ui" line="178"/>
         <source>Window Text:</source>
         <translation>Texto da janela:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="176"/>
+        <location filename="../styleconfig.ui" line="188"/>
         <source>View Text:</source>
         <translation>Texto visualizado:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="186"/>
+        <location filename="../styleconfig.ui" line="198"/>
         <source>Selected Text:</source>
         <translation>Texto selecionado:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="196"/>
+        <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
         <translation>Texto da dica:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="210"/>
+        <location filename="../styleconfig.ui" line="222"/>
         <source>Visited Link:</source>
         <translation>Ligação visitada:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="242"/>
+        <location filename="../styleconfig.ui" line="254"/>
         <source>&amp;Save Palette</source>
         <translation>&amp;Guardar paleta</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="249"/>
+        <location filename="../styleconfig.ui" line="261"/>
         <source>&amp;Load Palette</source>
         <translation>&amp;Carregar paleta</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="281"/>
         <source>&amp;Default Palette</source>
         <translation>Paleta pa&amp;drão</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
-        <location filename="../styleconfig.ui" line="294"/>
-        <location filename="../styleconfig.ui" line="326"/>
-        <location filename="../styleconfig.ui" line="336"/>
-        <location filename="../styleconfig.ui" line="368"/>
+        <location filename="../styleconfig.ui" line="296"/>
+        <location filename="../styleconfig.ui" line="306"/>
+        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
         <translation>Pode ser substituído pelo estilo Qt ou pela aplicação</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="287"/>
+        <location filename="../styleconfig.ui" line="299"/>
         <source>Toolbar button style:</source>
         <translation>Estilo do botão da barra de ferramentas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="298"/>
+        <location filename="../styleconfig.ui" line="310"/>
         <source>Only display the icon</source>
         <translation>Mostrar apenas o ícone</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="303"/>
+        <location filename="../styleconfig.ui" line="315"/>
         <source>Only display the text</source>
         <translation>Mostrar apenas o texto</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="308"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>The text appears beside the icon</source>
         <translation>O texto aparece ao lado do ícone</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="313"/>
+        <location filename="../styleconfig.ui" line="325"/>
         <source>The text appears under the icon</source>
         <translation>O texto aparece abaixo do ícone</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="318"/>
+        <location filename="../styleconfig.ui" line="330"/>
         <source>Default</source>
         <translation>Padrão</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="329"/>
+        <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
         <translation>Tamanho dos ícones da barra de ferramentas:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="340"/>
+        <location filename="../styleconfig.ui" line="352"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="345"/>
+        <location filename="../styleconfig.ui" line="357"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="350"/>
+        <location filename="../styleconfig.ui" line="362"/>
         <source>24</source>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="355"/>
+        <location filename="../styleconfig.ui" line="367"/>
         <source>32</source>
         <translation>32</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="360"/>
+        <location filename="../styleconfig.ui" line="372"/>
         <source>48</source>
         <translation>48</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="371"/>
+        <location filename="../styleconfig.ui" line="383"/>
         <source>Activate item on single click</source>
         <translation>Ativar item com um único clique</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="51"/>
+        <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Style:</source>
         <translation>Estilo Qt:</translation>
     </message>

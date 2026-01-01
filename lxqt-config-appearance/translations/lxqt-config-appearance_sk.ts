@@ -100,6 +100,11 @@
         <translation>Štýl doladenia zobrazenia písma:</translation>
     </message>
     <message>
+        <location filename="../fontsconfig.ui" line="211"/>
+        <source>Monospace:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
@@ -164,27 +169,27 @@
 <context>
     <name>GTKConfig</name>
     <message>
-        <location filename="../gtkconfig.ui" line="44"/>
+        <location filename="../gtkconfig.ui" line="56"/>
         <source>GTK Style</source>
         <translation>Štýl GTK</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="63"/>
+        <location filename="../gtkconfig.ui" line="75"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
         <translation>Nastaviť tému GTK (konfiguračný súbor GTK bude prepísaný!)</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="93"/>
+        <location filename="../gtkconfig.ui" line="105"/>
         <source>GTK 3 Theme:</source>
         <translation>Téma GTK 3:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="77"/>
+        <location filename="../gtkconfig.ui" line="89"/>
         <source>GTK 2 Theme:</source>
         <translation>Téma GTK 2:</translation>
     </message>
     <message>
-        <location filename="../gtkconfig.ui" line="105"/>
+        <location filename="../gtkconfig.ui" line="117"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
@@ -304,161 +309,161 @@ Overte, či je nainštalovaný &quot;xsettingsd&quot;.</translation>
 <context>
     <name>StyleConfig</name>
     <message>
-        <location filename="../styleconfig.ui" line="33"/>
+        <location filename="../styleconfig.ui" line="45"/>
         <source>Widget Style</source>
         <translation>Štýl widgetu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="63"/>
+        <location filename="../styleconfig.ui" line="75"/>
         <source>Qt Palette</source>
         <translation>Paleta Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="77"/>
+        <location filename="../styleconfig.ui" line="89"/>
         <source>Some Qt styles may ignore these colors.</source>
         <translation>Niektoré štýly Qt môžu tieto farby ignorovať.</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="102"/>
+        <location filename="../styleconfig.ui" line="114"/>
         <source>Window:</source>
         <translation>Okno:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="112"/>
+        <location filename="../styleconfig.ui" line="124"/>
         <source>View:</source>
         <translation>Náhľad:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="122"/>
+        <location filename="../styleconfig.ui" line="134"/>
         <source>Selection:</source>
         <translation>Výber:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="132"/>
+        <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
         <translation>Popis:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="146"/>
+        <location filename="../styleconfig.ui" line="158"/>
         <source>Link:</source>
         <translation>Link:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="166"/>
+        <location filename="../styleconfig.ui" line="178"/>
         <source>Window Text:</source>
         <translation>Text okna:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="176"/>
+        <location filename="../styleconfig.ui" line="188"/>
         <source>View Text:</source>
         <translation>Zobraziť text:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="186"/>
+        <location filename="../styleconfig.ui" line="198"/>
         <source>Selected Text:</source>
         <translation>Vybrať text:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="196"/>
+        <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
         <translation>Text popisu:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="210"/>
+        <location filename="../styleconfig.ui" line="222"/>
         <source>Visited Link:</source>
         <translation>Navštíviť stránku:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="242"/>
+        <location filename="../styleconfig.ui" line="254"/>
         <source>&amp;Save Palette</source>
         <translation>&amp;Uložiť paletu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="249"/>
+        <location filename="../styleconfig.ui" line="261"/>
         <source>&amp;Load Palette</source>
         <translation>&amp;Načítať paletu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="269"/>
+        <location filename="../styleconfig.ui" line="281"/>
         <source>&amp;Default Palette</source>
         <translation>&amp;Vymazať paletu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="284"/>
-        <location filename="../styleconfig.ui" line="294"/>
-        <location filename="../styleconfig.ui" line="326"/>
-        <location filename="../styleconfig.ui" line="336"/>
-        <location filename="../styleconfig.ui" line="368"/>
+        <location filename="../styleconfig.ui" line="296"/>
+        <location filename="../styleconfig.ui" line="306"/>
+        <location filename="../styleconfig.ui" line="338"/>
+        <location filename="../styleconfig.ui" line="348"/>
+        <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
         <translation>Môže byť prepísaný štýlom alebo aplikáciou Qt</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="287"/>
+        <location filename="../styleconfig.ui" line="299"/>
         <source>Toolbar button style:</source>
         <translation>Štýl tlačidiel v nástrojovom panely:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="298"/>
+        <location filename="../styleconfig.ui" line="310"/>
         <source>Only display the icon</source>
         <translation>Zobraziť iba ikonu</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="303"/>
+        <location filename="../styleconfig.ui" line="315"/>
         <source>Only display the text</source>
         <translation>Zobraziť iba text</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="308"/>
+        <location filename="../styleconfig.ui" line="320"/>
         <source>The text appears beside the icon</source>
         <translation>Text vedľa ikony</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="313"/>
+        <location filename="../styleconfig.ui" line="325"/>
         <source>The text appears under the icon</source>
         <translation>Text pod ikonou</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="318"/>
+        <location filename="../styleconfig.ui" line="330"/>
         <source>Default</source>
         <translation>Preddefinované</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="329"/>
+        <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
         <translation>Veľkosť ikony panela s nástrojmi:</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="340"/>
+        <location filename="../styleconfig.ui" line="352"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="345"/>
+        <location filename="../styleconfig.ui" line="357"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="350"/>
+        <location filename="../styleconfig.ui" line="362"/>
         <source>24</source>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="355"/>
+        <location filename="../styleconfig.ui" line="367"/>
         <source>32</source>
         <translation>32</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="360"/>
+        <location filename="../styleconfig.ui" line="372"/>
         <source>48</source>
         <translation>48</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="371"/>
+        <location filename="../styleconfig.ui" line="383"/>
         <source>Activate item on single click</source>
         <translation>Aktivovať prvok jednoduchým kliknutím</translation>
     </message>
     <message>
-        <location filename="../styleconfig.ui" line="51"/>
+        <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Style:</source>
         <translation>Štýl Qt:</translation>
     </message>
