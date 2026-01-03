@@ -52,27 +52,28 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     connect(ui.tappingEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.naturalScrollingEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.disableWhileTypingCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
-    connect(ui.tapToDragEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
+    connect(ui.tapToDragEnabledCheckBox, &QGroupBox::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.dragLockEnabledCheckBox, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.accelSpeedDoubleSpinBox, &QDoubleSpinBox::valueChanged, this, &TouchpadConfig::settingsChanged);
     connect(ui.noScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.twoFingerScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.edgeScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.buttonScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
-    connect(ui.tapToDragEnabledCheckBox, &QCheckBox::toggled,ui.dragLockEnabledCheckBox, &QCheckBox::setEnabled);
-    ui.dragLockEnabledCheckBox->setEnabled(ui.tapToDragEnabledCheckBox->isChecked());
 }
 
 TouchpadConfig::~TouchpadConfig()
 {
 }
 
-void TouchpadConfig::initFeatureControl(QCheckBox* control, int featureEnabled)
+void TouchpadConfig::initFeatureControl(QWidget* control, int featureEnabled)
 {
     if (featureEnabled >= 0)
     {
         control->setEnabled(true);
-        control->setCheckState(featureEnabled ? Qt::Checked : Qt::Unchecked);
+        if (auto cb = qobject_cast<QCheckBox*>(control))
+            cb->setChecked(featureEnabled ? true : false);
+        else if (auto gb = qobject_cast<QGroupBox*>(control))
+            gb->setChecked(featureEnabled ? true : false);
     }
     else
     {
@@ -92,7 +93,7 @@ void TouchpadConfig::initControls()
     initFeatureControl(ui.naturalScrollingEnabledCheckBox, device.naturalScrollingEnabled());
     initFeatureControl(ui.disableWhileTypingCheckBox, device.disableWhileTypingEnabled());
     initFeatureControl(ui.tapToDragEnabledCheckBox, device.tapToDragEnabled());
-    ui.dragLockEnabledCheckBox->setEnabled(ui.tapToDragEnabledCheckBox->isChecked());
+    initFeatureControl(ui.dragLockEnabledCheckBox, device.dragLockEnabled());
 
     auto ok = device.xinputDriverSupported();
     if (!ok) {
@@ -198,35 +199,35 @@ void TouchpadConfig::applyConfig()
     bool acceptSetting = false;
     TouchpadDevice& device = devices[curDevice];
 
-    bool enable = ui.tappingEnabledCheckBox->checkState() == Qt::Checked;
+    bool enable = ui.tappingEnabledCheckBox->isChecked();
     if (enable != (device.tappingEnabled() > 0))
     {
         device.setTappingEnabled(enable);
         acceptSetting = true;
     }
 
-    enable = ui.naturalScrollingEnabledCheckBox->checkState() == Qt::Checked;
+    enable = ui.naturalScrollingEnabledCheckBox->isChecked();
     if (enable != (device.naturalScrollingEnabled() > 0))
     {
         device.setNaturalScrollingEnabled(enable);
         acceptSetting = true;
     }
 
-    enable = ui.disableWhileTypingCheckBox->checkState() == Qt::Checked;
+    enable = ui.disableWhileTypingCheckBox->isChecked();
     if (enable != (device.disableWhileTypingEnabled() > 0))
     {
         device.setDisableWhileTypingEnabled(enable);
         acceptSetting = true;
     }
 
-    enable = ui.tapToDragEnabledCheckBox->checkState() == Qt::Checked;
+    enable = ui.tapToDragEnabledCheckBox->isChecked();
     if (enable != (device.tapToDragEnabled() > 0))
     {
         device.setTapToDragEnabled(enable);
         acceptSetting = true;
     }
 
-    enable = ui.dragLockEnabledCheckBox->checkState() == Qt::Checked;
+    enable = ui.dragLockEnabledCheckBox->isChecked();
     if (enable != (device.dragLockEnabled() > 0))
     {
         device.setDragLockEnabled(enable);

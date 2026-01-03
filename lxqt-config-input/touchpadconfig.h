@@ -48,7 +48,7 @@ Q_SIGNALS:
 
 private:
     void initControls();
-    void initFeatureControl(QCheckBox* control, int featureEnabled);
+    void initFeatureControl(QWidget* control, int featureEnabled);
 
 private:
     LXQt::Settings* settings;
