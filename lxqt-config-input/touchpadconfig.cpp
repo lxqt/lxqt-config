@@ -59,7 +59,8 @@ TouchpadConfig::TouchpadConfig(LXQt::Settings* _settings, QWidget* parent):
     connect(ui.twoFingerScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.edgeScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
     connect(ui.buttonScrollingRadioButton, &QAbstractButton::clicked, this, &TouchpadConfig::settingsChanged);
-    connect(ui.tapToDragEnabledCheckBox, &QCheckBox::toggled,ui.dragLockEnabledCheckBox, &QCheckBox::setEnabled);
+
+    connect(ui.tapToDragEnabledCheckBox, &QCheckBox::toggled, ui.dragLockEnabledCheckBox, &QCheckBox::setEnabled);
 }
 
 TouchpadConfig::~TouchpadConfig()
