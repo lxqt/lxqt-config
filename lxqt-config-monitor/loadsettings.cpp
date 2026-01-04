@@ -16,9 +16,6 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
-
-
 #include "loadsettings.h"
 #include "kscreenutils.h"
 #include <KScreen/Output>
@@ -30,7 +27,6 @@
 #include <LXQt/Notification>
 #include <KScreen/EDID>
 #include <QCoreApplication>
-
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 {

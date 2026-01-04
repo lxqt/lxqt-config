@@ -24,7 +24,7 @@
 #include "timeoutdialog.h"
 
 #include <QDialog>
-#include <QTimer>
+
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
 

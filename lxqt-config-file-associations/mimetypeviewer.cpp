@@ -24,15 +24,12 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <QListWidgetItem>
-#include <QDebug>
+#include "mimetypeviewer.h"
+#include "ui_mimetypeviewer.h"
+
 #include <QIcon>
-#include <QPixmap>
-#include <QListWidget>
 #include <QMimeDatabase>
 #include <QMimeType>
-#include <QDateTime>
-#include <QFileInfo>
 
 #include <XdgDesktopFile>
 #include <XdgDefaultApps>
@@ -40,10 +37,6 @@
 #include <XdgDirs>
 
 #include <algorithm>
-
-#include "mimetypeviewer.h"
-#include "ui_mimetypeviewer.h"
-
 
 enum ItemTypeEntries {
     GroupType = 1001,

@@ -20,8 +20,9 @@
 #ifndef MOUSECONFIG_H
 #define MOUSECONFIG_H
 
-#include <QWidget>
 #include "ui_mouseconfig.h"
+
+#include <QWidget>
 
 namespace LXQt {
   class Settings;

@@ -16,12 +16,13 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <QJsonArray>
-#include <QJsonObject>
 #include "savesettings.h"
 #include "configure.h"
-#include <QDebug>
+
+#include <QJsonArray>
 #include <QJsonDocument>
+#include <QJsonObject>
+#include <QDebug>
 #include <QProcess>
 #include <QInputDialog>
 

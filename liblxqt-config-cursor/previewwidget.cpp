@@ -18,20 +18,16 @@
 /*
  * additional code: Ketmar // Vampire Avalon (psyc://ketmar.no-ip.org/~Ketmar)
  */
-#include <QDebug>
 
 #include <QPainter>
 #include <QMouseEvent>
+#include <QWindow>
 
 #include "previewwidget.h"
-
 #include "crtheme.h"
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
-
-#include <QWindow>
-#include <QGuiApplication>
 
 #include <algorithm>
 

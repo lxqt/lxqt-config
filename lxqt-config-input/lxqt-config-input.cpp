@@ -18,12 +18,6 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <LXQt/SingleApplication>
-#include <LXQt/ConfigDialog>
-#include <LXQt/ConfigDialogCmdLineOptions>
-#include <LXQt/Settings>
-#include <QCommandLineParser>
-#include <QMessageBox>
 #include "mouseconfig.h"
 #include "keyboardconfig.h"
 #include "../liblxqt-config-cursor/selectwnd.h"
@@ -34,6 +28,13 @@
 #include "touchpadconfig.h"
 #include "touchpaddevice.h"
 #endif
+
+#include <LXQt/SingleApplication>
+#include <LXQt/ConfigDialog>
+#include <LXQt/ConfigDialogCmdLineOptions>
+#include <LXQt/Settings>
+
+#include <QCommandLineParser>
 
 int main(int argc, char** argv) {
     LXQt::SingleApplication app(argc, argv);

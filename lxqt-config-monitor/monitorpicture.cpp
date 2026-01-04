@@ -17,6 +17,9 @@
  */
 
 #include "monitorpicture.h"
+#include "configure.h"
+
+#include <KScreen/Mode>
 
 #include <QFont>
 #include <QFontMetrics>
@@ -24,15 +27,12 @@
 #include <QDebug>
 #include <QVector2D>
 #include <QRectF>
-#include <KScreen/Mode>
 #include <QScrollBar>
 #include <QResizeEvent>
 #include <QTransform>
 
 #include <cmath>
 #include <algorithm>
-
-#include "configure.h"
 
 // Gets size from string rate. String rate format is "widthxheight". Example: 800x600
 static QSize sizeFromString(QString str)

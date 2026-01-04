@@ -18,6 +18,7 @@
 
 #include "settingsdialog.h"
 #include "managesavedsettings.h"
+
 #include <KScreen/Output>
 
 SettingsDialog::SettingsDialog(const QString &title, LXQt::Settings *settings, KScreen::ConfigPtr config, QWidget *parent)

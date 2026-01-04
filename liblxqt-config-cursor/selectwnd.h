@@ -13,7 +13,6 @@
 #ifndef SELECTWND_H
 #define SELECTWND_H
 
-#include <QObject>
 #include <QWidget>
 #include <QPersistentModelIndex>
 #include <lxqtglobals.h>

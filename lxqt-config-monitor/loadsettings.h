@@ -19,11 +19,11 @@
 #ifndef __LOADSETTINGS_H__
 #define __LOADSETTINGS_H__
 
+#include "monitor.h"
 
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
 #include <LXQt/Notification>
-#include "monitor.h"
 
 class LoadSettings : public QObject
 {

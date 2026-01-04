@@ -18,13 +18,12 @@
  *
  */
 
+#include "xrandrbrightness.h"
 
 #include <QGuiApplication>
 #include <QDebug>
 
 #include <algorithm>
-
-#include "xrandrbrightness.h"
 
 XRandrBrightness::XRandrBrightness()
 {

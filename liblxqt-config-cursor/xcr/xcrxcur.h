@@ -10,12 +10,12 @@
 #ifndef XCRXCUR_H
 #define XCRXCUR_H
 
-#include <QtCore>
+#include <QDir>
+#include <QString>
 #include <QCursor>
 #include <QPixmap>
 
 #include "xcrimg.h"
-
 
 class XCursorImageXCur : public XCursorImage {
 public:

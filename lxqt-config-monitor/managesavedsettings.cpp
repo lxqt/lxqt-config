@@ -21,10 +21,9 @@
 #include "loadsettings.h"
 #include "configure.h"
 #include "monitor.h"
-#include <QDebug>
+
 #include <QInputDialog>
 #include <QMessageBox>
-#include <QDateTime>
 
 Q_DECLARE_METATYPE(MonitorSavedSettings)
 

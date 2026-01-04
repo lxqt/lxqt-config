@@ -21,13 +21,13 @@
 #ifndef XRANDRBRIGHTNESS_H
 #define XRANDRBRIGHTNESS_H
 
+#include "monitorinfo.h"
+
 #include <xcb/xcb.h>
 #include <xcb/randr.h>
 
 #include <QScopedPointer>
 #include <QList>
-
-#include "monitorinfo.h"
 
 template <typename T> using ScopedCPointer = QScopedPointer<T, QScopedPointerPodDeleter>;
 

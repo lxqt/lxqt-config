@@ -16,16 +16,14 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
+#include "monitorsettingsdialog.h"
+#include "loadsettings.h"
+
+#include <QCommandLineParser>
+
 #include <LXQt/SingleApplication>
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
-#include <QDebug>
-#include <QProcess>
-#include <QStandardPaths>
-#include <QCommandLineParser>
-#include "monitorsettingsdialog.h"
-#include <QCoreApplication>
-#include "loadsettings.h"
 
 int main(int argc, char** argv)
 {

@@ -29,7 +29,6 @@
 
 #include <LXQt/Settings>
 #include <QStringList>
-#include <QStringBuilder>
 #include <QIcon>
 
 IconThemeConfig::IconThemeConfig(LXQt::Settings* settings, QWidget* parent):

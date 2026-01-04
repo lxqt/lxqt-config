@@ -32,18 +32,14 @@
 
 #include "qcategorizedview.h"
 #include "qcategorizedview_p.h"
-
-#include <cmath> // trunc on C99 compliant systems
-//#include <kdefakes.h> // trunc for not C99 compliant systems
-
-#include <QPainter>
-#include <QScrollBar>
-#include <QPaintEvent>
-
-#include <algorithm>
-
 #include "qcategorydrawer.h"
 #include "qcategorizedsortfilterproxymodel.h"
+
+#include <QPainter>
+#include <QPaintEvent>
+#include <QScrollBar>
+
+#include <algorithm>
 
 //BEGIN: Private part
 

@@ -18,13 +18,8 @@
 
 
 #include "keyboardconfig.h"
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+
 #include <LXQt/Settings>
-#include <QDir>
-#include <QFile>
-#include <QStringBuilder>
 
 // FIXME: how to support XCB or Wayland?
 #include <X11/Xlib.h>

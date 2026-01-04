@@ -23,9 +23,7 @@
 #include "ui_monitorwidget.h"
 
 #include <QGroupBox>
-#include <QStringList>
-#include <QHash>
-#include <QList>
+
 #include <KScreen/Config>
 #include <KScreen/Output>
 

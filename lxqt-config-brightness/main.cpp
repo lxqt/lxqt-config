@@ -18,13 +18,14 @@
 
 #include "xrandrbrightness.h"
 #include "brightnesswatcher.h"
+#include "brightnesssettings.h"
+
+#include <LXQt/SingleApplication>
 
 #include <QDebug>
 #include <QTimer>
-#include <LXQt/SingleApplication>
 #include <QCommandLineParser>
 #include <QMessageBox>
-#include "brightnesssettings.h"
 
 #include <iostream>
 #include <cmath>

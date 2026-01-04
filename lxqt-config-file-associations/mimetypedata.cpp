@@ -25,13 +25,11 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-
 #include "mimetypedata.h"
 
 MimeTypeData::MimeTypeData()
 {
 }
-
 
 MimeTypeData::MimeTypeData(const XdgMimeType& mime)
 {
@@ -39,7 +37,6 @@ MimeTypeData::MimeTypeData(const XdgMimeType& mime)
     mPatterns = mime.globPatterns().join(QStringLiteral(" "));
     mComment = mime.comment();
 }
-
 
 bool MimeTypeData::matches(const QString &filter) const
 {

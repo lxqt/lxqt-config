@@ -21,6 +21,7 @@
 #define TIMEOUTDIALOG_H
 
 #include "ui_timeoutdialog.h"
+
 #include <QDialog>
 #include <QTimer>
 

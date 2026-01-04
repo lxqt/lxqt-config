@@ -19,17 +19,14 @@
 #include "touchpadconfig.h"
 #include "touchpaddevice.h"
 
-#include <cmath>
-
-#include <QDebug>
 #include <QFile>
 #include <QString>
-#include <QUrl>
 
 #include <XdgDirs>
-
 #include <LXQt/AutostartEntry>
 #include <LXQt/Settings>
+
+#include <cmath>
 
 using namespace Qt::Literals::StringLiterals;
 

@@ -30,14 +30,12 @@
 #include <QWidget>
 #include <LXQt/Settings>
 
-class QTreeWidgetItem;
-class QSettings;
-
-
 namespace Ui {
     class LocaleConfig;
 }
 
+class QTreeWidgetItem;
+class QSettings;
 class QComboBox;
 class QMessageWidget;
 

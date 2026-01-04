@@ -24,7 +24,6 @@
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
 
-
 class SettingsDialog : public LXQt::ConfigDialog
 {
     Q_OBJECT

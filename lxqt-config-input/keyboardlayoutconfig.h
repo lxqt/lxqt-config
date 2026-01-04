@@ -21,7 +21,6 @@
 #ifndef KEYBOARDLAYOUTCONFIG_H
 #define KEYBOARDLAYOUTCONFIG_H
 
-#include <QtCore/QtGlobal>
 #ifdef Q_OS_LINUX
 #define XKBD_BASELIST_PATH "/usr/share/X11/xkb/rules/base.lst"
 #elif defined(Q_OS_FREEBSD)
@@ -32,10 +31,11 @@
 #define XKBD_BASELIST_PATH "/usr/local/share/X11/xkb/rules/base.lst"
 #endif
 
-#include <QWidget>
 #include "keyboardlayoutinfo.h"
-#include <QMap>
 #include "ui_keyboardlayoutconfig.h"
+
+#include <QWidget>
+#include <QMap>
 
 namespace LXQt {
   class Settings;

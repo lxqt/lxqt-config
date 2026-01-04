@@ -25,13 +25,11 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-
 #ifndef MIMETYPEDATA_H
 #define MIMETYPEDATA_H
 
 #include <XdgMimeType>
 #include <QMetaType>
-
 
 class MimeTypeData {
 public:

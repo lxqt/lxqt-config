@@ -7,11 +7,9 @@
 * the AUTHORS file for copyright and authorship information.
 */
 
-#include <QObject>
-#include <QDebug>
-
 #include "mimetypeitemmodel.h"
 #include <XdgMime>
+#include <QObject>
 
 /*
  * Implementation note:
@@ -28,7 +26,6 @@
  *
  * QModelIndexes for mediatypes have no parents, and QModelIndexes for subtypes have no children.
  */
-
 
 MimetypeItemModel::MimetypeItemModel(QObject *parent) :
 QAbstractItemModel(parent)

@@ -23,13 +23,9 @@
 #define CRTHEME_H
 
 #include <QApplication>
-#include <QCursor>
 #include <QDir>
-#include <QFile>
-#include <QIcon>
 #include <QImage>
 #include <QString>
-#include <QStringList>
 
 //#include <xcb/xcb.h>
 //#include <xcb/xproto.h>

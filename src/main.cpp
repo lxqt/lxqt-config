@@ -24,11 +24,12 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/SingleApplication>
-#include <QSettings>
 #include "mainwindow.h"
-#include "QCommandLineParser"
 
+#include <LXQt/SingleApplication>
+
+#include <QCommandLineParser>
+#include <QSettings>
 
 int main(int argc, char **argv)
 {

@@ -7,13 +7,12 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
+
 #ifndef MAIN_H
 #define MAIN_H
-
 
 #include "cfgfile.h"
 #include "crtheme.h"
 #include "selectwnd.h"
-
 
 #endif

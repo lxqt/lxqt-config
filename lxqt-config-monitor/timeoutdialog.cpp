@@ -20,10 +20,10 @@
 
 #define TIMER_DURATION 10
 
+#include "timeoutdialog.h"
+
 #include <QIcon>
 #include <QStyle>
-
-#include "timeoutdialog.h"
 
 TimeoutDialog::TimeoutDialog(QWidget* parent, Qt::WindowFlags f) :
     QDialog(parent, f)

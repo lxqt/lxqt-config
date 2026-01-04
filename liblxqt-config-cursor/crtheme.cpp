@@ -19,7 +19,6 @@
 /*
  * additional code: Ketmar // Vampire Avalon (psyc://ketmar.no-ip.org/~Ketmar)
  */
-#include <QDebug>
 
 #include "crtheme.h"
 #include "xcr/xcrimg.h"

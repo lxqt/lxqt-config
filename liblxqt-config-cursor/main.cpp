@@ -7,22 +7,13 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
-//#include <QtCore>
-#include <QDebug>
 
-#include <XdgIcon>
-#include <LXQt/Settings>
 #include "main.h"
 #include "lxqttranslate.h"
 
+#include <XdgIcon>
 #include <LXQt/Application>
-#include <QFile>
-#include <QImage>
-#include <QString>
-#include <QStringList>
-#include <QTextCodec>
-#include <QTextStream>
-
+#include <LXQt/Settings>
 
 ///////////////////////////////////////////////////////////////////////////////
 int main (int argc, char *argv[])

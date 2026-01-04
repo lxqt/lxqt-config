@@ -24,10 +24,6 @@
 
 #include <climits>
 
-#include <QItemSelection>
-#include <QStringList>
-#include <QSize>
-
 //#include <kstringhandler.h>
 
 int naturalCompare(const QString &_a, const QString &_b, Qt::CaseSensitivity caseSensitivity = Qt::CaseSensitive)

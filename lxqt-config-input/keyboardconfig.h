@@ -20,8 +20,9 @@
 #ifndef KEYBOARDCONFIG_H
 #define KEYBOARDCONFIG_H
 
-#include <QDialog>
 #include "ui_keyboardconfig.h"
+
+#include <QDialog>
 
 namespace LXQt {
   class Settings;

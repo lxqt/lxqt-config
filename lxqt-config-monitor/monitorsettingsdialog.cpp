@@ -29,20 +29,17 @@
 
 #include <KScreen/Output>
 #include <KScreen/Mode>
-#include <QJsonObject>
-#include <QJsonArray>
 #include <LXQt/Settings>
-#include <QJsonDocument>
 #include <KScreen/EDID>
+
 #include <QFile>
-#include <QDir>
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QDateTime>
 #include <QDebug>
 #include <QString>
-#include <lxqtautostartentry.h>
 
+#include <lxqtautostartentry.h>
 #include <XdgDirs>
 
 using namespace Qt::Literals::StringLiterals;

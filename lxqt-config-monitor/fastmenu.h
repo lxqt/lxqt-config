@@ -20,14 +20,8 @@
 #define _FASTMENU_H_
 
 #include "ui_fastmenu.h"
-
 #include <QGroupBox>
-#include <QStringList>
-#include <QHash>
-#include <QList>
 #include <KScreen/Config>
-
-
 
 class FastMenu : public QGroupBox
 {

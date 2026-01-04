@@ -30,13 +30,9 @@
 #include "localeconfig.h"
 #include "ui_localeconfig.h"
 
-#include <QApplication>
 #include <QComboBox>
-#include <QFile>
-#include <QDebug>
 #include <QLocale>
 #include <QStandardPaths>
-#include <QTextStream>
 #include <QDateTime>
 #include <QMessageBox>
 
