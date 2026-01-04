@@ -268,7 +268,7 @@ Mysz, touchpad i klawiaturę można skonfigurować w ustawieniach kompozytora.</
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłącz podczas pisania</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Mysz, touchpad i klawiaturę można skonfigurować w ustawieniach kompozytora.</
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokada przeciągania</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

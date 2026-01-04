@@ -268,7 +268,7 @@ Mouse, touchpad e tastiera possono essere configurati nelle impostazioni del com
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Disattiva durante la digitazione</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Mouse, touchpad e tastiera possono essere configurati nelle impostazioni del com
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocco trascinamento</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

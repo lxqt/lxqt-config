@@ -268,7 +268,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Lülita teksti sisestamisel välja</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohistamise lukustus</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

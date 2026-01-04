@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>等寬字型空間：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
