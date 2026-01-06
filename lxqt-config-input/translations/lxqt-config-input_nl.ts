@@ -268,7 +268,7 @@ Muis, touchpad en toetsenbord kunnen worden ingesteld in de instellingen van de 
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitschakelen tijdens typen</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Muis, touchpad en toetsenbord kunnen worden ingesteld in de instellingen van de 
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Sleepvergrendeling</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

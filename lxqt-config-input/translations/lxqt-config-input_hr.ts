@@ -268,7 +268,7 @@ Miš, dodirna ploča i tipkovnica se mogu konfigurirati u postavkama kompositora
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Deaktiviraj tijekom tipkanja</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Miš, dodirna ploča i tipkovnica se mogu konfigurirati u postavkama kompositora
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaključavanje povlačenjem</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>
