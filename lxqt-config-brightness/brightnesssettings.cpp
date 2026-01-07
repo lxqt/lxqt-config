@@ -50,13 +50,20 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
             [this](bool){ ui->backlightSlider->setValue(ui->backlightSlider->value()+1); });
     }
 
-    for(const MonitorInfo &monitor: std::as_const(mMonitors))
-    {
-        OutputWidget *output = new OutputWidget(monitor, this);
-        ui->layout->addWidget(output);
-        output->show();
-        connect(output, &OutputWidget::changed, this, &BrightnessSettings::monitorSettingsChanged);
-        connect(this, &BrightnessSettings::monitorReverted, output, &OutputWidget::setRevertedValues);
+    if (QGuiApplication::platformName() != QStringLiteral("xcb")) {
+        QLabel* notice = new QLabel(tr("Brightness is currently unsupported under Wayland."));
+        ui->layout->addWidget(notice, 0, Qt::AlignCenter);
+        notice->show();
+        ui->brightnessGroupBox->setEnabled(false);
+    }
+    else {
+        for(const MonitorInfo &monitor: std::as_const(mMonitors)) {
+            OutputWidget *output = new OutputWidget(monitor, this);
+            ui->layout->addWidget(output);
+            output->show();
+            connect(output, &OutputWidget::changed, this, &BrightnessSettings::monitorSettingsChanged);
+            connect(this, &BrightnessSettings::monitorReverted, output, &OutputWidget::setRevertedValues);
+        }
     }
 
     mConfirmRequestTimer.setSingleShot(true);

@@ -82,7 +82,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QGroupBox" name="brightnessGroupBox">
      <property name="title">
       <string>Brightness</string>
      </property>
