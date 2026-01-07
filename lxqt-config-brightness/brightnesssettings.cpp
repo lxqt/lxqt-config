@@ -51,7 +51,7 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     }
 
     if (QGuiApplication::platformName() != QStringLiteral("xcb")) {
-        QLabel* notice = new QLabel(tr("Brightness is currently unsupported under Wayland."));
+        QLabel* notice = new QLabel(tr("Currently unsupported under Wayland"));
         ui->layout->addWidget(notice, 0, Qt::AlignCenter);
         notice->show();
         ui->brightnessGroupBox->setEnabled(false);
