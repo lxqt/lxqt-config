@@ -40,12 +40,17 @@
         <translation>Zatraži potvrdu nakon mijenjanja postavki</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="115"/>
+        <location filename="../brightnesssettings.cpp" line="54"/>
+        <source>Currently unsupported under Wayland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightnesssettings.cpp" line="122"/>
         <source>Brightness settings changed</source>
         <translation>Postavke svjetline su promijenjene</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="116"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Potrebna je potvrda. Jesu li postavke ispravne?</translation>
     </message>

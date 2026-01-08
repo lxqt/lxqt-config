@@ -309,7 +309,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>ਡਿਵਾਈਸ-ਜਾਣਕਾਰੀ-ਲੇਬਲ</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="100"/>
+        <location filename="../touchpadconfig.cpp" line="102"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

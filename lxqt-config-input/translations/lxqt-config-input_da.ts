@@ -311,7 +311,7 @@ Mus, touchpad og tastatur kan konfigureres i kompositorens indstillinger.</trans
         <translation>DeviceInfoLabel</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="100"/>
+        <location filename="../touchpadconfig.cpp" line="102"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

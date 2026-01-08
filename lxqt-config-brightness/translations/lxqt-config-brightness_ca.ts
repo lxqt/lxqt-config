@@ -40,12 +40,17 @@
         <translation>Requereix la confirmació després de canviar els ajusts</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="115"/>
+        <location filename="../brightnesssettings.cpp" line="54"/>
+        <source>Currently unsupported under Wayland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightnesssettings.cpp" line="122"/>
         <source>Brightness settings changed</source>
         <translation>S&apos;han canviat els ajusts de la brillantor</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="116"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Cal confirmar. Són correctes els ajusts?</translation>
     </message>

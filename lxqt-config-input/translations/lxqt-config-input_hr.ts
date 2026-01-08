@@ -311,7 +311,7 @@ Miš, dodirna ploča i tipkovnica se mogu konfigurirati u postavkama kompositora
         <translation>Oznaka podataka uređaja</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="100"/>
+        <location filename="../touchpadconfig.cpp" line="102"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

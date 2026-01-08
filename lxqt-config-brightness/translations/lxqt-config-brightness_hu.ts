@@ -40,12 +40,17 @@
         <translation>A változtatáshoz megerősítés szükséges</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="115"/>
+        <location filename="../brightnesssettings.cpp" line="54"/>
+        <source>Currently unsupported under Wayland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightnesssettings.cpp" line="122"/>
         <source>Brightness settings changed</source>
         <translation>A fényerő beállítások megváltoztak</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="116"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Megerősítés szükséges. Megfelelőek a beállítások?</translation>
     </message>

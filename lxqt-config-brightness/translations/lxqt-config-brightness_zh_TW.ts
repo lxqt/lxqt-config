@@ -40,12 +40,17 @@
         <translation>在設定變更之後需要確認</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="115"/>
+        <location filename="../brightnesssettings.cpp" line="54"/>
+        <source>Currently unsupported under Wayland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightnesssettings.cpp" line="122"/>
         <source>Brightness settings changed</source>
         <translation>亮度設定已經變更</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="116"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>需要確認。此設定是否正確？</translation>
     </message>

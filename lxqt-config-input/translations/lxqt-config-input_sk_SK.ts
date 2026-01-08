@@ -311,7 +311,7 @@ Myš, touchpad a klávesnicu možno nastaviť v nastaveniach kompozitora.</trans
         <translation>Informácia o zariadení</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="100"/>
+        <location filename="../touchpadconfig.cpp" line="102"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

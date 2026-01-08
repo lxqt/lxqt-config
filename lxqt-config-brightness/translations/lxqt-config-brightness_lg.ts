@@ -40,12 +40,17 @@
         <translation>Enkyukakyuka zetaage okukaksibwa</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="115"/>
+        <location filename="../brightnesssettings.cpp" line="54"/>
+        <source>Currently unsupported under Wayland</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightnesssettings.cpp" line="122"/>
         <source>Brightness settings changed</source>
         <translation>Enteekateeka ez&apos;okwakayakana zikyusidwa</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="116"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Kyetaagisa kukakasibwa. Enteekateeka ntuufu?</translation>
     </message>

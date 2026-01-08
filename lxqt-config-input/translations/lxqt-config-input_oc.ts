@@ -311,7 +311,7 @@ La mirga, lo pavat tactil e lo clavièr se pòdon configurar dins los paramètre
         <translation>Etiqueta d’informacions del periferic</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="100"/>
+        <location filename="../touchpadconfig.cpp" line="102"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 

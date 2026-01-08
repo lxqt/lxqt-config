@@ -311,7 +311,7 @@ Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan komp
         <translation>LabelInfoPerangkat</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.cpp" line="100"/>
+        <location filename="../touchpadconfig.cpp" line="102"/>
         <source>LXQt only supports &quot;libinput&quot; as xinput driver.
 (current value: %1)
 
