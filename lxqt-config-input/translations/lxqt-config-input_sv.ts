@@ -268,7 +268,7 @@ Mus, pekplatta och tangentbord kan konfigureras i kompositörens inställningar.
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Inaktivera när du skriver</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Mus, pekplatta och tangentbord kan konfigureras i kompositörens inställningar.
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Draglås</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>
