@@ -88,7 +88,7 @@ public:
     {
         QString menuFile = XdgMenu::getMenuFileName(QStringLiteral("config.menu"));
         XdgMenu xdgMenu;
-        xdgMenu.setEnvironments(QStringList() << QStringLiteral("X-LXQT") << QStringLiteral("LXQt") << QStringLiteral("LXDE"));
+        xdgMenu.setEnvironments(QStringList() << QStringLiteral("X-LXQT") << QStringLiteral("LXQt"));
         bool res = xdgMenu.read(menuFile);
         if (!res)
         {
