@@ -212,7 +212,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
     <message>
         <location filename="../lxqt-config-input.cpp" line="125"/>
         <source>Keyboard Layout</source>
-        <translation>Klaviatuuri paigutus</translation>
+        <translation>Klahvistiku paigutus</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="138"/>
@@ -230,7 +230,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="20"/>
         <source>Keyboard layout</source>
-        <translation>Klaviatuuri paigutus</translation>
+        <translation>Klahvistiku paigutus</translation>
     </message>
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
@@ -258,7 +258,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Tap to click</source>
-        <translation>Klõpsamiseks koputa</translation>
+        <translation>Klõpsamiseks puuduta</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="60"/>

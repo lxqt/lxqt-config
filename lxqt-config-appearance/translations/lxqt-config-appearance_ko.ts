@@ -77,12 +77,12 @@
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Italic</source>
-        <translation>기울게</translation>
+        <translation>기울임꼴</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold Italic</source>
-        <translation>굵고 기울게</translation>
+        <translation>굵은 기울임꼴</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>글꼴에 안티앨리어싱 사용하기</translation>
+        <translation>안티앨리어스 글꼴 사용하기</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="153"/>
@@ -102,18 +102,18 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>고정폭:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
-        <translation>사용 안 함</translation>
+        <translation>없음</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
-        <translation>엷게</translation>
+        <translation>약하게</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="174"/>

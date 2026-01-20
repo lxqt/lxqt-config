@@ -268,7 +268,7 @@ Nastavování myši, touchpadu a klávesnice je možné provádět v nastavení 
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout při psaní</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Nastavování myši, touchpadu a klávesnice je možné provádět v nastavení 
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Zámek přetahování</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

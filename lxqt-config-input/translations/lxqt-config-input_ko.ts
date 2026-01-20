@@ -87,7 +87,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="53"/>
         <source>Variant</source>
-        <translation>변형</translation>
+        <translation>종류</translation>
     </message>
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="63"/>
@@ -235,7 +235,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../selectkeyboardlayoutdialog.ui" line="27"/>
         <source>Variant</source>
-        <translation>변형</translation>
+        <translation>종류</translation>
     </message>
 </context>
 <context>
@@ -268,17 +268,17 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>입력하는 동안 비활성화</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
         <source>Tap and drag</source>
-        <translation>탭하여 드래그</translation>
+        <translation>탭하고 드래그</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>드래그 잠금</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

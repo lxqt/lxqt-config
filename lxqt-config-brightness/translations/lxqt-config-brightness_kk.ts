@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="kk">
 <context>
     <name>BrightnessSettings</name>
     <message>
         <location filename="../brightnesssettings.ui" line="14"/>
         <source>Brightness Settings</source>
-        <translation>Nastavení jasu</translation>
+        <translation>Жарықтылық баптаулары</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="35"/>
@@ -17,12 +17,12 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení podsvícení a jasu:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Артқы жарық және жарықтылық баптаулары:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation>Podsvícení</translation>
+        <translation>Артқы жарық</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
@@ -32,27 +32,27 @@
     <message>
         <location filename="../brightnesssettings.ui" line="87"/>
         <source>Brightness</source>
-        <translation>Jas</translation>
+        <translation>Жарықтылық</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="105"/>
         <source>Require confirmation after settings change</source>
-        <translation>Po změně nastavení vyžadovat potvrzení</translation>
+        <translation>Баптаулар өзгергеннен кейін растауды талап ету</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="54"/>
         <source>Currently unsupported under Wayland</source>
-        <translation>Při provozování nad Wayland prozatím nepodporováno</translation>
+        <translation>Қазіргі уақытта Wayland ортасында қолдау көрсетілмейді</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="122"/>
         <source>Brightness settings changed</source>
-        <translation>Nastavení jasu změněno</translation>
+        <translation>Жарықтылық баптаулары өзгертілді</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Je třeba potvrdit. Jsou nastavení v pořádku?</translation>
+        <translation>Растау қажет. Баптаулар дұрыс па?</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Výstup:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Шығыс:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="48"/>
@@ -78,32 +78,32 @@
     <message>
         <location filename="../main.cpp" line="70"/>
         <source>Increase brightness.</source>
-        <translation>Zvýšit jas.</translation>
+        <translation>Жарықтылықты арттыру.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="72"/>
         <source>Decrease brightness.</source>
-        <translation>Snížit jas.</translation>
+        <translation>Жарықтылықты азайту.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation>Nastavte jas od 1 do 100.</translation>
+        <translation>Жарықтылықты 1-ден 100-ге дейін орнату.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
-        <translation>Vrátit nastavení gamma na výchozí hodnotu.</translation>
+        <translation>Гамманы әдепкі мәнге ысыру.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation>%1: Nelze použít zvýšení/snížení a přímé nastavení dohromady</translation>
+        <translation>%1: арттыру/азайту және орнату опцияларын бірге қолдануға болмайды</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation>%1: Voleb pro zvýšení a snížení nelze použít naráz</translation>
+        <translation>%1: арттыру және азайту опцияларын бірге қолдануға болмайды</translation>
     </message>
 </context>
 </TS>

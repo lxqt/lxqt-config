@@ -268,7 +268,7 @@ O rato, o touchpad e o teclado podem ser configurados nas definições do compos
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Desativar enquanto digita</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ O rato, o touchpad e o teclado podem ser configurados nas definições do compos
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloqueio de arrastar</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>

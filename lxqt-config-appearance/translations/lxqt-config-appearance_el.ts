@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Σταθερού πλάτους:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
