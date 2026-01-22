@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Monospace:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -235,7 +235,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan palet yang disediakan oleh tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -340,7 +340,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tooltip:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="158"/>
@@ -365,7 +365,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks Tooltip:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="222"/>
@@ -394,7 +394,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
         <location filename="../styleconfig.ui" line="348"/>
         <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Dapat ditimpa oleh gaya Qt atau aplikasi</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="299"/>
@@ -429,27 +429,27 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran ikon bilah alat:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="352"/>
         <source>16</source>
-        <translation type="unfinished">16</translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="357"/>
         <source>22</source>
-        <translation type="unfinished">22</translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="362"/>
         <source>24</source>
-        <translation type="unfinished">24</translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="367"/>
         <source>32</source>
-        <translation type="unfinished">32</translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="372"/>

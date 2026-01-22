@@ -170,7 +170,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan pengaturan kompositor Wayland untuk opsi lainnya tentang mouse, touchpad, dan papan ketik.</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@ Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan komp
     <message>
         <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Untuk menerapkan perubahan juga ke GTK, centang Konfigurasi Tampilan LXQt → Gaya GTK.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="114"/>
@@ -268,7 +268,7 @@ Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan komp
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nonaktifkan saat mengetik</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Tetikus, alas sentuh dan papan tik dapat dikonfigurasi di dalam penganturan komp
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunci seret</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>
