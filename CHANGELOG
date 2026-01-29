@@ -5,9 +5,9 @@ lxqt-config-2.3.1 / 2026-01-29
  * Added draglock and disable-while-typing settings for X11.
  * Added unsupported notice for brightness on Wayland to lxqt-config-brightness.
  * Gave parent to advanced settings dialog of monitor dialog.
- * Remove unneeded .ui <hints> tags.
+ * Removed unneeded .ui <hints> tags.
  * Added missing colons to labels of lxqt-config-input.
- * Restore margins of Default Applications page.
+ * Restored margins of Default Applications page.
 
 lxqt-config-2.3.0 / 2025-11-05
 ===============================
