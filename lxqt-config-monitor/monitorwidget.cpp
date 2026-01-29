@@ -146,7 +146,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     ui.yPosSpinBox->setValue(output->pos().y());
 
     // Behavior chooser
-    if (output->isPrimary())
+    if (config->primaryOutput() == output)
         ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
     else
         ui.behaviorCombo->setCurrentIndex(ExtendDisplay);

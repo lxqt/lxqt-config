@@ -193,7 +193,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
         monitor.connected = output->isConnected();
         if ( output->isConnected() ) {
             monitor.enabled = output->isEnabled();
-            monitor.primary = output->isPrimary();
+            monitor.primary = (config->primaryOutput() == output);
             monitor.xPos = output->pos().x();
             monitor.yPos = output->pos().y();
             monitor.currentMode = output->currentModeId();
