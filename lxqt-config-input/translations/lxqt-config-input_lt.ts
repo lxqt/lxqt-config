@@ -268,7 +268,7 @@ Pelė, jutiklinis kilimėlis ir klaviatūra gali būti sukonfigūruoti kompozito
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti renkant tekstą</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
@@ -278,7 +278,7 @@ Pelė, jutiklinis kilimėlis ir klaviatūra gali būti sukonfigūruoti kompozito
     <message>
         <location filename="../touchpadconfig.ui" line="106"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempimo užraktas</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="133"/>
