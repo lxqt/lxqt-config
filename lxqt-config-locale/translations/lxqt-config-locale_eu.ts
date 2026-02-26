@@ -41,12 +41,12 @@
     <message>
         <location filename="../localeconfig.ui" line="226"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>Adibideak</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="238"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zenbakiak:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="258"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../localeconfig.ui" line="309"/>
         <source>Measurement Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neurketa unitateak:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="164"/>
         <source>Unset</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezarri gabe</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="370"/>
         <source>Format Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Formatuaren ezarpenak aldatu dira</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="371"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="526"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metrika</translation>
     </message>
 </context>
 <context>
