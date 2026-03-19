@@ -14,31 +14,38 @@
    <string>TouchpadConfig </string>
   </property>
   <layout class="QFormLayout" name="formLayout">
-   <item row="0" column="0">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Device:</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="1">
+   <item row="1" column="1">
     <widget class="QComboBox" name="devicesComboBox"/>
    </item>
-   <item row="1" column="1">
+   <item row="2" column="1">
     <widget class="QLabel" name="deviceInfoLabel">
      <property name="text">
       <string>DeviceInfoLabel</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item row="3" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>Acceleration speed:</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="3" column="1">
     <widget class="QDoubleSpinBox" name="accelSpeedDoubleSpinBox">
      <property name="decimals">
       <number>2</number>
@@ -54,28 +61,28 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="2">
+   <item row="4" column="0" colspan="2">
     <widget class="QCheckBox" name="naturalScrollingEnabledCheckBox">
      <property name="text">
       <string>Natural Scrolling</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="2">
+   <item row="5" column="0" colspan="2">
     <widget class="QCheckBox" name="disableWhileTypingCheckBox">
      <property name="text">
       <string>Disable while typing</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="0" colspan="2">
+   <item row="6" column="0" colspan="2">
     <widget class="QCheckBox" name="tappingEnabledCheckBox">
      <property name="text">
       <string>Tap to click</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="0" colspan="2">
+   <item row="7" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QCheckBox" name="tapToDragEnabledCheckBox">
@@ -122,7 +129,7 @@
      </item>
     </layout>
    </item>
-   <item row="7" column="0" colspan="2">
+   <item row="8" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <property name="spacing">
       <number>10</number>
