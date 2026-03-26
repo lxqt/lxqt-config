@@ -35,13 +35,6 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string>Short</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
        <widget class="QSlider" name="keyboardDelay">
         <property name="minimum">
          <number>100</number>
@@ -63,14 +56,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="label_12">
-        <property name="text">
-         <string>Long</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="4">
+      <item row="0" column="2">
        <widget class="QLabel" name="label_delay">
         <property name="text">
          <string>0</string>
@@ -85,13 +71,6 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLabel" name="label_11">
-        <property name="text">
-         <string>Short</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
        <widget class="QSlider" name="keyboardInterval">
         <property name="minimum">
          <number>10</number>
@@ -110,28 +89,21 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="3">
-       <widget class="QLabel" name="label_13">
-        <property name="text">
-         <string>Long</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="4">
+      <item row="2" column="2">
        <widget class="QLabel" name="label_interval">
         <property name="text">
          <string>0</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0" colspan="4">
+      <item row="3" column="0" colspan="3">
        <widget class="QLabel" name="label_9">
         <property name="text">
          <string>Type in the following box to test your keyboard settings:</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="0" colspan="4">
+      <item row="4" column="0" colspan="3">
        <widget class="QLineEdit" name="lineEdit"/>
       </item>
      </layout>
