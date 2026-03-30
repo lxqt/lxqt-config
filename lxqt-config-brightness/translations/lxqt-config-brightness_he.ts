@@ -42,7 +42,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="54"/>
         <source>Currently unsupported under Wayland</source>
-        <translation type="unfinished"></translation>
+        <translation>לא נתמך כרגע תחת Wayland</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="122"/>
