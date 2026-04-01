@@ -26,6 +26,8 @@
 #include "selectkeyboardlayoutdialog.h"
 #include <LXQt/Settings>
 
+#include <utility>
+
 KeyboardLayoutConfig::KeyboardLayoutConfig(LXQt::Settings* _settings, QWidget* parent):
   QWidget(parent),
   settings(_settings),
@@ -86,7 +88,7 @@ void KeyboardLayoutConfig::loadSettings() {
     const int size = layouts.size(), variantsSize = variants.size();
     for(int i = 0; i < size; ++i) {
       // Note: there can be fewer variants than layouts configured
-      currentLayouts_.append(QPair<QString, QString>(QString::fromUtf8(layouts.at(i)), i < variantsSize ? QString::fromUtf8(variants.at(i)) : QString()));
+      currentLayouts_.append(std::pair<QString, QString>(QString::fromUtf8(layouts.at(i)), i < variantsSize ? QString::fromUtf8(variants.at(i)) : QString()));
     }
 
     setxkbmap.close();
@@ -165,7 +167,7 @@ void KeyboardLayoutConfig::loadLists() {
 }
 
 void KeyboardLayoutConfig::initControls() {
-  QList<QPair<QString, QString> >::iterator it;
+  QList<std::pair<QString, QString> >::iterator it;
   for(it = currentLayouts_.begin(); it != currentLayouts_.end(); ++it) {
     QString name = it->first;
     QString variant = it->second;

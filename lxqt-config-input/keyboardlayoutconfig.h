@@ -37,6 +37,8 @@
 #include <QMap>
 #include "ui_keyboardlayoutconfig.h"
 
+#include <utility>
+
 namespace LXQt {
   class Settings;
 }
@@ -70,7 +72,7 @@ private:
   QString keyboardModel_;
   QString switchKey_;
   QStringList currentOptions_;
-  QList<QPair<QString, QString> > currentLayouts_;
+  QList<std::pair<QString, QString>> currentLayouts_;
   QMap<QString, KeyboardLayoutInfo> knownLayouts_;
   LXQt::Settings* settings;
   bool applyConfig_;
