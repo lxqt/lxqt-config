@@ -22,6 +22,8 @@
 #ifndef KCATEGORIZEDVIEW_P_H
 #define KCATEGORIZEDVIEW_P_H
 
+#include <utility>
+
 class QCategorizedSortFilterProxyModel;
 class QCategoryDrawer;
 class QCategoryDrawerV2;
@@ -57,7 +59,7 @@ public:
       *
       * Complexity: O(log(n)) where n is model()->rowCount().
       */
-    QPair<QModelIndex, QModelIndex> intersectingIndexesWithRect(const QRect &rect) const;
+    std::pair<QModelIndex, QModelIndex> intersectingIndexesWithRect(const QRect &rect) const;
 
     /**
       * Returns the position of the block of @p category.

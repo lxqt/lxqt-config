@@ -41,6 +41,7 @@
 #include <QPaintEvent>
 
 #include <algorithm>
+#include <utility>
 
 #include "qcategorydrawer.h"
 #include "qcategorizedsortfilterproxymodel.h"
@@ -149,7 +150,7 @@ QStyleOptionViewItem QCategorizedView::Private::blockRect(const QModelIndex &rep
     return option;
 }
 
-QPair<QModelIndex, QModelIndex> QCategorizedView::Private::intersectingIndexesWithRect(const QRect &_rect) const
+std::pair<QModelIndex, QModelIndex> QCategorizedView::Private::intersectingIndexesWithRect(const QRect &_rect) const
 {
     const int rowCount = proxyModel->rowCount();
 
@@ -207,7 +208,7 @@ QPair<QModelIndex, QModelIndex> QCategorizedView::Private::intersectingIndexesWi
 
     const QModelIndex topIndex = proxyModel->index(top, q->modelColumn(), q->rootIndex());
 
-    return qMakePair(bottomIndex, topIndex);
+    return std::make_pair(bottomIndex, topIndex);
 }
 
 QPoint QCategorizedView::Private::blockPosition(const QString &category)
@@ -810,7 +811,7 @@ void QCategorizedView::paintEvent(QPaintEvent *event)
         return;
     }
 
-    const QPair<QModelIndex, QModelIndex> intersecting = d->intersectingIndexesWithRect(viewport()->rect().intersected(event->rect()));
+    const std::pair<QModelIndex, QModelIndex> intersecting = d->intersectingIndexesWithRect(viewport()->rect().intersected(event->rect()));
 
     QPainter p(viewport());
     p.save();
@@ -937,7 +938,7 @@ void QCategorizedView::setSelection(const QRect &rect,
         return;
     }
 
-    const QPair<QModelIndex, QModelIndex> intersecting = d->intersectingIndexesWithRect(rect);
+    const std::pair<QModelIndex, QModelIndex> intersecting = d->intersectingIndexesWithRect(rect);
 
     QItemSelection selection;
 
