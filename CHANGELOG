@@ -1,3 +1,7 @@
+lxqt-config-2.3.2 / 2026-04-02
+===============================
+ * Fixed too strict parsing of icon themes with Qt6.11
+
 lxqt-config-2.3.1 / 2026-01-29
 ===============================
  * Updated the code for kscreen 6.6.
