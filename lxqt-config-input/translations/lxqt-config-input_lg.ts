@@ -269,7 +269,7 @@ Enteekateeka ez&apos;akasongesebwa aka bulijjo n&apos;akasiisirizibwa ne ez&apos
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Siba nga owandika</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="83"/>
