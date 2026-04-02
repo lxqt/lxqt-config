@@ -49,8 +49,13 @@ void IconThemeInfo::load(const QString &fileName)
     mFileName = fileName;
     mValid = false;
     QSettings file(mFileName, QSettings::IniFormat);
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
+    // Qt 6.11+ has overly strict INI parsing that causes false positives
+#else
     if (file.status() != QSettings::NoError)
         return;
+#endif
 
     if (file.value(QStringLiteral("Icon Theme/Directories")).toStringList().join(QLatin1Char(' ')).isEmpty())
         return;
