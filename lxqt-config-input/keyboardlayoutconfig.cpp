@@ -19,6 +19,7 @@
  */
 
 #include "keyboardlayoutconfig.h"
+#include <QMessageBox>
 #include <QProcess>
 #include <QFile>
 #include <QHash>
@@ -58,6 +59,13 @@ void KeyboardLayoutConfig::loadSettings() {
   QProcess setxkbmap;
   setxkbmap.start(QLatin1String("setxkbmap"), QStringList() << QLatin1String("-query")
     << QLatin1String("-verbose") << QLatin1String("5"));
+
+  if(!setxkbmap.waitForStarted(TimeoutSetXkbMap_msec) || setxkbmap.error() == QProcess::FailedToStart)
+  {
+    warnSetXkbMapNotFound();
+    return;
+  }
+
   setxkbmap.waitForFinished();
   if(setxkbmap.exitStatus() == QProcess::NormalExit) {
     QList<QByteArray> layouts, variants;
@@ -205,6 +213,12 @@ void KeyboardLayoutConfig::addLayout(QString name, QString variant) {
   ui.layouts->addTopLevelItem(item);
 }
 
+void KeyboardLayoutConfig::warnSetXkbMapNotFound()
+{
+  QMessageBox::warning(this, tr("Command Not Found"),
+                       tr("<b>setxkbmap</b> command was not found. Make sure it's installed."));
+}
+
 void KeyboardLayoutConfig::reset() {
   applyConfig_ = true;
   ui.layouts->clear();
@@ -217,14 +231,22 @@ void KeyboardLayoutConfig::applyConfig() {
     return;
   applyConfig_ = false;
 
+  const QString program = QStringLiteral("setxkbmap");
+
   // call setxkbmap to apply the changes
   QProcess setxkbmap;
   // clear existing options
-  setxkbmap.start(QStringLiteral("setxkbmap"), QStringList() << QStringLiteral("-option"));
+  setxkbmap.start(program, QStringList() << QStringLiteral("-option"));
+
+  if(!setxkbmap.waitForStarted(TimeoutSetXkbMap_msec) || setxkbmap.error() == QProcess::FailedToStart)
+  {
+    warnSetXkbMapNotFound();
+    return;
+  }
+
   setxkbmap.waitForFinished();
   setxkbmap.close();
 
-  const QString program = QStringLiteral("setxkbmap");
   QStringList args;
   // set keyboard model
   QString model;
@@ -277,6 +299,13 @@ void KeyboardLayoutConfig::applyConfig() {
   // execute the command line
   setxkbmap.start(program, args);
   setxkbmap.waitForFinished();
+  if(setxkbmap.exitCode() != 0)
+  {
+    QMessageBox::warning(this, tr("Command Failed"),
+                         tr("<b>setxkbmap</b> error: <br>"
+                            "%1").arg(QString::fromLocal8Bit(setxkbmap.readAllStandardError())));
+    return;
+  }
 
   // save to lxqt-session config file.
   settings->beginGroup(QStringLiteral("Keyboard"));
