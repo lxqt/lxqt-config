@@ -51,8 +51,12 @@ KeyboardConfig::KeyboardConfig(LXQt::Settings* _settings, QSettings* _qtSettings
   loadSettings();
   initControls();
 
-  connect(ui.keyboardDelay, &QAbstractSlider::valueChanged, ui.label_delay, QOverload<int>::of(&QLabel::setNum));
-  connect(ui.keyboardInterval, &QAbstractSlider::valueChanged, ui.label_interval, QOverload<int>::of(&QLabel::setNum));
+  connect(ui.keyboardDelay, &QAbstractSlider::valueChanged, ui.label_delay, [this](int val) {
+    ui.label_delay->setText(QString::number(val) + tr(" ms"));
+  });
+  connect(ui.keyboardInterval, &QAbstractSlider::valueChanged, ui.label_interval, [this](int val) {
+    ui.label_interval->setText(QString::number(val) + tr(" ms"));
+  });
 
   // set_range_stops(ui.keyboardDelay, 10);
   connect(ui.keyboardDelay, &QAbstractSlider::valueChanged, this, &KeyboardConfig::settingsChanged);
@@ -77,12 +81,12 @@ KeyboardConfig::~KeyboardConfig() {
 void KeyboardConfig::initControls() {
   ui.keyboardDelay->blockSignals(true);
   ui.keyboardDelay->setValue(delay);
-  ui.label_delay->setNum(delay);
+  ui.label_delay->setText(QString::number(delay) + tr(" ms"));
   ui.keyboardDelay->blockSignals(false);
 
   ui.keyboardInterval->blockSignals(true);
   ui.keyboardInterval->setValue(interval);
-  ui.label_interval->setNum(interval);
+  ui.label_interval->setText(QString::number(interval) + tr(" ms"));
   ui.keyboardInterval->blockSignals(false);
 
   ui.keyboardBeep->setChecked(beep);
