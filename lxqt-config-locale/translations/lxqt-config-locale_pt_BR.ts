@@ -109,4 +109,7 @@
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
-     
+        <translation>Configurações de Localização</translation>
+    </message>
+</context>
+</TS>
