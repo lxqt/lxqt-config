@@ -9,7 +9,7 @@
         <translation>ਫਾਰਮ</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="115"/>
         <source>Cursor flash time:</source>
         <translation>ਕਰਸਰ ਫਲੈਸ਼ ਟਾਈਮ:</translation>
     </message>
@@ -19,12 +19,16 @@
         <translation>&lt;b&gt;ਕੀਬੋਰਡ&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="160"/>
+        <location filename="../keyboardconfig.ui" line="132"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>ਜਦੋਂ ਵੀ ਕੀਬੋਰਡ ਇਨਪੁੱਟ ਦੀ ਗਲਤੀ ਹੋਵੇ ਤਾਂ ਬੀਪ ਦੀ ਆਵਾਜ਼</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
+        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.cpp" line="55"/>
+        <location filename="../keyboardconfig.cpp" line="58"/>
+        <location filename="../keyboardconfig.cpp" line="84"/>
+        <location filename="../keyboardconfig.cpp" line="89"/>
         <source> ms</source>
         <translation> ਮਿ.ਸ.</translation>
     </message>
@@ -34,40 +38,28 @@
         <translation>ਅੱਖਰ ਦੁਹਰਾਓ</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="69"/>
-        <location filename="../keyboardconfig.ui" line="116"/>
-        <source>Long</source>
-        <translation>ਲੰਮਾ</translation>
-    </message>
-    <message>
         <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>ਦੁਹਰਾਉਣ ਲਈ ਦੇਰੀ:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="40"/>
-        <location filename="../keyboardconfig.ui" line="90"/>
-        <source>Short</source>
-        <translation>ਥੋੜ੍ਹੀ</translation>
-    </message>
-    <message>
-        <location filename="../keyboardconfig.ui" line="83"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
         <source>Repeat interval:</source>
         <translation>ਦੁਹਰਾਉਣ ਦਾ ਅੰਤਰਾਲ:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="130"/>
+        <location filename="../keyboardconfig.ui" line="102"/>
         <source>Type in the following box to test your keyboard settings:</source>
         <translation>ਆਪਣੀਆਂ ਕੀਬੋਰਡ ਸੈਟਿੰਗਾਂ ਨੂੰ ਟੈਸਟ ਕਰਨ ਲਈ ਅੱਗੇ ਦਿੱਤੇ ਬਾਕਸ ਵਿੱਚ ਲਿਖ ਕੇ ਵੇਖੋ:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="76"/>
-        <location filename="../keyboardconfig.ui" line="123"/>
+        <location filename="../keyboardconfig.ui" line="62"/>
+        <location filename="../keyboardconfig.ui" line="95"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="167"/>
+        <location filename="../keyboardconfig.ui" line="139"/>
         <source>Turn on NumLock after login</source>
         <translation>ਲਾਗਇਨ ਦੇ ਬਾਅਦ ਨਮ-ਲਾਕ ਚਾਲੂ ਕਰੋ</translation>
     </message>
@@ -244,67 +236,72 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>ਟੱਚਪੈਚ-ਸੰਰਚਨਾ </translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="20"/>
+        <location filename="../touchpadconfig.ui" line="27"/>
         <source>Device:</source>
         <translation>ਡਿਵਾਈਸ:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="44"/>
         <source>Acceleration speed:</source>
         <translation>ਐਕਸਰਲੇਸ਼ਨ ਦੀ ਸਪੀਡ:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="81"/>
         <source>Tap to click</source>
         <translation>ਕਲਿੱਕ ਲਈ ਟੈਪ ਕਰੋ</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>ਕੁਦਰਤੀ ਸਕਰੋਲਿੰਗ</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="83"/>
+        <location filename="../touchpadconfig.ui" line="90"/>
         <source>Tap and drag</source>
         <translation>ਟੈਪ ਅਤੇ ਖਿੱਚ</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="106"/>
+        <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="133"/>
+        <location filename="../touchpadconfig.ui" line="140"/>
         <source>Scrolling:</source>
         <translation>ਸਕਰੋਲਿੰਗ:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="156"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Disabled</source>
         <translation>ਅਸਮਰੱਥ ਹੈ(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="163"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>&amp;Two-Finger</source>
         <translation>ਦੋ ਉਂਗਲਾਂ(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="170"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>Ed&amp;ge</source>
         <translation>ਕੋਨਾ(&amp;g)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="177"/>
+        <location filename="../touchpadconfig.ui" line="184"/>
         <source>B&amp;utton</source>
         <translation>ਬਟਨ(&amp;u)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
         <translation>ਡਿਵਾਈਸ-ਜਾਣਕਾਰੀ-ਲੇਬਲ</translation>
     </message>

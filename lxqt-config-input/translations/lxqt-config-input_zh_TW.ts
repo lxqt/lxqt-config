@@ -9,7 +9,7 @@
         <translation>表單</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="115"/>
         <source>Cursor flash time:</source>
         <translation>游標閃爍時間：</translation>
     </message>
@@ -19,12 +19,16 @@
         <translation>&lt;b&gt;鍵盤&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="160"/>
+        <location filename="../keyboardconfig.ui" line="132"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>鍵盤輸入錯誤時發出嗶聲</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
+        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.cpp" line="55"/>
+        <location filename="../keyboardconfig.cpp" line="58"/>
+        <location filename="../keyboardconfig.cpp" line="84"/>
+        <location filename="../keyboardconfig.cpp" line="89"/>
         <source> ms</source>
         <translation> 毫秒</translation>
     </message>
@@ -34,40 +38,28 @@
         <translation>字元重複</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="69"/>
-        <location filename="../keyboardconfig.ui" line="116"/>
-        <source>Long</source>
-        <translation>長</translation>
-    </message>
-    <message>
         <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>重複延遲：</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="40"/>
-        <location filename="../keyboardconfig.ui" line="90"/>
-        <source>Short</source>
-        <translation>短</translation>
-    </message>
-    <message>
-        <location filename="../keyboardconfig.ui" line="83"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
         <source>Repeat interval:</source>
         <translation>重複間隔時間：</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="130"/>
+        <location filename="../keyboardconfig.ui" line="102"/>
         <source>Type in the following box to test your keyboard settings:</source>
         <translation>在下列方框裡輸入文字測試您的鍵盤設定:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="76"/>
-        <location filename="../keyboardconfig.ui" line="123"/>
+        <location filename="../keyboardconfig.ui" line="62"/>
+        <location filename="../keyboardconfig.ui" line="95"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="167"/>
+        <location filename="../keyboardconfig.ui" line="139"/>
         <source>Turn on NumLock after login</source>
         <translation>登入後自動開用 NumLock</translation>
     </message>
@@ -246,67 +238,72 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>觸控版設定 </translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="20"/>
+        <location filename="../touchpadconfig.ui" line="27"/>
         <source>Device:</source>
         <translation>裝置：</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="44"/>
         <source>Acceleration speed:</source>
         <translation>加速：</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="81"/>
         <source>Tap to click</source>
         <translation>輕觸點按</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>自然捲動</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
         <translation>當打字時停用</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="83"/>
+        <location filename="../touchpadconfig.ui" line="90"/>
         <source>Tap and drag</source>
         <translation>點按拖放</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="106"/>
+        <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
         <translation>拖放鎖定</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="133"/>
+        <location filename="../touchpadconfig.ui" line="140"/>
         <source>Scrolling:</source>
         <translation>捲動：</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="156"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Disabled</source>
         <translation>停用(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="163"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>&amp;Two-Finger</source>
         <translation>雙指(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="170"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>Ed&amp;ge</source>
         <translation>邊緣(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="177"/>
+        <location filename="../touchpadconfig.ui" line="184"/>
         <source>B&amp;utton</source>
         <translation>按鍵(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
         <translation>裝置資訊</translation>
     </message>
