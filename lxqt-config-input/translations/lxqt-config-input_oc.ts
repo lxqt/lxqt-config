@@ -9,7 +9,7 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="115"/>
         <source>Cursor flash time:</source>
         <translation>Durada del clucatejament del cursor&#x202f;:</translation>
     </message>
@@ -19,12 +19,16 @@
         <translation>&lt;b&gt;Clavièr&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="160"/>
+        <location filename="../keyboardconfig.ui" line="132"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>Emetre un son quand i a una error d’entrada del clavièr</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
+        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.cpp" line="55"/>
+        <location filename="../keyboardconfig.cpp" line="58"/>
+        <location filename="../keyboardconfig.cpp" line="84"/>
+        <location filename="../keyboardconfig.cpp" line="89"/>
         <source> ms</source>
         <translation> ms</translation>
     </message>
@@ -34,40 +38,28 @@
         <translation>Repeticion de caractèrs</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="69"/>
-        <location filename="../keyboardconfig.ui" line="116"/>
-        <source>Long</source>
-        <translation>Long</translation>
-    </message>
-    <message>
         <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>Relambi de repeticion&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="40"/>
-        <location filename="../keyboardconfig.ui" line="90"/>
-        <source>Short</source>
-        <translation>Cort</translation>
-    </message>
-    <message>
-        <location filename="../keyboardconfig.ui" line="83"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
         <source>Repeat interval:</source>
         <translation>Interval de repeticion&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="130"/>
+        <location filename="../keyboardconfig.ui" line="102"/>
         <source>Type in the following box to test your keyboard settings:</source>
         <translation>Picar una frasa per ensajar los reglatges:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="76"/>
-        <location filename="../keyboardconfig.ui" line="123"/>
+        <location filename="../keyboardconfig.ui" line="62"/>
+        <location filename="../keyboardconfig.ui" line="95"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="167"/>
+        <location filename="../keyboardconfig.ui" line="139"/>
         <source>Turn on NumLock after login</source>
         <translation>Activar lo verrolhatge numeric a l’aviada</translation>
     </message>
@@ -246,67 +238,72 @@ La mirga, lo pavat tactil e lo clavièr se pòdon configurar dins los paramètre
         <translation>Configuracion del pavat numeric </translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="20"/>
+        <location filename="../touchpadconfig.ui" line="27"/>
         <source>Device:</source>
         <translation>Periferic :</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="44"/>
         <source>Acceleration speed:</source>
         <translation>Acceleracion&#x202f;:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="81"/>
         <source>Tap to click</source>
         <translation>Tòca per clicar</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>Desfilament natural</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="83"/>
+        <location filename="../touchpadconfig.ui" line="90"/>
         <source>Tap and drag</source>
         <translation>Picar per clicar</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="106"/>
+        <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="133"/>
+        <location filename="../touchpadconfig.ui" line="140"/>
         <source>Scrolling:</source>
         <translation>Desfilament :</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="156"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Desactivat</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="163"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>&amp;Two-Finger</source>
         <translation>&amp;Dos dets</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="170"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>Ed&amp;ge</source>
         <translation>Bò&amp;rds</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="177"/>
+        <location filename="../touchpadconfig.ui" line="184"/>
         <source>B&amp;utton</source>
         <translation>B&amp;oton</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
         <translation>Etiqueta d’informacions del periferic</translation>
     </message>

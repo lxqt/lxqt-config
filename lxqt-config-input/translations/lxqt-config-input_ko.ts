@@ -9,7 +9,7 @@
         <translation>형태</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="115"/>
         <source>Cursor flash time:</source>
         <translation>커서 플래시 시간:</translation>
     </message>
@@ -19,12 +19,16 @@
         <translation>&lt;b&gt;키보드&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="160"/>
+        <location filename="../keyboardconfig.ui" line="132"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>키보드 입력 오류 시 경고음</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
+        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.cpp" line="55"/>
+        <location filename="../keyboardconfig.cpp" line="58"/>
+        <location filename="../keyboardconfig.cpp" line="84"/>
+        <location filename="../keyboardconfig.cpp" line="89"/>
         <source> ms</source>
         <translation> ms</translation>
     </message>
@@ -34,40 +38,28 @@
         <translation>문자 반복</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="69"/>
-        <location filename="../keyboardconfig.ui" line="116"/>
-        <source>Long</source>
-        <translation>긴</translation>
-    </message>
-    <message>
         <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>반복 지연시간:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="40"/>
-        <location filename="../keyboardconfig.ui" line="90"/>
-        <source>Short</source>
-        <translation>짧은</translation>
-    </message>
-    <message>
-        <location filename="../keyboardconfig.ui" line="83"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
         <source>Repeat interval:</source>
         <translation>반복 간격:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="130"/>
+        <location filename="../keyboardconfig.ui" line="102"/>
         <source>Type in the following box to test your keyboard settings:</source>
         <translation>키보드 설정을 테스트하려면 다음 상자에 입력하십시오:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="76"/>
-        <location filename="../keyboardconfig.ui" line="123"/>
+        <location filename="../keyboardconfig.ui" line="62"/>
+        <location filename="../keyboardconfig.ui" line="95"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="167"/>
+        <location filename="../keyboardconfig.ui" line="139"/>
         <source>Turn on NumLock after login</source>
         <translation>로그인 후 NumLock 켜기</translation>
     </message>
@@ -246,67 +238,72 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>터치패드구성 </translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="20"/>
+        <location filename="../touchpadconfig.ui" line="27"/>
         <source>Device:</source>
         <translation>장치:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="44"/>
         <source>Acceleration speed:</source>
         <translation>가속 속도:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="81"/>
         <source>Tap to click</source>
         <translation>탭하여 클릭</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>내추럴 스크롤링</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
         <translation>입력하는 동안 비활성화</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="83"/>
+        <location filename="../touchpadconfig.ui" line="90"/>
         <source>Tap and drag</source>
         <translation>탭하고 드래그</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="106"/>
+        <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
         <translation>드래그 잠금</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="133"/>
+        <location filename="../touchpadconfig.ui" line="140"/>
         <source>Scrolling:</source>
         <translation>스크롤링:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="156"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Disabled</source>
         <translation>비활성화됨(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="163"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>&amp;Two-Finger</source>
         <translation>두 손가락(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="170"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>Ed&amp;ge</source>
         <translation>가장자리(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="177"/>
+        <location filename="../touchpadconfig.ui" line="184"/>
         <source>B&amp;utton</source>
         <translation>단추(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
         <translation>장치정보레이블</translation>
     </message>

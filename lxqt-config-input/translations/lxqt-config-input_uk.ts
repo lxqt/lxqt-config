@@ -9,7 +9,7 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="143"/>
+        <location filename="../keyboardconfig.ui" line="115"/>
         <source>Cursor flash time:</source>
         <translation>Час оновлення курсору:</translation>
     </message>
@@ -19,12 +19,16 @@
         <translation>&lt;b&gt;Клавіатура&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="160"/>
+        <location filename="../keyboardconfig.ui" line="132"/>
         <source>Beep when there is an error of keyboard input</source>
         <translation>Пікати коли є помилка вводу клавіатури</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="150"/>
+        <location filename="../keyboardconfig.ui" line="122"/>
+        <location filename="../keyboardconfig.cpp" line="55"/>
+        <location filename="../keyboardconfig.cpp" line="58"/>
+        <location filename="../keyboardconfig.cpp" line="84"/>
+        <location filename="../keyboardconfig.cpp" line="89"/>
         <source> ms</source>
         <translation> мс</translation>
     </message>
@@ -34,40 +38,28 @@
         <translation>Повторення символу</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="69"/>
-        <location filename="../keyboardconfig.ui" line="116"/>
-        <source>Long</source>
-        <translation>Довго</translation>
-    </message>
-    <message>
         <location filename="../keyboardconfig.ui" line="33"/>
         <source>Repeat delay:</source>
         <translation>Затримка повторення:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="40"/>
-        <location filename="../keyboardconfig.ui" line="90"/>
-        <source>Short</source>
-        <translation>Коротко</translation>
-    </message>
-    <message>
-        <location filename="../keyboardconfig.ui" line="83"/>
+        <location filename="../keyboardconfig.ui" line="69"/>
         <source>Repeat interval:</source>
         <translation>Інтервал повторення:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="130"/>
+        <location filename="../keyboardconfig.ui" line="102"/>
         <source>Type in the following box to test your keyboard settings:</source>
         <translation>Впишіть в наступному полі для тестування налаштувань клавіатури:</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="76"/>
-        <location filename="../keyboardconfig.ui" line="123"/>
+        <location filename="../keyboardconfig.ui" line="62"/>
+        <location filename="../keyboardconfig.ui" line="95"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../keyboardconfig.ui" line="167"/>
+        <location filename="../keyboardconfig.ui" line="139"/>
         <source>Turn on NumLock after login</source>
         <translation>Вмикати NumLock після входу</translation>
     </message>
@@ -246,67 +238,72 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
         <translation>Налаштування сенсорної панелі </translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="20"/>
+        <location filename="../touchpadconfig.ui" line="27"/>
         <source>Device:</source>
         <translation>Пристрій:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="37"/>
+        <location filename="../touchpadconfig.ui" line="44"/>
         <source>Acceleration speed:</source>
         <translation>Швидкість прискорення:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="74"/>
+        <location filename="../touchpadconfig.ui" line="81"/>
         <source>Tap to click</source>
         <translation>Натиск для клацання</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="60"/>
+        <location filename="../touchpadconfig.ui" line="67"/>
         <source>Natural Scrolling</source>
         <translation>Природне гортання</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="67"/>
+        <location filename="../touchpadconfig.ui" line="20"/>
+        <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="83"/>
+        <location filename="../touchpadconfig.ui" line="90"/>
         <source>Tap and drag</source>
         <translation>Торкнутися для перетягування</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="106"/>
+        <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="133"/>
+        <location filename="../touchpadconfig.ui" line="140"/>
         <source>Scrolling:</source>
         <translation>Прокручування:</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="156"/>
+        <location filename="../touchpadconfig.ui" line="163"/>
         <source>&amp;Disabled</source>
         <translation>&amp;Вимкнено</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="163"/>
+        <location filename="../touchpadconfig.ui" line="170"/>
         <source>&amp;Two-Finger</source>
         <translation>&amp;Двома пальцями</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="170"/>
+        <location filename="../touchpadconfig.ui" line="177"/>
         <source>Ed&amp;ge</source>
         <translation>За &amp;край</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="177"/>
+        <location filename="../touchpadconfig.ui" line="184"/>
         <source>B&amp;utton</source>
         <translation>К&amp;нопкою</translation>
     </message>
     <message>
-        <location filename="../touchpadconfig.ui" line="30"/>
+        <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
         <translation>DeviceInfoLabel</translation>
     </message>
