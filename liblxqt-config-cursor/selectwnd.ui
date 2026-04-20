@@ -15,19 +15,32 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="6">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cursor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="6">
     <widget class="QLabel" name="infoLabel">
      <property name="text">
-      <string>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</string>
+      <string>Choose your preferred cursor theme (hover to preview cursors.) &lt;b&gt;The session requires a restart to apply this change&lt;/b&gt;:</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="6">
+   <item row="2" column="0" colspan="6">
     <widget class="WarningLabel" name="warningLabel" native="true"/>
    </item>
-   <item row="2" column="0" colspan="6">
+   <item row="3" column="0" colspan="6">
     <widget class="PreviewWidget" name="preview" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -43,7 +56,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="6">
+   <item row="4" column="0" colspan="6">
     <widget class="QListView" name="lbThemes">
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
