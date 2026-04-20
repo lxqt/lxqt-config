@@ -1,3 +1,9 @@
+lxqt-config-2.4.0 / 2026-04-20
+===============================
+ * Use std::pair instead of QPair.
+ * Added 'ms' to slider labels, page title and removed redundant labels in keyboard repeat settings.
+ * Don't show LXDE settings.
+
 lxqt-config-2.3.2 / 2026-04-02
 ===============================
  * Fixed too strict parsing of icon themes with Qt6.11
