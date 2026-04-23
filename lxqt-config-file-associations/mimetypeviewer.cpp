@@ -430,7 +430,7 @@ void MimetypeViewer::chooseApplication()
 XdgDesktopFile* MimetypeViewer::chooseApp(const QString& type, int cat)
 {
     XdgDesktopFile *app = nullptr;
-    ApplicationChooser applicationChooser(type, cat);
+    ApplicationChooser applicationChooser(type, cat, this);
     int dialogCode = applicationChooser.exec();
     app = applicationChooser.DefaultApplication();
     if (app)
