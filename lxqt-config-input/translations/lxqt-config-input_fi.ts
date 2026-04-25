@@ -162,7 +162,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä Wayland-komposiittoria saadaksesi lisätä hiiren, kosketuslevyn ja näppäimistön asetuksia.</translation>
     </message>
 </context>
 <context>
@@ -194,7 +194,7 @@ Hiiri, kosketuslevy ja näppäimistö määritetään koostajan asetuksissa.</tr
     <message>
         <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jos haluat muutokset käyttöön myös GTK:ssa, valitse LXQt:n ulkoasun asetukset → GTK-tyyli.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="114"/>
@@ -260,12 +260,12 @@ Hiiri, kosketuslevy ja näppäimistö määritetään koostajan asetuksissa.</tr
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hiiri ja kosketuslevy&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista käytöstä kirjoittamisen aikana</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Hiiri, kosketuslevy ja näppäimistö määritetään koostajan asetuksissa.</tr
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vedä lukko</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>

@@ -260,12 +260,12 @@ Fare, dokunmatik yüzey ve klavye, kompozitör ayarlarında yapılandırılabili
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Fare ve Dokunmatik Yüzey&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazarken devre dışı bırak</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Fare, dokunmatik yüzey ve klavye, kompozitör ayarlarında yapılandırılabili
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürükleme kilidi</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>

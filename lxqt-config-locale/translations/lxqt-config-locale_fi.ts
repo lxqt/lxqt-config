@@ -66,12 +66,12 @@
     <message>
         <location filename="../localeconfig.cpp" line="164"/>
         <source>Unset</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista asetus</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
         <source>Current: </source>
-        <translation type="unfinished"></translation>
+        <translation>Nykyinen: </translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="370"/>

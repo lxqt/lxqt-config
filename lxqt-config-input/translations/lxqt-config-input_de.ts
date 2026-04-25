@@ -260,12 +260,12 @@ Maus, Touchpad und Tastatur können in den Einstellungen des Kompositors konfigu
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Maus und Touchpad&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Tippen deaktiviert.</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Maus, Touchpad und Tastatur können in den Einstellungen des Kompositors konfigu
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation> Ziehen sperren</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
