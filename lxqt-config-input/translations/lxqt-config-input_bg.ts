@@ -260,12 +260,12 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Мишка и Тъчпад&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Деактивиране при писане</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Заключване с плъзгане</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
@@ -305,7 +305,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
-        <translation>DeviceInfoLabel</translation>
+        <translation>Етикет за информация за устройството</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="102"/>

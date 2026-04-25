@@ -223,7 +223,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
         <source>Advanced</source>
-        <translation>Дополнительные</translation>
+        <translation>Дополнительно</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="143"/>

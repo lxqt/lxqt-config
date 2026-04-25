@@ -260,7 +260,7 @@ Hiirt, puuteplaati ja klaviatuuri saad hetkel hallata komposiitori seadistustest
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hiir ja puuteplaat&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
