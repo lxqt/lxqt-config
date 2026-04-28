@@ -15,14 +15,14 @@
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="titleLabel">
      <property name="text">
       <string>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</string>
      </property>
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="deviceLabel">
      <property name="text">
       <string>Device:</string>
      </property>
@@ -39,7 +39,7 @@
     </widget>
    </item>
    <item row="3" column="0">
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="accelSpeedLabel">
      <property name="text">
       <string>Acceleration speed:</string>
      </property>
@@ -135,7 +135,7 @@
       <number>10</number>
      </property>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="scrollLabel">
        <property name="text">
         <string>Scrolling:</string>
        </property>
