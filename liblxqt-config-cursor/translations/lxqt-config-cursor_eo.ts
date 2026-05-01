@@ -21,7 +21,7 @@
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt sesio bezonas restartigon por vidi ĉi tiun.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="111"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../selectwnd.ui" line="65"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Grandeco:</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="231"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../warninglabel.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formularo</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="44"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Montru...</translation>
     </message>
 </context>
 <context>

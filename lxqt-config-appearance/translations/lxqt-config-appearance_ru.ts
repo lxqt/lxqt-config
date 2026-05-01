@@ -176,7 +176,7 @@
     <message>
         <location filename="../gtkconfig.ui" line="75"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Установить темы GTK (файлы настроек GTK перезапуштся)</translation>
+        <translation>Установить темы GTK (файлы настроек GTK будут перезаписаны!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="105"/>
@@ -483,7 +483,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
         <translation>Палитра с таким названием существует.
-Вы хотите заменить её?</translation>
+Хотите заменить её?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
@@ -494,7 +494,7 @@ Do you want to replace it?</source>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Вы действительно хотите удалить выбранную(ые) палитру(ы)?
+        <translation>Уверены, что хотите удалить выбранные палитры?
 Корневые палитры останутся нетронутыми, если они существуют.</translation>
     </message>
 </context>

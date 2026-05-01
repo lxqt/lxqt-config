@@ -260,7 +260,7 @@ Pelė, jutiklinis kilimėlis ir klaviatūra gali būti sukonfigūruoti kompozito
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Pelė ir jutiklinis kilimėlis&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
