@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Monospace:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -430,7 +430,7 @@ Varmista että &apos;xsettingsd&apos; on asennettu helpottaaksesi GTK-ohjelmien 
     <message>
         <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished">Työkalupalkin kuvakekoko:</translation>
+        <translation>Työkalupalkin kuvakekoko:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="352"/>

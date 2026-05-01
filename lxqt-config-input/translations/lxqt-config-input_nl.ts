@@ -260,7 +260,7 @@ Muis, touchpad en toetsenbord kunnen worden ingesteld in de instellingen van de 
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Muis en touchpad&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>

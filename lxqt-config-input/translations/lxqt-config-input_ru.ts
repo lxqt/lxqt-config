@@ -11,7 +11,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="115"/>
         <source>Cursor flash time:</source>
-        <translation>Частота мерцания курсора:</translation>
+        <translation>Время мерцания курсора:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="20"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="132"/>
         <source>Beep when there is an error of keyboard input</source>
-        <translation>Звуковой сигнал при ошибке ввода с клавиатуры</translation>
+        <translation>Подавать звуковой сигнал при ошибке ввода</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="122"/>
@@ -45,12 +45,12 @@
     <message>
         <location filename="../keyboardconfig.ui" line="69"/>
         <source>Repeat interval:</source>
-        <translation>Пауза между повтором:</translation>
+        <translation>Интервал повтора:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="102"/>
         <source>Type in the following box to test your keyboard settings:</source>
-        <translation>Поле для проверки настроек клавиатуры:</translation>
+        <translation>Введите текст ниже для проверки ваших настроек клавиатуры:</translation>
     </message>
     <message>
         <location filename="../keyboardconfig.ui" line="62"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../keyboardconfig.ui" line="139"/>
         <source>Turn on NumLock after login</source>
-        <translation>Включать NumLock при входе в систему</translation>
+        <translation>Включать NumLock после входа в систему</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../keyboardlayoutconfig.ui" line="141"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;: If you are using an &lt;span style=&quot; font-weight:600;&quot;&gt;input method&lt;/span&gt;, such as IBus, uim, fcitx, or gcin, the settings here &lt;span style=&quot; font-weight:600;&quot;&gt;might not work&lt;/span&gt; because they are overridden by the input methods.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание&lt;/span&gt;: если вы используете &lt;span style=&quot; font-weight:600;&quot;&gt;метод ввода&lt;/span&gt;, такой как IBus, uim, fcitx или gcin, настройки здесь &lt;span style=&quot; font-weight:600;&quot;&gt;могут не работать&lt;/span&gt;, поскольку они переопределятся этим методом ввода.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внимание&lt;/span&gt;: если вы используете &lt;span style=&quot; font-weight:600;&quot;&gt;метод ввода&lt;/span&gt;, такой как IBus, uim, fcitx или gcin, настройки здесь &lt;span style=&quot; font-weight:600;&quot;&gt;могут не работать&lt;/span&gt;, поскольку они переопределяются этим методом ввода.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -147,17 +147,17 @@
     <message>
         <location filename="../mouseconfig.ui" line="47"/>
         <source>Wheel scroll lines:</source>
-        <translation>Колёсико перематывает строк:</translation>
+        <translation>Шаг прокрутки строк колесом:</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="64"/>
         <source>Left handed (Swap left and right mouse buttons)</source>
-        <translation>Для левшей (поменять функции левой и правой кнопок мыши)</translation>
+        <translation>Для левшей (поменять функции левой и правой кнопок)</translation>
     </message>
     <message>
         <location filename="../mouseconfig.ui" line="57"/>
         <source>Single click to activate items</source>
-        <translation>Один щелчок для активации объектов</translation>
+        <translation>Открывать объекты одним щелчком</translation>
     </message>
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
@@ -204,7 +204,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="125"/>
         <source>Keyboard Layout</source>
-        <translation>Раскладка клавиатура</translation>
+        <translation>Раскладка клавиатуры</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="138"/>
@@ -250,7 +250,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="81"/>
         <source>Tap to click</source>
-        <translation>Щелчок по касанию</translation>
+        <translation>Нажатие касанием</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="67"/>
@@ -260,22 +260,22 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Мышь и сенсорная панель&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation>Отключить во время ввода текста</translation>
+        <translation>Отключать при наборе текста</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
         <source>Tap and drag</source>
-        <translation>Перетаскивание по касанию</translation>
+        <translation>Перетаскивание касанием</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation>Блокировка перетаскивания</translation>
+        <translation>Блокировка после перетаскивания</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
@@ -315,11 +315,11 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
 If this is intended, please configure xinput manually.
 Otherwise you can get rid of this message by changing xinput driver to &quot;libinput&quot;.
 </source>
-        <translation>LXQt поддерживает настройку только одного драйвера ввода xinput: &quot;libinput&quot;.
+        <translation>LXQt поддерживает настройку только одного драйвера ввода xinput: «libinput».
 (текущее значение: %1)
 
 Если вы сделали это намерено, то вы можете настроить свой драйвер ввода вручную.
-В противном случае, вы можете убрать это сообщение, изменив драйвер xinput на &quot;libinput&quot;.
+В противном случае, вы можете убрать это сообщение, сменив драйвер xinput на «libinput».
 </translation>
     </message>
 </context>
