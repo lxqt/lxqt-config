@@ -29,12 +29,12 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška: gsettings se ne može pokrenuti</translation>
     </message>
 </context>
 <context>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Font fiksne širine:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Antialijasing podpiksela:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -193,7 +193,9 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Za jednoličan izgled odaberite sličan stil/temu (ako je dostupan), ili odaberite Qt stil &apos;gtk2&apos; (ako je dostupan) koji oponaša GTK teme.
+
+Potvrdite da je &apos;xsettingsd&apos; instaliran, koji GTK programima dozvoljava promenu teme u hodu.</translation>
     </message>
 </context>
 <context>
@@ -211,7 +213,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>KDE ekstenzija XDG teme ikona -&gt; FollowColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -234,7 +236,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Koristi paletu koju pruža tema</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
