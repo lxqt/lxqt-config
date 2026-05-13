@@ -162,7 +162,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use the settings of the Wayland compositor for more options about the mouse, touchpad and keyboard.</translation>
     </message>
 </context>
 <context>
@@ -194,7 +194,7 @@ Mouse, touchpad and keyboard can be configured in the compositor settings.</tran
     <message>
         <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="114"/>
@@ -260,12 +260,12 @@ Mouse, touchpad and keyboard can be configured in the compositor settings.</tran
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Disable while typing</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Mouse, touchpad and keyboard can be configured in the compositor settings.</tran
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Drag lock</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
