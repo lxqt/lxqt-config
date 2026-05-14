@@ -11,7 +11,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation>Изаберите Боју</translation>
+        <translation>Изабери боју</translation>
     </message>
 </context>
 <context>
@@ -24,17 +24,17 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation>1 је пребрисан. Можете пронаћи копију старих поставки у 2</translation>
+        <translation>&lt;p&gt;&apos;%1&apos; је преписан.&lt;/p&gt;&lt;p&gt;Копију ваших старих подешавања можете пронаћи у &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка: gsettings не може да се покрене</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation>Уобичајен фонт за корисничко служенје</translation>
+        <translation>Подразумевани фонт за корисничко прочеље</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
@@ -62,37 +62,37 @@
     <message>
         <location filename="../fontsconfig.ui" line="77"/>
         <source>Point size:</source>
-        <translation>Величина бодова:</translation>
+        <translation>Величина у тачкама:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="54"/>
         <source>Normal</source>
-        <translation>уобичајен</translation>
+        <translation>Обичан</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="59"/>
         <source>Bold</source>
-        <translation>Одважан</translation>
+        <translation>Подебљан</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="64"/>
         <source>Italic</source>
-        <translation>Курзив</translation>
+        <translation>Искошен</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="69"/>
         <source>Bold Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Подебљан искошен</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="94"/>
         <source>The following settings only affect newly started applications</source>
-        <translation>Следеће подешавања утичу само на новопокренуте апликације</translation>
+        <translation>Следећа подешавања утичу само на новопокренуте програме</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="100"/>
         <source>Use antialias fonts</source>
-        <translation>Користи антиалијасниг фонтове</translation>
+        <translation>Употреби умекшавање ивица за фонтове</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="153"/>
@@ -102,18 +102,18 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Утврђене ширине:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
         <location filename="../fontsconfig.ui" line="164"/>
         <source>None</source>
-        <translation>Ниједан</translation>
+        <translation>Ништа</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="169"/>
         <source>Slight</source>
-        <translation>танак</translation>
+        <translation>Лаки</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="174"/>
@@ -133,17 +133,17 @@
     <message>
         <location filename="../fontsconfig.ui" line="187"/>
         <source>Resolution (DPI):</source>
-        <translation>Резолуција (DPI):</translation>
+        <translation>Резолуција (тпи):</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
-        <translation type="unfinished"></translation>
+        <translation>Самосаветовање</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>
         <source>Subpixel antialiasing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Подпикселско умекшавање:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="123"/>
@@ -171,29 +171,30 @@
     <message>
         <location filename="../gtkconfig.ui" line="56"/>
         <source>GTK Style</source>
-        <translation>GTK стил</translation>
+        <translation>ГТК стил</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="75"/>
         <source>Set GTK themes (GTK configuration files will be overwritten!)</source>
-        <translation>Постави GTK теме (GTK конфигурациони фајлоци ће бити преписани!)</translation>
+        <translation>Постави ГТК теме (датотеке ГТК поставки ће бити преписане!)</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="105"/>
         <source>GTK 3 Theme:</source>
-        <translation>GTK 3 тема:</translation>
+        <translation>ГТК 3 тема:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="89"/>
         <source>GTK 2 Theme:</source>
-        <translation>GTK 2 тема:</translation>
+        <translation>ГТК 2 тема:</translation>
     </message>
     <message>
         <location filename="../gtkconfig.ui" line="117"/>
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Да бисте покушали да уједначите теме, изаберите сличан стил/тему (ако је доступно) на свим списковима, или изаберите &apos;gtk2&apos; Кјут стил (ако је доступно) да бисте имитирали ГТК теме.
+\Постарајте се да је &apos;xsettingsd&apos; инсталиран како би ГТК програми могли да примењују теме у ходу.</translation>
     </message>
 </context>
 <context>
@@ -201,7 +202,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Подешавање изгледа Рејзора</translation>
+        <translation>Подешавање изгледа ЛиксКјута</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -211,7 +212,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="87"/>
         <source>The KDE extension of XDG icon themes -&gt; FollowsColorScheme</source>
-        <translation type="unfinished"></translation>
+        <translation>КДЕ проширење XDG тема иконица -&gt; FollowsColorScheme</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="90"/>
@@ -224,7 +225,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>Рејзор тема</translation>
+        <translation>ЛиксКјут тема</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -234,7 +235,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="64"/>
         <source>Use palette provided by theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Користи палету коју пружа тема</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="83"/>
@@ -244,7 +245,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.cpp" line="188"/>
         <source>Open theme folder</source>
-        <translation>Отвори фолдер тема</translation>
+        <translation>Отвори фасциклу тема</translation>
     </message>
 </context>
 <context>
@@ -271,12 +272,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Подешавање изгледа Рејзора</translation>
+        <translation>Подешавање изгледа ЛиксКјута</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Widget Style</source>
-        <translation>Стил виџета</translation>
+        <translation>Стил елемента</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
@@ -286,7 +287,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
-        <translation>Тема Рејзора</translation>
+        <translation>ЛиксКјут тема</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="100"/>
@@ -296,12 +297,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="110"/>
         <source>Cursor</source>
-        <translation>Курсор</translation>
+        <translation>Показивач</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="117"/>
         <source>GTK Style</source>
-        <translation>GTK стил</translation>
+        <translation>ГТК стил</translation>
     </message>
 </context>
 <context>
@@ -309,7 +310,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="45"/>
         <source>Widget Style</source>
-        <translation>Стил виџета</translation>
+        <translation>Стил елемента</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="75"/>
@@ -329,17 +330,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="124"/>
         <source>View:</source>
-        <translation>Поглед:</translation>
+        <translation>Преглед:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="134"/>
         <source>Selection:</source>
-        <translation>Одабир:</translation>
+        <translation>Избор:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Савет програма:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="158"/>
@@ -349,12 +350,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="178"/>
         <source>Window Text:</source>
-        <translation>Прозор текста:</translation>
+        <translation>Текст прозора:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="188"/>
         <source>View Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст приказа:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="198"/>
@@ -364,7 +365,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст савета:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="222"/>
@@ -384,7 +385,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="281"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Подразумевана палета</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="296"/>
@@ -393,12 +394,12 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.ui" line="348"/>
         <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Може бити замењен Кјут стилом или програмом</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="299"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Стил дугмадија алатне траке:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="310"/>
@@ -418,7 +419,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="325"/>
         <source>The text appears under the icon</source>
-        <translation>Текст се појављује испод иконе</translation>
+        <translation>Текст се појављује испод иконице</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="330"/>
@@ -428,42 +429,42 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="341"/>
         <source>Toolbar icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Величина иконице траке алата:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="352"/>
         <source>16</source>
-        <translation type="unfinished"></translation>
+        <translation>16</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="357"/>
         <source>22</source>
-        <translation type="unfinished"></translation>
+        <translation>22</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="362"/>
         <source>24</source>
-        <translation type="unfinished"></translation>
+        <translation>24</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="367"/>
         <source>32</source>
-        <translation type="unfinished"></translation>
+        <translation>32</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="372"/>
         <source>48</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="383"/>
         <source>Activate item on single click</source>
-        <translation>Покрените ставку једним кликом</translation>
+        <translation>Покрени ставку једним кликом</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Style:</source>
-        <translation>Qt Стил:</translation>
+        <translation>Кјут Стил:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
@@ -474,14 +475,14 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.cpp" line="330"/>
         <source>Palette name:</source>
-        <translation>Име палете:</translation>
+        <translation>Назив палете:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="341"/>
         <source>A palette with the same name exists.
 Do you want to replace it?</source>
-        <translation>Палета са истим именом постоји.
-Желите ли да ју замените?</translation>
+        <translation>Палета са истим називом постоји.
+Желите ли да је замените?</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="484"/>
@@ -492,8 +493,8 @@ Do you want to replace it?</source>
         <location filename="../styleconfig.cpp" line="485"/>
         <source>Do you really want to remove selected palette(s)?
 Root palettes will remain intact if existing.</source>
-        <translation>Да ли желите да уклоните одабране палете?
-Оригиналне палете ће остати нетакнуте ако постоје.</translation>
+        <translation>Да ли заиста желите да уклоните одабране палете?
+Основне палете ће остати нетакнуте ако постоје.</translation>
     </message>
 </context>
 </TS>
