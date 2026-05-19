@@ -193,7 +193,7 @@
         <source>To attempt uniform theming, either select similar style/theme (if available) across all lists, or select &apos;gtk2&apos; Qt style (if available) to mimic GTK themes.
 
 Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply themes on the fly.</source>
-        <translation>Да бисте покушали да уједначите теме, изаберите сличан стил/тему (ако је доступно) на свим списковима, или изаберите &apos;gtk2&apos; Кјут стил (ако је доступно) да бисте имитирали ГТК теме.
+        <translation>Да бисте покушали да уједначите теме, изаберите сличан стил/тему (ако је доступно) на свим списковима, или изаберите &apos;gtk2&apos; Qt стил (ако је доступно) да бисте имитирали ГТК теме.
 \Постарајте се да је &apos;xsettingsd&apos; инсталиран како би ГТК програми могли да примењују теме у ходу.</translation>
     </message>
 </context>
@@ -202,7 +202,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../iconthemeconfig.ui" line="14"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Подешавање изгледа ЛиксКјута</translation>
+        <translation>Подешавање изгледа LXQt-а</translation>
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
@@ -225,7 +225,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>ЛиксКјут тема</translation>
+        <translation>LXQt тема</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -272,7 +272,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>LXQt Appearance Configuration</source>
-        <translation>Подешавање изгледа ЛиксКјута</translation>
+        <translation>Подешавање изгледа LXQt-а</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="74"/>
@@ -287,7 +287,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
-        <translation>ЛиксКјут тема</translation>
+        <translation>LXQt тема</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="100"/>
@@ -394,7 +394,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
         <location filename="../styleconfig.ui" line="348"/>
         <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
-        <translation>Може бити замењен Кјут стилом или програмом</translation>
+        <translation>Може бити замењен Qt стилом или програмом</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="299"/>
@@ -464,7 +464,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="63"/>
         <source>Qt Style:</source>
-        <translation>Кјут Стил:</translation>
+        <translation>Qt стил:</translation>
     </message>
     <message>
         <location filename="../styleconfig.cpp" line="330"/>

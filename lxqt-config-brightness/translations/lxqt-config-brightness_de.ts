@@ -42,7 +42,7 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="54"/>
         <source>Currently unsupported under Wayland</source>
-        <translation type="unfinished"></translation>
+        <translation>Derzeit unter Wayland nicht unterstützt</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="122"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
-        <translation>Setze gamma auf Standardwert.</translation>
+        <translation>Gamma auf den Standardwert zurücksetzen.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="114"/>

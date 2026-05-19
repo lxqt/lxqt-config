@@ -6,17 +6,17 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt Mauszeiger-Thema Konfiguration</translation>
+        <translation>LXQt Mauszeiger-Thema-Konfiguration</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Wähle das gewünschte Mauszeigerdesign aus (zum Test Maus über Vorschau bewegen) &lt;b&gt;Die LXQt-Sitzung muss nach dieser Veränderung neu gestartet werden&lt;/b&gt;:</translation>
+        <translation>Das gewünschte Mauszeigerdesign auswählen (zum Test Maus über Vorschau bewegen) &lt;b&gt;Die LXQt-Sitzung muss nach dieser Veränderung neu gestartet werden&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
-        <translation>Neues Thema &amp;installieren...</translation>
+        <translation>Neues Thema &amp;installieren ...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
-        <translation>XcurTheme Fehler</translation>
+        <translation>XcurTheme-Fehler</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../warninglabel.ui" line="54"/>
         <source>Show...</source>
-        <translation>Anzeigen...</translation>
+        <translation>Anzeigen ...</translation>
     </message>
 </context>
 <context>
