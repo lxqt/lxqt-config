@@ -1,5 +1,3 @@
-project(lxqt-config-locale)
-
 set(H_FILES
     localeconfig.h
 )
@@ -24,16 +22,18 @@ lxqt_translate_ts(QM_FILES
         ${H_FILES}
         ${CPP_FILES}
         ${UI_FILES}
+    TEMPLATE
+        lxqt-config-locale
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-locale"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in USE_YAML)
+lxqt_app_translation_loader(QM_LOADER lxqt-config-locale)
+lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config-locale.desktop.in USE_YAML)
 
 #************************************************
 
-add_executable(${PROJECT_NAME}
+add_executable(lxqt-config-locale
     ${CPP_FILES}
     ${COMBO_HEADER}
     ${RESOURCES}
@@ -43,14 +43,14 @@ add_executable(${PROJECT_NAME}
     ${QM_LOADER}
 )
 
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(lxqt-config-locale
     Qt6::Widgets
     Qt6::Xml
     lxqt
 )
 
 install(TARGETS
-    ${PROJECT_NAME}
+    lxqt-config-locale
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
     COMPONENT Runtime
 )

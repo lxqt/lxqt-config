@@ -1,5 +1,3 @@
-project(lxqt-config-file-associations)
-
 set(H_FILES
     mimetypedata.h
     mimetypeviewer.h
@@ -38,16 +36,18 @@ lxqt_translate_ts(QM_FILES
         ${H_FILES}
         ${CPP_FILES}
         ${UI_FILES}
+    TEMPLATE
+        lxqt-config-file-associations
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-file-associations"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in USE_YAML)
+lxqt_app_translation_loader(QM_LOADER lxqt-config-file-associations)
+lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config-file-associations.desktop.in USE_YAML)
 
 #************************************************
 
-add_executable(${PROJECT_NAME}
+add_executable(lxqt-config-file-associations
     ${CPP_FILES}
     ${RESOURCES}
     ${QRC_FILES}
@@ -56,7 +56,7 @@ add_executable(${PROJECT_NAME}
     ${DESKTOP_FILES}
 )
 
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(lxqt-config-file-associations
     Qt6::Xml
     Qt6::DBus
     Qt6::Widgets
@@ -64,7 +64,7 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 install(TARGETS
-    ${PROJECT_NAME}
+    lxqt-config-file-associations
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
     COMPONENT Runtime
 )

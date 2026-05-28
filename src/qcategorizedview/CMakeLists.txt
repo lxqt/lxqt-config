@@ -1,5 +1,3 @@
-project(qcategorizedview)
-
 set(SOURCES
     qcategorizedview.cpp
     qcategorydrawer.cpp

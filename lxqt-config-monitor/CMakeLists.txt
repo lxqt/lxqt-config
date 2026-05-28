@@ -1,5 +1,3 @@
-project(lxqt-config-monitor)
-
 find_package(KF6Screen ${KF6SCREEN_MINIMUM_VERSION} REQUIRED)
 find_package(Qt6Svg ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt6SvgWidgets ${QT_MINIMUM_VERSION} REQUIRED)
@@ -54,21 +52,23 @@ lxqt_translate_ts(QM_FILES
         ${HEADERS}
         ${SOURCES}
         ${UIS}
+    TEMPLATE
+        lxqt-config-monitor
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-monitor"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(QM_LOADER lxqt-config-monitor)
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-        "resources/${PROJECT_NAME}.desktop.in"
+        "resources/lxqt-config-monitor.desktop.in"
         "resources/lxqt-config-monitor-autostart.desktop.in"
     USE_YAML
 )
 
 #************************************************
 
-add_executable(${PROJECT_NAME}
+add_executable(lxqt-config-monitor
     ${SOURCES}
     ${RESOURCES}
     ${QRC_SOURCES}
@@ -77,7 +77,7 @@ add_executable(${PROJECT_NAME}
     ${QM_LOADER}
 )
 
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(lxqt-config-monitor
     Qt6::Widgets
     Qt6::Svg
     Qt6::SvgWidgets
@@ -85,7 +85,7 @@ target_link_libraries(${PROJECT_NAME}
     lxqt
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
+install(TARGETS lxqt-config-monitor RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
 install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_FULL_DATADIR}/applications")
 install(FILES ${ICONS} DESTINATION "${CMAKE_INSTALL_FULL_DATADIR}/lxqt/icons")
 
