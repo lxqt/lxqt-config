@@ -1,5 +1,3 @@
-project(lxqt-config-cursor)
-
 find_package(X11 REQUIRED)
 find_package(XCB REQUIRED XCB)
 include_directories(${XCB_INCLUDE_DIRS})
@@ -48,11 +46,13 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config-cursor_HDRS}
         ${lxqt-config-cursor_SRCS}
         ${lxqt-config-cursor_UIS}
+    TEMPLATE
+         lxqt-config-cursor
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-cursor"
 )
 
-lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(lxqt-config-cursor_QM_LOADER lxqt-config-cursor)
 
 #************************************************
 

@@ -1,5 +1,3 @@
-project(lxqt-config-brightness)
-
 find_package(Qt6Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(XCB REQUIRED XCB RANDR)
 
@@ -43,18 +41,20 @@ lxqt_translate_ts(QM_FILES
         ${H_FILES}
         ${CPP_FILES}
         ${UI_FILES}
+    TEMPLATE
+        lxqt-config-brightness
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-brightness"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/${PROJECT_NAME}.desktop.in" USE_YAML)
+lxqt_app_translation_loader(QM_LOADER lxqt-config-brightness)
+lxqt_translate_desktop(DESKTOP_FILES SOURCES "resources/lxqt-config-brightness.desktop.in" USE_YAML)
 
 
-add_executable(${PROJECT_NAME} ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DESKTOP_FILES} ${QM_LOADER})
+add_executable(lxqt-config-brightness ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DESKTOP_FILES} ${QM_LOADER})
 
 target_link_libraries(
-    ${PROJECT_NAME}
+    lxqt-config-brightness
     ${QTX_LIBRARIES}
     ${XCB_LIBRARIES}
     lxqt
@@ -65,7 +65,7 @@ add_definitions(
 )
 
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
+install(TARGETS lxqt-config-brightness RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 install(
     FILES icons/brightnesssettings.svg

@@ -1,5 +1,3 @@
-project(lxqt-config-input)
-
 find_package(X11 REQUIRED)
 
 if (WITH_TOUCHPAD)
@@ -80,14 +78,16 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config-input_HDRS}
         ${lxqt-config-input_SRCS}
         ${lxqt-config-input_UIS}
+    TEMPLATE
+        lxqt-config-input 
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-input"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(QM_LOADER lxqt-config-input)
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-        ${PROJECT_NAME}.desktop.in
+        lxqt-config-input.desktop.in
         resources/lxqt-config-touchpad-autostart.desktop.in
     USE_YAML
 )

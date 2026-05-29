@@ -1,5 +1,3 @@
-project(lxqt-config-appearance)
-
 include_directories(
     ${Qt6Gui_PRIVATE_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
@@ -54,16 +52,18 @@ lxqt_translate_ts(QM_FILES
         ${H_FILES}
         ${CPP_FILES}
         ${UI_FILES}
+    TEMPLATE
+        lxqt-config-appearance
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-appearance"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES ${PROJECT_NAME}.desktop.in USE_YAML)
+lxqt_app_translation_loader(QM_LOADER lxqt-config-appearance)
+lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config-appearance.desktop.in USE_YAML)
 
 #************************************************
 
-add_executable(${PROJECT_NAME}
+add_executable(lxqt-config-appearance
     ${CPP_FILES}
     ${RESOURCES}
     ${QRC_FILES}
@@ -72,20 +72,20 @@ add_executable(${PROJECT_NAME}
     ${DESKTOP_FILES}
 )
 
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(lxqt-config-appearance
     Qt6::Widgets
     Qt6::Xml
     ${LIBRARIES}
     lxqt-config-cursor
 )
 
-set_target_properties("${PROJECT_NAME}"
+set_target_properties("lxqt-config-appearance"
     PROPERTIES
     INSTALL_RPATH "${CMAKE_INSTALL_FULL_LIBDIR}/${LXQT_CONFIG_PROJECT}"
 )
 
 install(TARGETS
-    ${PROJECT_NAME}
+    lxqt-config-appearance
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
     COMPONENT Runtime
 )
