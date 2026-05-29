@@ -1,5 +1,7 @@
 find_package(X11 REQUIRED)
 find_package(XCB REQUIRED XCB)
+find_package(ZLIB REQUIRED)
+
 include_directories(${XCB_INCLUDE_DIRS})
 link_libraries(${XCB_LIBRARIES})
 
@@ -35,8 +37,6 @@ set(lxqt-config-cursor_UIS
     selectwnd.ui
     warninglabel.ui
 )
-
-find_package(ZLIB REQUIRED)
 
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
