@@ -1,12 +1,8 @@
 find_package(X11 REQUIRED)
-find_package(XCB REQUIRED XCB)
+find_package(XCB REQUIRED COMPONENTS XCB)
 find_package(ZLIB REQUIRED)
 
-include_directories(${XCB_INCLUDE_DIRS})
-link_libraries(${XCB_LIBRARIES})
-
 include_directories (
-    ${X11_INCLUDE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/xcr
 )
 
@@ -67,11 +63,12 @@ add_library(lxqt-config-cursor
 target_link_libraries(lxqt-config-cursor
     Qt6::DBus
     Qt6::Xml
-    ${X11_X11_LIB}
-    ${X11_Xcursor_LIB}
+    X11::X11
+    X11::Xcursor
+    X11::Xfixes
+    ZLIB::ZLIB
+    XCB::XCB
     lxqt
-    ${ZLIB_LIBRARY}
-    ${X11_Xfixes_LIB}
 )
 # not needed probably ${X11_Xfixes_LIB})
 
