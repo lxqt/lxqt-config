@@ -2,10 +2,6 @@ find_package(X11 REQUIRED)
 find_package(XCB REQUIRED COMPONENTS XCB)
 find_package(ZLIB REQUIRED)
 
-include_directories (
-    ${CMAKE_CURRENT_SOURCE_DIR}/xcr
-)
-
 set(lxqt-config-cursor_HDRS
     thememodel.h
     previewwidget.h
@@ -58,6 +54,11 @@ add_library(lxqt-config-cursor
         ${DESKTOP_FILES}
         ${QM_FILES}
         ${lxqt-config-cursor_QM_LOADER}
+)
+
+target_include_directories(lxqt-config-cursor
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/xcr
 )
 
 target_link_libraries(lxqt-config-cursor
