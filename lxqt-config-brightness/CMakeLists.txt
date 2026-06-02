@@ -1,8 +1,4 @@
-find_package(XCB REQUIRED XCB RANDR)
-
-include_directories (
-    ${XCB_INCLUDE_DIRS}
-)
+find_package(XCB REQUIRED COMPONENTS XCB RANDR)
 
 set(H_FILES
     brightnesswatcher.h
@@ -49,7 +45,8 @@ add_executable(lxqt-config-brightness ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DES
 
 target_link_libraries(lxqt-config-brightness
     Qt6::Widgets
-    ${XCB_LIBRARIES}
+    XCB::XCB
+    XCB::RANDR
     lxqt
 )
 
