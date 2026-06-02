@@ -1,7 +1,3 @@
-include_directories(
-    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
-)
-
 set(H_FILES
     iconthemeinfo.h
 )
@@ -60,6 +56,11 @@ add_executable(lxqt-config-appearance
     ${QM_FILES}
     ${QM_LOADER}
     ${DESKTOP_FILES}
+)
+
+target_include_directories(lxqt-config-appearance
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
 )
 
 target_link_libraries(lxqt-config-appearance
