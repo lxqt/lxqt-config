@@ -1,8 +1,4 @@
-find_package(Qt6Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(XCB REQUIRED XCB RANDR)
-
-set(QTX_LIBRARIES Qt6::Widgets)
-
 
 include_directories (
     ${XCB_INCLUDE_DIRS}
@@ -55,7 +51,7 @@ add_executable(lxqt-config-brightness ${CPP_FILES} ${UI_FILES} ${QM_FILES} ${DES
 
 target_link_libraries(
     lxqt-config-brightness
-    ${QTX_LIBRARIES}
+    Qt6::Widgets
     ${XCB_LIBRARIES}
     lxqt
 )
