@@ -38,8 +38,6 @@ set(UI_FILES
     gtkconfig.ui
 )
 
-set(QRC_FILES "")
-
 set(LIBRARIES
     lxqt
 )
@@ -65,8 +63,6 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config-appearance.desktop.in U
 
 add_executable(lxqt-config-appearance
     ${CPP_FILES}
-    ${RESOURCES}
-    ${QRC_FILES}
     ${QM_FILES}
     ${QM_LOADER}
     ${DESKTOP_FILES}
