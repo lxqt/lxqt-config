@@ -35,7 +35,8 @@ set(UI_FILES
 
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
-        UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
     SOURCES
         ${H_FILES}
         ${CPP_FILES}
