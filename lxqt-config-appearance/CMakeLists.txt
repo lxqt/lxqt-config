@@ -38,11 +38,6 @@ set(UI_FILES
     gtkconfig.ui
 )
 
-set(LIBRARIES
-    lxqt
-)
-
-
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
         UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
@@ -71,7 +66,7 @@ add_executable(lxqt-config-appearance
 target_link_libraries(lxqt-config-appearance
     Qt6::Widgets
     Qt6::Xml
-    ${LIBRARIES}
+    lxqt
     lxqt-config-cursor
 )
 
