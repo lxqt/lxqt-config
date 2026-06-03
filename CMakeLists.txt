@@ -37,6 +37,10 @@ find_package(Qt6Xml ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt-menu-data ${LXQT_MINIMUM_VERSION} REQUIRED)
 
+if (Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
+    find_package(Qt6GuiPrivate ${QT_MINIMUM_VERSION} REQUIRED)
+endif()
+
 include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 

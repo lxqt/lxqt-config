@@ -1,5 +1,4 @@
 include_directories(
-    ${Qt6Gui_PRIVATE_INCLUDE_DIRS}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
 )
 
@@ -64,10 +63,13 @@ add_executable(lxqt-config-appearance
 )
 
 target_link_libraries(lxqt-config-appearance
-    Qt6::Widgets
-    Qt6::Xml
-    lxqt
-    lxqt-config-cursor
+    PRIVATE
+        Qt6::GuiPrivate
+    PUBLIC
+        Qt6::Widgets
+        Qt6::Xml
+        lxqt
+        lxqt-config-cursor
 )
 
 set_target_properties("lxqt-config-appearance"
