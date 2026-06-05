@@ -70,8 +70,6 @@ lxqt_translate_desktop(DESKTOP_FILES
 
 add_executable(lxqt-config-monitor
     ${SOURCES}
-    ${RESOURCES}
-    ${QRC_SOURCES}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${QM_LOADER}
