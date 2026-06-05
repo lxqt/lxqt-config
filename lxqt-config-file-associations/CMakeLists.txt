@@ -22,8 +22,6 @@ set(UI_FILES
     applicationchooser.ui
 )
 
-set(QRC_FILES "")
-
 set(LIBRARIES
     lxqt
 )
@@ -49,8 +47,6 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config-file-associations.deskt
 
 add_executable(lxqt-config-file-associations
     ${CPP_FILES}
-    ${RESOURCES}
-    ${QRC_FILES}
     ${QM_FILES}
     ${QM_LOADER}
     ${DESKTOP_FILES}
