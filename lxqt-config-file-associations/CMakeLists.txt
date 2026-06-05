@@ -22,10 +22,6 @@ set(UI_FILES
     applicationchooser.ui
 )
 
-set(LIBRARIES
-    lxqt
-)
-
 # Translations **********************************
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
@@ -56,7 +52,7 @@ target_link_libraries(lxqt-config-file-associations
     Qt6::Xml
     Qt6::DBus
     Qt6::Widgets
-    ${LIBRARIES}
+    lxqt
 )
 
 install(TARGETS
