@@ -1,4 +1,3 @@
-project(lxqt-config)
 add_subdirectory(qcategorizedview)
 
 include_directories (
@@ -28,11 +27,13 @@ lxqt_translate_ts(QM_FILES
         ${lxqt-config_HDRS}
         ${lxqt-config_SRCS}
         ${lxqt-config_UIS}
+    TEMPLATE
+        lxqt-config
     INSTALL_DIR
         "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
-lxqt_app_translation_loader(QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(QM_LOADER lxqt-config)
 lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config.desktop.in USE_YAML)
 
 #************************************************
