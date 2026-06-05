@@ -36,8 +36,6 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES lxqt-config-locale.desktop.in USE_Y
 add_executable(lxqt-config-locale
     ${CPP_FILES}
     ${COMBO_HEADER}
-    ${RESOURCES}
-    ${QRC_SOURCES}
     ${QM_FILES}
     ${DESKTOP_FILES}
     ${QM_LOADER}
