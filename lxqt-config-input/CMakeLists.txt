@@ -8,7 +8,6 @@ if (WITH_TOUCHPAD)
 endif ()
 
 set(lxqt-config-input_INCS
-    ${X11_INCLUDE_DIR}
     "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
 )
 
@@ -107,7 +106,7 @@ add_executable(lxqt-config-input
 
 set(lxqt-config-input_TLBS
     Qt6::Widgets
-    ${X11_LIBRARIES}
+    X11::X11
     lxqt
     lxqt-config-cursor
 )
