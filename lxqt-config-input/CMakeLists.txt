@@ -3,7 +3,6 @@ find_package(X11 REQUIRED)
 if (WITH_TOUCHPAD)
     find_package(PkgConfig REQUIRED)
     pkg_check_modules(XORG_LIBINPUT REQUIRED xorg-libinput)
-    pkg_check_modules(XORG_XI REQUIRED xi)
     pkg_check_modules(LIBUDEV REQUIRED libudev)
 endif ()
 
