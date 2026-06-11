@@ -6,25 +6,12 @@ if (WITH_TOUCHPAD)
     pkg_check_modules(LIBUDEV REQUIRED libudev)
 endif ()
 
-set(lxqt-config-input_INCS
-    "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
-)
-
 if (WITH_TOUCHPAD)
     add_definitions(
         "-DWITH_TOUCHPAD=\"ON\""
     )
 
-    set(lxqt-config-input_INCS
-        ${lxqt-config-input_INCS}
-        ${XORG_LIBINPUT_INCLUDE_DIRS}
-    )
 endif ()
-
-include_directories(
-    ${lxqt-config-input_INCS}
-)
-
 set(lxqt-config-input_HDRS
     keyboardconfig.h
     mouseconfig.h
@@ -103,23 +90,19 @@ add_executable(lxqt-config-input
     ${QM_LOADER}
 )
 
-set(lxqt-config-input_TLBS
+target_include_directories(lxqt-config-input
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/../liblxqt-config-cursor"
+        "$<$<BOOL:${WITH_TOUCHPAD}>:${XORG_LIBINPUT_INCLUDE_DIRS}>"
+)
+
+target_link_libraries(lxqt-config-input
     Qt6::Widgets
     X11::X11
     lxqt
     lxqt-config-cursor
-)
-
-if (WITH_TOUCHPAD)
-    set(lxqt-config-input_TLBS
-        ${lxqt-config-input_TLBS}
-        ${X11_Xinput_LIB}
-        udev
-    )
-endif ()
-
-target_link_libraries(lxqt-config-input
-    ${lxqt-config-input_TLBS}
+    $<$<BOOL:${WITH_TOUCHPAD}>:${X11_Xinput_LIB}>
+    $<$<BOOL:${WITH_TOUCHPAD}>:udev>
 )
 
 set_target_properties(lxqt-config-input
