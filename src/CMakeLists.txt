@@ -44,14 +44,13 @@ target_include_directories(lxqt-config
 )
 
 target_link_libraries(lxqt-config
-    Qt6::Widgets
-    Qt6::Xml
-    lxqt
+    PUBLIC
+        Qt6::Widgets
+        Qt6::Xml
+        lxqt
+    PRIVATE
+        qcategorizedview
 )
-
-# helper static lib
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview)
-target_link_libraries(lxqt-config qcategorizedview)
 
 install(TARGETS
     lxqt-config
