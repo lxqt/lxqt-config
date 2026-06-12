@@ -6,12 +6,6 @@ if (WITH_TOUCHPAD)
     pkg_check_modules(LIBUDEV REQUIRED libudev)
 endif ()
 
-if (WITH_TOUCHPAD)
-    add_definitions(
-        "-DWITH_TOUCHPAD=\"ON\""
-    )
-
-endif ()
 set(lxqt-config-input_HDRS
     keyboardconfig.h
     mouseconfig.h
@@ -79,15 +73,17 @@ lxqt_translate_desktop(DESKTOP_FILES
 
 #************************************************
 
-add_definitions(
-  -DPACKAGE_DATA_DIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}/lxqt-config-input"
-)
-
 add_executable(lxqt-config-input
     ${lxqt-config-input_SRCS}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${QM_LOADER}
+)
+
+target_compile_definitions(lxqt-config-input
+    PRIVATE
+        "$<$<BOOL:${WITH_TOUCHPAD}>:-DWITH_TOUCHPAD=ON>"
+        "-DPACKAGE_DATA_DIR=\"${CMAKE_INSTALL_FULL_DATAROOTDIR}/lxqt-config-input\""
 )
 
 target_include_directories(lxqt-config-input
