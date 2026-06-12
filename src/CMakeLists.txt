@@ -1,9 +1,5 @@
 add_subdirectory(qcategorizedview)
 
-include_directories (
-    "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
-)
-
 set(lxqt-config_SRCS
     main.cpp
     mainwindow.cpp
@@ -40,6 +36,11 @@ add_executable(lxqt-config
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${QM_LOADER}
+)
+
+target_include_directories(lxqt-config
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
 )
 
 target_link_libraries(lxqt-config
