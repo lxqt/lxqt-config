@@ -4,8 +4,6 @@ include_directories (
     "${CMAKE_CURRENT_SOURCE_DIR}/qcategorizedview"
 )
 
-set(lxqt-config_HDRS "")
-
 set(lxqt-config_SRCS
     main.cpp
     mainwindow.cpp
@@ -24,7 +22,6 @@ lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS
         ${UPDATE_TRANSLATIONS}
     SOURCES
-        ${lxqt-config_HDRS}
         ${lxqt-config_SRCS}
         ${lxqt-config_UIS}
     TEMPLATE
