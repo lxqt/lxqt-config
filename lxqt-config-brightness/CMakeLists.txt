@@ -50,8 +50,9 @@ target_link_libraries(lxqt-config-brightness
     lxqt
 )
 
-add_definitions(
-    -DICON_DIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/48x48/apps"
+target_compile_definitions(lxqt-config-brightness
+    PRIVATE
+        -DICON_DIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/48x48/apps"
 )
 
 install(TARGETS lxqt-config-brightness RUNTIME DESTINATION bin)
