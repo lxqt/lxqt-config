@@ -66,6 +66,7 @@ private:
   void loadLists();
   void initControls();
   void addLayout(QString name, QString variant);
+  void warnSetXkbMapNotFound();
 
 private:
   Ui::KeyboardLayoutConfig ui;
@@ -76,6 +77,8 @@ private:
   QMap<QString, KeyboardLayoutInfo> knownLayouts_;
   LXQt::Settings* settings;
   bool applyConfig_;
+
+  static constexpr int TimeoutSetXkbMap_msec = 100;
 };
 
 #endif // KEYBOARDLAYOUTCONFIG_H
