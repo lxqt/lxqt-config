@@ -15,14 +15,14 @@
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_1">
      <property name="text">
       <string>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</string>
      </property>
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Device:</string>
      </property>
