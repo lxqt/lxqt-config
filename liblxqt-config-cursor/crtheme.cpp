@@ -212,7 +212,9 @@ QImage XCursorThemeData::loadImage(const QString &name, int size) const
     //if (!xcimage) return LegacyTheme::loadImage(name);
     if (!xcimage) return QImage();
     // Convert the XcursorImage to a QImage, and auto-crop it
-    QImage image((uchar *)xcimage->pixels, xcimage->width, xcimage->height, QImage::Format_ARGB32_Premultiplied);
+    size_t bytes_per_pixel = sizeof(xc_image->pixels[0]);
+    size_t bytes_per_scanline = bytes_per_pixel * xc_image->width;
+    QImage image((const uchar*)xc_image->pixels, xc_image->width, xc_image->height, bytes_per_scanline, QImage::Format_ARGB32_Premultiplied);
     image = autoCropImage(image);
     XcursorImageDestroy(xcimage);
     return image;
