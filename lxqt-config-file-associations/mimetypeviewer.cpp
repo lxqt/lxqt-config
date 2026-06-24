@@ -144,10 +144,12 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
         ba = mimeFile.readAll();
         mimeFile.close();
     }
-    mMimeappsTemp.open();
-    QTextStream txtStream(&mMimeappsTemp);
-    txtStream << ba;
-    mMimeappsTemp.close();
+    if (mMimeappsTemp.open())
+    {
+        QTextStream txtStream(&mMimeappsTemp);
+        txtStream << ba;
+        mMimeappsTemp.close();
+    }
     // remember the DE's default apps list
     QList<QByteArray> desktopsList = qgetenv("XDG_CURRENT_DESKTOP").toLower().split(':');
     if (!desktopsList.isEmpty() && !desktopsList.at(0).isEmpty())
@@ -163,10 +165,12 @@ MimetypeViewer::MimetypeViewer(QWidget *parent)
             ba = DEMimeFile.readAll();
             DEMimeFile.close();
         }
-        mDEMimeappsTemp.open();
-        QTextStream DETxtStream(&mDEMimeappsTemp);
-        DETxtStream << ba;
-        mDEMimeappsTemp.close();
+        if (mDEMimeappsTemp.open())
+        {
+            QTextStream DETxtStream(&mDEMimeappsTemp);
+            DETxtStream << ba;
+            mDEMimeappsTemp.close();
+        }
     }
 
     initializeMimetypeTreeView();
