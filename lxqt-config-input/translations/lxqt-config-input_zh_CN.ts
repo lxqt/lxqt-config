@@ -162,7 +162,7 @@
     <message>
         <location filename="../mouseconfig.cpp" line="65"/>
         <source>Use the settings of the Wayland compositor for more options about mouse, touchpad and keyboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>关于鼠标、触控板和键盘的更多选项使用Wayland合成器的设置。</translation>
     </message>
 </context>
 <context>
@@ -194,7 +194,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../lxqt-config-input.cpp" line="110"/>
         <source>To apply the changes also to GTK, check LXQt Appearance Configuration → GTK Style.</source>
-        <translation type="unfinished"></translation>
+        <translation>将改变也用于GTK，可检查LXQt外观设置 → GTK样式。</translation>
     </message>
     <message>
         <location filename="../lxqt-config-input.cpp" line="114"/>
@@ -260,12 +260,12 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;鼠标和触控板&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>打字时停用</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Mouse, touchpad and keyboard can be configured in the settings of the compositor
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>拖放锁定</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
