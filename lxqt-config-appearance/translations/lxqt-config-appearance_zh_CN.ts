@@ -6,7 +6,7 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color</source>
-        <translation>点击可更改颜色。</translation>
+        <translation>点击更改颜色</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>等宽：</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
