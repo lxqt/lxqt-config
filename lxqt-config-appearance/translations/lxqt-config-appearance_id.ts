@@ -454,7 +454,7 @@ Pastikan &apos;xsettingsd&apos; terinstal agar aplikasi GTK dapat membantu mener
     <message>
         <location filename="../styleconfig.ui" line="372"/>
         <source>48</source>
-        <translation type="unfinished">48</translation>
+        <translation>48</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="383"/>
