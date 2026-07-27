@@ -34,7 +34,8 @@ BrightnessSettings::BrightnessSettings(QWidget *parent):QDialog(parent)
     mMonitorsInitial = mBrightness->getMonitorsInfo();
     mBacklight = new LXQt::Backlight(this);
 
-    ui->headIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("display-brightness-symbolic")).pixmap(32, 32));
+    ui->headIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("video-display-brightness"),
+                                 QIcon::fromTheme(QStringLiteral("video-display"))).pixmap(32, 32));
 
     ui->backlightSlider->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
     ui->backlightGroupBox->setEnabled(mBacklight->isBacklightAvailable() || mBacklight->isBacklightOff());
