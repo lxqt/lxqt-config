@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Monoespaciado:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -341,7 +341,7 @@ Asegúrese de que esté instalado &apos;xsettingsd&apos; para hacer que las apli
     <message>
         <location filename="../styleconfig.ui" line="144"/>
         <source>Tooltip:</source>
-        <translation type="unfinished"></translation>
+        <translation>Información sobre herramientas:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="158"/>
@@ -366,7 +366,7 @@ Asegúrese de que esté instalado &apos;xsettingsd&apos; para hacer que las apli
     <message>
         <location filename="../styleconfig.ui" line="208"/>
         <source>Tooltip Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto de descripción emergente:</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="222"/>
@@ -395,7 +395,7 @@ Asegúrese de que esté instalado &apos;xsettingsd&apos; para hacer que las apli
         <location filename="../styleconfig.ui" line="348"/>
         <location filename="../styleconfig.ui" line="380"/>
         <source>May be overridden by Qt style or app</source>
-        <translation type="unfinished"></translation>
+        <translation>Puede ser sobrescrito por el estilo de Qt o la aplicación</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="299"/>

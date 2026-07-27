@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color</source>
-        <translation type="unfinished"></translation>
+        <translation>Click pentru a schimba culoarea</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectați culoarea</translation>
     </message>
 </context>
 <context>
@@ -24,17 +24,17 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; a fost suprascris.&lt;/p&gt;&lt;p&gt;Poți găsi o copie a setărilor tale vechi în &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Eroare</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Eroare: gsettings nu poate fi executat</translation>
     </message>
 </context>
 <context>

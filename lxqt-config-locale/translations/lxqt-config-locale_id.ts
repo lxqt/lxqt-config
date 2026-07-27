@@ -66,7 +66,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="164"/>
         <source>Unset</source>
-        <translation type="unfinished"></translation>
+        <translation>Belum ditentukan</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../localeconfig.cpp" line="526"/>
         <source>Metric</source>
-        <translation>Metric</translation>
+        <translation>Metrik</translation>
     </message>
 </context>
 <context>
