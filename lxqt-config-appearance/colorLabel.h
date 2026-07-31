@@ -28,7 +28,6 @@
 
 #include <QLabel>
 #include <QWidget>
-#include <Qt>
 
 class ColorLabel : public QLabel {
     Q_OBJECT
