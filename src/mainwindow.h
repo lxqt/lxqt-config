@@ -27,10 +27,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-
-
 #include "ui_mainwindow.h"
-#include <QtXml/QDomElement>
+#include <QDomElement>
 
 class QCategorizedSortFilterProxyModel;
 
@@ -68,6 +66,5 @@ private slots:
 };
 
 } // namespace
-
 
 #endif

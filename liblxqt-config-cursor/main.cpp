@@ -7,8 +7,8 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
-//#include <QtCore>
-#include <QDebug>
+
+// #include <QDebug>
 
 #include <XdgIcon>
 #include <LXQt/Settings>
@@ -20,16 +20,10 @@
 #include <QImage>
 #include <QString>
 #include <QStringList>
-#include <QTextCodec>
 #include <QTextStream>
 
-
-///////////////////////////////////////////////////////////////////////////////
 int main (int argc, char *argv[])
 {
-    //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("koi8-r"));
-    //QTextCodec::setCodecForLocale(QTextCodec::codecForName("koi8-r"));
-
     LXQt::Application app(argc, argv);
 
     TRANSLATE_APP;
