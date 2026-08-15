@@ -10,7 +10,8 @@
 #ifndef XCRXCUR_H
 #define XCRXCUR_H
 
-#include <QtCore>
+#include <QString>
+#include <QDir>
 #include <QCursor>
 #include <QPixmap>
 
