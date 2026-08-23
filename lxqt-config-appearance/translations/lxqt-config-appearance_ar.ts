@@ -226,7 +226,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../lxqtthemeconfig.ui" line="23"/>
         <source>LXQt Theme</source>
-        <translation>سمة لكسكيوت</translation>
+        <translation>سمة LXQt</translation>
     </message>
     <message>
         <location filename="../lxqtthemeconfig.ui" line="57"/>
@@ -288,7 +288,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="92"/>
         <source>LXQt Theme</source>
-        <translation>سمة لكسكيوت</translation>
+        <translation>سمة LXQt</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="100"/>
