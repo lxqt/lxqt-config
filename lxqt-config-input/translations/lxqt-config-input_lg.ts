@@ -261,7 +261,7 @@ Enteekateeka ez&apos;akasongesebwa aka bulijjo n&apos;akasiisirizibwa ne ez&apos
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ebisongesebwa&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
@@ -276,7 +276,7 @@ Enteekateeka ez&apos;akasongesebwa aka bulijjo n&apos;akasiisirizibwa ne ez&apos
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Koona okulule</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
