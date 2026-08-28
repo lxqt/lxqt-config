@@ -230,8 +230,11 @@ void ConfigOtherToolKits::setXSettingsConfig()
 void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
 {
     updateConfigFromSettings();
-    if(!theme.isEmpty())
-        mConfig.styleTheme = theme;
+    // Callers that only sync cursor/icon/font (e.g. lxqt-config-input) omit theme.
+    // Keep the existing GTK theme instead of writing an empty name.
+    if(theme.isEmpty())
+        theme = getGTKThemeFromRCFile(version);
+    mConfig.styleTheme = theme;
     QString commands;
     if(version == QLatin1String("3.0"))
         commands = getConfig(GTK3_GSETTINGS, ConfigOtherToolKits::GTK3GSETTINGS);
@@ -250,8 +253,11 @@ void ConfigOtherToolKits::setGsettingsConfig(QString version, QString theme)
 void ConfigOtherToolKits::setGTKConfig(QString version, QString theme)
 {
     updateConfigFromSettings();
-    if(!theme.isEmpty())
-        mConfig.styleTheme = theme;
+    // Callers that only sync cursor/icon/font (e.g. lxqt-config-input) omit theme.
+    // Keep the existing GTK theme instead of writing an empty name.
+    if(theme.isEmpty())
+        theme = getGTKThemeFromRCFile(version);
+    mConfig.styleTheme = theme;
     backupGTKSettings(version);
     QString gtkrcPath = getGTKConfigPath(version);
     if(version == QLatin1String("2.0"))
