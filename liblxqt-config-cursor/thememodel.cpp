@@ -29,9 +29,9 @@
 #include "crtheme.h"
 #include "cfgfile.h"
 
-#include <X11/Xlib.h>
-#include <X11/Xcursor/Xcursor.h>
+#include <XdgDirs>
 
+using namespace Qt::Literals::StringLiterals;
 
 //#define DUMP_FOUND_THEMES
 
@@ -123,21 +123,34 @@ QModelIndex XCursorThemeModel::defaultIndex()
 
 const QStringList XCursorThemeModel::searchPaths()
 {
-    if (!mBaseDirs.isEmpty()) return mBaseDirs;
-    // Get the search path from Xcursor
-    QString path = QString::fromUtf8(XcursorLibraryPath());
-    // Separate the paths
-    mBaseDirs = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
-    // Remove duplicates
-    QMutableStringListIterator i(mBaseDirs);
-    while (i.hasNext())
-    {
-        const QString path = i.next();
-        QMutableStringListIterator j(i);
-        while (j.hasNext()) if (j.next() == path) j.remove();
+    if (!mBaseDirs.isEmpty())
+        return mBaseDirs;
+
+    const QString env = qEnvironmentVariable("XCURSOR_PATH");
+    if (!env.isEmpty()) {
+        const QStringList rawDirs = env.split(u':', Qt::SkipEmptyParts);
+        mBaseDirs.append(rawDirs);
+    } else {
+        // Freedesktop search paths:
+        // $HOME/.icons # (for backwards compatibility)
+        // $XDG_DATA_HOME/icons # user
+        // $XDG_DATA_DIRS/icons # system
+        // /usr/share/pixmaps
+
+        mBaseDirs.append(QDir::homePath() + "/.icons"_L1);
+        mBaseDirs.append(XdgDirs::dataHome() + "/icons"_L1);
+
+        const QStringList dataDirs = XdgDirs::dataDirs();
+        for (const QString &dataDir : dataDirs)
+            mBaseDirs.append(dataDir + "/icons"_L1);
+
+        mBaseDirs.append(u"/usr/share/pixmaps"_s);
     }
     // Expand all occurrences of ~/ to the home dir
-    mBaseDirs.replaceInStrings(QRegularExpression(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
+    // TODO:: support ~user ?
+    mBaseDirs.replaceInStrings(QRegularExpression(u"^~\\/"_s), QDir::homePath() + u'/');
+    mBaseDirs.removeDuplicates();
+
     return mBaseDirs;
 }
 
