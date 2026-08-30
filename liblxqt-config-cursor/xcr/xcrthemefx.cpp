@@ -357,11 +357,7 @@ bool XCursorThemeFX::parseCursorFXTheme (const QString &aFileName) {
     }
     // decode image
     QImage img((const uchar *)unp.constData()+ipos+realHdrSize, imgWdt, imgHgt, QImage::Format_ARGB32);
-#if (QT_VERSION >= QT_VERSION_CHECK(6,9,0))
     img = img.flipped(Qt::Vertical);
-#else
-    img = img.mirrored(false, true);
-#endif
     XCursorImages *cim = new XCursorImages(QString::fromUtf8(*nlst));
     cim->setScript(script);
     quint32 frameWdt = img.width()/frameCnt;
