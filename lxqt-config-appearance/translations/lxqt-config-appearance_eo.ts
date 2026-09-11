@@ -6,12 +6,12 @@
     <message>
         <location filename="../colorLabel.cpp" line="37"/>
         <source>Click to change color</source>
-        <translation type="unfinished"></translation>
+        <translation>Alklaki por ŝanĝi koloron</translation>
     </message>
     <message>
         <location filename="../colorLabel.cpp" line="61"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selekti koloron</translation>
     </message>
 </context>
 <context>
@@ -19,22 +19,22 @@
     <message>
         <location filename="../configothertoolkits.cpp" line="178"/>
         <source>GTK themes</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK temoj</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="179"/>
         <source>&lt;p&gt;&apos;%1&apos; has been overwritten.&lt;/p&gt;&lt;p&gt;You can find a copy of your old settings in &apos;%2&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&apos;%1&apos; estas superskribita.&lt;/p&gt;&lt;p&gt;Vi povas trovi kopion de viaj antaŭaj agordoj en &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Eraro</translation>
     </message>
     <message>
         <location filename="../configothertoolkits.cpp" line="244"/>
         <source>Error: gsettings cannot be run</source>
-        <translation type="unfinished"></translation>
+        <translation>Eraro: ne eblas lanĉi gsettings-n</translation>
     </message>
 </context>
 <context>
@@ -42,22 +42,22 @@
     <message>
         <location filename="../fontsconfig.ui" line="23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="30"/>
         <source>Default font for user interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaŭlta tipo por la interfaco de la uzanto</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="36"/>
         <source>Font name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomo de la tipo:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="46"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stilo:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="77"/>

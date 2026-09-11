@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Моноширинний:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="146"/>
         <source>Font hinting</source>
-        <translation>Хінтинг шрифтів</translation>
+        <translation>Згладжування шрифтів</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="187"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="204"/>
         <source>Autohint</source>
-        <translation>Автохінтинг</translation>
+        <translation>Автозгладжування</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="107"/>

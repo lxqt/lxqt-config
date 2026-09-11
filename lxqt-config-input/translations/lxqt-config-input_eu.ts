@@ -260,12 +260,12 @@ Sagua, ukipen-panela eta teklatua konposatzailearen ezarpenetan konfigura daitez
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Sagua eta ukipen-panela&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Desgaitu idazten ari zaren bitartean</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ Sagua, ukipen-panela eta teklatua konposatzailearen ezarpenetan konfigura daitez
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrastatze-blokeoa</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
@@ -290,22 +290,22 @@ Sagua, ukipen-panela eta teklatua konposatzailearen ezarpenetan konfigura daitez
     <message>
         <location filename="../touchpadconfig.ui" line="170"/>
         <source>&amp;Two-Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bi hatz</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="177"/>
         <source>Ed&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;rtza</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="184"/>
         <source>B&amp;utton</source>
-        <translation type="unfinished"></translation>
+        <translation>B&amp;otoia</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="37"/>
         <source>DeviceInfoLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Gailuaren informazioaren etiketa</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.cpp" line="102"/>
