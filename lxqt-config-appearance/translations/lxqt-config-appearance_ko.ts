@@ -207,7 +207,7 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>아이콘 테마</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ GTK 응용 프로그램이 테마를 즉석에서 적용할 수 있도록 &apos;
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>아이콘 테마</translation>
     </message>
     <message>

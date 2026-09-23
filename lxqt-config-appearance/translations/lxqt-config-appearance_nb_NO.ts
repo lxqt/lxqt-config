@@ -207,7 +207,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Ikontema</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Pass på at &apos;xsettingsd&apos; er installert for å hjelpe GTK-programmer å
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Ikontema</translation>
     </message>
     <message>
