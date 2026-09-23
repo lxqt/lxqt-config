@@ -207,7 +207,7 @@ GTK бағдарламалары рәсімдеу стильдерін бірд�
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Белгішелер рәсімдеу тәсілі</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ GTK бағдарламалары рәсімдеу стильдерін бірд�
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Таңбашалар темасы</translation>
     </message>
     <message>

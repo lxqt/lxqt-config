@@ -207,7 +207,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Tema de ícones</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Certifique-se de que o &apos;xsettingsd&apos; está instalado para ajudar as apl
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Tema de ícones</translation>
     </message>
     <message>

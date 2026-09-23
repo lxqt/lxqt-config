@@ -207,7 +207,7 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Biểu tượng</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Hãy chắc là &apos;xsettingsd&apos; được cài đặt để giúp các ứ
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Biểu tượng</translation>
     </message>
     <message>
