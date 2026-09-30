@@ -24,13 +24,18 @@
 #include "crtheme.h"
 #include "xcr/xcrimg.h"
 
+#include <QFile>
+#include <QString>
 #include <QStyle>
 #include <QSettings>
 #include "cfgfile.h"
 
-#include <X11/Xlib.h>
+#include <XdgDirs>
+
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/Xfixes.h>
+
+using namespace Qt::Literals::StringLiterals;
 
 // Static variable holding alternative names for some cursors
 static QHash<QString, QString> alternatives;
@@ -45,6 +50,36 @@ XCursorThemeData::XCursorThemeData(const QDir &aDir)
     if (aDir.exists(QStringLiteral("index.theme"))) parseIndexFile();
     if (mDescription.isEmpty()) mDescription = QLatin1String("no description");
     if (mTitle.isEmpty()) mTitle = mName;
+}
+
+QStringList XCursorThemeData::xdgSearchPaths()
+{
+    QStringList dirs;
+    const QString env = qEnvironmentVariable("XCURSOR_PATH");
+    if (!env.isEmpty()) {
+        const QStringList rawDirs = env.split(u':', Qt::SkipEmptyParts);
+        dirs.append(rawDirs);
+    } else {
+        // Freedesktop search paths:
+        // $HOME/.icons # (for backwards compatibility)
+        // $XDG_DATA_HOME/icons # user
+        // $XDG_DATA_DIRS/icons # system
+        // /usr/share/pixmaps
+
+        dirs.append(QDir::homePath() + "/.icons"_L1);
+        dirs.append(XdgDirs::dataHome() + "/icons"_L1);
+
+        const QStringList dataDirs = XdgDirs::dataDirs();
+        for (const QString &dataDir : dataDirs)
+            dirs.append(dataDir + "/icons"_L1);
+
+        dirs.append(u"/usr/share/pixmaps"_s);
+    }
+
+    // TODO:: support ~user ?
+    dirs.replaceInStrings(QRegularExpression(u"^~\\/"_s), QDir::homePath() + u'/');
+    dirs.removeDuplicates();
+    return dirs;
 }
 
 void XCursorThemeData::parseIndexFile()
@@ -163,16 +198,35 @@ QPixmap XCursorThemeData::createIcon() const
 
 XcursorImage *XCursorThemeData::xcLoadImage(const QString &image, int size) const
 {
-    QByteArray cursorName = QFile::encodeName(image);
-    QByteArray themeName  = QFile::encodeName(name());
-    return XcursorLibraryLoadImage(cursorName.constData(), themeName.constData(), size);
+    const QString path = findCursorFile(name(), image);
+    if (path.isEmpty())
+        return nullptr;
+
+    FILE *f = fopen(QFile::encodeName(path).constData(), "rb");
+    if (!f)
+        return nullptr;
+
+    XcursorImage *img = XcursorFileLoadImage(f, size);
+    fclose(f);
+    return img;
 }
 
 XcursorImages *XCursorThemeData::xcLoadImages(const QString &image, int size) const
 {
-    QByteArray cursorName = QFile::encodeName(image);
-    QByteArray themeName  = QFile::encodeName(name());
-    return XcursorLibraryLoadImages(cursorName.constData(), themeName.constData(), size);
+    const QString path = findCursorFile(name(), image);
+    if (path.isEmpty())
+        return nullptr;
+
+    FILE *f = fopen(QFile::encodeName(path).constData(), "rb");
+    if (!f)
+        return nullptr;
+
+    XcursorImages *imgs = XcursorFileLoadImages(f, size);
+    if (imgs)
+        XcursorImagesSetName(imgs, QFile::encodeName(image).constData());
+
+    fclose(f);
+    return imgs;
 }
 
 unsigned long XCursorThemeData::loadCursorHandle(const QString &name, int size) const
@@ -222,6 +276,56 @@ bool XCursorThemeData::isWritable() const
 {
     QFileInfo fi(path());
     return fi.isWritable();
+}
+
+QString XCursorThemeData::themeInherits(const QString &themeDir)
+{
+    QFile f(themeDir + "/index.theme"_L1);
+    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
+        return QString();
+
+    QTextStream in(&f);
+    while (!in.atEnd()) {
+        const QString line = in.readLine();
+        if (line.startsWith("Inherits"_L1)) {
+            const int eq = line.indexOf(u'=');
+
+            if (eq < 0)
+                continue;
+
+            const QStringList parts = line.mid(eq + 1)
+                .split(QRegularExpression(u"[;,\\s]+"_s), Qt::SkipEmptyParts);
+            return parts.isEmpty() ? QString() : parts.first();
+        }
+    }
+    return QString();
+}
+
+QString XCursorThemeData::findCursorFile(const QString &themeName, const QString &cursorName)
+{
+    QString theme = themeName;
+    QSet<QString> visited;
+
+    for (int depth = 0; depth < 32 && !theme.isEmpty(); ++depth) {
+        if (visited.contains(theme)) break;   // Inherits self-reference guard
+        visited.insert(theme);
+
+        QString nextTheme;
+        for (const QString &base : xdgSearchPaths()) {
+            const QString themeDir = base + u'/' + theme;
+            const QString cursorPath = themeDir + "/cursors/"_L1 + cursorName;
+            if (QFile::exists(cursorPath))
+                return cursorPath;
+            if (nextTheme.isEmpty())
+                nextTheme = themeInherits(themeDir);
+        }
+        theme = nextTheme;
+    }
+
+    if (themeName != "default"_L1)
+        return findCursorFile(u"default"_s, cursorName);
+
+    return QString();
 }
 
 ///////////////////////////////////////////////////////////////////////////////

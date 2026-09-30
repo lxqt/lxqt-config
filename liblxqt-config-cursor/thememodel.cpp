@@ -29,10 +29,6 @@
 #include "crtheme.h"
 #include "cfgfile.h"
 
-#include <X11/Xlib.h>
-#include <X11/Xcursor/Xcursor.h>
-
-
 //#define DUMP_FOUND_THEMES
 
 
@@ -124,20 +120,8 @@ QModelIndex XCursorThemeModel::defaultIndex()
 const QStringList XCursorThemeModel::searchPaths()
 {
     if (!mBaseDirs.isEmpty()) return mBaseDirs;
-    // Get the search path from Xcursor
-    QString path = QString::fromUtf8(XcursorLibraryPath());
-    // Separate the paths
-    mBaseDirs = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
-    // Remove duplicates
-    QMutableStringListIterator i(mBaseDirs);
-    while (i.hasNext())
-    {
-        const QString path = i.next();
-        QMutableStringListIterator j(i);
-        while (j.hasNext()) if (j.next() == path) j.remove();
-    }
-    // Expand all occurrences of ~/ to the home dir
-    mBaseDirs.replaceInStrings(QRegularExpression(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
+
+    mBaseDirs = XCursorThemeData::xdgSearchPaths();
     return mBaseDirs;
 }
 

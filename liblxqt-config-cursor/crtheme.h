@@ -55,6 +55,12 @@ public:
 
     XCursorThemeData(const QDir &aDir);
 
+    /// Ordered list of base directories where LXQt searches for cursor themes,
+    /// independent of libXcursor's own XcursorLibraryPath(),
+    /// Follows XDG specification:
+    ///     https://specifications.freedesktop.org/icon-theme/latest/#directory_layout
+    static QStringList xdgSearchPaths();
+
     const QString &name() const { return mName; }
     const QString &title() const { return mTitle; }
     const QString &description() const { return mDescription; }
@@ -98,6 +104,13 @@ protected:
 
     /// Convenience function for cropping an image.
     QImage autoCropImage(const QImage &image) const;
+
+private:
+    /// Resolves @p cursorName inside theme @p themeName, walking Inherits=
+    /// (index.theme) and falling back to "default", using xdgSearchPaths()
+    /// instead of libXcursor's internal XcursorScanTheme().
+    static QString findCursorFile(const QString &themeName, const QString &cursorName);
+    static QString themeInherits(const QString &themeDir);
 
 protected:
     QString mName;
