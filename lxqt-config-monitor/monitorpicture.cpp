@@ -25,6 +25,7 @@
 #include <QVector2D>
 #include <QRectF>
 #include <KScreen/Mode>
+#include <KScreen/Screen>
 #include <QScrollBar>
 #include <QResizeEvent>
 #include <QTransform>
