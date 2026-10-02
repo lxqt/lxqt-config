@@ -3,6 +3,7 @@
 
 #include <KScreen/Output>
 #include <KScreen/Mode>
+#include <KScreen/Screen>
 #include <KScreen/Config>
 #include <KScreen/GetConfigOperation>
 #include <KScreen/SetConfigOperation>
