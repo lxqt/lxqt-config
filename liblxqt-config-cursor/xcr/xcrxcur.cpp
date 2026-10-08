@@ -7,8 +7,8 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
+
 #include <QDebug>
-//#include <QtCore>
 
 #include "xcrxcur.h"
 
@@ -16,7 +16,6 @@
 #include <QStringList>
 #include <QStyle>
 #include <QTextStream>
-
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>

@@ -10,7 +10,12 @@
 #ifndef XCRIMG_H
 #define XCRIMG_H
 
-#include <QtCore>
+#include <QFile>
+#include <QDir>
+#include <QString>
+#include <QByteArray>
+#include <QImage>
+#include <QList>
 #include <QCursor>
 #include <QPixmap>
 
