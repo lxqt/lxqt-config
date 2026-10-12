@@ -6,7 +6,7 @@ lxqt-config-2.5.0 / 2026-11-05
  * CMake maintenance.
  * Silenced some compilation warnings.
  * Cleaned up some ui files.
- * Added fallback icon to head label to the head label in lxqt-config-brightness.
+ * Added fallback icon to the head label in lxqt-config-brightness.
  * Removed redundant/deprecated Qt headers.
  * Deleted `savesettings.cpp`.
  * Removed codes belonging to Qt < 6.9.
