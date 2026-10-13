@@ -207,7 +207,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Motyw ikon</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Upewnij się, że „xsettingsd” jest zainstalowany, aby programy GTK zmienia�
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Motyw ikon</translation>
     </message>
     <message>

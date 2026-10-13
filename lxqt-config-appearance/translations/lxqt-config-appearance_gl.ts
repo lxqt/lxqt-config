@@ -207,7 +207,7 @@ Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GT
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Tema de iconas</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Asegúrese de que «xsettingsd» está instalado para axudar ás aplicacións GT
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Tema de iconas</translation>
     </message>
     <message>

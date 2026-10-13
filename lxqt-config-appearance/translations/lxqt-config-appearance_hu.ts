@@ -207,7 +207,7 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Ikontéma</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Győződjön meg arról, hogy az &apos;xsettingsd&apos; telepítve van, hogy a G
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Ikontéma</translation>
     </message>
     <message>
