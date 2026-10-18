@@ -40,17 +40,17 @@
         <translation>Om bevestiging vragen na aanpassen van instellingen</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="54"/>
+        <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
         <translation>Momenteel niet ondersteund op Wayland</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="122"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
         <translation>De helderheidsinstellingen zijn gewijzigd</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="123"/>
+        <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Kloppen de instellingen zo?</translation>
     </message>

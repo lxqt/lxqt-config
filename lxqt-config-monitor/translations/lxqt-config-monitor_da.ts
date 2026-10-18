@@ -322,19 +322,6 @@ Du kan indstille din(e) skærm(e) med kanshi.</translation>
     </message>
 </context>
 <context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name</source>
-        <translation>Navn</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name:</source>
-        <translation>Navn:</translation>
-    </message>
-</context>
-<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>

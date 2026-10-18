@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;‚%1’ שוכתב.&lt;/p&gt;&lt;p&gt;ניתן למצוא עותק של ההגדרות הישנות שלך תחת ‚%2’&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>שגיאה: אי אפשר להריץ את gsettings</translation>
     </message>

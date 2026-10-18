@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;„%1“ andmed on nüüd asendatud.&lt;/p&gt;&lt;p&gt;Koopia oma vanadest seadistustest leiad siit - „%2“&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Viga: gsettings käivitamine ei õnnestu</translation>
     </message>

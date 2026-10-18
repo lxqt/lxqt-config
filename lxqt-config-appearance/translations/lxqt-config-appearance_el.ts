@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;Το %1 αντικαταστάθηκε.&lt;/p&gt;&lt;p&gt;Μπορείτε να βρείτε ένα αντίγραφο της παλιάς διαμόρφωσης στο &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Σφάλμα: αδυναμία εκτέλεσης του gsettings</translation>
     </message>

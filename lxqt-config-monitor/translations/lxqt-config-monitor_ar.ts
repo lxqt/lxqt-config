@@ -324,19 +324,6 @@ You can configure your monitor(s) with kanshi.</source>
     </message>
 </context>
 <context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name</source>
-        <translation>الاسم</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name:</source>
-        <translation>الاسم:</translation>
-    </message>
-</context>
-<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>

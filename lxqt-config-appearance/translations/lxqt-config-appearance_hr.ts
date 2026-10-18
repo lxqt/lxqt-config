@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;„%1” je prepisano.&lt;/p&gt;&lt;p&gt;Kopija prijašnjih postavki nalazi se u „%2”&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Greška: gsettings se ne može pokrenuti</translation>
     </message>

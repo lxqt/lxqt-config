@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; 덮어 써졌습니다.&lt;/p&gt;&lt;p&gt;&apos;%2&apos;에서 이전 설정의 복사본을 찾으실 수 있습니다&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>오류: gsettings를 실행할 수 없습니다</translation>
     </message>

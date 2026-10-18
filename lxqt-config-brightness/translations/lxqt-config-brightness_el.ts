@@ -40,17 +40,17 @@
         <translation>Απαιτείται επιβεβαίωση μετά από τις αλλαγές των ρυθμίσεων</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="54"/>
+        <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
         <translation>Προς το παρόν δεν υποστηρίζεται στο Wayland</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="122"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
         <translation>Οι ρυθμίσεις φωτεινότητας τροποποιήθηκαν</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="123"/>
+        <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Απαιτείται επιβεβαίωση. Οι ρυθμίσεις είναι σωστές;</translation>
     </message>

@@ -40,17 +40,17 @@
         <translation>Pieprasīt apstiprinājumu pēc iestatījumu maiņas</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="54"/>
+        <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="122"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
         <translation>Spilgtuma iestatījumi saglabāti</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="123"/>
+        <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Nepieciešams apstiprinājums. Iestatījumi apmierina?</translation>
     </message>

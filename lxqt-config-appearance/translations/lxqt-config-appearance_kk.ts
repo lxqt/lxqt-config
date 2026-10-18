@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; үстінен жазылды.&lt;/p&gt;&lt;p&gt;Ескі баптаулар көшірмесін мына жерден таба аласыз: &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Қате</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Қате: gsettings жөнелту мүмкін емес</translation>
     </message>

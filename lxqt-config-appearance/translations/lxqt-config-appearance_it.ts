@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; è stato sovrascritto.&lt;/p&gt;&lt;p&gt;E&apos; presente una copia delle vecchie impostazioni in &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Errore: non è possibile eseguire gsettings</translation>
     </message>

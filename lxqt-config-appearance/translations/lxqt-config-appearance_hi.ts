@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; को अधिलेखित कर दिया गया है.&lt;/p&gt;&lt;p&gt;आप &apos;%2&apos; में अपनी पुरानी सेटिंग्स की एक प्रति प्राप्त कर सकते हैं&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>त्रुटि</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>त्रुटि : gsettings को नहीं चलाया जा सकता</translation>
     </message>

@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; було перевизначено.&lt;/p&gt;&lt;p&gt;Ви можете знайти копію старих налаштувань у &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Помилка</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Помилка: не вдалося запустити gsettings</translation>
     </message>

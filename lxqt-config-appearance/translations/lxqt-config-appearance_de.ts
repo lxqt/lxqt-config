@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; wurde überschrieben.&lt;/p&gt;&lt;p&gt;Sie finden eine Kopie Ihrer alten Einstellungen in &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Fehler: gsettings kann nicht ausgeführt werden</translation>
     </message>

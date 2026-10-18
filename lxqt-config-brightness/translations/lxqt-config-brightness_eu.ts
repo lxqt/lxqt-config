@@ -40,17 +40,17 @@
         <translation>Berrespena eskatu ezarpenak aldatu ondoren</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="54"/>
+        <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="122"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
         <translation>Distira-ezarpenak aldatu dira</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="123"/>
+        <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Berrespena beharrezkoa da. Ezarpenak zuzenak al dira?</translation>
     </message>

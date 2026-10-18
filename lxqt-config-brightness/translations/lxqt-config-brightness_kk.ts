@@ -40,17 +40,17 @@
         <translation>Баптаулар өзгергеннен кейін растауды талап ету</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="54"/>
+        <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
         <translation>Қазіргі уақытта Wayland ортасында қолдау көрсетілмейді</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="122"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
         <translation>Жарықтылық баптаулары өзгертілді</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="123"/>
+        <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>Растау қажет. Баптаулар дұрыс па?</translation>
     </message>

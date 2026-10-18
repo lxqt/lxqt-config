@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; ewandkidwako empya.&lt;/p&gt;&lt;p&gt;Koppi y&apos;enteekateeka zo enkadde gisange mu &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Kiremya: gsettings tesobola kutandikibwa</translation>
     </message>

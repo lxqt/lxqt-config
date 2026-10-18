@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;«%1» был перезаписан.&lt;/p&gt;&lt;p&gt;Копия прежних настроек находится в «%2»&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Ошибка: gsettings не может быть запущен</translation>
     </message>

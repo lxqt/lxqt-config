@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; on korvattu.&lt;/p&gt;&lt;p&gt;Voit etsiä vanhan asetuksesi kopion sijainnista: &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Virhe</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Virhe: gsettings-ohjelmaa ei voitu suorittaa</translation>
     </message>

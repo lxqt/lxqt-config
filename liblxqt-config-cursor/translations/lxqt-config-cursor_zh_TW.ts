@@ -65,12 +65,12 @@
 <context>
     <name>XCursorThemeModel</name>
     <message>
-        <location filename="../thememodel.cpp" line="62"/>
+        <location filename="../thememodel.cpp" line="58"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
     <message>
-        <location filename="../thememodel.cpp" line="63"/>
+        <location filename="../thememodel.cpp" line="59"/>
         <source>Description</source>
         <translation>描述</translation>
     </message>

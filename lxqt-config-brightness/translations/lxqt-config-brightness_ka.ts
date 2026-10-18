@@ -40,17 +40,17 @@
         <translation>დადასტურების მოთხოვნა პარამეტრის ცვლილების შემდეგ</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="54"/>
+        <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
         <translation>ამჟამად მხარდაუჭერელია Wayland-ზე</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="122"/>
+        <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
         <translation>სიკაშკაშის პარამეტრები შეიცვალა</translation>
     </message>
     <message>
-        <location filename="../brightnesssettings.cpp" line="123"/>
+        <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
         <translation>დადასტურება აუცილებელია. ეს პარამეტრები სწორია?</translation>
     </message>

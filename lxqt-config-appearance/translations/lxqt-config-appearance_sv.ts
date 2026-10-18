@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; är uppdaterad.&lt;/p&gt;&lt;p&gt;En kopia av de gamla inställningarna sparas i &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Fel</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Fel: Kan inte köra GSettings</translation>
     </message>

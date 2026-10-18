@@ -322,19 +322,6 @@ Vous pouvez configurer votre (vos) moniteur(s) avec kanshi.</translation>
     </message>
 </context>
 <context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name</source>
-        <translation>Nom</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name:</source>
-        <translation>Nom :</translation>
-    </message>
-</context>
-<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>

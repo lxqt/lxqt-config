@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; 已经被覆写。&lt;/p&gt;&lt;p&gt;你可在&apos;%2&apos;找到以前设定的备份。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>错误：无法运行 gsettings</translation>
     </message>

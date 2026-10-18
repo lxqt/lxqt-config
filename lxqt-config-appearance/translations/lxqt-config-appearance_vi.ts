@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; đã được ghi đè.&lt;/p&gt;&lt;p&gt;Bạn có thể tìm thấy bản cài đặt cũ tại &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Lỗi</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Lỗi: gsettings không thể được khởi chạy</translation>
     </message>
