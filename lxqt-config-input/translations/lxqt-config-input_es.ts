@@ -260,12 +260,12 @@ El ratón, el panel táctil y el teclado pueden ser configurados en los ajustes 
     <message>
         <location filename="../touchpadconfig.ui" line="20"/>
         <source>&lt;b&gt;Mouse and Touchpad&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Ratón y panel táctil&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="74"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desactivar mientras mecanografía</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="90"/>
@@ -275,7 +275,7 @@ El ratón, el panel táctil y el teclado pueden ser configurados en los ajustes 
     <message>
         <location filename="../touchpadconfig.ui" line="113"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloqueo de arrastre</translation>
     </message>
     <message>
         <location filename="../touchpadconfig.ui" line="140"/>
