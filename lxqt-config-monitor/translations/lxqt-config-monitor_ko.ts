@@ -322,19 +322,6 @@ kanshi로 모니터를 구성할 수 있습니다.</translation>
     </message>
 </context>
 <context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name</source>
-        <translation>이름</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name:</source>
-        <translation>이름:</translation>
-    </message>
-</context>
-<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>

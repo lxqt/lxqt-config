@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; üzerine yazıldı.&lt;/p&gt;&lt;p&gt;&apos;%2&apos; dizininde eski ayarlarınızın bir kopyasını bulabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Hata: gsettings çalıştırılamıyor</translation>
     </message>

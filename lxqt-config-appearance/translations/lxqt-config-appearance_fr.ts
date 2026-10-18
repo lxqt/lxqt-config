@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; a été écrasé.&lt;/p&gt;&lt;p&gt;Vous pouvez trouver une copie de vos anciens paramètres dans &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Erreur&#xa0;: gsettings ne peut pas être lancé</translation>
     </message>

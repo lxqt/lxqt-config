@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; felül lett írva. &lt;/p&gt;&lt;p&gt;A régi beállítások másolatát a következő helyen találja: &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation type="unfinished"></translation>
     </message>

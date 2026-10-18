@@ -322,19 +322,6 @@ Ekran(lar)ınızı kanshi ile yapılandırabilirsiniz.</translation>
     </message>
 </context>
 <context>
-    <name>SaveSettings</name>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name</source>
-        <translation>Adı</translation>
-    </message>
-    <message>
-        <location filename="../savesettings.cpp" line="87"/>
-        <source>Name:</source>
-        <translation>Adı:</translation>
-    </message>
-</context>
-<context>
     <name>TimeoutDialog</name>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>

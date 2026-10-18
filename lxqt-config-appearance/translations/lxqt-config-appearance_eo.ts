@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; estas superskribita.&lt;/p&gt;&lt;p&gt;Vi povas trovi kopion de viaj antaŭaj agordoj en &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Eraro</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Eraro: ne eblas lanĉi gsettings-n</translation>
     </message>
@@ -291,7 +291,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../main.cpp" line="100"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tipo</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="110"/>

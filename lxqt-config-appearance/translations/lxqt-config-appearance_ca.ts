@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;«%1» ha estat sobreescrit.&lt;/p&gt;&lt;p&gt;Podeu trobar una còpia dels vostres ajusts antics a «%2»&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Error: el gsettings no es pot executar</translation>
     </message>

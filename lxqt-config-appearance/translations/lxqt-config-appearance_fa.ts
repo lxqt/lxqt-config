@@ -27,12 +27,12 @@
         <translation>&lt;p&gt; &quot;٪ 1&quot; بازنویسی شد. &lt;/ p&gt; &lt;p&gt; شما می‌توانید یک نسخه از تنظیمات قدیمی خود را در &quot;٪ 2&quot; پیدا کنید &lt;/ p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>خطا</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>خطا: gsettings قابل اجرا نیست</translation>
     </message>

@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;&apos;%1&apos; が上書きされました。&lt;/p&gt;&lt;p&gt;&apos;%2&apos; に古い設定のコピーがあります。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>エラー: gsettings は実行出来ません</translation>
     </message>

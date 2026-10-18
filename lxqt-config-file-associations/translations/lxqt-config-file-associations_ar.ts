@@ -9,30 +9,30 @@
         <translation>منتقي التطبيقات</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.ui" line="46"/>
+        <location filename="../applicationchooser.ui" line="25"/>
         <source>Pick an application for:</source>
         <translation>اختر تطبيقا لِ‍:</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.ui" line="110"/>
+        <location filename="../applicationchooser.ui" line="98"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.ui" line="115"/>
+        <location filename="../applicationchooser.ui" line="103"/>
         <source>Applications that handle JPEG</source>
         <translation>التطبيقات التي تتعامل مع JPEG</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.ui" line="124"/>
-        <location filename="../applicationchooser.ui" line="129"/>
-        <location filename="../applicationchooser.ui" line="139"/>
-        <location filename="../applicationchooser.ui" line="144"/>
+        <location filename="../applicationchooser.ui" line="112"/>
+        <location filename="../applicationchooser.ui" line="117"/>
+        <location filename="../applicationchooser.ui" line="127"/>
+        <location filename="../applicationchooser.ui" line="132"/>
         <source>New Subitem</source>
         <translation>عنصر فرعي جديد</translation>
     </message>
     <message>
-        <location filename="../applicationchooser.ui" line="135"/>
+        <location filename="../applicationchooser.ui" line="123"/>
         <location filename="../applicationchooser.cpp" line="191"/>
         <location filename="../applicationchooser.cpp" line="217"/>
         <source>Other applications</source>
@@ -79,35 +79,35 @@
 <context>
     <name>MimetypeViewer</name>
     <message>
-        <location filename="../mimetypeviewer.cpp" line="271"/>
-        <location filename="../mimetypeviewer.cpp" line="290"/>
-        <location filename="../mimetypeviewer.cpp" line="309"/>
+        <location filename="../mimetypeviewer.cpp" line="275"/>
+        <location filename="../mimetypeviewer.cpp" line="294"/>
+        <location filename="../mimetypeviewer.cpp" line="313"/>
         <source>Change...</source>
         <translation>تغيير...</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.cpp" line="275"/>
-        <location filename="../mimetypeviewer.cpp" line="294"/>
-        <location filename="../mimetypeviewer.cpp" line="313"/>
-        <location filename="../mimetypeviewer.cpp" line="327"/>
-        <location filename="../mimetypeviewer.cpp" line="389"/>
+        <location filename="../mimetypeviewer.cpp" line="279"/>
+        <location filename="../mimetypeviewer.cpp" line="298"/>
+        <location filename="../mimetypeviewer.cpp" line="317"/>
+        <location filename="../mimetypeviewer.cpp" line="331"/>
+        <location filename="../mimetypeviewer.cpp" line="393"/>
         <source>None</source>
         <translation>بلا</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.cpp" line="276"/>
-        <location filename="../mimetypeviewer.cpp" line="295"/>
-        <location filename="../mimetypeviewer.cpp" line="314"/>
+        <location filename="../mimetypeviewer.cpp" line="280"/>
+        <location filename="../mimetypeviewer.cpp" line="299"/>
+        <location filename="../mimetypeviewer.cpp" line="318"/>
         <source>Choose...</source>
         <translation>اختر...</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.cpp" line="385"/>
+        <location filename="../mimetypeviewer.cpp" line="389"/>
         <source>&amp;Change...</source>
         <translation>&amp;غيّر...</translation>
     </message>
     <message>
-        <location filename="../mimetypeviewer.cpp" line="390"/>
+        <location filename="../mimetypeviewer.cpp" line="394"/>
         <source>&amp;Choose...</source>
         <translation>ا&amp;ختر...</translation>
     </message>

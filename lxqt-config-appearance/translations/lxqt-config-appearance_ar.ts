@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;كُتب فوق ”%1“.&lt;/p&gt;&lt;p&gt;ستجد نسخة عن الإعدادات القديمة في ”%2“&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>خطا</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>خطا:gsettings لا يمكن تشغيلء</translation>
     </message>

@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;„%1“ buvo perrašyta.&lt;/p&gt;&lt;p&gt;Savo senųjų nustatymų kopiją galite rasti ties „%2“&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Klaida</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Klaida: gsettings negali būti paleista</translation>
     </message>

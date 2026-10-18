@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;Datoteka &apos;%1&apos; je bila prepisana.&lt;/p&gt;&lt;p&gt;Kopija izvirnika je shranjena v &apos;%2&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Napaka</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Napaka: gsettings ne more biti zagnan</translation>
     </message>

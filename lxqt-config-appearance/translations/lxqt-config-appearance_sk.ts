@@ -27,12 +27,12 @@
         <translation>&lt;p&gt;„%1“ bolo nahradené.&lt;/p&gt;&lt;p&gt;Kópia pôvodných nastavení je k dispozícii v „%2“&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../configothertoolkits.cpp" line="244"/>
+        <location filename="../configothertoolkits.cpp" line="247"/>
         <source>Error: gsettings cannot be run</source>
         <translation>Chyba: Nie je možné spustiť gsettings</translation>
     </message>
