@@ -80,7 +80,7 @@ int main (int argc, char **argv)
 
     /*** Icon Theme ***/
     IconThemeConfig* iconPage = new IconThemeConfig(settings, dialog);
-    dialog->addPage(iconPage, QObject::tr("Icons Theme"), QStringList() << QStringLiteral("preferences-desktop-icons") << QStringLiteral("preferences-desktop"));
+    dialog->addPage(iconPage, QObject::tr("Icon Theme"), QStringList() << QStringLiteral("preferences-desktop-icons") << QStringLiteral("preferences-desktop"));
     QObject::connect(dialog, &LXQt::ConfigDialog::reset, iconPage, &IconThemeConfig::initControls);
     QObject::connect(iconPage, &IconThemeConfig::settingsChanged, dialog, [dialog] {
         dialog->enableButton(QDialogButtonBox::Apply, true);

@@ -207,7 +207,7 @@ Zorg dat ‘xsettingsd’ geïnstalleerd is, zodat GTK-programma&apos;s meteen v
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Pictogramthema</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ Zorg dat ‘xsettingsd’ geïnstalleerd is, zodat GTK-programma&apos;s meteen v
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Pictogramthema</translation>
     </message>
     <message>

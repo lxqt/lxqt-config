@@ -207,7 +207,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     </message>
     <message>
         <location filename="../iconthemeconfig.ui" line="26"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Simge Teması</translation>
     </message>
     <message>
@@ -282,7 +282,7 @@ GTK uygulamalarının temaları anında uygulamasına yardımcı olmak için &ap
     </message>
     <message>
         <location filename="../main.cpp" line="83"/>
-        <source>Icons Theme</source>
+        <source>Icon Theme</source>
         <translation>Simge Teması</translation>
     </message>
     <message>
