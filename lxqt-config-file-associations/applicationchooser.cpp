@@ -41,7 +41,7 @@
 
 Q_DECLARE_METATYPE(XdgDesktopFile*)
 
-ApplicationChooser::ApplicationChooser(const QString& type, int cat)
+ApplicationChooser::ApplicationChooser(const QString& type, int cat, QWidget *parent) : QDialog(parent)
 {
     widget.setupUi(this);
 
