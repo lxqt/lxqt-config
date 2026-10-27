@@ -102,7 +102,7 @@
     <message>
         <location filename="../fontsconfig.ui" line="211"/>
         <source>Monospace:</source>
-        <translation type="unfinished"></translation>
+        <translation>Monospace:</translation>
     </message>
     <message>
         <location filename="../fontsconfig.ui" line="118"/>
@@ -265,7 +265,7 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../palettes.ui" line="43"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kendu</translation>
     </message>
 </context>
 <context>
@@ -376,17 +376,17 @@ Make sure &apos;xsettingsd&apos; is installed to help GTK applications apply the
     <message>
         <location filename="../styleconfig.ui" line="254"/>
         <source>&amp;Save Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Gorde Paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="261"/>
         <source>&amp;Load Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Kar&amp;gatu paleta</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="281"/>
         <source>&amp;Default Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Paleta Lehenetsia</translation>
     </message>
     <message>
         <location filename="../styleconfig.ui" line="296"/>

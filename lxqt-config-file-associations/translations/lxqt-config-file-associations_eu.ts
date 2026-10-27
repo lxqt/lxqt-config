@@ -11,7 +11,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="25"/>
         <source>Pick an application for:</source>
-        <translation>Aukeratu aplikazio bat:</translation>
+        <translation>Aukeratu aplikazio bat honetarako:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="98"/>
@@ -36,44 +36,44 @@
         <location filename="../applicationchooser.cpp" line="191"/>
         <location filename="../applicationchooser.cpp" line="217"/>
         <source>Other applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Beste aplikazio batzuk</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
         <source>Web browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Web-arakatzaileak</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation type="unfinished"></translation>
+        <translation>Posta elektronikoko bezeroak</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxategi-kudeatzaileak</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kudeatzen duten beste aplikazio batzuk</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
         <location filename="../applicationchooser.cpp" line="220"/>
         <source>Applications that handle %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kudeatzen duten aplikazioak</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="305"/>
         <source>No applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ez da aplikaziorik aurkitu</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ez da aplikazio gehiagorik aurkitu</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
         <location filename="../mimetypeviewer.cpp" line="294"/>
         <location filename="../mimetypeviewer.cpp" line="313"/>
         <source>Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aldatu...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="279"/>
@@ -92,24 +92,24 @@
         <location filename="../mimetypeviewer.cpp" line="331"/>
         <location filename="../mimetypeviewer.cpp" line="393"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Bat ere ez</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="280"/>
         <location filename="../mimetypeviewer.cpp" line="299"/>
         <location filename="../mimetypeviewer.cpp" line="318"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aukeratu...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="389"/>
         <source>&amp;Change...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aldatu...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="394"/>
         <source>&amp;Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;ukeratu...</translation>
     </message>
 </context>
 <context>
@@ -117,49 +117,49 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxategi-elkarketak</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation type="unfinished"></translation>
+        <translation>Elkarketak</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
         <source>Default application</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikazio lehenetsia</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
         <source>&amp;Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aukeratu...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikazio lehenetsiak</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="335"/>
         <source>Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Web-arakatzailea</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="400"/>
         <location filename="../mimetypeviewer.ui" line="475"/>
         <location filename="../mimetypeviewer.ui" line="550"/>
         <source>Choose...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aukeratu...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="410"/>
         <source>Email Client</source>
-        <translation type="unfinished"></translation>
+        <translation>Posta elektronikoko bezeroa</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="485"/>
         <source>File Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxategi-kudeatzailea</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
@@ -167,22 +167,22 @@
         <location filename="../mimetypeviewer.ui" line="459"/>
         <location filename="../mimetypeviewer.ui" line="534"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Bat ere ez</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="187"/>
         <source>Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Ereduak</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="193"/>
         <source>*.txt *.xml</source>
-        <translation type="unfinished"></translation>
+        <translation>*.txt *.xml</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="146"/>
         <source>MIME type</source>
-        <translation type="unfinished"></translation>
+        <translation>MIME mota</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="164"/>
@@ -191,12 +191,12 @@
         <location filename="../mimetypeviewer.ui" line="452"/>
         <location filename="../mimetypeviewer.ui" line="527"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikonoa</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="171"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Deskribapena</translation>
     </message>
 </context>
 </TS>
