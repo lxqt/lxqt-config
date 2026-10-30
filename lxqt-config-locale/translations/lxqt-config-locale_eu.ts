@@ -6,37 +6,37 @@
     <message>
         <location filename="../localeconfig.ui" line="31"/>
         <source>Re&amp;gion:</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;skualdea:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="60"/>
         <source>De&amp;tailed Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezarpen &amp;xeheak</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="78"/>
         <source>&amp;Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zenbakiak:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="107"/>
         <source>&amp;Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ordua:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="136"/>
         <source>Currenc&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Moneta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="165"/>
         <source>Measurement &amp;Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neurketa-&amp;unitateak:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="194"/>
         <source>Co&amp;llation and Sorting:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ordenazioa eta sailkapena:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="226"/>
@@ -51,17 +51,17 @@
     <message>
         <location filename="../localeconfig.ui" line="258"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordua:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="289"/>
         <source>Currency:</source>
-        <translation type="unfinished"></translation>
+        <translation>Moneta:</translation>
     </message>
     <message>
         <location filename="../localeconfig.ui" line="309"/>
         <source>Measurement Units:</source>
-        <translation>Neurketa unitateak:</translation>
+        <translation>Neurketa-unitateak:</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="164"/>
@@ -71,32 +71,32 @@
     <message>
         <location filename="../localeconfig.cpp" line="226"/>
         <source>Current: </source>
-        <translation type="unfinished"></translation>
+        <translation>Unekoa: </translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="370"/>
         <source>Format Settings Changed</source>
-        <translation>Formatuaren ezarpenak aldatu dira</translation>
+        <translation>Formatu-ezarpenak aldatu dira</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="371"/>
         <source>Do you want to save your changes? They will take effect the next time you log in.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aldaketak gorde nahi dituzu? Saioa hasten duzun hurrengoan izango dute eragina.</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="518"/>
         <source>Imperial UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Erresuma Batuko sistema inperiala</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="522"/>
         <source>Imperial US</source>
-        <translation type="unfinished"></translation>
+        <translation>AEBetako sistema inperiala</translation>
     </message>
     <message>
         <location filename="../localeconfig.cpp" line="526"/>
         <source>Metric</source>
-        <translation>Metrika</translation>
+        <translation>Metrikoa</translation>
     </message>
 </context>
 <context>
@@ -104,12 +104,12 @@
     <message>
         <location filename="../main.cpp" line="49"/>
         <source>LXQt Locale Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt eskualde-konfigurazioa</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Locale Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Eskualde-ezarpenak</translation>
     </message>
 </context>
 </TS>
