@@ -22,12 +22,9 @@
 #ifndef KCATEGORYDRAWER_H
 #define KCATEGORYDRAWER_H
 
-//#include <kdeui_export.h>
-
 #include <QObject>
 #include <QMouseEvent>
 
-#define KDEUI_EXPORT
 #define KDE_DEPRECATED
 
 class QPainter;
@@ -44,11 +41,10 @@ class QCategorizedView;
   *
   * @warning Please use QCategoryDrawerV3 instead
   */
-class KDEUI_EXPORT QCategoryDrawer
+class QCategoryDrawer
 {
 public:
     KDE_DEPRECATED QCategoryDrawer();
-
     virtual ~QCategoryDrawer();
 
     /**
@@ -114,7 +110,7 @@ private:
   *
   * @warning Please use QCategoryDrawerV3 instead
   */
-class KDEUI_EXPORT QCategoryDrawerV2
+class QCategoryDrawerV2
     : public QObject
     , public QCategoryDrawer
 {
@@ -125,11 +121,8 @@ public:
     ~QCategoryDrawerV2() override;
 
     KDE_DEPRECATED virtual void mouseButtonPressed(const QModelIndex &index, QMouseEvent *event);
-
     KDE_DEPRECATED virtual void mouseButtonReleased(const QModelIndex &index, QMouseEvent *event);
-
     KDE_DEPRECATED virtual void mouseButtonMoved(const QModelIndex &index, QMouseEvent *event);
-
     KDE_DEPRECATED virtual void mouseButtonDoubleClicked(const QModelIndex &index, QMouseEvent *event);
 
 Q_SIGNALS:
@@ -151,7 +144,7 @@ Q_SIGNALS:
 /**
   * @since 4.5
   */
-class KDEUI_EXPORT QCategoryDrawerV3
+class QCategoryDrawerV3
     : public QCategoryDrawerV2
 {
     friend class QCategorizedView;
