@@ -24,8 +24,6 @@
 #include <KScreen/Output>
 #include <KScreen/Config>
 #include <KScreen/Mode>
-#include <KScreen/GetConfigOperation>
-#include <KScreen/SetConfigOperation>
 #include <LXQt/Settings>
 #include <LXQt/Notification>
 #include <KScreen/EDID>
@@ -61,55 +59,49 @@ QList<MonitorSettings> LoadSettings::loadConfiguration(QString scope)
 
 void LoadSettings::applyBestSettings()
 {
-    KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
-    connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
-        KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
-        if (configOp) {
-            bool ok = false;
-            if (configOp->config() != nullptr) {
-                qDebug() << "lxqt-config-monitor: Applying current settings...";
-                QList<MonitorSettings> monitors = loadConfiguration(QStringLiteral("currentConfig"));
-                ok = applySettings(configOp->config(), monitors);
+    KScreenUtils::getConfig([this] (KScreen::ConfigPtr config) {
+        bool ok = false;
+        if (config != nullptr) {
+            qDebug() << "lxqt-config-monitor: Applying current settings...";
+            QList<MonitorSettings> monitors = loadConfiguration(QStringLiteral("currentConfig"));
+            ok = applySettings(config, monitors);
+            if(!ok) {
+                qDebug() << "lxqt-config-monitor: Current settings can not be applied.";
+                qDebug() << "lxqt-config-monitor: Searching in saved settings...";
+                // Load configs
+                LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
+                QList<MonitorSavedSettings> monitorsSavedSettings;
+                settings.beginGroup(QStringLiteral("SavedConfigs"));
+                loadMonitorSettings(settings, monitorsSavedSettings);
+                settings.endGroup();
+                for(const MonitorSavedSettings& o : std::as_const(monitorsSavedSettings)) {
+                    ok = applySettings(config, o.monitors);
+                    if(ok) break;
+                }
                 if(!ok) {
-                    qDebug() << "lxqt-config-monitor: Current settings can not be applied.";
-                    qDebug() << "lxqt-config-monitor: Searching in saved settings...";
-                    // Load configs
-                    LXQt::Settings settings(QStringLiteral("lxqt-config-monitor"));
-                    QList<MonitorSavedSettings> monitorsSavedSettings;
-                    settings.beginGroup(QStringLiteral("SavedConfigs"));
-                    loadMonitorSettings(settings, monitorsSavedSettings);
-                    settings.endGroup();
-                    for(const MonitorSavedSettings& o : std::as_const(monitorsSavedSettings)) {
-                        ok = applySettings(configOp->config(), o.monitors);
-                        if(ok) break;
-                    }
-                    if(!ok) {
-                        // Saved configs can not be applied
-                        // Extended mode will be applied
-                        qDebug() << "lxqt-config-monitor: No saved settings has been found";
-                        KScreen::ConfigPtr config = configOp->config();
-                        KScreenUtils::extended(config);
-                        KScreenUtils::updateScreenSize(config);
-                        if (KScreen::Config::canBeApplied(config))
-                            KScreen::SetConfigOperation(config).exec();
-                        qDebug() << "lxqt-config-monitor: Extended mode has been applied";
+                    // Saved configs can not be applied
+                    // Extended mode will be applied
+                    qDebug() << "lxqt-config-monitor: No saved settings has been found";
+                    KScreenUtils::extended(config);
+                    KScreenUtils::updateScreenSize(config);
+                    if (KScreenUtils::canApply(config))
+                        KScreenUtils::setConfig(config);
+                    qDebug() << "lxqt-config-monitor: Extended mode has been applied";
 
-                        mNotification->setSummary(tr("Default monitor settings applied."));
-                        mNotification->setBody(tr("Adjust your screens with LXQt Monitor Settings."));
-                        mNotification->setIcon(QStringLiteral("preferences-desktop-display"));
-                        mNotification->update();
-                        mNotification->setTimeout(1000);
-                        mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
-                    }
+                    mNotification->setSummary(tr("Default monitor settings applied."));
+                    mNotification->setBody(tr("Adjust your screens with LXQt Monitor Settings."));
+                    mNotification->setIcon(QStringLiteral("preferences-desktop-display"));
+                    mNotification->update();
+                    mNotification->setTimeout(1000);
+                    mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
                 }
             }
-            if(ok)
-                qDebug() << tr("lxqt-config-monitor: Settings applied.");
-            else
-                qDebug().noquote() << tr("lxqt-config-monitor: Settings not applied.\nIf this is a Wayland compositor, you could try kanshi to configure your monitor(s).");
-            operation->deleteLater();
-            QCoreApplication::instance()->exit(0);
         }
+        if(ok)
+            qDebug() << tr("lxqt-config-monitor: Settings applied.");
+        else
+            qDebug().noquote() << tr("lxqt-config-monitor: Settings not applied.\nIf this is a Wayland compositor, you could try kanshi to configure your monitor(s).");
+        QCoreApplication::instance()->exit(0);
     });
 }
 
@@ -165,11 +157,6 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
     }
 
     KScreenUtils::updateScreenSize(config);
-    if (KScreen::Config::canBeApplied(config))
-        KScreen::SetConfigOperation(config).exec();
-    else
-        return false;
-
-    return true;
+    return KScreenUtils::canApply(config) && KScreenUtils::setConfig(config);
 }
 

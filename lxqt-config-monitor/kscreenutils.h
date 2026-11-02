@@ -21,8 +21,23 @@
 
 #include <KScreen/Config>
 
+#include <functional>
+
 class KScreenUtils {
 public:
+    /** Reads the current configuration asynchronously.
+     * The callback gets a null config if no backend could provide one.
+     */
+    static void getConfig(std::function<void(KScreen::ConfigPtr)> callback);
+
+    /** Applies config and waits until it is done. Returns false if it failed.
+     */
+    static bool setConfig(const KScreen::ConfigPtr &config);
+
+    /** Checks whether config is valid for the current monitors.
+     */
+    static bool canApply(const KScreen::ConfigPtr &config);
+
     /** Virtual screen size is updated.
      * If all monitors are allocated over a big rectangle, the size of this rectangle is the virtual screen size.
      */

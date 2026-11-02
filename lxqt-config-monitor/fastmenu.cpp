@@ -24,7 +24,6 @@
 #include <QPoint>
 #include <KScreen/Output>
 #include <KScreen/Mode>
-#include <KScreen/SetConfigOperation>
 
 #include <algorithm>
 
@@ -37,7 +36,6 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
     QGroupBox(parent)
 {
     this->mConfig = config;
-    this->mOldConfig = mConfig->clone();
 
     ui.setupUi(this);
 
@@ -145,6 +143,5 @@ void FastMenu::onSelectionChanged(int index)
         break;
     };
 
-    if( KScreenUtils::applyConfig(mConfig, mOldConfig) )
-        mOldConfig = mConfig->clone();
+    emit applyRequested();
 }
