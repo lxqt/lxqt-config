@@ -231,13 +231,17 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
         if (!output->isConnected() || !output->isEnabled())
             continue;
         OutputInfo info = outputInfo(c, output->id(), resources->config_timestamp);
-        if (!info || !output->currentMode())
+        if (!info || !output->currentMode()) {
+            qWarning() << "lxqt-config-monitor: no mode to turn on" << output->name() << "with";
             return std::nullopt;
+        }
         origin = QPoint(std::min(origin.x(), output->pos().x()), std::min(origin.y(), output->pos().y()));
         enabled.push_back({output, std::move(info)});
     }
-    if (enabled.empty())
+    if (enabled.empty()) {
+        qWarning() << "lxqt-config-monitor: refusing to turn off every monitor";
         return std::nullopt;
+    }
 
     // Outputs keep their CRTC when possible, so they go first to stop others from taking it.
     std::ranges::stable_sort(enabled, [](const Enabled &a, const Enabled &b) {
@@ -247,8 +251,10 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
     Plan plan;
     for (const Enabled &e : enabled) {
         const xcb_randr_mode_t mode = e.output->currentModeId().toUInt();
-        if (!contains(modesOf(e.info), mode))
+        if (!contains(modesOf(e.info), mode)) {
+            qWarning() << "lxqt-config-monitor: mode" << mode << "is not available on" << e.output->name();
             return std::nullopt;
+        }
 
         const QPoint pos = e.output->pos() - origin;
         const uint16_t rotation = e.output->rotation();
@@ -268,13 +274,17 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
         xcb_randr_crtc_t crtc = e.info->crtc;
         if (crtc == XCB_NONE || plan.placements.contains(crtc)) {
             auto freeCrtc = std::ranges::find_if(possible, [&](xcb_randr_crtc_t x) { return !plan.placements.contains(x); });
-            if (freeCrtc == possible.end())
+            if (freeCrtc == possible.end()) {
+                qWarning() << "lxqt-config-monitor: no free CRTC for" << e.output->name();
                 return std::nullopt;
+            }
             crtc = *freeCrtc;
         }
         CrtcInfo info = crtcInfo(c, crtc, resources->config_timestamp);
-        if (!info || !(info->rotations & rotation))
+        if (!info || !(info->rotations & rotation)) {
+            qWarning() << "lxqt-config-monitor: rotation" << rotation << "is not supported on" << e.output->name();
             return std::nullopt;
+        }
         plan.placements.insert(crtc, Placement{crtc, mode, pos, rotation, {xcb_randr_output_t(e.output->id())}});
 
         QSize size = e.output->currentMode()->size();
@@ -285,8 +295,10 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
 
     Reply<xcb_randr_get_screen_size_range_reply_t> range(xcb_randr_get_screen_size_range_reply(c,
         xcb_randr_get_screen_size_range(c, rootScreen(c)->root), nullptr));
-    if (!range || plan.screenSize.width() > range->max_width || plan.screenSize.height() > range->max_height)
+    if (!range || plan.screenSize.width() > range->max_width || plan.screenSize.height() > range->max_height) {
+        qWarning() << "lxqt-config-monitor: screen size" << plan.screenSize << "is above the maximum";
         return std::nullopt;
+    }
     plan.screenSize = plan.screenSize.expandedTo(QSize(range->min_width, range->min_height));
     return plan;
 }
@@ -370,7 +382,10 @@ bool XcbBackend::applyConfig(const KScreen::ConfigPtr &config)
             continue;
         const auto wanted = plan->placements.constFind(crtc);
         if (wanted == plan->placements.cend() || !unchanged(current, *wanted))
-            ok = setCrtc(c, resources, Placement{crtc, XCB_NONE, QPoint(0, 0), XCB_RANDR_ROTATION_ROTATE_0, {}}) && ok;
+            if (!setCrtc(c, resources, Placement{crtc, XCB_NONE, QPoint(0, 0), XCB_RANDR_ROTATION_ROTATE_0, {}})) {
+                qWarning() << "lxqt-config-monitor: could not turn off CRTC" << crtc;
+                ok = false;
+            }
     }
 
     // Resizing stops all drawing on the screen, even for the same size.
@@ -380,14 +395,19 @@ bool XcbBackend::applyConfig(const KScreen::ConfigPtr &config)
             plan->screenSize.width(), plan->screenSize.height(),
             std::max(1, plan->screenSize.width() * root->width_in_millimeters / root->width_in_pixels),
             std::max(1, plan->screenSize.height() * root->height_in_millimeters / root->height_in_pixels));
-        if (Reply<xcb_generic_error_t> error{xcb_request_check(c, resized)})
+        if (Reply<xcb_generic_error_t> error{xcb_request_check(c, resized)}) {
+            qWarning() << "lxqt-config-monitor: could not resize the screen to" << plan->screenSize << "error" << error->error_code;
             ok = false;
+        }
     }
 
     for (const Placement &wanted : plan->placements) {
         CrtcInfo current = crtcInfo(c, wanted.crtc, resources->config_timestamp);
         if (!current || !unchanged(current, wanted))
-            ok = setCrtc(c, resources, wanted) && ok;
+            if (!setCrtc(c, resources, wanted)) {
+                qWarning() << "lxqt-config-monitor: could not set CRTC" << wanted.crtc << "to mode" << wanted.mode << "at" << wanted.pos;
+                ok = false;
+            }
     }
 
     xcb_randr_output_t primary = XCB_NONE;

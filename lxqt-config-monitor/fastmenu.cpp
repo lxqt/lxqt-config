@@ -106,6 +106,9 @@ void FastMenu::onlyFirst()
             continue;
         output->setPos(QPoint(0, 0));
         output->setEnabled(!foundOk);
+        // An output that was off has no current mode to come back with.
+        if (output->isEnabled() && !output->currentMode() && output->preferredMode())
+            output->setCurrentModeId(output->preferredMode()->id());
         foundOk = true;
     }
 }
@@ -119,6 +122,9 @@ void FastMenu::onlySecond()
             continue;
         output->setPos(QPoint(0, 0));
         output->setEnabled(!foundOk);
+        // An output that was off has no current mode to come back with.
+        if (output->isEnabled() && !output->currentMode() && output->preferredMode())
+            output->setCurrentModeId(output->preferredMode()->id());
         foundOk = false;
     }
 }
