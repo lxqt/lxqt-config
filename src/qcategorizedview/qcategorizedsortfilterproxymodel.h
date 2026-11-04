@@ -25,12 +25,7 @@
 
 #include <QSortFilterProxyModel>
 
-#define KDEUI_EXPORT
-
-//#include <kdeui_export.h>
-
 class QItemSelection;
-
 
 /**
   * This class lets you categorize a view. It is meant to be used along with
@@ -45,7 +40,7 @@ class QItemSelection;
   *
   * @author Rafael Fernández López <ereslibre@kde.org>
   */
-class KDEUI_EXPORT QCategorizedSortFilterProxyModel
+class QCategorizedSortFilterProxyModel
     : public QSortFilterProxyModel
 {
 public:

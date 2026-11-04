@@ -24,11 +24,7 @@
 
 #include <QListView>
 
-//#include <kdeui_export.h>
-
-#define KDEUI_EXPORT
 #define KDE_DEPRECATED
-
 
 class QCategoryDrawer;
 class QCategoryDrawerV2;
@@ -81,7 +77,8 @@ class QCategoryDrawerV2;
   *
   * @author Rafael Fernández López <ereslibre@kde.org>
   */
-class KDEUI_EXPORT QCategorizedView
+
+class QCategorizedView
     : public QListView
 {
     Q_OBJECT
@@ -289,20 +286,12 @@ protected:
     /**
       * Reimplemented from QAbstractItemView.
       */
-    void rowsAboutToBeRemoved(const QModelIndex &parent,
-                                      int start,
-                                      int end) override;
+    void rowsAboutToBeRemoved(const QModelIndex &parent, int start, int end) override;
 
     /**
       * Reimplemented from QAbstractItemView.
       */
     void updateGeometries() override;
-
-    /**
-      * Reimplemented from QAbstractItemView.
-      */
-    void currentChanged(const QModelIndex &current,
-                                const QModelIndex &previous) override;
 
     /**
       * Reimplemented from QAbstractItemView.
@@ -314,31 +303,9 @@ protected:
     /**
       * Reimplemented from QAbstractItemView.
       */
-    void rowsInserted(const QModelIndex &parent,
-                              int start,
-                              int end) override;
+    void rowsInserted(const QModelIndex &parent, int start, int end) override;
 
 protected Q_SLOTS:
-    /**
-      * @internal
-      * @warning Deprecated since 4.4.
-      */
-#ifndef KDE_NO_DEPRECATED
-    virtual KDE_DEPRECATED void rowsInsertedArtifficial(const QModelIndex &parent,
-                                                        int start,
-                                                        int end);
-#endif
-
-    /**
-      * @internal
-      * @warning Deprecated since 4.4.
-      */
-#ifndef KDE_NO_DEPRECATED
-    virtual KDE_DEPRECATED void rowsRemoved(const QModelIndex &parent,
-                                            int start,
-                                            int end);
-#endif
-
     /**
       * @internal
       * Reposition items as needed.
