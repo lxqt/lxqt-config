@@ -1,3 +1,16 @@
+lxqt-config-2.5.0 / 2026-11-05
+===============================
+ * Fixed GTK theme being cleared on applying input/cursor settings.
+ * Followed the Freedesktop.org specification for the cursor search paths (instead of relying on `libxcursor`).
+ * Fixed compiling after recent KScreen changes.
+ * CMake maintenance.
+ * Silenced some compilation warnings.
+ * Cleaned up some ui files.
+ * Added fallback icon to the head label in lxqt-config-brightness.
+ * Removed redundant/deprecated Qt headers.
+ * Deleted `savesettings.cpp`.
+ * Removed codes belonging to Qt < 6.9.
+
 lxqt-config-2.4.0 / 2026-04-20
 ===============================
  * Use std::pair instead of QPair.
