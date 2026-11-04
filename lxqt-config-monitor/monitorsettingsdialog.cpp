@@ -52,16 +52,13 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
 {
     ui.setupUi(this);
 
-    KScreen::GetConfigOperation *operation = new KScreen::GetConfigOperation();
-    connect(operation, &KScreen::GetConfigOperation::finished, [this, operation] (KScreen::ConfigOperation *op) {
-        KScreen::GetConfigOperation *configOp = qobject_cast<KScreen::GetConfigOperation *>(op);
+    KScreenUtils::getConfig([this] (KScreen::ConfigPtr config) {
         qDebug() << "Connecting to KScreen...";
-        if (configOp && configOp->config() && configOp->config()->screen()) {
-            mOldConfig = configOp->config()->clone();
-            loadConfiguration(configOp->config());
-            operation->deleteLater();
+        if (config && config->screen()) {
+            mOldConfig = config->clone();
+            loadConfiguration(config);
         }
-        else if(configOp && !configOp->config()) {
+        else if(!config) {
             // Show info under wlroots based compositors
             if (QGuiApplication::platformName() == QLatin1String("wayland")) {
                 QMessageBox::warning(this,
@@ -73,13 +70,9 @@ MonitorSettingsDialog::MonitorSettingsDialog() :
             }
             exit(1);
         }
-        else if(configOp && configOp->config() && !configOp->config()->screen()) {
+        else {
             qDebug() << "Error: No screen in the configuration, broken backend";
             exit(2);
-        }
-        else {
-            qDebug() << "Error: Connect to KScreen is not possible";
-            exit(3);
         }
     });
 
@@ -121,6 +114,8 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
         if (nMonitors > 1) {
             fastMenu = new FastMenu(config, this);
+            // Queued, as a rejected change replaces the fast menu while it is emitting.
+            connect(fastMenu, &FastMenu::applyRequested, this, [this] { applyConfiguration(false); }, Qt::QueuedConnection);
             ui.monitorList->addItem(tr("Fast Menu"));
             ui.stackedWidget->addWidget(fastMenu);
 
@@ -165,6 +160,22 @@ void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
         if (saveConfigOk)
             saveConfiguration(mConfig);
     }
+    else if (KScreenUtils::canApply(mConfig)) {
+        // It could be applied, so the user rejected it and the monitors are back on mOldConfig.
+        reloadConfiguration();
+    }
+}
+
+void MonitorSettingsDialog::reloadConfiguration()
+{
+    const int row = ui.monitorList->currentRow();
+    ui.monitorList->clear();
+    while (QWidget *page = ui.stackedWidget->widget(0)) {
+        ui.stackedWidget->removeWidget(page);
+        page->deleteLater();
+    }
+    loadConfiguration(mOldConfig->clone());
+    ui.monitorList->setCurrentRow(row);
 }
 
 void MonitorSettingsDialog::accept()
@@ -193,7 +204,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
         monitor.connected = output->isConnected();
         if ( output->isConnected() ) {
             monitor.enabled = output->isEnabled();
-            monitor.primary = (config->primaryOutput() == output);
+            monitor.primary = (output->priority() == 1);
             monitor.xPos = output->pos().x();
             monitor.yPos = output->pos().y();
             monitor.currentMode = output->currentModeId();

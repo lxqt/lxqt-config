@@ -38,13 +38,15 @@ public:
     FastMenu(KScreen::ConfigPtr config, QWidget* parent = nullptr);
     ~FastMenu() override;
 
+signals:
+    void applyRequested();
+
 private Q_SLOTS:
     void onSelectionChanged(int index);
 
 private:
     Ui::FastMenu ui;
     KScreen::ConfigPtr mConfig;
-    KScreen::ConfigPtr mOldConfig;
 
     void unified();
     void onlyFirst();

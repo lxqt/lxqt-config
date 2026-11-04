@@ -25,8 +25,7 @@
 
 #include <QDialog>
 #include <QTimer>
-#include <KScreen/GetConfigOperation>
-#include <KScreen/SetConfigOperation>
+#include <KScreen/Config>
 
 class MonitorSettingsDialog : public QDialog
 {
@@ -50,6 +49,10 @@ private Q_SLOTS:
 
 private:
     void saveConfiguration(KScreen::ConfigPtr config);
+
+    /** Drops the changes in the widgets and shows mOldConfig again.
+     */
+    void reloadConfiguration();
 
     Ui::MonitorSettingsDialog ui;
 

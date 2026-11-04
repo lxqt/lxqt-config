@@ -20,8 +20,7 @@
 #define __LOADSETTINGS_H__
 
 
-#include <KScreen/GetConfigOperation>
-#include <KScreen/SetConfigOperation>
+#include <KScreen/Config>
 #include <LXQt/Notification>
 #include "monitor.h"
 
