@@ -10,7 +10,8 @@
 #ifndef XCRTHEMEXP_H
 #define XCRTHEMEXP_H
 
-#include <QtCore>
+#include <QString>
+#include <QDir>
 #include <QCursor>
 #include <QPixmap>
 
