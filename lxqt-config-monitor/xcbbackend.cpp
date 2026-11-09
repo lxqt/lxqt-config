@@ -33,6 +33,7 @@
 #include <xcb/randr.h>
 
 #include <algorithm>
+#include <bit>
 #include <climits>
 #include <cstdlib>
 #include <cstring>
@@ -137,6 +138,8 @@ bool contains(std::span<T> values, T value)
 // Must match what libkscreen reports, because saved settings compare the refresh rate exactly.
 float refreshRate(const xcb_randr_mode_info_t &mode)
 {
+    if (mode.htotal == 0 || mode.vtotal == 0)
+        return 0;
     double vTotal = mode.vtotal;
     if (mode.mode_flags & XCB_RANDR_MODE_FLAG_DOUBLE_SCAN)
         vTotal *= 2;
@@ -257,7 +260,10 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
         }
 
         const QPoint pos = e.output->pos() - origin;
-        const uint16_t rotation = e.output->rotation();
+        // KScreen has no reflection, so a reflection set outside LXQt is kept.
+        CrtcInfo current = e.info->crtc != XCB_NONE ? crtcInfo(c, e.info->crtc, resources->config_timestamp) : nullptr;
+        const uint16_t rotation = e.output->rotation()
+            | (current ? current->rotation & (XCB_RANDR_ROTATION_REFLECT_X | XCB_RANDR_ROTATION_REFLECT_Y) : 0);
         const auto possible = crtcsOf(e.info);
 
         // Mirrored outputs share a CRTC only when they are clones of each other, as the X server refuses it otherwise.
@@ -281,14 +287,15 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
             crtc = *freeCrtc;
         }
         CrtcInfo info = crtcInfo(c, crtc, resources->config_timestamp);
-        if (!info || !(info->rotations & rotation)) {
+        // Exactly one rotation, as RandR rejects anything else; 0 comes from settings saved without one.
+        if (!info || std::popcount(rotation & 0xfu) != 1 || (info->rotations & rotation) != rotation) {
             qWarning() << "lxqt-config-monitor: rotation" << rotation << "is not supported on" << e.output->name();
             return std::nullopt;
         }
         plan.placements.insert(crtc, Placement{crtc, mode, pos, rotation, {xcb_randr_output_t(e.output->id())}});
 
         QSize size = e.output->currentMode()->size();
-        if (rotation == KScreen::Output::Left || rotation == KScreen::Output::Right)
+        if (rotation & (XCB_RANDR_ROTATION_ROTATE_90 | XCB_RANDR_ROTATION_ROTATE_270))
             size.transpose();
         plan.screenSize = plan.screenSize.expandedTo(QSize(pos.x() + size.width(), pos.y() + size.height()));
     }
@@ -303,12 +310,16 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
     return plan;
 }
 
-bool unchanged(const CrtcInfo &current, const Placement &wanted)
+bool sameOutputs(const CrtcInfo &current, const Placement &wanted)
 {
-    if (current->mode != wanted.mode || current->rotation != wanted.rotation || QPoint(current->x, current->y) != wanted.pos)
-        return false;
     const std::span<xcb_randr_output_t> outputs(xcb_randr_get_crtc_info_outputs(current.get()), xcb_randr_get_crtc_info_outputs_length(current.get()));
     return QSet<xcb_randr_output_t>(outputs.begin(), outputs.end()) == QSet<xcb_randr_output_t>(wanted.outputs.begin(), wanted.outputs.end());
+}
+
+bool unchanged(const CrtcInfo &current, const Placement &wanted)
+{
+    return current->mode == wanted.mode && current->rotation == wanted.rotation
+        && QPoint(current->x, current->y) == wanted.pos && sameOutputs(current, wanted);
 }
 
 bool setCrtc(xcb_connection_t *c, const Resources &resources, const Placement &p)
@@ -375,13 +386,16 @@ bool XcbBackend::applyConfig(const KScreen::ConfigPtr &config)
     bool ok = true;
     xcb_grab_server(c);
 
-    // A CRTC has to be off while the screen is resized, or the resize can fail for not containing it.
+    // Off first: CRTCs that go away or change outputs, and ones outside the new size, which would make the resize fail.
+    // The others are changed in place, so they don't blank.
     for (xcb_randr_crtc_t crtc : crtcsOf(resources)) {
         CrtcInfo current = crtcInfo(c, crtc, resources->config_timestamp);
         if (!current || current->mode == XCB_NONE)
             continue;
         const auto wanted = plan->placements.constFind(crtc);
-        if (wanted == plan->placements.cend() || !unchanged(current, *wanted))
+        const bool fits = current->x + current->width <= plan->screenSize.width()
+            && current->y + current->height <= plan->screenSize.height();
+        if (wanted == plan->placements.cend() || !sameOutputs(current, *wanted) || !fits)
             if (!setCrtc(c, resources, Placement{crtc, XCB_NONE, QPoint(0, 0), XCB_RANDR_ROTATION_ROTATE_0, {}})) {
                 qWarning() << "lxqt-config-monitor: could not turn off CRTC" << crtc;
                 ok = false;

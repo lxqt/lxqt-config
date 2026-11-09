@@ -84,16 +84,17 @@ void LoadSettings::applyBestSettings()
                     qDebug() << "lxqt-config-monitor: No saved settings has been found";
                     KScreenUtils::extended(config);
                     KScreenUtils::updateScreenSize(config);
-                    if (KScreenUtils::canApply(config))
-                        KScreenUtils::setConfig(config);
-                    qDebug() << "lxqt-config-monitor: Extended mode has been applied";
+                    ok = KScreenUtils::canApply(config) && KScreenUtils::setConfig(config);
+                    if (ok) {
+                        qDebug() << "lxqt-config-monitor: Extended mode has been applied";
 
-                    mNotification->setSummary(tr("Default monitor settings applied."));
-                    mNotification->setBody(tr("Adjust your screens with LXQt Monitor Settings."));
-                    mNotification->setIcon(QStringLiteral("preferences-desktop-display"));
-                    mNotification->update();
-                    mNotification->setTimeout(1000);
-                    mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
+                        mNotification->setSummary(tr("Default monitor settings applied."));
+                        mNotification->setBody(tr("Adjust your screens with LXQt Monitor Settings."));
+                        mNotification->setIcon(QStringLiteral("preferences-desktop-display"));
+                        mNotification->update();
+                        mNotification->setTimeout(1000);
+                        mNotification->setUrgencyHint(LXQt::Notification::UrgencyLow);
+                    }
                 }
             }
         }
