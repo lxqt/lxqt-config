@@ -100,24 +100,14 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
             ui.resolutionCombo->setItemData(ui.resolutionCombo->count()-1, font, Qt::FontRole);
         }
     }
-    connect(ui.resolutionCombo, &QComboBox::currentIndexChanged, this, &MonitorWidget::onResolutionChanged);
-
-    // Select actual mode in list
+    // Select actual mode in list, by size, as only one mode of each size was kept above
     if (output->currentMode()) {
-        // Set the current mode in dropdown
-        int idx = ui.resolutionCombo->findData(output->currentMode()->id());
-        if (idx < 0) {
-            // Select mode with same size
-            for (const KScreen::ModePtr &mode : std::as_const(modeList)) {
-                if( mode->size() == output->currentMode()->size() )
-                    idx = ui.resolutionCombo->findData(output->currentMode()->id());
-            }
-        }
-        if(idx < 0)
-            idx = ui.resolutionCombo->findData(output->preferredMode()->id());
+        const int idx = ui.resolutionCombo->findText(modeToString(output->currentMode()));
         if (idx >= 0)
             ui.resolutionCombo->setCurrentIndex(idx);
     }
+    // Connected only now, so that showing the current mode doesn't change it
+    connect(ui.resolutionCombo, &QComboBox::currentIndexChanged, this, &MonitorWidget::onResolutionChanged);
     updateRefreshRates();
 
 
