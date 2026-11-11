@@ -29,6 +29,7 @@ void KScreenUtils::getConfig(std::function<void(KScreen::ConfigPtr)> callback)
         return;
     }
 
+    // Not leaked: libkscreen deletes the operation itself after emitting finished().
     auto *operation = new KScreen::GetConfigOperation();
     QObject::connect(operation, &KScreen::GetConfigOperation::finished, [operation, callback] {
         callback(operation->config());
