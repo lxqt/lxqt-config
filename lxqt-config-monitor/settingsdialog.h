@@ -21,8 +21,7 @@
 
 #include <LXQt/ConfigDialog>
 #include <LXQt/Settings>
-#include <KScreen/GetConfigOperation>
-#include <KScreen/SetConfigOperation>
+#include <KScreen/Config>
 
 
 class SettingsDialog : public LXQt::ConfigDialog

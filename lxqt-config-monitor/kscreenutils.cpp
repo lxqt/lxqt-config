@@ -1,5 +1,6 @@
 #include "kscreenutils.h"
 #include "timeoutdialog.h"
+#include "xcbbackend.h"
 
 #include <KScreen/Output>
 #include <KScreen/Mode>
@@ -9,7 +10,44 @@
 #include <KScreen/SetConfigOperation>
 #include <KScreen/EDID>
 
+#include <QApplication>
+#include <QTimer>
+
 #include <algorithm>
+
+static bool isX11()
+{
+    return QGuiApplication::platformName() == QLatin1String("xcb");
+}
+
+
+void KScreenUtils::getConfig(std::function<void(KScreen::ConfigPtr)> callback)
+{
+    if (isX11()) {
+        // Queued, as callers expect the result to arrive after they return.
+        QTimer::singleShot(0, qApp, [callback] { callback(XcbBackend::readConfig()); });
+        return;
+    }
+
+    // Not leaked: libkscreen deletes the operation itself after emitting finished().
+    auto *operation = new KScreen::GetConfigOperation();
+    QObject::connect(operation, &KScreen::GetConfigOperation::finished, [operation, callback] {
+        callback(operation->config());
+    });
+}
+
+
+bool KScreenUtils::setConfig(const KScreen::ConfigPtr &config)
+{
+    return isX11() ? XcbBackend::applyConfig(config) : KScreen::SetConfigOperation(config).exec();
+}
+
+
+bool KScreenUtils::canApply(const KScreen::ConfigPtr &config)
+{
+    return isX11() ? XcbBackend::canApply(config) : KScreen::Config::canBeApplied(config);
+}
+
 
 void KScreenUtils::updateScreenSize(KScreen::ConfigPtr &config)
 {
@@ -35,13 +73,13 @@ bool KScreenUtils::applyConfig(KScreen::ConfigPtr &config, KScreen::ConfigPtr &o
 {
     bool ok = false;
     KScreenUtils::updateScreenSize(config);
-    if (config && KScreen::Config::canBeApplied(config)) {
-        KScreen::SetConfigOperation(config).exec();
+    if (config && canApply(config)) {
+        const bool applied = setConfig(config);
 
         TimeoutDialog mTimeoutDialog;
-        if (mTimeoutDialog.exec() == QDialog::Rejected) {
+        if (!applied || mTimeoutDialog.exec() == QDialog::Rejected) {
             KScreenUtils::updateScreenSize(oldConfig);
-            KScreen::SetConfigOperation(oldConfig).exec();
+            setConfig(oldConfig);
         }
         else
             ok = true;

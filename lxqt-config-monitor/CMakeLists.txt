@@ -1,4 +1,5 @@
 find_package(KF6Screen ${KF6SCREEN_MINIMUM_VERSION} REQUIRED)
+find_package(XCB REQUIRED COMPONENTS XCB RANDR)
 find_package(Qt6Svg ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt6SvgWidgets ${QT_MINIMUM_VERSION} REQUIRED)
 
@@ -12,6 +13,7 @@ set(HEADERS
     managesavedsettings.h
     fastmenu.h
     kscreenutils.h
+    xcbbackend.h
 )
 
 set(SOURCES
@@ -26,6 +28,7 @@ set(SOURCES
     managesavedsettings.cpp
     fastmenu.cpp
     kscreenutils.cpp
+    xcbbackend.cpp
 )
 
 set(UIS
@@ -80,6 +83,8 @@ target_link_libraries(lxqt-config-monitor
     Qt6::Svg
     Qt6::SvgWidgets
     KF6::Screen
+    XCB::XCB
+    XCB::RANDR
     lxqt
 )
 

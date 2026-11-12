@@ -24,7 +24,6 @@
 #include <QPoint>
 #include <KScreen/Output>
 #include <KScreen/Mode>
-#include <KScreen/SetConfigOperation>
 
 #include <algorithm>
 
@@ -37,7 +36,6 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
     QGroupBox(parent)
 {
     this->mConfig = config;
-    this->mOldConfig = mConfig->clone();
 
     ui.setupUi(this);
 
@@ -108,6 +106,9 @@ void FastMenu::onlyFirst()
             continue;
         output->setPos(QPoint(0, 0));
         output->setEnabled(!foundOk);
+        // An output that was off has no current mode to come back with.
+        if (output->isEnabled() && !output->currentMode() && output->preferredMode())
+            output->setCurrentModeId(output->preferredMode()->id());
         foundOk = true;
     }
 }
@@ -121,6 +122,9 @@ void FastMenu::onlySecond()
             continue;
         output->setPos(QPoint(0, 0));
         output->setEnabled(!foundOk);
+        // An output that was off has no current mode to come back with.
+        if (output->isEnabled() && !output->currentMode() && output->preferredMode())
+            output->setCurrentModeId(output->preferredMode()->id());
         foundOk = false;
     }
 }
@@ -145,6 +149,5 @@ void FastMenu::onSelectionChanged(int index)
         break;
     };
 
-    if( KScreenUtils::applyConfig(mConfig, mOldConfig) )
-        mOldConfig = mConfig->clone();
+    emit applyRequested();
 }
