@@ -24,6 +24,7 @@
 #include <KScreen/Output>
 #include <KScreen/Screen>
 
+#include <QCollator>
 #include <QDebug>
 #include <QEventLoop>
 #include <QGuiApplication>
@@ -80,7 +81,7 @@ private:
 class Head : public QtWayland::zwlr_output_head_v1 {
 public:
     explicit Head(struct ::zwlr_output_head_v1 *object)
-        : QtWayland::zwlr_output_head_v1(object), id(nextId++) {}
+        : QtWayland::zwlr_output_head_v1(object) {}
     ~Head() override
     {
         if (zwlr_output_head_v1_get_version(object()) >= 3)
@@ -102,7 +103,6 @@ public:
         std::erase_if(modes, [](const auto &m) { return m->finished; });
     }
 
-    const int id;
     QString name;
     QString make;
     QString model;
@@ -138,9 +138,6 @@ protected:
     void zwlr_output_head_v1_transform(int32_t value) override { transform = value; }
     void zwlr_output_head_v1_scale(wl_fixed_t value) override { scale = wl_fixed_to_double(value); }
     void zwlr_output_head_v1_finished() override { finished = true; }
-
-private:
-    static inline int nextId = 0;
 };
 
 class Manager : public QWaylandClientExtensionTemplate<Manager>, public QtWayland::zwlr_output_manager_v1 {
@@ -271,12 +268,31 @@ static KScreen::OutputPtr outputNamed(const KScreen::ConfigPtr &config, const QS
     return it != outputs.end() ? *it : nullptr;
 }
 
+static bool isBuiltIn(const QString &name)
+{
+    return name.startsWith(u"eDP") || name.startsWith(u"LVDS") || name.startsWith(u"DSI");
+}
+
 static KScreen::ConfigPtr configFrom(const Manager *m)
 {
+    // The dialog lists outputs by id, and compositors announce heads in no fixed order.
+    // Built-in panels come first, then the others by name, like on X11.
+    std::vector<const Head *> heads;
+    for (const auto &head : m->heads)
+        heads.push_back(head.get());
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::ranges::sort(heads, [&collator](const Head *a, const Head *b) {
+        if (isBuiltIn(a->name) != isBuiltIn(b->name))
+            return isBuiltIn(a->name);
+        return collator.compare(a->name, b->name) < 0;
+    });
+
     KScreen::OutputList outputs;
-    for (const auto &head : m->heads) {
+    int id = 0;
+    for (const Head *head : heads) {
         KScreen::OutputPtr output(new KScreen::Output);
-        output->setId(head->id);
+        output->setId(id++);
         output->setName(head->name);
         // Heads only exist while their monitor is connected.
         output->setConnected(true);
