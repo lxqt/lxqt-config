@@ -66,18 +66,18 @@ struct Plan {
     QSize screenSize;
 };
 
-xcb_connection_t *connection()
+static xcb_connection_t *connection()
 {
     auto *x11 = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
     return x11 ? x11->connection() : nullptr;
 }
 
-xcb_screen_t *rootScreen(xcb_connection_t *c)
+static xcb_screen_t *rootScreen(xcb_connection_t *c)
 {
     return xcb_setup_roots_iterator(xcb_get_setup(c)).data;
 }
 
-Resources screenResources(xcb_connection_t *c)
+static Resources screenResources(xcb_connection_t *c)
 {
     Reply<xcb_randr_query_version_reply_t> version(xcb_randr_query_version_reply(c, xcb_randr_query_version(c, 1, 3), nullptr));
     if (!version || version->major_version < 1 || (version->major_version == 1 && version->minor_version < 3)) {
@@ -93,51 +93,51 @@ Resources screenResources(xcb_connection_t *c)
     return Resources(xcb_randr_get_screen_resources_current_reply(c, xcb_randr_get_screen_resources_current(c, rootScreen(c)->root), nullptr));
 }
 
-OutputInfo outputInfo(xcb_connection_t *c, xcb_randr_output_t output, xcb_timestamp_t timestamp)
+static OutputInfo outputInfo(xcb_connection_t *c, xcb_randr_output_t output, xcb_timestamp_t timestamp)
 {
     return OutputInfo(xcb_randr_get_output_info_reply(c, xcb_randr_get_output_info(c, output, timestamp), nullptr));
 }
 
-CrtcInfo crtcInfo(xcb_connection_t *c, xcb_randr_crtc_t crtc, xcb_timestamp_t timestamp)
+static CrtcInfo crtcInfo(xcb_connection_t *c, xcb_randr_crtc_t crtc, xcb_timestamp_t timestamp)
 {
     return CrtcInfo(xcb_randr_get_crtc_info_reply(c, xcb_randr_get_crtc_info(c, crtc, timestamp), nullptr));
 }
 
-std::span<xcb_randr_output_t> outputsOf(const Resources &resources)
+static std::span<xcb_randr_output_t> outputsOf(const Resources &resources)
 {
     return {xcb_randr_get_screen_resources_current_outputs(resources.get()),
             size_t(xcb_randr_get_screen_resources_current_outputs_length(resources.get()))};
 }
 
-std::span<xcb_randr_crtc_t> crtcsOf(const Resources &resources)
+static std::span<xcb_randr_crtc_t> crtcsOf(const Resources &resources)
 {
     return {xcb_randr_get_screen_resources_current_crtcs(resources.get()),
             size_t(xcb_randr_get_screen_resources_current_crtcs_length(resources.get()))};
 }
 
-std::span<xcb_randr_mode_t> modesOf(const OutputInfo &info)
+static std::span<xcb_randr_mode_t> modesOf(const OutputInfo &info)
 {
     return {xcb_randr_get_output_info_modes(info.get()), size_t(xcb_randr_get_output_info_modes_length(info.get()))};
 }
 
-std::span<xcb_randr_output_t> clonesOf(const OutputInfo &info)
+static std::span<xcb_randr_output_t> clonesOf(const OutputInfo &info)
 {
     return {xcb_randr_get_output_info_clones(info.get()), size_t(xcb_randr_get_output_info_clones_length(info.get()))};
 }
 
-std::span<xcb_randr_crtc_t> crtcsOf(const OutputInfo &info)
+static std::span<xcb_randr_crtc_t> crtcsOf(const OutputInfo &info)
 {
     return {xcb_randr_get_output_info_crtcs(info.get()), size_t(xcb_randr_get_output_info_crtcs_length(info.get()))};
 }
 
 template <typename T>
-bool contains(std::span<T> values, T value)
+static bool contains(std::span<T> values, T value)
 {
     return std::find(values.begin(), values.end(), value) != values.end();
 }
 
 // Must match what libkscreen reports, because saved settings compare the refresh rate exactly.
-float refreshRate(const xcb_randr_mode_info_t &mode)
+static float refreshRate(const xcb_randr_mode_info_t &mode)
 {
     if (mode.htotal == 0 || mode.vtotal == 0)
         return 0;
@@ -149,7 +149,7 @@ float refreshRate(const xcb_randr_mode_info_t &mode)
     return float(mode.dot_clock) / (float(mode.htotal) * vTotal);
 }
 
-QByteArray edidOf(xcb_connection_t *c, xcb_randr_output_t output)
+static QByteArray edidOf(xcb_connection_t *c, xcb_randr_output_t output)
 {
     for (const char *name : {"EDID", "EDID_DATA", "XFree86_DDC_EDID1_RAWDATA"}) {
         Reply<xcb_intern_atom_reply_t> atom(xcb_intern_atom_reply(c, xcb_intern_atom(c, 0, strlen(name), name), nullptr));
@@ -164,7 +164,7 @@ QByteArray edidOf(xcb_connection_t *c, xcb_randr_output_t output)
     return QByteArray();
 }
 
-KScreen::ModeList modesFrom(const Resources &resources, const OutputInfo &info, QStringList &preferred)
+static KScreen::ModeList modesFrom(const Resources &resources, const OutputInfo &info, QStringList &preferred)
 {
     const auto *modeInfos = xcb_randr_get_screen_resources_current_modes(resources.get());
     const int modeInfoCount = xcb_randr_get_screen_resources_current_modes_length(resources.get());
@@ -188,7 +188,7 @@ KScreen::ModeList modesFrom(const Resources &resources, const OutputInfo &info, 
     return modes;
 }
 
-KScreen::OutputPtr outputFrom(xcb_connection_t *c, const Resources &resources, xcb_randr_output_t id, xcb_randr_output_t primary)
+static KScreen::OutputPtr outputFrom(xcb_connection_t *c, const Resources &resources, xcb_randr_output_t id, xcb_randr_output_t primary)
 {
     OutputInfo info = outputInfo(c, id, resources->config_timestamp);
     if (!info)
@@ -228,7 +228,7 @@ KScreen::OutputPtr outputFrom(xcb_connection_t *c, const Resources &resources, x
 }
 
 /** Decides which CRTC drives which output, without changing anything. */
-std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, const KScreen::ConfigPtr &config)
+static std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, const KScreen::ConfigPtr &config)
 {
     struct Enabled {
         KScreen::OutputPtr output;
@@ -317,19 +317,19 @@ std::optional<Plan> makePlan(xcb_connection_t *c, const Resources &resources, co
     return plan;
 }
 
-bool sameOutputs(const CrtcInfo &current, const Placement &wanted)
+static bool sameOutputs(const CrtcInfo &current, const Placement &wanted)
 {
     const std::span<xcb_randr_output_t> outputs(xcb_randr_get_crtc_info_outputs(current.get()), xcb_randr_get_crtc_info_outputs_length(current.get()));
     return QSet<xcb_randr_output_t>(outputs.begin(), outputs.end()) == QSet<xcb_randr_output_t>(wanted.outputs.begin(), wanted.outputs.end());
 }
 
-bool unchanged(const CrtcInfo &current, const Placement &wanted)
+static bool unchanged(const CrtcInfo &current, const Placement &wanted)
 {
     return current->mode == wanted.mode && current->rotation == wanted.rotation
         && QPoint(current->x, current->y) == wanted.pos && sameOutputs(current, wanted);
 }
 
-bool setCrtc(xcb_connection_t *c, const Resources &resources, const Placement &p)
+static bool setCrtc(xcb_connection_t *c, const Resources &resources, const Placement &p)
 {
     Reply<xcb_randr_set_crtc_config_reply_t> reply(xcb_randr_set_crtc_config_reply(c,
         xcb_randr_set_crtc_config(c, p.crtc, XCB_CURRENT_TIME, resources->config_timestamp, p.pos.x(), p.pos.y(), p.mode, p.rotation,
