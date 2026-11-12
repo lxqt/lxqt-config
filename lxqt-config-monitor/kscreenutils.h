@@ -62,6 +62,10 @@ public:
      */
     static bool supportsPrimary();
 
+    /** Whether monitors can show the same picture. wlr-output-management can't.
+     */
+    static bool supportsUnified();
+
     /** Whether each monitor can have its own scale, which only Wayland does.
      */
     static bool supportsScale();

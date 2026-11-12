@@ -161,6 +161,12 @@ bool KScreenUtils::supportsPrimary()
 }
 
 
+bool KScreenUtils::supportsUnified()
+{
+    return !WlrBackend::isAvailable();
+}
+
+
 bool KScreenUtils::supportsScale()
 {
     return qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>();
