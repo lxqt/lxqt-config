@@ -159,6 +159,13 @@ void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
         mOldConfig = mConfig->clone();
         if (saveConfigOk)
             saveConfiguration(mConfig);
+        // Shows what was really applied, e.g. labwc can move a monitor it places itself.
+        KScreenUtils::getConfig([this] (KScreen::ConfigPtr config) {
+            if (config && config->screen()) {
+                mOldConfig = config;
+                reloadConfiguration();
+            }
+        });
     }
     else if (KScreenUtils::canApply(mConfig)) {
         // It could be applied, so the user rejected it and the monitors are back on mOldConfig.
