@@ -33,7 +33,6 @@
 #include <QJsonArray>
 #include <LXQt/Settings>
 #include <QJsonDocument>
-#include <KScreen/EDID>
 #include <QFile>
 #include <QDir>
 #include <QFileInfo>
@@ -131,7 +130,8 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     for (const KScreen::OutputPtr &output : outputs) {
         if (output->isConnected()) {
             MonitorWidget *monitor = new MonitorWidget(output, mConfig, this);
-            QString monitorName = output->edid()->name() + QStringLiteral(" ") + output->edid()->vendor();
+            const KScreenUtils::Identity identity = KScreenUtils::identity(output);
+            QString monitorName = identity.name + QStringLiteral(" ") + identity.vendor;
             if(monitorName.trimmed().size() > 0)
                 monitorName = QStringLiteral("(") + monitorName + QStringLiteral(")");
             ui.monitorList->addItem(output->name() + QStringLiteral(" ") + monitorName);
@@ -198,9 +198,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     for (const KScreen::OutputPtr &output : outputs) {
         MonitorSettings monitor;
         monitor.name = output->name();
-        KScreen::Edid* edid = output->edid();
-        if (edid && edid->isValid())
-            monitor.hash = edid->hash();
+        monitor.hash = KScreenUtils::monitorHash(output);
         monitor.connected = output->isConnected();
         if ( output->isConnected() ) {
             monitor.enabled = output->isEnabled();
@@ -214,6 +212,9 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
                 monitor.currentModeRate = output->currentMode()->refreshRate();
             }
             monitor.rotation = output->rotation();
+            // Not on X11, where it is always 1 and would reset a Wayland scale with the same layout.
+            if (KScreenUtils::supportsScale())
+                monitor.scale = output->scale();
         }
         currentSettings.append(monitor);
     }

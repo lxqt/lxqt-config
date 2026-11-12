@@ -26,7 +26,6 @@
 #include <KScreen/Mode>
 #include <LXQt/Settings>
 #include <LXQt/Notification>
-#include <KScreen/EDID>
 #include <QCoreApplication>
 
 
@@ -119,12 +118,11 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
             MonitorSettings monitor = monitors[i];
             if( monitor.name == output->name() ) {
                 outputFound = true;
-                KScreen::Edid* edid = output->edid();
-                if (edid && edid->isValid())
-                    if( monitor.hash != edid->hash() ) {
-                        qDebug() << "Hash: " << monitor.hash << "==" << edid->hash();
-                        return false; // Saved settings are from other monitor
-                    }
+                const QString hash = KScreenUtils::monitorHash(output);
+                if (!hash.isEmpty() && monitor.hash != hash) {
+                    qDebug() << "Hash: " << monitor.hash << "==" << hash;
+                    return false; // Saved settings are from other monitor
+                }
                 if( monitor.connected != output->isConnected() )
                     return false; // Saved settings are from other monitor
                 if( !output->isConnected() )
@@ -133,6 +131,9 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 output->setPriority( monitor.primary ? 1 : 0 );
                 output->setPos( QPoint(monitor.xPos, monitor.yPos) );
                 output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
+                // Settings saved before scales were saved keep the current scale.
+                if (monitor.scale > 0)
+                    output->setScale(monitor.scale);
                 // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
                 KScreen::ModeList modeList = output->modes();
                 for(const KScreen::ModePtr &mode : std::as_const(modeList)) {

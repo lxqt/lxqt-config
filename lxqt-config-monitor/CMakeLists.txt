@@ -2,6 +2,7 @@ find_package(KF6Screen ${KF6SCREEN_MINIMUM_VERSION} REQUIRED)
 find_package(XCB REQUIRED COMPONENTS XCB RANDR)
 find_package(Qt6Svg ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt6SvgWidgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt6WaylandClient ${QT_MINIMUM_VERSION} REQUIRED)
 
 set(HEADERS
     monitorsettingsdialog.h
@@ -14,6 +15,7 @@ set(HEADERS
     fastmenu.h
     kscreenutils.h
     xcbbackend.h
+    wlrbackend.h
 )
 
 set(SOURCES
@@ -29,6 +31,7 @@ set(SOURCES
     fastmenu.cpp
     kscreenutils.cpp
     xcbbackend.cpp
+    wlrbackend.cpp
 )
 
 set(UIS
@@ -85,7 +88,12 @@ target_link_libraries(lxqt-config-monitor
     KF6::Screen
     XCB::XCB
     XCB::RANDR
+    Qt6::WaylandClient
     lxqt
+)
+
+qt6_generate_wayland_protocol_client_sources(lxqt-config-monitor FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/protocols/wlr-output-management-unstable-v1.xml
 )
 
 install(TARGETS lxqt-config-monitor RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})

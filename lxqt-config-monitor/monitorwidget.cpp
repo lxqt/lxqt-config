@@ -18,6 +18,7 @@
 */
 
 #include "monitorwidget.h"
+#include "kscreenutils.h"
 
 #include <QComboBox>
 #include <QStringBuilder>
@@ -114,15 +115,25 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     // Update EDID information
     // KScreen doesn't make much public but that's ok...
     KScreen::Edid* edid = output->edid();
+    const KScreenUtils::Identity identity = KScreenUtils::identity(output);
+    QString info;
     if (edid && edid->isValid()) {
-        ui.outputInfoLabel->setText(
-            tr("Name: %1\n").arg(edid->name()) %
+        info = tr("Name: %1\n").arg(edid->name()) %
             tr("Vendor: %1\n").arg(edid->vendor()) %
             tr("Serial: %1\n").arg(edid->serial()) %
             tr("Display size: %1cm x %2cm\n").arg(edid->width()).arg(edid->height()) %
             tr("Serial number: %1\n").arg(edid->serial()) %
-            tr("EISA device ID: %1\n").arg(edid->eisaId())
-        );
+            tr("EISA device ID: %1\n").arg(edid->eisaId());
+    }
+    else if (!identity.name.isEmpty() || !identity.vendor.isEmpty()) {
+        // Without EDID, e.g. under wlroots based compositors
+        info = tr("Name: %1\n").arg(identity.name) %
+            tr("Vendor: %1\n").arg(identity.vendor) %
+            tr("Serial: %1\n").arg(identity.serial) %
+            tr("Display size: %1cm x %2cm\n").arg(output->sizeMm().width() / 10).arg(output->sizeMm().height() / 10);
+    }
+    if (!info.isEmpty()) {
+        ui.outputInfoLabel->setText(info);
         ui.outputInfoLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
     }
 
@@ -136,10 +147,19 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     ui.yPosSpinBox->setValue(output->pos().y());
 
     // Behavior chooser
-    if (config->primaryOutput() == output)
+    if (!KScreenUtils::supportsPrimary()) {
+        ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
+        ui.behaviorCombo->hide();
+    }
+    else if (config->primaryOutput() == output)
         ui.behaviorCombo->setCurrentIndex(PrimaryDisplay);
     else
         ui.behaviorCombo->setCurrentIndex(ExtendDisplay);
+
+    const bool scalable = KScreenUtils::supportsScale();
+    ui.scaleLabel->setVisible(scalable);
+    ui.scaleSpinBox->setVisible(scalable);
+    ui.scaleSpinBox->setValue(output->scale());
 
     // Insert orientations
     ui.orientationCombo->addItem(tr("None"), KScreen::Output::None);
@@ -168,6 +188,7 @@ MonitorWidget::MonitorWidget(KScreen::OutputPtr output, KScreen::ConfigPtr confi
     connect(ui.xPosSpinBox,      &QSpinBox::valueChanged,         this, &MonitorWidget::onPositionChanged);
     connect(ui.yPosSpinBox,      &QSpinBox::valueChanged,         this, &MonitorWidget::onPositionChanged);
     connect(ui.orientationCombo, &QComboBox::currentIndexChanged, this, &MonitorWidget::onOrientationChanged);
+    connect(ui.scaleSpinBox,     &QDoubleSpinBox::valueChanged,   this, [this] (double scale) { this->output->setScale(scale); });
 
     // Force update behavior visibility
     onBehaviorChanged(ui.behaviorCombo->currentIndex());
@@ -187,6 +208,16 @@ void MonitorWidget::onEnabledChanged(bool enabled)
         onResolutionChanged(ui.resolutionCombo->currentIndex());
         onOrientationChanged(ui.orientationCombo->currentIndex());
         onBehaviorChanged(ui.behaviorCombo->currentIndex());
+
+        // Its position isn't known, and 0,0 would cover another monitor, so it goes right of the others.
+        int x = 0;
+        const KScreen::OutputList outputs = config->outputs();
+        for (const KScreen::OutputPtr &other : outputs) {
+            if (other != output && other->isEnabled())
+                x = std::max(x, other->pos().x() + KScreenUtils::logicalWidth(other));
+        }
+        ui.xPosSpinBox->setValue(x);
+        ui.yPosSpinBox->setValue(0);
     }
 }
 

@@ -21,6 +21,7 @@
 #include "loadsettings.h"
 #include "configure.h"
 #include "monitor.h"
+#include "kscreenutils.h"
 #include <QDebug>
 #include <QInputDialog>
 #include <QMessageBox>
@@ -94,10 +95,9 @@ bool ManageSavedSettings::isHardwareCompatible(const MonitorSavedSettings &setti
             MonitorSettings o = settings.monitors[i];
             if(o.name != output->name())
                 continue;
-            KScreen::Edid *edid = output->edid();
-            if(edid && edid->isValid())
-                if(o.hash != output->edid()->hash())
-                    return false;
+            const QString hash = KScreenUtils::monitorHash(output);
+            if(!hash.isEmpty() && o.hash != hash)
+                return false;
             ok = true;
             break;
         }

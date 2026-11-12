@@ -20,6 +20,9 @@
 #define _KSCREEN_UTILS_H_
 
 #include <KScreen/Config>
+#include <KScreen/Output>
+
+#include <QString>
 
 #include <functional>
 
@@ -50,6 +53,36 @@ public:
     /** Sets the monitors aligned side by side.
      */
     static void extended(KScreen::ConfigPtr &config);
+
+    /** Width of output in the global layout, after rotation and scale. 0 without a mode.
+     */
+    static int logicalWidth(const KScreen::OutputPtr &output);
+
+    /** Whether the backend knows a primary monitor. wlr-output-management doesn't.
+     */
+    static bool supportsPrimary();
+
+    /** Whether each monitor can have its own scale, which only Wayland does.
+     */
+    static bool supportsScale();
+
+    /** Makes setEnabled(false) work on outputs that a backend creates itself.
+     */
+    static void allowDisabling(const KScreen::OutputPtr &output);
+
+    struct Identity {
+        QString vendor;
+        QString name;
+        QString serial;
+    };
+
+    /** The monitor connected to output, from its EDID, or from what the backend has instead.
+     */
+    static Identity identity(const KScreen::OutputPtr &output);
+
+    /** Identifies the monitor in saved settings. Empty if unknown.
+     */
+    static QString monitorHash(const KScreen::OutputPtr &output);
 };
 
 #endif // _KSCREEN_UTILS_H_
