@@ -1,3 +1,7 @@
+lxqt-config-2.5.1 / 2026-11-12
+===============================
+ * A native X11 backend is added (after kscreen 6.8 dropped its X11 support).
+
 lxqt-config-2.5.0 / 2026-11-05
 ===============================
  * Fixed GTK theme being cleared on applying input/cursor settings.
