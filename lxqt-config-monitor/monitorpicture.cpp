@@ -93,9 +93,14 @@ void MonitorPictureDialog::setScene(QList<MonitorWidget *> monitors)
         MonitorPictureProxy *proxy = new MonitorPictureProxy(this, monitorPicture);
         proxy->connect(monitor->output.data(), &KScreen::Output::currentModeIdChanged, proxy, &MonitorPictureProxy::updateSize);
         proxy->connect(monitor->output.data(), &KScreen::Output::posChanged, proxy, &MonitorPictureProxy::updatePosition);
+        // After the proxy, so the picture has already moved or resized.
+        connect(monitor->output.data(), &KScreen::Output::posChanged, this, &MonitorPictureDialog::updateScene);
+        connect(monitor->output.data(), &KScreen::Output::currentModeIdChanged, this, &MonitorPictureDialog::updateScene);
     }
-    // The blue rectangle is maximum size of virtual screen (framebuffer)
-    scene->addRect(0, 0, mConfig->screen()->maxSize().width(), mConfig->screen()->maxSize().height(), QPen(Qt::blue, 20))->setOpacity(0.5);
+    // The blue rectangle is maximum size of virtual screen (framebuffer). Wayland has none.
+    const QSize maxSize = mConfig->screen()->maxSize();
+    if (maxSize.isValid())
+        scene->addRect(0, 0, maxSize.width(), maxSize.height(), QPen(Qt::blue, 20))->setOpacity(0.5);
     maxMonitorSize = std::max(monitorsWidth, monitorsHeight);
     ui.graphicsView->setScene(scene);
 }
@@ -139,7 +144,10 @@ void MonitorPictureDialog::updateScale(qreal scale)
 
 void MonitorPictureDialog::updateScene()
 {
-    ui.graphicsView->scene()->update();
+    QGraphicsScene *scene = ui.graphicsView->scene();
+    // Otherwise the scene only grows, to every place a monitor was dragged to, and the scroll bars with it.
+    scene->setSceneRect(scene->itemsBoundingRect());
+    scene->update();
 }
 
 void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
@@ -185,6 +193,8 @@ void MonitorPictureDialog::updateMonitorWidgets(QString primaryMonitor)
         //    qDebug() << "y Iguales";
         //qDebug() << "[MonitorPictureDialog::updateMonitorWidgets]" << x << '=' << picture->monitorWidget->ui.xPosSpinBox->value() << ',' << y << '=' << picture->monitorWidget->ui.yPosSpinBox->value();
     }
+    // The dragged picture can have moved without any position changing.
+    updateScene();
     updatingOk = false;
 }
 
