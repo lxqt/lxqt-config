@@ -163,7 +163,9 @@ bool KScreenUtils::supportsPrimary()
 
 bool KScreenUtils::supportsUnified()
 {
-    return !WlrBackend::isAvailable();
+    // Of the wlroots based compositors, only labwc handles overlapping monitors. Wayfire and niri break.
+    return !WlrBackend::isAvailable()
+        || qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(u':').contains(QStringLiteral("labwc"), Qt::CaseInsensitive);
 }
 
 

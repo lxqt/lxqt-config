@@ -62,7 +62,7 @@ public:
      */
     static bool supportsPrimary();
 
-    /** Whether monitors can show the same picture. wlr-output-management can't.
+    /** Whether monitors can overlap to show the same picture. Under wlroots, only labwc handles it.
      */
     static bool supportsUnified();
 
