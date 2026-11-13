@@ -24,7 +24,6 @@
 #include <KScreen/Output>
 #include <KScreen/Screen>
 
-#include <QCollator>
 #include <QDebug>
 #include <QEventLoop>
 #include <QGuiApplication>
@@ -268,29 +267,11 @@ static KScreen::OutputPtr outputNamed(const KScreen::ConfigPtr &config, const QS
     return it != outputs.end() ? *it : nullptr;
 }
 
-static bool isBuiltIn(const QString &name)
-{
-    return name.startsWith(u"eDP") || name.startsWith(u"LVDS") || name.startsWith(u"DSI");
-}
-
 static KScreen::ConfigPtr configFrom(const Manager *m)
 {
-    // The dialog lists outputs by id, and compositors announce heads in no fixed order.
-    // Built-in panels come first, then the others by name, like on X11.
-    std::vector<const Head *> heads;
-    for (const auto &head : m->heads)
-        heads.push_back(head.get());
-    QCollator collator;
-    collator.setNumericMode(true);
-    std::ranges::sort(heads, [&collator](const Head *a, const Head *b) {
-        if (isBuiltIn(a->name) != isBuiltIn(b->name))
-            return isBuiltIn(a->name);
-        return collator.compare(a->name, b->name) < 0;
-    });
-
     KScreen::OutputList outputs;
     int id = 0;
-    for (const Head *head : heads) {
+    for (const auto &head : m->heads) {
         KScreen::OutputPtr output(new KScreen::Output);
         output->setId(id++);
         output->setName(head->name);

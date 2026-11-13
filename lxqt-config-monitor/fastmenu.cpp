@@ -105,7 +105,7 @@ void FastMenu::unified()
 void FastMenu::onlyFirst()
 {
     bool foundOk = false;
-    const KScreen::OutputList outputs = mConfig->outputs();
+    const QList<KScreen::OutputPtr> outputs = KScreenUtils::sortedOutputs(mConfig);
     for (const KScreen::OutputPtr &output : outputs) {
         if (!output->isConnected())
             continue;
@@ -121,7 +121,7 @@ void FastMenu::onlyFirst()
 void FastMenu::onlySecond()
 {
     bool foundOk = true;
-    const KScreen::OutputList outputs = mConfig->outputs();
+    const QList<KScreen::OutputPtr> outputs = KScreenUtils::sortedOutputs(mConfig);
     for (const KScreen::OutputPtr &output : outputs) {
         if (!output->isConnected())
             continue;

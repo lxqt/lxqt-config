@@ -104,7 +104,7 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
     MonitorPictureDialog *monitorPicture = nullptr;
     FastMenu *fastMenu = nullptr;
-    const KScreen::OutputList outputs = mConfig->outputs();
+    const QList<KScreen::OutputPtr> outputs = KScreenUtils::sortedOutputs(mConfig);
 
     int nMonitors = 0;
     for (const KScreen::OutputPtr &output : outputs) {

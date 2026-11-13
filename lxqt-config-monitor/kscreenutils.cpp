@@ -12,6 +12,7 @@
 #include <KScreen/EDID>
 
 #include <QApplication>
+#include <QCollator>
 #include <QCryptographicHash>
 #include <QMetaEnum>
 #include <QTimer>
@@ -108,7 +109,7 @@ bool KScreenUtils::applyConfig(KScreen::ConfigPtr &config, KScreen::ConfigPtr &o
 void KScreenUtils::extended(KScreen::ConfigPtr &config)
 {
     int width = 0;
-    const KScreen::OutputList outputs = config->outputs();
+    const QList<KScreen::OutputPtr> outputs = sortedOutputs(config);
     for (const KScreen::OutputPtr &output : outputs) {
         if( !output->isConnected() )
             continue;
@@ -163,9 +164,12 @@ bool KScreenUtils::supportsPrimary()
 
 bool KScreenUtils::supportsUnified()
 {
-    // Of the wlroots based compositors, only labwc handles overlapping monitors. Wayfire and niri break.
-    return !WlrBackend::isAvailable()
-        || qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(u':').contains(QStringLiteral("labwc"), Qt::CaseInsensitive);
+    if (!WlrBackend::isAvailable())
+        return true;
+    // Of the wlroots based compositors, labwc and sway handle overlapping monitors. Wayfire and niri break.
+    const QStringList desktops = qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(u':');
+    return desktops.contains(QStringLiteral("labwc"), Qt::CaseInsensitive)
+        || desktops.contains(QStringLiteral("sway"), Qt::CaseInsensitive);
 }
 
 
@@ -195,6 +199,30 @@ KScreenUtils::Identity KScreenUtils::identity(const KScreen::OutputPtr &output)
 }
 
 
+static bool isBuiltIn(const QString &name)
+{
+    return name.startsWith(u"eDP") || name.startsWith(u"LVDS") || name.startsWith(u"DSI");
+}
+
+
+QList<KScreen::OutputPtr> KScreenUtils::sortedOutputs(const KScreen::ConfigPtr &config)
+{
+    QList<KScreen::OutputPtr> outputs = config->outputs().values();
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::ranges::sort(outputs, [&collator](const KScreen::OutputPtr &a, const KScreen::OutputPtr &b) {
+        if (isBuiltIn(a->name()) != isBuiltIn(b->name()))
+            return isBuiltIn(a->name());
+        return collator.compare(a->name(), b->name()) < 0;
+    });
+    return outputs;
+}
+
+
+// Marks hashes made without EDID, as they differ from the EDID hash of the same monitor.
+static const QString IdentityHashPrefix = QStringLiteral("id:");
+
+
 QString KScreenUtils::monitorHash(const KScreen::OutputPtr &output)
 {
     const KScreen::Edid *edid = output->edid();
@@ -204,5 +232,14 @@ QString KScreenUtils::monitorHash(const KScreen::OutputPtr &output)
     if (id.vendor.isEmpty() && id.name.isEmpty() && id.serial.isEmpty())
         return QString();
     const QByteArray data = (id.vendor + u'\n' + id.name + u'\n' + id.serial).toUtf8();
-    return QString::fromLatin1(QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
+    return IdentityHashPrefix + QString::fromLatin1(QCryptographicHash::hash(data, QCryptographicHash::Md5).toHex());
+}
+
+
+bool KScreenUtils::canBeMonitor(const QString &savedHash, const KScreen::OutputPtr &output)
+{
+    const QString hash = monitorHash(output);
+    // Different kinds, e.g. saved under KWin, which has EDID, and loaded under labwc, which doesn't.
+    return hash.isEmpty() || hash == savedHash
+        || hash.startsWith(IdentityHashPrefix) != savedHash.startsWith(IdentityHashPrefix);
 }

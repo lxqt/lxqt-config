@@ -95,8 +95,7 @@ bool ManageSavedSettings::isHardwareCompatible(const MonitorSavedSettings &setti
             MonitorSettings o = settings.monitors[i];
             if(o.name != output->name())
                 continue;
-            const QString hash = KScreenUtils::monitorHash(output);
-            if(!hash.isEmpty() && o.hash != hash)
+            if(!KScreenUtils::canBeMonitor(o.hash, output))
                 return false;
             ok = true;
             break;

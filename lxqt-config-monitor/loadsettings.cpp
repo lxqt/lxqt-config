@@ -118,9 +118,8 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
             MonitorSettings monitor = monitors[i];
             if( monitor.name == output->name() ) {
                 outputFound = true;
-                const QString hash = KScreenUtils::monitorHash(output);
-                if (!hash.isEmpty() && monitor.hash != hash) {
-                    qDebug() << "Hash: " << monitor.hash << "==" << hash;
+                if (!KScreenUtils::canBeMonitor(monitor.hash, output)) {
+                    qDebug() << "Hash: " << monitor.hash << "!=" << KScreenUtils::monitorHash(output);
                     return false; // Saved settings are from other monitor
                 }
                 if( monitor.connected != output->isConnected() )
