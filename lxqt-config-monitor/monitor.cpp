@@ -55,6 +55,7 @@ void saveMonitorSettings(QSettings &settings, const MonitorSettings &monitor)
         settings.setValue(QStringLiteral("currentModeHeight"), monitor.currentModeHeight);
         settings.setValue(QStringLiteral("currentModeRate"), monitor.currentModeRate);
         settings.setValue(QStringLiteral("rotation"), monitor.rotation);
+        settings.setValue(QStringLiteral("scale"), monitor.scale);
     }
 }
 
@@ -85,6 +86,7 @@ void loadMonitorSettings(QSettings &settings, MonitorSettings &monitor)
         monitor.currentModeHeight = settings.value(QStringLiteral("currentModeHeight")).toInt();
         monitor.currentModeRate = settings.value(QStringLiteral("currentModeRate")).toFloat();
         monitor.rotation = settings.value(QStringLiteral("rotation")).toInt();
+        monitor.scale = settings.value(QStringLiteral("scale"), 0.0).toDouble();
     }
 }
 

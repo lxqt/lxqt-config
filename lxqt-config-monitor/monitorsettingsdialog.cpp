@@ -33,7 +33,6 @@
 #include <QJsonArray>
 #include <LXQt/Settings>
 #include <QJsonDocument>
-#include <KScreen/EDID>
 #include <QFile>
 #include <QDir>
 #include <QFileInfo>
@@ -105,7 +104,7 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
 
     MonitorPictureDialog *monitorPicture = nullptr;
     FastMenu *fastMenu = nullptr;
-    const KScreen::OutputList outputs = mConfig->outputs();
+    const QList<KScreen::OutputPtr> outputs = KScreenUtils::sortedOutputs(mConfig);
 
     int nMonitors = 0;
     for (const KScreen::OutputPtr &output : outputs) {
@@ -131,7 +130,8 @@ void MonitorSettingsDialog::loadConfiguration(KScreen::ConfigPtr config)
     for (const KScreen::OutputPtr &output : outputs) {
         if (output->isConnected()) {
             MonitorWidget *monitor = new MonitorWidget(output, mConfig, this);
-            QString monitorName = output->edid()->name() + QStringLiteral(" ") + output->edid()->vendor();
+            const KScreenUtils::Identity identity = KScreenUtils::identity(output);
+            QString monitorName = identity.name + QStringLiteral(" ") + identity.vendor;
             if(monitorName.trimmed().size() > 0)
                 monitorName = QStringLiteral("(") + monitorName + QStringLiteral(")");
             ui.monitorList->addItem(output->name() + QStringLiteral(" ") + monitorName);
@@ -159,6 +159,13 @@ void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
         mOldConfig = mConfig->clone();
         if (saveConfigOk)
             saveConfiguration(mConfig);
+        // Shows what was really applied, e.g. labwc can move a monitor it places itself.
+        KScreenUtils::getConfig([this] (KScreen::ConfigPtr config) {
+            if (config && config->screen()) {
+                mOldConfig = config;
+                reloadConfiguration();
+            }
+        });
     }
     else if (KScreenUtils::canApply(mConfig)) {
         // It could be applied, so the user rejected it and the monitors are back on mOldConfig.
@@ -198,9 +205,7 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
     for (const KScreen::OutputPtr &output : outputs) {
         MonitorSettings monitor;
         monitor.name = output->name();
-        KScreen::Edid* edid = output->edid();
-        if (edid && edid->isValid())
-            monitor.hash = edid->hash();
+        monitor.hash = KScreenUtils::monitorHash(output);
         monitor.connected = output->isConnected();
         if ( output->isConnected() ) {
             monitor.enabled = output->isEnabled();
@@ -214,6 +219,9 @@ void MonitorSettingsDialog::saveConfiguration(KScreen::ConfigPtr config)
                 monitor.currentModeRate = output->currentMode()->refreshRate();
             }
             monitor.rotation = output->rotation();
+            // Not on X11, where it is always 1 and would reset a Wayland scale with the same layout.
+            if (KScreenUtils::supportsScale())
+                monitor.scale = output->scale();
         }
         currentSettings.append(monitor);
     }

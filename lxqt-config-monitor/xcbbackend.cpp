@@ -17,6 +17,7 @@
 */
 
 #include "xcbbackend.h"
+#include "kscreenutils.h"
 
 #include <KScreen/Mode>
 #include <KScreen/Output>
@@ -26,7 +27,6 @@
 #include <QGuiApplication>
 #include <QList>
 #include <QMap>
-#include <QMetaEnum>
 #include <QPoint>
 #include <QSet>
 #include <QSize>
@@ -196,12 +196,7 @@ static KScreen::OutputPtr outputFrom(xcb_connection_t *c, const Resources &resou
 
     KScreen::OutputPtr output(new KScreen::Output);
     output->setId(id);
-    // libkscreen 6.8 ignores setEnabled(false) without the Disable capability, which 6.7 doesn't have.
-    // Looked up at run time, as libkscreen can be upgraded without rebuilding this.
-    bool hasDisable = false;
-    const int disable = QMetaEnum::fromType<KScreen::Output::Capability>().keyToValue("Disable", &hasDisable);
-    if (hasDisable)
-        output->setCapabilities(output->capabilities() | KScreen::Output::Capability(disable));
+    KScreenUtils::allowDisabling(output);
     output->setName(QString::fromUtf8(reinterpret_cast<const char *>(xcb_randr_get_output_info_name(info.get())),
                                       xcb_randr_get_output_info_name_length(info.get())));
     // Config::primaryOutput() is the lowest priority, so everything else has to be above 1.
