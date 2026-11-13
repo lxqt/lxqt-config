@@ -19,6 +19,7 @@
 #include "monitorpicture.h"
 
 #include <QFont>
+#include <QGuiApplication>
 #include <QFontMetrics>
 #include <QPen>
 #include <QDebug>
@@ -76,6 +77,12 @@ MonitorPictureDialog::MonitorPictureDialog(KScreen::ConfigPtr config, QWidget * 
     maxMonitorSize = 0;
     mConfig = config;
     ui.setupUi(this);
+
+    // Under Wayland the pointer can't cross a gap between monitors.
+    if (QGuiApplication::platformName() == QLatin1String("wayland")) {
+        ui.magneticCheckBox->setChecked(true);
+        ui.magneticCheckBox->hide();
+    }
 }
 
 
