@@ -38,6 +38,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QMessageBox>
+#include <QTabWidget>
 #include <QDateTime>
 #include <QDebug>
 #include <QString>
@@ -169,6 +170,9 @@ void MonitorSettingsDialog::applyConfiguration(bool saveConfigOk)
 void MonitorSettingsDialog::reloadConfiguration()
 {
     const int row = ui.monitorList->currentRow();
+    // Only monitor pages have tabs.
+    const QTabWidget *tabs = ui.stackedWidget->currentWidget() ? ui.stackedWidget->currentWidget()->findChild<QTabWidget *>() : nullptr;
+    const int tab = tabs ? tabs->currentIndex() : 0;
     ui.monitorList->clear();
     while (QWidget *page = ui.stackedWidget->widget(0)) {
         ui.stackedWidget->removeWidget(page);
@@ -176,6 +180,8 @@ void MonitorSettingsDialog::reloadConfiguration()
     }
     loadConfiguration(mOldConfig->clone());
     ui.monitorList->setCurrentRow(row);
+    if (QTabWidget *newTabs = ui.stackedWidget->currentWidget() ? ui.stackedWidget->currentWidget()->findChild<QTabWidget *>() : nullptr)
+        newTabs->setCurrentIndex(tab);
 }
 
 void MonitorSettingsDialog::accept()
