@@ -43,7 +43,7 @@ public:
         fileManager
     };
 
-    ApplicationChooser(const QString& type, int cat = category::none);
+    ApplicationChooser(const QString& type, int cat = category::none, QWidget *parent = nullptr);
 
     virtual ~ApplicationChooser();
 
