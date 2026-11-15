@@ -28,6 +28,8 @@
 #include <LXQt/Notification>
 #include <QCoreApplication>
 
+#include <algorithm>
+
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
 {
@@ -133,23 +135,20 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 // Settings saved before scales were saved keep the current scale.
                 if (monitor.scale > 0)
                     output->setScale(monitor.scale);
-                // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
-                KScreen::ModeList modeList = output->modes();
-                for(const KScreen::ModePtr &mode : std::as_const(modeList)) {
-                    if( mode->id() == QString(monitor.currentMode)
-                            ||
-                            (
-                                mode->size().width() == monitor.currentModeWidth
-                                &&
-                                mode->size().height() == monitor.currentModeHeight
-                                &&
-                                mode->refreshRate() == monitor.currentModeRate
-                            )
-                      ) {
-                        output->setCurrentModeId( mode->id() );
-                        break;
-                    }
+                // Mode ids can change between runs, e.g. wlroots based compositors number the modes as they announce them,
+                // so the saved id only counts while it is still the saved size and rate.
+                const KScreen::ModeList modeList = output->modes();
+                const QSize size(monitor.currentModeWidth, monitor.currentModeHeight);
+                const auto isSaved = [&](const KScreen::ModePtr &mode) {
+                    return mode->size() == size && mode->refreshRate() == monitor.currentModeRate;
+                };
+                KScreen::ModePtr mode = modeList.value(monitor.currentMode);
+                if (!mode || (!size.isEmpty() && !isSaved(mode))) {
+                    const auto it = std::find_if(modeList.cbegin(), modeList.cend(), isSaved);
+                    mode = it != modeList.cend() ? *it : nullptr;
                 }
+                if (mode)
+                    output->setCurrentModeId(mode->id());
 
             }
         }
