@@ -62,7 +62,7 @@ public:
      */
     static bool supportsPrimary();
 
-    /** Whether monitors can overlap to show the same picture. Under wlroots, only labwc and sway handle it.
+    /** Whether monitors can overlap to show the same picture. Under wlroots, only sway handles it.
      */
     static bool supportsUnified();
 

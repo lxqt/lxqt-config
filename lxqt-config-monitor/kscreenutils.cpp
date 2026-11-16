@@ -166,10 +166,8 @@ bool KScreenUtils::supportsUnified()
 {
     if (!WlrBackend::isAvailable())
         return true;
-    // Of the wlroots based compositors, labwc and sway handle overlapping monitors. Wayfire and niri break.
-    const QStringList desktops = qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(u':');
-    return desktops.contains(QStringLiteral("labwc"), Qt::CaseInsensitive)
-        || desktops.contains(QStringLiteral("sway"), Qt::CaseInsensitive);
+    // Of the wlroots based compositors, only sway handles overlapping monitors of different resolutions.
+    return qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(u':').contains(QStringLiteral("sway"), Qt::CaseInsensitive);
 }
 
 
