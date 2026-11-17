@@ -26,8 +26,9 @@
 #include <KScreen/Mode>
 #include <LXQt/Settings>
 #include <LXQt/Notification>
-#include <KScreen/EDID>
 #include <QCoreApplication>
+
+#include <algorithm>
 
 
 LoadSettings::LoadSettings(QObject *parent):QObject(parent)
@@ -119,12 +120,10 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
             MonitorSettings monitor = monitors[i];
             if( monitor.name == output->name() ) {
                 outputFound = true;
-                KScreen::Edid* edid = output->edid();
-                if (edid && edid->isValid())
-                    if( monitor.hash != edid->hash() ) {
-                        qDebug() << "Hash: " << monitor.hash << "==" << edid->hash();
-                        return false; // Saved settings are from other monitor
-                    }
+                if (!KScreenUtils::canBeMonitor(monitor.hash, output)) {
+                    qDebug() << "Hash: " << monitor.hash << "!=" << KScreenUtils::monitorHash(output);
+                    return false; // Saved settings are from other monitor
+                }
                 if( monitor.connected != output->isConnected() )
                     return false; // Saved settings are from other monitor
                 if( !output->isConnected() )
@@ -133,23 +132,23 @@ bool applySettings(KScreen::ConfigPtr config, QList<MonitorSettings> monitors)
                 output->setPriority( monitor.primary ? 1 : 0 );
                 output->setPos( QPoint(monitor.xPos, monitor.yPos) );
                 output->setRotation( (KScreen::Output::Rotation)(monitor.rotation) );
-                // output->setCurrentModeId could fail. KScreen sometimes changes mode Id.
-                KScreen::ModeList modeList = output->modes();
-                for(const KScreen::ModePtr &mode : std::as_const(modeList)) {
-                    if( mode->id() == QString(monitor.currentMode)
-                            ||
-                            (
-                                mode->size().width() == monitor.currentModeWidth
-                                &&
-                                mode->size().height() == monitor.currentModeHeight
-                                &&
-                                mode->refreshRate() == monitor.currentModeRate
-                            )
-                      ) {
-                        output->setCurrentModeId( mode->id() );
-                        break;
-                    }
+                // Settings saved before scales were saved keep the current scale.
+                if (monitor.scale > 0)
+                    output->setScale(monitor.scale);
+                // Mode ids can change between runs, e.g. wlroots based compositors number the modes as they announce them,
+                // so the saved id only counts while it is still the saved size and rate.
+                const KScreen::ModeList modeList = output->modes();
+                const QSize size(monitor.currentModeWidth, monitor.currentModeHeight);
+                const auto isSaved = [&](const KScreen::ModePtr &mode) {
+                    return mode->size() == size && mode->refreshRate() == monitor.currentModeRate;
+                };
+                KScreen::ModePtr mode = modeList.value(monitor.currentMode);
+                if (!mode || (!size.isEmpty() && !isSaved(mode))) {
+                    const auto it = std::find_if(modeList.cbegin(), modeList.cend(), isSaved);
+                    mode = it != modeList.cend() ? *it : nullptr;
                 }
+                if (mode)
+                    output->setCurrentModeId(mode->id());
 
             }
         }

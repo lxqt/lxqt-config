@@ -21,6 +21,7 @@
 #include "kscreenutils.h"
 
 #include <QComboBox>
+#include <QStandardItemModel>
 #include <QPoint>
 #include <KScreen/Output>
 #include <KScreen/Mode>
@@ -38,6 +39,10 @@ FastMenu::FastMenu(KScreen::ConfigPtr config, QWidget* parent) :
     this->mConfig = config;
 
     ui.setupUi(this);
+
+    // Disabled rather than removed, as the indexes are Options.
+    if (!KScreenUtils::supportsUnified())
+        qobject_cast<QStandardItemModel *>(ui.comboBox->model())->item(Unified)->setEnabled(false);
 
     connect(ui.comboBox, &QComboBox::currentIndexChanged, this, &FastMenu::onSelectionChanged);
 }
@@ -100,7 +105,7 @@ void FastMenu::unified()
 void FastMenu::onlyFirst()
 {
     bool foundOk = false;
-    const KScreen::OutputList outputs = mConfig->outputs();
+    const QList<KScreen::OutputPtr> outputs = KScreenUtils::sortedOutputs(mConfig);
     for (const KScreen::OutputPtr &output : outputs) {
         if (!output->isConnected())
             continue;
@@ -116,7 +121,7 @@ void FastMenu::onlyFirst()
 void FastMenu::onlySecond()
 {
     bool foundOk = true;
-    const KScreen::OutputList outputs = mConfig->outputs();
+    const QList<KScreen::OutputPtr> outputs = KScreenUtils::sortedOutputs(mConfig);
     for (const KScreen::OutputPtr &output : outputs) {
         if (!output->isConnected())
             continue;

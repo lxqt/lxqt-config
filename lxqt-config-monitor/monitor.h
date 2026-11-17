@@ -37,7 +37,8 @@ struct MonitorSettings {
           currentModeRate(0.0f),
           xPos(-1),
           yPos(-1),
-          rotation(-1)
+          rotation(-1),
+          scale(0)
     {
     }
 
@@ -53,6 +54,7 @@ struct MonitorSettings {
     int xPos;
     int yPos;
     int rotation;
+    double scale; // 0 if not saved
 };
 
 struct MonitorSavedSettings {
