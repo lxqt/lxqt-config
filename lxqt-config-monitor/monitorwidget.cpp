@@ -229,8 +229,10 @@ void MonitorWidget::onOrientationChanged(int /* idx */)
 void MonitorWidget::onBehaviorChanged(int idx)
 {
     // Behavior should match the index of the selected element
-    ui.xPosSpinBox->setVisible(idx == ExtendDisplay);
-    ui.yPosSpinBox->setVisible(idx == ExtendDisplay);
+    // A single monitor has no position to set, see setOnlyMonitor().
+    const bool movable = idx == ExtendDisplay && ui.behaviorCombo->isEnabled();
+    ui.xPosSpinBox->setVisible(movable);
+    ui.yPosSpinBox->setVisible(movable);
 
     output->setPriority(idx == PrimaryDisplay ? 1 : 0);
     if(idx == PrimaryDisplay)
