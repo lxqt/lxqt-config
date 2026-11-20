@@ -6,27 +6,27 @@
     <message>
         <location filename="../selectwnd.ui" line="14"/>
         <source>LXQt Mouse Theme Configuration</source>
-        <translation>LXQt peles tēmas konfigurēšana</translation>
+        <translation>LXQt peles motīva konfigurēšana</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="20"/>
         <source>Select the cursor theme you want to use (hover preview to test cursor). &lt;b&gt;LXQt session needs restart after this change&lt;/b&gt;:</source>
-        <translation>Izvēlies kursora tēmu, kuru vēlies lietot (novieto kursoru uz priekšskata laukuma, lai izmēģinātu)&lt;b&gt;Pēc šīm izmaiņām LXQt sesija ir jārestartē&lt;/b&gt;:</translation>
+        <translation>Izvēlieties vēlamo kursora motīvu (lai izmēģinātu kursoru, uzvirziet peli priekšskatījumam). &lt;b&gt;Pēc šīs izmaiņas jāpārstartē LXQt sesija&lt;/b&gt;:</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="104"/>
         <source>&amp;Install New Theme...</source>
-        <translation>&amp;Instalēt/uzstādīt/pievienot jaunu tēmu...</translation>
+        <translation>&amp;Instalēt jaunu motīvu...</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="72"/>
         <source>LXQt session needs restart to view this change.</source>
-        <translation>Šī iestatījuma maiņa stāsies spēkā pēc LXQt sesijas restarta.</translation>
+        <translation>Lai redzētu šo izmaiņu, jāpārstartē LXQt sesija.</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="111"/>
         <source>&amp;Remove Theme</source>
-        <translation>&amp;Dzēst/novākt tēmu</translation>
+        <translation>&amp;Noņemt motīvu</translation>
     </message>
     <message>
         <location filename="../selectwnd.ui" line="65"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../selectwnd.cpp" line="231"/>
         <source>XCurTheme error</source>
-        <translation>XCurTheme ķibele</translation>
+        <translation>XCurTheme kļūda</translation>
     </message>
     <message>
         <location filename="../selectwnd.cpp" line="232"/>
         <source>You can&apos;t remove active theme!</source>
-        <translation>Aktīvo tēmu dzēst/novākt nav iespējams!</translation>
+        <translation>Aktīvo motīvu nevar noņemt!</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../warninglabel.ui" line="44"/>
         <source>LXQt could not find any cursor theme. The default X11 cursor theme will be used instead. LXQt looked in the following directories:</source>
-        <translation>LXQt nespēja atrast nevienu kursora tēmu/motīvu. Tiks izmantota X11 noklusējuma kursora tēma. LXQt meklēja šajās mapēs:</translation>
+        <translation>LXQt neatrada nevienu kursora motīvu. Tā vietā tiks izmantots X11 noklusējuma kursora motīvs. LXQt meklēja šajās mapēs:</translation>
     </message>
     <message>
         <location filename="../warninglabel.ui" line="54"/>
