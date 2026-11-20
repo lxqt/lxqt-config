@@ -6,7 +6,7 @@
     <message>
         <location filename="../brightnesssettings.ui" line="14"/>
         <source>Brightness Settings</source>
-        <translation>Spilgtuma Iestatījumi</translation>
+        <translation>Spilgtuma iestatījumi</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="35"/>
@@ -17,12 +17,12 @@
     <message>
         <location filename="../brightnesssettings.ui" line="42"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Backlight and brightness settings:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Izgaismojuma un spilgtuma iestatījumi:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fona apgaismojuma un spilgtuma iestatījumi:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="51"/>
         <source>Backlight</source>
-        <translation>Izgaismojums (fona)</translation>
+        <translation>Fona apgaismojums</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.ui" line="57"/>
@@ -42,17 +42,17 @@
     <message>
         <location filename="../brightnesssettings.cpp" line="55"/>
         <source>Currently unsupported under Wayland</source>
-        <translation type="unfinished"></translation>
+        <translation>Wayland vidē pašlaik netiek atbalstīts</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="123"/>
         <source>Brightness settings changed</source>
-        <translation>Spilgtuma iestatījumi saglabāti</translation>
+        <translation>Spilgtuma iestatījumi mainīti</translation>
     </message>
     <message>
         <location filename="../brightnesssettings.cpp" line="124"/>
         <source>Confirmation required. Are the settings correct?</source>
-        <translation>Nepieciešams apstiprinājums. Iestatījumi apmierina?</translation>
+        <translation>Nepieciešams apstiprinājums. Vai iestatījumi ir pareizi?</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../outputwidget.ui" line="38"/>
         <source>&lt;b&gt;Output:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Izvads:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Izvade:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../outputwidget.ui" line="48"/>
@@ -88,22 +88,22 @@
     <message>
         <location filename="../main.cpp" line="74"/>
         <source>Set brightness from 1 to 100.</source>
-        <translation>Iestatiet spilgtumu 1 - 100.</translation>
+        <translation>Iestatīt spilgtumu no 1 līdz 100.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Reset gamma to default value.</source>
-        <translation>Atstatīt Gamma uz noklusējuma vērtību.</translation>
+        <translation>Atiestatīt gammu uz noklusējuma vērtību.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="114"/>
         <source>%1: Can&apos;t use increase/decrease and set in conjunction</source>
-        <translation>%1: nav iespējams lietot opcijas increase/decrease (palielināt/samazināt) kopā ar set (iestatīt)</translation>
+        <translation>%1: increase/decrease un set nevar izmantot kopā</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="119"/>
         <source>%1: Can&apos;t use increase and decrease options in conjunction</source>
-        <translation>%1: Nevar izmantot opcijas palielināt un samazināt vienlaicīgi</translation>
+        <translation>%1: opcijas increase un decrease nevar izmantot kopā</translation>
     </message>
 </context>
 </TS>

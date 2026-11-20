@@ -11,7 +11,7 @@
     <message>
         <location filename="../fastmenu.ui" line="40"/>
         <source> ❶ ❷ Extended view</source>
-        <translation> ❶ ❷ Vista estendida</translation>
+        <translation> ❶ ❷ Vista ampliada</translation>
     </message>
     <message>
         <location filename="../fastmenu.ui" line="45"/>
@@ -34,23 +34,24 @@
     <message>
         <location filename="../loadsettings.cpp" line="97"/>
         <source>Default monitor settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicouse a configuración predeterminada do monitor.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="98"/>
         <source>Adjust your screens with LXQt Monitor Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Axusta as pantallas con Configuración do monitor de LXQt.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="107"/>
         <source>lxqt-config-monitor: Settings applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Aplicouse a configuración.</translation>
     </message>
     <message>
         <location filename="../loadsettings.cpp" line="109"/>
         <source>lxqt-config-monitor: Settings not applied.
 If this is a Wayland compositor, you could try kanshi to configure your monitor(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-config-monitor: Non se aplicou a configuración.
+Se se trata dun compositor de Wayland, podes probar kanshi para configurar os teus monitores.</translation>
     </message>
 </context>
 <context>
@@ -58,12 +59,12 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Axustes do monitor</translation>
+        <translation>Configuración do monitor</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="27"/>
         <source>Saved settings</source>
-        <translation>Axustes gardados</translation>
+        <translation>Configuracións gardadas</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.ui" line="45"/>
@@ -78,7 +79,7 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="67"/>
         <source>None</source>
-        <translation>Ningunha</translation>
+        <translation>Ningún</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="70"/>
@@ -88,7 +89,7 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="73"/>
         <source>Inverted</source>
-        <translation>Invertida</translation>
+        <translation>Invertido</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="76"/>
@@ -120,14 +121,16 @@ If this is a Wayland compositor, you could try kanshi to configure your monitor(
     <message>
         <location filename="../managesavedsettings.cpp" line="176"/>
         <source>Settings Activation Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallou a activación da configuración</translation>
     </message>
     <message>
         <location filename="../managesavedsettings.cpp" line="177"/>
         <source>Selected settings cannot be applied with currently active monitors.
 
 Please choose from the highlighted configurations.</source>
-        <translation type="unfinished"></translation>
+        <translation>Non se pode aplicar a configuración seleccionada cos monitores actualmente activos.
+
+Escolle entre as configuracións resaltadas.</translation>
     </message>
 </context>
 <context>
@@ -135,7 +138,7 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorpicture.ui" line="27"/>
         <source>Keep monitors attached</source>
-        <translation>Manter os monitores vencellados</translation>
+        <translation>Manter os monitores conectados</translation>
     </message>
 </context>
 <context>
@@ -143,24 +146,26 @@ Please choose from the highlighted configurations.</source>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="14"/>
         <source>Monitor Settings</source>
-        <translation>Axustes do monitor</translation>
+        <translation>Configuración do monitor</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.ui" line="70"/>
         <source>Settings</source>
-        <translation>Axustes</translation>
+        <translation>Configuración</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="68"/>
         <source>Platform Unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Plataforma non compatible</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="69"/>
         <source>LXQt monitor settings are currently unsupported under this wayland compositor.
 
 You can configure your monitor(s) with kanshi.</source>
-        <translation type="unfinished"></translation>
+        <translation>A configuración do monitor de LXQt non é compatible actualmente con este compositor de Wayland.
+
+Podes configurar os teus monitores con kanshi.</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="124"/>
@@ -170,12 +175,12 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="128"/>
         <source>Set position</source>
-        <translation>Estabelecer a posición</translation>
+        <translation>Establecer a posición</translation>
     </message>
     <message>
         <location filename="../monitorsettingsdialog.cpp" line="256"/>
         <source>Advanced settings</source>
-        <translation>Axustes avanzados</translation>
+        <translation>Configuración avanzada</translation>
     </message>
 </context>
 <context>
@@ -183,7 +188,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.ui" line="21"/>
         <source>Setup</source>
-        <translation>Axustes</translation>
+        <translation>Configurar</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="64"/>
@@ -213,7 +218,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.ui" line="54"/>
         <source>This screen extends another display</source>
-        <translation>Esta pantalla estende outra pantalla</translation>
+        <translation>Esta pantalla amplía outra pantalla</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="125"/>
@@ -223,7 +228,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.ui" line="143"/>
         <source>Refresh rate:</source>
-        <translation>Taxa de actualización:</translation>
+        <translation>Frecuencia de actualización:</translation>
     </message>
     <message>
         <location filename="../monitorwidget.ui" line="133"/>
@@ -258,7 +263,7 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="131"/>
         <source>Serial: %1
 </source>
-        <translation>Serie: %1
+        <translation>Número de serie: %1
 </translation>
     </message>
     <message>
@@ -279,13 +284,13 @@ You can configure your monitor(s) with kanshi.</source>
         <location filename="../monitorwidget.cpp" line="134"/>
         <source>EISA device ID: %1
 </source>
-        <translation>ID EISA do dispositivo: %1
+        <translation>ID do dispositivo EISA: %1
 </translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="155"/>
         <source>None</source>
-        <translation>Ningunha</translation>
+        <translation>Ningún</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="156"/>
@@ -300,7 +305,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../monitorwidget.cpp" line="158"/>
         <source>Inverted</source>
-        <translation>Invertida</translation>
+        <translation>Invertido</translation>
     </message>
     <message>
         <location filename="../monitorwidget.cpp" line="248"/>
@@ -313,7 +318,7 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Manage Saved Settings</source>
-        <translation>Administrar os axustes gardados</translation>
+        <translation>Xestionar configuracións gardadas</translation>
     </message>
 </context>
 <context>
@@ -321,19 +326,19 @@ You can configure your monitor(s) with kanshi.</source>
     <message>
         <location filename="../timeoutdialog.ui" line="14"/>
         <source>Settings are changed</source>
-        <translation>Cambiaron os axustes</translation>
+        <translation>A configuración cambiou</translation>
     </message>
     <message>
         <location filename="../timeoutdialog.ui" line="46"/>
         <source>Are the current settings OK for you?</source>
-        <translation>Os axustes actuais son correctos para vostede?</translation>
+        <translation>Estás conforme coa configuración actual?</translation>
     </message>
     <message numerus="yes">
         <location filename="../timeoutdialog.cpp" line="63"/>
         <source>%n second(s) remaining</source>
         <translation>
-            <numerusform>Resta %n segundo</numerusform>
-            <numerusform>Restan %n segundos</numerusform>
+            <numerusform>Queda %n segundo</numerusform>
+            <numerusform>Quedan %n segundos</numerusform>
         </translation>
     </message>
 </context>
