@@ -34,7 +34,6 @@
 #include "qcategorizedview_p.h"
 
 #include <cmath> // trunc on C99 compliant systems
-//#include <kdefakes.h> // trunc for not C99 compliant systems
 
 #include <QPainter>
 #include <QScrollBar>
@@ -1470,12 +1469,6 @@ void QCategorizedView::updateGeometries()
     //END bugs 213068, 287847 --------------------------------------------------------------
 }
 
-void QCategorizedView::currentChanged(const QModelIndex &current,
-                                      const QModelIndex &previous)
-{
-    QListView::currentChanged(current, previous);
-}
-
 void QCategorizedView::dataChanged(const QModelIndex &topLeft,
                                    const QModelIndex &bottomRight,
                                    const QList<int> & /* roles */)
@@ -1522,28 +1515,6 @@ void QCategorizedView::rowsInserted(const QModelIndex &parent,
     d->hoveredCategory = QString();
     d->rowsInserted(parent, start, end);
 }
-
-#ifndef KDE_NO_DEPRECATED
-void QCategorizedView::rowsInsertedArtifficial(const QModelIndex &parent,
-                                               int start,
-                                               int end)
-{
-    Q_UNUSED(parent);
-    Q_UNUSED(start);
-    Q_UNUSED(end);
-}
-#endif
-
-#ifndef KDE_NO_DEPRECATED
-void QCategorizedView::rowsRemoved(const QModelIndex &parent,
-                                   int start,
-                                   int end)
-{
-    Q_UNUSED(parent);
-    Q_UNUSED(start);
-    Q_UNUSED(end);
-}
-#endif
 
 void QCategorizedView::slotLayoutChanged()
 {

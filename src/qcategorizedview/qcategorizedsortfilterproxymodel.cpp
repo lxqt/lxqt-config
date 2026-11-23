@@ -28,8 +28,6 @@
 #include <QStringList>
 #include <QSize>
 
-//#include <kstringhandler.h>
-
 int naturalCompare(const QString &_a, const QString &_b, Qt::CaseSensitivity caseSensitivity = Qt::CaseSensitive)
 {
     // This method chops the input a and b into pieces of
