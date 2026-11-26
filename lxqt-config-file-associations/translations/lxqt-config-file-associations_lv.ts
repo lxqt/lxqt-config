@@ -6,12 +6,12 @@
     <message>
         <location filename="../applicationchooser.ui" line="14"/>
         <source>Application Chooser</source>
-        <translation>Lietotājprogrammas izvēle</translation>
+        <translation>Lietotnes izvēle</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="25"/>
         <source>Pick an application for:</source>
-        <translation>Izvēlies lietojumprogrammu:</translation>
+        <translation>Izvēlieties lietotni:</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="98"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../applicationchooser.ui" line="103"/>
         <source>Applications that handle JPEG</source>
-        <translation>Lietojumprogrammas priekš JPEG</translation>
+        <translation>Lietotnes, kas apstrādā JPEG</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="112"/>
@@ -29,14 +29,14 @@
         <location filename="../applicationchooser.ui" line="127"/>
         <location filename="../applicationchooser.ui" line="132"/>
         <source>New Subitem</source>
-        <translation>Jauna apakšopcija</translation>
+        <translation>Jauns apakšvienums</translation>
     </message>
     <message>
         <location filename="../applicationchooser.ui" line="123"/>
         <location filename="../applicationchooser.cpp" line="191"/>
         <location filename="../applicationchooser.cpp" line="217"/>
         <source>Other applications</source>
-        <translation>Citas lietojumprogrammas</translation>
+        <translation>Citas lietotnes</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="147"/>
@@ -46,34 +46,34 @@
     <message>
         <location filename="../applicationchooser.cpp" line="152"/>
         <source>Email clients</source>
-        <translation>Epasta klienti (programmas)</translation>
+        <translation>E-pasta klienti</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="157"/>
         <source>File managers</source>
-        <translation>Failu pārlūki (menedžeri)</translation>
+        <translation>Failu pārvaldnieki</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="193"/>
         <location filename="../applicationchooser.cpp" line="219"/>
         <source>Other applications that handle %1</source>
-        <translation>Citas programmas, kuras darbojas ar %1</translation>
+        <translation>Citas lietotnes, kas apstrādā %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="194"/>
         <location filename="../applicationchooser.cpp" line="220"/>
         <source>Applications that handle %1</source>
-        <translation>Lietojumprogrammas priekš %1</translation>
+        <translation>Lietotnes, kas apstrādā %1</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="305"/>
         <source>No applications found</source>
-        <translation>Netika atrasta neviena lietojumprogramma</translation>
+        <translation>Netika atrasta neviena lietotne</translation>
     </message>
     <message>
         <location filename="../applicationchooser.cpp" line="310"/>
         <source>No more applications found</source>
-        <translation>Vairāk programmu nav atrasts</translation>
+        <translation>Vairāk lietotņu netika atrasts</translation>
     </message>
 </context>
 <context>
@@ -92,7 +92,7 @@
         <location filename="../mimetypeviewer.cpp" line="331"/>
         <location filename="../mimetypeviewer.cpp" line="393"/>
         <source>None</source>
-        <translation>Neviens</translation>
+        <translation>Nav</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.cpp" line="280"/>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../mimetypeviewer.cpp" line="394"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Izvēlies...</translation>
+        <translation>&amp;Izvēlēties...</translation>
     </message>
 </context>
 <context>
@@ -117,27 +117,27 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="20"/>
         <source>File Associations</source>
-        <translation>Datņu Asociācijas</translation>
+        <translation>Failu asociācijas</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="30"/>
         <source>Associations</source>
-        <translation>Failu sasaistes (asociācijas)</translation>
+        <translation>Asociācijas</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="206"/>
         <source>Default application</source>
-        <translation>Noklusējuma lietojumprogramma</translation>
+        <translation>Noklusējuma lietotne</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="271"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;Izvēlies...</translation>
+        <translation>&amp;Izvēlēties...</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="305"/>
         <source>Default Applications</source>
-        <translation>Noklusējuma programmas/lietotnes</translation>
+        <translation>Noklusējuma lietotnes</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="335"/>
@@ -154,12 +154,12 @@
     <message>
         <location filename="../mimetypeviewer.ui" line="410"/>
         <source>Email Client</source>
-        <translation>Pasta klients (lietotne)</translation>
+        <translation>E-pasta klients</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="485"/>
         <source>File Manager</source>
-        <translation>Failu pārlūks (pārvaldnieks)</translation>
+        <translation>Failu pārvaldnieks</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="255"/>
@@ -167,12 +167,12 @@
         <location filename="../mimetypeviewer.ui" line="459"/>
         <location filename="../mimetypeviewer.ui" line="534"/>
         <source>None</source>
-        <translation>Neviens</translation>
+        <translation>Nav</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="187"/>
         <source>Patterns</source>
-        <translation>Šablons</translation>
+        <translation>Šabloni</translation>
     </message>
     <message>
         <location filename="../mimetypeviewer.ui" line="193"/>
